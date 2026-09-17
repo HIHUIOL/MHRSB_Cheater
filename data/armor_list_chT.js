@@ -1,7 +1,7 @@
 var armor_list = {
     "300_1": {
         "id": 300,
-        "name": "神火裝【頭巾】繼",
+        "name": "炎火装束【头巾】继",
         "rank": 8,
         "gender": "男女共通",
         "parts": "头",
@@ -12,7 +12,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 80,
-        "bougyo_max": 114,
+        "bougyo_max": 152,
         "skill": [
             {
                 "sname": "精灵加护",
@@ -34,7 +34,7 @@ var armor_list = {
     },
     "300_2": {
         "id": 300,
-        "name": "神火裝【上衣】繼",
+        "name": "炎火装束【上衣】继",
         "rank": 8,
         "gender": "男女共通",
         "parts": "身",
@@ -45,7 +45,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 80,
-        "bougyo_max": 114,
+        "bougyo_max": 152,
         "skill": [
             {
                 "sname": "翔虫使",
@@ -72,7 +72,7 @@ var armor_list = {
     },
     "300_3": {
         "id": 300,
-        "name": "神火裝【手甲】繼",
+        "name": "炎火装束【手甲】继",
         "rank": 8,
         "gender": "男女共通",
         "parts": "手",
@@ -83,7 +83,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 80,
-        "bougyo_max": 114,
+        "bougyo_max": 152,
         "skill": [
             {
                 "sname": "看破",
@@ -110,7 +110,7 @@ var armor_list = {
     },
     "300_4": {
         "id": 300,
-        "name": "神火裝【腰卷】繼",
+        "name": "炎火装束【腰卷】继",
         "rank": 8,
         "gender": "男女共通",
         "parts": "腰",
@@ -121,7 +121,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 80,
-        "bougyo_max": 114,
+        "bougyo_max": 152,
         "skill": [
             {
                 "sname": "翔虫使",
@@ -143,7 +143,7 @@ var armor_list = {
     },
     "300_5": {
         "id": 300,
-        "name": "神火裝【綁腿】繼",
+        "name": "炎火装束【绑腿】继",
         "rank": 8,
         "gender": "男女共通",
         "parts": "腿",
@@ -154,7 +154,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 80,
-        "bougyo_max": 114,
+        "bougyo_max": 152,
         "skill": [
             {
                 "sname": "墙面移动",
@@ -181,7 +181,7 @@ var armor_list = {
     },
     "301_1": {
         "id": 301,
-        "name": "皮製X頭飾",
+        "name": "皮制X头饰",
         "rank": 8,
         "gender": "男女共通",
         "parts": "头",
@@ -192,7 +192,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 80,
-        "bougyo_max": 114,
+        "bougyo_max": 152,
         "skill": [
             {
                 "sname": "地质学",
@@ -219,7 +219,7 @@ var armor_list = {
     },
     "301_2": {
         "id": 301,
-        "name": "皮製X服飾",
+        "name": "皮制X服饰",
         "rank": 8,
         "gender": "男女共通",
         "parts": "身",
@@ -230,7 +230,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 80,
-        "bougyo_max": 114,
+        "bougyo_max": 152,
         "skill": [
             {
                 "sname": "植生学",
@@ -238,7 +238,7 @@ var armor_list = {
                 "hex": "4F"
             },
             {
-                "sname": "体力回复量UP",
+                "sname": "体力回复量提升",
                 "lv": 1,
                 "hex": "3A"
             }
@@ -252,7 +252,7 @@ var armor_list = {
     },
     "301_3": {
         "id": 301,
-        "name": "皮製X手套",
+        "name": "皮制X手套",
         "rank": 8,
         "gender": "男女共通",
         "parts": "手",
@@ -263,7 +263,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 80,
-        "bougyo_max": 114,
+        "bougyo_max": 152,
         "skill": [
             {
                 "sname": "地质学",
@@ -285,7 +285,7 @@ var armor_list = {
     },
     "301_4": {
         "id": 301,
-        "name": "皮製X腰帶",
+        "name": "皮制X腰带",
         "rank": 8,
         "gender": "男女共通",
         "parts": "腰",
@@ -296,10 +296,10 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 80,
-        "bougyo_max": 114,
+        "bougyo_max": 152,
         "skill": [
             {
-                "sname": "体力回复量UP",
+                "sname": "体力回复量提升",
                 "lv": 2,
                 "hex": "3A"
             },
@@ -318,7 +318,7 @@ var armor_list = {
     },
     "301_5": {
         "id": 301,
-        "name": "皮製X長褲",
+        "name": "皮制X长裤",
         "rank": 8,
         "gender": "男女共通",
         "parts": "腿",
@@ -329,7 +329,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 80,
-        "bougyo_max": 114,
+        "bougyo_max": 152,
         "skill": [
             {
                 "sname": "地质学",
@@ -351,7 +351,7 @@ var armor_list = {
     },
     "302_1": {
         "id": 302,
-        "name": "鎖甲X頭飾",
+        "name": "锁甲X头饰",
         "rank": 8,
         "gender": "男女共通",
         "parts": "头",
@@ -362,7 +362,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 82,
-        "bougyo_max": 116,
+        "bougyo_max": 154,
         "skill": [
             {
                 "sname": "耐力急速回复",
@@ -384,7 +384,7 @@ var armor_list = {
     },
     "302_2": {
         "id": 302,
-        "name": "鎖甲X服飾",
+        "name": "锁甲X服饰",
         "rank": 8,
         "gender": "男女共通",
         "parts": "身",
@@ -395,7 +395,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 82,
-        "bougyo_max": 116,
+        "bougyo_max": 154,
         "skill": [
             {
                 "sname": "防御",
@@ -422,7 +422,7 @@ var armor_list = {
     },
     "302_3": {
         "id": 302,
-        "name": "鎖甲X手套",
+        "name": "锁甲X手套",
         "rank": 8,
         "gender": "男女共通",
         "parts": "手",
@@ -433,7 +433,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 82,
-        "bougyo_max": 116,
+        "bougyo_max": 154,
         "skill": [
             {
                 "sname": "耐力急速回复",
@@ -455,7 +455,7 @@ var armor_list = {
     },
     "302_4": {
         "id": 302,
-        "name": "鎖甲X腰帶",
+        "name": "锁甲X腰带",
         "rank": 8,
         "gender": "男女共通",
         "parts": "腰",
@@ -466,7 +466,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 82,
-        "bougyo_max": 116,
+        "bougyo_max": 154,
         "skill": [
             {
                 "sname": "防御性能",
@@ -493,7 +493,7 @@ var armor_list = {
     },
     "302_5": {
         "id": 302,
-        "name": "鎖甲X護腿",
+        "name": "锁甲X长裤",
         "rank": 8,
         "gender": "男女共通",
         "parts": "腿",
@@ -504,7 +504,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 82,
-        "bougyo_max": 116,
+        "bougyo_max": 154,
         "skill": [
             {
                 "sname": "耐力急速回复",
@@ -526,7 +526,7 @@ var armor_list = {
     },
     "303_1": {
         "id": 303,
-        "name": "獵人X頭盔",
+        "name": "猎人X头盔",
         "rank": 8,
         "gender": "男女共通",
         "parts": "头",
@@ -537,7 +537,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 82,
-        "bougyo_max": 116,
+        "bougyo_max": 154,
         "skill": [
             {
                 "sname": "道具使用强化",
@@ -559,7 +559,7 @@ var armor_list = {
     },
     "303_2": {
         "id": 303,
-        "name": "獵人X鎧甲",
+        "name": "猎人X铠甲",
         "rank": 8,
         "gender": "男女共通",
         "parts": "身",
@@ -570,7 +570,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 82,
-        "bougyo_max": 116,
+        "bougyo_max": 154,
         "skill": [
             {
                 "sname": "攻击",
@@ -597,7 +597,7 @@ var armor_list = {
     },
     "303_3": {
         "id": 303,
-        "name": "獵人X腕甲",
+        "name": "猎人X腕甲",
         "rank": 8,
         "gender": "男女共通",
         "parts": "手",
@@ -608,7 +608,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 82,
-        "bougyo_max": 116,
+        "bougyo_max": 154,
         "skill": [
             {
                 "sname": "纳刀术",
@@ -635,7 +635,7 @@ var armor_list = {
     },
     "303_4": {
         "id": 303,
-        "name": "獵人X腰甲",
+        "name": "猎人X腰甲",
         "rank": 8,
         "gender": "男女共通",
         "parts": "腰",
@@ -646,10 +646,10 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 82,
-        "bougyo_max": 116,
+        "bougyo_max": 154,
         "skill": [
             {
-                "sname": "气绝耐性",
+                "sname": "昏厥耐性",
                 "lv": 2,
                 "hex": "4C"
             },
@@ -673,7 +673,7 @@ var armor_list = {
     },
     "303_5": {
         "id": 303,
-        "name": "獵人X護腿",
+        "name": "猎人X护腿",
         "rank": 8,
         "gender": "男女共通",
         "parts": "腿",
@@ -684,10 +684,10 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 82,
-        "bougyo_max": 116,
+        "bougyo_max": 154,
         "skill": [
             {
-                "sname": "气绝耐性",
+                "sname": "昏厥耐性",
                 "lv": 1,
                 "hex": "4C"
             },
@@ -709,9 +709,209 @@ var armor_list = {
         "def_d": 0,
         "rare9": false
     },
+    "304_1": {
+        "id": 304,
+        "name": "杜宾X头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 104,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "龙属性攻击强化",
+                "lv": 1,
+                "hex": "11"
+            },
+            {
+                "sname": "攻击",
+                "lv": 1,
+                "hex": "01"
+            },
+            {
+                "sname": "火场怪力",
+                "lv": 1,
+                "hex": "5B"
+            },
+            {
+                "sname": "跑者",
+                "lv": 1,
+                "hex": "20"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 4,
+        "rare9": false
+    },
+    "304_2": {
+        "id": 304,
+        "name": "杜宾X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 104,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "龙属性攻击强化",
+                "lv": 1,
+                "hex": "11"
+            },
+            {
+                "sname": "集中",
+                "lv": 1,
+                "hex": "1E"
+            },
+            {
+                "sname": "强化持续",
+                "lv": 1,
+                "hex": "1F"
+            },
+            {
+                "sname": "火场怪力",
+                "lv": 2,
+                "hex": "5B"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 4,
+        "rare9": false
+    },
+    "304_3": {
+        "id": 304,
+        "name": "杜宾X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 104,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "龙属性攻击强化",
+                "lv": 1,
+                "hex": "11"
+            },
+            {
+                "sname": "强化持续",
+                "lv": 2,
+                "hex": "1F"
+            },
+            {
+                "sname": "减轻后坐力",
+                "lv": 2,
+                "hex": "35"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 4,
+        "rare9": false
+    },
+    "304_4": {
+        "id": 304,
+        "name": "杜宾X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 104,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "龙属性攻击强化",
+                "lv": 1,
+                "hex": "11"
+            },
+            {
+                "sname": "攻击",
+                "lv": 2,
+                "hex": "01"
+            },
+            {
+                "sname": "跑者",
+                "lv": 2,
+                "hex": "20"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 4,
+        "rare9": false
+    },
+    "304_5": {
+        "id": 304,
+        "name": "杜宾X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 104,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "龙属性攻击强化",
+                "lv": 1,
+                "hex": "11"
+            },
+            {
+                "sname": "集中",
+                "lv": 2,
+                "hex": "1E"
+            },
+            {
+                "sname": "火场怪力",
+                "lv": 2,
+                "hex": "5B"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 4,
+        "rare9": false
+    },
     "305_1": {
         "id": 305,
-        "name": "合金X頭盔",
+        "name": "合金X头盔",
         "rank": 8,
         "gender": "男女共通",
         "parts": "头",
@@ -722,7 +922,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 82,
-        "bougyo_max": 116,
+        "bougyo_max": 154,
         "skill": [
             {
                 "sname": "水属性攻击强化",
@@ -730,7 +930,7 @@ var armor_list = {
                 "hex": "0E"
             },
             {
-                "sname": "钢刃研磨",
+                "sname": "刚刃打磨",
                 "lv": 1,
                 "hex": "19"
             },
@@ -749,7 +949,7 @@ var armor_list = {
     },
     "305_2": {
         "id": 305,
-        "name": "合金X鎧甲",
+        "name": "合金X铠甲",
         "rank": 8,
         "gender": "男女共通",
         "parts": "身",
@@ -760,7 +960,7 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 82,
-        "bougyo_max": 116,
+        "bougyo_max": 154,
         "skill": [
             {
                 "sname": "砥石使用高速化",
@@ -768,7 +968,7 @@ var armor_list = {
                 "hex": "55"
             },
             {
-                "sname": "钢刃研磨",
+                "sname": "刚刃打磨",
                 "lv": 2,
                 "hex": "19"
             }
@@ -793,7 +993,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 82,
-        "bougyo_max": 116,
+        "bougyo_max": 154,
         "skill": [
             {
                 "sname": "水属性攻击强化",
@@ -826,7 +1026,7 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 82,
-        "bougyo_max": 116,
+        "bougyo_max": 154,
         "skill": [
             {
                 "sname": "水属性攻击强化",
@@ -848,7 +1048,7 @@ var armor_list = {
     },
     "305_5": {
         "id": 305,
-        "name": "合金X護腿",
+        "name": "合金X护腿",
         "rank": 8,
         "gender": "男女共通",
         "parts": "腿",
@@ -859,7 +1059,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 82,
-        "bougyo_max": 116,
+        "bougyo_max": 154,
         "skill": [
             {
                 "sname": "看破",
@@ -871,3421 +1071,12 @@ var armor_list = {
         "def_w": 0,
         "def_t": -1,
         "def_i": -1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "382_1": {
-        "id": 382,
-        "name": "骨製X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 82,
-        "bougyo_max": 116,
-        "skill": [
-            {
-                "sname": "耐力夺取",
-                "lv": 1,
-                "hex": "2A"
-            },
-            {
-                "sname": "破坏王",
-                "lv": 1,
-                "hex": "51"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": -1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "382_2": {
-        "id": 382,
-        "name": "骨製X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 82,
-        "bougyo_max": 116,
-        "skill": [
-            {
-                "sname": "耐力夺取",
-                "lv": 1,
-                "hex": "2A"
-            },
-            {
-                "sname": "跑者",
-                "lv": 2,
-                "hex": "20"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": -1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "382_3": {
-        "id": 382,
-        "name": "骨製X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 82,
-        "bougyo_max": 116,
-        "skill": [
-            {
-                "sname": "拔刀术【力】",
-                "lv": 2,
-                "hex": "27"
-            },
-            {
-                "sname": "耐力夺取",
-                "lv": 1,
-                "hex": "2A"
-            },
-            {
-                "sname": "跑者",
-                "lv": 1,
-                "hex": "20"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": -1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "382_4": {
-        "id": 382,
-        "name": "骨製X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 82,
-        "bougyo_max": 116,
-        "skill": [
-            {
-                "sname": "集中",
-                "lv": 1,
-                "hex": "1E"
-            },
-            {
-                "sname": "破坏王",
-                "lv": 2,
-                "hex": "51"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": -1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "382_5": {
-        "id": 382,
-        "name": "骨製X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 82,
-        "bougyo_max": 116,
-        "skill": [
-            {
-                "sname": "泥雪耐性",
-                "lv": 2,
-                "hex": "4D"
-            },
-            {
-                "sname": "集中",
-                "lv": 1,
-                "hex": "1E"
-            },
-            {
-                "sname": "拔刀术【力】",
-                "lv": 1,
-                "hex": "27"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": -1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "342_1": {
-        "id": 342,
-        "name": "丸鳥X偽裝",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "飞身跃入",
-                "lv": 1,
-                "hex": "61"
-            },
-            {
-                "sname": "幸运",
-                "lv": 2,
-                "hex": "54"
-            }
-        ],
-        "def_f": -3,
-        "def_w": -2,
-        "def_t": -2,
-        "def_i": 1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "344_1": {
-        "id": 344,
-        "name": "原角龍X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 90,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "贯通弹·贯通箭强化",
-                "lv": 2,
-                "hex": "32"
-            },
-            {
-                "sname": "气绝耐性",
-                "lv": 1,
-                "hex": "4C"
-            },
-            {
-                "sname": "泥雪耐性",
-                "lv": 1,
-                "hex": "4D"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": -2,
-        "def_d": 0,
-        "rare9": false
-    },
-    "344_2": {
-        "id": 344,
-        "name": "原角龍X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 90,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "炮术",
-                "lv": 1,
-                "hex": "2D"
-            },
-            {
-                "sname": "气绝耐性",
-                "lv": 2,
-                "hex": "4C"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": -2,
-        "def_d": 0,
-        "rare9": false
-    },
-    "344_3": {
-        "id": 344,
-        "name": "原角龍X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 90,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "炮术",
-                "lv": 2,
-                "hex": "2D"
-            },
-            {
-                "sname": "炮弹装填",
-                "lv": 1,
-                "hex": "2E"
-            },
-            {
-                "sname": "特殊射击强化",
-                "lv": 1,
-                "hex": "2F"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": -2,
-        "def_d": 0,
-        "rare9": false
-    },
-    "344_4": {
-        "id": 344,
-        "name": "原角龍X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 90,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "耐震",
-                "lv": 2,
-                "hex": "3F"
-            },
-            {
-                "sname": "炮弹装填",
-                "lv": 1,
-                "hex": "2E"
-            },
-            {
-                "sname": "特殊射击强化",
-                "lv": 1,
-                "hex": "2F"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": -2,
-        "def_d": 0,
-        "rare9": false
-    },
-    "344_5": {
-        "id": 344,
-        "name": "原角龍X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 90,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "贯通弹·贯通箭强化",
-                "lv": 1,
-                "hex": "32"
-            },
-            {
-                "sname": "耐震",
-                "lv": 1,
-                "hex": "3F"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": -2,
-        "def_d": 0,
-        "rare9": false
-    },
-    "347_1": {
-        "id": 347,
-        "name": "野豬X偽裝",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "佯动",
-                "lv": 1,
-                "hex": "62"
-            },
-            {
-                "sname": "挑战者",
-                "lv": 3,
-                "hex": "02"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 4,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "349_2": {
-        "id": 349,
-        "name": "水生獸X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 90,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "水属性攻击强化",
-                "lv": 2,
-                "hex": "0E"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 4,
-        "def_t": -1,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "349_4": {
-        "id": 349,
-        "name": "水生獸X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 90,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "佯动",
-                "lv": 1,
-                "hex": "62"
-            },
-            {
-                "sname": "怨恨",
-                "lv": 1,
-                "hex": "04"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 4,
-        "def_t": -1,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "349_5": {
-        "id": 349,
-        "name": "水生獸X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 90,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "水属性攻击强化",
-                "lv": 3,
-                "hex": "0E"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 4,
-        "def_t": -1,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "346_1": {
-        "id": 346,
-        "name": "飛甲蟲X禮帽",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 84,
-        "bougyo_max": 118,
-        "skill": [
-            {
-                "sname": "毒属性强化",
-                "lv": 1,
-                "hex": "12"
-            },
-            {
-                "sname": "减轻后坐力",
-                "lv": 2,
-                "hex": "35"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 2,
-        "rare9": false
-    },
-    "346_2": {
-        "id": 346,
-        "name": "飛甲蟲X服裝",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 84,
-        "bougyo_max": 118,
-        "skill": [
-            {
-                "sname": "麻痹属性强化",
-                "lv": 1,
-                "hex": "13"
-            },
-            {
-                "sname": "回避性能",
-                "lv": 2,
-                "hex": "41"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 2,
-        "rare9": false
-    },
-    "346_3": {
-        "id": 346,
-        "name": "飛甲蟲X護手",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 84,
-        "bougyo_max": 118,
-        "skill": [
-            {
-                "sname": "毒属性强化",
-                "lv": 2,
-                "hex": "12"
-            },
-            {
-                "sname": "回避性能",
-                "lv": 2,
-                "hex": "41"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 2,
-        "rare9": false
-    },
-    "346_4": {
-        "id": 346,
-        "name": "飛甲蟲X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 84,
-        "bougyo_max": 118,
-        "skill": [
-            {
-                "sname": "麻痹属性强化",
-                "lv": 2,
-                "hex": "13"
-            },
-            {
-                "sname": "回避性能",
-                "lv": 1,
-                "hex": "41"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 2,
-        "rare9": false
-    },
-    "346_5": {
-        "id": 346,
-        "name": "飛甲蟲X靴",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 84,
-        "bougyo_max": 118,
-        "skill": [
-            {
-                "sname": "减轻后坐力",
-                "lv": 1,
-                "hex": "35"
-            },
-            {
-                "sname": "抑制偏移",
-                "lv": 2,
-                "hex": "36"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 2,
-        "rare9": false
-    },
-    "409_1": {
-        "id": 409,
-        "name": "巨甲蟲頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "死里逃生",
-                "lv": 2,
-                "hex": "05"
-            },
-            {
-                "sname": "体力回复量UP",
-                "lv": 1,
-                "hex": "3A"
-            }
-        ],
-        "def_f": -1,
-        "def_w": -1,
-        "def_t": -1,
-        "def_i": -1,
-        "def_d": 4,
-        "rare9": false
-    },
-    "409_2": {
-        "id": 409,
-        "name": "巨甲蟲鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "龙属性攻击强化",
-                "lv": 2,
-                "hex": "11"
-            },
-            {
-                "sname": "体力回复量UP",
-                "lv": 1,
-                "hex": "3A"
-            }
-        ],
-        "def_f": -1,
-        "def_w": -1,
-        "def_t": -1,
-        "def_i": -1,
-        "def_d": 4,
-        "rare9": false
-    },
-    "409_3": {
-        "id": 409,
-        "name": "巨甲蟲腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "龙属性攻击强化",
-                "lv": 1,
-                "hex": "11"
-            },
-            {
-                "sname": "抑制偏移",
-                "lv": 2,
-                "hex": "36"
-            }
-        ],
-        "def_f": -1,
-        "def_w": -1,
-        "def_t": -1,
-        "def_i": -1,
-        "def_d": 4,
-        "rare9": false
-    },
-    "409_4": {
-        "id": 409,
-        "name": "巨甲蟲護裙",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "龙属性攻击强化",
-                "lv": 2,
-                "hex": "11"
-            },
-            {
-                "sname": "龙耐性",
-                "lv": 3,
-                "hex": "47"
-            }
-        ],
-        "def_f": -1,
-        "def_w": -1,
-        "def_t": -1,
-        "def_i": -1,
-        "def_d": 4,
-        "rare9": false
-    },
-    "409_5": {
-        "id": 409,
-        "name": "巨甲蟲護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "死里逃生",
-                "lv": 1,
-                "hex": "05"
-            },
-            {
-                "sname": "抑制偏移",
-                "lv": 1,
-                "hex": "36"
-            },
-            {
-                "sname": "体力回复量UP",
-                "lv": 1,
-                "hex": "3A"
-            }
-        ],
-        "def_f": -1,
-        "def_w": -1,
-        "def_t": -1,
-        "def_i": -1,
-        "def_d": 4,
-        "rare9": false
-    },
-    "408_1": {
-        "id": 408,
-        "name": "巨蜂頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 84,
-        "bougyo_max": 118,
-        "skill": [
-            {
-                "sname": "麻痹属性强化",
-                "lv": 1,
-                "hex": "13"
-            },
-            {
-                "sname": "翔虫使",
-                "lv": 2,
-                "hex": "68"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 2,
-        "rare9": false
-    },
-    "408_2": {
-        "id": 408,
-        "name": "巨蜂鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 84,
-        "bougyo_max": 118,
-        "skill": [
-            {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
-            },
-            {
-                "sname": "麻痹耐性",
-                "lv": 2,
-                "hex": "4A"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 2,
-        "rare9": false
-    },
-    "408_3": {
-        "id": 408,
-        "name": "巨蜂腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 84,
-        "bougyo_max": 118,
-        "skill": [
-            {
-                "sname": "麻痹属性强化",
-                "lv": 2,
-                "hex": "13"
-            },
-            {
-                "sname": "骑乘名人",
-                "lv": 1,
-                "hex": "63"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 2,
-        "rare9": false
-    },
-    "408_4": {
-        "id": 408,
-        "name": "巨蜂護裙",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 84,
-        "bougyo_max": 118,
-        "skill": [
-            {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
-            },
-            {
-                "sname": "麻痹耐性",
-                "lv": 1,
-                "hex": "4A"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 2,
-        "rare9": false
-    },
-    "408_5": {
-        "id": 408,
-        "name": "巨蜂護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 84,
-        "bougyo_max": 118,
-        "skill": [
-            {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
-            },
-            {
-                "sname": "翔虫使",
-                "lv": 1,
-                "hex": "68"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 2,
-        "rare9": false
-    },
-    "345_3": {
-        "id": 345,
-        "name": "狗龍皮臂甲X",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 90,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "攻击",
-                "lv": 3,
-                "hex": "01"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "345_5": {
-        "id": 345,
-        "name": "狗龍皮護腿X",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 90,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "骑乘名人",
-                "lv": 1,
-                "hex": "63"
-            },
-            {
-                "sname": "墙面移动",
-                "lv": 2,
-                "hex": "69"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "377_1": {
-        "id": 377,
-        "name": "狗龍X偽裝",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "滑走强化",
-                "lv": 1,
-                "hex": "2B"
-            },
-            {
-                "sname": "跑者",
-                "lv": 2,
-                "hex": "20"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "407_1": {
-        "id": 407,
-        "name": "迅猛龍頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "攻击",
-                "lv": 1,
-                "hex": "01"
-            },
-            {
-                "sname": "气绝耐性",
-                "lv": 1,
-                "hex": "4C"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": -2,
-        "def_d": 0,
-        "rare9": false
-    },
-    "407_2": {
-        "id": 407,
-        "name": "迅猛龍鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "攻击",
-                "lv": 1,
-                "hex": "01"
-            },
-            {
-                "sname": "风压耐性",
-                "lv": 1,
-                "hex": "3E"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": -2,
-        "def_d": 0,
-        "rare9": false
-    },
-    "407_3": {
-        "id": 407,
-        "name": "迅猛龍腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "攻击",
-                "lv": 2,
-                "hex": "01"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": -2,
-        "def_d": 0,
-        "rare9": false
-    },
-    "407_4": {
-        "id": 407,
-        "name": "迅猛龍護裙",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "攻击",
-                "lv": 1,
-                "hex": "01"
-            },
-            {
-                "sname": "捕获名人",
-                "lv": 1,
-                "hex": "52"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": -2,
-        "def_d": 0,
-        "rare9": false
-    },
-    "407_5": {
-        "id": 407,
-        "name": "迅猛龍護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "风压耐性",
-                "lv": 2,
-                "hex": "3E"
-            },
-            {
-                "sname": "气绝耐性",
-                "lv": 2,
-                "hex": "4C"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": -2,
-        "def_d": 0,
-        "rare9": false
-    },
-    "338_1": {
-        "id": 338,
-        "name": "鐮鼬龍X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "看破",
-                "lv": 1,
-                "hex": "06"
-            },
-            {
-                "sname": "回避性能",
-                "lv": 2,
-                "hex": "41"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -1,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "338_2": {
-        "id": 338,
-        "name": "鐮鼬龍X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "看破",
-                "lv": 2,
-                "hex": "06"
-            },
-            {
-                "sname": "回复速度",
-                "lv": 2,
-                "hex": "3B"
-            },
-            {
-                "sname": "回避性能",
-                "lv": 1,
-                "hex": "41"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -1,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "338_3": {
-        "id": 338,
-        "name": "鐮鼬龍X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "体术",
-                "lv": 2,
-                "hex": "21"
-            },
-            {
-                "sname": "回避性能",
-                "lv": 1,
-                "hex": "41"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -1,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "338_4": {
-        "id": 338,
-        "name": "鐮鼬龍X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "看破",
-                "lv": 2,
-                "hex": "06"
-            },
-            {
-                "sname": "体术",
-                "lv": 1,
-                "hex": "21"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -1,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "338_5": {
-        "id": 338,
-        "name": "鐮鼬龍X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "回复速度",
-                "lv": 1,
-                "hex": "3B"
-            },
-            {
-                "sname": "体术",
-                "lv": 2,
-                "hex": "21"
-            },
-            {
-                "sname": "回避性能",
-                "lv": 1,
-                "hex": "41"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -1,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "352_1": {
-        "id": 352,
-        "name": "眠狗龍X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "睡眠属性强化",
-                "lv": 1,
-                "hex": "14"
-            },
-            {
-                "sname": "冰耐性",
-                "lv": 1,
-                "hex": "45"
-            }
-        ],
-        "def_f": -4,
-        "def_w": -1,
-        "def_t": -1,
-        "def_i": 2,
-        "def_d": 1,
-        "rare9": true
-    },
-    "352_2": {
-        "id": 352,
-        "name": "眠狗龍X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "攻击",
-                "lv": 1,
-                "hex": "01"
-            },
-            {
-                "sname": "睡眠属性强化",
-                "lv": 1,
-                "hex": "14"
-            }
-        ],
-        "def_f": -4,
-        "def_w": -1,
-        "def_t": -1,
-        "def_i": 2,
-        "def_d": 1,
-        "rare9": false
-    },
-    "352_3": {
-        "id": 352,
-        "name": "眠狗龍X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "睡眠耐性",
-                "lv": 2,
-                "hex": "4B"
-            },
-            {
-                "sname": "睡眠属性强化",
-                "lv": 1,
-                "hex": "14"
-            }
-        ],
-        "def_f": -4,
-        "def_w": -1,
-        "def_t": -1,
-        "def_i": 2,
-        "def_d": 1,
-        "rare9": false
-    },
-    "352_4": {
-        "id": 352,
-        "name": "眠狗龍X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "攻击",
-                "lv": 2,
-                "hex": "01"
-            },
-            {
-                "sname": "睡眠耐性",
-                "lv": 1,
-                "hex": "4B"
-            }
-        ],
-        "def_f": -4,
-        "def_w": -1,
-        "def_t": -1,
-        "def_i": 2,
-        "def_d": 1,
-        "rare9": false
-    },
-    "352_5": {
-        "id": 352,
-        "name": "眠狗龍X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "攻击",
-                "lv": 2,
-                "hex": "01"
-            },
-            {
-                "sname": "冰耐性",
-                "lv": 2,
-                "hex": "45"
-            }
-        ],
-        "def_f": -4,
-        "def_w": -1,
-        "def_t": -1,
-        "def_i": 2,
-        "def_d": 1,
-        "rare9": false
-    },
-    "368_1": {
-        "id": 368,
-        "name": "搔鳥X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "精神抖擞",
-                "lv": 2,
-                "hex": "0A"
-            },
-            {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
-            },
-            {
-                "sname": "气绝耐性",
-                "lv": 1,
-                "hex": "4C"
-            }
-        ],
-        "def_f": 0,
-        "def_w": -3,
-        "def_t": 0,
-        "def_i": 1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "368_2": {
-        "id": 368,
-        "name": "搔鳥X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "KO术",
-                "lv": 2,
-                "hex": "29"
-            },
-            {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
-            }
-        ],
-        "def_f": 0,
-        "def_w": -3,
-        "def_t": 0,
-        "def_i": 1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "368_3": {
-        "id": 368,
-        "name": "搔鳥X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "KO术",
-                "lv": 1,
-                "hex": "29"
-            },
-            {
-                "sname": "耐力夺取",
-                "lv": 2,
-                "hex": "2A"
-            },
-            {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
-            }
-        ],
-        "def_f": 0,
-        "def_w": -3,
-        "def_t": 0,
-        "def_i": 1,
-        "def_d": 0,
-        "rare9": true
-    },
-    "368_4": {
-        "id": 368,
-        "name": "搔鳥X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "耐力夺取",
-                "lv": 1,
-                "hex": "2A"
-            },
-            {
-                "sname": "精神抖擞",
-                "lv": 1,
-                "hex": "0A"
-            }
-        ],
-        "def_f": 0,
-        "def_w": -3,
-        "def_t": 0,
-        "def_i": 1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "368_5": {
-        "id": 368,
-        "name": "搔鳥X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "气绝耐性",
-                "lv": 2,
-                "hex": "4C"
-            },
-            {
-                "sname": "看破",
-                "lv": 2,
-                "hex": "06"
-            }
-        ],
-        "def_f": 0,
-        "def_w": -3,
-        "def_t": 0,
-        "def_i": 1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "351_1": {
-        "id": 351,
-        "name": "毒狗龍X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 88,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "速射强化",
-                "lv": 2,
-                "hex": "37"
-            },
-            {
-                "sname": "回避距离UP",
-                "lv": 1,
-                "hex": "42"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -2,
-        "def_t": 1,
-        "def_i": -4,
-        "def_d": 0,
-        "rare9": false
-    },
-    "351_2": {
-        "id": 351,
-        "name": "毒狗龍X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 88,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "速射强化",
-                "lv": 1,
-                "hex": "37"
-            },
-            {
-                "sname": "毒属性强化",
-                "lv": 1,
-                "hex": "12"
-            },
-            {
-                "sname": "毒耐性",
-                "lv": 1,
-                "hex": "49"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -2,
-        "def_t": 1,
-        "def_i": -4,
-        "def_d": 0,
-        "rare9": true
-    },
-    "351_3": {
-        "id": 351,
-        "name": "毒狗龍X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 88,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "装填扩充",
-                "lv": 1,
-                "hex": "33"
-            },
-            {
-                "sname": "毒耐性",
-                "lv": 2,
-                "hex": "49"
-            },
-            {
-                "sname": "心眼",
-                "lv": 2,
-                "hex": "1A"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -2,
-        "def_t": 1,
-        "def_i": -4,
-        "def_d": 0,
-        "rare9": false
-    },
-    "351_4": {
-        "id": 351,
-        "name": "毒狗龍X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 88,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "装填扩充",
-                "lv": 2,
-                "hex": "33"
-            },
-            {
-                "sname": "毒属性强化",
-                "lv": 2,
-                "hex": "12"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -2,
-        "def_t": 1,
-        "def_i": -4,
-        "def_d": 0,
-        "rare9": false
-    },
-    "351_5": {
-        "id": 351,
-        "name": "毒狗龍X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 88,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "回避距离UP",
-                "lv": 2,
-                "hex": "42"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -2,
-        "def_t": 1,
-        "def_i": -4,
-        "def_d": 0,
-        "rare9": false
-    },
-    "353_1": {
-        "id": 353,
-        "name": "青熊獸X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 3,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "不屈",
-                "lv": 1,
-                "hex": "5C"
-            },
-            {
-                "sname": "防御",
-                "lv": 3,
-                "hex": "38"
-            },
-            {
-                "sname": "快吃",
-                "lv": 1,
-                "hex": "3C"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 0,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "353_2": {
-        "id": 353,
-        "name": "青熊獸X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "逆袭",
-                "lv": 1,
-                "hex": "6A"
-            },
-            {
-                "sname": "怨恨",
-                "lv": 1,
-                "hex": "04"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 0,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "353_3": {
-        "id": 353,
-        "name": "青熊獸X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "逆袭",
-                "lv": 1,
-                "hex": "6A"
-            },
-            {
-                "sname": "防御",
-                "lv": 1,
-                "hex": "38"
-            },
-            {
-                "sname": "怨恨",
-                "lv": 2,
-                "hex": "04"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 0,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": true
-    },
-    "353_4": {
-        "id": 353,
-        "name": "青熊獸X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "逆袭",
-                "lv": 1,
-                "hex": "6A"
-            },
-            {
-                "sname": "防御",
-                "lv": 3,
-                "hex": "38"
-            },
-            {
-                "sname": "快吃",
-                "lv": 1,
-                "hex": "3C"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 0,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "353_5": {
-        "id": 353,
-        "name": "青熊獸X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "快吃",
-                "lv": 1,
-                "hex": "3C"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 0,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "381_1": {
-        "id": 381,
-        "name": "白兔獸X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "看破",
-                "lv": 1,
-                "hex": "06"
-            },
-            {
-                "sname": "冰属性攻击强化",
-                "lv": 2,
-                "hex": "0F"
-            },
-            {
-                "sname": "达人艺",
-                "lv": 1,
-                "hex": "0C"
-            },
-            {
-                "sname": "装填速度",
-                "lv": 1,
-                "hex": "34"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": 0,
-        "def_i": 3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "381_2": {
-        "id": 381,
-        "name": "白兔獸X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "滑走强化",
-                "lv": 1,
-                "hex": "2B"
-            },
-            {
-                "sname": "体术",
-                "lv": 2,
-                "hex": "21"
-            },
-            {
-                "sname": "达人艺",
-                "lv": 1,
-                "hex": "0C"
-            },
-            {
-                "sname": "装填速度",
-                "lv": 1,
-                "hex": "34"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": 0,
-        "def_i": 3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "381_3": {
-        "id": 381,
-        "name": "白兔獸X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "看破",
-                "lv": 2,
-                "hex": "06"
-            },
-            {
-                "sname": "冰属性攻击强化",
-                "lv": 3,
-                "hex": "0F"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": 0,
-        "def_i": 3,
-        "def_d": 0,
-        "rare9": true
-    },
-    "381_4": {
-        "id": 381,
-        "name": "白兔獸X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "体术",
-                "lv": 3,
-                "hex": "21"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": 0,
-        "def_i": 3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "381_5": {
-        "id": 381,
-        "name": "白兔獸X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 86,
-        "bougyo_max": 120,
-        "skill": [
-            {
-                "sname": "跳跃铁人",
-                "lv": 1,
-                "hex": "5E"
-            },
-            {
-                "sname": "看破",
-                "lv": 1,
-                "hex": "06"
-            },
-            {
-                "sname": "达人艺",
-                "lv": 1,
-                "hex": "0C"
-            },
-            {
-                "sname": "装填速度",
-                "lv": 1,
-                "hex": "34"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": 0,
-        "def_i": 3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "354_1": {
-        "id": 354,
-        "name": "赤甲獸X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 3,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 94,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "麻痹属性强化",
-                "lv": 2,
-                "hex": "13"
-            },
-            {
-                "sname": "耳栓",
-                "lv": 1,
-                "hex": "3D"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -3,
-        "def_t": 0,
-        "def_i": -1,
-        "def_d": 1,
-        "rare9": true
-    },
-    "354_2": {
-        "id": 354,
-        "name": "赤甲獸X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 94,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "高速变形",
-                "lv": 1,
-                "hex": "6B"
-            },
-            {
-                "sname": "跳跃铁人",
-                "lv": 1,
-                "hex": "5E"
-            },
-            {
-                "sname": "耳栓",
-                "lv": 1,
-                "hex": "3D"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -3,
-        "def_t": 0,
-        "def_i": -1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "354_3": {
-        "id": 354,
-        "name": "赤甲獸X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 3,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 94,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "回避距离UP",
-                "lv": 1,
-                "hex": "42"
-            },
-            {
-                "sname": "麻痹属性强化",
-                "lv": 1,
-                "hex": "13"
-            },
-            {
-                "sname": "耳栓",
-                "lv": 1,
-                "hex": "3D"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -3,
-        "def_t": 0,
-        "def_i": -1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "354_4": {
-        "id": 354,
-        "name": "赤甲獸X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 94,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "耳栓",
-                "lv": 2,
-                "hex": "3D"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -3,
-        "def_t": 0,
-        "def_i": -1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "354_5": {
-        "id": 354,
-        "name": "赤甲獸X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 94,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "高速变形",
-                "lv": 2,
-                "hex": "6B"
-            },
-            {
-                "sname": "回避距离UP",
-                "lv": 2,
-                "hex": "42"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -3,
-        "def_t": 0,
-        "def_i": -1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "327_1": {
-        "id": 327,
-        "name": "傘鳥X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 88,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
-            },
-            {
-                "sname": "火属性攻击强化",
-                "lv": 1,
-                "hex": "0D"
-            },
-            {
-                "sname": "拔刀术【技】",
-                "lv": 1,
-                "hex": "26"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -3,
-        "def_t": -1,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "327_2": {
-        "id": 327,
-        "name": "傘鳥X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 88,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
-            },
-            {
-                "sname": "无伤",
-                "lv": 1,
-                "hex": "03"
-            },
-            {
-                "sname": "拔刀术【技】",
-                "lv": 1,
-                "hex": "26"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -3,
-        "def_t": -1,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "327_3": {
-        "id": 327,
-        "name": "傘鳥X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 88,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "无伤",
-                "lv": 1,
-                "hex": "03"
-            },
-            {
-                "sname": "火属性攻击强化",
-                "lv": 2,
-                "hex": "0D"
-            },
-            {
-                "sname": "会心击【属性】",
-                "lv": 1,
-                "hex": "0B"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -3,
-        "def_t": -1,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "327_4": {
-        "id": 327,
-        "name": "傘鳥X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 88,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
-            },
-            {
-                "sname": "会心击【属性】",
-                "lv": 1,
-                "hex": "0B"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -3,
-        "def_t": -1,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "327_5": {
-        "id": 327,
-        "name": "傘鳥X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 88,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "无伤",
-                "lv": 1,
-                "hex": "03"
-            },
-            {
-                "sname": "火属性攻击强化",
-                "lv": 2,
-                "hex": "0D"
-            },
-            {
-                "sname": "拔刀术【技】",
-                "lv": 1,
-                "hex": "26"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -3,
-        "def_t": -1,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "355_1": {
-        "id": 355,
-        "name": "水獸X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 92,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "跑者",
-                "lv": 1,
-                "hex": "20"
-            },
-            {
-                "sname": "无伤",
-                "lv": 1,
-                "hex": "03"
-            },
-            {
-                "sname": "集中",
-                "lv": 1,
-                "hex": "1E"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 4,
-        "def_t": -1,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "355_2": {
-        "id": 355,
-        "name": "水獸X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 92,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "耐力急速回复",
-                "lv": 2,
-                "hex": "22"
-            },
-            {
-                "sname": "集中",
-                "lv": 1,
-                "hex": "1E"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 4,
-        "def_t": -1,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "355_3": {
-        "id": 355,
-        "name": "水獸X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 92,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "跑者",
-                "lv": 1,
-                "hex": "20"
-            },
-            {
-                "sname": "强化持续",
-                "lv": 1,
-                "hex": "1F"
-            },
-            {
-                "sname": "弹药节制",
-                "lv": 1,
-                "hex": "18"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 4,
-        "def_t": -1,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "355_4": {
-        "id": 355,
-        "name": "水獸X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 92,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "跑者",
-                "lv": 1,
-                "hex": "20"
-            },
-            {
-                "sname": "无伤",
-                "lv": 2,
-                "hex": "03"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 4,
-        "def_t": -1,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "355_5": {
-        "id": 355,
-        "name": "水獸X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 92,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "强化持续",
-                "lv": 2,
-                "hex": "1F"
-            },
-            {
-                "sname": "集中",
-                "lv": 1,
-                "hex": "1E"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 4,
-        "def_t": -1,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "356_1": {
-        "id": 356,
-        "name": "土砂龍X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 94,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "攻击",
-                "lv": 1,
-                "hex": "01"
-            },
-            {
-                "sname": "防御",
-                "lv": 1,
-                "hex": "38"
-            },
-            {
-                "sname": "攻击守势",
-                "lv": 1,
-                "hex": "25"
-            },
-            {
-                "sname": "散弹·扩散箭强化",
-                "lv": 1,
-                "hex": "31"
-            }
-        ],
-        "def_f": -3,
-        "def_w": -1,
-        "def_t": 3,
-        "def_i": -1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "356_2": {
-        "id": 356,
-        "name": "土砂龍X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 94,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "攻击",
-                "lv": 2,
-                "hex": "01"
-            },
-            {
-                "sname": "防御",
-                "lv": 2,
-                "hex": "38"
-            },
-            {
-                "sname": "泥雪耐性",
-                "lv": 2,
-                "hex": "4D"
-            }
-        ],
-        "def_f": -3,
-        "def_w": -1,
-        "def_t": 3,
-        "def_i": -1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "356_3": {
-        "id": 356,
-        "name": "土砂龍X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 94,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "攻击",
-                "lv": 2,
-                "hex": "01"
-            },
-            {
-                "sname": "滑走强化",
-                "lv": 1,
-                "hex": "2B"
-            },
-            {
-                "sname": "攻击守势",
-                "lv": 1,
-                "hex": "25"
-            },
-            {
-                "sname": "散弹·扩散箭强化",
-                "lv": 1,
-                "hex": "31"
-            }
-        ],
-        "def_f": -3,
-        "def_w": -1,
-        "def_t": 3,
-        "def_i": -1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "356_4": {
-        "id": 356,
-        "name": "土砂龍X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 94,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "防御性能",
-                "lv": 3,
-                "hex": "23"
-            },
-            {
-                "sname": "防御",
-                "lv": 1,
-                "hex": "38"
-            }
-        ],
-        "def_f": -3,
-        "def_w": -1,
-        "def_t": 3,
-        "def_i": -1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "356_5": {
-        "id": 356,
-        "name": "土砂龍X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 94,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "防御性能",
-                "lv": 2,
-                "hex": "23"
-            },
-            {
-                "sname": "防御",
-                "lv": 1,
-                "hex": "38"
-            },
-            {
-                "sname": "攻击守势",
-                "lv": 1,
-                "hex": "25"
-            }
-        ],
-        "def_f": -3,
-        "def_w": -1,
-        "def_t": 3,
-        "def_i": -1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "386_1": {
-        "id": 386,
-        "name": "大名蟹頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 94,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "纳刀术",
-                "lv": 2,
-                "hex": "28"
-            },
-            {
-                "sname": "耐震",
-                "lv": 2,
-                "hex": "3F"
-            }
-        ],
-        "def_f": -5,
-        "def_w": 1,
-        "def_t": -3,
-        "def_i": -1,
-        "def_d": 2,
-        "rare9": false
-    },
-    "386_2": {
-        "id": 386,
-        "name": "大名蟹鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 94,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "防御性能",
-                "lv": 3,
-                "hex": "23"
-            },
-            {
-                "sname": "炮弹装填",
-                "lv": 1,
-                "hex": "2E"
-            },
-            {
-                "sname": "通常弹·连射箭强化",
-                "lv": 1,
-                "hex": "30"
-            },
-            {
-                "sname": "装填扩充",
-                "lv": 1,
-                "hex": "33"
-            }
-        ],
-        "def_f": -5,
-        "def_w": 1,
-        "def_t": -3,
-        "def_i": -1,
-        "def_d": 2,
-        "rare9": false
-    },
-    "386_3": {
-        "id": 386,
-        "name": "大名蟹腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 94,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "防御性能",
-                "lv": 2,
-                "hex": "23"
-            },
-            {
-                "sname": "防御强化",
-                "lv": 1,
-                "hex": "24"
-            },
-            {
-                "sname": "通常弹·连射箭强化",
-                "lv": 2,
-                "hex": "30"
-            }
-        ],
-        "def_f": -5,
-        "def_w": 1,
-        "def_t": -3,
-        "def_i": -1,
-        "def_d": 2,
-        "rare9": false
-    },
-    "386_4": {
-        "id": 386,
-        "name": "大名蟹腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 94,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "零件改造",
-                "lv": 1,
-                "hex": "7E"
-            },
-            {
-                "sname": "匠",
-                "lv": 1,
-                "hex": "16"
-            },
-            {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
-            }
-        ],
-        "def_f": -5,
-        "def_w": 1,
-        "def_t": -3,
-        "def_i": -1,
-        "def_d": 2,
-        "rare9": false
-    },
-    "386_5": {
-        "id": 386,
-        "name": "大名蟹護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 94,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "零件改造",
-                "lv": 1,
-                "hex": "7E"
-            },
-            {
-                "sname": "匠",
-                "lv": 1,
-                "hex": "16"
-            },
-            {
-                "sname": "耐震",
-                "lv": 1,
-                "hex": "3F"
-            }
-        ],
-        "def_f": -5,
-        "def_w": 1,
-        "def_t": -3,
-        "def_i": -1,
-        "def_d": 2,
-        "rare9": false
-    },
-    "328_1": {
-        "id": 328,
-        "name": "河童蛙X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 90,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "通常弹·连射箭强化",
-                "lv": 2,
-                "hex": "30"
-            },
-            {
-                "sname": "快吃",
-                "lv": 1,
-                "hex": "3C"
-            }
-        ],
-        "def_f": -1,
-        "def_w": 4,
-        "def_t": -2,
-        "def_i": 1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "328_2": {
-        "id": 328,
-        "name": "河童蛙X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 90,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "通常弹·连射箭强化",
-                "lv": 1,
-                "hex": "30"
-            },
-            {
-                "sname": "回避距离UP",
-                "lv": 1,
-                "hex": "42"
-            },
-            {
-                "sname": "快吃",
-                "lv": 1,
-                "hex": "3C"
-            }
-        ],
-        "def_f": -1,
-        "def_w": 4,
-        "def_t": -2,
-        "def_i": 1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "328_3": {
-        "id": 328,
-        "name": "河童蛙X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 90,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "火场怪力",
-                "lv": 2,
-                "hex": "5B"
-            },
-            {
-                "sname": "特殊射击强化",
-                "lv": 2,
-                "hex": "2F"
-            },
-            {
-                "sname": "饥饿耐性",
-                "lv": 1,
-                "hex": "60"
-            }
-        ],
-        "def_f": -1,
-        "def_w": 4,
-        "def_t": -2,
-        "def_i": 1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "328_4": {
-        "id": 328,
-        "name": "河童蛙X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 90,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "火场怪力",
-                "lv": 2,
-                "hex": "5B"
-            },
-            {
-                "sname": "回避距离UP",
-                "lv": 2,
-                "hex": "42"
-            }
-        ],
-        "def_f": -1,
-        "def_w": 4,
-        "def_t": -2,
-        "def_i": 1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "328_5": {
-        "id": 328,
-        "name": "河童蛙X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 90,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "饥饿耐性",
-                "lv": 2,
-                "hex": "60"
-            },
-            {
-                "sname": "火场怪力",
-                "lv": 1,
-                "hex": "5B"
-            },
-            {
-                "sname": "快吃",
-                "lv": 1,
-                "hex": "3C"
-            }
-        ],
-        "def_f": -1,
-        "def_w": 4,
-        "def_t": -2,
-        "def_i": 1,
         "def_d": 0,
         "rare9": false
     },
     "306_1": {
         "id": 306,
-        "name": "鑄鐵X頭盔",
+        "name": "铸铁X头盔",
         "rank": 8,
         "gender": "男女共通",
         "parts": "头",
@@ -4296,7 +1087,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 94,
-        "bougyo_max": 120,
+        "bougyo_max": 158,
         "skill": [
             {
                 "sname": "风压耐性",
@@ -4318,7 +1109,7 @@ var armor_list = {
     },
     "306_2": {
         "id": 306,
-        "name": "鑄鐵X鎧甲",
+        "name": "铸铁X铠甲",
         "rank": 8,
         "gender": "男女共通",
         "parts": "身",
@@ -4329,7 +1120,7 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 94,
-        "bougyo_max": 120,
+        "bougyo_max": 158,
         "skill": [
             {
                 "sname": "风压耐性",
@@ -4351,7 +1142,7 @@ var armor_list = {
     },
     "306_3": {
         "id": 306,
-        "name": "鑄鐵X腕甲",
+        "name": "铸铁X腕甲",
         "rank": 8,
         "gender": "男女共通",
         "parts": "手",
@@ -4362,7 +1153,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 94,
-        "bougyo_max": 120,
+        "bougyo_max": 158,
         "skill": [
             {
                 "sname": "雷属性攻击强化",
@@ -4379,7 +1170,7 @@ var armor_list = {
     },
     "306_4": {
         "id": 306,
-        "name": "鑄鐵X腰甲",
+        "name": "铸铁X腰甲",
         "rank": 8,
         "gender": "男女共通",
         "parts": "腰",
@@ -4390,7 +1181,7 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 94,
-        "bougyo_max": 120,
+        "bougyo_max": 158,
         "skill": [
             {
                 "sname": "强化持续",
@@ -4412,7 +1203,7 @@ var armor_list = {
     },
     "306_5": {
         "id": 306,
-        "name": "鑄鐵X護腿",
+        "name": "铸铁X护腿",
         "rank": 8,
         "gender": "男女共通",
         "parts": "腿",
@@ -4423,7 +1214,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 94,
-        "bougyo_max": 120,
+        "bougyo_max": 158,
         "skill": [
             {
                 "sname": "攻击",
@@ -4443,755 +1234,194 @@ var armor_list = {
         "def_d": 0,
         "rare9": false
     },
-    "318_1": {
-        "id": 318,
-        "name": "毒蠍X護頭",
-        "rank": 8,
-        "gender": "男性专用",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 98,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "毒属性强化",
-                "lv": 3,
-                "hex": "12"
-            },
-            {
-                "sname": "力量解放",
-                "lv": 1,
-                "hex": "09"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -1,
-        "def_t": -1,
-        "def_i": -1,
-        "def_d": 3,
-        "rare9": false
-    },
-    "318_2": {
-        "id": 318,
-        "name": "毒蠍X上身",
-        "rank": 8,
-        "gender": "男性专用",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 98,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "力量解放",
-                "lv": 2,
-                "hex": "09"
-            },
-            {
-                "sname": "心眼",
-                "lv": 1,
-                "hex": "1A"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -1,
-        "def_t": -1,
-        "def_i": -1,
-        "def_d": 3,
-        "rare9": false
-    },
-    "318_3": {
-        "id": 318,
-        "name": "毒蠍X護袖",
-        "rank": 8,
-        "gender": "男性专用",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 98,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "力量解放",
-                "lv": 1,
-                "hex": "09"
-            },
-            {
-                "sname": "毒耐性",
-                "lv": 1,
-                "hex": "49"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -1,
-        "def_t": -1,
-        "def_i": -1,
-        "def_d": 3,
-        "rare9": false
-    },
-    "318_4": {
-        "id": 318,
-        "name": "毒蠍X護腰具",
-        "rank": 8,
-        "gender": "男性专用",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 98,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "弱点特效",
-                "lv": 2,
-                "hex": "08"
-            },
-            {
-                "sname": "毒耐性",
-                "lv": 1,
-                "hex": "49"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -1,
-        "def_t": -1,
-        "def_i": -1,
-        "def_d": 3,
-        "rare9": true
-    },
-    "318_5": {
-        "id": 318,
-        "name": "毒蠍X腳",
-        "rank": 8,
-        "gender": "男性专用",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 98,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "力量解放",
-                "lv": 1,
-                "hex": "09"
-            },
-            {
-                "sname": "毒耐性",
-                "lv": 1,
-                "hex": "49"
-            },
-            {
-                "sname": "心眼",
-                "lv": 2,
-                "hex": "1A"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -1,
-        "def_t": -1,
-        "def_i": -1,
-        "def_d": 3,
-        "rare9": false
-    },
-    "319_1": {
-        "id": 319,
-        "name": "毒蛛X護頭",
-        "rank": 8,
-        "gender": "女性专用",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 98,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "毒属性强化",
-                "lv": 3,
-                "hex": "12"
-            },
-            {
-                "sname": "力量解放",
-                "lv": 1,
-                "hex": "09"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -1,
-        "def_t": -1,
-        "def_i": -1,
-        "def_d": 3,
-        "rare9": false
-    },
-    "319_2": {
-        "id": 319,
-        "name": "毒蛛X上身",
-        "rank": 8,
-        "gender": "女性专用",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 98,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "力量解放",
-                "lv": 2,
-                "hex": "09"
-            },
-            {
-                "sname": "心眼",
-                "lv": 1,
-                "hex": "1A"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -1,
-        "def_t": -1,
-        "def_i": -1,
-        "def_d": 3,
-        "rare9": false
-    },
-    "319_3": {
-        "id": 319,
-        "name": "毒蛛X護袖",
-        "rank": 8,
-        "gender": "女性专用",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 98,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "力量解放",
-                "lv": 1,
-                "hex": "09"
-            },
-            {
-                "sname": "毒耐性",
-                "lv": 1,
-                "hex": "49"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -1,
-        "def_t": -1,
-        "def_i": -1,
-        "def_d": 3,
-        "rare9": false
-    },
-    "319_4": {
-        "id": 319,
-        "name": "毒蛛X護腰具",
-        "rank": 8,
-        "gender": "女性专用",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 98,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "弱点特效",
-                "lv": 2,
-                "hex": "08"
-            },
-            {
-                "sname": "毒耐性",
-                "lv": 1,
-                "hex": "49"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -1,
-        "def_t": -1,
-        "def_i": -1,
-        "def_d": 3,
-        "rare9": true
-    },
-    "319_5": {
-        "id": 319,
-        "name": "毒蛛X腳",
-        "rank": 8,
-        "gender": "女性专用",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 98,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "力量解放",
-                "lv": 1,
-                "hex": "09"
-            },
-            {
-                "sname": "毒耐性",
-                "lv": 1,
-                "hex": "49"
-            },
-            {
-                "sname": "心眼",
-                "lv": 2,
-                "hex": "1A"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -1,
-        "def_t": -1,
-        "def_i": -1,
-        "def_d": 3,
-        "rare9": false
-    },
-    "316_1": {
-        "id": 316,
-        "name": "混沌的包頭･真",
-        "rank": 8,
+    "307_1": {
+        "id": 307,
+        "name": "花纹钢X头盔",
+        "rank": 9,
         "gender": "男女共通",
         "parts": "头",
         "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 98,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "最爱蘑菇",
-                "lv": 1,
-                "hex": "57"
-            },
-            {
-                "sname": "快吃",
-                "lv": 1,
-                "hex": "3C"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -2,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "316_2": {
-        "id": 316,
-        "name": "混沌的鎧･真",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 98,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "最爱蘑菇",
-                "lv": 2,
-                "hex": "57"
-            },
-            {
-                "sname": "吹笛名人",
-                "lv": 1,
-                "hex": "2C"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -2,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "317_1": {
-        "id": 317,
-        "name": "高貴X綻放",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "毒耐性",
-                "lv": 2,
-                "hex": "49"
-            },
-            {
-                "sname": "快吃",
-                "lv": 1,
-                "hex": "3C"
-            }
-        ],
-        "def_f": -1,
-        "def_w": 3,
-        "def_t": -1,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "317_2": {
-        "id": 317,
-        "name": "高貴X枝幹",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "体力回复量UP",
-                "lv": 2,
-                "hex": "3A"
-            },
-            {
-                "sname": "广域化",
-                "lv": 1,
-                "hex": "59"
-            }
-        ],
-        "def_f": -1,
-        "def_w": 3,
-        "def_t": -1,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "317_3": {
-        "id": 317,
-        "name": "高貴X枝葉",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "捕获名人",
-                "lv": 1,
-                "hex": "52"
-            },
-            {
-                "sname": "广域化",
-                "lv": 3,
-                "hex": "59"
-            }
-        ],
-        "def_f": -1,
-        "def_w": 3,
-        "def_t": -1,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "317_4": {
-        "id": 317,
-        "name": "高貴X葉片",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "体力回复量UP",
-                "lv": 1,
-                "hex": "3A"
-            },
-            {
-                "sname": "广域化",
-                "lv": 1,
-                "hex": "59"
-            }
-        ],
-        "def_f": -1,
-        "def_w": 3,
-        "def_t": -1,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "317_5": {
-        "id": 317,
-        "name": "高貴X紮根",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
+        "rare": 8,
         "slotLv1": 1,
         "slotLv2": 0,
         "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 96,
-        "bougyo_max": 122,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 172,
         "skill": [
             {
-                "sname": "毒耐性",
-                "lv": 1,
-                "hex": "49"
+                "sname": "耐震",
+                "lv": 2,
+                "hex": "3F"
             },
             {
-                "sname": "快吃",
+                "sname": "耳塞",
                 "lv": 2,
-                "hex": "3C"
+                "hex": "3D"
             }
         ],
         "def_f": -1,
-        "def_w": 3,
-        "def_t": -1,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "324_1": {
-        "id": 324,
-        "name": "貝殼X頭部",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "弹道强化",
-                "lv": 2,
-                "hex": "1B"
-            },
-            {
-                "sname": "抑制偏移",
-                "lv": 2,
-                "hex": "36"
-            },
-            {
-                "sname": "零件改造",
-                "lv": 1,
-                "hex": "7E"
-            }
-        ],
-        "def_f": 0,
         "def_w": 2,
-        "def_t": 1,
-        "def_i": -1,
-        "def_d": 0,
+        "def_t": -3,
+        "def_i": 1,
+        "def_d": -1,
         "rare9": false
     },
-    "324_2": {
-        "id": 324,
-        "name": "貝殼X服飾",
-        "rank": 8,
+    "307_2": {
+        "id": 307,
+        "name": "花纹钢X铠甲",
+        "rank": 9,
         "gender": "男女共通",
         "parts": "身",
         "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 1,
         "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
+        "bougyo": 114,
+        "bougyo_max": 172,
         "skill": [
             {
-                "sname": "通常弹·连射箭强化",
+                "sname": "耐震",
                 "lv": 1,
-                "hex": "30"
+                "hex": "3F"
             },
             {
-                "sname": "贯通弹·贯通箭强化",
-                "lv": 1,
-                "hex": "32"
+                "sname": "匠",
+                "lv": 2,
+                "hex": "16"
             },
             {
-                "sname": "零件改造",
-                "lv": 1,
-                "hex": "7E"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 2,
-        "def_t": 1,
-        "def_i": -1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "324_3": {
-        "id": 324,
-        "name": "貝殼X拳套",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "散弹·扩散箭强化",
+                "sname": "贯穿弹・贯穿箭强化",
                 "lv": 2,
                 "hex": "31"
-            },
-            {
-                "sname": "通常弹·连射箭强化",
-                "lv": 1,
-                "hex": "30"
             }
         ],
-        "def_f": 0,
+        "def_f": -1,
         "def_w": 2,
-        "def_t": 1,
-        "def_i": -1,
-        "def_d": 0,
+        "def_t": -3,
+        "def_i": 1,
+        "def_d": -1,
         "rare9": false
     },
-    "324_4": {
-        "id": 324,
-        "name": "貝殼X纏腰布",
-        "rank": 8,
+    "307_3": {
+        "id": 307,
+        "name": "花纹钢X腕甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "耳塞",
+                "lv": 2,
+                "hex": "3D"
+            },
+            {
+                "sname": "属性异常状态的耐性",
+                "lv": 1,
+                "hex": "48"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 2,
+        "def_t": -3,
+        "def_i": 1,
+        "def_d": -1,
+        "rare9": false
+    },
+    "307_4": {
+        "id": 307,
+        "name": "花纹钢X腰甲",
+        "rank": 9,
         "gender": "男女共通",
         "parts": "腰",
         "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "弹道强化",
-                "lv": 1,
-                "hex": "1B"
-            },
-            {
-                "sname": "通常弹·连射箭强化",
-                "lv": 1,
-                "hex": "30"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 2,
-        "def_t": 1,
-        "def_i": -1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "324_5": {
-        "id": 324,
-        "name": "貝殼X涼鞋",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 1,
         "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
+        "bougyo": 114,
+        "bougyo_max": 172,
         "skill": [
             {
-                "sname": "散弹·扩散箭强化",
+                "sname": "耳塞",
+                "lv": 1,
+                "hex": "3D"
+            },
+            {
+                "sname": "匠",
+                "lv": 1,
+                "hex": "16"
+            },
+            {
+                "sname": "贯穿弹・贯穿箭强化",
                 "lv": 1,
                 "hex": "31"
             },
             {
-                "sname": "贯通弹·贯通箭强化",
-                "lv": 2,
-                "hex": "32"
+                "sname": "属性异常状态的耐性",
+                "lv": 1,
+                "hex": "48"
             }
         ],
-        "def_f": 0,
+        "def_f": -1,
         "def_w": 2,
-        "def_t": 1,
-        "def_i": -1,
-        "def_d": 0,
+        "def_t": -3,
+        "def_i": 1,
+        "def_d": -1,
+        "rare9": false
+    },
+    "307_5": {
+        "id": 307,
+        "name": "花纹钢X护腿",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "匠",
+                "lv": 2,
+                "hex": "16"
+            },
+            {
+                "sname": "装填扩充",
+                "lv": 2,
+                "hex": "33"
+            },
+            {
+                "sname": "属性异常状态的耐性",
+                "lv": 1,
+                "hex": "48"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 2,
+        "def_t": -3,
+        "def_i": 1,
+        "def_d": -1,
         "rare9": false
     },
     "308_1": {
         "id": 308,
-        "name": "花瓣X綻放",
+        "name": "花瓣X绽放",
         "rank": 8,
         "gender": "男女共通",
         "parts": "头",
@@ -5202,7 +1432,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 92,
-        "bougyo_max": 118,
+        "bougyo_max": 156,
         "skill": [
             {
                 "sname": "麻痹耐性",
@@ -5224,7 +1454,7 @@ var armor_list = {
     },
     "308_2": {
         "id": 308,
-        "name": "花瓣X枝幹",
+        "name": "花瓣X枝干",
         "rank": 8,
         "gender": "男女共通",
         "parts": "身",
@@ -5235,7 +1465,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 92,
-        "bougyo_max": 118,
+        "bougyo_max": 156,
         "skill": [
             {
                 "sname": "植生学",
@@ -5243,7 +1473,7 @@ var armor_list = {
                 "hex": "4F"
             },
             {
-                "sname": "体力回复量UP",
+                "sname": "体力回复量提升",
                 "lv": 1,
                 "hex": "3A"
             },
@@ -5262,7 +1492,7 @@ var armor_list = {
     },
     "308_3": {
         "id": 308,
-        "name": "花瓣X枝葉",
+        "name": "花瓣X枝叶",
         "rank": 8,
         "gender": "男女共通",
         "parts": "手",
@@ -5273,7 +1503,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 92,
-        "bougyo_max": 118,
+        "bougyo_max": 156,
         "skill": [
             {
                 "sname": "麻痹耐性",
@@ -5286,7 +1516,7 @@ var armor_list = {
                 "hex": "4F"
             },
             {
-                "sname": "体力回复量UP",
+                "sname": "体力回复量提升",
                 "lv": 1,
                 "hex": "3A"
             }
@@ -5300,7 +1530,7 @@ var armor_list = {
     },
     "308_4": {
         "id": 308,
-        "name": "花瓣X葉片",
+        "name": "花瓣X叶片",
         "rank": 8,
         "gender": "男女共通",
         "parts": "腰",
@@ -5311,7 +1541,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 92,
-        "bougyo_max": 118,
+        "bougyo_max": 156,
         "skill": [
             {
                 "sname": "植生学",
@@ -5338,7 +1568,7 @@ var armor_list = {
     },
     "308_5": {
         "id": 308,
-        "name": "花瓣X紮根",
+        "name": "花瓣X扎根",
         "rank": 8,
         "gender": "男女共通",
         "parts": "腿",
@@ -5349,10 +1579,10 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 92,
-        "bougyo_max": 118,
+        "bougyo_max": 156,
         "skill": [
             {
-                "sname": "体力回复量UP",
+                "sname": "体力回复量提升",
                 "lv": 1,
                 "hex": "3A"
             },
@@ -5374,1701 +1604,9 @@ var armor_list = {
         "def_d": 0,
         "rare9": false
     },
-    "424_1": {
-        "id": 424,
-        "name": "五行之藏面",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 100,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "鬼火缠",
-                "lv": 2,
-                "hex": "6C"
-            },
-            {
-                "sname": "心眼",
-                "lv": 1,
-                "hex": "1A"
-            },
-            {
-                "sname": "弹道强化",
-                "lv": 1,
-                "hex": "1B"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 3,
-        "rare9": false
-    },
-    "424_2": {
-        "id": 424,
-        "name": "五行之狩衣",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 100,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "属性异常状态的耐性",
-                "lv": 1,
-                "hex": "48"
-            },
-            {
-                "sname": "心眼",
-                "lv": 2,
-                "hex": "1A"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 3,
-        "rare9": false
-    },
-    "424_3": {
-        "id": 424,
-        "name": "五行之護臂",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 100,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "精灵加护",
-                "lv": 1,
-                "hex": "39"
-            },
-            {
-                "sname": "弹道强化",
-                "lv": 2,
-                "hex": "1B"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 3,
-        "rare9": false
-    },
-    "424_4": {
-        "id": 424,
-        "name": "五行之腰帶",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 100,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "属性异常状态的耐性",
-                "lv": 2,
-                "hex": "48"
-            },
-            {
-                "sname": "骑乘名人",
-                "lv": 1,
-                "hex": "63"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 3,
-        "rare9": false
-    },
-    "424_5": {
-        "id": 424,
-        "name": "五行之腿甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 100,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "精灵加护",
-                "lv": 2,
-                "hex": "39"
-            },
-            {
-                "sname": "鬼火缠",
-                "lv": 1,
-                "hex": "6C"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 3,
-        "rare9": false
-    },
-    "442_1": {
-        "id": 442,
-        "name": "輕裝騎士【耳飾】",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 100,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "攻击",
-                "lv": 2,
-                "hex": "01"
-            },
-            {
-                "sname": "快吃",
-                "lv": 3,
-                "hex": "3C"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "442_2": {
-        "id": 442,
-        "name": "輕裝騎士【胸甲】",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 100,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "利刃",
-                "lv": 1,
-                "hex": "17"
-            },
-            {
-                "sname": "减轻胆怯",
-                "lv": 1,
-                "hex": "5D"
-            },
-            {
-                "sname": "攻击守势",
-                "lv": 2,
-                "hex": "25"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "442_3": {
-        "id": 442,
-        "name": "輕裝騎士【手甲】",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 100,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "防御强化",
-                "lv": 3,
-                "hex": "24"
-            },
-            {
-                "sname": "减轻胆怯",
-                "lv": 2,
-                "hex": "5D"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "442_4": {
-        "id": 442,
-        "name": "輕裝騎士【帶甲】",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 100,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "弱点特效",
-                "lv": 1,
-                "hex": "08"
-            },
-            {
-                "sname": "超会心",
-                "lv": 1,
-                "hex": "07"
-            },
-            {
-                "sname": "攻击守势",
-                "lv": 1,
-                "hex": "25"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "442_5": {
-        "id": 442,
-        "name": "輕裝騎士【腿甲】",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 100,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "利刃",
-                "lv": 2,
-                "hex": "17"
-            },
-            {
-                "sname": "超会心",
-                "lv": 1,
-                "hex": "07"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "427_1": {
-        "id": 427,
-        "name": "結雲之笠",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 92,
-        "bougyo_max": 118,
-        "skill": [
-            {
-                "sname": "看破",
-                "lv": 2,
-                "hex": "06"
-            },
-            {
-                "sname": "回避性能",
-                "lv": 1,
-                "hex": "41"
-            },
-            {
-                "sname": "体力回复量UP",
-                "lv": 1,
-                "hex": "3A"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 2,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "427_2": {
-        "id": 427,
-        "name": "結雲之道服",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 92,
-        "bougyo_max": 118,
-        "skill": [
-            {
-                "sname": "看破",
-                "lv": 1,
-                "hex": "06"
-            },
-            {
-                "sname": "耳栓",
-                "lv": 2,
-                "hex": "3D"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 2,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "427_3": {
-        "id": 427,
-        "name": "結雲之護臂",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 3,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 92,
-        "bougyo_max": 118,
-        "skill": [
-            {
-                "sname": "看破",
-                "lv": 2,
-                "hex": "06"
-            },
-            {
-                "sname": "回避性能",
-                "lv": 2,
-                "hex": "41"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 2,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "427_4": {
-        "id": 427,
-        "name": "結雲之帶",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 92,
-        "bougyo_max": 118,
-        "skill": [
-            {
-                "sname": "看破",
-                "lv": 1,
-                "hex": "06"
-            },
-            {
-                "sname": "回避性能",
-                "lv": 1,
-                "hex": "41"
-            },
-            {
-                "sname": "耳栓",
-                "lv": 1,
-                "hex": "3D"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 2,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "427_5": {
-        "id": 427,
-        "name": "結雲之下裳",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 92,
-        "bougyo_max": 118,
-        "skill": [
-            {
-                "sname": "看破",
-                "lv": 1,
-                "hex": "06"
-            },
-            {
-                "sname": "回避性能",
-                "lv": 1,
-                "hex": "41"
-            },
-            {
-                "sname": "体力回复量UP",
-                "lv": 2,
-                "hex": "3A"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 2,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-  
-    "343_1": {
-        "id": 343,
-        "name": "垂皮龍X罩帽",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 92,
-        "bougyo_max": 118,
-        "skill": [
-            {
-                "sname": "满足感",
-                "lv": 1,
-                "hex": "5A"
-            },
-            {
-                "sname": "佯动",
-                "lv": 1,
-                "hex": "62"
-            },
-            {
-                "sname": "快吃",
-                "lv": 2,
-                "hex": "3C"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 2,
-        "def_t": 0,
-        "def_i": -1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "343_2": {
-        "id": 343,
-        "name": "垂皮龍X披風",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 92,
-        "bougyo_max": 118,
-        "skill": [
-            {
-                "sname": "满足感",
-                "lv": 2,
-                "hex": "5A"
-            },
-            {
-                "sname": "道具使用强化",
-                "lv": 2,
-                "hex": "58"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 2,
-        "def_t": 0,
-        "def_i": -1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "357_1": {
-        "id": 357,
-        "name": "奇怪龍X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "集中",
-                "lv": 1,
-                "hex": "1E"
-            },
-            {
-                "sname": "体力回复量UP",
-                "lv": 1,
-                "hex": "3A"
-            },
-            {
-                "sname": "雷属性攻击强化",
-                "lv": 2,
-                "hex": "10"
-            }
-        ],
-        "def_f": -4,
-        "def_w": 1,
-        "def_t": 4,
-        "def_i": 2,
-        "def_d": 1,
-        "rare9": false
-    },
-    "357_2": {
-        "id": 357,
-        "name": "奇怪龍X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 3,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "墙面移动",
-                "lv": 2,
-                "hex": "69"
-            },
-            {
-                "sname": "体力回复量UP",
-                "lv": 2,
-                "hex": "3A"
-            }
-        ],
-        "def_f": -4,
-        "def_w": 1,
-        "def_t": 4,
-        "def_i": 2,
-        "def_d": 1,
-        "rare9": false
-    },
-    "357_3": {
-        "id": 357,
-        "name": "奇怪龍X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "墙面移动",
-                "lv": 1,
-                "hex": "69"
-            },
-            {
-                "sname": "回复速度",
-                "lv": 1,
-                "hex": "3B"
-            },
-            {
-                "sname": "雷属性攻击强化",
-                "lv": 3,
-                "hex": "10"
-            }
-        ],
-        "def_f": -4,
-        "def_w": 1,
-        "def_t": 4,
-        "def_i": 2,
-        "def_d": 1,
-        "rare9": false
-    },
-    "357_4": {
-        "id": 357,
-        "name": "奇怪龍X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "集中",
-                "lv": 1,
-                "hex": "1E"
-            },
-            {
-                "sname": "KO术",
-                "lv": 1,
-                "hex": "29"
-            }
-        ],
-        "def_f": -4,
-        "def_w": 1,
-        "def_t": 4,
-        "def_i": 2,
-        "def_d": 1,
-        "rare9": false
-    },
-    "357_5": {
-        "id": 357,
-        "name": "奇怪龍X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "集中",
-                "lv": 1,
-                "hex": "1E"
-            },
-            {
-                "sname": "KO术",
-                "lv": 2,
-                "hex": "29"
-            },
-            {
-                "sname": "回复速度",
-                "lv": 2,
-                "hex": "3B"
-            }
-        ],
-        "def_f": -4,
-        "def_w": 1,
-        "def_t": 4,
-        "def_i": 2,
-        "def_d": 1,
-        "rare9": false
-    },
-    "326_1": {
-        "id": 326,
-        "name": "天狗獸X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "道具使用强化",
-                "lv": 1,
-                "hex": "58"
-            },
-            {
-                "sname": "广域化",
-                "lv": 2,
-                "hex": "59"
-            },
-            {
-                "sname": "气绝耐性",
-                "lv": 2,
-                "hex": "4C"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 2,
-        "def_t": 2,
-        "def_i": -4,
-        "def_d": 2,
-        "rare9": false
-    },
-    "326_2": {
-        "id": 326,
-        "name": "天狗獸X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "广域化",
-                "lv": 3,
-                "hex": "59"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 2,
-        "def_t": 2,
-        "def_i": -4,
-        "def_d": 2,
-        "rare9": false
-    },
-    "326_3": {
-        "id": 326,
-        "name": "天狗獸X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "道具使用强化",
-                "lv": 1,
-                "hex": "58"
-            },
-            {
-                "sname": "气绝耐性",
-                "lv": 1,
-                "hex": "4C"
-            },
-            {
-                "sname": "快吃",
-                "lv": 1,
-                "hex": "3C"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 2,
-        "def_t": 2,
-        "def_i": -4,
-        "def_d": 2,
-        "rare9": false
-    },
-    "326_4": {
-        "id": 326,
-        "name": "天狗獸X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "道具使用强化",
-                "lv": 1,
-                "hex": "58"
-            },
-            {
-                "sname": "精神抖擞",
-                "lv": 2,
-                "hex": "0A"
-            },
-            {
-                "sname": "快吃",
-                "lv": 1,
-                "hex": "3C"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 2,
-        "def_t": 2,
-        "def_i": -4,
-        "def_d": 2,
-        "rare9": false
-    },
-    "326_5": {
-        "id": 326,
-        "name": "天狗獸X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "精神抖擞",
-                "lv": 1,
-                "hex": "0A"
-            },
-            {
-                "sname": "达人艺",
-                "lv": 1,
-                "hex": "0C"
-            },
-            {
-                "sname": "快吃",
-                "lv": 1,
-                "hex": "3C"
-            },
-            {
-                "sname": "弹药节制",
-                "lv": 1,
-                "hex": "18"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 2,
-        "def_t": 2,
-        "def_i": -4,
-        "def_d": 2,
-        "rare9": false
-    },
-    "396_1": {
-        "id": 396,
-        "name": "緋天狗獸頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "爆破属性强化",
-                "lv": 1,
-                "hex": "15"
-            },
-            {
-                "sname": "力量解放",
-                "lv": 2,
-                "hex": "09"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -4,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": 2,
-        "rare9": false
-    },
-    "396_2": {
-        "id": 396,
-        "name": "緋天狗獸鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
-            },
-            {
-                "sname": "火耐性",
-                "lv": 2,
-                "hex": "43"
-            },
-            {
-                "sname": "回复速度",
-                "lv": 3,
-                "hex": "3B"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -4,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": 2,
-        "rare9": false
-    },
-    "396_3": {
-        "id": 396,
-        "name": "緋天狗獸腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "力量解放",
-                "lv": 3,
-                "hex": "09"
-            },
-            {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -4,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": 2,
-        "rare9": true
-    },
-    "396_4": {
-        "id": 396,
-        "name": "緋天狗獸腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "爆破属性强化",
-                "lv": 2,
-                "hex": "15"
-            },
-            {
-                "sname": "匠",
-                "lv": 2,
-                "hex": "16"
-            },
-            {
-                "sname": "散弹·扩散箭强化",
-                "lv": 2,
-                "hex": "31"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -4,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": 2,
-        "rare9": false
-    },
-    "396_5": {
-        "id": 396,
-        "name": "緋天狗獸護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
-            },
-            {
-                "sname": "钢刃研磨",
-                "lv": 2,
-                "hex": "19"
-            },
-            {
-                "sname": "散弹·扩散箭强化",
-                "lv": 1,
-                "hex": "31"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -4,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": 2,
-        "rare9": false
-    },
-    "369_1": {
-        "id": 369,
-        "name": "毒妖鳥X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "特殊射击强化",
-                "lv": 1,
-                "hex": "2F"
-            },
-            {
-                "sname": "弹药节制",
-                "lv": 1,
-                "hex": "18"
-            },
-            {
-                "sname": "毒属性强化",
-                "lv": 1,
-                "hex": "12"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 3,
-        "def_t": -3,
-        "def_i": 0,
-        "def_d": 1,
-        "rare9": true
-    },
-    "369_2": {
-        "id": 369,
-        "name": "毒妖鳥X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "特殊射击强化",
-                "lv": 1,
-                "hex": "2F"
-            },
-            {
-                "sname": "体术",
-                "lv": 3,
-                "hex": "21"
-            },
-            {
-                "sname": "砥石使用高速化",
-                "lv": 2,
-                "hex": "55"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 3,
-        "def_t": -3,
-        "def_i": 0,
-        "def_d": 1,
-        "rare9": false
-    },
-    "369_3": {
-        "id": 369,
-        "name": "毒妖鳥X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "弹药节制",
-                "lv": 1,
-                "hex": "18"
-            },
-            {
-                "sname": "弹道强化",
-                "lv": 2,
-                "hex": "1B"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 3,
-        "def_t": -3,
-        "def_i": 0,
-        "def_d": 1,
-        "rare9": false
-    },
-    "369_4": {
-        "id": 369,
-        "name": "毒妖鳥X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "弹药节制",
-                "lv": 1,
-                "hex": "18"
-            },
-            {
-                "sname": "毒属性强化",
-                "lv": 2,
-                "hex": "12"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 3,
-        "def_t": -3,
-        "def_i": 0,
-        "def_d": 1,
-        "rare9": false
-    },
-    "369_5": {
-        "id": 369,
-        "name": "毒妖鳥X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "体术",
-                "lv": 2,
-                "hex": "21"
-            },
-            {
-                "sname": "弹道强化",
-                "lv": 1,
-                "hex": "1B"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 3,
-        "def_t": -3,
-        "def_i": 0,
-        "def_d": 1,
-        "rare9": false
-    },
-    "370_1": {
-        "id": 370,
-        "name": "泥魚龍X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "攻击守势",
-                "lv": 1,
-                "hex": "25"
-            },
-            {
-                "sname": "回避距离UP",
-                "lv": 2,
-                "hex": "42"
-            },
-            {
-                "sname": "怨恨",
-                "lv": 1,
-                "hex": "04"
-            }
-        ],
-        "def_f": -1,
-        "def_w": 2,
-        "def_t": -3,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "370_2": {
-        "id": 370,
-        "name": "泥魚龍X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 3,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "强化持续",
-                "lv": 2,
-                "hex": "1F"
-            },
-            {
-                "sname": "回避距离UP",
-                "lv": 1,
-                "hex": "42"
-            },
-            {
-                "sname": "怨恨",
-                "lv": 1,
-                "hex": "04"
-            },
-            {
-                "sname": "零件改造",
-                "lv": 1,
-                "hex": "7E"
-            }
-        ],
-        "def_f": -1,
-        "def_w": 2,
-        "def_t": -3,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "370_3": {
-        "id": 370,
-        "name": "泥魚龍X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "怨恨",
-                "lv": 2,
-                "hex": "04"
-            }
-        ],
-        "def_f": -1,
-        "def_w": 2,
-        "def_t": -3,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": true
-    },
-    "370_4": {
-        "id": 370,
-        "name": "泥魚龍X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "防御强化",
-                "lv": 1,
-                "hex": "24"
-            },
-            {
-                "sname": "强化持续",
-                "lv": 1,
-                "hex": "1F"
-            },
-            {
-                "sname": "攻击守势",
-                "lv": 2,
-                "hex": "25"
-            }
-        ],
-        "def_f": -1,
-        "def_w": 2,
-        "def_t": -3,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "370_5": {
-        "id": 370,
-        "name": "泥魚龍X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "防御强化",
-                "lv": 2,
-                "hex": "24"
-            },
-            {
-                "sname": "怨恨",
-                "lv": 1,
-                "hex": "04"
-            }
-        ],
-        "def_f": -1,
-        "def_w": 2,
-        "def_t": -3,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "364_1": {
-        "id": 364,
-        "name": "岩龍X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 100,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "炮弹装填",
-                "lv": 1,
-                "hex": "2E"
-            },
-            {
-                "sname": "防御",
-                "lv": 2,
-                "hex": "38"
-            },
-            {
-                "sname": "炮术",
-                "lv": 2,
-                "hex": "2D"
-            }
-        ],
-        "def_f": 0,
-        "def_w": -2,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": -3,
-        "rare9": true
-    },
-    "364_2": {
-        "id": 364,
-        "name": "岩龍X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 100,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "防御性能",
-                "lv": 2,
-                "hex": "23"
-            },
-            {
-                "sname": "炮弹装填",
-                "lv": 1,
-                "hex": "2E"
-            },
-            {
-                "sname": "力量解放",
-                "lv": 1,
-                "hex": "09"
-            }
-        ],
-        "def_f": 0,
-        "def_w": -2,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": -3,
-        "rare9": false
-    },
-    "364_3": {
-        "id": 364,
-        "name": "岩龍X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 100,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "防御性能",
-                "lv": 3,
-                "hex": "23"
-            },
-            {
-                "sname": "砥石使用高速化",
-                "lv": 1,
-                "hex": "55"
-            }
-        ],
-        "def_f": 0,
-        "def_w": -2,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": -3,
-        "rare9": false
-    },
-    "364_4": {
-        "id": 364,
-        "name": "岩龍X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 100,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "砥石使用高速化",
-                "lv": 2,
-                "hex": "55"
-            },
-            {
-                "sname": "防御",
-                "lv": 3,
-                "hex": "38"
-            },
-            {
-                "sname": "力量解放",
-                "lv": 1,
-                "hex": "09"
-            },
-            {
-                "sname": "装填速度",
-                "lv": 1,
-                "hex": "34"
-            }
-        ],
-        "def_f": 0,
-        "def_w": -2,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": -3,
-        "rare9": false
-    },
-    "364_5": {
-        "id": 364,
-        "name": "岩龍X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 100,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "炮弹装填",
-                "lv": 1,
-                "hex": "2E"
-            },
-            {
-                "sname": "防御",
-                "lv": 2,
-                "hex": "38"
-            },
-            {
-                "sname": "力量解放",
-                "lv": 2,
-                "hex": "09"
-            },
-            {
-                "sname": "装填速度",
-                "lv": 1,
-                "hex": "34"
-            }
-        ],
-        "def_f": 0,
-        "def_w": -2,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": -3,
-        "rare9": false
-    },
-    "329_1": {
-        "id": 329,
-        "name": "人魚龍X頭盔",
+    "309_1": {
+        "id": 309,
+        "name": "鱼鳞X兜帽",
         "rank": 8,
         "gender": "男女共通",
         "parts": "头",
@@ -7078,1670 +1616,187 @@ var armor_list = {
         "slotLv2": 2,
         "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
+        "bougyo": 104,
+        "bougyo_max": 164,
         "skill": [
-            {
-                "sname": "睡眠属性强化",
-                "lv": 1,
-                "hex": "14"
-            },
             {
                 "sname": "睡眠耐性",
                 "lv": 2,
                 "hex": "4B"
             },
             {
-                "sname": "弹药节制",
+                "sname": "快吃",
                 "lv": 1,
-                "hex": "18"
+                "hex": "3C"
+            },
+            {
+                "sname": "耐力急速回复",
+                "lv": 1,
+                "hex": "22"
             }
         ],
-        "def_f": -1,
+        "def_f": 1,
         "def_w": 2,
-        "def_t": -3,
+        "def_t": -2,
         "def_i": 0,
-        "def_d": 1,
+        "def_d": 0,
         "rare9": false
     },
-    "329_2": {
-        "id": 329,
-        "name": "人魚龍X鎧甲",
+    "309_2": {
+        "id": 309,
+        "name": "鱼鳞X洋装",
         "rank": 8,
         "gender": "男女共通",
         "parts": "身",
         "parts_id": 2,
         "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 1,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
+        "bougyo": 104,
+        "bougyo_max": 164,
         "skill": [
             {
-                "sname": "睡眠属性强化",
-                "lv": 1,
-                "hex": "14"
+                "sname": "水属性攻击强化",
+                "lv": 3,
+                "hex": "0E"
             },
             {
-                "sname": "装填扩充",
+                "sname": "快吃",
                 "lv": 1,
-                "hex": "33"
+                "hex": "3C"
+            },
+            {
+                "sname": "耐力急速回复",
+                "lv": 1,
+                "hex": "22"
             }
         ],
-        "def_f": -1,
+        "def_f": 1,
         "def_w": 2,
-        "def_t": -3,
+        "def_t": -2,
         "def_i": 0,
-        "def_d": 1,
+        "def_d": 0,
         "rare9": false
     },
-    "329_3": {
-        "id": 329,
-        "name": "人魚龍X腕甲",
+    "309_3": {
+        "id": 309,
+        "name": "鱼鳞X袖",
         "rank": 8,
         "gender": "男女共通",
         "parts": "手",
         "parts_id": 3,
         "rare": 7,
         "slotLv1": 0,
-        "slotLv2": 1,
+        "slotLv2": 2,
         "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
+        "bougyo": 104,
+        "bougyo_max": 164,
         "skill": [
             {
-                "sname": "炸弹客",
-                "lv": 2,
-                "hex": "56"
-            },
-            {
-                "sname": "精灵加护",
+                "sname": "泡沫之舞",
                 "lv": 1,
-                "hex": "39"
+                "hex": "40"
             },
             {
-                "sname": "弹药节制",
-                "lv": 2,
-                "hex": "18"
-            },
-            {
-                "sname": "匠",
+                "sname": "飞身跃入",
                 "lv": 1,
-                "hex": "16"
+                "hex": "61"
+            },
+            {
+                "sname": "死里逃生",
+                "lv": 1,
+                "hex": "05"
             }
         ],
-        "def_f": -1,
+        "def_f": 1,
         "def_w": 2,
-        "def_t": -3,
+        "def_t": -2,
         "def_i": 0,
-        "def_d": 1,
+        "def_d": 0,
         "rare9": false
     },
-    "329_4": {
-        "id": 329,
-        "name": "人魚龍X腰甲",
+    "309_4": {
+        "id": 309,
+        "name": "鱼鳞X腰甲",
         "rank": 8,
         "gender": "男女共通",
         "parts": "腰",
         "parts_id": 4,
         "rare": 7,
         "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 96,
-        "bougyo_max": 122,
+        "slotLv2": 1,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 104,
+        "bougyo_max": 164,
         "skill": [
-            {
-                "sname": "睡眠属性强化",
-                "lv": 1,
-                "hex": "14"
-            },
-            {
-                "sname": "炸弹客",
-                "lv": 1,
-                "hex": "56"
-            },
-            {
-                "sname": "装填扩充",
-                "lv": 1,
-                "hex": "33"
-            }
-        ],
-        "def_f": -1,
-        "def_w": 2,
-        "def_t": -3,
-        "def_i": 0,
-        "def_d": 1,
-        "rare9": false
-    },
-    "329_5": {
-        "id": 329,
-        "name": "人魚龍X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "精灵加护",
-                "lv": 2,
-                "hex": "39"
-            },
             {
                 "sname": "睡眠耐性",
                 "lv": 1,
                 "hex": "4B"
+            },
+            {
+                "sname": "水属性攻击强化",
+                "lv": 2,
+                "hex": "0E"
+            },
+            {
+                "sname": "死里逃生",
+                "lv": 1,
+                "hex": "05"
             }
         ],
-        "def_f": -1,
+        "def_f": 1,
         "def_w": 2,
-        "def_t": -3,
+        "def_t": -2,
         "def_i": 0,
-        "def_d": 1,
+        "def_d": 0,
         "rare9": false
     },
-    "397_1": {
-        "id": 397,
-        "name": "冰人魚龍頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "达人艺",
-                "lv": 1,
-                "hex": "0C"
-            },
-            {
-                "sname": "挑战者",
-                "lv": 2,
-                "hex": "02"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": -1,
-        "def_i": 3,
-        "def_d": 2,
-        "rare9": true
-    },
-    "397_2": {
-        "id": 397,
-        "name": "冰人魚龍鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "会心击【属性】",
-                "lv": 1,
-                "hex": "0B"
-            },
-            {
-                "sname": "挑战者",
-                "lv": 2,
-                "hex": "02"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": -1,
-        "def_i": 3,
-        "def_d": 2,
-        "rare9": false
-    },
-    "397_3": {
-        "id": 397,
-        "name": "冰人魚龍腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "会心击【属性】",
-                "lv": 1,
-                "hex": "0B"
-            },
-            {
-                "sname": "达人艺",
-                "lv": 1,
-                "hex": "0C"
-            },
-            {
-                "sname": "冰属性攻击强化",
-                "lv": 1,
-                "hex": "0F"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": -1,
-        "def_i": 3,
-        "def_d": 2,
-        "rare9": false
-    },
-    "397_4": {
-        "id": 397,
-        "name": "冰人魚龍腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "达人艺",
-                "lv": 1,
-                "hex": "0C"
-            },
-            {
-                "sname": "冰属性攻击强化",
-                "lv": 2,
-                "hex": "0F"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": -1,
-        "def_i": 3,
-        "def_d": 2,
-        "rare9": false
-    },
-    "397_5": {
-        "id": 397,
-        "name": "冰人魚龍護腿",
+    "309_5": {
+        "id": 309,
+        "name": "鱼鳞X长裤",
         "rank": 8,
         "gender": "男女共通",
         "parts": "腿",
         "parts_id": 5,
         "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "会心击【属性】",
-                "lv": 1,
-                "hex": "0B"
-            },
-            {
-                "sname": "挑战者",
-                "lv": 1,
-                "hex": "02"
-            },
-            {
-                "sname": "冰属性攻击强化",
-                "lv": 2,
-                "hex": "0F"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": -1,
-        "def_i": 3,
-        "def_d": 2,
-        "rare9": false
-    },
-    "360_1": {
-        "id": 360,
-        "name": "雌火龍X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "属性异常状态的耐性",
-                "lv": 1,
-                "hex": "48"
-            },
-            {
-                "sname": "毒耐性",
-                "lv": 1,
-                "hex": "49"
-            },
-            {
-                "sname": "挑战者",
-                "lv": 1,
-                "hex": "02"
-            }
-        ],
-        "def_f": 3,
-        "def_w": 0,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": -3,
-        "rare9": false
-    },
-    "360_2": {
-        "id": 360,
-        "name": "雌火龍X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
         "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "体力回复量UP",
-                "lv": 1,
-                "hex": "3A"
-            },
-            {
-                "sname": "毒耐性",
-                "lv": 2,
-                "hex": "49"
-            },
-            {
-                "sname": "满足感",
-                "lv": 1,
-                "hex": "5A"
-            }
-        ],
-        "def_f": 3,
-        "def_w": 0,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": -3,
-        "rare9": true
-    },
-    "360_3": {
-        "id": 360,
-        "name": "雌火龍X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "属性异常状态的耐性",
-                "lv": 1,
-                "hex": "48"
-            },
-            {
-                "sname": "广域化",
-                "lv": 2,
-                "hex": "59"
-            },
-            {
-                "sname": "满足感",
-                "lv": 1,
-                "hex": "5A"
-            }
-        ],
-        "def_f": 3,
-        "def_w": 0,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": -3,
-        "rare9": false
-    },
-    "360_4": {
-        "id": 360,
-        "name": "雌火龍X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "体力回复量UP",
-                "lv": 2,
-                "hex": "3A"
-            },
-            {
-                "sname": "广域化",
-                "lv": 1,
-                "hex": "59"
-            },
-            {
-                "sname": "挑战者",
-                "lv": 1,
-                "hex": "02"
-            }
-        ],
-        "def_f": 3,
-        "def_w": 0,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": -3,
-        "rare9": false
-    },
-    "360_5": {
-        "id": 360,
-        "name": "雌火龍X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "属性异常状态的耐性",
-                "lv": 1,
-                "hex": "48"
-            },
-            {
-                "sname": "满足感",
-                "lv": 1,
-                "hex": "5A"
-            },
-            {
-                "sname": "挑战者",
-                "lv": 1,
-                "hex": "02"
-            }
-        ],
-        "def_f": 3,
-        "def_w": 0,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": -3,
-        "rare9": false
-    },
-    "371_1": {
-        "id": 371,
-        "name": "飛雷龍X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "跳跃铁人",
-                "lv": 1,
-                "hex": "5E"
-            },
-            {
-                "sname": "体术",
-                "lv": 1,
-                "hex": "21"
-            },
-            {
-                "sname": "看破",
-                "lv": 3,
-                "hex": "06"
-            }
-        ],
-        "def_f": 0,
-        "def_w": -3,
-        "def_t": 3,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "371_2": {
-        "id": 371,
-        "name": "飛雷龍X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "心眼",
-                "lv": 1,
-                "hex": "1A"
-            },
-            {
-                "sname": "看破",
-                "lv": 1,
-                "hex": "06"
-            },
-            {
-                "sname": "会心击【属性】",
-                "lv": 1,
-                "hex": "0B"
-            }
-        ],
-        "def_f": 0,
-        "def_w": -3,
-        "def_t": 3,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "371_3": {
-        "id": 371,
-        "name": "飛雷龍X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "体术",
-                "lv": 3,
-                "hex": "21"
-            },
-            {
-                "sname": "不屈",
-                "lv": 1,
-                "hex": "5C"
-            }
-        ],
-        "def_f": 0,
-        "def_w": -3,
-        "def_t": 3,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "371_4": {
-        "id": 371,
-        "name": "飛雷龍X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "心眼",
-                "lv": 2,
-                "hex": "1A"
-            },
-            {
-                "sname": "会心击【属性】",
-                "lv": 1,
-                "hex": "0B"
-            },
-            {
-                "sname": "贯通弹·贯通箭强化",
-                "lv": 1,
-                "hex": "32"
-            }
-        ],
-        "def_f": 0,
-        "def_w": -3,
-        "def_t": 3,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "371_5": {
-        "id": 371,
-        "name": "飛雷龍X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 96,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "体术",
-                "lv": 1,
-                "hex": "21"
-            },
-            {
-                "sname": "看破",
-                "lv": 2,
-                "hex": "06"
-            },
-            {
-                "sname": "会心击【属性】",
-                "lv": 1,
-                "hex": "0B"
-            }
-        ],
-        "def_f": 0,
-        "def_w": -3,
-        "def_t": 3,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "372_1": {
-        "id": 372,
-        "name": "蠻顎龍X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 98,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "集中",
-                "lv": 1,
-                "hex": "1E"
-            },
-            {
-                "sname": "KO术",
-                "lv": 1,
-                "hex": "29"
-            },
-            {
-                "sname": "攻击",
-                "lv": 1,
-                "hex": "01"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -3,
-        "def_t": -1,
-        "def_i": -1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "372_2": {
-        "id": 372,
-        "name": "蠻顎龍X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 98,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "集中",
-                "lv": 2,
-                "hex": "1E"
-            },
-            {
-                "sname": "跑者",
-                "lv": 1,
-                "hex": "20"
-            },
-            {
-                "sname": "挑战者",
-                "lv": 1,
-                "hex": "02"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -3,
-        "def_t": -1,
-        "def_i": -1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "372_3": {
-        "id": 372,
-        "name": "蠻顎龍X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 98,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "KO术",
-                "lv": 2,
-                "hex": "29"
-            },
-            {
-                "sname": "攻击",
-                "lv": 2,
-                "hex": "01"
-            },
-            {
-                "sname": "挑战者",
-                "lv": 1,
-                "hex": "02"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -3,
-        "def_t": -1,
-        "def_i": -1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "372_4": {
-        "id": 372,
-        "name": "蠻顎龍X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 98,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "攻击",
-                "lv": 2,
-                "hex": "01"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -3,
-        "def_t": -1,
-        "def_i": -1,
-        "def_d": 0,
-        "rare9": true
-    },
-    "372_5": {
-        "id": 372,
-        "name": "蠻顎龍X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 98,
-        "bougyo_max": 124,
-        "skill": [
-            {
-                "sname": "跑者",
-                "lv": 2,
-                "hex": "20"
-            },
-            {
-                "sname": "挑战者",
-                "lv": 2,
-                "hex": "02"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -3,
-        "def_t": -1,
-        "def_i": -1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "375_1": {
-        "id": 375,
-        "name": "骷髏X頭飾",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 104,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "不屈",
-                "lv": 1,
-                "hex": "5C"
-            },
-            {
-                "sname": "匠",
-                "lv": 1,
-                "hex": "16"
-            }
-        ],
-        "def_f": -3,
-        "def_w": -3,
-        "def_t": -3,
-        "def_i": -3,
-        "def_d": 4,
-        "rare9": false
-    },
-    "304_1": {
-        "id": 304,
-        "name": "杜賓X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 104,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "龙属性攻击强化",
-                "lv": 1,
-                "hex": "11"
-            },
-            {
-                "sname": "攻击",
-                "lv": 1,
-                "hex": "01"
-            },
-            {
-                "sname": "火场怪力",
-                "lv": 1,
-                "hex": "5B"
-            },
-            {
-                "sname": "跑者",
-                "lv": 1,
-                "hex": "20"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 4,
-        "rare9": false
-    },
-    "304_2": {
-        "id": 304,
-        "name": "杜賓X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 1,
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 104,
-        "bougyo_max": 126,
+        "bougyo_max": 164,
         "skill": [
             {
-                "sname": "龙属性攻击强化",
-                "lv": 1,
-                "hex": "11"
-            },
-            {
-                "sname": "集中",
-                "lv": 1,
-                "hex": "1E"
-            },
-            {
-                "sname": "强化持续",
-                "lv": 1,
-                "hex": "1F"
-            },
-            {
-                "sname": "火场怪力",
+                "sname": "泡沫之舞",
                 "lv": 2,
-                "hex": "5B"
+                "hex": "40"
+            },
+            {
+                "sname": "快吃",
+                "lv": 1,
+                "hex": "3C"
+            },
+            {
+                "sname": "死里逃生",
+                "lv": 1,
+                "hex": "05"
             }
         ],
-        "def_f": -2,
-        "def_w": 0,
-        "def_t": 0,
+        "def_f": 1,
+        "def_w": 2,
+        "def_t": -2,
         "def_i": 0,
-        "def_d": 4,
-        "rare9": false
-    },
-    "304_3": {
-        "id": 304,
-        "name": "杜賓X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 104,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "龙属性攻击强化",
-                "lv": 1,
-                "hex": "11"
-            },
-            {
-                "sname": "强化持续",
-                "lv": 2,
-                "hex": "1F"
-            },
-            {
-                "sname": "减轻后坐力",
-                "lv": 2,
-                "hex": "35"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 4,
-        "rare9": false
-    },
-    "304_4": {
-        "id": 304,
-        "name": "杜賓X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 104,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "龙属性攻击强化",
-                "lv": 1,
-                "hex": "11"
-            },
-            {
-                "sname": "攻击",
-                "lv": 2,
-                "hex": "01"
-            },
-            {
-                "sname": "跑者",
-                "lv": 2,
-                "hex": "20"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 4,
-        "rare9": false
-    },
-    "304_5": {
-        "id": 304,
-        "name": "杜賓X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 104,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "龙属性攻击强化",
-                "lv": 1,
-                "hex": "11"
-            },
-            {
-                "sname": "集中",
-                "lv": 2,
-                "hex": "1E"
-            },
-            {
-                "sname": "火场怪力",
-                "lv": 2,
-                "hex": "5B"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 4,
-        "rare9": false
-    },
-    "315_1": {
-        "id": 315,
-        "name": "海境X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 100,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "装填扩充",
-                "lv": 2,
-                "hex": "33"
-            },
-            {
-                "sname": "回复速度",
-                "lv": 1,
-                "hex": "3B"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 3,
-        "def_t": -2,
-        "def_i": -1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "315_2": {
-        "id": 315,
-        "name": "海境X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 100,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "饥饿耐性",
-                "lv": 1,
-                "hex": "60"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 3,
-        "def_t": -2,
-        "def_i": -1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "315_3": {
-        "id": 315,
-        "name": "海境X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 100,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "通常弹·连射箭强化",
-                "lv": 2,
-                "hex": "30"
-            },
-            {
-                "sname": "饥饿耐性",
-                "lv": 1,
-                "hex": "60"
-            },
-            {
-                "sname": "利刃",
-                "lv": 2,
-                "hex": "17"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 3,
-        "def_t": -2,
-        "def_i": -1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "315_4": {
-        "id": 315,
-        "name": "海境X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 100,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "通常弹·连射箭强化",
-                "lv": 1,
-                "hex": "30"
-            },
-            {
-                "sname": "回复速度",
-                "lv": 2,
-                "hex": "3B"
-            },
-            {
-                "sname": "利刃",
-                "lv": 1,
-                "hex": "17"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 3,
-        "def_t": -2,
-        "def_i": -1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "315_5": {
-        "id": 315,
-        "name": "海境X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 100,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "装填扩充",
-                "lv": 1,
-                "hex": "33"
-            },
-            {
-                "sname": "饥饿耐性",
-                "lv": 1,
-                "hex": "60"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 3,
-        "def_t": -2,
-        "def_i": -1,
-        "def_d": 0,
-        "rare9": false
-    },
-    "311_1": {
-        "id": 311,
-        "name": "南瓜X綻放",
-        "rank": 8,
-        "gender": "男性专用",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 100,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "爆破耐性",
-                "lv": 2,
-                "hex": "4E"
-            },
-            {
-                "sname": "火属性攻击强化",
-                "lv": 2,
-                "hex": "0D"
-            },
-            {
-                "sname": "会心击【属性】",
-                "lv": 1,
-                "hex": "0B"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": 0,
-        "def_i": 3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "311_2": {
-        "id": 311,
-        "name": "南瓜X枝幹",
-        "rank": 8,
-        "gender": "男性专用",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 100,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "零件改造",
-                "lv": 1,
-                "hex": "7E"
-            },
-            {
-                "sname": "抑制偏移",
-                "lv": 1,
-                "hex": "36"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": 0,
-        "def_i": 3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "311_3": {
-        "id": 311,
-        "name": "南瓜X枝葉",
-        "rank": 8,
-        "gender": "男性专用",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 100,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "爆破耐性",
-                "lv": 1,
-                "hex": "4E"
-            },
-            {
-                "sname": "减轻胆怯",
-                "lv": 2,
-                "hex": "5D"
-            },
-            {
-                "sname": "会心击【属性】",
-                "lv": 1,
-                "hex": "0B"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": 0,
-        "def_i": 3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "311_4": {
-        "id": 311,
-        "name": "南瓜X葉片",
-        "rank": 8,
-        "gender": "男性专用",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 100,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "火属性攻击强化",
-                "lv": 3,
-                "hex": "0D"
-            },
-            {
-                "sname": "减轻胆怯",
-                "lv": 1,
-                "hex": "5D"
-            },
-            {
-                "sname": "会心击【属性】",
-                "lv": 1,
-                "hex": "0B"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": 0,
-        "def_i": 3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "311_5": {
-        "id": 311,
-        "name": "南瓜X紮根",
-        "rank": 8,
-        "gender": "男性专用",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 100,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "零件改造",
-                "lv": 1,
-                "hex": "7E"
-            },
-            {
-                "sname": "抑制偏移",
-                "lv": 2,
-                "hex": "36"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": 0,
-        "def_i": 3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "312_1": {
-        "id": 312,
-        "name": "南瓜X綻放",
-        "rank": 8,
-        "gender": "女性专用",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 100,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "爆破耐性",
-                "lv": 2,
-                "hex": "4E"
-            },
-            {
-                "sname": "火属性攻击强化",
-                "lv": 2,
-                "hex": "0D"
-            },
-            {
-                "sname": "会心击【属性】",
-                "lv": 1,
-                "hex": "0B"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": 0,
-        "def_i": 3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "312_2": {
-        "id": 312,
-        "name": "南瓜X枝幹",
-        "rank": 8,
-        "gender": "女性专用",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 100,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "零件改造",
-                "lv": 1,
-                "hex": "7E"
-            },
-            {
-                "sname": "抑制偏移",
-                "lv": 1,
-                "hex": "36"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": 0,
-        "def_i": 3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "312_3": {
-        "id": 312,
-        "name": "南瓜X枝葉",
-        "rank": 8,
-        "gender": "女性专用",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 100,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "爆破耐性",
-                "lv": 1,
-                "hex": "4E"
-            },
-            {
-                "sname": "减轻胆怯",
-                "lv": 2,
-                "hex": "5D"
-            },
-            {
-                "sname": "会心击【属性】",
-                "lv": 1,
-                "hex": "0B"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": 0,
-        "def_i": 3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "312_4": {
-        "id": 312,
-        "name": "南瓜X葉片",
-        "rank": 8,
-        "gender": "女性专用",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 100,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "火属性攻击强化",
-                "lv": 3,
-                "hex": "0D"
-            },
-            {
-                "sname": "减轻胆怯",
-                "lv": 1,
-                "hex": "5D"
-            },
-            {
-                "sname": "会心击【属性】",
-                "lv": 1,
-                "hex": "0B"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": 0,
-        "def_i": 3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "312_5": {
-        "id": 312,
-        "name": "南瓜X紮根",
-        "rank": 8,
-        "gender": "女性专用",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 100,
-        "bougyo_max": 122,
-        "skill": [
-            {
-                "sname": "零件改造",
-                "lv": 1,
-                "hex": "7E"
-            },
-            {
-                "sname": "抑制偏移",
-                "lv": 2,
-                "hex": "36"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": 0,
-        "def_i": 3,
         "def_d": 0,
         "rare9": false
     },
     "310_1": {
         "id": 310,
-        "name": "死神X首腦",
+        "name": "死神X首脑",
         "rank": 8,
         "gender": "男女共通",
         "parts": "头",
@@ -8752,10 +1807,10 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
-                "sname": "钢刃研磨",
+                "sname": "刚刃打磨",
                 "lv": 1,
                 "hex": "19"
             },
@@ -8790,7 +1845,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "不屈",
@@ -8817,7 +1872,7 @@ var armor_list = {
     },
     "310_3": {
         "id": 310,
-        "name": "死神X雙手",
+        "name": "死神X双手",
         "rank": 8,
         "gender": "男女共通",
         "parts": "手",
@@ -8828,7 +1883,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "精神抖擞",
@@ -8850,7 +1905,7 @@ var armor_list = {
     },
     "310_4": {
         "id": 310,
-        "name": "死神X臍帶",
+        "name": "死神X脐带",
         "rank": 8,
         "gender": "男女共通",
         "parts": "腰",
@@ -8861,10 +1916,10 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
-                "sname": "钢刃研磨",
+                "sname": "刚刃打磨",
                 "lv": 1,
                 "hex": "19"
             },
@@ -8888,7 +1943,7 @@ var armor_list = {
     },
     "310_5": {
         "id": 310,
-        "name": "死神X腳跟",
+        "name": "死神X脚跟",
         "rank": 8,
         "gender": "男女共通",
         "parts": "腿",
@@ -8899,10 +1954,10 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
-                "sname": "钢刃研磨",
+                "sname": "刚刃打磨",
                 "lv": 1,
                 "hex": "19"
             },
@@ -8924,199 +1979,369 @@ var armor_list = {
         "def_d": 0,
         "rare9": false
     },
-    "309_1": {
-        "id": 309,
-        "name": "魚鱗X兜帽",
+    "311_1": {
+        "id": 311,
+        "name": "南瓜X绽放",
         "rank": 8,
-        "gender": "男女共通",
+        "gender": "男性专用",
         "parts": "头",
         "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 104,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "睡眠耐性",
-                "lv": 2,
-                "hex": "4B"
-            },
-            {
-                "sname": "快吃",
-                "lv": 1,
-                "hex": "3C"
-            },
-            {
-                "sname": "耐力急速回复",
-                "lv": 1,
-                "hex": "22"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 2,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "309_2": {
-        "id": 309,
-        "name": "魚鱗X洋裝",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 104,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "水属性攻击强化",
-                "lv": 3,
-                "hex": "0E"
-            },
-            {
-                "sname": "快吃",
-                "lv": 1,
-                "hex": "3C"
-            },
-            {
-                "sname": "耐力急速回复",
-                "lv": 1,
-                "hex": "22"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 2,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "309_3": {
-        "id": 309,
-        "name": "魚鱗X袖",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 104,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "泡沫之舞",
-                "lv": 1,
-                "hex": "40"
-            },
-            {
-                "sname": "飞身跃入",
-                "lv": 1,
-                "hex": "61"
-            },
-            {
-                "sname": "死里逃生",
-                "lv": 1,
-                "hex": "05"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 2,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "309_4": {
-        "id": 309,
-        "name": "魚鱗X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
         "rare": 7,
         "slotLv1": 0,
         "slotLv2": 1,
         "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 104,
-        "bougyo_max": 126,
+        "bougyo": 100,
+        "bougyo_max": 160,
         "skill": [
             {
-                "sname": "睡眠耐性",
-                "lv": 1,
-                "hex": "4B"
-            },
-            {
-                "sname": "水属性攻击强化",
+                "sname": "爆破异常状态的耐性",
                 "lv": 2,
-                "hex": "0E"
+                "hex": "4E"
             },
             {
-                "sname": "死里逃生",
+                "sname": "火属性攻击强化",
+                "lv": 2,
+                "hex": "0D"
+            },
+            {
+                "sname": "会心击【属性】",
                 "lv": 1,
-                "hex": "05"
+                "hex": "0B"
             }
         ],
-        "def_f": 1,
-        "def_w": 2,
-        "def_t": -2,
-        "def_i": 0,
+        "def_f": -3,
+        "def_w": 1,
+        "def_t": 0,
+        "def_i": 3,
         "def_d": 0,
         "rare9": false
     },
-    "309_5": {
-        "id": 309,
-        "name": "魚鱗X長褲",
+    "311_2": {
+        "id": 311,
+        "name": "南瓜X枝干",
         "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
+        "gender": "男性专用",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 100,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "零件改造",
+                "lv": 1,
+                "hex": "7E"
+            },
+            {
+                "sname": "抑制偏移",
+                "lv": 1,
+                "hex": "36"
+            }
+        ],
+        "def_f": -3,
+        "def_w": 1,
+        "def_t": 0,
+        "def_i": 3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "311_3": {
+        "id": 311,
+        "name": "南瓜X枝叶",
+        "rank": 8,
+        "gender": "男性专用",
+        "parts": "手",
+        "parts_id": 3,
         "rare": 7,
         "slotLv1": 2,
         "slotLv2": 0,
         "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 104,
-        "bougyo_max": 126,
+        "slotLv4": 1,
+        "bougyo": 100,
+        "bougyo_max": 160,
         "skill": [
             {
-                "sname": "泡沫之舞",
+                "sname": "爆破异常状态的耐性",
+                "lv": 1,
+                "hex": "4E"
+            },
+            {
+                "sname": "减轻胆怯",
                 "lv": 2,
-                "hex": "40"
+                "hex": "5D"
             },
             {
-                "sname": "快吃",
+                "sname": "会心击【属性】",
                 "lv": 1,
-                "hex": "3C"
-            },
-            {
-                "sname": "死里逃生",
-                "lv": 1,
-                "hex": "05"
+                "hex": "0B"
             }
         ],
-        "def_f": 1,
-        "def_w": 2,
-        "def_t": -2,
-        "def_i": 0,
+        "def_f": -3,
+        "def_w": 1,
+        "def_t": 0,
+        "def_i": 3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "311_4": {
+        "id": 311,
+        "name": "南瓜X叶片",
+        "rank": 8,
+        "gender": "男性专用",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 100,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "火属性攻击强化",
+                "lv": 3,
+                "hex": "0D"
+            },
+            {
+                "sname": "减轻胆怯",
+                "lv": 1,
+                "hex": "5D"
+            },
+            {
+                "sname": "会心击【属性】",
+                "lv": 1,
+                "hex": "0B"
+            }
+        ],
+        "def_f": -3,
+        "def_w": 1,
+        "def_t": 0,
+        "def_i": 3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "311_5": {
+        "id": 311,
+        "name": "南瓜X扎根",
+        "rank": 8,
+        "gender": "男性专用",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 100,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "零件改造",
+                "lv": 1,
+                "hex": "7E"
+            },
+            {
+                "sname": "抑制偏移",
+                "lv": 2,
+                "hex": "36"
+            }
+        ],
+        "def_f": -3,
+        "def_w": 1,
+        "def_t": 0,
+        "def_i": 3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "312_1": {
+        "id": 312,
+        "name": "南瓜X绽放",
+        "rank": 8,
+        "gender": "女性专用",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 100,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "爆破异常状态的耐性",
+                "lv": 2,
+                "hex": "4E"
+            },
+            {
+                "sname": "火属性攻击强化",
+                "lv": 2,
+                "hex": "0D"
+            },
+            {
+                "sname": "会心击【属性】",
+                "lv": 1,
+                "hex": "0B"
+            }
+        ],
+        "def_f": -3,
+        "def_w": 1,
+        "def_t": 0,
+        "def_i": 3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "312_2": {
+        "id": 312,
+        "name": "南瓜X枝干",
+        "rank": 8,
+        "gender": "女性专用",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 100,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "零件改造",
+                "lv": 1,
+                "hex": "7E"
+            },
+            {
+                "sname": "抑制偏移",
+                "lv": 1,
+                "hex": "36"
+            }
+        ],
+        "def_f": -3,
+        "def_w": 1,
+        "def_t": 0,
+        "def_i": 3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "312_3": {
+        "id": 312,
+        "name": "南瓜X枝叶",
+        "rank": 8,
+        "gender": "女性专用",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 100,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "爆破异常状态的耐性",
+                "lv": 1,
+                "hex": "4E"
+            },
+            {
+                "sname": "减轻胆怯",
+                "lv": 2,
+                "hex": "5D"
+            },
+            {
+                "sname": "会心击【属性】",
+                "lv": 1,
+                "hex": "0B"
+            }
+        ],
+        "def_f": -3,
+        "def_w": 1,
+        "def_t": 0,
+        "def_i": 3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "312_4": {
+        "id": 312,
+        "name": "南瓜X叶片",
+        "rank": 8,
+        "gender": "女性专用",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 100,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "火属性攻击强化",
+                "lv": 3,
+                "hex": "0D"
+            },
+            {
+                "sname": "减轻胆怯",
+                "lv": 1,
+                "hex": "5D"
+            },
+            {
+                "sname": "会心击【属性】",
+                "lv": 1,
+                "hex": "0B"
+            }
+        ],
+        "def_f": -3,
+        "def_w": 1,
+        "def_t": 0,
+        "def_i": 3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "312_5": {
+        "id": 312,
+        "name": "南瓜X扎根",
+        "rank": 8,
+        "gender": "女性专用",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 100,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "零件改造",
+                "lv": 1,
+                "hex": "7E"
+            },
+            {
+                "sname": "抑制偏移",
+                "lv": 2,
+                "hex": "36"
+            }
+        ],
+        "def_f": -3,
+        "def_w": 1,
+        "def_t": 0,
+        "def_i": 3,
         "def_d": 0,
         "rare9": false
     },
     "313_1": {
         "id": 313,
-        "name": "鍬形X護頭",
+        "name": "锹形X护头",
         "rank": 8,
         "gender": "男性专用",
         "parts": "头",
@@ -9127,7 +2352,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "会心击【属性】",
@@ -9149,7 +2374,7 @@ var armor_list = {
     },
     "313_2": {
         "id": 313,
-        "name": "鍬形X上身",
+        "name": "锹形X上身",
         "rank": 8,
         "gender": "男性专用",
         "parts": "身",
@@ -9160,7 +2385,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "会心击【属性】",
@@ -9187,7 +2412,7 @@ var armor_list = {
     },
     "313_3": {
         "id": 313,
-        "name": "鍬形X護袖",
+        "name": "锹形X护袖",
         "rank": 8,
         "gender": "男性专用",
         "parts": "手",
@@ -9198,7 +2423,7 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "回避性能",
@@ -9220,7 +2445,7 @@ var armor_list = {
     },
     "313_4": {
         "id": 313,
-        "name": "鍬形X護腰具",
+        "name": "锹形X护腰具",
         "rank": 8,
         "gender": "男性专用",
         "parts": "腰",
@@ -9231,7 +2456,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "龙属性攻击强化",
@@ -9253,7 +2478,7 @@ var armor_list = {
     },
     "313_5": {
         "id": 313,
-        "name": "鍬形X腳",
+        "name": "锹形X脚",
         "rank": 8,
         "gender": "男性专用",
         "parts": "腿",
@@ -9264,7 +2489,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "看破",
@@ -9291,7 +2516,7 @@ var armor_list = {
     },
     "314_1": {
         "id": 314,
-        "name": "鳳蝶X護頭",
+        "name": "凤蝶X护头",
         "rank": 8,
         "gender": "女性专用",
         "parts": "头",
@@ -9302,7 +2527,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "会心击【属性】",
@@ -9324,7 +2549,7 @@ var armor_list = {
     },
     "314_2": {
         "id": 314,
-        "name": "鳳蝶X上身",
+        "name": "凤蝶X上身",
         "rank": 8,
         "gender": "女性专用",
         "parts": "身",
@@ -9335,7 +2560,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "会心击【属性】",
@@ -9362,7 +2587,7 @@ var armor_list = {
     },
     "314_3": {
         "id": 314,
-        "name": "鳳蝶X護袖",
+        "name": "凤蝶X护袖",
         "rank": 8,
         "gender": "女性专用",
         "parts": "手",
@@ -9373,7 +2598,7 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "回避性能",
@@ -9395,7 +2620,7 @@ var armor_list = {
     },
     "314_4": {
         "id": 314,
-        "name": "鳳蝶X護腰具",
+        "name": "凤蝶X护腰具",
         "rank": 8,
         "gender": "女性专用",
         "parts": "腰",
@@ -9406,7 +2631,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "龙属性攻击强化",
@@ -9428,7 +2653,7 @@ var armor_list = {
     },
     "314_5": {
         "id": 314,
-        "name": "鳳蝶X腳",
+        "name": "凤蝶X脚",
         "rank": 8,
         "gender": "女性专用",
         "parts": "腿",
@@ -9439,7 +2664,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "看破",
@@ -9464,134 +2689,20 @@ var armor_list = {
         "def_d": 2,
         "rare9": false
     },
-    "443_1": {
-        "id": 443,
-        "name": "砲術隊【頭盔】",
+    "315_1": {
+        "id": 315,
+        "name": "海境X头盔",
         "rank": 8,
         "gender": "男女共通",
         "parts": "头",
         "parts_id": 1,
         "rare": 7,
-        "slotLv1": 0,
+        "slotLv1": 1,
         "slotLv2": 0,
         "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 106,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "抑制偏移",
-                "lv": 2,
-                "hex": "36"
-            },
-            {
-                "sname": "减轻后坐力",
-                "lv": 1,
-                "hex": "35"
-            },
-            {
-                "sname": "回避距离UP",
-                "lv": 2,
-                "hex": "42"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "443_2": {
-        "id": 443,
-        "name": "砲術隊【上衣】",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 106,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "弹道强化",
-                "lv": 3,
-                "hex": "1B"
-            },
-            {
-                "sname": "减轻后坐力",
-                "lv": 1,
-                "hex": "35"
-            },
-            {
-                "sname": "回避距离UP",
-                "lv": 1,
-                "hex": "42"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "443_3": {
-        "id": 443,
-        "name": "砲術隊【臂甲】",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 106,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "装填扩充",
-                "lv": 1,
-                "hex": "33"
-            },
-            {
-                "sname": "装填速度",
-                "lv": 1,
-                "hex": "34"
-            },
-            {
-                "sname": "炮术",
-                "lv": 2,
-                "hex": "2D"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "443_4": {
-        "id": 443,
-        "name": "砲術隊【腰具】",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 106,
-        "bougyo_max": 128,
+        "bougyo": 100,
+        "bougyo_max": 160,
         "skill": [
             {
                 "sname": "装填扩充",
@@ -9599,132 +2710,51 @@ var armor_list = {
                 "hex": "33"
             },
             {
-                "sname": "装填速度",
+                "sname": "回复速度",
                 "lv": 1,
-                "hex": "34"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "443_5": {
-        "id": 443,
-        "name": "砲術隊【脛甲】",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 106,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "弹药节制",
-                "lv": 3,
-                "hex": "18"
-            },
-            {
-                "sname": "特殊射击强化",
-                "lv": 1,
-                "hex": "2F"
-            },
-            {
-                "sname": "炮术",
-                "lv": 1,
-                "hex": "2D"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "412_1": {
-        "id": 412,
-        "name": "公會詩人帽",
-        "rank": 8,
-        "gender": "男性专用",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 104,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "回避性能",
-                "lv": 2,
-                "hex": "41"
-            },
-            {
-                "sname": "最爱蘑菇",
-                "lv": 1,
-                "hex": "57"
+                "hex": "3B"
             }
         ],
         "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
+        "def_w": 3,
+        "def_t": -2,
+        "def_i": -1,
         "def_d": 0,
         "rare9": false
     },
-    "412_2": {
-        "id": 412,
-        "name": "公會詩人服裝",
+    "315_2": {
+        "id": 315,
+        "name": "海境X铠甲",
         "rank": 8,
-        "gender": "男性专用",
+        "gender": "男女共通",
         "parts": "身",
         "parts_id": 2,
         "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 104,
-        "bougyo_max": 126,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 100,
+        "bougyo_max": 160,
         "skill": [
             {
-                "sname": "回避性能",
+                "sname": "饥饿耐性",
                 "lv": 1,
-                "hex": "41"
-            },
-            {
-                "sname": "精灵加护",
-                "lv": 1,
-                "hex": "39"
-            },
-            {
-                "sname": "幸运",
-                "lv": 1,
-                "hex": "54"
+                "hex": "60"
             }
         ],
         "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
+        "def_w": 3,
+        "def_t": -2,
+        "def_i": -1,
         "def_d": 0,
         "rare9": false
     },
-    "412_3": {
-        "id": 412,
-        "name": "公會詩人腕甲",
+    "315_3": {
+        "id": 315,
+        "name": "海境X腕甲",
         "rank": 8,
-        "gender": "男性专用",
+        "gender": "男女共通",
         "parts": "手",
         "parts_id": 3,
         "rare": 7,
@@ -9732,472 +2762,172 @@ var armor_list = {
         "slotLv2": 1,
         "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 104,
-        "bougyo_max": 126,
+        "bougyo": 100,
+        "bougyo_max": 160,
         "skill": [
             {
-                "sname": "回避性能",
-                "lv": 1,
-                "hex": "41"
+                "sname": "通常弹・连射箭强化",
+                "lv": 2,
+                "hex": "30"
             },
             {
-                "sname": "最爱蘑菇",
+                "sname": "饥饿耐性",
                 "lv": 1,
-                "hex": "57"
+                "hex": "60"
             },
             {
-                "sname": "幸运",
-                "lv": 1,
-                "hex": "54"
+                "sname": "利刃",
+                "lv": 2,
+                "hex": "17"
             }
         ],
         "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
+        "def_w": 3,
+        "def_t": -2,
+        "def_i": -1,
         "def_d": 0,
         "rare9": false
     },
-    "412_4": {
-        "id": 412,
-        "name": "公會詩人腰甲",
+    "315_4": {
+        "id": 315,
+        "name": "海境X腰甲",
         "rank": 8,
-        "gender": "男性专用",
+        "gender": "男女共通",
         "parts": "腰",
         "parts_id": 4,
         "rare": 7,
-        "slotLv1": 1,
+        "slotLv1": 0,
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 104,
-        "bougyo_max": 126,
+        "bougyo": 100,
+        "bougyo_max": 160,
         "skill": [
             {
-                "sname": "回避性能",
+                "sname": "通常弹・连射箭强化",
                 "lv": 1,
-                "hex": "41"
+                "hex": "30"
             },
             {
-                "sname": "幸运",
-                "lv": 1,
-                "hex": "54"
+                "sname": "回复速度",
+                "lv": 2,
+                "hex": "3B"
             },
             {
-                "sname": "吹笛名人",
+                "sname": "利刃",
                 "lv": 1,
-                "hex": "2C"
+                "hex": "17"
             }
         ],
         "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
+        "def_w": 3,
+        "def_t": -2,
+        "def_i": -1,
         "def_d": 0,
         "rare9": false
     },
-    "412_5": {
-        "id": 412,
-        "name": "公會詩人靴",
+    "315_5": {
+        "id": 315,
+        "name": "海境X护腿",
         "rank": 8,
-        "gender": "男性专用",
+        "gender": "男女共通",
         "parts": "腿",
         "parts_id": 5,
         "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 104,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "精灵加护",
-                "lv": 2,
-                "hex": "39"
-            },
-            {
-                "sname": "最爱蘑菇",
-                "lv": 1,
-                "hex": "57"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "413_1": {
-        "id": 413,
-        "name": "學識兜帽",
-        "rank": 8,
-        "gender": "女性专用",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 104,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "回避性能",
-                "lv": 2,
-                "hex": "41"
-            },
-            {
-                "sname": "最爱蘑菇",
-                "lv": 1,
-                "hex": "57"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "413_2": {
-        "id": 413,
-        "name": "學識服裝",
-        "rank": 8,
-        "gender": "女性专用",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 104,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "回避性能",
-                "lv": 1,
-                "hex": "41"
-            },
-            {
-                "sname": "精灵加护",
-                "lv": 1,
-                "hex": "39"
-            },
-            {
-                "sname": "幸运",
-                "lv": 1,
-                "hex": "54"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "413_3": {
-        "id": 413,
-        "name": "學識手套",
-        "rank": 8,
-        "gender": "女性专用",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 104,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "回避性能",
-                "lv": 1,
-                "hex": "41"
-            },
-            {
-                "sname": "最爱蘑菇",
-                "lv": 1,
-                "hex": "57"
-            },
-            {
-                "sname": "幸运",
-                "lv": 1,
-                "hex": "54"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "413_4": {
-        "id": 413,
-        "name": "學識裙",
-        "rank": 8,
-        "gender": "女性专用",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
         "slotLv1": 1,
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 104,
-        "bougyo_max": 126,
+        "bougyo": 100,
+        "bougyo_max": 160,
         "skill": [
             {
-                "sname": "回避性能",
+                "sname": "装填扩充",
                 "lv": 1,
-                "hex": "41"
+                "hex": "33"
             },
             {
-                "sname": "幸运",
+                "sname": "饥饿耐性",
                 "lv": 1,
-                "hex": "54"
-            },
-            {
-                "sname": "吹笛名人",
-                "lv": 1,
-                "hex": "2C"
+                "hex": "60"
             }
         ],
         "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
+        "def_w": 3,
+        "def_t": -2,
+        "def_i": -1,
         "def_d": 0,
         "rare9": false
     },
-    "413_5": {
-        "id": 413,
-        "name": "學識短襪",
-        "rank": 8,
-        "gender": "女性专用",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 104,
-        "bougyo_max": 126,
-        "skill": [
-            {
-                "sname": "精灵加护",
-                "lv": 2,
-                "hex": "39"
-            },
-            {
-                "sname": "最爱蘑菇",
-                "lv": 1,
-                "hex": "57"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "425_1": {
-        "id": 425,
-        "name": "守護者頭盔",
+    "316_1": {
+        "id": 316,
+        "name": "混沌的包发・真",
         "rank": 8,
         "gender": "男女共通",
         "parts": "头",
         "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "防御性能",
-                "lv": 1,
-                "hex": "23"
-            },
-            {
-                "sname": "防御强化",
-                "lv": 1,
-                "hex": "24"
-            },
-            {
-                "sname": "耳栓",
-                "lv": 1,
-                "hex": "3D"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 2,
-        "def_d": 3,
-        "rare9": false
-    },
-    "425_2": {
-        "id": 425,
-        "name": "守護者服裝",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "防御性能",
-                "lv": 1,
-                "hex": "23"
-            },
-            {
-                "sname": "砥石使用高速化",
-                "lv": 1,
-                "hex": "55"
-            },
-            {
-                "sname": "属性异常状态的耐性",
-                "lv": 1,
-                "hex": "48"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 2,
-        "def_d": 3,
-        "rare9": false
-    },
-    "425_3": {
-        "id": 425,
-        "name": "守護者腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "防御性能",
-                "lv": 1,
-                "hex": "23"
-            },
-            {
-                "sname": "砥石使用高速化",
-                "lv": 1,
-                "hex": "55"
-            },
-            {
-                "sname": "耳栓",
-                "lv": 1,
-                "hex": "3D"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 2,
-        "def_d": 3,
-        "rare9": false
-    },
-    "425_4": {
-        "id": 425,
-        "name": "守護者腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
         "rare": 7,
         "slotLv1": 2,
         "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 108,
-        "bougyo_max": 130,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 98,
+        "bougyo_max": 162,
         "skill": [
             {
-                "sname": "佯动",
+                "sname": "最爱蘑菇",
                 "lv": 1,
-                "hex": "62"
+                "hex": "57"
             },
             {
-                "sname": "砥石使用高速化",
+                "sname": "快吃",
                 "lv": 1,
-                "hex": "55"
-            },
-            {
-                "sname": "属性异常状态的耐性",
-                "lv": 2,
-                "hex": "48"
+                "hex": "3C"
             }
         ],
         "def_f": 2,
-        "def_w": 0,
+        "def_w": -2,
         "def_t": 0,
-        "def_i": 2,
-        "def_d": 3,
+        "def_i": 0,
+        "def_d": 0,
         "rare9": false
     },
-    "425_5": {
-        "id": 425,
-        "name": "守護者靴",
+    "316_2": {
+        "id": 316,
+        "name": "混沌的铠･真",
         "rank": 8,
         "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
+        "parts": "身",
+        "parts_id": 2,
         "rare": 7,
         "slotLv1": 1,
         "slotLv2": 1,
         "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
+        "bougyo": 98,
+        "bougyo_max": 162,
         "skill": [
             {
-                "sname": "防御性能",
+                "sname": "最爱蘑菇",
                 "lv": 2,
-                "hex": "23"
+                "hex": "57"
             },
             {
-                "sname": "耳栓",
+                "sname": "吹笛名人",
                 "lv": 1,
-                "hex": "3D"
+                "hex": "2C"
             }
         ],
         "def_f": 2,
-        "def_w": 0,
+        "def_w": -2,
         "def_t": 0,
-        "def_i": 2,
-        "def_d": 3,
+        "def_i": 0,
+        "def_d": 0,
         "rare9": false
     },
-   
-    "384_1": {
-        "id": 384,
-        "name": "旅團X帽",
+    "317_1": {
+        "id": 317,
+        "name": "雪绒花X绽放",
         "rank": 8,
         "gender": "男女共通",
         "parts": "头",
@@ -10205,43 +2935,76 @@ var armor_list = {
         "rare": 7,
         "slotLv1": 0,
         "slotLv2": 1,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 106,
-        "bougyo_max": 128,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 96,
+        "bougyo_max": 160,
         "skill": [
             {
-                "sname": "植生学",
+                "sname": "毒耐性",
                 "lv": 2,
-                "hex": "4F"
+                "hex": "49"
             },
             {
-                "sname": "精灵加护",
-                "lv": 2,
-                "hex": "39"
+                "sname": "快吃",
+                "lv": 1,
+                "hex": "3C"
             }
         ],
-        "def_f": 1,
-        "def_w": 0,
-        "def_t": 2,
+        "def_f": -1,
+        "def_w": 3,
+        "def_t": -1,
         "def_i": 0,
-        "def_d": 2,
+        "def_d": 0,
         "rare9": false
     },
-    "384_2": {
-        "id": 384,
-        "name": "旅團X戰衣",
+    "317_2": {
+        "id": 317,
+        "name": "雪绒花X枝干",
         "rank": 8,
         "gender": "男女共通",
         "parts": "身",
         "parts_id": 2,
         "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
+        "slotLv1": 1,
+        "slotLv2": 0,
         "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 106,
-        "bougyo_max": 128,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "体力回复量提升",
+                "lv": 2,
+                "hex": "3A"
+            },
+            {
+                "sname": "广域化",
+                "lv": 1,
+                "hex": "59"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 3,
+        "def_t": -1,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "317_3": {
+        "id": 317,
+        "name": "雪绒花X枝叶",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 96,
+        "bougyo_max": 160,
         "skill": [
             {
                 "sname": "捕获名人",
@@ -10249,2315 +3012,422 @@ var armor_list = {
                 "hex": "52"
             },
             {
-                "sname": "地质学",
-                "lv": 1,
-                "hex": "50"
-            },
-            {
-                "sname": "跑者",
-                "lv": 1,
-                "hex": "20"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 0,
-        "def_t": 2,
-        "def_i": 0,
-        "def_d": 2,
-        "rare9": false
-    },
-    "384_3": {
-        "id": 384,
-        "name": "旅團X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 2,
-        "slotLv4": 0,
-        "bougyo": 106,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "地质学",
-                "lv": 2,
-                "hex": "50"
-            },
-            {
-                "sname": "提供",
-                "lv": 1,
-                "hex": "7B"
-            },
-            {
-                "sname": "精灵加护",
-                "lv": 1,
-                "hex": "39"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 0,
-        "def_t": 2,
-        "def_i": 0,
-        "def_d": 2,
-        "rare9": false
-    },
-    "384_4": {
-        "id": 384,
-        "name": "旅團X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 106,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "幸运",
-                "lv": 2,
-                "hex": "54"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 0,
-        "def_t": 2,
-        "def_i": 0,
-        "def_d": 2,
-        "rare9": false
-    },
-    "384_5": {
-        "id": 384,
-        "name": "旅團X靴",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 106,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "剥取铁人",
-                "lv": 1,
-                "hex": "5F"
-            },
-            {
-                "sname": "植生学",
-                "lv": 2,
-                "hex": "4F"
-            },
-            {
-                "sname": "跑者",
-                "lv": 2,
-                "hex": "20"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 0,
-        "def_t": 2,
-        "def_i": 0,
-        "def_d": 2,
-        "rare9": false
-    },
-    "359_1": {
-        "id": 359,
-        "name": "冰牙龍X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "拔刀术【技】",
-                "lv": 2,
-                "hex": "26"
-            },
-            {
-                "sname": "破坏王",
-                "lv": 1,
-                "hex": "51"
-            },
-            {
-                "sname": "冰属性攻击强化",
-                "lv": 2,
-                "hex": "0F"
-            }
-        ],
-        "def_f": -5,
-        "def_w": 0,
-        "def_t": -1,
-        "def_i": 3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "359_2": {
-        "id": 359,
-        "name": "冰牙龍X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
-            },
-            {
-                "sname": "精神抖擞",
-                "lv": 2,
-                "hex": "0A"
-            }
-        ],
-        "def_f": -5,
-        "def_w": 0,
-        "def_t": -1,
-        "def_i": 3,
-        "def_d": 0,
-        "rare9": true
-    },
-    "359_3": {
-        "id": 359,
-        "name": "冰牙龍X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
-            },
-            {
-                "sname": "精神抖擞",
-                "lv": 1,
-                "hex": "0A"
-            },
-            {
-                "sname": "看破",
-                "lv": 2,
-                "hex": "06"
-            }
-        ],
-        "def_f": -5,
-        "def_w": 0,
-        "def_t": -1,
-        "def_i": 3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "359_4": {
-        "id": 359,
-        "name": "冰牙龍X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "拔刀术【技】",
-                "lv": 1,
-                "hex": "26"
-            },
-            {
-                "sname": "看破",
+                "sname": "广域化",
                 "lv": 3,
-                "hex": "06"
-            },
-            {
-                "sname": "破坏王",
-                "lv": 1,
-                "hex": "51"
-            }
-        ],
-        "def_f": -5,
-        "def_w": 0,
-        "def_t": -1,
-        "def_i": 3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "359_5": {
-        "id": 359,
-        "name": "冰牙龍X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
-            },
-            {
-                "sname": "破坏王",
-                "lv": 1,
-                "hex": "51"
-            },
-            {
-                "sname": "冰属性攻击强化",
-                "lv": 2,
-                "hex": "0F"
-            }
-        ],
-        "def_f": -5,
-        "def_w": 0,
-        "def_t": -1,
-        "def_i": 3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "380_1": {
-        "id": 380,
-        "name": "禍鎧･真【武士盔】",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 110,
-        "bougyo_max": 132,
-        "skill": [
-            {
-                "sname": "怨恨",
-                "lv": 2,
-                "hex": "04"
-            },
-            {
-                "sname": "匠",
-                "lv": 1,
-                "hex": "16"
-            },
-            {
-                "sname": "减轻胆怯",
-                "lv": 2,
-                "hex": "5D"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -3,
-        "def_t": -2,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "380_2": {
-        "id": 380,
-        "name": "禍鎧･真【胸甲】",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 110,
-        "bougyo_max": 132,
-        "skill": [
-            {
-                "sname": "鬼火缠",
-                "lv": 1,
-                "hex": "6C"
-            },
-            {
-                "sname": "怨恨",
-                "lv": 1,
-                "hex": "04"
-            },
-            {
-                "sname": "耳栓",
-                "lv": 1,
-                "hex": "3D"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -3,
-        "def_t": -2,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "380_3": {
-        "id": 380,
-        "name": "禍鎧･真【臂甲】",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 110,
-        "bougyo_max": 132,
-        "skill": [
-            {
-                "sname": "鬼火缠",
-                "lv": 1,
-                "hex": "6C"
-            },
-            {
-                "sname": "匠",
-                "lv": 2,
-                "hex": "16"
-            },
-            {
-                "sname": "装填扩充",
-                "lv": 2,
-                "hex": "33"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -3,
-        "def_t": -2,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": true
-    },
-    "380_4": {
-        "id": 380,
-        "name": "禍鎧･真【腰具】",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 110,
-        "bougyo_max": 132,
-        "skill": [
-            {
-                "sname": "鬼火缠",
-                "lv": 1,
-                "hex": "6C"
-            },
-            {
-                "sname": "耳栓",
-                "lv": 1,
-                "hex": "3D"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -3,
-        "def_t": -2,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "380_5": {
-        "id": 380,
-        "name": "禍鎧･真【腿甲】",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 110,
-        "bougyo_max": 132,
-        "skill": [
-            {
-                "sname": "鬼火缠",
-                "lv": 1,
-                "hex": "6C"
-            },
-            {
-                "sname": "怨恨",
-                "lv": 2,
-                "hex": "04"
-            },
-            {
-                "sname": "减轻胆怯",
-                "lv": 1,
-                "hex": "5D"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -3,
-        "def_t": -2,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "358_1": {
-        "id": 358,
-        "name": "迅龍X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "回避性能",
-                "lv": 1,
-                "hex": "41"
-            },
-            {
-                "sname": "体术",
-                "lv": 2,
-                "hex": "21"
-            },
-            {
-                "sname": "减轻胆怯",
-                "lv": 1,
-                "hex": "5D"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 1,
-        "def_t": -3,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": true
-    },
-    "358_2": {
-        "id": 358,
-        "name": "迅龍X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "回避性能",
-                "lv": 1,
-                "hex": "41"
-            },
-            {
-                "sname": "看破",
-                "lv": 2,
-                "hex": "06"
-            },
-            {
-                "sname": "减轻胆怯",
-                "lv": 1,
-                "hex": "5D"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 1,
-        "def_t": -3,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "358_3": {
-        "id": 358,
-        "name": "迅龍X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "回避性能",
-                "lv": 1,
-                "hex": "41"
-            },
-            {
-                "sname": "回避距离UP",
-                "lv": 1,
-                "hex": "42"
-            },
-            {
-                "sname": "体术",
-                "lv": 2,
-                "hex": "21"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 1,
-        "def_t": -3,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "358_4": {
-        "id": 358,
-        "name": "迅龍X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "回避距离UP",
-                "lv": 2,
-                "hex": "42"
-            },
-            {
-                "sname": "看破",
-                "lv": 2,
-                "hex": "06"
-            },
-            {
-                "sname": "减轻胆怯",
-                "lv": 1,
-                "hex": "5D"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 1,
-        "def_t": -3,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": true
-    },
-    "358_5": {
-        "id": 358,
-        "name": "迅龍X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "回避性能",
-                "lv": 2,
-                "hex": "41"
-            },
-            {
-                "sname": "看破",
-                "lv": 2,
-                "hex": "06"
-            },
-            {
-                "sname": "体术",
-                "lv": 1,
-                "hex": "21"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 1,
-        "def_t": -3,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "332_1": {
-        "id": 332,
-        "name": "雪鬼獸X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 106,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "拔刀术【技】",
-                "lv": 1,
-                "hex": "26"
-            },
-            {
-                "sname": "挑战者",
-                "lv": 2,
-                "hex": "02"
-            },
-            {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
-            }
-        ],
-        "def_f": -4,
-        "def_w": 1,
-        "def_t": -1,
-        "def_i": 4,
-        "def_d": 0,
-        "rare9": false
-    },
-    "332_2": {
-        "id": 332,
-        "name": "雪鬼獸X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 106,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "拔刀术【技】",
-                "lv": 1,
-                "hex": "26"
-            },
-            {
-                "sname": "怨恨",
-                "lv": 3,
-                "hex": "04"
-            }
-        ],
-        "def_f": -4,
-        "def_w": 1,
-        "def_t": -1,
-        "def_i": 4,
-        "def_d": 0,
-        "rare9": false
-    },
-    "332_3": {
-        "id": 332,
-        "name": "雪鬼獸X腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 106,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "拔刀术【技】",
-                "lv": 1,
-                "hex": "26"
-            },
-            {
-                "sname": "拔刀术【力】",
-                "lv": 1,
-                "hex": "27"
-            },
-            {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
-            }
-        ],
-        "def_f": -4,
-        "def_w": 1,
-        "def_t": -1,
-        "def_i": 4,
-        "def_d": 0,
-        "rare9": false
-    },
-    "332_4": {
-        "id": 332,
-        "name": "雪鬼獸X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 106,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "拔刀术【力】",
-                "lv": 1,
-                "hex": "27"
-            },
-            {
-                "sname": "怨恨",
-                "lv": 2,
-                "hex": "04"
-            },
-            {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
-            }
-        ],
-        "def_f": -4,
-        "def_w": 1,
-        "def_t": -1,
-        "def_i": 4,
-        "def_d": 0,
-        "rare9": true
-    },
-    "332_5": {
-        "id": 332,
-        "name": "雪鬼獸X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 106,
-        "bougyo_max": 128,
-        "skill": [
-            {
-                "sname": "拔刀术【力】",
-                "lv": 1,
-                "hex": "27"
-            },
-            {
-                "sname": "挑战者",
-                "lv": 3,
-                "hex": "02"
-            },
-            {
-                "sname": "弹道强化",
-                "lv": 1,
-                "hex": "1B"
-            }
-        ],
-        "def_f": -4,
-        "def_w": 1,
-        "def_t": -1,
-        "def_i": 4,
-        "def_d": 0,
-        "rare9": false
-    },
-    "404_1": {
-        "id": 404,
-        "name": "剛纏獸頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "蓄力大师",
-                "lv": 1,
-                "hex": "7C"
-            },
-            {
-                "sname": "精神抖擞",
-                "lv": 1,
-                "hex": "0A"
-            },
-            {
-                "sname": "耐震",
-                "lv": 1,
-                "hex": "3F"
+                "hex": "59"
             }
         ],
         "def_f": -1,
         "def_w": 3,
-        "def_t": -2,
+        "def_t": -1,
         "def_i": 0,
-        "def_d": 2,
+        "def_d": 0,
         "rare9": false
     },
-    "404_2": {
-        "id": 404,
-        "name": "剛纏獸鎧甲",
+    "317_4": {
+        "id": 317,
+        "name": "雪绒花X叶片",
         "rank": 8,
         "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "体力回复量提升",
+                "lv": 1,
+                "hex": "3A"
+            },
+            {
+                "sname": "广域化",
+                "lv": 1,
+                "hex": "59"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 3,
+        "def_t": -1,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "317_5": {
+        "id": 317,
+        "name": "雪绒花X扎根",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "毒耐性",
+                "lv": 1,
+                "hex": "49"
+            },
+            {
+                "sname": "快吃",
+                "lv": 2,
+                "hex": "3C"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 3,
+        "def_t": -1,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "318_1": {
+        "id": 318,
+        "name": "毒蝎X护头",
+        "rank": 8,
+        "gender": "男性专用",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 98,
+        "bougyo_max": 162,
+        "skill": [
+            {
+                "sname": "毒属性强化",
+                "lv": 3,
+                "hex": "12"
+            },
+            {
+                "sname": "力量解放",
+                "lv": 1,
+                "hex": "09"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -1,
+        "def_t": -1,
+        "def_i": -1,
+        "def_d": 3,
+        "rare9": false
+    },
+    "318_2": {
+        "id": 318,
+        "name": "毒蝎X上身",
+        "rank": 8,
+        "gender": "男性专用",
         "parts": "身",
         "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 98,
+        "bougyo_max": 162,
+        "skill": [
+            {
+                "sname": "力量解放",
+                "lv": 2,
+                "hex": "09"
+            },
+            {
+                "sname": "心眼",
+                "lv": 1,
+                "hex": "1A"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -1,
+        "def_t": -1,
+        "def_i": -1,
+        "def_d": 3,
+        "rare9": false
+    },
+    "318_3": {
+        "id": 318,
+        "name": "毒蝎X护袖",
+        "rank": 8,
+        "gender": "男性专用",
+        "parts": "手",
+        "parts_id": 3,
         "rare": 7,
         "slotLv1": 2,
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 112,
-        "bougyo_max": 134,
+        "bougyo": 98,
+        "bougyo_max": 162,
         "skill": [
             {
-                "sname": "减轻胆怯",
+                "sname": "力量解放",
+                "lv": 1,
+                "hex": "09"
+            },
+            {
+                "sname": "毒耐性",
+                "lv": 1,
+                "hex": "49"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -1,
+        "def_t": -1,
+        "def_i": -1,
+        "def_d": 3,
+        "rare9": false
+    },
+    "318_4": {
+        "id": 318,
+        "name": "毒蝎X护腰具",
+        "rank": 8,
+        "gender": "男性专用",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 98,
+        "bougyo_max": 162,
+        "skill": [
+            {
+                "sname": "弱点特效",
+                "lv": 2,
+                "hex": "08"
+            },
+            {
+                "sname": "毒耐性",
+                "lv": 1,
+                "hex": "49"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -1,
+        "def_t": -1,
+        "def_i": -1,
+        "def_d": 3,
+        "rare9": false
+    },
+    "318_5": {
+        "id": 318,
+        "name": "毒蝎X脚",
+        "rank": 8,
+        "gender": "男性专用",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 98,
+        "bougyo_max": 162,
+        "skill": [
+            {
+                "sname": "力量解放",
+                "lv": 1,
+                "hex": "09"
+            },
+            {
+                "sname": "毒耐性",
+                "lv": 1,
+                "hex": "49"
+            },
+            {
+                "sname": "心眼",
+                "lv": 2,
+                "hex": "1A"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -1,
+        "def_t": -1,
+        "def_i": -1,
+        "def_d": 3,
+        "rare9": false
+    },
+    "319_1": {
+        "id": 319,
+        "name": "毒蛛X护头",
+        "rank": 8,
+        "gender": "女性专用",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 98,
+        "bougyo_max": 162,
+        "skill": [
+            {
+                "sname": "毒属性强化",
                 "lv": 3,
-                "hex": "5D"
+                "hex": "12"
             },
             {
-                "sname": "耐震",
-                "lv": 2,
-                "hex": "3F"
+                "sname": "力量解放",
+                "lv": 1,
+                "hex": "09"
             }
         ],
-        "def_f": -1,
-        "def_w": 3,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": 2,
-        "rare9": false
-    },
-    "404_3": {
-        "id": 404,
-        "name": "剛纏獸腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "蓄力大师",
-                "lv": 1,
-                "hex": "7C"
-            },
-            {
-                "sname": "集中",
-                "lv": 2,
-                "hex": "1E"
-            }
-        ],
-        "def_f": -1,
-        "def_w": 3,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": 2,
-        "rare9": true
-    },
-    "404_4": {
-        "id": 404,
-        "name": "剛纏獸護裙",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "提供",
-                "lv": 1,
-                "hex": "7B"
-            },
-            {
-                "sname": "集中",
-                "lv": 1,
-                "hex": "1E"
-            },
-            {
-                "sname": "精神抖擞",
-                "lv": 2,
-                "hex": "0A"
-            }
-        ],
-        "def_f": -1,
-        "def_w": 3,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": 2,
-        "rare9": false
-    },
-    "404_5": {
-        "id": 404,
-        "name": "剛纏獸護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "蓄力大师",
-                "lv": 1,
-                "hex": "7C"
-            },
-            {
-                "sname": "KO术",
-                "lv": 2,
-                "hex": "29"
-            },
-            {
-                "sname": "耐力夺取",
-                "lv": 2,
-                "hex": "2A"
-            }
-        ],
-        "def_f": -1,
-        "def_w": 3,
-        "def_t": -2,
-        "def_i": 0,
-        "def_d": 2,
-        "rare9": false
-    },
-    "387_1": {
-        "id": 387,
-        "name": "將軍蟹頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "看破",
-                "lv": 1,
-                "hex": "06"
-            },
-            {
-                "sname": "无伤",
-                "lv": 2,
-                "hex": "03"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": -4,
+        "def_f": 3,
+        "def_w": -1,
+        "def_t": -1,
         "def_i": -1,
-        "def_d": 2,
+        "def_d": 3,
         "rare9": false
     },
-    "387_2": {
-        "id": 387,
-        "name": "將軍蟹鎧甲",
+    "319_2": {
+        "id": 319,
+        "name": "毒蛛X上身",
         "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "打磨术【锐】",
-                "lv": 1,
-                "hex": "7F"
-            },
-            {
-                "sname": "跑者",
-                "lv": 2,
-                "hex": "20"
-            },
-            {
-                "sname": "看破",
-                "lv": 1,
-                "hex": "06"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": -4,
-        "def_i": -1,
-        "def_d": 2,
-        "rare9": false
-    },
-    "387_3": {
-        "id": 387,
-        "name": "將軍蟹腕甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "打磨术【锐】",
-                "lv": 1,
-                "hex": "7F"
-            },
-            {
-                "sname": "无伤",
-                "lv": 1,
-                "hex": "03"
-            },
-            {
-                "sname": "看破",
-                "lv": 2,
-                "hex": "06"
-            },
-            {
-                "sname": "贯通弹·贯通箭强化",
-                "lv": 1,
-                "hex": "32"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": -4,
-        "def_i": -1,
-        "def_d": 2,
-        "rare9": false
-    },
-    "387_4": {
-        "id": 387,
-        "name": "將軍蟹腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "打磨术【锐】",
-                "lv": 1,
-                "hex": "7F"
-            },
-            {
-                "sname": "匠",
-                "lv": 1,
-                "hex": "16"
-            },
-            {
-                "sname": "看破",
-                "lv": 2,
-                "hex": "06"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": -4,
-        "def_i": -1,
-        "def_d": 2,
-        "rare9": false
-    },
-    "387_5": {
-        "id": 387,
-        "name": "將軍蟹護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "看破",
-                "lv": 1,
-                "hex": "06"
-            },
-            {
-                "sname": "跑者",
-                "lv": 1,
-                "hex": "20"
-            },
-            {
-                "sname": "匠",
-                "lv": 2,
-                "hex": "16"
-            },
-            {
-                "sname": "贯通弹·贯通箭强化",
-                "lv": 2,
-                "hex": "32"
-            }
-        ],
-        "def_f": -3,
-        "def_w": 1,
-        "def_t": -4,
-        "def_i": -1,
-        "def_d": 2,
-        "rare9": false
-    },
-    "333_1": {
-        "id": 333,
-        "name": "泥翁龍X頭盔",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "高速变形",
-                "lv": 2,
-                "hex": "6B"
-            },
-            {
-                "sname": "强化持续",
-                "lv": 1,
-                "hex": "1F"
-            }
-        ],
-        "def_f": -4,
-        "def_w": 3,
-        "def_t": 3,
-        "def_i": -2,
-        "def_d": -2,
-        "rare9": false
-    },
-    "333_2": {
-        "id": 333,
-        "name": "泥翁龍X鎧甲",
-        "rank": 8,
-        "gender": "男女共通",
+        "gender": "女性专用",
         "parts": "身",
         "parts_id": 2,
         "rare": 7,
         "slotLv1": 0,
         "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 108,
-        "bougyo_max": 130,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 98,
+        "bougyo_max": 162,
         "skill": [
             {
-                "sname": "利刃",
+                "sname": "力量解放",
                 "lv": 2,
-                "hex": "17"
+                "hex": "09"
             },
             {
-                "sname": "强化持续",
+                "sname": "心眼",
                 "lv": 1,
-                "hex": "1F"
+                "hex": "1A"
             }
         ],
-        "def_f": -4,
-        "def_w": 3,
-        "def_t": 3,
-        "def_i": -2,
-        "def_d": -2,
-        "rare9": true
+        "def_f": 3,
+        "def_w": -1,
+        "def_t": -1,
+        "def_i": -1,
+        "def_d": 3,
+        "rare9": false
     },
-    "333_3": {
-        "id": 333,
-        "name": "泥翁龍X腕甲",
+    "319_3": {
+        "id": 319,
+        "name": "毒蛛X护袖",
         "rank": 8,
-        "gender": "男女共通",
+        "gender": "女性专用",
         "parts": "手",
         "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "高速变形",
-                "lv": 1,
-                "hex": "6B"
-            },
-            {
-                "sname": "回避性能",
-                "lv": 2,
-                "hex": "41"
-            }
-        ],
-        "def_f": -4,
-        "def_w": 3,
-        "def_t": 3,
-        "def_i": -2,
-        "def_d": -2,
-        "rare9": false
-    },
-    "333_4": {
-        "id": 333,
-        "name": "泥翁龍X腰甲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "回避性能",
-                "lv": 2,
-                "hex": "41"
-            },
-            {
-                "sname": "强化持续",
-                "lv": 1,
-                "hex": "1F"
-            },
-            {
-                "sname": "弹药节制",
-                "lv": 1,
-                "hex": "18"
-            }
-        ],
-        "def_f": -4,
-        "def_w": 3,
-        "def_t": 3,
-        "def_i": -2,
-        "def_d": -2,
-        "rare9": false
-    },
-    "333_5": {
-        "id": 333,
-        "name": "泥翁龍X護腿",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "利刃",
-                "lv": 1,
-                "hex": "17"
-            },
-            {
-                "sname": "回避性能",
-                "lv": 1,
-                "hex": "41"
-            },
-            {
-                "sname": "弹药节制",
-                "lv": 1,
-                "hex": "18"
-            }
-        ],
-        "def_f": -4,
-        "def_w": 3,
-        "def_t": 3,
-        "def_i": -2,
-        "def_d": -2,
-        "rare9": false
-    },
-    "400_1": {
-        "id": 400,
-        "name": "熔翁龍頭盔",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "怨恨",
-                "lv": 1,
-                "hex": "04"
-            },
-            {
-                "sname": "火场怪力",
-                "lv": 2,
-                "hex": "5B"
-            },
-            {
-                "sname": "火属性攻击强化",
-                "lv": 3,
-                "hex": "0D"
-            }
-        ],
-        "def_f": 5,
-        "def_w": -5,
-        "def_t": 0,
-        "def_i": -4,
-        "def_d": 0,
-        "rare9": true
-    },
-    "400_2": {
-        "id": 400,
-        "name": "熔翁龍鎧甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "死里逃生",
-                "lv": 1,
-                "hex": "05"
-            },
-            {
-                "sname": "火场怪力",
-                "lv": 2,
-                "hex": "5B"
-            }
-        ],
-        "def_f": 5,
-        "def_w": -5,
-        "def_t": 0,
-        "def_i": -4,
-        "def_d": 0,
-        "rare9": false
-    },
-    "400_3": {
-        "id": 400,
-        "name": "熔翁龍腕甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "怨恨",
-                "lv": 1,
-                "hex": "04"
-            },
-            {
-                "sname": "防御强化",
-                "lv": 2,
-                "hex": "24"
-            },
-            {
-                "sname": "火场怪力",
-                "lv": 1,
-                "hex": "5B"
-            }
-        ],
-        "def_f": 5,
-        "def_w": -5,
-        "def_t": 0,
-        "def_i": -4,
-        "def_d": 0,
-        "rare9": false
-    },
-    "400_4": {
-        "id": 400,
-        "name": "熔翁龍腰甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 2,
-        "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "死里逃生",
-                "lv": 1,
-                "hex": "05"
-            },
-            {
-                "sname": "防御强化",
-                "lv": 1,
-                "hex": "24"
-            }
-        ],
-        "def_f": 5,
-        "def_w": -5,
-        "def_t": 0,
-        "def_i": -4,
-        "def_d": 0,
-        "rare9": false
-    },
-    "400_5": {
-        "id": 400,
-        "name": "熔翁龍護腿",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 2,
-        "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "死里逃生",
-                "lv": 1,
-                "hex": "05"
-            },
-            {
-                "sname": "怨恨",
-                "lv": 1,
-                "hex": "04"
-            }
-        ],
-        "def_f": 5,
-        "def_w": -5,
-        "def_t": 0,
-        "def_i": -4,
-        "def_d": 0,
-        "rare9": false
-    },
-    "330_1": {
-        "id": 330,
-        "name": "妃蜘蛛X頭盔",
-        "rank": 8,
-        "gender": "男性专用",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "散弹·扩散箭强化",
-                "lv": 1,
-                "hex": "31"
-            },
-            {
-                "sname": "装填速度",
-                "lv": 1,
-                "hex": "34"
-            },
-            {
-                "sname": "零件改造",
-                "lv": 1,
-                "hex": "7E"
-            }
-        ],
-        "def_f": 4,
-        "def_w": -2,
-        "def_t": -1,
-        "def_i": -3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "330_2": {
-        "id": 330,
-        "name": "妃蜘蛛X鎧甲",
-        "rank": 8,
-        "gender": "男性专用",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "散弹·扩散箭强化",
-                "lv": 1,
-                "hex": "31"
-            },
-            {
-                "sname": "装填速度",
-                "lv": 2,
-                "hex": "34"
-            },
-            {
-                "sname": "弹药节制",
-                "lv": 1,
-                "hex": "18"
-            }
-        ],
-        "def_f": 4,
-        "def_w": -2,
-        "def_t": -1,
-        "def_i": -3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "330_3": {
-        "id": 330,
-        "name": "妃蜘蛛X腕甲",
-        "rank": 8,
-        "gender": "男性专用",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "体术",
-                "lv": 2,
-                "hex": "21"
-            },
-            {
-                "sname": "耐力急速回复",
-                "lv": 1,
-                "hex": "22"
-            }
-        ],
-        "def_f": 4,
-        "def_w": -2,
-        "def_t": -1,
-        "def_i": -3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "330_4": {
-        "id": 330,
-        "name": "妃蜘蛛X腰甲",
-        "rank": 8,
-        "gender": "男性专用",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "散弹·扩散箭强化",
-                "lv": 1,
-                "hex": "31"
-            },
-            {
-                "sname": "弹药节制",
-                "lv": 1,
-                "hex": "18"
-            },
-            {
-                "sname": "零件改造",
-                "lv": 1,
-                "hex": "7E"
-            }
-        ],
-        "def_f": 4,
-        "def_w": -2,
-        "def_t": -1,
-        "def_i": -3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "330_5": {
-        "id": 330,
-        "name": "妃蜘蛛X護腿",
-        "rank": 8,
-        "gender": "男性专用",
-        "parts": "腿",
-        "parts_id": 5,
         "rare": 7,
         "slotLv1": 2,
         "slotLv2": 0,
         "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "体术",
-                "lv": 3,
-                "hex": "21"
-            },
-            {
-                "sname": "耐力急速回复",
-                "lv": 2,
-                "hex": "22"
-            }
-        ],
-        "def_f": 4,
-        "def_w": -2,
-        "def_t": -1,
-        "def_i": -3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "331_1": {
-        "id": 331,
-        "name": "妃蜘蛛X頭盔",
-        "rank": 8,
-        "gender": "女性专用",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "散弹·扩散箭强化",
-                "lv": 1,
-                "hex": "31"
-            },
-            {
-                "sname": "装填速度",
-                "lv": 1,
-                "hex": "34"
-            },
-            {
-                "sname": "零件改造",
-                "lv": 1,
-                "hex": "7E"
-            }
-        ],
-        "def_f": 4,
-        "def_w": -2,
-        "def_t": -1,
-        "def_i": -3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "331_2": {
-        "id": 331,
-        "name": "妃蜘蛛X鎧甲",
-        "rank": 8,
-        "gender": "女性专用",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "散弹·扩散箭强化",
-                "lv": 1,
-                "hex": "31"
-            },
-            {
-                "sname": "装填速度",
-                "lv": 2,
-                "hex": "34"
-            },
-            {
-                "sname": "弹药节制",
-                "lv": 1,
-                "hex": "18"
-            }
-        ],
-        "def_f": 4,
-        "def_w": -2,
-        "def_t": -1,
-        "def_i": -3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "331_3": {
-        "id": 331,
-        "name": "妃蜘蛛X腕甲",
-        "rank": 8,
-        "gender": "女性专用",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 108,
-        "bougyo_max": 130,
+        "bougyo": 98,
+        "bougyo_max": 162,
         "skill": [
             {
-                "sname": "体术",
-                "lv": 2,
-                "hex": "21"
+                "sname": "力量解放",
+                "lv": 1,
+                "hex": "09"
             },
             {
-                "sname": "耐力急速回复",
+                "sname": "毒耐性",
                 "lv": 1,
-                "hex": "22"
+                "hex": "49"
             }
         ],
-        "def_f": 4,
-        "def_w": -2,
+        "def_f": 3,
+        "def_w": -1,
         "def_t": -1,
-        "def_i": -3,
-        "def_d": 0,
+        "def_i": -1,
+        "def_d": 3,
         "rare9": false
     },
-    "331_4": {
-        "id": 331,
-        "name": "妃蜘蛛X腰甲",
+    "319_4": {
+        "id": 319,
+        "name": "毒蛛X护腰具",
         "rank": 8,
         "gender": "女性专用",
         "parts": "腰",
         "parts_id": 4,
         "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 2,
+        "slotLv1": 1,
+        "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
+        "bougyo": 98,
+        "bougyo_max": 162,
         "skill": [
             {
-                "sname": "散弹·扩散箭强化",
-                "lv": 1,
-                "hex": "31"
+                "sname": "弱点特效",
+                "lv": 2,
+                "hex": "08"
             },
             {
-                "sname": "弹药节制",
+                "sname": "毒耐性",
                 "lv": 1,
-                "hex": "18"
-            },
-            {
-                "sname": "零件改造",
-                "lv": 1,
-                "hex": "7E"
+                "hex": "49"
             }
         ],
-        "def_f": 4,
-        "def_w": -2,
+        "def_f": 3,
+        "def_w": -1,
         "def_t": -1,
-        "def_i": -3,
-        "def_d": 0,
+        "def_i": -1,
+        "def_d": 3,
         "rare9": false
     },
-    "331_5": {
-        "id": 331,
-        "name": "妃蜘蛛X護腿",
+    "319_5": {
+        "id": 319,
+        "name": "毒蛛X脚",
         "rank": 8,
         "gender": "女性专用",
         "parts": "腿",
         "parts_id": 5,
         "rare": 7,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 108,
-        "bougyo_max": 130,
-        "skill": [
-            {
-                "sname": "体术",
-                "lv": 3,
-                "hex": "21"
-            },
-            {
-                "sname": "耐力急速回复",
-                "lv": 2,
-                "hex": "22"
-            }
-        ],
-        "def_f": 4,
-        "def_w": -2,
-        "def_t": -1,
-        "def_i": -3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "398_1": {
-        "id": 398,
-        "name": "熾妃蜘蛛頭盔",
-        "rank": 9,
-        "gender": "男性专用",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "精神抖擞",
-                "lv": 1,
-                "hex": "0A"
-            },
-            {
-                "sname": "爆破属性强化",
-                "lv": 1,
-                "hex": "15"
-            },
-            {
-                "sname": "翔虫使",
-                "lv": 1,
-                "hex": "68"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -4,
-        "def_t": 2,
-        "def_i": -2,
-        "def_d": 2,
-        "rare9": false
-    },
-    "398_2": {
-        "id": 398,
-        "name": "熾妃蜘蛛鎧甲",
-        "rank": 9,
-        "gender": "男性专用",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "精神抖擞",
-                "lv": 1,
-                "hex": "0A"
-            },
-            {
-                "sname": "翔虫使",
-                "lv": 2,
-                "hex": "68"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -4,
-        "def_t": 2,
-        "def_i": -2,
-        "def_d": 2,
-        "rare9": false
-    },
-    "398_3": {
-        "id": 398,
-        "name": "熾妃蜘蛛腕甲",
-        "rank": 9,
-        "gender": "男性专用",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
         "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "精神抖擞",
-                "lv": 1,
-                "hex": "0A"
-            },
-            {
-                "sname": "高速变形",
-                "lv": 2,
-                "hex": "6B"
-            },
-            {
-                "sname": "爆破耐性",
-                "lv": 1,
-                "hex": "4E"
-            },
-            {
-                "sname": "零件改造",
-                "lv": 1,
-                "hex": "7E"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -4,
-        "def_t": 2,
-        "def_i": -2,
-        "def_d": 2,
-        "rare9": false
-    },
-    "398_4": {
-        "id": 398,
-        "name": "熾妃蜘蛛腰甲",
-        "rank": 9,
-        "gender": "男性专用",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "无伤",
-                "lv": 2,
-                "hex": "03"
-            },
-            {
-                "sname": "爆破属性强化",
-                "lv": 2,
-                "hex": "15"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -4,
-        "def_t": 2,
-        "def_i": -2,
-        "def_d": 2,
-        "rare9": false
-    },
-    "398_5": {
-        "id": 398,
-        "name": "熾妃蜘蛛護腿",
-        "rank": 9,
-        "gender": "男性专用",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 1,
         "slotLv2": 1,
         "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "无伤",
-                "lv": 1,
-                "hex": "03"
-            },
-            {
-                "sname": "爆破耐性",
-                "lv": 2,
-                "hex": "4E"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -4,
-        "def_t": 2,
-        "def_i": -2,
-        "def_d": 2,
-        "rare9": false
-    },
-    "399_1": {
-        "id": 399,
-        "name": "熾妃蜘蛛頭盔",
-        "rank": 9,
-        "gender": "女性专用",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "精神抖擞",
-                "lv": 1,
-                "hex": "0A"
-            },
-            {
-                "sname": "爆破属性强化",
-                "lv": 1,
-                "hex": "15"
-            },
-            {
-                "sname": "翔虫使",
-                "lv": 1,
-                "hex": "68"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -4,
-        "def_t": 2,
-        "def_i": -2,
-        "def_d": 2,
-        "rare9": false
-    },
-    "399_2": {
-        "id": 399,
-        "name": "熾妃蜘蛛鎧甲",
-        "rank": 9,
-        "gender": "女性专用",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 2,
-        "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
+        "bougyo": 98,
+        "bougyo_max": 162,
         "skill": [
             {
-                "sname": "精神抖擞",
+                "sname": "力量解放",
                 "lv": 1,
-                "hex": "0A"
+                "hex": "09"
             },
             {
-                "sname": "翔虫使",
+                "sname": "毒耐性",
+                "lv": 1,
+                "hex": "49"
+            },
+            {
+                "sname": "心眼",
                 "lv": 2,
-                "hex": "68"
+                "hex": "1A"
             }
         ],
-        "def_f": 2,
-        "def_w": -4,
-        "def_t": 2,
-        "def_i": -2,
-        "def_d": 2,
-        "rare9": false
-    },
-    "399_3": {
-        "id": 399,
-        "name": "熾妃蜘蛛腕甲",
-        "rank": 9,
-        "gender": "女性专用",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "精神抖擞",
-                "lv": 1,
-                "hex": "0A"
-            },
-            {
-                "sname": "高速变形",
-                "lv": 2,
-                "hex": "6B"
-            },
-            {
-                "sname": "爆破耐性",
-                "lv": 1,
-                "hex": "4E"
-            },
-            {
-                "sname": "零件改造",
-                "lv": 1,
-                "hex": "7E"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -4,
-        "def_t": 2,
-        "def_i": -2,
-        "def_d": 2,
-        "rare9": false
-    },
-    "399_4": {
-        "id": 399,
-        "name": "熾妃蜘蛛腰甲",
-        "rank": 9,
-        "gender": "女性专用",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "无伤",
-                "lv": 2,
-                "hex": "03"
-            },
-            {
-                "sname": "爆破属性强化",
-                "lv": 2,
-                "hex": "15"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -4,
-        "def_t": 2,
-        "def_i": -2,
-        "def_d": 2,
-        "rare9": false
-    },
-    "399_5": {
-        "id": 399,
-        "name": "熾妃蜘蛛護腿",
-        "rank": 9,
-        "gender": "女性专用",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "无伤",
-                "lv": 1,
-                "hex": "03"
-            },
-            {
-                "sname": "爆破耐性",
-                "lv": 2,
-                "hex": "4E"
-            }
-        ],
-        "def_f": 2,
-        "def_w": -4,
-        "def_t": 2,
-        "def_i": -2,
-        "def_d": 2,
+        "def_f": 3,
+        "def_w": -1,
+        "def_t": -1,
+        "def_i": -1,
+        "def_d": 3,
         "rare9": false
     },
     "320_1": {
@@ -12573,7 +3443,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "快吃",
@@ -12611,7 +3481,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "广域化",
@@ -12624,7 +3494,7 @@ var armor_list = {
                 "hex": "54"
             },
             {
-                "sname": "体力回复量UP",
+                "sname": "体力回复量提升",
                 "lv": 1,
                 "hex": "3A"
             }
@@ -12649,7 +3519,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "广域化",
@@ -12657,7 +3527,7 @@ var armor_list = {
                 "hex": "59"
             },
             {
-                "sname": "体力回复量UP",
+                "sname": "体力回复量提升",
                 "lv": 1,
                 "hex": "3A"
             }
@@ -12682,7 +3552,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "快吃",
@@ -12695,7 +3565,7 @@ var armor_list = {
                 "hex": "5A"
             },
             {
-                "sname": "体力回复量UP",
+                "sname": "体力回复量提升",
                 "lv": 1,
                 "hex": "3A"
             }
@@ -12709,7 +3579,7 @@ var armor_list = {
     },
     "320_5": {
         "id": 320,
-        "name": "倪泰表【綁腿】真",
+        "name": "倪泰表【绑腿】真",
         "rank": 9,
         "gender": "男性专用",
         "parts": "腿",
@@ -12720,7 +3590,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "广域化",
@@ -12758,7 +3628,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "利刃",
@@ -12766,7 +3636,7 @@ var armor_list = {
                 "hex": "17"
             },
             {
-                "sname": "弹药节制",
+                "sname": "弹丸节约",
                 "lv": 2,
                 "hex": "18"
             },
@@ -12790,7 +3660,7 @@ var armor_list = {
     },
     "321_2": {
         "id": 321,
-        "name": "神凪･洸【白衣】",
+        "name": "神凪・洸【白衣】",
         "rank": 9,
         "gender": "女性专用",
         "parts": "身",
@@ -12801,7 +3671,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "利刃",
@@ -12809,7 +3679,7 @@ var armor_list = {
                 "hex": "17"
             },
             {
-                "sname": "弹药节制",
+                "sname": "弹丸节约",
                 "lv": 1,
                 "hex": "18"
             },
@@ -12833,7 +3703,7 @@ var armor_list = {
     },
     "321_3": {
         "id": 321,
-        "name": "神凪･洸【花袖】",
+        "name": "神凪・洸【花袖】",
         "rank": 9,
         "gender": "女性专用",
         "parts": "手",
@@ -12844,7 +3714,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "回避性能",
@@ -12871,7 +3741,7 @@ var armor_list = {
     },
     "321_4": {
         "id": 321,
-        "name": "神凪･洸【腰卷】",
+        "name": "神凪・洸【腰卷】",
         "rank": 9,
         "gender": "女性专用",
         "parts": "腰",
@@ -12882,7 +3752,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "挑战者",
@@ -12909,7 +3779,7 @@ var armor_list = {
     },
     "321_5": {
         "id": 321,
-        "name": "神凪･洸【緋袴】",
+        "name": "神凪・洸【绯袴】",
         "rank": 9,
         "gender": "女性专用",
         "parts": "腿",
@@ -12920,7 +3790,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "回避性能",
@@ -12947,7 +3817,7 @@ var armor_list = {
     },
     "322_1": {
         "id": 322,
-        "name": "倪泰裡【面具】真",
+        "name": "倪泰里【刚面】真",
         "rank": 9,
         "gender": "男性专用",
         "parts": "头",
@@ -12958,7 +3828,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "利刃",
@@ -12966,7 +3836,7 @@ var armor_list = {
                 "hex": "17"
             },
             {
-                "sname": "弹药节制",
+                "sname": "弹丸节约",
                 "lv": 2,
                 "hex": "18"
             },
@@ -12990,7 +3860,7 @@ var armor_list = {
     },
     "322_2": {
         "id": 322,
-        "name": "倪泰裡【上衣】真",
+        "name": "倪泰里【上衣】真",
         "rank": 9,
         "gender": "男性专用",
         "parts": "身",
@@ -13001,7 +3871,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "利刃",
@@ -13009,7 +3879,7 @@ var armor_list = {
                 "hex": "17"
             },
             {
-                "sname": "弹药节制",
+                "sname": "弹丸节约",
                 "lv": 1,
                 "hex": "18"
             },
@@ -13033,7 +3903,7 @@ var armor_list = {
     },
     "322_3": {
         "id": 322,
-        "name": "倪泰裡【手甲】真",
+        "name": "倪泰里【手甲】真",
         "rank": 9,
         "gender": "男性专用",
         "parts": "手",
@@ -13044,7 +3914,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "回避性能",
@@ -13071,7 +3941,7 @@ var armor_list = {
     },
     "322_4": {
         "id": 322,
-        "name": "倪泰裡【腰卷】真",
+        "name": "倪泰里【腰卷】真",
         "rank": 9,
         "gender": "男性专用",
         "parts": "腰",
@@ -13082,7 +3952,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "挑战者",
@@ -13109,7 +3979,7 @@ var armor_list = {
     },
     "322_5": {
         "id": 322,
-        "name": "倪泰裡【綁腿】真",
+        "name": "倪泰里【绑腿】真",
         "rank": 9,
         "gender": "男性专用",
         "parts": "腿",
@@ -13120,7 +3990,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "回避性能",
@@ -13158,7 +4028,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "快吃",
@@ -13185,7 +4055,7 @@ var armor_list = {
     },
     "323_2": {
         "id": 323,
-        "name": "依巫･燿【白衣】",
+        "name": "依巫・燿【白衣】",
         "rank": 9,
         "gender": "女性专用",
         "parts": "身",
@@ -13196,7 +4066,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "广域化",
@@ -13209,7 +4079,7 @@ var armor_list = {
                 "hex": "54"
             },
             {
-                "sname": "体力回复量UP",
+                "sname": "体力回复量提升",
                 "lv": 1,
                 "hex": "3A"
             }
@@ -13223,7 +4093,7 @@ var armor_list = {
     },
     "323_3": {
         "id": 323,
-        "name": "依巫･燿【花袖】",
+        "name": "依巫・燿【花袖】",
         "rank": 9,
         "gender": "女性专用",
         "parts": "手",
@@ -13234,7 +4104,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "广域化",
@@ -13242,7 +4112,7 @@ var armor_list = {
                 "hex": "59"
             },
             {
-                "sname": "体力回复量UP",
+                "sname": "体力回复量提升",
                 "lv": 1,
                 "hex": "3A"
             }
@@ -13256,7 +4126,7 @@ var armor_list = {
     },
     "323_4": {
         "id": 323,
-        "name": "依巫･燿【腰卷】",
+        "name": "依巫・燿【腰卷】",
         "rank": 9,
         "gender": "女性专用",
         "parts": "腰",
@@ -13267,7 +4137,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "快吃",
@@ -13280,7 +4150,7 @@ var armor_list = {
                 "hex": "5A"
             },
             {
-                "sname": "体力回复量UP",
+                "sname": "体力回复量提升",
                 "lv": 1,
                 "hex": "3A"
             }
@@ -13294,7 +4164,7 @@ var armor_list = {
     },
     "323_5": {
         "id": 323,
-        "name": "依巫･燿【緋袴】",
+        "name": "依巫・燿【绯袴】",
         "rank": 9,
         "gender": "女性专用",
         "parts": "腿",
@@ -13305,7 +4175,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 110,
-        "bougyo_max": 132,
+        "bougyo_max": 170,
         "skill": [
             {
                 "sname": "广域化",
@@ -13330,790 +4200,298 @@ var armor_list = {
         "def_d": 0,
         "rare9": false
     },
-    "374_4": {
-        "id": 374,
-        "name": "鉻合金X腰甲",
-        "rank": 9,
+    "324_1": {
+        "id": 324,
+        "name": "贝壳X头饰",
+        "rank": 8,
         "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
         "slotLv1": 1,
         "slotLv2": 1,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 110,
-        "bougyo_max": 132,
-        "skill": [
-            {
-                "sname": "减轻胆怯",
-                "lv": 1,
-                "hex": "5D"
-            }
-        ],
-        "def_f": -2,
-        "def_w": -2,
-        "def_t": -2,
-        "def_i": -2,
-        "def_d": -2,
-        "rare9": false
-    },
-    "374_5": {
-        "id": 374,
-        "name": "鉻合金X靴",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
         "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 110,
-        "bougyo_max": 132,
+        "slotLv4": 0,
+        "bougyo": 96,
+        "bougyo_max": 160,
         "skill": [
             {
-                "sname": "减轻胆怯",
+                "sname": "弹道强化",
                 "lv": 2,
-                "hex": "5D"
+                "hex": "1B"
+            },
+            {
+                "sname": "抑制偏移",
+                "lv": 2,
+                "hex": "36"
+            },
+            {
+                "sname": "零件改造",
+                "lv": 1,
+                "hex": "7E"
             }
         ],
-        "def_f": -2,
-        "def_w": -2,
-        "def_t": -2,
-        "def_i": -2,
-        "def_d": -2,
+        "def_f": 0,
+        "def_w": 2,
+        "def_t": 1,
+        "def_i": -1,
+        "def_d": 0,
         "rare9": false
     },
-    "350_2": {
-        "id": 350,
-        "name": "熔岩獸X鎧甲",
-        "rank": 9,
+    "324_2": {
+        "id": 324,
+        "name": "贝壳X服饰",
+        "rank": 8,
         "gender": "男女共通",
         "parts": "身",
         "parts_id": 2,
-        "rare": 8,
+        "rare": 7,
         "slotLv1": 2,
-        "slotLv2": 1,
+        "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
+        "bougyo": 96,
+        "bougyo_max": 160,
         "skill": [
             {
-                "sname": "防御强化",
-                "lv": 2,
-                "hex": "24"
-            },
-            {
-                "sname": "特殊射击强化",
-                "lv": 2,
-                "hex": "2F"
-            },
-            {
-                "sname": "回避性能",
+                "sname": "通常弹・连射箭强化",
                 "lv": 1,
-                "hex": "41"
+                "hex": "30"
+            },
+            {
+                "sname": "贯穿弹・贯穿箭强化",
+                "lv": 1,
+                "hex": "31"
+            },
+            {
+                "sname": "零件改造",
+                "lv": 1,
+                "hex": "7E"
             }
         ],
-        "def_f": 4,
-        "def_w": -2,
-        "def_t": 0,
+        "def_f": 0,
+        "def_w": 2,
+        "def_t": 1,
         "def_i": -1,
         "def_d": 0,
         "rare9": false
     },
-    "350_4": {
-        "id": 350,
-        "name": "熔岩獸X腰甲",
-        "rank": 9,
+    "324_3": {
+        "id": 324,
+        "name": "贝壳X护手",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "散弹・扩散箭强化",
+                "lv": 2,
+                "hex": "32"
+            },
+            {
+                "sname": "通常弹・连射箭强化",
+                "lv": 1,
+                "hex": "30"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 2,
+        "def_t": 1,
+        "def_i": -1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "324_4": {
+        "id": 324,
+        "name": "贝壳X裙",
+        "rank": 8,
         "gender": "男女共通",
         "parts": "腰",
         "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 0,
+        "rare": 7,
+        "slotLv1": 1,
         "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 96,
+        "bougyo_max": 160,
         "skill": [
             {
-                "sname": "防御强化",
+                "sname": "弹道强化",
                 "lv": 1,
-                "hex": "24"
+                "hex": "1B"
             },
             {
-                "sname": "特殊射击强化",
+                "sname": "通常弹・连射箭强化",
                 "lv": 1,
-                "hex": "2F"
-            },
-            {
-                "sname": "回避性能",
-                "lv": 1,
-                "hex": "41"
+                "hex": "30"
             }
         ],
-        "def_f": 4,
-        "def_w": -2,
-        "def_t": 0,
+        "def_f": 0,
+        "def_w": 2,
+        "def_t": 1,
         "def_i": -1,
         "def_d": 0,
         "rare9": false
     },
-    "348_1": {
-        "id": 348,
-        "name": "翼蛇龍X頭飾",
+    "324_5": {
+        "id": 324,
+        "name": "贝壳X凉鞋",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "散弹・扩散箭强化",
+                "lv": 1,
+                "hex": "32"
+            },
+            {
+                "sname": "贯穿弹・贯穿箭强化",
+                "lv": 2,
+                "hex": "31"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 2,
+        "def_t": 1,
+        "def_i": -1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "325_1": {
+        "id": 325,
+        "name": "哥特X帽子",
         "rank": 9,
         "gender": "男女共通",
         "parts": "头",
         "parts_id": 1,
         "rare": 8,
         "slotLv1": 1,
-        "slotLv2": 1,
+        "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 112,
-        "bougyo_max": 134,
+        "bougyo": 114,
+        "bougyo_max": 172,
         "skill": [
             {
-                "sname": "风压耐性",
+                "sname": "破坏王",
                 "lv": 1,
-                "hex": "3E"
+                "hex": "51"
             },
             {
-                "sname": "毒属性强化",
+                "sname": "精灵加护",
                 "lv": 1,
-                "hex": "12"
+                "hex": "39"
+            },
+            {
+                "sname": "集中",
+                "lv": 1,
+                "hex": "1E"
             }
         ],
         "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 3,
+        "def_w": 3,
+        "def_t": 0,
+        "def_i": 2,
+        "def_d": 0,
         "rare9": false
     },
-    "348_2": {
-        "id": 348,
-        "name": "翼蛇龍X衣裝",
+    "325_2": {
+        "id": 325,
+        "name": "哥特X服饰",
         "rank": 9,
         "gender": "男女共通",
         "parts": "身",
         "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "超会心",
-                "lv": 1,
-                "hex": "07"
-            },
-            {
-                "sname": "毒属性强化",
-                "lv": 2,
-                "hex": "12"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 3,
-        "rare9": false
-    },
-    "348_3": {
-        "id": 348,
-        "name": "翼蛇龍X手套",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "会心击【属性】",
-                "lv": 1,
-                "hex": "0B"
-            },
-            {
-                "sname": "风压耐性",
-                "lv": 2,
-                "hex": "3E"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 3,
-        "rare9": false
-    },
-    "348_4": {
-        "id": 348,
-        "name": "翼蛇龍X腰帶",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
         "rare": 8,
         "slotLv1": 0,
         "slotLv2": 2,
         "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
+        "bougyo": 114,
+        "bougyo_max": 172,
         "skill": [
             {
-                "sname": "会心击【属性】",
+                "sname": "爆破属性强化",
                 "lv": 2,
-                "hex": "0B"
+                "hex": "15"
             },
             {
-                "sname": "毒耐性",
+                "sname": "集中",
                 "lv": 1,
-                "hex": "49"
+                "hex": "1E"
+            },
+            {
+                "sname": "击晕术",
+                "lv": 1,
+                "hex": "29"
             }
         ],
         "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 3,
+        "def_w": 3,
+        "def_t": 0,
+        "def_i": 2,
+        "def_d": 0,
         "rare9": false
     },
-    "348_5": {
-        "id": 348,
-        "name": "翼蛇龍X鞋子",
+    "325_3": {
+        "id": 325,
+        "name": "哥特X手套",
         "rank": 9,
         "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
+        "parts": "手",
+        "parts_id": 3,
         "rare": 8,
         "slotLv1": 1,
         "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 112,
-        "bougyo_max": 134,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 172,
         "skill": [
             {
-                "sname": "弱点特效",
-                "lv": 1,
-                "hex": "08"
+                "sname": "精灵加护",
+                "lv": 2,
+                "hex": "39"
             },
             {
-                "sname": "毒耐性",
-                "lv": 2,
-                "hex": "49"
+                "sname": "集中",
+                "lv": 1,
+                "hex": "1E"
+            },
+            {
+                "sname": "击晕术",
+                "lv": 1,
+                "hex": "29"
             }
         ],
         "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 3,
+        "def_w": 3,
+        "def_t": 0,
+        "def_i": 2,
+        "def_d": 0,
         "rare9": false
     },
-    "383_1": {
-        "id": 383,
-        "name": "泡狐龍X頭盔",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "死里逃生",
-                "lv": 1,
-                "hex": "05"
-            },
-            {
-                "sname": "回避性能",
-                "lv": 2,
-                "hex": "41"
-            },
-            {
-                "sname": "体术",
-                "lv": 1,
-                "hex": "21"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 2,
-        "def_t": -3,
-        "def_i": 1,
-        "def_d": -1,
-        "rare9": false
-    },
-    "383_2": {
-        "id": 383,
-        "name": "泡狐龍X鎧甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "泡沫之舞",
-                "lv": 1,
-                "hex": "40"
-            },
-            {
-                "sname": "死里逃生",
-                "lv": 1,
-                "hex": "05"
-            },
-            {
-                "sname": "体术",
-                "lv": 2,
-                "hex": "21"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 2,
-        "def_t": -3,
-        "def_i": 1,
-        "def_d": -1,
-        "rare9": false
-    },
-    "383_3": {
-        "id": 383,
-        "name": "泡狐龍X腕甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "死里逃生",
-                "lv": 1,
-                "hex": "05"
-            },
-            {
-                "sname": "满足感",
-                "lv": 2,
-                "hex": "5A"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 2,
-        "def_t": -3,
-        "def_i": 1,
-        "def_d": -1,
-        "rare9": false
-    },
-    "383_4": {
-        "id": 383,
-        "name": "泡狐龍X腰甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "泡沫之舞",
-                "lv": 1,
-                "hex": "40"
-            },
-            {
-                "sname": "满足感",
-                "lv": 1,
-                "hex": "5A"
-            },
-            {
-                "sname": "体术",
-                "lv": 1,
-                "hex": "21"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 2,
-        "def_t": -3,
-        "def_i": 1,
-        "def_d": -1,
-        "rare9": false
-    },
-    "383_5": {
-        "id": 383,
-        "name": "泡狐龍X護腿",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "泡沫之舞",
-                "lv": 1,
-                "hex": "40"
-            },
-            {
-                "sname": "回避性能",
-                "lv": 1,
-                "hex": "41"
-            },
-            {
-                "sname": "体术",
-                "lv": 1,
-                "hex": "21"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 2,
-        "def_t": -3,
-        "def_i": 1,
-        "def_d": -1,
-        "rare9": true
-    },
-    "361_1": {
-        "id": 361,
-        "name": "火龍X頭盔",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "攻击",
-                "lv": 1,
-                "hex": "01"
-            },
-            {
-                "sname": "破坏王",
-                "lv": 1,
-                "hex": "51"
-            },
-            {
-                "sname": "超会心",
-                "lv": 1,
-                "hex": "07"
-            }
-        ],
-        "def_f": 3,
-        "def_w": 1,
-        "def_t": -2,
-        "def_i": 1,
-        "def_d": -3,
-        "rare9": false
-    },
-    "361_2": {
-        "id": 361,
-        "name": "火龍X鎧甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "攻击",
-                "lv": 1,
-                "hex": "01"
-            },
-            {
-                "sname": "破坏王",
-                "lv": 1,
-                "hex": "51"
-            },
-            {
-                "sname": "耳栓",
-                "lv": 1,
-                "hex": "3D"
-            }
-        ],
-        "def_f": 3,
-        "def_w": 1,
-        "def_t": -2,
-        "def_i": 1,
-        "def_d": -3,
-        "rare9": false
-    },
-    "361_3": {
-        "id": 361,
-        "name": "火龍X腕甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "攻击",
-                "lv": 2,
-                "hex": "01"
-            },
-            {
-                "sname": "耳栓",
-                "lv": 2,
-                "hex": "3D"
-            }
-        ],
-        "def_f": 3,
-        "def_w": 1,
-        "def_t": -2,
-        "def_i": 1,
-        "def_d": -3,
-        "rare9": false
-    },
-    "361_4": {
-        "id": 361,
-        "name": "火龍X腰甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "攻击",
-                "lv": 2,
-                "hex": "01"
-            },
-            {
-                "sname": "风压耐性",
-                "lv": 3,
-                "hex": "3E"
-            },
-            {
-                "sname": "超会心",
-                "lv": 1,
-                "hex": "07"
-            }
-        ],
-        "def_f": 3,
-        "def_w": 1,
-        "def_t": -2,
-        "def_i": 1,
-        "def_d": -3,
-        "rare9": true
-    },
-    "361_5": {
-        "id": 361,
-        "name": "火龍X護腿",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "攻击",
-                "lv": 1,
-                "hex": "01"
-            },
-            {
-                "sname": "破坏王",
-                "lv": 1,
-                "hex": "51"
-            },
-            {
-                "sname": "耳栓",
-                "lv": 2,
-                "hex": "3D"
-            }
-        ],
-        "def_f": 3,
-        "def_w": 1,
-        "def_t": -2,
-        "def_i": 1,
-        "def_d": -3,
-        "rare9": false
-    },
-    "365_1": {
-        "id": 365,
-        "name": "雷狼龍X頭盔",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 116,
-        "bougyo_max": 138,
-        "skill": [
-            {
-                "sname": "力量解放",
-                "lv": 1,
-                "hex": "09"
-            },
-            {
-                "sname": "弱点特效",
-                "lv": 1,
-                "hex": "08"
-            },
-            {
-                "sname": "会心击【属性】",
-                "lv": 1,
-                "hex": "0B"
-            }
-        ],
-        "def_f": 0,
-        "def_w": -1,
-        "def_t": 4,
-        "def_i": -4,
-        "def_d": 1,
-        "rare9": false
-    },
-    "365_2": {
-        "id": 365,
-        "name": "雷狼龍X鎧甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 3,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 116,
-        "bougyo_max": 138,
-        "skill": [
-            {
-                "sname": "力量解放",
-                "lv": 1,
-                "hex": "09"
-            },
-            {
-                "sname": "弱点特效",
-                "lv": 2,
-                "hex": "08"
-            },
-            {
-                "sname": "雷属性攻击强化",
-                "lv": 2,
-                "hex": "10"
-            }
-        ],
-        "def_f": 0,
-        "def_w": -1,
-        "def_t": 4,
-        "def_i": -4,
-        "def_d": 1,
-        "rare9": false
-    },
-    "365_3": {
-        "id": 365,
-        "name": "雷狼龍X腕甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 116,
-        "bougyo_max": 138,
-        "skill": [
-            {
-                "sname": "力量解放",
-                "lv": 1,
-                "hex": "09"
-            },
-            {
-                "sname": "体术",
-                "lv": 2,
-                "hex": "21"
-            },
-            {
-                "sname": "会心击【属性】",
-                "lv": 1,
-                "hex": "0B"
-            }
-        ],
-        "def_f": 0,
-        "def_w": -1,
-        "def_t": 4,
-        "def_i": -4,
-        "def_d": 1,
-        "rare9": false
-    },
-    "365_4": {
-        "id": 365,
-        "name": "雷狼龍X腰甲",
+    "325_4": {
+        "id": 325,
+        "name": "哥特X腰甲",
         "rank": 9,
         "gender": "男女共通",
         "parts": "腰",
@@ -14123,35 +4501,30 @@ var armor_list = {
         "slotLv2": 0,
         "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 116,
-        "bougyo_max": 138,
+        "bougyo": 114,
+        "bougyo_max": 172,
         "skill": [
             {
-                "sname": "力量解放",
-                "lv": 1,
-                "hex": "09"
+                "sname": "破坏王",
+                "lv": 2,
+                "hex": "51"
             },
             {
-                "sname": "会心击【属性】",
-                "lv": 1,
-                "hex": "0B"
-            },
-            {
-                "sname": "雷属性攻击强化",
-                "lv": 3,
-                "hex": "10"
+                "sname": "蓄力大师",
+                "lv": 2,
+                "hex": "7C"
             }
         ],
-        "def_f": 0,
-        "def_w": -1,
-        "def_t": 4,
-        "def_i": -4,
-        "def_d": 1,
-        "rare9": true
+        "def_f": 1,
+        "def_w": 3,
+        "def_t": 0,
+        "def_i": 2,
+        "def_d": 0,
+        "rare9": false
     },
-    "365_5": {
-        "id": 365,
-        "name": "雷狼龍X護腿",
+    "325_5": {
+        "id": 325,
+        "name": "哥特X靴",
         "rank": 9,
         "gender": "男女共通",
         "parts": "腿",
@@ -14160,897 +4533,1965 @@ var armor_list = {
         "slotLv1": 1,
         "slotLv2": 0,
         "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 116,
-        "bougyo_max": 138,
+        "slotLv4": 1,
+        "bougyo": 114,
+        "bougyo_max": 172,
         "skill": [
             {
-                "sname": "力量解放",
+                "sname": "爆破属性强化",
                 "lv": 1,
-                "hex": "09"
+                "hex": "15"
             },
             {
-                "sname": "体术",
-                "lv": 3,
-                "hex": "21"
+                "sname": "蓄力大师",
+                "lv": 1,
+                "hex": "7C"
             },
             {
-                "sname": "翔虫使",
+                "sname": "击晕术",
                 "lv": 1,
-                "hex": "68"
+                "hex": "29"
             }
         ],
-        "def_f": 0,
-        "def_w": -1,
-        "def_t": 4,
-        "def_i": -4,
-        "def_d": 1,
+        "def_f": 1,
+        "def_w": 3,
+        "def_t": 0,
+        "def_i": 2,
+        "def_d": 0,
         "rare9": false
     },
-    "362_1": {
-        "id": 362,
-        "name": "轟龍X頭盔",
-        "rank": 9,
+    "326_1": {
+        "id": 326,
+        "name": "天狗兽X头盔",
+        "rank": 8,
         "gender": "男女共通",
         "parts": "头",
         "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 118,
-        "bougyo_max": 140,
-        "skill": [
-            {
-                "sname": "耳栓",
-                "lv": 1,
-                "hex": "3D"
-            },
-            {
-                "sname": "快吃",
-                "lv": 1,
-                "hex": "3C"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 0,
-        "def_t": -3,
-        "def_i": 0,
-        "def_d": -2,
-        "rare9": true
-    },
-    "362_2": {
-        "id": 362,
-        "name": "轟龍X鎧甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
+        "rare": 7,
         "slotLv1": 1,
         "slotLv2": 1,
         "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 118,
-        "bougyo_max": 140,
+        "bougyo": 96,
+        "bougyo_max": 160,
         "skill": [
             {
-                "sname": "耳栓",
-                "lv": 2,
-                "hex": "3D"
+                "sname": "道具使用强化",
+                "lv": 1,
+                "hex": "58"
             },
             {
-                "sname": "无伤",
-                "lv": 1,
-                "hex": "03"
+                "sname": "广域化",
+                "lv": 2,
+                "hex": "59"
+            },
+            {
+                "sname": "昏厥耐性",
+                "lv": 2,
+                "hex": "4C"
             }
         ],
-        "def_f": 2,
-        "def_w": 0,
-        "def_t": -3,
-        "def_i": 0,
-        "def_d": -2,
+        "def_f": -2,
+        "def_w": 2,
+        "def_t": 2,
+        "def_i": -4,
+        "def_d": 2,
         "rare9": false
     },
-    "362_3": {
-        "id": 362,
-        "name": "轟龍X腕甲",
-        "rank": 9,
+    "326_2": {
+        "id": 326,
+        "name": "天狗兽X铠甲",
+        "rank": 8,
         "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
         "slotLv1": 0,
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 118,
-        "bougyo_max": 140,
+        "bougyo": 96,
+        "bougyo_max": 160,
         "skill": [
             {
-                "sname": "心眼",
-                "lv": 1,
-                "hex": "1A"
-            },
-            {
-                "sname": "无伤",
-                "lv": 1,
-                "hex": "03"
-            },
-            {
-                "sname": "气绝耐性",
+                "sname": "广域化",
                 "lv": 3,
+                "hex": "59"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 2,
+        "def_t": 2,
+        "def_i": -4,
+        "def_d": 2,
+        "rare9": false
+    },
+    "326_3": {
+        "id": 326,
+        "name": "天狗兽X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "道具使用强化",
+                "lv": 1,
+                "hex": "58"
+            },
+            {
+                "sname": "昏厥耐性",
+                "lv": 1,
                 "hex": "4C"
             },
             {
-                "sname": "通常弹·连射箭强化",
+                "sname": "快吃",
                 "lv": 1,
-                "hex": "30"
+                "hex": "3C"
             }
         ],
-        "def_f": 2,
-        "def_w": 0,
-        "def_t": -3,
-        "def_i": 0,
-        "def_d": -2,
+        "def_f": -2,
+        "def_w": 2,
+        "def_t": 2,
+        "def_i": -4,
+        "def_d": 2,
         "rare9": false
     },
-    "362_4": {
-        "id": 362,
-        "name": "轟龍X腰甲",
-        "rank": 9,
+    "326_4": {
+        "id": 326,
+        "name": "天狗兽X腰甲",
+        "rank": 8,
         "gender": "男女共通",
         "parts": "腰",
         "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 1,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "道具使用强化",
+                "lv": 1,
+                "hex": "58"
+            },
+            {
+                "sname": "精神抖擞",
+                "lv": 2,
+                "hex": "0A"
+            },
+            {
+                "sname": "快吃",
+                "lv": 1,
+                "hex": "3C"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 2,
+        "def_t": 2,
+        "def_i": -4,
+        "def_d": 2,
+        "rare9": false
+    },
+    "326_5": {
+        "id": 326,
+        "name": "天狗兽X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 2,
         "slotLv2": 1,
         "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 118,
-        "bougyo_max": 140,
+        "bougyo": 96,
+        "bougyo_max": 160,
         "skill": [
             {
-                "sname": "耳栓",
-                "lv": 2,
-                "hex": "3D"
+                "sname": "精神抖擞",
+                "lv": 1,
+                "hex": "0A"
+            },
+            {
+                "sname": "达人艺",
+                "lv": 1,
+                "hex": "0C"
+            },
+            {
+                "sname": "快吃",
+                "lv": 1,
+                "hex": "3C"
+            },
+            {
+                "sname": "弹丸节约",
+                "lv": 1,
+                "hex": "18"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 2,
+        "def_t": 2,
+        "def_i": -4,
+        "def_d": 2,
+        "rare9": false
+    },
+    "327_1": {
+        "id": 327,
+        "name": "伞鸟X头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 88,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
+            },
+            {
+                "sname": "火属性攻击强化",
+                "lv": 1,
+                "hex": "0D"
+            },
+            {
+                "sname": "拔刀术【技】",
+                "lv": 1,
+                "hex": "26"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -3,
+        "def_t": -1,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "327_2": {
+        "id": 327,
+        "name": "伞鸟X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 88,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
             },
             {
                 "sname": "无伤",
                 "lv": 1,
                 "hex": "03"
+            },
+            {
+                "sname": "拔刀术【技】",
+                "lv": 1,
+                "hex": "26"
             }
         ],
-        "def_f": 2,
-        "def_w": 0,
-        "def_t": -3,
+        "def_f": 3,
+        "def_w": -3,
+        "def_t": -1,
         "def_i": 0,
-        "def_d": -2,
-        "rare9": true
+        "def_d": 0,
+        "rare9": false
     },
-    "362_5": {
-        "id": 362,
-        "name": "轟龍X護腿",
-        "rank": 9,
+    "327_3": {
+        "id": 327,
+        "name": "伞鸟X腕甲",
+        "rank": 8,
         "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 1,
+        "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 118,
-        "bougyo_max": 140,
+        "bougyo": 88,
+        "bougyo_max": 160,
         "skill": [
             {
-                "sname": "快吃",
-                "lv": 2,
-                "hex": "3C"
-            },
-            {
-                "sname": "心眼",
-                "lv": 2,
-                "hex": "1A"
-            },
-            {
-                "sname": "通常弹·连射箭强化",
+                "sname": "无伤",
                 "lv": 1,
-                "hex": "30"
+                "hex": "03"
+            },
+            {
+                "sname": "火属性攻击强化",
+                "lv": 2,
+                "hex": "0D"
+            },
+            {
+                "sname": "会心击【属性】",
+                "lv": 1,
+                "hex": "0B"
             }
         ],
-        "def_f": 2,
-        "def_w": 0,
-        "def_t": -3,
+        "def_f": 3,
+        "def_w": -3,
+        "def_t": -1,
         "def_i": 0,
-        "def_d": -2,
+        "def_d": 0,
         "rare9": false
     },
-    "363_1": {
-        "id": 363,
-        "name": "角龍X頭盔",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 118,
-        "bougyo_max": 140,
-        "skill": [
-            {
-                "sname": "防御性能",
-                "lv": 3,
-                "hex": "23"
-            },
-            {
-                "sname": "耐震",
-                "lv": 1,
-                "hex": "3F"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -1,
-        "def_t": -1,
-        "def_i": -3,
-        "def_d": -1,
-        "rare9": true
-    },
-    "363_2": {
-        "id": 363,
-        "name": "角龍X鎧甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 118,
-        "bougyo_max": 140,
-        "skill": [
-            {
-                "sname": "防御性能",
-                "lv": 2,
-                "hex": "23"
-            },
-            {
-                "sname": "攻击守势",
-                "lv": 1,
-                "hex": "25"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -1,
-        "def_t": -1,
-        "def_i": -3,
-        "def_d": -1,
-        "rare9": false
-    },
-    "363_3": {
-        "id": 363,
-        "name": "角龍X腕甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 118,
-        "bougyo_max": 140,
-        "skill": [
-            {
-                "sname": "攻击守势",
-                "lv": 2,
-                "hex": "25"
-            },
-            {
-                "sname": "耐力急速回复",
-                "lv": 1,
-                "hex": "22"
-            },
-            {
-                "sname": "贯通弹·贯通箭强化",
-                "lv": 2,
-                "hex": "32"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -1,
-        "def_t": -1,
-        "def_i": -3,
-        "def_d": -1,
-        "rare9": false
-    },
-    "363_4": {
-        "id": 363,
-        "name": "角龍X腰甲",
-        "rank": 9,
+    "327_4": {
+        "id": 327,
+        "name": "伞鸟X腰甲",
+        "rank": 8,
         "gender": "男女共通",
         "parts": "腰",
         "parts_id": 4,
-        "rare": 8,
+        "rare": 7,
         "slotLv1": 1,
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 118,
-        "bougyo_max": 140,
+        "bougyo": 88,
+        "bougyo_max": 160,
         "skill": [
             {
-                "sname": "火场怪力",
+                "sname": "纳刀术",
                 "lv": 1,
-                "hex": "5B"
+                "hex": "28"
             },
             {
-                "sname": "耐力急速回复",
-                "lv": 2,
-                "hex": "22"
+                "sname": "会心击【属性】",
+                "lv": 1,
+                "hex": "0B"
             }
         ],
         "def_f": 3,
-        "def_w": -1,
+        "def_w": -3,
         "def_t": -1,
-        "def_i": -3,
-        "def_d": -1,
+        "def_i": 0,
+        "def_d": 0,
         "rare9": false
     },
-    "363_5": {
-        "id": 363,
-        "name": "角龍X護腿",
-        "rank": 9,
+    "327_5": {
+        "id": 327,
+        "name": "伞鸟X护腿",
+        "rank": 8,
         "gender": "男女共通",
         "parts": "腿",
         "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 118,
-        "bougyo_max": 140,
-        "skill": [
-            {
-                "sname": "火场怪力",
-                "lv": 2,
-                "hex": "5B"
-            },
-            {
-                "sname": "耐震",
-                "lv": 2,
-                "hex": "3F"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -1,
-        "def_t": -1,
-        "def_i": -3,
-        "def_d": -1,
-        "rare9": false
-    },
-    "389_1": {
-        "id": 389,
-        "name": "黑蝕龍頭盔",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "挑战者",
-                "lv": 1,
-                "hex": "02"
-            },
-            {
-                "sname": "体术",
-                "lv": 2,
-                "hex": "21"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 3,
-        "def_t": -1,
-        "def_i": 2,
-        "def_d": -1,
-        "rare9": false
-    },
-    "389_2": {
-        "id": 389,
-        "name": "黑蝕龍鎧甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "因祸得福",
-                "lv": 1,
-                "hex": "74"
-            },
-            {
-                "sname": "体术",
-                "lv": 3,
-                "hex": "21"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 3,
-        "def_t": -1,
-        "def_i": 2,
-        "def_d": -1,
-        "rare9": false
-    },
-    "389_3": {
-        "id": 389,
-        "name": "黑蝕龍腕甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "因祸得福",
-                "lv": 1,
-                "hex": "74"
-            },
-            {
-                "sname": "快吃",
-                "lv": 2,
-                "hex": "3C"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 3,
-        "def_t": -1,
-        "def_i": 2,
-        "def_d": -1,
-        "rare9": false
-    },
-    "389_4": {
-        "id": 389,
-        "name": "黑蝕龍腰甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "因祸得福",
-                "lv": 1,
-                "hex": "74"
-            },
-            {
-                "sname": "挑战者",
-                "lv": 1,
-                "hex": "02"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 3,
-        "def_t": -1,
-        "def_i": 2,
-        "def_d": -1,
-        "rare9": false
-    },
-    "389_5": {
-        "id": 389,
-        "name": "黑蝕龍護腿",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 3,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "挑战者",
-                "lv": 3,
-                "hex": "02"
-            },
-            {
-                "sname": "快吃",
-                "lv": 1,
-                "hex": "3C"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 3,
-        "def_t": -1,
-        "def_i": 2,
-        "def_d": -1,
-        "rare9": true
-    },
-    "392_1": {
-        "id": 392,
-        "name": "千刃龍頭盔",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "刃鳞打磨",
-                "lv": 1,
-                "hex": "80"
-            },
-            {
-                "sname": "体术",
-                "lv": 3,
-                "hex": "21"
-            }
-        ],
-        "def_f": 4,
-        "def_w": 0,
-        "def_t": -3,
-        "def_i": -2,
-        "def_d": 0,
-        "rare9": false
-    },
-    "392_2": {
-        "id": 392,
-        "name": "千刃龍鎧甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "刃鳞打磨",
-                "lv": 1,
-                "hex": "80"
-            },
-            {
-                "sname": "回避性能",
-                "lv": 3,
-                "hex": "41"
-            }
-        ],
-        "def_f": 4,
-        "def_w": 0,
-        "def_t": -3,
-        "def_i": -2,
-        "def_d": 0,
-        "rare9": false
-    },
-    "392_3": {
-        "id": 392,
-        "name": "千刃龍腕甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "匠",
-                "lv": 3,
-                "hex": "16"
-            }
-        ],
-        "def_f": 4,
-        "def_w": 0,
-        "def_t": -3,
-        "def_i": -2,
-        "def_d": 0,
-        "rare9": true
-    },
-    "392_4": {
-        "id": 392,
-        "name": "千刃龍腰甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
+        "rare": 7,
         "slotLv1": 2,
         "slotLv2": 0,
         "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 114,
-        "bougyo_max": 136,
+        "slotLv4": 0,
+        "bougyo": 88,
+        "bougyo_max": 160,
         "skill": [
             {
-                "sname": "走壁移动【翔】",
+                "sname": "无伤",
                 "lv": 1,
-                "hex": "81"
+                "hex": "03"
             },
             {
-                "sname": "墙面移动",
+                "sname": "火属性攻击强化",
                 "lv": 2,
-                "hex": "69"
+                "hex": "0D"
+            },
+            {
+                "sname": "拔刀术【技】",
+                "lv": 1,
+                "hex": "26"
             }
         ],
-        "def_f": 4,
-        "def_w": 0,
-        "def_t": -3,
-        "def_i": -2,
+        "def_f": 3,
+        "def_w": -3,
+        "def_t": -1,
+        "def_i": 0,
         "def_d": 0,
         "rare9": false
     },
-    "392_5": {
-        "id": 392,
-        "name": "千刃龍護腿",
-        "rank": 9,
+    "328_1": {
+        "id": 328,
+        "name": "河童蛙X头盔",
+        "rank": 8,
         "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 0,
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 1,
         "slotLv2": 0,
         "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 114,
-        "bougyo_max": 136,
+        "slotLv4": 0,
+        "bougyo": 90,
+        "bougyo_max": 162,
         "skill": [
             {
-                "sname": "刃鳞打磨",
-                "lv": 1,
-                "hex": "80"
+                "sname": "通常弹・连射箭强化",
+                "lv": 2,
+                "hex": "30"
             },
             {
-                "sname": "回避距离UP",
+                "sname": "快吃",
+                "lv": 1,
+                "hex": "3C"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 4,
+        "def_t": -2,
+        "def_i": 1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "328_2": {
+        "id": 328,
+        "name": "河童蛙X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 90,
+        "bougyo_max": 162,
+        "skill": [
+            {
+                "sname": "通常弹・连射箭强化",
+                "lv": 1,
+                "hex": "30"
+            },
+            {
+                "sname": "回避距离提升",
+                "lv": 1,
+                "hex": "42"
+            },
+            {
+                "sname": "快吃",
+                "lv": 1,
+                "hex": "3C"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 4,
+        "def_t": -2,
+        "def_i": 1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "328_3": {
+        "id": 328,
+        "name": "河童蛙X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 90,
+        "bougyo_max": 162,
+        "skill": [
+            {
+                "sname": "火场怪力",
+                "lv": 2,
+                "hex": "5B"
+            },
+            {
+                "sname": "特殊射击强化",
+                "lv": 2,
+                "hex": "2F"
+            },
+            {
+                "sname": "饥饿耐性",
+                "lv": 1,
+                "hex": "60"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 4,
+        "def_t": -2,
+        "def_i": 1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "328_4": {
+        "id": 328,
+        "name": "河童蛙X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 90,
+        "bougyo_max": 162,
+        "skill": [
+            {
+                "sname": "火场怪力",
+                "lv": 2,
+                "hex": "5B"
+            },
+            {
+                "sname": "回避距离提升",
                 "lv": 2,
                 "hex": "42"
             }
         ],
-        "def_f": 4,
-        "def_w": 0,
-        "def_t": -3,
-        "def_i": -2,
+        "def_f": -1,
+        "def_w": 4,
+        "def_t": -2,
+        "def_i": 1,
         "def_d": 0,
         "rare9": false
     },
-    "393_1": {
-        "id": 393,
-        "name": "電龍頭盔",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "连击",
-                "lv": 1,
-                "hex": "83"
-            },
-            {
-                "sname": "气绝耐性",
-                "lv": 2,
-                "hex": "4C"
-            }
-        ],
-        "def_f": 0,
-        "def_w": -1,
-        "def_t": 4,
-        "def_i": -3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "393_2": {
-        "id": 393,
-        "name": "電龍鎧甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "连击",
-                "lv": 1,
-                "hex": "83"
-            },
-            {
-                "sname": "耐力急速回复",
-                "lv": 2,
-                "hex": "22"
-            }
-        ],
-        "def_f": 0,
-        "def_w": -1,
-        "def_t": 4,
-        "def_i": -3,
-        "def_d": 0,
-        "rare9": true
-    },
-    "393_3": {
-        "id": 393,
-        "name": "電龍腕甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "连击",
-                "lv": 1,
-                "hex": "83"
-            },
-            {
-                "sname": "耐力急速回复",
-                "lv": 1,
-                "hex": "22"
-            },
-            {
-                "sname": "气绝耐性",
-                "lv": 1,
-                "hex": "4C"
-            }
-        ],
-        "def_f": 0,
-        "def_w": -1,
-        "def_t": 4,
-        "def_i": -3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "393_4": {
-        "id": 393,
-        "name": "電龍腰甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "强化持续",
-                "lv": 3,
-                "hex": "1F"
-            },
-            {
-                "sname": "砥石使用高速化",
-                "lv": 2,
-                "hex": "55"
-            }
-        ],
-        "def_f": 0,
-        "def_w": -1,
-        "def_t": 4,
-        "def_i": -3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "393_5": {
-        "id": 393,
-        "name": "電龍護腿",
-        "rank": 9,
+    "328_5": {
+        "id": 328,
+        "name": "河童蛙X护腿",
+        "rank": 8,
         "gender": "男女共通",
         "parts": "腿",
         "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 2,
+        "rare": 7,
+        "slotLv1": 0,
         "slotLv2": 0,
         "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 136,
+        "slotLv4": 1,
+        "bougyo": 90,
+        "bougyo_max": 162,
         "skill": [
             {
-                "sname": "利刃",
-                "lv": 3,
-                "hex": "17"
+                "sname": "饥饿耐性",
+                "lv": 2,
+                "hex": "60"
             },
             {
-                "sname": "弹药节制",
-                "lv": 3,
-                "hex": "18"
+                "sname": "火场怪力",
+                "lv": 1,
+                "hex": "5B"
             },
             {
-                "sname": "雷属性攻击强化",
-                "lv": 3,
-                "hex": "10"
+                "sname": "快吃",
+                "lv": 1,
+                "hex": "3C"
             }
         ],
-        "def_f": 0,
-        "def_w": -1,
-        "def_t": 4,
-        "def_i": -3,
+        "def_f": -1,
+        "def_w": 4,
+        "def_t": -2,
+        "def_i": 1,
         "def_d": 0,
         "rare9": false
     },
-    "403_1": {
-        "id": 403,
-        "name": "冰狼龍頭盔",
-        "rank": 9,
+    "329_1": {
+        "id": 329,
+        "name": "人鱼龙X头盔",
+        "rank": 8,
         "gender": "男女共通",
         "parts": "头",
         "parts_id": 1,
-        "rare": 8,
+        "rare": 7,
         "slotLv1": 0,
         "slotLv2": 2,
         "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 136,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "睡眠属性强化",
+                "lv": 1,
+                "hex": "14"
+            },
+            {
+                "sname": "睡眠耐性",
+                "lv": 2,
+                "hex": "4B"
+            },
+            {
+                "sname": "弹丸节约",
+                "lv": 1,
+                "hex": "18"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 2,
+        "def_t": -3,
+        "def_i": 0,
+        "def_d": 1,
+        "rare9": false
+    },
+    "329_2": {
+        "id": 329,
+        "name": "人鱼龙X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "睡眠属性强化",
+                "lv": 1,
+                "hex": "14"
+            },
+            {
+                "sname": "装填扩充",
+                "lv": 1,
+                "hex": "33"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 2,
+        "def_t": -3,
+        "def_i": 0,
+        "def_d": 1,
+        "rare9": false
+    },
+    "329_3": {
+        "id": 329,
+        "name": "人鱼龙X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "炸弹客",
+                "lv": 2,
+                "hex": "56"
+            },
+            {
+                "sname": "精灵加护",
+                "lv": 1,
+                "hex": "39"
+            },
+            {
+                "sname": "弹丸节约",
+                "lv": 2,
+                "hex": "18"
+            },
+            {
+                "sname": "匠",
+                "lv": 1,
+                "hex": "16"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 2,
+        "def_t": -3,
+        "def_i": 0,
+        "def_d": 1,
+        "rare9": false
+    },
+    "329_4": {
+        "id": 329,
+        "name": "人鱼龙X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "睡眠属性强化",
+                "lv": 1,
+                "hex": "14"
+            },
+            {
+                "sname": "炸弹客",
+                "lv": 1,
+                "hex": "56"
+            },
+            {
+                "sname": "装填扩充",
+                "lv": 1,
+                "hex": "33"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 2,
+        "def_t": -3,
+        "def_i": 0,
+        "def_d": 1,
+        "rare9": false
+    },
+    "329_5": {
+        "id": 329,
+        "name": "人鱼龙X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "精灵加护",
+                "lv": 2,
+                "hex": "39"
+            },
+            {
+                "sname": "睡眠耐性",
+                "lv": 1,
+                "hex": "4B"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 2,
+        "def_t": -3,
+        "def_i": 0,
+        "def_d": 1,
+        "rare9": false
+    },
+    "330_1": {
+        "id": 330,
+        "name": "妃蜘蛛X头盔",
+        "rank": 8,
+        "gender": "男性专用",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "散弹・扩散箭强化",
+                "lv": 1,
+                "hex": "32"
+            },
+            {
+                "sname": "装填速度",
+                "lv": 1,
+                "hex": "34"
+            },
+            {
+                "sname": "零件改造",
+                "lv": 1,
+                "hex": "7E"
+            }
+        ],
+        "def_f": 4,
+        "def_w": -2,
+        "def_t": -1,
+        "def_i": -3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "330_2": {
+        "id": 330,
+        "name": "妃蜘蛛X铠甲",
+        "rank": 8,
+        "gender": "男性专用",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "散弹・扩散箭强化",
+                "lv": 1,
+                "hex": "32"
+            },
+            {
+                "sname": "装填速度",
+                "lv": 2,
+                "hex": "34"
+            },
+            {
+                "sname": "弹丸节约",
+                "lv": 1,
+                "hex": "18"
+            }
+        ],
+        "def_f": 4,
+        "def_w": -2,
+        "def_t": -1,
+        "def_i": -3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "330_3": {
+        "id": 330,
+        "name": "妃蜘蛛X腕甲",
+        "rank": 8,
+        "gender": "男性专用",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "体术",
+                "lv": 2,
+                "hex": "21"
+            },
+            {
+                "sname": "耐力急速回复",
+                "lv": 1,
+                "hex": "22"
+            }
+        ],
+        "def_f": 4,
+        "def_w": -2,
+        "def_t": -1,
+        "def_i": -3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "330_4": {
+        "id": 330,
+        "name": "妃蜘蛛X腰甲",
+        "rank": 8,
+        "gender": "男性专用",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "散弹・扩散箭强化",
+                "lv": 1,
+                "hex": "32"
+            },
+            {
+                "sname": "弹丸节约",
+                "lv": 1,
+                "hex": "18"
+            },
+            {
+                "sname": "零件改造",
+                "lv": 1,
+                "hex": "7E"
+            }
+        ],
+        "def_f": 4,
+        "def_w": -2,
+        "def_t": -1,
+        "def_i": -3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "330_5": {
+        "id": 330,
+        "name": "妃蜘蛛X护腿",
+        "rank": 8,
+        "gender": "男性专用",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "体术",
+                "lv": 3,
+                "hex": "21"
+            },
+            {
+                "sname": "耐力急速回复",
+                "lv": 2,
+                "hex": "22"
+            }
+        ],
+        "def_f": 4,
+        "def_w": -2,
+        "def_t": -1,
+        "def_i": -3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "331_1": {
+        "id": 331,
+        "name": "妃蜘蛛X头盔",
+        "rank": 8,
+        "gender": "女性专用",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "散弹・扩散箭强化",
+                "lv": 1,
+                "hex": "32"
+            },
+            {
+                "sname": "装填速度",
+                "lv": 1,
+                "hex": "34"
+            },
+            {
+                "sname": "零件改造",
+                "lv": 1,
+                "hex": "7E"
+            }
+        ],
+        "def_f": 4,
+        "def_w": -2,
+        "def_t": -1,
+        "def_i": -3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "331_2": {
+        "id": 331,
+        "name": "妃蜘蛛X铠甲",
+        "rank": 8,
+        "gender": "女性专用",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "散弹・扩散箭强化",
+                "lv": 1,
+                "hex": "32"
+            },
+            {
+                "sname": "装填速度",
+                "lv": 2,
+                "hex": "34"
+            },
+            {
+                "sname": "弹丸节约",
+                "lv": 1,
+                "hex": "18"
+            }
+        ],
+        "def_f": 4,
+        "def_w": -2,
+        "def_t": -1,
+        "def_i": -3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "331_3": {
+        "id": 331,
+        "name": "妃蜘蛛X腕甲",
+        "rank": 8,
+        "gender": "女性专用",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "体术",
+                "lv": 2,
+                "hex": "21"
+            },
+            {
+                "sname": "耐力急速回复",
+                "lv": 1,
+                "hex": "22"
+            }
+        ],
+        "def_f": 4,
+        "def_w": -2,
+        "def_t": -1,
+        "def_i": -3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "331_4": {
+        "id": 331,
+        "name": "妃蜘蛛X腰甲",
+        "rank": 8,
+        "gender": "女性专用",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "散弹・扩散箭强化",
+                "lv": 1,
+                "hex": "32"
+            },
+            {
+                "sname": "弹丸节约",
+                "lv": 1,
+                "hex": "18"
+            },
+            {
+                "sname": "零件改造",
+                "lv": 1,
+                "hex": "7E"
+            }
+        ],
+        "def_f": 4,
+        "def_w": -2,
+        "def_t": -1,
+        "def_i": -3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "331_5": {
+        "id": 331,
+        "name": "妃蜘蛛X护腿",
+        "rank": 8,
+        "gender": "女性专用",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "体术",
+                "lv": 3,
+                "hex": "21"
+            },
+            {
+                "sname": "耐力急速回复",
+                "lv": 2,
+                "hex": "22"
+            }
+        ],
+        "def_f": 4,
+        "def_w": -2,
+        "def_t": -1,
+        "def_i": -3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "332_1": {
+        "id": 332,
+        "name": "雪鬼兽X头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 106,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "拔刀术【技】",
+                "lv": 1,
+                "hex": "26"
+            },
+            {
+                "sname": "挑战者",
+                "lv": 2,
+                "hex": "02"
+            },
+            {
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
+            }
+        ],
+        "def_f": -4,
+        "def_w": 1,
+        "def_t": -1,
+        "def_i": 4,
+        "def_d": 0,
+        "rare9": false
+    },
+    "332_2": {
+        "id": 332,
+        "name": "雪鬼兽X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 106,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "拔刀术【技】",
+                "lv": 1,
+                "hex": "26"
+            },
+            {
+                "sname": "怨恨",
+                "lv": 3,
+                "hex": "04"
+            }
+        ],
+        "def_f": -4,
+        "def_w": 1,
+        "def_t": -1,
+        "def_i": 4,
+        "def_d": 0,
+        "rare9": false
+    },
+    "332_3": {
+        "id": 332,
+        "name": "雪鬼兽X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 106,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "拔刀术【技】",
+                "lv": 1,
+                "hex": "26"
+            },
+            {
+                "sname": "拔刀术【力】",
+                "lv": 1,
+                "hex": "27"
+            },
+            {
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
+            }
+        ],
+        "def_f": -4,
+        "def_w": 1,
+        "def_t": -1,
+        "def_i": 4,
+        "def_d": 0,
+        "rare9": false
+    },
+    "332_4": {
+        "id": 332,
+        "name": "雪鬼兽X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 106,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "拔刀术【力】",
+                "lv": 1,
+                "hex": "27"
+            },
+            {
+                "sname": "怨恨",
+                "lv": 2,
+                "hex": "04"
+            },
+            {
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
+            }
+        ],
+        "def_f": -4,
+        "def_w": 1,
+        "def_t": -1,
+        "def_i": 4,
+        "def_d": 0,
+        "rare9": false
+    },
+    "332_5": {
+        "id": 332,
+        "name": "雪鬼兽X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 106,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "拔刀术【力】",
+                "lv": 1,
+                "hex": "27"
+            },
+            {
+                "sname": "挑战者",
+                "lv": 3,
+                "hex": "02"
+            },
+            {
+                "sname": "弹道强化",
+                "lv": 1,
+                "hex": "1B"
+            }
+        ],
+        "def_f": -4,
+        "def_w": 1,
+        "def_t": -1,
+        "def_i": 4,
+        "def_d": 0,
+        "rare9": false
+    },
+    "333_1": {
+        "id": 333,
+        "name": "泥翁龙X头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "高速变形",
+                "lv": 2,
+                "hex": "6B"
+            },
+            {
+                "sname": "强化持续",
+                "lv": 1,
+                "hex": "1F"
+            }
+        ],
+        "def_f": -4,
+        "def_w": 3,
+        "def_t": 3,
+        "def_i": -2,
+        "def_d": -2,
+        "rare9": false
+    },
+    "333_2": {
+        "id": 333,
+        "name": "泥翁龙X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "利刃",
+                "lv": 2,
+                "hex": "17"
+            },
+            {
+                "sname": "强化持续",
+                "lv": 1,
+                "hex": "1F"
+            }
+        ],
+        "def_f": -4,
+        "def_w": 3,
+        "def_t": 3,
+        "def_i": -2,
+        "def_d": -2,
+        "rare9": false
+    },
+    "333_3": {
+        "id": 333,
+        "name": "泥翁龙X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "高速变形",
+                "lv": 1,
+                "hex": "6B"
+            },
+            {
+                "sname": "回避性能",
+                "lv": 2,
+                "hex": "41"
+            }
+        ],
+        "def_f": -4,
+        "def_w": 3,
+        "def_t": 3,
+        "def_i": -2,
+        "def_d": -2,
+        "rare9": false
+    },
+    "333_4": {
+        "id": 333,
+        "name": "泥翁龙X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "回避性能",
+                "lv": 2,
+                "hex": "41"
+            },
+            {
+                "sname": "强化持续",
+                "lv": 1,
+                "hex": "1F"
+            },
+            {
+                "sname": "弹丸节约",
+                "lv": 1,
+                "hex": "18"
+            }
+        ],
+        "def_f": -4,
+        "def_w": 3,
+        "def_t": 3,
+        "def_i": -2,
+        "def_d": -2,
+        "rare9": false
+    },
+    "333_5": {
+        "id": 333,
+        "name": "泥翁龙X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "利刃",
+                "lv": 1,
+                "hex": "17"
+            },
+            {
+                "sname": "回避性能",
+                "lv": 1,
+                "hex": "41"
+            },
+            {
+                "sname": "弹丸节约",
+                "lv": 1,
+                "hex": "18"
+            }
+        ],
+        "def_f": -4,
+        "def_w": 3,
+        "def_t": 3,
+        "def_i": -2,
+        "def_d": -2,
+        "rare9": false
+    },
+    "334_1": {
+        "id": 334,
+        "name": "风卷之首・真",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "风纹一致",
+                "lv": 1,
+                "hex": "6D"
+            },
+            {
+                "sname": "集中",
+                "lv": 1,
+                "hex": "1E"
+            },
+            {
+                "sname": "回避距离提升",
+                "lv": 1,
+                "hex": "42"
+            },
+            {
+                "sname": "风雷合一",
+                "lv": 1,
+                "hex": "6F"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": -2,
+        "rare9": true
+    },
+    "334_2": {
+        "id": 334,
+        "name": "风卷之胸・真",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "风纹一致",
+                "lv": 1,
+                "hex": "6D"
+            },
+            {
+                "sname": "防御性能",
+                "lv": 1,
+                "hex": "23"
+            },
+            {
+                "sname": "减轻胆怯",
+                "lv": 1,
+                "hex": "5D"
+            },
+            {
+                "sname": "风雷合一",
+                "lv": 1,
+                "hex": "6F"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": -2,
+        "rare9": true
+    },
+    "334_3": {
+        "id": 334,
+        "name": "风卷之臂・真",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "风纹一致",
+                "lv": 1,
+                "hex": "6D"
+            },
+            {
+                "sname": "体术",
+                "lv": 1,
+                "hex": "21"
+            },
+            {
+                "sname": "耐力急速回复",
+                "lv": 1,
+                "hex": "22"
+            },
+            {
+                "sname": "风雷合一",
+                "lv": 1,
+                "hex": "6F"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": -2,
+        "rare9": true
+    },
+    "334_4": {
+        "id": 334,
+        "name": "风卷之腰・真",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "风纹一致",
+                "lv": 1,
+                "hex": "6D"
+            },
+            {
+                "sname": "强化持续",
+                "lv": 1,
+                "hex": "1F"
+            },
+            {
+                "sname": "回避性能",
+                "lv": 1,
+                "hex": "41"
+            },
+            {
+                "sname": "风雷合一",
+                "lv": 1,
+                "hex": "6F"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": -2,
+        "rare9": true
+    },
+    "334_5": {
+        "id": 334,
+        "name": "风卷之足",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "风纹一致",
+                "lv": 1,
+                "hex": "6D"
+            },
+            {
+                "sname": "击晕术",
+                "lv": 1,
+                "hex": "29"
+            },
+            {
+                "sname": "防御强化",
+                "lv": 1,
+                "hex": "24"
+            },
+            {
+                "sname": "风雷合一",
+                "lv": 1,
+                "hex": "6F"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": -2,
+        "rare9": true
+    },
+    "336_1": {
+        "id": 336,
+        "name": "鸣神之首・真",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "雷纹一致",
+                "lv": 1,
+                "hex": "6E"
+            },
+            {
+                "sname": "高速变形",
+                "lv": 1,
+                "hex": "6B"
+            },
+            {
+                "sname": "攻击守势",
+                "lv": 1,
+                "hex": "25"
+            },
+            {
+                "sname": "风雷合一",
+                "lv": 1,
+                "hex": "6F"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 1,
+        "def_t": 4,
+        "def_i": -3,
+        "def_d": -4,
+        "rare9": true
+    },
+    "336_2": {
+        "id": 336,
+        "name": "鸣神之胸・真",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "雷纹一致",
+                "lv": 1,
+                "hex": "6E"
+            },
+            {
+                "sname": "体术",
+                "lv": 1,
+                "hex": "21"
+            },
+            {
+                "sname": "拔刀术【技】",
+                "lv": 1,
+                "hex": "26"
+            },
+            {
+                "sname": "风雷合一",
+                "lv": 1,
+                "hex": "6F"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 1,
+        "def_t": 4,
+        "def_i": -3,
+        "def_d": -4,
+        "rare9": true
+    },
+    "336_3": {
+        "id": 336,
+        "name": "鸣神之臂・真",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "雷纹一致",
+                "lv": 1,
+                "hex": "6E"
+            },
+            {
+                "sname": "防御性能",
+                "lv": 1,
+                "hex": "23"
+            },
+            {
+                "sname": "破坏王",
+                "lv": 1,
+                "hex": "51"
+            },
+            {
+                "sname": "风雷合一",
+                "lv": 1,
+                "hex": "6F"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 1,
+        "def_t": 4,
+        "def_i": -3,
+        "def_d": -4,
+        "rare9": true
+    },
+    "336_4": {
+        "id": 336,
+        "name": "鸣神之腰・真",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "雷纹一致",
+                "lv": 1,
+                "hex": "6E"
+            },
+            {
+                "sname": "防御性能",
+                "lv": 1,
+                "hex": "23"
+            },
+            {
+                "sname": "炮术",
+                "lv": 1,
+                "hex": "2D"
+            },
+            {
+                "sname": "风雷合一",
+                "lv": 1,
+                "hex": "6F"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 1,
+        "def_t": 4,
+        "def_i": -3,
+        "def_d": -4,
+        "rare9": true
+    },
+    "336_5": {
+        "id": 336,
+        "name": "鸣神之足",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "雷纹一致",
+                "lv": 1,
+                "hex": "6E"
+            },
+            {
+                "sname": "回避性能",
+                "lv": 1,
+                "hex": "41"
+            },
+            {
+                "sname": "跑者",
+                "lv": 1,
+                "hex": "20"
+            },
+            {
+                "sname": "风雷合一",
+                "lv": 1,
+                "hex": "6F"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 1,
+        "def_t": 4,
+        "def_i": -3,
+        "def_d": -4,
+        "rare9": true
+    },
+    "338_1": {
+        "id": 338,
+        "name": "镰鼬龙X头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "看破",
+                "lv": 1,
+                "hex": "06"
+            },
+            {
+                "sname": "回避性能",
+                "lv": 2,
+                "hex": "41"
+            }
+        ],
+        "def_f": 2,
+        "def_w": -1,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "338_2": {
+        "id": 338,
+        "name": "镰鼬龙X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 86,
+        "bougyo_max": 158,
         "skill": [
             {
                 "sname": "看破",
@@ -15058,2013 +6499,130 @@ var armor_list = {
                 "hex": "06"
             },
             {
-                "sname": "翔虫使",
-                "lv": 1,
-                "hex": "68"
-            }
-        ],
-        "def_f": -4,
-        "def_w": 2,
-        "def_t": -1,
-        "def_i": 4,
-        "def_d": -1,
-        "rare9": true
-    },
-    "403_2": {
-        "id": 403,
-        "name": "冰狼龍鎧甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "挑战者",
-                "lv": 2,
-                "hex": "02"
-            },
-            {
-                "sname": "合气",
-                "lv": 1,
-                "hex": "7A"
-            }
-        ],
-        "def_f": -4,
-        "def_w": 2,
-        "def_t": -1,
-        "def_i": 4,
-        "def_d": -1,
-        "rare9": false
-    },
-    "403_3": {
-        "id": 403,
-        "name": "冰狼龍腕甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "挑战者",
-                "lv": 3,
-                "hex": "02"
-            },
-            {
-                "sname": "翔虫使",
-                "lv": 1,
-                "hex": "68"
-            }
-        ],
-        "def_f": -4,
-        "def_w": 2,
-        "def_t": -1,
-        "def_i": 4,
-        "def_d": -1,
-        "rare9": false
-    },
-    "403_4": {
-        "id": 403,
-        "name": "冰狼龍腰甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "力量解放",
-                "lv": 2,
-                "hex": "09"
-            },
-            {
-                "sname": "翔虫使",
-                "lv": 1,
-                "hex": "68"
-            }
-        ],
-        "def_f": -4,
-        "def_w": 2,
-        "def_t": -1,
-        "def_i": 4,
-        "def_d": -1,
-        "rare9": false
-    },
-    "403_5": {
-        "id": 403,
-        "name": "冰狼龍護腿",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 2,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "力量解放",
-                "lv": 3,
-                "hex": "09"
-            },
-            {
-                "sname": "合气",
-                "lv": 1,
-                "hex": "7A"
-            }
-        ],
-        "def_f": -4,
-        "def_w": 2,
-        "def_t": -1,
-        "def_i": 4,
-        "def_d": -1,
-        "rare9": false
-    },
-    "406_1": {
-        "id": 406,
-        "name": "棘龍首腦",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 116,
-        "bougyo_max": 138,
-        "skill": [
-            {
-                "sname": "麻痹属性强化",
-                "lv": 3,
-                "hex": "13"
-            },
-            {
-                "sname": "破坏王",
-                "lv": 1,
-                "hex": "51"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -1,
-        "def_t": 2,
-        "def_i": -3,
-        "def_d": -2,
-        "rare9": false
-    },
-    "406_2": {
-        "id": 406,
-        "name": "棘龍肌肉",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 116,
-        "bougyo_max": 138,
-        "skill": [
-            {
-                "sname": "攻势",
-                "lv": 1,
-                "hex": "7D"
-            },
-            {
-                "sname": "破坏王",
-                "lv": 2,
-                "hex": "51"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -1,
-        "def_t": 2,
-        "def_i": -3,
-        "def_d": -2,
-        "rare9": true
-    },
-    "406_3": {
-        "id": 406,
-        "name": "棘龍雙手",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 116,
-        "bougyo_max": 138,
-        "skill": [
-            {
-                "sname": "攻势",
-                "lv": 1,
-                "hex": "7D"
-            },
-            {
-                "sname": "钢刃研磨",
-                "lv": 2,
-                "hex": "19"
-            },
-            {
-                "sname": "速射强化",
-                "lv": 1,
-                "hex": "37"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -1,
-        "def_t": 2,
-        "def_i": -3,
-        "def_d": -2,
-        "rare9": false
-    },
-    "406_4": {
-        "id": 406,
-        "name": "棘龍臍帶",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 116,
-        "bougyo_max": 138,
-        "skill": [
-            {
-                "sname": "挑战者",
-                "lv": 2,
-                "hex": "02"
-            },
-            {
-                "sname": "钢刃研磨",
-                "lv": 1,
-                "hex": "19"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -1,
-        "def_t": 2,
-        "def_i": -3,
-        "def_d": -2,
-        "rare9": false
-    },
-    "406_5": {
-        "id": 406,
-        "name": "棘龍腳跟",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 116,
-        "bougyo_max": 138,
-        "skill": [
-            {
-                "sname": "攻势",
-                "lv": 1,
-                "hex": "7D"
-            },
-            {
-                "sname": "减轻胆怯",
-                "lv": 2,
-                "hex": "5D"
-            },
-            {
-                "sname": "毒属性强化",
-                "lv": 3,
-                "hex": "12"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -1,
-        "def_t": 2,
-        "def_i": -3,
-        "def_d": -2,
-        "rare9": false
-    },
-    "441_1": {
-        "id": 441,
-        "name": "重裝騎士【頭盔】",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "防御强化",
-                "lv": 1,
-                "hex": "24"
-            },
-            {
-                "sname": "炮术",
-                "lv": 1,
-                "hex": "2D"
-            },
-            {
-                "sname": "炮弹装填",
-                "lv": 2,
-                "hex": "2E"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "441_2": {
-        "id": 441,
-        "name": "重裝騎士【鎧甲】",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "防御性能",
-                "lv": 1,
-                "hex": "23"
-            },
-            {
-                "sname": "炮术",
-                "lv": 2,
-                "hex": "2D"
-            },
-            {
-                "sname": "攻击守势",
-                "lv": 1,
-                "hex": "25"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "441_3": {
-        "id": 441,
-        "name": "重裝騎士【手甲】",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "防御性能",
-                "lv": 2,
-                "hex": "23"
-            },
-            {
-                "sname": "防御强化",
-                "lv": 1,
-                "hex": "24"
-            },
-            {
-                "sname": "利刃",
-                "lv": 1,
-                "hex": "17"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "441_4": {
-        "id": 441,
-        "name": "重裝騎士【帶甲】",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "防御性能",
-                "lv": 1,
-                "hex": "23"
-            },
-            {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
-            },
-            {
-                "sname": "攻击守势",
-                "lv": 2,
-                "hex": "25"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "441_5": {
-        "id": 441,
-        "name": "重裝騎士【腿甲】",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "防御强化",
-                "lv": 1,
-                "hex": "24"
-            },
-            {
-                "sname": "纳刀术",
-                "lv": 2,
-                "hex": "28"
-            },
-            {
-                "sname": "利刃",
-                "lv": 2,
-                "hex": "17"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "415_1": {
-        "id": 415,
-        "name": "獵鷹翼帽",
-        "rank": 9,
-        "gender": "男性专用",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 110,
-        "bougyo_max": 132,
-        "skill": [
-            {
-                "sname": "体术",
-                "lv": 2,
-                "hex": "21"
-            },
-            {
-                "sname": "弱点特效",
-                "lv": 1,
-                "hex": "08"
-            },
-            {
-                "sname": "幸运",
-                "lv": 1,
-                "hex": "54"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "415_2": {
-        "id": 415,
-        "name": "獵鷹服裝",
-        "rank": 9,
-        "gender": "男性专用",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 110,
-        "bougyo_max": 132,
-        "skill": [
-            {
-                "sname": "体术",
-                "lv": 1,
-                "hex": "21"
-            },
-            {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
-            },
-            {
-                "sname": "幸运",
-                "lv": 1,
-                "hex": "54"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "415_3": {
-        "id": 415,
-        "name": "獵鷹手套",
-        "rank": 9,
-        "gender": "男性专用",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 110,
-        "bougyo_max": 132,
-        "skill": [
-            {
-                "sname": "快吃",
-                "lv": 1,
-                "hex": "3C"
-            },
-            {
-                "sname": "纳刀术",
-                "lv": 2,
-                "hex": "28"
-            },
-            {
-                "sname": "弱点特效",
-                "lv": 1,
-                "hex": "08"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "415_4": {
-        "id": 415,
-        "name": "獵鷹腰甲",
-        "rank": 9,
-        "gender": "男性专用",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 3,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 110,
-        "bougyo_max": 132,
-        "skill": [
-            {
-                "sname": "快吃",
-                "lv": 2,
-                "hex": "3C"
-            },
-            {
-                "sname": "体术",
-                "lv": 2,
-                "hex": "21"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "415_5": {
-        "id": 415,
-        "name": "獵鷹靴",
-        "rank": 9,
-        "gender": "男性专用",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 110,
-        "bougyo_max": 132,
-        "skill": [
-            {
-                "sname": "捕获名人",
-                "lv": 1,
-                "hex": "52"
-            },
-            {
-                "sname": "幸运",
-                "lv": 1,
-                "hex": "54"
-            },
-            {
-                "sname": "弱点特效",
-                "lv": 1,
-                "hex": "08"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": true
-    },
-    "416_1": {
-        "id": 416,
-        "name": "心智兜帽",
-        "rank": 9,
-        "gender": "女性专用",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 110,
-        "bougyo_max": 132,
-        "skill": [
-            {
-                "sname": "体术",
-                "lv": 2,
-                "hex": "21"
-            },
-            {
-                "sname": "弱点特效",
-                "lv": 1,
-                "hex": "08"
-            },
-            {
-                "sname": "幸运",
-                "lv": 1,
-                "hex": "54"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "416_2": {
-        "id": 416,
-        "name": "心智服裝",
-        "rank": 9,
-        "gender": "女性专用",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 110,
-        "bougyo_max": 132,
-        "skill": [
-            {
-                "sname": "体术",
-                "lv": 1,
-                "hex": "21"
-            },
-            {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
-            },
-            {
-                "sname": "幸运",
-                "lv": 1,
-                "hex": "54"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "416_3": {
-        "id": 416,
-        "name": "心智手套",
-        "rank": 9,
-        "gender": "女性专用",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 110,
-        "bougyo_max": 132,
-        "skill": [
-            {
-                "sname": "快吃",
-                "lv": 1,
-                "hex": "3C"
-            },
-            {
-                "sname": "纳刀术",
-                "lv": 2,
-                "hex": "28"
-            },
-            {
-                "sname": "弱点特效",
-                "lv": 1,
-                "hex": "08"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "416_4": {
-        "id": 416,
-        "name": "心智裙",
-        "rank": 9,
-        "gender": "女性专用",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 3,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 110,
-        "bougyo_max": 132,
-        "skill": [
-            {
-                "sname": "快吃",
-                "lv": 2,
-                "hex": "3C"
-            },
-            {
-                "sname": "体术",
-                "lv": 2,
-                "hex": "21"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "416_5": {
-        "id": 416,
-        "name": "心智靴",
-        "rank": 9,
-        "gender": "女性专用",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 110,
-        "bougyo_max": 132,
-        "skill": [
-            {
-                "sname": "捕获名人",
-                "lv": 1,
-                "hex": "52"
-            },
-            {
-                "sname": "幸运",
-                "lv": 1,
-                "hex": "54"
-            },
-            {
-                "sname": "弱点特效",
-                "lv": 1,
-                "hex": "08"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": true
-    },
-    "456_1": {
-        "id": 456,
-        "name": "端莊耳飾",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "集中",
-                "lv": 2,
-                "hex": "1E"
-            },
-            {
-                "sname": "强化持续",
-                "lv": 2,
-                "hex": "1F"
-            },
-            {
-                "sname": "回避距离UP",
-                "lv": 1,
-                "hex": "42"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": true
-    },
-    "456_2": {
-        "id": 456,
-        "name": "端莊外套",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "高速变形",
-                "lv": 1,
-                "hex": "6B"
-            },
-            {
-                "sname": "回避性能",
-                "lv": 1,
-                "hex": "41"
-            },
-            {
-                "sname": "回避距离UP",
-                "lv": 2,
-                "hex": "42"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "456_3": {
-        "id": 456,
-        "name": "端莊護手",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "高速变形",
-                "lv": 1,
-                "hex": "6B"
-            },
-            {
-                "sname": "回避性能",
-                "lv": 2,
-                "hex": "41"
-            },
-            {
-                "sname": "利刃",
-                "lv": 1,
-                "hex": "17"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "456_4": {
-        "id": 456,
-        "name": "端莊腰帶",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "集中",
-                "lv": 1,
-                "hex": "1E"
-            },
-            {
-                "sname": "回避性能",
-                "lv": 2,
-                "hex": "41"
-            },
-            {
-                "sname": "利刃",
-                "lv": 1,
-                "hex": "17"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "456_5": {
-        "id": 456,
-        "name": "端莊護腿",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "高速变形",
-                "lv": 1,
-                "hex": "6B"
-            },
-            {
-                "sname": "强化持续",
-                "lv": 1,
-                "hex": "1F"
-            },
-            {
-                "sname": "利刃",
-                "lv": 1,
-                "hex": "17"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "422_1": {
-        "id": 422,
-        "name": "巴爾巴尼亞眼罩",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 110,
-        "bougyo_max": 132,
-        "skill": [
-            {
-                "sname": "弱点特效",
-                "lv": 1,
-                "hex": "08"
-            },
-            {
-                "sname": "捕获名人",
-                "lv": 1,
-                "hex": "52"
-            },
-            {
-                "sname": "怨恨",
-                "lv": 2,
-                "hex": "04"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "422_2": {
-        "id": 422,
-        "name": "巴爾巴尼亞服飾",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 110,
-        "bougyo_max": 132,
-        "skill": [
-            {
-                "sname": "破坏王",
-                "lv": 1,
-                "hex": "51"
-            },
-            {
-                "sname": "逆袭",
-                "lv": 1,
-                "hex": "6A"
-            },
-            {
-                "sname": "怨恨",
-                "lv": 1,
-                "hex": "04"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "422_3": {
-        "id": 422,
-        "name": "巴爾巴尼亞手套",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 2,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 110,
-        "bougyo_max": 132,
-        "skill": [
-            {
-                "sname": "弱点特效",
-                "lv": 1,
-                "hex": "08"
-            },
-            {
-                "sname": "破坏王",
-                "lv": 1,
-                "hex": "51"
-            },
-            {
-                "sname": "幸运",
-                "lv": 1,
-                "hex": "54"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "422_4": {
-        "id": 422,
-        "name": "巴爾巴尼亞腰帶",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 2,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 110,
-        "bougyo_max": 132,
-        "skill": [
-            {
-                "sname": "弱点特效",
-                "lv": 1,
-                "hex": "08"
-            },
-            {
-                "sname": "逆袭",
-                "lv": 1,
-                "hex": "6A"
-            },
-            {
-                "sname": "幸运",
-                "lv": 1,
-                "hex": "54"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "422_5": {
-        "id": 422,
-        "name": "巴爾巴尼亞靴",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 110,
-        "bougyo_max": 132,
-        "skill": [
-            {
-                "sname": "破坏王",
-                "lv": 1,
-                "hex": "51"
-            },
-            {
-                "sname": "逆袭",
-                "lv": 1,
-                "hex": "6A"
-            },
-            {
-                "sname": "幸运",
-                "lv": 1,
-                "hex": "54"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "423_1": {
-        "id": 423,
-        "name": "恩寵頭飾",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "打磨术【锐】",
-                "lv": 1,
-                "hex": "7F"
-            },
-            {
-                "sname": "耐力夺取",
-                "lv": 1,
-                "hex": "2A"
-            },
-            {
-                "sname": "攻击",
-                "lv": 2,
-                "hex": "01"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "423_2": {
-        "id": 423,
-        "name": "恩寵鎧甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "耐震",
-                "lv": 1,
-                "hex": "3F"
-            },
-            {
-                "sname": "耐力夺取",
-                "lv": 1,
-                "hex": "2A"
-            },
-            {
-                "sname": "攻击",
-                "lv": 1,
-                "hex": "01"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "423_3": {
-        "id": 423,
-        "name": "恩寵腕甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 3,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
                 "sname": "回复速度",
-                "lv": 3,
+                "lv": 2,
                 "hex": "3B"
             },
             {
-                "sname": "力量解放",
-                "lv": 2,
-                "hex": "09"
-            },
-            {
-                "sname": "攻击",
+                "sname": "回避性能",
                 "lv": 1,
-                "hex": "01"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "423_4": {
-        "id": 423,
-        "name": "恩寵腰甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "耐震",
-                "lv": 2,
-                "hex": "3F"
-            },
-            {
-                "sname": "耐力夺取",
-                "lv": 1,
-                "hex": "2A"
-            },
-            {
-                "sname": "攻击",
-                "lv": 1,
-                "hex": "01"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "423_5": {
-        "id": 423,
-        "name": "恩寵護腿",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 112,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "打磨术【锐】",
-                "lv": 1,
-                "hex": "7F"
-            },
-            {
-                "sname": "力量解放",
-                "lv": 1,
-                "hex": "09"
-            },
-            {
-                "sname": "攻击",
-                "lv": 2,
-                "hex": "01"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 3,
-        "def_d": 0,
-        "rare9": false
-    },
-    "366_1": {
-        "id": 366,
-        "name": "齊天毛髮･真",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 116,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "火场怪力",
-                "lv": 2,
-                "hex": "5B"
-            },
-            {
-                "sname": "精神抖擞",
-                "lv": 1,
-                "hex": "0A"
+                "hex": "41"
             }
         ],
         "def_f": 2,
-        "def_w": 1,
-        "def_t": 3,
-        "def_i": -5,
-        "def_d": 2,
+        "def_w": -1,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": 0,
         "rare9": false
     },
-    "366_2": {
-        "id": 366,
-        "name": "齊天衣･真",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 116,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "火场怪力",
-                "lv": 1,
-                "hex": "5B"
-            },
-            {
-                "sname": "精神抖擞",
-                "lv": 1,
-                "hex": "0A"
-            },
-            {
-                "sname": "力量解放",
-                "lv": 2,
-                "hex": "09"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 1,
-        "def_t": 3,
-        "def_i": -5,
-        "def_d": 2,
-        "rare9": false
-    },
-    "366_3": {
-        "id": 366,
-        "name": "齊天臂甲･真",
-        "rank": 9,
+    "338_3": {
+        "id": 338,
+        "name": "镰鼬龙X腕甲",
+        "rank": 8,
         "gender": "男女共通",
         "parts": "手",
         "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 116,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "火场怪力",
-                "lv": 1,
-                "hex": "5B"
-            },
-            {
-                "sname": "力量解放",
-                "lv": 2,
-                "hex": "09"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 1,
-        "def_t": 3,
-        "def_i": -5,
-        "def_d": 2,
-        "rare9": true
-    },
-    "366_4": {
-        "id": 366,
-        "name": "齊天帶･真",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 116,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "火场怪力",
-                "lv": 1,
-                "hex": "5B"
-            },
-            {
-                "sname": "超会心",
-                "lv": 1,
-                "hex": "07"
-            },
-            {
-                "sname": "精神抖擞",
-                "lv": 1,
-                "hex": "0A"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 1,
-        "def_t": 3,
-        "def_i": -5,
-        "def_d": 2,
-        "rare9": false
-    },
-    "366_5": {
-        "id": 366,
-        "name": "齊天腿甲･真",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 3,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 116,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "超会心",
-                "lv": 2,
-                "hex": "07"
-            },
-            {
-                "sname": "力量解放",
-                "lv": 1,
-                "hex": "09"
-            },
-            {
-                "sname": "减轻胆怯",
-                "lv": 2,
-                "hex": "5D"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 1,
-        "def_t": 3,
-        "def_i": -5,
-        "def_d": 2,
-        "rare9": false
-    },
-    "373_1": {
-        "id": 373,
-        "name": "爆鱗龍X頭盔",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 118,
-        "bougyo_max": 138,
-        "skill": [
-            {
-                "sname": "炮术",
-                "lv": 1,
-                "hex": "2D"
-            },
-            {
-                "sname": "防御性能",
-                "lv": 2,
-                "hex": "23"
-            },
-            {
-                "sname": "利刃",
-                "lv": 1,
-                "hex": "17"
-            }
-        ],
-        "def_f": 3,
-        "def_w": 1,
-        "def_t": -4,
-        "def_i": -2,
-        "def_d": -2,
-        "rare9": false
-    },
-    "373_2": {
-        "id": 373,
-        "name": "爆鱗龍X鎧甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
+        "rare": 7,
         "slotLv1": 2,
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 118,
-        "bougyo_max": 138,
+        "bougyo": 86,
+        "bougyo_max": 158,
         "skill": [
             {
-                "sname": "防御强化",
+                "sname": "体术",
                 "lv": 2,
-                "hex": "24"
+                "hex": "21"
             },
             {
-                "sname": "挑战者",
-                "lv": 2,
-                "hex": "02"
-            },
-            {
-                "sname": "利刃",
+                "sname": "回避性能",
                 "lv": 1,
-                "hex": "17"
+                "hex": "41"
             }
         ],
-        "def_f": 3,
-        "def_w": 1,
-        "def_t": -4,
-        "def_i": -2,
-        "def_d": -2,
+        "def_f": 2,
+        "def_w": -1,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": 0,
         "rare9": false
     },
-    "373_3": {
-        "id": 373,
-        "name": "爆鱗龍X腕甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 118,
-        "bougyo_max": 138,
-        "skill": [
-            {
-                "sname": "防御强化",
-                "lv": 1,
-                "hex": "24"
-            },
-            {
-                "sname": "防御性能",
-                "lv": 1,
-                "hex": "23"
-            },
-            {
-                "sname": "挑战者",
-                "lv": 2,
-                "hex": "02"
-            }
-        ],
-        "def_f": 3,
-        "def_w": 1,
-        "def_t": -4,
-        "def_i": -2,
-        "def_d": -2,
-        "rare9": true
-    },
-    "373_4": {
-        "id": 373,
-        "name": "爆鱗龍X腰甲",
-        "rank": 9,
+    "338_4": {
+        "id": 338,
+        "name": "镰鼬龙X腰甲",
+        "rank": 8,
         "gender": "男女共通",
         "parts": "腰",
         "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 2,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 118,
-        "bougyo_max": 138,
+        "bougyo": 86,
+        "bougyo_max": 158,
         "skill": [
             {
-                "sname": "炮弹装填",
+                "sname": "看破",
                 "lv": 2,
-                "hex": "2E"
+                "hex": "06"
             },
             {
-                "sname": "防御性能",
+                "sname": "体术",
                 "lv": 1,
-                "hex": "23"
-            },
-            {
-                "sname": "利刃",
-                "lv": 1,
-                "hex": "17"
+                "hex": "21"
             }
         ],
-        "def_f": 3,
-        "def_w": 1,
-        "def_t": -4,
-        "def_i": -2,
-        "def_d": -2,
+        "def_f": 2,
+        "def_w": -1,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": 0,
         "rare9": false
     },
-    "373_5": {
-        "id": 373,
-        "name": "爆鱗龍X護腿",
-        "rank": 9,
+    "338_5": {
+        "id": 338,
+        "name": "镰鼬龙X护腿",
+        "rank": 8,
         "gender": "男女共通",
         "parts": "腿",
         "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 118,
-        "bougyo_max": 138,
-        "skill": [
-            {
-                "sname": "炮术",
-                "lv": 2,
-                "hex": "2D"
-            },
-            {
-                "sname": "防御性能",
-                "lv": 1,
-                "hex": "23"
-            },
-            {
-                "sname": "挑战者",
-                "lv": 1,
-                "hex": "02"
-            }
-        ],
-        "def_f": 3,
-        "def_w": 1,
-        "def_t": -4,
-        "def_i": -2,
-        "def_d": -2,
-        "rare9": false
-    },
-    "307_1": {
-        "id": 307,
-        "name": "大馬士革X頭盔",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 1,
+        "rare": 7,
+        "slotLv1": 2,
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 134,
+        "bougyo": 86,
+        "bougyo_max": 158,
         "skill": [
             {
-                "sname": "耐震",
-                "lv": 2,
-                "hex": "3F"
+                "sname": "回复速度",
+                "lv": 1,
+                "hex": "3B"
             },
             {
-                "sname": "耳栓",
+                "sname": "体术",
                 "lv": 2,
-                "hex": "3D"
+                "hex": "21"
+            },
+            {
+                "sname": "回避性能",
+                "lv": 1,
+                "hex": "41"
             }
         ],
-        "def_f": -1,
-        "def_w": 2,
-        "def_t": -3,
-        "def_i": 1,
-        "def_d": -1,
-        "rare9": false
-    },
-    "307_2": {
-        "id": 307,
-        "name": "大馬士革X鎧甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "耐震",
-                "lv": 1,
-                "hex": "3F"
-            },
-            {
-                "sname": "匠",
-                "lv": 2,
-                "hex": "16"
-            },
-            {
-                "sname": "贯通弹·贯通箭强化",
-                "lv": 2,
-                "hex": "32"
-            }
-        ],
-        "def_f": -1,
-        "def_w": 2,
-        "def_t": -3,
-        "def_i": 1,
-        "def_d": -1,
-        "rare9": false
-    },
-    "307_3": {
-        "id": 307,
-        "name": "大馬士革X腕甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "耳栓",
-                "lv": 2,
-                "hex": "3D"
-            },
-            {
-                "sname": "属性异常状态的耐性",
-                "lv": 1,
-                "hex": "48"
-            }
-        ],
-        "def_f": -1,
-        "def_w": 2,
-        "def_t": -3,
-        "def_i": 1,
-        "def_d": -1,
-        "rare9": false
-    },
-    "307_4": {
-        "id": 307,
-        "name": "大馬士革X腰甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "耳栓",
-                "lv": 1,
-                "hex": "3D"
-            },
-            {
-                "sname": "匠",
-                "lv": 1,
-                "hex": "16"
-            },
-            {
-                "sname": "贯通弹·贯通箭强化",
-                "lv": 1,
-                "hex": "32"
-            },
-            {
-                "sname": "属性异常状态的耐性",
-                "lv": 1,
-                "hex": "48"
-            }
-        ],
-        "def_f": -1,
-        "def_w": 2,
-        "def_t": -3,
-        "def_i": 1,
-        "def_d": -1,
-        "rare9": false
-    },
-    "307_5": {
-        "id": 307,
-        "name": "大馬士革X護腿",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "匠",
-                "lv": 2,
-                "hex": "16"
-            },
-            {
-                "sname": "装填扩充",
-                "lv": 2,
-                "hex": "33"
-            },
-            {
-                "sname": "属性异常状态的耐性",
-                "lv": 1,
-                "hex": "48"
-            }
-        ],
-        "def_f": -1,
-        "def_w": 2,
-        "def_t": -3,
-        "def_i": 1,
-        "def_d": -1,
+        "def_f": 2,
+        "def_w": -1,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": 0,
         "rare9": false
     },
     "339_1": {
         "id": 339,
-        "name": "鋼龍X強力",
+        "name": "钢龙X强力",
         "rank": 9,
         "gender": "男女共通",
         "parts": "头",
@@ -17075,7 +6633,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "匠",
@@ -17083,7 +6641,7 @@ var armor_list = {
                 "hex": "16"
             },
             {
-                "sname": "通常弹·连射箭强化",
+                "sname": "通常弹・连射箭强化",
                 "lv": 2,
                 "hex": "30"
             }
@@ -17097,7 +6655,7 @@ var armor_list = {
     },
     "339_2": {
         "id": 339,
-        "name": "鋼龍X恐懼",
+        "name": "钢龙X恐惧",
         "rank": 9,
         "gender": "男女共通",
         "parts": "身",
@@ -17108,7 +6666,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "回复速度",
@@ -17135,7 +6693,7 @@ var armor_list = {
     },
     "339_3": {
         "id": 339,
-        "name": "鋼龍X剛強",
+        "name": "钢龙X刚强",
         "rank": 9,
         "gender": "男女共通",
         "parts": "手",
@@ -17146,7 +6704,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "钢壳的恩惠",
@@ -17168,7 +6726,7 @@ var armor_list = {
     },
     "339_4": {
         "id": 339,
-        "name": "鋼龍X安穩",
+        "name": "钢龙X安稳",
         "rank": 9,
         "gender": "男女共通",
         "parts": "腰",
@@ -17179,7 +6737,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "钢壳的恩惠",
@@ -17197,11 +6755,11 @@ var armor_list = {
         "def_t": -2,
         "def_i": 3,
         "def_d": -3,
-        "rare9": true
+        "rare9": false
     },
     "339_5": {
         "id": 339,
-        "name": "鋼龍X踏實",
+        "name": "钢龙X踏实",
         "rank": 9,
         "gender": "男女共通",
         "parts": "腿",
@@ -17212,7 +6770,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "钢壳的恩惠",
@@ -17225,7 +6783,7 @@ var armor_list = {
                 "hex": "16"
             },
             {
-                "sname": "通常弹·连射箭强化",
+                "sname": "通常弹・连射箭强化",
                 "lv": 1,
                 "hex": "30"
             }
@@ -17239,7 +6797,7 @@ var armor_list = {
     },
     "340_1": {
         "id": 340,
-        "name": "霞龍真【面具】",
+        "name": "水行・真【面部】",
         "rank": 9,
         "gender": "男女共通",
         "parts": "头",
@@ -17250,7 +6808,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "心眼",
@@ -17277,7 +6835,7 @@ var armor_list = {
     },
     "340_2": {
         "id": 340,
-        "name": "霞龍真【胸甲】",
+        "name": "水行・真【胸甲】",
         "rank": 9,
         "gender": "男女共通",
         "parts": "身",
@@ -17288,7 +6846,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "心眼",
@@ -17311,11 +6869,11 @@ var armor_list = {
         "def_t": 0,
         "def_i": 3,
         "def_d": -3,
-        "rare9": true
+        "rare9": false
     },
     "340_3": {
         "id": 340,
-        "name": "霞龍真【大袖】",
+        "name": "水行・真【大袖】",
         "rank": 9,
         "gender": "男女共通",
         "parts": "手",
@@ -17326,7 +6884,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "霞皮的恩惠",
@@ -17353,7 +6911,7 @@ var armor_list = {
     },
     "340_4": {
         "id": 340,
-        "name": "霞龍真【圓帶】",
+        "name": "水行・真【圆带】",
         "rank": 9,
         "gender": "男女共通",
         "parts": "腰",
@@ -17364,7 +6922,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "霞皮的恩惠",
@@ -17391,7 +6949,7 @@ var armor_list = {
     },
     "340_5": {
         "id": 340,
-        "name": "霞龍真【腿甲】",
+        "name": "水行・真【腿甲】",
         "rank": 9,
         "gender": "男女共通",
         "parts": "腿",
@@ -17402,7 +6960,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "霞皮的恩惠",
@@ -17440,7 +6998,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "看破",
@@ -17458,11 +7016,11 @@ var armor_list = {
         "def_t": 1,
         "def_i": -1,
         "def_d": -3,
-        "rare9": true
+        "rare9": false
     },
     "341_2": {
         "id": 341,
-        "name": "帝王X鎧甲",
+        "name": "帝王X铠甲",
         "rank": 9,
         "gender": "男女共通",
         "parts": "身",
@@ -17473,7 +7031,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "看破",
@@ -17511,7 +7069,7 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "炎鳞的恩惠",
@@ -17549,7 +7107,7 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "炎鳞的恩惠",
@@ -17571,7 +7129,7 @@ var armor_list = {
     },
     "341_5": {
         "id": 341,
-        "name": "帝王X護腿",
+        "name": "帝王X护腿",
         "rank": 9,
         "gender": "男女共通",
         "parts": "腿",
@@ -17582,7 +7140,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "炎鳞的恩惠",
@@ -17607,9 +7165,6799 @@ var armor_list = {
         "def_d": -3,
         "rare9": false
     },
+    "342_1": {
+        "id": 342,
+        "name": "丸鸟X伪装",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "飞身跃入",
+                "lv": 1,
+                "hex": "61"
+            },
+            {
+                "sname": "幸运",
+                "lv": 2,
+                "hex": "54"
+            }
+        ],
+        "def_f": -3,
+        "def_w": -2,
+        "def_t": -2,
+        "def_i": 1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "343_1": {
+        "id": 343,
+        "name": "垂皮龙X兜帽",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 92,
+        "bougyo_max": 156,
+        "skill": [
+            {
+                "sname": "满足感",
+                "lv": 1,
+                "hex": "5A"
+            },
+            {
+                "sname": "佯动",
+                "lv": 1,
+                "hex": "62"
+            },
+            {
+                "sname": "快吃",
+                "lv": 2,
+                "hex": "3C"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 2,
+        "def_t": 0,
+        "def_i": -1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "343_2": {
+        "id": 343,
+        "name": "垂皮龙X披风",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 92,
+        "bougyo_max": 156,
+        "skill": [
+            {
+                "sname": "满足感",
+                "lv": 2,
+                "hex": "5A"
+            },
+            {
+                "sname": "道具使用强化",
+                "lv": 2,
+                "hex": "58"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 2,
+        "def_t": 0,
+        "def_i": -1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "344_1": {
+        "id": 344,
+        "name": "硬甲龙X头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 90,
+        "bougyo_max": 162,
+        "skill": [
+            {
+                "sname": "贯穿弹・贯穿箭强化",
+                "lv": 2,
+                "hex": "31"
+            },
+            {
+                "sname": "昏厥耐性",
+                "lv": 1,
+                "hex": "4C"
+            },
+            {
+                "sname": "泥雪耐性",
+                "lv": 1,
+                "hex": "4D"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": -2,
+        "def_d": 0,
+        "rare9": false
+    },
+    "344_2": {
+        "id": 344,
+        "name": "硬甲龙X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 90,
+        "bougyo_max": 162,
+        "skill": [
+            {
+                "sname": "炮术",
+                "lv": 1,
+                "hex": "2D"
+            },
+            {
+                "sname": "昏厥耐性",
+                "lv": 2,
+                "hex": "4C"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": -2,
+        "def_d": 0,
+        "rare9": false
+    },
+    "344_3": {
+        "id": 344,
+        "name": "硬甲龙X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 90,
+        "bougyo_max": 162,
+        "skill": [
+            {
+                "sname": "炮术",
+                "lv": 2,
+                "hex": "2D"
+            },
+            {
+                "sname": "炮弹装填",
+                "lv": 1,
+                "hex": "2E"
+            },
+            {
+                "sname": "特殊射击强化",
+                "lv": 1,
+                "hex": "2F"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": -2,
+        "def_d": 0,
+        "rare9": false
+    },
+    "344_4": {
+        "id": 344,
+        "name": "硬甲龙X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 90,
+        "bougyo_max": 162,
+        "skill": [
+            {
+                "sname": "耐震",
+                "lv": 2,
+                "hex": "3F"
+            },
+            {
+                "sname": "炮弹装填",
+                "lv": 1,
+                "hex": "2E"
+            },
+            {
+                "sname": "特殊射击强化",
+                "lv": 1,
+                "hex": "2F"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": -2,
+        "def_d": 0,
+        "rare9": false
+    },
+    "344_5": {
+        "id": 344,
+        "name": "硬甲龙X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 90,
+        "bougyo_max": 162,
+        "skill": [
+            {
+                "sname": "贯穿弹・贯穿箭强化",
+                "lv": 1,
+                "hex": "31"
+            },
+            {
+                "sname": "耐震",
+                "lv": 1,
+                "hex": "3F"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": -2,
+        "def_d": 0,
+        "rare9": false
+    },
+    "345_3": {
+        "id": 345,
+        "name": "狗龙皮臂甲X",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 90,
+        "bougyo_max": 162,
+        "skill": [
+            {
+                "sname": "攻击",
+                "lv": 3,
+                "hex": "01"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "345_5": {
+        "id": 345,
+        "name": "狗龙皮护腿X",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 90,
+        "bougyo_max": 162,
+        "skill": [
+            {
+                "sname": "骑乘名人",
+                "lv": 1,
+                "hex": "63"
+            },
+            {
+                "sname": "墙面移动",
+                "lv": 2,
+                "hex": "69"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "346_1": {
+        "id": 346,
+        "name": "飞甲虫X礼帽",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 84,
+        "bougyo_max": 156,
+        "skill": [
+            {
+                "sname": "毒属性强化",
+                "lv": 1,
+                "hex": "12"
+            },
+            {
+                "sname": "减轻后坐力",
+                "lv": 2,
+                "hex": "35"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 2,
+        "rare9": false
+    },
+    "346_2": {
+        "id": 346,
+        "name": "飞甲虫X服装",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 84,
+        "bougyo_max": 156,
+        "skill": [
+            {
+                "sname": "麻痹属性强化",
+                "lv": 1,
+                "hex": "13"
+            },
+            {
+                "sname": "回避性能",
+                "lv": 2,
+                "hex": "41"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 2,
+        "rare9": false
+    },
+    "346_3": {
+        "id": 346,
+        "name": "飞甲虫X护手",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 84,
+        "bougyo_max": 156,
+        "skill": [
+            {
+                "sname": "毒属性强化",
+                "lv": 2,
+                "hex": "12"
+            },
+            {
+                "sname": "回避性能",
+                "lv": 2,
+                "hex": "41"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 2,
+        "rare9": false
+    },
+    "346_4": {
+        "id": 346,
+        "name": "飞甲虫X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 84,
+        "bougyo_max": 156,
+        "skill": [
+            {
+                "sname": "麻痹属性强化",
+                "lv": 2,
+                "hex": "13"
+            },
+            {
+                "sname": "回避性能",
+                "lv": 1,
+                "hex": "41"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 2,
+        "rare9": false
+    },
+    "346_5": {
+        "id": 346,
+        "name": "飞甲虫X靴",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 84,
+        "bougyo_max": 156,
+        "skill": [
+            {
+                "sname": "减轻后坐力",
+                "lv": 1,
+                "hex": "35"
+            },
+            {
+                "sname": "抑制偏移",
+                "lv": 2,
+                "hex": "36"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 2,
+        "rare9": false
+    },
+    "347_1": {
+        "id": 347,
+        "name": "野猪X伪装",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "佯动",
+                "lv": 1,
+                "hex": "62"
+            },
+            {
+                "sname": "挑战者",
+                "lv": 3,
+                "hex": "02"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 4,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "348_1": {
+        "id": 348,
+        "name": "翼蛇龙X头饰",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "风压耐性",
+                "lv": 1,
+                "hex": "3E"
+            },
+            {
+                "sname": "毒属性强化",
+                "lv": 1,
+                "hex": "12"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 3,
+        "rare9": false
+    },
+    "348_2": {
+        "id": 348,
+        "name": "翼蛇龙套装X衣装",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "超会心",
+                "lv": 1,
+                "hex": "07"
+            },
+            {
+                "sname": "毒属性强化",
+                "lv": 2,
+                "hex": "12"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 3,
+        "rare9": false
+    },
+    "348_3": {
+        "id": 348,
+        "name": "翼蛇龙套装X手套",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "会心击【属性】",
+                "lv": 1,
+                "hex": "0B"
+            },
+            {
+                "sname": "风压耐性",
+                "lv": 2,
+                "hex": "3E"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 3,
+        "rare9": false
+    },
+    "348_4": {
+        "id": 348,
+        "name": "翼蛇龙套装X腰带",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "会心击【属性】",
+                "lv": 2,
+                "hex": "0B"
+            },
+            {
+                "sname": "毒耐性",
+                "lv": 1,
+                "hex": "49"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 3,
+        "rare9": false
+    },
+    "348_5": {
+        "id": 348,
+        "name": "翼蛇龙套装X鞋子",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "弱点特效",
+                "lv": 1,
+                "hex": "08"
+            },
+            {
+                "sname": "毒耐性",
+                "lv": 2,
+                "hex": "49"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 3,
+        "rare9": false
+    },
+    "349_2": {
+        "id": 349,
+        "name": "水生兽X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 90,
+        "bougyo_max": 162,
+        "skill": [
+            {
+                "sname": "水属性攻击强化",
+                "lv": 2,
+                "hex": "0E"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 4,
+        "def_t": -1,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "349_4": {
+        "id": 349,
+        "name": "水生兽X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 90,
+        "bougyo_max": 162,
+        "skill": [
+            {
+                "sname": "佯动",
+                "lv": 1,
+                "hex": "62"
+            },
+            {
+                "sname": "怨恨",
+                "lv": 1,
+                "hex": "04"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 4,
+        "def_t": -1,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "349_5": {
+        "id": 349,
+        "name": "水生兽X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 90,
+        "bougyo_max": 162,
+        "skill": [
+            {
+                "sname": "水属性攻击强化",
+                "lv": 3,
+                "hex": "0E"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 4,
+        "def_t": -1,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "350_2": {
+        "id": 350,
+        "name": "熔岩兽X铠甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 2,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "防御强化",
+                "lv": 2,
+                "hex": "24"
+            },
+            {
+                "sname": "特殊射击强化",
+                "lv": 2,
+                "hex": "2F"
+            },
+            {
+                "sname": "回避性能",
+                "lv": 1,
+                "hex": "41"
+            }
+        ],
+        "def_f": 4,
+        "def_w": -2,
+        "def_t": 0,
+        "def_i": -1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "350_4": {
+        "id": 350,
+        "name": "熔岩兽X腰甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "防御强化",
+                "lv": 1,
+                "hex": "24"
+            },
+            {
+                "sname": "特殊射击强化",
+                "lv": 1,
+                "hex": "2F"
+            },
+            {
+                "sname": "回避性能",
+                "lv": 1,
+                "hex": "41"
+            }
+        ],
+        "def_f": 4,
+        "def_w": -2,
+        "def_t": 0,
+        "def_i": -1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "351_1": {
+        "id": 351,
+        "name": "毒狗龙X头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 88,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "速射强化",
+                "lv": 2,
+                "hex": "37"
+            },
+            {
+                "sname": "回避距离提升",
+                "lv": 1,
+                "hex": "42"
+            }
+        ],
+        "def_f": 2,
+        "def_w": -2,
+        "def_t": 1,
+        "def_i": -4,
+        "def_d": 0,
+        "rare9": false
+    },
+    "351_2": {
+        "id": 351,
+        "name": "毒狗龙X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 88,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "速射强化",
+                "lv": 1,
+                "hex": "37"
+            },
+            {
+                "sname": "毒属性强化",
+                "lv": 1,
+                "hex": "12"
+            },
+            {
+                "sname": "毒耐性",
+                "lv": 1,
+                "hex": "49"
+            }
+        ],
+        "def_f": 2,
+        "def_w": -2,
+        "def_t": 1,
+        "def_i": -4,
+        "def_d": 0,
+        "rare9": false
+    },
+    "351_3": {
+        "id": 351,
+        "name": "毒狗龙X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 88,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "装填扩充",
+                "lv": 1,
+                "hex": "33"
+            },
+            {
+                "sname": "毒耐性",
+                "lv": 2,
+                "hex": "49"
+            },
+            {
+                "sname": "心眼",
+                "lv": 2,
+                "hex": "1A"
+            }
+        ],
+        "def_f": 2,
+        "def_w": -2,
+        "def_t": 1,
+        "def_i": -4,
+        "def_d": 0,
+        "rare9": false
+    },
+    "351_4": {
+        "id": 351,
+        "name": "毒狗龙X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 88,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "装填扩充",
+                "lv": 2,
+                "hex": "33"
+            },
+            {
+                "sname": "毒属性强化",
+                "lv": 2,
+                "hex": "12"
+            }
+        ],
+        "def_f": 2,
+        "def_w": -2,
+        "def_t": 1,
+        "def_i": -4,
+        "def_d": 0,
+        "rare9": false
+    },
+    "351_5": {
+        "id": 351,
+        "name": "毒狗龙X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 88,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "回避距离提升",
+                "lv": 2,
+                "hex": "42"
+            }
+        ],
+        "def_f": 2,
+        "def_w": -2,
+        "def_t": 1,
+        "def_i": -4,
+        "def_d": 0,
+        "rare9": false
+    },
+    "352_1": {
+        "id": 352,
+        "name": "眠狗龙X头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "睡眠属性强化",
+                "lv": 1,
+                "hex": "14"
+            },
+            {
+                "sname": "冰耐性",
+                "lv": 1,
+                "hex": "45"
+            }
+        ],
+        "def_f": -4,
+        "def_w": -1,
+        "def_t": -1,
+        "def_i": 2,
+        "def_d": 1,
+        "rare9": false
+    },
+    "352_2": {
+        "id": 352,
+        "name": "眠狗龙X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "攻击",
+                "lv": 1,
+                "hex": "01"
+            },
+            {
+                "sname": "睡眠属性强化",
+                "lv": 1,
+                "hex": "14"
+            }
+        ],
+        "def_f": -4,
+        "def_w": -1,
+        "def_t": -1,
+        "def_i": 2,
+        "def_d": 1,
+        "rare9": false
+    },
+    "352_3": {
+        "id": 352,
+        "name": "眠狗龙X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "睡眠耐性",
+                "lv": 2,
+                "hex": "4B"
+            },
+            {
+                "sname": "睡眠属性强化",
+                "lv": 1,
+                "hex": "14"
+            }
+        ],
+        "def_f": -4,
+        "def_w": -1,
+        "def_t": -1,
+        "def_i": 2,
+        "def_d": 1,
+        "rare9": false
+    },
+    "352_4": {
+        "id": 352,
+        "name": "眠狗龙X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "攻击",
+                "lv": 2,
+                "hex": "01"
+            },
+            {
+                "sname": "睡眠耐性",
+                "lv": 1,
+                "hex": "4B"
+            }
+        ],
+        "def_f": -4,
+        "def_w": -1,
+        "def_t": -1,
+        "def_i": 2,
+        "def_d": 1,
+        "rare9": false
+    },
+    "352_5": {
+        "id": 352,
+        "name": "眠狗龙X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "攻击",
+                "lv": 2,
+                "hex": "01"
+            },
+            {
+                "sname": "冰耐性",
+                "lv": 2,
+                "hex": "45"
+            }
+        ],
+        "def_f": -4,
+        "def_w": -1,
+        "def_t": -1,
+        "def_i": 2,
+        "def_d": 1,
+        "rare9": false
+    },
+    "353_1": {
+        "id": 353,
+        "name": "青熊兽X头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 3,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "不屈",
+                "lv": 1,
+                "hex": "5C"
+            },
+            {
+                "sname": "防御",
+                "lv": 3,
+                "hex": "38"
+            },
+            {
+                "sname": "快吃",
+                "lv": 1,
+                "hex": "3C"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 0,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "353_2": {
+        "id": 353,
+        "name": "青熊兽X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "逆袭",
+                "lv": 1,
+                "hex": "6A"
+            },
+            {
+                "sname": "怨恨",
+                "lv": 1,
+                "hex": "04"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 0,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "353_3": {
+        "id": 353,
+        "name": "青熊兽X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "逆袭",
+                "lv": 1,
+                "hex": "6A"
+            },
+            {
+                "sname": "防御",
+                "lv": 1,
+                "hex": "38"
+            },
+            {
+                "sname": "怨恨",
+                "lv": 2,
+                "hex": "04"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 0,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "353_4": {
+        "id": 353,
+        "name": "青熊兽X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "逆袭",
+                "lv": 1,
+                "hex": "6A"
+            },
+            {
+                "sname": "防御",
+                "lv": 3,
+                "hex": "38"
+            },
+            {
+                "sname": "快吃",
+                "lv": 1,
+                "hex": "3C"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 0,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "353_5": {
+        "id": 353,
+        "name": "青熊兽X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "快吃",
+                "lv": 1,
+                "hex": "3C"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 0,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "354_1": {
+        "id": 354,
+        "name": "赤甲兽X头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 3,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 94,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "麻痹属性强化",
+                "lv": 2,
+                "hex": "13"
+            },
+            {
+                "sname": "耳塞",
+                "lv": 1,
+                "hex": "3D"
+            }
+        ],
+        "def_f": 2,
+        "def_w": -3,
+        "def_t": 0,
+        "def_i": -1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "354_2": {
+        "id": 354,
+        "name": "赤甲兽X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 94,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "高速变形",
+                "lv": 1,
+                "hex": "6B"
+            },
+            {
+                "sname": "跳跃铁人",
+                "lv": 1,
+                "hex": "5E"
+            },
+            {
+                "sname": "耳塞",
+                "lv": 1,
+                "hex": "3D"
+            }
+        ],
+        "def_f": 2,
+        "def_w": -3,
+        "def_t": 0,
+        "def_i": -1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "354_3": {
+        "id": 354,
+        "name": "赤甲兽X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 3,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 94,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "回避距离提升",
+                "lv": 1,
+                "hex": "42"
+            },
+            {
+                "sname": "麻痹属性强化",
+                "lv": 1,
+                "hex": "13"
+            },
+            {
+                "sname": "耳塞",
+                "lv": 1,
+                "hex": "3D"
+            }
+        ],
+        "def_f": 2,
+        "def_w": -3,
+        "def_t": 0,
+        "def_i": -1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "354_4": {
+        "id": 354,
+        "name": "赤甲兽X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 94,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "耳塞",
+                "lv": 2,
+                "hex": "3D"
+            }
+        ],
+        "def_f": 2,
+        "def_w": -3,
+        "def_t": 0,
+        "def_i": -1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "354_5": {
+        "id": 354,
+        "name": "赤甲兽X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 94,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "高速变形",
+                "lv": 2,
+                "hex": "6B"
+            },
+            {
+                "sname": "回避距离提升",
+                "lv": 2,
+                "hex": "42"
+            }
+        ],
+        "def_f": 2,
+        "def_w": -3,
+        "def_t": 0,
+        "def_i": -1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "355_1": {
+        "id": 355,
+        "name": "水兽X头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 92,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "跑者",
+                "lv": 1,
+                "hex": "20"
+            },
+            {
+                "sname": "无伤",
+                "lv": 1,
+                "hex": "03"
+            },
+            {
+                "sname": "集中",
+                "lv": 1,
+                "hex": "1E"
+            }
+        ],
+        "def_f": -3,
+        "def_w": 4,
+        "def_t": -1,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "355_2": {
+        "id": 355,
+        "name": "水兽X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 92,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "耐力急速回复",
+                "lv": 2,
+                "hex": "22"
+            },
+            {
+                "sname": "集中",
+                "lv": 1,
+                "hex": "1E"
+            }
+        ],
+        "def_f": -3,
+        "def_w": 4,
+        "def_t": -1,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "355_3": {
+        "id": 355,
+        "name": "水兽X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 92,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "跑者",
+                "lv": 1,
+                "hex": "20"
+            },
+            {
+                "sname": "强化持续",
+                "lv": 1,
+                "hex": "1F"
+            },
+            {
+                "sname": "弹丸节约",
+                "lv": 1,
+                "hex": "18"
+            }
+        ],
+        "def_f": -3,
+        "def_w": 4,
+        "def_t": -1,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "355_4": {
+        "id": 355,
+        "name": "水兽X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 92,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "跑者",
+                "lv": 1,
+                "hex": "20"
+            },
+            {
+                "sname": "无伤",
+                "lv": 2,
+                "hex": "03"
+            }
+        ],
+        "def_f": -3,
+        "def_w": 4,
+        "def_t": -1,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "355_5": {
+        "id": 355,
+        "name": "水兽X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 92,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "强化持续",
+                "lv": 2,
+                "hex": "1F"
+            },
+            {
+                "sname": "集中",
+                "lv": 1,
+                "hex": "1E"
+            }
+        ],
+        "def_f": -3,
+        "def_w": 4,
+        "def_t": -1,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "356_1": {
+        "id": 356,
+        "name": "土砂龙X头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 94,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "攻击",
+                "lv": 1,
+                "hex": "01"
+            },
+            {
+                "sname": "防御",
+                "lv": 1,
+                "hex": "38"
+            },
+            {
+                "sname": "攻击守势",
+                "lv": 1,
+                "hex": "25"
+            },
+            {
+                "sname": "散弹・扩散箭强化",
+                "lv": 1,
+                "hex": "32"
+            }
+        ],
+        "def_f": -3,
+        "def_w": -1,
+        "def_t": 3,
+        "def_i": -1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "356_2": {
+        "id": 356,
+        "name": "土砂龙X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 94,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "攻击",
+                "lv": 2,
+                "hex": "01"
+            },
+            {
+                "sname": "防御",
+                "lv": 2,
+                "hex": "38"
+            },
+            {
+                "sname": "泥雪耐性",
+                "lv": 2,
+                "hex": "4D"
+            }
+        ],
+        "def_f": -3,
+        "def_w": -1,
+        "def_t": 3,
+        "def_i": -1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "356_3": {
+        "id": 356,
+        "name": "土砂龙X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 94,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "攻击",
+                "lv": 2,
+                "hex": "01"
+            },
+            {
+                "sname": "滑走强化",
+                "lv": 1,
+                "hex": "2B"
+            },
+            {
+                "sname": "攻击守势",
+                "lv": 1,
+                "hex": "25"
+            },
+            {
+                "sname": "散弹・扩散箭强化",
+                "lv": 1,
+                "hex": "32"
+            }
+        ],
+        "def_f": -3,
+        "def_w": -1,
+        "def_t": 3,
+        "def_i": -1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "356_4": {
+        "id": 356,
+        "name": "土砂龙X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 94,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "防御性能",
+                "lv": 3,
+                "hex": "23"
+            },
+            {
+                "sname": "防御",
+                "lv": 1,
+                "hex": "38"
+            }
+        ],
+        "def_f": -3,
+        "def_w": -1,
+        "def_t": 3,
+        "def_i": -1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "356_5": {
+        "id": 356,
+        "name": "土砂龙X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 94,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "防御性能",
+                "lv": 2,
+                "hex": "23"
+            },
+            {
+                "sname": "防御",
+                "lv": 1,
+                "hex": "38"
+            },
+            {
+                "sname": "攻击守势",
+                "lv": 1,
+                "hex": "25"
+            }
+        ],
+        "def_f": -3,
+        "def_w": -1,
+        "def_t": 3,
+        "def_i": -1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "357_1": {
+        "id": 357,
+        "name": "奇怪龙X头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "集中",
+                "lv": 1,
+                "hex": "1E"
+            },
+            {
+                "sname": "体力回复量提升",
+                "lv": 1,
+                "hex": "3A"
+            },
+            {
+                "sname": "雷属性攻击强化",
+                "lv": 2,
+                "hex": "10"
+            }
+        ],
+        "def_f": -4,
+        "def_w": 1,
+        "def_t": 4,
+        "def_i": 2,
+        "def_d": 1,
+        "rare9": false
+    },
+    "357_2": {
+        "id": 357,
+        "name": "奇怪龙X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 3,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "墙面移动",
+                "lv": 2,
+                "hex": "69"
+            },
+            {
+                "sname": "体力回复量提升",
+                "lv": 2,
+                "hex": "3A"
+            }
+        ],
+        "def_f": -4,
+        "def_w": 1,
+        "def_t": 4,
+        "def_i": 2,
+        "def_d": 1,
+        "rare9": false
+    },
+    "357_3": {
+        "id": 357,
+        "name": "奇怪龙X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "墙面移动",
+                "lv": 1,
+                "hex": "69"
+            },
+            {
+                "sname": "回复速度",
+                "lv": 1,
+                "hex": "3B"
+            },
+            {
+                "sname": "雷属性攻击强化",
+                "lv": 3,
+                "hex": "10"
+            }
+        ],
+        "def_f": -4,
+        "def_w": 1,
+        "def_t": 4,
+        "def_i": 2,
+        "def_d": 1,
+        "rare9": false
+    },
+    "357_4": {
+        "id": 357,
+        "name": "奇怪龙X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "集中",
+                "lv": 1,
+                "hex": "1E"
+            },
+            {
+                "sname": "击晕术",
+                "lv": 1,
+                "hex": "29"
+            }
+        ],
+        "def_f": -4,
+        "def_w": 1,
+        "def_t": 4,
+        "def_i": 2,
+        "def_d": 1,
+        "rare9": false
+    },
+    "357_5": {
+        "id": 357,
+        "name": "奇怪龙X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "集中",
+                "lv": 1,
+                "hex": "1E"
+            },
+            {
+                "sname": "击晕术",
+                "lv": 2,
+                "hex": "29"
+            },
+            {
+                "sname": "回复速度",
+                "lv": 2,
+                "hex": "3B"
+            }
+        ],
+        "def_f": -4,
+        "def_w": 1,
+        "def_t": 4,
+        "def_i": 2,
+        "def_d": 1,
+        "rare9": false
+    },
+    "358_1": {
+        "id": 358,
+        "name": "迅龙X头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "回避性能",
+                "lv": 1,
+                "hex": "41"
+            },
+            {
+                "sname": "体术",
+                "lv": 2,
+                "hex": "21"
+            },
+            {
+                "sname": "减轻胆怯",
+                "lv": 1,
+                "hex": "5D"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 1,
+        "def_t": -3,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "358_2": {
+        "id": 358,
+        "name": "迅龙X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "回避性能",
+                "lv": 1,
+                "hex": "41"
+            },
+            {
+                "sname": "看破",
+                "lv": 2,
+                "hex": "06"
+            },
+            {
+                "sname": "减轻胆怯",
+                "lv": 1,
+                "hex": "5D"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 1,
+        "def_t": -3,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "358_3": {
+        "id": 358,
+        "name": "迅龙X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "回避性能",
+                "lv": 1,
+                "hex": "41"
+            },
+            {
+                "sname": "回避距离提升",
+                "lv": 1,
+                "hex": "42"
+            },
+            {
+                "sname": "体术",
+                "lv": 2,
+                "hex": "21"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 1,
+        "def_t": -3,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "358_4": {
+        "id": 358,
+        "name": "迅龙X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "回避距离提升",
+                "lv": 2,
+                "hex": "42"
+            },
+            {
+                "sname": "看破",
+                "lv": 2,
+                "hex": "06"
+            },
+            {
+                "sname": "减轻胆怯",
+                "lv": 1,
+                "hex": "5D"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 1,
+        "def_t": -3,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "358_5": {
+        "id": 358,
+        "name": "迅龙X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "回避性能",
+                "lv": 2,
+                "hex": "41"
+            },
+            {
+                "sname": "看破",
+                "lv": 2,
+                "hex": "06"
+            },
+            {
+                "sname": "体术",
+                "lv": 1,
+                "hex": "21"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 1,
+        "def_t": -3,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "359_1": {
+        "id": 359,
+        "name": "冰牙龙X头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "拔刀术【技】",
+                "lv": 2,
+                "hex": "26"
+            },
+            {
+                "sname": "破坏王",
+                "lv": 1,
+                "hex": "51"
+            },
+            {
+                "sname": "冰属性攻击强化",
+                "lv": 2,
+                "hex": "0F"
+            }
+        ],
+        "def_f": -5,
+        "def_w": 0,
+        "def_t": -1,
+        "def_i": 3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "359_2": {
+        "id": 359,
+        "name": "冰牙龙X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
+            },
+            {
+                "sname": "精神抖擞",
+                "lv": 2,
+                "hex": "0A"
+            }
+        ],
+        "def_f": -5,
+        "def_w": 0,
+        "def_t": -1,
+        "def_i": 3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "359_3": {
+        "id": 359,
+        "name": "冰牙龙X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
+            },
+            {
+                "sname": "精神抖擞",
+                "lv": 1,
+                "hex": "0A"
+            },
+            {
+                "sname": "看破",
+                "lv": 2,
+                "hex": "06"
+            }
+        ],
+        "def_f": -5,
+        "def_w": 0,
+        "def_t": -1,
+        "def_i": 3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "359_4": {
+        "id": 359,
+        "name": "冰牙龙X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "拔刀术【技】",
+                "lv": 1,
+                "hex": "26"
+            },
+            {
+                "sname": "看破",
+                "lv": 3,
+                "hex": "06"
+            },
+            {
+                "sname": "破坏王",
+                "lv": 1,
+                "hex": "51"
+            }
+        ],
+        "def_f": -5,
+        "def_w": 0,
+        "def_t": -1,
+        "def_i": 3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "359_5": {
+        "id": 359,
+        "name": "冰牙龙X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
+            },
+            {
+                "sname": "破坏王",
+                "lv": 1,
+                "hex": "51"
+            },
+            {
+                "sname": "冰属性攻击强化",
+                "lv": 2,
+                "hex": "0F"
+            }
+        ],
+        "def_f": -5,
+        "def_w": 0,
+        "def_t": -1,
+        "def_i": 3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "360_1": {
+        "id": 360,
+        "name": "雌火龙X头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "属性异常状态的耐性",
+                "lv": 1,
+                "hex": "48"
+            },
+            {
+                "sname": "毒耐性",
+                "lv": 1,
+                "hex": "49"
+            },
+            {
+                "sname": "挑战者",
+                "lv": 1,
+                "hex": "02"
+            }
+        ],
+        "def_f": 3,
+        "def_w": 0,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": -3,
+        "rare9": false
+    },
+    "360_2": {
+        "id": 360,
+        "name": "雌火龙X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "体力回复量提升",
+                "lv": 1,
+                "hex": "3A"
+            },
+            {
+                "sname": "毒耐性",
+                "lv": 2,
+                "hex": "49"
+            },
+            {
+                "sname": "满足感",
+                "lv": 1,
+                "hex": "5A"
+            }
+        ],
+        "def_f": 3,
+        "def_w": 0,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": -3,
+        "rare9": false
+    },
+    "360_3": {
+        "id": 360,
+        "name": "雌火龙X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "属性异常状态的耐性",
+                "lv": 1,
+                "hex": "48"
+            },
+            {
+                "sname": "广域化",
+                "lv": 2,
+                "hex": "59"
+            },
+            {
+                "sname": "满足感",
+                "lv": 1,
+                "hex": "5A"
+            }
+        ],
+        "def_f": 3,
+        "def_w": 0,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": -3,
+        "rare9": false
+    },
+    "360_4": {
+        "id": 360,
+        "name": "雌火龙X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "体力回复量提升",
+                "lv": 2,
+                "hex": "3A"
+            },
+            {
+                "sname": "广域化",
+                "lv": 1,
+                "hex": "59"
+            },
+            {
+                "sname": "挑战者",
+                "lv": 1,
+                "hex": "02"
+            }
+        ],
+        "def_f": 3,
+        "def_w": 0,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": -3,
+        "rare9": false
+    },
+    "360_5": {
+        "id": 360,
+        "name": "雌火龙X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "属性异常状态的耐性",
+                "lv": 1,
+                "hex": "48"
+            },
+            {
+                "sname": "满足感",
+                "lv": 1,
+                "hex": "5A"
+            },
+            {
+                "sname": "挑战者",
+                "lv": 1,
+                "hex": "02"
+            }
+        ],
+        "def_f": 3,
+        "def_w": 0,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": -3,
+        "rare9": false
+    },
+    "361_1": {
+        "id": 361,
+        "name": "火龙X头盔",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 114,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "攻击",
+                "lv": 1,
+                "hex": "01"
+            },
+            {
+                "sname": "破坏王",
+                "lv": 1,
+                "hex": "51"
+            },
+            {
+                "sname": "超会心",
+                "lv": 1,
+                "hex": "07"
+            }
+        ],
+        "def_f": 3,
+        "def_w": 1,
+        "def_t": -2,
+        "def_i": 1,
+        "def_d": -3,
+        "rare9": false
+    },
+    "361_2": {
+        "id": 361,
+        "name": "火龙X铠甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "攻击",
+                "lv": 1,
+                "hex": "01"
+            },
+            {
+                "sname": "破坏王",
+                "lv": 1,
+                "hex": "51"
+            },
+            {
+                "sname": "耳塞",
+                "lv": 1,
+                "hex": "3D"
+            }
+        ],
+        "def_f": 3,
+        "def_w": 1,
+        "def_t": -2,
+        "def_i": 1,
+        "def_d": -3,
+        "rare9": false
+    },
+    "361_3": {
+        "id": 361,
+        "name": "火龙X腕甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "攻击",
+                "lv": 2,
+                "hex": "01"
+            },
+            {
+                "sname": "耳塞",
+                "lv": 2,
+                "hex": "3D"
+            }
+        ],
+        "def_f": 3,
+        "def_w": 1,
+        "def_t": -2,
+        "def_i": 1,
+        "def_d": -3,
+        "rare9": false
+    },
+    "361_4": {
+        "id": 361,
+        "name": "火龙X腰甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "攻击",
+                "lv": 2,
+                "hex": "01"
+            },
+            {
+                "sname": "风压耐性",
+                "lv": 3,
+                "hex": "3E"
+            },
+            {
+                "sname": "超会心",
+                "lv": 1,
+                "hex": "07"
+            }
+        ],
+        "def_f": 3,
+        "def_w": 1,
+        "def_t": -2,
+        "def_i": 1,
+        "def_d": -3,
+        "rare9": false
+    },
+    "361_5": {
+        "id": 361,
+        "name": "火龙X护腿",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "攻击",
+                "lv": 1,
+                "hex": "01"
+            },
+            {
+                "sname": "破坏王",
+                "lv": 1,
+                "hex": "51"
+            },
+            {
+                "sname": "耳塞",
+                "lv": 2,
+                "hex": "3D"
+            }
+        ],
+        "def_f": 3,
+        "def_w": 1,
+        "def_t": -2,
+        "def_i": 1,
+        "def_d": -3,
+        "rare9": false
+    },
+    "362_1": {
+        "id": 362,
+        "name": "轰龙X头盔",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 118,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "耳塞",
+                "lv": 1,
+                "hex": "3D"
+            },
+            {
+                "sname": "快吃",
+                "lv": 1,
+                "hex": "3C"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 0,
+        "def_t": -3,
+        "def_i": 0,
+        "def_d": -2,
+        "rare9": false
+    },
+    "362_2": {
+        "id": 362,
+        "name": "轰龙X铠甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 118,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "耳塞",
+                "lv": 2,
+                "hex": "3D"
+            },
+            {
+                "sname": "无伤",
+                "lv": 1,
+                "hex": "03"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 0,
+        "def_t": -3,
+        "def_i": 0,
+        "def_d": -2,
+        "rare9": false
+    },
+    "362_3": {
+        "id": 362,
+        "name": "轰龙X腕甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 118,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "心眼",
+                "lv": 1,
+                "hex": "1A"
+            },
+            {
+                "sname": "无伤",
+                "lv": 1,
+                "hex": "03"
+            },
+            {
+                "sname": "昏厥耐性",
+                "lv": 3,
+                "hex": "4C"
+            },
+            {
+                "sname": "通常弹・连射箭强化",
+                "lv": 1,
+                "hex": "30"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 0,
+        "def_t": -3,
+        "def_i": 0,
+        "def_d": -2,
+        "rare9": false
+    },
+    "362_4": {
+        "id": 362,
+        "name": "轰龙X腰甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 118,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "耳塞",
+                "lv": 2,
+                "hex": "3D"
+            },
+            {
+                "sname": "无伤",
+                "lv": 1,
+                "hex": "03"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 0,
+        "def_t": -3,
+        "def_i": 0,
+        "def_d": -2,
+        "rare9": false
+    },
+    "362_5": {
+        "id": 362,
+        "name": "轰龙X护腿",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 118,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "快吃",
+                "lv": 2,
+                "hex": "3C"
+            },
+            {
+                "sname": "心眼",
+                "lv": 2,
+                "hex": "1A"
+            },
+            {
+                "sname": "通常弹・连射箭强化",
+                "lv": 1,
+                "hex": "30"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 0,
+        "def_t": -3,
+        "def_i": 0,
+        "def_d": -2,
+        "rare9": false
+    },
+    "363_1": {
+        "id": 363,
+        "name": "角龙X头盔",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 118,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "防御性能",
+                "lv": 3,
+                "hex": "23"
+            },
+            {
+                "sname": "耐震",
+                "lv": 1,
+                "hex": "3F"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -1,
+        "def_t": -1,
+        "def_i": -3,
+        "def_d": -1,
+        "rare9": false
+    },
+    "363_2": {
+        "id": 363,
+        "name": "角龙X铠甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 118,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "防御性能",
+                "lv": 2,
+                "hex": "23"
+            },
+            {
+                "sname": "攻击守势",
+                "lv": 1,
+                "hex": "25"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -1,
+        "def_t": -1,
+        "def_i": -3,
+        "def_d": -1,
+        "rare9": false
+    },
+    "363_3": {
+        "id": 363,
+        "name": "角龙X腕甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 118,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "攻击守势",
+                "lv": 2,
+                "hex": "25"
+            },
+            {
+                "sname": "耐力急速回复",
+                "lv": 1,
+                "hex": "22"
+            },
+            {
+                "sname": "贯穿弹・贯穿箭强化",
+                "lv": 2,
+                "hex": "31"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -1,
+        "def_t": -1,
+        "def_i": -3,
+        "def_d": -1,
+        "rare9": false
+    },
+    "363_4": {
+        "id": 363,
+        "name": "角龙X腰甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 118,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "火场怪力",
+                "lv": 1,
+                "hex": "5B"
+            },
+            {
+                "sname": "耐力急速回复",
+                "lv": 2,
+                "hex": "22"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -1,
+        "def_t": -1,
+        "def_i": -3,
+        "def_d": -1,
+        "rare9": false
+    },
+    "363_5": {
+        "id": 363,
+        "name": "角龙X护腿",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 118,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "火场怪力",
+                "lv": 2,
+                "hex": "5B"
+            },
+            {
+                "sname": "耐震",
+                "lv": 2,
+                "hex": "3F"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -1,
+        "def_t": -1,
+        "def_i": -3,
+        "def_d": -1,
+        "rare9": false
+    },
+    "364_1": {
+        "id": 364,
+        "name": "岩龙X头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 100,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "炮弹装填",
+                "lv": 1,
+                "hex": "2E"
+            },
+            {
+                "sname": "防御",
+                "lv": 2,
+                "hex": "38"
+            },
+            {
+                "sname": "炮术",
+                "lv": 2,
+                "hex": "2D"
+            }
+        ],
+        "def_f": 0,
+        "def_w": -2,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": -3,
+        "rare9": false
+    },
+    "364_2": {
+        "id": 364,
+        "name": "岩龙X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 100,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "防御性能",
+                "lv": 2,
+                "hex": "23"
+            },
+            {
+                "sname": "炮弹装填",
+                "lv": 1,
+                "hex": "2E"
+            },
+            {
+                "sname": "力量解放",
+                "lv": 1,
+                "hex": "09"
+            }
+        ],
+        "def_f": 0,
+        "def_w": -2,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": -3,
+        "rare9": false
+    },
+    "364_3": {
+        "id": 364,
+        "name": "岩龙X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 100,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "防御性能",
+                "lv": 3,
+                "hex": "23"
+            },
+            {
+                "sname": "砥石使用高速化",
+                "lv": 1,
+                "hex": "55"
+            }
+        ],
+        "def_f": 0,
+        "def_w": -2,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": -3,
+        "rare9": false
+    },
+    "364_4": {
+        "id": 364,
+        "name": "岩龙X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 100,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "砥石使用高速化",
+                "lv": 2,
+                "hex": "55"
+            },
+            {
+                "sname": "防御",
+                "lv": 3,
+                "hex": "38"
+            },
+            {
+                "sname": "力量解放",
+                "lv": 1,
+                "hex": "09"
+            },
+            {
+                "sname": "装填速度",
+                "lv": 1,
+                "hex": "34"
+            }
+        ],
+        "def_f": 0,
+        "def_w": -2,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": -3,
+        "rare9": false
+    },
+    "364_5": {
+        "id": 364,
+        "name": "岩龙X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 100,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "炮弹装填",
+                "lv": 1,
+                "hex": "2E"
+            },
+            {
+                "sname": "防御",
+                "lv": 2,
+                "hex": "38"
+            },
+            {
+                "sname": "力量解放",
+                "lv": 2,
+                "hex": "09"
+            },
+            {
+                "sname": "装填速度",
+                "lv": 1,
+                "hex": "34"
+            }
+        ],
+        "def_f": 0,
+        "def_w": -2,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": -3,
+        "rare9": false
+    },
+    "365_1": {
+        "id": 365,
+        "name": "雷狼龙X头盔",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 116,
+        "bougyo_max": 176,
+        "skill": [
+            {
+                "sname": "力量解放",
+                "lv": 1,
+                "hex": "09"
+            },
+            {
+                "sname": "弱点特效",
+                "lv": 1,
+                "hex": "08"
+            },
+            {
+                "sname": "会心击【属性】",
+                "lv": 1,
+                "hex": "0B"
+            }
+        ],
+        "def_f": 0,
+        "def_w": -1,
+        "def_t": 4,
+        "def_i": -4,
+        "def_d": 1,
+        "rare9": false
+    },
+    "365_2": {
+        "id": 365,
+        "name": "雷狼龙X铠甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 3,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 116,
+        "bougyo_max": 176,
+        "skill": [
+            {
+                "sname": "力量解放",
+                "lv": 1,
+                "hex": "09"
+            },
+            {
+                "sname": "弱点特效",
+                "lv": 2,
+                "hex": "08"
+            },
+            {
+                "sname": "雷属性攻击强化",
+                "lv": 2,
+                "hex": "10"
+            }
+        ],
+        "def_f": 0,
+        "def_w": -1,
+        "def_t": 4,
+        "def_i": -4,
+        "def_d": 1,
+        "rare9": false
+    },
+    "365_3": {
+        "id": 365,
+        "name": "雷狼龙X腕甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 116,
+        "bougyo_max": 176,
+        "skill": [
+            {
+                "sname": "力量解放",
+                "lv": 1,
+                "hex": "09"
+            },
+            {
+                "sname": "体术",
+                "lv": 2,
+                "hex": "21"
+            },
+            {
+                "sname": "会心击【属性】",
+                "lv": 1,
+                "hex": "0B"
+            }
+        ],
+        "def_f": 0,
+        "def_w": -1,
+        "def_t": 4,
+        "def_i": -4,
+        "def_d": 1,
+        "rare9": false
+    },
+    "365_4": {
+        "id": 365,
+        "name": "雷狼龙X腰甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 116,
+        "bougyo_max": 176,
+        "skill": [
+            {
+                "sname": "力量解放",
+                "lv": 1,
+                "hex": "09"
+            },
+            {
+                "sname": "会心击【属性】",
+                "lv": 1,
+                "hex": "0B"
+            },
+            {
+                "sname": "雷属性攻击强化",
+                "lv": 3,
+                "hex": "10"
+            }
+        ],
+        "def_f": 0,
+        "def_w": -1,
+        "def_t": 4,
+        "def_i": -4,
+        "def_d": 1,
+        "rare9": false
+    },
+    "365_5": {
+        "id": 365,
+        "name": "雷狼龙X护腿",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 116,
+        "bougyo_max": 176,
+        "skill": [
+            {
+                "sname": "力量解放",
+                "lv": 1,
+                "hex": "09"
+            },
+            {
+                "sname": "体术",
+                "lv": 3,
+                "hex": "21"
+            },
+            {
+                "sname": "翔虫使",
+                "lv": 1,
+                "hex": "68"
+            }
+        ],
+        "def_f": 0,
+        "def_w": -1,
+        "def_t": 4,
+        "def_i": -4,
+        "def_d": 1,
+        "rare9": false
+    },
+    "366_1": {
+        "id": 366,
+        "name": "齐天毛发・真",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 116,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "火场怪力",
+                "lv": 2,
+                "hex": "5B"
+            },
+            {
+                "sname": "精神抖擞",
+                "lv": 1,
+                "hex": "0A"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 1,
+        "def_t": 3,
+        "def_i": -5,
+        "def_d": 2,
+        "rare9": false
+    },
+    "366_2": {
+        "id": 366,
+        "name": "齐天衣・真",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 116,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "火场怪力",
+                "lv": 1,
+                "hex": "5B"
+            },
+            {
+                "sname": "精神抖擞",
+                "lv": 1,
+                "hex": "0A"
+            },
+            {
+                "sname": "力量解放",
+                "lv": 2,
+                "hex": "09"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 1,
+        "def_t": 3,
+        "def_i": -5,
+        "def_d": 2,
+        "rare9": false
+    },
+    "366_3": {
+        "id": 366,
+        "name": "齐天臂甲・真",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 116,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "火场怪力",
+                "lv": 1,
+                "hex": "5B"
+            },
+            {
+                "sname": "力量解放",
+                "lv": 2,
+                "hex": "09"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 1,
+        "def_t": 3,
+        "def_i": -5,
+        "def_d": 2,
+        "rare9": false
+    },
+    "366_4": {
+        "id": 366,
+        "name": "齐天带・真",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 116,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "火场怪力",
+                "lv": 1,
+                "hex": "5B"
+            },
+            {
+                "sname": "超会心",
+                "lv": 1,
+                "hex": "07"
+            },
+            {
+                "sname": "精神抖擞",
+                "lv": 1,
+                "hex": "0A"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 1,
+        "def_t": 3,
+        "def_i": -5,
+        "def_d": 2,
+        "rare9": false
+    },
+    "366_5": {
+        "id": 366,
+        "name": "齐天腿甲・真",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 3,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 116,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "超会心",
+                "lv": 2,
+                "hex": "07"
+            },
+            {
+                "sname": "力量解放",
+                "lv": 1,
+                "hex": "09"
+            },
+            {
+                "sname": "减轻胆怯",
+                "lv": 2,
+                "hex": "5D"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 1,
+        "def_t": 3,
+        "def_i": -5,
+        "def_d": 2,
+        "rare9": false
+    },
+    "367_1": {
+        "id": 367,
+        "name": "赫耀头盔・真",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 9,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 124,
+        "bougyo_max": 180,
+        "skill": [
+            {
+                "sname": "龙气活性",
+                "lv": 1,
+                "hex": "67"
+            },
+            {
+                "sname": "弱点特效",
+                "lv": 1,
+                "hex": "08"
+            }
+        ],
+        "def_f": -2,
+        "def_w": -2,
+        "def_t": -2,
+        "def_i": -2,
+        "def_d": 3,
+        "rare9": true
+    },
+    "367_2": {
+        "id": 367,
+        "name": "赫耀铠甲・真",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 9,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 124,
+        "bougyo_max": 180,
+        "skill": [
+            {
+                "sname": "龙气活性",
+                "lv": 1,
+                "hex": "67"
+            },
+            {
+                "sname": "死里逃生",
+                "lv": 2,
+                "hex": "05"
+            }
+        ],
+        "def_f": -2,
+        "def_w": -2,
+        "def_t": -2,
+        "def_i": -2,
+        "def_d": 3,
+        "rare9": true
+    },
+    "367_3": {
+        "id": 367,
+        "name": "赫耀腕甲・真",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 124,
+        "bougyo_max": 180,
+        "skill": [
+            {
+                "sname": "龙气活性",
+                "lv": 1,
+                "hex": "67"
+            },
+            {
+                "sname": "弱点特效",
+                "lv": 2,
+                "hex": "08"
+            }
+        ],
+        "def_f": -2,
+        "def_w": -2,
+        "def_t": -2,
+        "def_i": -2,
+        "def_d": 3,
+        "rare9": true
+    },
+    "367_4": {
+        "id": 367,
+        "name": "赫耀腰甲・真",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 9,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 124,
+        "bougyo_max": 180,
+        "skill": [
+            {
+                "sname": "龙气活性",
+                "lv": 1,
+                "hex": "67"
+            },
+            {
+                "sname": "死里逃生",
+                "lv": 1,
+                "hex": "05"
+            },
+            {
+                "sname": "怨恨",
+                "lv": 2,
+                "hex": "04"
+            }
+        ],
+        "def_f": -2,
+        "def_w": -2,
+        "def_t": -2,
+        "def_i": -2,
+        "def_d": 3,
+        "rare9": true
+    },
+    "367_5": {
+        "id": 367,
+        "name": "赫耀护腿・真",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 9,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 124,
+        "bougyo_max": 180,
+        "skill": [
+            {
+                "sname": "龙气活性",
+                "lv": 1,
+                "hex": "67"
+            },
+            {
+                "sname": "怨恨",
+                "lv": 3,
+                "hex": "04"
+            }
+        ],
+        "def_f": -2,
+        "def_w": -2,
+        "def_t": -2,
+        "def_i": -2,
+        "def_d": 3,
+        "rare9": true
+    },
+    "368_1": {
+        "id": 368,
+        "name": "搔鸟X头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "精神抖擞",
+                "lv": 2,
+                "hex": "0A"
+            },
+            {
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
+            },
+            {
+                "sname": "昏厥耐性",
+                "lv": 1,
+                "hex": "4C"
+            }
+        ],
+        "def_f": 0,
+        "def_w": -3,
+        "def_t": 0,
+        "def_i": 1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "368_2": {
+        "id": 368,
+        "name": "搔鸟X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "击晕术",
+                "lv": 2,
+                "hex": "29"
+            },
+            {
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
+            }
+        ],
+        "def_f": 0,
+        "def_w": -3,
+        "def_t": 0,
+        "def_i": 1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "368_3": {
+        "id": 368,
+        "name": "搔鸟X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "击晕术",
+                "lv": 1,
+                "hex": "29"
+            },
+            {
+                "sname": "夺取耐力",
+                "lv": 2,
+                "hex": "2A"
+            },
+            {
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
+            }
+        ],
+        "def_f": 0,
+        "def_w": -3,
+        "def_t": 0,
+        "def_i": 1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "368_4": {
+        "id": 368,
+        "name": "搔鸟X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "夺取耐力",
+                "lv": 1,
+                "hex": "2A"
+            },
+            {
+                "sname": "精神抖擞",
+                "lv": 1,
+                "hex": "0A"
+            }
+        ],
+        "def_f": 0,
+        "def_w": -3,
+        "def_t": 0,
+        "def_i": 1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "368_5": {
+        "id": 368,
+        "name": "搔鸟X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "昏厥耐性",
+                "lv": 2,
+                "hex": "4C"
+            },
+            {
+                "sname": "看破",
+                "lv": 2,
+                "hex": "06"
+            }
+        ],
+        "def_f": 0,
+        "def_w": -3,
+        "def_t": 0,
+        "def_i": 1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "369_1": {
+        "id": 369,
+        "name": "毒妖鸟X头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "特殊射击强化",
+                "lv": 1,
+                "hex": "2F"
+            },
+            {
+                "sname": "弹丸节约",
+                "lv": 1,
+                "hex": "18"
+            },
+            {
+                "sname": "毒属性强化",
+                "lv": 1,
+                "hex": "12"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 3,
+        "def_t": -3,
+        "def_i": 0,
+        "def_d": 1,
+        "rare9": false
+    },
+    "369_2": {
+        "id": 369,
+        "name": "毒妖鸟X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "特殊射击强化",
+                "lv": 1,
+                "hex": "2F"
+            },
+            {
+                "sname": "体术",
+                "lv": 3,
+                "hex": "21"
+            },
+            {
+                "sname": "砥石使用高速化",
+                "lv": 2,
+                "hex": "55"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 3,
+        "def_t": -3,
+        "def_i": 0,
+        "def_d": 1,
+        "rare9": false
+    },
+    "369_3": {
+        "id": 369,
+        "name": "毒妖鸟X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "弹丸节约",
+                "lv": 1,
+                "hex": "18"
+            },
+            {
+                "sname": "弹道强化",
+                "lv": 2,
+                "hex": "1B"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 3,
+        "def_t": -3,
+        "def_i": 0,
+        "def_d": 1,
+        "rare9": false
+    },
+    "369_4": {
+        "id": 369,
+        "name": "毒妖鸟X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "弹丸节约",
+                "lv": 1,
+                "hex": "18"
+            },
+            {
+                "sname": "毒属性强化",
+                "lv": 2,
+                "hex": "12"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 3,
+        "def_t": -3,
+        "def_i": 0,
+        "def_d": 1,
+        "rare9": false
+    },
+    "369_5": {
+        "id": 369,
+        "name": "毒妖鸟X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "体术",
+                "lv": 2,
+                "hex": "21"
+            },
+            {
+                "sname": "弹道强化",
+                "lv": 1,
+                "hex": "1B"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 3,
+        "def_t": -3,
+        "def_i": 0,
+        "def_d": 1,
+        "rare9": false
+    },
+    "370_1": {
+        "id": 370,
+        "name": "泥鱼龙X头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "攻击守势",
+                "lv": 1,
+                "hex": "25"
+            },
+            {
+                "sname": "回避距离提升",
+                "lv": 2,
+                "hex": "42"
+            },
+            {
+                "sname": "怨恨",
+                "lv": 1,
+                "hex": "04"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 2,
+        "def_t": -3,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "370_2": {
+        "id": 370,
+        "name": "泥鱼龙X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 3,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "强化持续",
+                "lv": 2,
+                "hex": "1F"
+            },
+            {
+                "sname": "回避距离提升",
+                "lv": 1,
+                "hex": "42"
+            },
+            {
+                "sname": "怨恨",
+                "lv": 1,
+                "hex": "04"
+            },
+            {
+                "sname": "零件改造",
+                "lv": 1,
+                "hex": "7E"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 2,
+        "def_t": -3,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "370_3": {
+        "id": 370,
+        "name": "泥鱼龙X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "怨恨",
+                "lv": 2,
+                "hex": "04"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 2,
+        "def_t": -3,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "370_4": {
+        "id": 370,
+        "name": "泥鱼龙X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "防御强化",
+                "lv": 1,
+                "hex": "24"
+            },
+            {
+                "sname": "强化持续",
+                "lv": 1,
+                "hex": "1F"
+            },
+            {
+                "sname": "攻击守势",
+                "lv": 2,
+                "hex": "25"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 2,
+        "def_t": -3,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "370_5": {
+        "id": 370,
+        "name": "泥鱼龙X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "防御强化",
+                "lv": 2,
+                "hex": "24"
+            },
+            {
+                "sname": "怨恨",
+                "lv": 1,
+                "hex": "04"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 2,
+        "def_t": -3,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "371_1": {
+        "id": 371,
+        "name": "飞雷龙X头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "跳跃铁人",
+                "lv": 1,
+                "hex": "5E"
+            },
+            {
+                "sname": "体术",
+                "lv": 1,
+                "hex": "21"
+            },
+            {
+                "sname": "看破",
+                "lv": 3,
+                "hex": "06"
+            }
+        ],
+        "def_f": 0,
+        "def_w": -3,
+        "def_t": 3,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "371_2": {
+        "id": 371,
+        "name": "飞雷龙X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "心眼",
+                "lv": 1,
+                "hex": "1A"
+            },
+            {
+                "sname": "看破",
+                "lv": 1,
+                "hex": "06"
+            },
+            {
+                "sname": "会心击【属性】",
+                "lv": 1,
+                "hex": "0B"
+            }
+        ],
+        "def_f": 0,
+        "def_w": -3,
+        "def_t": 3,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "371_3": {
+        "id": 371,
+        "name": "飞雷龙X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "体术",
+                "lv": 3,
+                "hex": "21"
+            },
+            {
+                "sname": "不屈",
+                "lv": 1,
+                "hex": "5C"
+            }
+        ],
+        "def_f": 0,
+        "def_w": -3,
+        "def_t": 3,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "371_4": {
+        "id": 371,
+        "name": "飞雷龙X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "心眼",
+                "lv": 2,
+                "hex": "1A"
+            },
+            {
+                "sname": "会心击【属性】",
+                "lv": 1,
+                "hex": "0B"
+            },
+            {
+                "sname": "贯穿弹・贯穿箭强化",
+                "lv": 1,
+                "hex": "31"
+            }
+        ],
+        "def_f": 0,
+        "def_w": -3,
+        "def_t": 3,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "371_5": {
+        "id": 371,
+        "name": "飞雷龙X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "体术",
+                "lv": 1,
+                "hex": "21"
+            },
+            {
+                "sname": "看破",
+                "lv": 2,
+                "hex": "06"
+            },
+            {
+                "sname": "会心击【属性】",
+                "lv": 1,
+                "hex": "0B"
+            }
+        ],
+        "def_f": 0,
+        "def_w": -3,
+        "def_t": 3,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "372_1": {
+        "id": 372,
+        "name": "蛮颚龙X头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 98,
+        "bougyo_max": 162,
+        "skill": [
+            {
+                "sname": "集中",
+                "lv": 1,
+                "hex": "1E"
+            },
+            {
+                "sname": "击晕术",
+                "lv": 1,
+                "hex": "29"
+            },
+            {
+                "sname": "攻击",
+                "lv": 1,
+                "hex": "01"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -3,
+        "def_t": -1,
+        "def_i": -1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "372_2": {
+        "id": 372,
+        "name": "蛮颚龙X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 98,
+        "bougyo_max": 162,
+        "skill": [
+            {
+                "sname": "集中",
+                "lv": 2,
+                "hex": "1E"
+            },
+            {
+                "sname": "跑者",
+                "lv": 1,
+                "hex": "20"
+            },
+            {
+                "sname": "挑战者",
+                "lv": 1,
+                "hex": "02"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -3,
+        "def_t": -1,
+        "def_i": -1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "372_3": {
+        "id": 372,
+        "name": "蛮颚龙X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 98,
+        "bougyo_max": 162,
+        "skill": [
+            {
+                "sname": "击晕术",
+                "lv": 2,
+                "hex": "29"
+            },
+            {
+                "sname": "攻击",
+                "lv": 2,
+                "hex": "01"
+            },
+            {
+                "sname": "挑战者",
+                "lv": 1,
+                "hex": "02"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -3,
+        "def_t": -1,
+        "def_i": -1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "372_4": {
+        "id": 372,
+        "name": "蛮颚龙X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 98,
+        "bougyo_max": 162,
+        "skill": [
+            {
+                "sname": "攻击",
+                "lv": 2,
+                "hex": "01"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -3,
+        "def_t": -1,
+        "def_i": -1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "372_5": {
+        "id": 372,
+        "name": "蛮颚龙X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 98,
+        "bougyo_max": 162,
+        "skill": [
+            {
+                "sname": "跑者",
+                "lv": 2,
+                "hex": "20"
+            },
+            {
+                "sname": "挑战者",
+                "lv": 2,
+                "hex": "02"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -3,
+        "def_t": -1,
+        "def_i": -1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "373_1": {
+        "id": 373,
+        "name": "爆鳞龙X头盔",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 118,
+        "bougyo_max": 176,
+        "skill": [
+            {
+                "sname": "炮术",
+                "lv": 1,
+                "hex": "2D"
+            },
+            {
+                "sname": "防御性能",
+                "lv": 2,
+                "hex": "23"
+            },
+            {
+                "sname": "利刃",
+                "lv": 1,
+                "hex": "17"
+            }
+        ],
+        "def_f": 3,
+        "def_w": 1,
+        "def_t": -4,
+        "def_i": -2,
+        "def_d": -2,
+        "rare9": false
+    },
+    "373_2": {
+        "id": 373,
+        "name": "爆鳞龙X铠甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 118,
+        "bougyo_max": 176,
+        "skill": [
+            {
+                "sname": "防御强化",
+                "lv": 2,
+                "hex": "24"
+            },
+            {
+                "sname": "挑战者",
+                "lv": 2,
+                "hex": "02"
+            },
+            {
+                "sname": "利刃",
+                "lv": 1,
+                "hex": "17"
+            }
+        ],
+        "def_f": 3,
+        "def_w": 1,
+        "def_t": -4,
+        "def_i": -2,
+        "def_d": -2,
+        "rare9": false
+    },
+    "373_3": {
+        "id": 373,
+        "name": "爆鳞龙X腕甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 118,
+        "bougyo_max": 176,
+        "skill": [
+            {
+                "sname": "防御强化",
+                "lv": 1,
+                "hex": "24"
+            },
+            {
+                "sname": "防御性能",
+                "lv": 1,
+                "hex": "23"
+            },
+            {
+                "sname": "挑战者",
+                "lv": 2,
+                "hex": "02"
+            }
+        ],
+        "def_f": 3,
+        "def_w": 1,
+        "def_t": -4,
+        "def_i": -2,
+        "def_d": -2,
+        "rare9": false
+    },
+    "373_4": {
+        "id": 373,
+        "name": "爆鳞龙X腰甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 118,
+        "bougyo_max": 176,
+        "skill": [
+            {
+                "sname": "炮弹装填",
+                "lv": 2,
+                "hex": "2E"
+            },
+            {
+                "sname": "防御性能",
+                "lv": 1,
+                "hex": "23"
+            },
+            {
+                "sname": "利刃",
+                "lv": 1,
+                "hex": "17"
+            }
+        ],
+        "def_f": 3,
+        "def_w": 1,
+        "def_t": -4,
+        "def_i": -2,
+        "def_d": -2,
+        "rare9": false
+    },
+    "373_5": {
+        "id": 373,
+        "name": "爆鳞龙X护腿",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 118,
+        "bougyo_max": 176,
+        "skill": [
+            {
+                "sname": "炮术",
+                "lv": 2,
+                "hex": "2D"
+            },
+            {
+                "sname": "防御性能",
+                "lv": 1,
+                "hex": "23"
+            },
+            {
+                "sname": "挑战者",
+                "lv": 1,
+                "hex": "02"
+            }
+        ],
+        "def_f": 3,
+        "def_w": 1,
+        "def_t": -4,
+        "def_i": -2,
+        "def_d": -2,
+        "rare9": false
+    },
+    "374_4": {
+        "id": 374,
+        "name": "铬合金X腰甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 110,
+        "bougyo_max": 170,
+        "skill": [
+            {
+                "sname": "减轻胆怯",
+                "lv": 1,
+                "hex": "5D"
+            }
+        ],
+        "def_f": -2,
+        "def_w": -2,
+        "def_t": -2,
+        "def_i": -2,
+        "def_d": -2,
+        "rare9": false
+    },
+    "374_5": {
+        "id": 374,
+        "name": "铬合金X靴",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 110,
+        "bougyo_max": 170,
+        "skill": [
+            {
+                "sname": "减轻胆怯",
+                "lv": 2,
+                "hex": "5D"
+            }
+        ],
+        "def_f": -2,
+        "def_w": -2,
+        "def_t": -2,
+        "def_i": -2,
+        "def_d": -2,
+        "rare9": false
+    },
+    "375_1": {
+        "id": 375,
+        "name": "骷髅X头饰",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 104,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "不屈",
+                "lv": 1,
+                "hex": "5C"
+            },
+            {
+                "sname": "匠",
+                "lv": 1,
+                "hex": "16"
+            }
+        ],
+        "def_f": -3,
+        "def_w": -3,
+        "def_t": -3,
+        "def_i": -3,
+        "def_d": 4,
+        "rare9": false
+    },
+    "377_1": {
+        "id": 377,
+        "name": "狗龙X伪装",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "滑走强化",
+                "lv": 1,
+                "hex": "2B"
+            },
+            {
+                "sname": "跑者",
+                "lv": 2,
+                "hex": "20"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "380_1": {
+        "id": 380,
+        "name": "祸铠・真【武士盔】",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 110,
+        "bougyo_max": 170,
+        "skill": [
+            {
+                "sname": "怨恨",
+                "lv": 2,
+                "hex": "04"
+            },
+            {
+                "sname": "匠",
+                "lv": 1,
+                "hex": "16"
+            },
+            {
+                "sname": "减轻胆怯",
+                "lv": 2,
+                "hex": "5D"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -3,
+        "def_t": -2,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "380_2": {
+        "id": 380,
+        "name": "祸铠・真【胸甲】",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 110,
+        "bougyo_max": 170,
+        "skill": [
+            {
+                "sname": "鬼火缠",
+                "lv": 1,
+                "hex": "6C"
+            },
+            {
+                "sname": "怨恨",
+                "lv": 1,
+                "hex": "04"
+            },
+            {
+                "sname": "耳塞",
+                "lv": 1,
+                "hex": "3D"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -3,
+        "def_t": -2,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "380_3": {
+        "id": 380,
+        "name": "祸铠・真【臂甲】",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 110,
+        "bougyo_max": 170,
+        "skill": [
+            {
+                "sname": "鬼火缠",
+                "lv": 1,
+                "hex": "6C"
+            },
+            {
+                "sname": "匠",
+                "lv": 2,
+                "hex": "16"
+            },
+            {
+                "sname": "装填扩充",
+                "lv": 2,
+                "hex": "33"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -3,
+        "def_t": -2,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "380_4": {
+        "id": 380,
+        "name": "祸铠・真【腰具】",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 110,
+        "bougyo_max": 170,
+        "skill": [
+            {
+                "sname": "鬼火缠",
+                "lv": 1,
+                "hex": "6C"
+            },
+            {
+                "sname": "耳塞",
+                "lv": 1,
+                "hex": "3D"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -3,
+        "def_t": -2,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "380_5": {
+        "id": 380,
+        "name": "祸铠・真【腿甲】",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 110,
+        "bougyo_max": 170,
+        "skill": [
+            {
+                "sname": "鬼火缠",
+                "lv": 1,
+                "hex": "6C"
+            },
+            {
+                "sname": "怨恨",
+                "lv": 2,
+                "hex": "04"
+            },
+            {
+                "sname": "减轻胆怯",
+                "lv": 1,
+                "hex": "5D"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -3,
+        "def_t": -2,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "381_1": {
+        "id": 381,
+        "name": "白兔兽X头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "看破",
+                "lv": 1,
+                "hex": "06"
+            },
+            {
+                "sname": "冰属性攻击强化",
+                "lv": 2,
+                "hex": "0F"
+            },
+            {
+                "sname": "达人艺",
+                "lv": 1,
+                "hex": "0C"
+            },
+            {
+                "sname": "装填速度",
+                "lv": 1,
+                "hex": "34"
+            }
+        ],
+        "def_f": -3,
+        "def_w": 1,
+        "def_t": 0,
+        "def_i": 3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "381_2": {
+        "id": 381,
+        "name": "白兔兽X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "滑走强化",
+                "lv": 1,
+                "hex": "2B"
+            },
+            {
+                "sname": "体术",
+                "lv": 2,
+                "hex": "21"
+            },
+            {
+                "sname": "达人艺",
+                "lv": 1,
+                "hex": "0C"
+            },
+            {
+                "sname": "装填速度",
+                "lv": 1,
+                "hex": "34"
+            }
+        ],
+        "def_f": -3,
+        "def_w": 1,
+        "def_t": 0,
+        "def_i": 3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "381_3": {
+        "id": 381,
+        "name": "白兔兽X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "看破",
+                "lv": 2,
+                "hex": "06"
+            },
+            {
+                "sname": "冰属性攻击强化",
+                "lv": 3,
+                "hex": "0F"
+            }
+        ],
+        "def_f": -3,
+        "def_w": 1,
+        "def_t": 0,
+        "def_i": 3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "381_4": {
+        "id": 381,
+        "name": "白兔兽X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "体术",
+                "lv": 3,
+                "hex": "21"
+            }
+        ],
+        "def_f": -3,
+        "def_w": 1,
+        "def_t": 0,
+        "def_i": 3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "381_5": {
+        "id": 381,
+        "name": "白兔兽X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "跳跃铁人",
+                "lv": 1,
+                "hex": "5E"
+            },
+            {
+                "sname": "看破",
+                "lv": 1,
+                "hex": "06"
+            },
+            {
+                "sname": "达人艺",
+                "lv": 1,
+                "hex": "0C"
+            },
+            {
+                "sname": "装填速度",
+                "lv": 1,
+                "hex": "34"
+            }
+        ],
+        "def_f": -3,
+        "def_w": 1,
+        "def_t": 0,
+        "def_i": 3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "382_1": {
+        "id": 382,
+        "name": "骨制X头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 82,
+        "bougyo_max": 154,
+        "skill": [
+            {
+                "sname": "夺取耐力",
+                "lv": 1,
+                "hex": "2A"
+            },
+            {
+                "sname": "破坏王",
+                "lv": 1,
+                "hex": "51"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": -1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "382_2": {
+        "id": 382,
+        "name": "骨制X铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 82,
+        "bougyo_max": 154,
+        "skill": [
+            {
+                "sname": "夺取耐力",
+                "lv": 1,
+                "hex": "2A"
+            },
+            {
+                "sname": "跑者",
+                "lv": 2,
+                "hex": "20"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": -1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "382_3": {
+        "id": 382,
+        "name": "骨制X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 82,
+        "bougyo_max": 154,
+        "skill": [
+            {
+                "sname": "拔刀术【力】",
+                "lv": 2,
+                "hex": "27"
+            },
+            {
+                "sname": "夺取耐力",
+                "lv": 1,
+                "hex": "2A"
+            },
+            {
+                "sname": "跑者",
+                "lv": 1,
+                "hex": "20"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": -1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "382_4": {
+        "id": 382,
+        "name": "骨制X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 82,
+        "bougyo_max": 154,
+        "skill": [
+            {
+                "sname": "集中",
+                "lv": 1,
+                "hex": "1E"
+            },
+            {
+                "sname": "破坏王",
+                "lv": 2,
+                "hex": "51"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": -1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "382_5": {
+        "id": 382,
+        "name": "骨制X护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 82,
+        "bougyo_max": 154,
+        "skill": [
+            {
+                "sname": "泥雪耐性",
+                "lv": 2,
+                "hex": "4D"
+            },
+            {
+                "sname": "集中",
+                "lv": 1,
+                "hex": "1E"
+            },
+            {
+                "sname": "拔刀术【力】",
+                "lv": 1,
+                "hex": "27"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": -1,
+        "def_d": 0,
+        "rare9": false
+    },
+    "383_1": {
+        "id": 383,
+        "name": "泡狐龙X头盔",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "死里逃生",
+                "lv": 1,
+                "hex": "05"
+            },
+            {
+                "sname": "回避性能",
+                "lv": 2,
+                "hex": "41"
+            },
+            {
+                "sname": "体术",
+                "lv": 1,
+                "hex": "21"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 2,
+        "def_t": -3,
+        "def_i": 1,
+        "def_d": -1,
+        "rare9": false
+    },
+    "383_2": {
+        "id": 383,
+        "name": "泡狐龙X铠甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "泡沫之舞",
+                "lv": 1,
+                "hex": "40"
+            },
+            {
+                "sname": "死里逃生",
+                "lv": 1,
+                "hex": "05"
+            },
+            {
+                "sname": "体术",
+                "lv": 2,
+                "hex": "21"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 2,
+        "def_t": -3,
+        "def_i": 1,
+        "def_d": -1,
+        "rare9": false
+    },
+    "383_3": {
+        "id": 383,
+        "name": "泡狐龙X腕甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 114,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "死里逃生",
+                "lv": 1,
+                "hex": "05"
+            },
+            {
+                "sname": "满足感",
+                "lv": 2,
+                "hex": "5A"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 2,
+        "def_t": -3,
+        "def_i": 1,
+        "def_d": -1,
+        "rare9": false
+    },
+    "383_4": {
+        "id": 383,
+        "name": "泡狐龙X腰甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 114,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "泡沫之舞",
+                "lv": 1,
+                "hex": "40"
+            },
+            {
+                "sname": "满足感",
+                "lv": 1,
+                "hex": "5A"
+            },
+            {
+                "sname": "体术",
+                "lv": 1,
+                "hex": "21"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 2,
+        "def_t": -3,
+        "def_i": 1,
+        "def_d": -1,
+        "rare9": false
+    },
+    "383_5": {
+        "id": 383,
+        "name": "泡狐龙X护腿",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "泡沫之舞",
+                "lv": 1,
+                "hex": "40"
+            },
+            {
+                "sname": "回避性能",
+                "lv": 1,
+                "hex": "41"
+            },
+            {
+                "sname": "体术",
+                "lv": 1,
+                "hex": "21"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 2,
+        "def_t": -3,
+        "def_i": 1,
+        "def_d": -1,
+        "rare9": false
+    },
+    "384_1": {
+        "id": 384,
+        "name": "旅团X帽",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 106,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "植生学",
+                "lv": 2,
+                "hex": "4F"
+            },
+            {
+                "sname": "精灵加护",
+                "lv": 2,
+                "hex": "39"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 0,
+        "def_t": 2,
+        "def_i": 0,
+        "def_d": 2,
+        "rare9": false
+    },
+    "384_2": {
+        "id": 384,
+        "name": "旅团X战衣",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 106,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "捕获名人",
+                "lv": 1,
+                "hex": "52"
+            },
+            {
+                "sname": "地质学",
+                "lv": 1,
+                "hex": "50"
+            },
+            {
+                "sname": "跑者",
+                "lv": 1,
+                "hex": "20"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 0,
+        "def_t": 2,
+        "def_i": 0,
+        "def_d": 2,
+        "rare9": false
+    },
+    "384_3": {
+        "id": 384,
+        "name": "旅团X腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 2,
+        "slotLv4": 0,
+        "bougyo": 106,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "地质学",
+                "lv": 2,
+                "hex": "50"
+            },
+            {
+                "sname": "提供",
+                "lv": 1,
+                "hex": "7B"
+            },
+            {
+                "sname": "精灵加护",
+                "lv": 1,
+                "hex": "39"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 0,
+        "def_t": 2,
+        "def_i": 0,
+        "def_d": 2,
+        "rare9": false
+    },
+    "384_4": {
+        "id": 384,
+        "name": "旅团X腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 106,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "幸运",
+                "lv": 2,
+                "hex": "54"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 0,
+        "def_t": 2,
+        "def_i": 0,
+        "def_d": 2,
+        "rare9": false
+    },
+    "384_5": {
+        "id": 384,
+        "name": "旅团X靴",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 106,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "剥取铁人",
+                "lv": 1,
+                "hex": "5F"
+            },
+            {
+                "sname": "植生学",
+                "lv": 2,
+                "hex": "4F"
+            },
+            {
+                "sname": "跑者",
+                "lv": 2,
+                "hex": "20"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 0,
+        "def_t": 2,
+        "def_i": 0,
+        "def_d": 2,
+        "rare9": false
+    },
+    "386_1": {
+        "id": 386,
+        "name": "大名盾蟹头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 94,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "纳刀术",
+                "lv": 2,
+                "hex": "28"
+            },
+            {
+                "sname": "耐震",
+                "lv": 2,
+                "hex": "3F"
+            }
+        ],
+        "def_f": -5,
+        "def_w": 1,
+        "def_t": -3,
+        "def_i": -1,
+        "def_d": 2,
+        "rare9": false
+    },
+    "386_2": {
+        "id": 386,
+        "name": "大名盾蟹铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 94,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "防御性能",
+                "lv": 3,
+                "hex": "23"
+            },
+            {
+                "sname": "炮弹装填",
+                "lv": 1,
+                "hex": "2E"
+            },
+            {
+                "sname": "通常弹・连射箭强化",
+                "lv": 1,
+                "hex": "30"
+            },
+            {
+                "sname": "装填扩充",
+                "lv": 1,
+                "hex": "33"
+            }
+        ],
+        "def_f": -5,
+        "def_w": 1,
+        "def_t": -3,
+        "def_i": -1,
+        "def_d": 2,
+        "rare9": false
+    },
+    "386_3": {
+        "id": 386,
+        "name": "大名盾蟹腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 94,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "防御性能",
+                "lv": 2,
+                "hex": "23"
+            },
+            {
+                "sname": "防御强化",
+                "lv": 1,
+                "hex": "24"
+            },
+            {
+                "sname": "通常弹・连射箭强化",
+                "lv": 2,
+                "hex": "30"
+            }
+        ],
+        "def_f": -5,
+        "def_w": 1,
+        "def_t": -3,
+        "def_i": -1,
+        "def_d": 2,
+        "rare9": false
+    },
+    "386_4": {
+        "id": 386,
+        "name": "大名盾蟹腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 94,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "零件改造",
+                "lv": 1,
+                "hex": "7E"
+            },
+            {
+                "sname": "匠",
+                "lv": 1,
+                "hex": "16"
+            },
+            {
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
+            }
+        ],
+        "def_f": -5,
+        "def_w": 1,
+        "def_t": -3,
+        "def_i": -1,
+        "def_d": 2,
+        "rare9": false
+    },
+    "386_5": {
+        "id": 386,
+        "name": "大名盾蟹护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 94,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "零件改造",
+                "lv": 1,
+                "hex": "7E"
+            },
+            {
+                "sname": "匠",
+                "lv": 1,
+                "hex": "16"
+            },
+            {
+                "sname": "耐震",
+                "lv": 1,
+                "hex": "3F"
+            }
+        ],
+        "def_f": -5,
+        "def_w": 1,
+        "def_t": -3,
+        "def_i": -1,
+        "def_d": 2,
+        "rare9": false
+    },
+    "387_1": {
+        "id": 387,
+        "name": "将军镰蟹头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "看破",
+                "lv": 1,
+                "hex": "06"
+            },
+            {
+                "sname": "无伤",
+                "lv": 2,
+                "hex": "03"
+            }
+        ],
+        "def_f": -3,
+        "def_w": 1,
+        "def_t": -4,
+        "def_i": -1,
+        "def_d": 2,
+        "rare9": false
+    },
+    "387_2": {
+        "id": 387,
+        "name": "将军镰蟹铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "打磨术【锐】",
+                "lv": 1,
+                "hex": "7F"
+            },
+            {
+                "sname": "跑者",
+                "lv": 2,
+                "hex": "20"
+            },
+            {
+                "sname": "看破",
+                "lv": 1,
+                "hex": "06"
+            }
+        ],
+        "def_f": -3,
+        "def_w": 1,
+        "def_t": -4,
+        "def_i": -1,
+        "def_d": 2,
+        "rare9": false
+    },
+    "387_3": {
+        "id": 387,
+        "name": "将军镰蟹腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "打磨术【锐】",
+                "lv": 1,
+                "hex": "7F"
+            },
+            {
+                "sname": "无伤",
+                "lv": 1,
+                "hex": "03"
+            },
+            {
+                "sname": "看破",
+                "lv": 2,
+                "hex": "06"
+            },
+            {
+                "sname": "贯穿弹・贯穿箭强化",
+                "lv": 1,
+                "hex": "31"
+            }
+        ],
+        "def_f": -3,
+        "def_w": 1,
+        "def_t": -4,
+        "def_i": -1,
+        "def_d": 2,
+        "rare9": false
+    },
+    "387_4": {
+        "id": 387,
+        "name": "将军镰蟹腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "打磨术【锐】",
+                "lv": 1,
+                "hex": "7F"
+            },
+            {
+                "sname": "匠",
+                "lv": 1,
+                "hex": "16"
+            },
+            {
+                "sname": "看破",
+                "lv": 2,
+                "hex": "06"
+            }
+        ],
+        "def_f": -3,
+        "def_w": 1,
+        "def_t": -4,
+        "def_i": -1,
+        "def_d": 2,
+        "rare9": false
+    },
+    "387_5": {
+        "id": 387,
+        "name": "将军镰蟹护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "看破",
+                "lv": 1,
+                "hex": "06"
+            },
+            {
+                "sname": "跑者",
+                "lv": 1,
+                "hex": "20"
+            },
+            {
+                "sname": "匠",
+                "lv": 2,
+                "hex": "16"
+            },
+            {
+                "sname": "贯穿弹・贯穿箭强化",
+                "lv": 2,
+                "hex": "31"
+            }
+        ],
+        "def_f": -3,
+        "def_w": 1,
+        "def_t": -4,
+        "def_i": -1,
+        "def_d": 2,
+        "rare9": false
+    },
+    "388_1": {
+        "id": 388,
+        "name": "怒天毛发",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 9,
+        "slotLv1": 3,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "激昂",
+                "lv": 1,
+                "hex": "72"
+            },
+            {
+                "sname": "看破",
+                "lv": 1,
+                "hex": "06"
+            },
+            {
+                "sname": "利刃",
+                "lv": 2,
+                "hex": "17"
+            },
+            {
+                "sname": "弹丸节约",
+                "lv": 2,
+                "hex": "18"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 1,
+        "def_t": 3,
+        "def_i": -5,
+        "def_d": 2,
+        "rare9": true
+    },
+    "388_2": {
+        "id": 388,
+        "name": "怒天羽织",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "连击",
+                "lv": 1,
+                "hex": "83"
+            },
+            {
+                "sname": "精神抖擞",
+                "lv": 2,
+                "hex": "0A"
+            },
+            {
+                "sname": "回避距离提升",
+                "lv": 1,
+                "hex": "42"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 1,
+        "def_t": 3,
+        "def_i": -5,
+        "def_d": 2,
+        "rare9": true
+    },
+    "388_3": {
+        "id": 388,
+        "name": "怒天臂甲",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "激昂",
+                "lv": 1,
+                "hex": "72"
+            },
+            {
+                "sname": "看破",
+                "lv": 2,
+                "hex": "06"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 1,
+        "def_t": 3,
+        "def_i": -5,
+        "def_d": 2,
+        "rare9": true
+    },
+    "388_4": {
+        "id": 388,
+        "name": "怒天带",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "连击",
+                "lv": 1,
+                "hex": "83"
+            },
+            {
+                "sname": "会心击【属性】",
+                "lv": 2,
+                "hex": "0B"
+            },
+            {
+                "sname": "利刃",
+                "lv": 1,
+                "hex": "17"
+            },
+            {
+                "sname": "弹丸节约",
+                "lv": 1,
+                "hex": "18"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 1,
+        "def_t": 3,
+        "def_i": -5,
+        "def_d": 2,
+        "rare9": true
+    },
+    "388_5": {
+        "id": 388,
+        "name": "怒天下裳",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "激昂",
+                "lv": 1,
+                "hex": "72"
+            },
+            {
+                "sname": "回避距离提升",
+                "lv": 2,
+                "hex": "42"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 1,
+        "def_t": 3,
+        "def_i": -5,
+        "def_d": 2,
+        "rare9": true
+    },
+    "389_1": {
+        "id": 389,
+        "name": "黑蚀龙头盔",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "挑战者",
+                "lv": 1,
+                "hex": "02"
+            },
+            {
+                "sname": "体术",
+                "lv": 2,
+                "hex": "21"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 3,
+        "def_t": -1,
+        "def_i": 2,
+        "def_d": -1,
+        "rare9": false
+    },
+    "389_2": {
+        "id": 389,
+        "name": "黑蚀龙铠甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "因祸得福",
+                "lv": 1,
+                "hex": "74"
+            },
+            {
+                "sname": "体术",
+                "lv": 3,
+                "hex": "21"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 3,
+        "def_t": -1,
+        "def_i": 2,
+        "def_d": -1,
+        "rare9": false
+    },
+    "389_3": {
+        "id": 389,
+        "name": "黑蚀龙腕甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "因祸得福",
+                "lv": 1,
+                "hex": "74"
+            },
+            {
+                "sname": "快吃",
+                "lv": 2,
+                "hex": "3C"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 3,
+        "def_t": -1,
+        "def_i": 2,
+        "def_d": -1,
+        "rare9": false
+    },
+    "389_4": {
+        "id": 389,
+        "name": "黑蚀龙腰甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "因祸得福",
+                "lv": 1,
+                "hex": "74"
+            },
+            {
+                "sname": "挑战者",
+                "lv": 1,
+                "hex": "02"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 3,
+        "def_t": -1,
+        "def_i": 2,
+        "def_d": -1,
+        "rare9": false
+    },
+    "389_5": {
+        "id": 389,
+        "name": "黑蚀龙护腿",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 3,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "挑战者",
+                "lv": 3,
+                "hex": "02"
+            },
+            {
+                "sname": "快吃",
+                "lv": 1,
+                "hex": "3C"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 3,
+        "def_t": -1,
+        "def_i": 2,
+        "def_d": -1,
+        "rare9": false
+    },
     "390_1": {
         "id": 390,
-        "name": "方舟頭盔",
+        "name": "方舟头盔",
         "rank": 9,
         "gender": "男性专用",
         "parts": "头",
@@ -17620,7 +13968,7 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "狂龙症【蚀】",
@@ -17642,7 +13990,7 @@ var armor_list = {
     },
     "390_2": {
         "id": 390,
-        "name": "方舟鎧甲",
+        "name": "方舟铠甲",
         "rank": 9,
         "gender": "男性专用",
         "parts": "身",
@@ -17653,7 +14001,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "狂龙症【蚀】",
@@ -17676,7 +14024,7 @@ var armor_list = {
         "def_t": -1,
         "def_i": 2,
         "def_d": -4,
-        "rare9": true
+        "rare9": false
     },
     "390_3": {
         "id": 390,
@@ -17691,7 +14039,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "会心击【属性】",
@@ -17724,7 +14072,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "因祸得福",
@@ -17737,7 +14085,7 @@ var armor_list = {
                 "hex": "17"
             },
             {
-                "sname": "弹药节制",
+                "sname": "弹丸节约",
                 "lv": 2,
                 "hex": "18"
             }
@@ -17751,7 +14099,7 @@ var armor_list = {
     },
     "390_5": {
         "id": 390,
-        "name": "方舟護腿",
+        "name": "方舟护腿",
         "rank": 9,
         "gender": "男性专用",
         "parts": "腿",
@@ -17762,7 +14110,7 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "狂龙症【蚀】",
@@ -17775,7 +14123,7 @@ var armor_list = {
                 "hex": "17"
             },
             {
-                "sname": "弹药节制",
+                "sname": "弹丸节约",
                 "lv": 1,
                 "hex": "18"
             }
@@ -17789,7 +14137,7 @@ var armor_list = {
     },
     "391_1": {
         "id": 391,
-        "name": "友愛頭盔",
+        "name": "友爱头盔",
         "rank": 9,
         "gender": "女性专用",
         "parts": "头",
@@ -17800,7 +14148,7 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "狂龙症【蚀】",
@@ -17822,7 +14170,7 @@ var armor_list = {
     },
     "391_2": {
         "id": 391,
-        "name": "友愛鎧甲",
+        "name": "友爱铠甲",
         "rank": 9,
         "gender": "女性专用",
         "parts": "身",
@@ -17833,7 +14181,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "狂龙症【蚀】",
@@ -17856,11 +14204,11 @@ var armor_list = {
         "def_t": -1,
         "def_i": 2,
         "def_d": -4,
-        "rare9": true
+        "rare9": false
     },
     "391_3": {
         "id": 391,
-        "name": "友愛腕甲",
+        "name": "友爱腕甲",
         "rank": 9,
         "gender": "女性专用",
         "parts": "手",
@@ -17871,7 +14219,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "会心击【属性】",
@@ -17893,7 +14241,7 @@ var armor_list = {
     },
     "391_4": {
         "id": 391,
-        "name": "友愛腰甲",
+        "name": "友爱腰甲",
         "rank": 9,
         "gender": "女性专用",
         "parts": "腰",
@@ -17904,7 +14252,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "因祸得福",
@@ -17917,7 +14265,7 @@ var armor_list = {
                 "hex": "17"
             },
             {
-                "sname": "弹药节制",
+                "sname": "弹丸节约",
                 "lv": 2,
                 "hex": "18"
             }
@@ -17931,7 +14279,7 @@ var armor_list = {
     },
     "391_5": {
         "id": 391,
-        "name": "友愛護腿",
+        "name": "友爱护腿",
         "rank": 9,
         "gender": "女性专用",
         "parts": "腿",
@@ -17942,7 +14290,7 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 120,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "狂龙症【蚀】",
@@ -17955,7 +14303,7 @@ var armor_list = {
                 "hex": "17"
             },
             {
-                "sname": "弹药节制",
+                "sname": "弹丸节约",
                 "lv": 1,
                 "hex": "18"
             }
@@ -17967,1171 +14315,136 @@ var armor_list = {
         "def_d": -4,
         "rare9": false
     },
-    "402_1": {
-        "id": 402,
-        "name": "爵銀龍頭盔",
+    "392_1": {
+        "id": 392,
+        "name": "千刃龙头盔",
         "rank": 9,
         "gender": "男女共通",
         "parts": "头",
         "parts_id": 1,
         "rare": 8,
         "slotLv1": 0,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 120,
-        "bougyo_max": 140,
-        "skill": [
-            {
-                "sname": "弱点特效",
-                "lv": 1,
-                "hex": "08"
-            },
-            {
-                "sname": "翔虫使",
-                "lv": 2,
-                "hex": "68"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 2,
-        "def_t": 2,
-        "def_i": -1,
-        "def_d": -5,
-        "rare9": false
-    },
-    "402_2": {
-        "id": 402,
-        "name": "爵銀龍鎧甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 120,
-        "bougyo_max": 140,
-        "skill": [
-            {
-                "sname": "气血",
-                "lv": 1,
-                "hex": "70"
-            },
-            {
-                "sname": "弱点特效",
-                "lv": 1,
-                "hex": "08"
-            },
-            {
-                "sname": "破坏王",
-                "lv": 1,
-                "hex": "51"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 2,
-        "def_t": 2,
-        "def_i": -1,
-        "def_d": -5,
-        "rare9": false
-    },
-    "402_3": {
-        "id": 402,
-        "name": "爵銀龍腕甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 120,
-        "bougyo_max": 140,
-        "skill": [
-            {
-                "sname": "翔虫使",
-                "lv": 1,
-                "hex": "68"
-            },
-            {
-                "sname": "攻击",
-                "lv": 2,
-                "hex": "01"
-            },
-            {
-                "sname": "属性异常状态的耐性",
-                "lv": 1,
-                "hex": "48"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 2,
-        "def_t": 2,
-        "def_i": -1,
-        "def_d": -5,
-        "rare9": false
-    },
-    "402_4": {
-        "id": 402,
-        "name": "爵銀龍腰甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 120,
-        "bougyo_max": 140,
-        "skill": [
-            {
-                "sname": "气血",
-                "lv": 2,
-                "hex": "70"
-            },
-            {
-                "sname": "破坏王",
-                "lv": 1,
-                "hex": "51"
-            },
-            {
-                "sname": "攻击",
-                "lv": 1,
-                "hex": "01"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 2,
-        "def_t": 2,
-        "def_i": -1,
-        "def_d": -5,
-        "rare9": false
-    },
-    "402_5": {
-        "id": 402,
-        "name": "爵銀龍護腿",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 120,
-        "bougyo_max": 140,
-        "skill": [
-            {
-                "sname": "属性异常状态的耐性",
-                "lv": 2,
-                "hex": "48"
-            },
-            {
-                "sname": "弱点特效",
-                "lv": 1,
-                "hex": "08"
-            },
-            {
-                "sname": "攻击",
-                "lv": 1,
-                "hex": "01"
-            }
-        ],
-        "def_f": -2,
-        "def_w": 2,
-        "def_t": 2,
-        "def_i": -1,
-        "def_d": -5,
-        "rare9": true
-    },
-    "410_1": {
-        "id": 410,
-        "name": "教授護目鏡",
-        "rank": 9,
-        "gender": "男性专用",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 3,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "回复速度",
-                "lv": 3,
-                "hex": "3B"
-            },
-            {
-                "sname": "耳栓",
-                "lv": 2,
-                "hex": "3D"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": true
-    },
-    "410_2": {
-        "id": 410,
-        "name": "教授外套",
-        "rank": 9,
-        "gender": "男性专用",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "耳栓",
-                "lv": 3,
-                "hex": "3D"
-            },
-            {
-                "sname": "饥饿耐性",
-                "lv": 1,
-                "hex": "60"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": true
-    },
-    "410_3": {
-        "id": 410,
-        "name": "教授手套",
-        "rank": 9,
-        "gender": "男性专用",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "精灵加护",
-                "lv": 3,
-                "hex": "39"
-            },
-            {
-                "sname": "饥饿耐性",
-                "lv": 1,
-                "hex": "60"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": true
-    },
-    "410_4": {
-        "id": 410,
-        "name": "教授下裝",
-        "rank": 9,
-        "gender": "男性专用",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "耐震",
-                "lv": 3,
-                "hex": "3F"
-            },
-            {
-                "sname": "减轻胆怯",
-                "lv": 2,
-                "hex": "5D"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": true
-    },
-    "410_5": {
-        "id": 410,
-        "name": "教授靴",
-        "rank": 9,
-        "gender": "男性专用",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "跑者",
-                "lv": 3,
-                "hex": "20"
-            },
-            {
-                "sname": "饥饿耐性",
-                "lv": 1,
-                "hex": "60"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": true
-    },
-    "411_1": {
-        "id": 411,
-        "name": "博愛髮夾",
-        "rank": 9,
-        "gender": "女性专用",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 3,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "回复速度",
-                "lv": 3,
-                "hex": "3B"
-            },
-            {
-                "sname": "耳栓",
-                "lv": 2,
-                "hex": "3D"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": true
-    },
-    "411_2": {
-        "id": 411,
-        "name": "博愛外套",
-        "rank": 9,
-        "gender": "女性专用",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "耳栓",
-                "lv": 3,
-                "hex": "3D"
-            },
-            {
-                "sname": "饥饿耐性",
-                "lv": 1,
-                "hex": "60"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": true
-    },
-    "411_3": {
-        "id": 411,
-        "name": "博愛護手",
-        "rank": 9,
-        "gender": "女性专用",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "精灵加护",
-                "lv": 3,
-                "hex": "39"
-            },
-            {
-                "sname": "饥饿耐性",
-                "lv": 1,
-                "hex": "60"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": true
-    },
-    "411_4": {
-        "id": 411,
-        "name": "博愛裙",
-        "rank": 9,
-        "gender": "女性专用",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "耐震",
-                "lv": 3,
-                "hex": "3F"
-            },
-            {
-                "sname": "减轻胆怯",
-                "lv": 2,
-                "hex": "5D"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": true
-    },
-    "411_5": {
-        "id": 411,
-        "name": "博愛靴",
-        "rank": 9,
-        "gender": "女性专用",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "跑者",
-                "lv": 3,
-                "hex": "20"
-            },
-            {
-                "sname": "饥饿耐性",
-                "lv": 1,
-                "hex": "60"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": true
-    },
-    "417_1": {
-        "id": 417,
-        "name": "賢者帽",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "广域化",
-                "lv": 3,
-                "hex": "59"
-            },
-            {
-                "sname": "捕获名人",
-                "lv": 1,
-                "hex": "52"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": true
-    },
-    "417_2": {
-        "id": 417,
-        "name": "賢者服裝",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "属性异常状态的耐性",
-                "lv": 3,
-                "hex": "48"
-            },
-            {
-                "sname": "满足感",
-                "lv": 1,
-                "hex": "5A"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "417_3": {
-        "id": 417,
-        "name": "賢者腕甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "体力回复量UP",
-                "lv": 3,
-                "hex": "3A"
-            },
-            {
-                "sname": "满足感",
-                "lv": 1,
-                "hex": "5A"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "417_4": {
-        "id": 417,
-        "name": "賢者腰甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 2,
         "slotLv2": 0,
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 114,
-        "bougyo_max": 134,
+        "bougyo_max": 174,
         "skill": [
             {
-                "sname": "纳刀术",
-                "lv": 3,
-                "hex": "28"
-            },
-            {
-                "sname": "满足感",
+                "sname": "刃鳞打磨",
                 "lv": 1,
-                "hex": "5A"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "417_5": {
-        "id": 417,
-        "name": "賢者靴",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "道具使用强化",
-                "lv": 3,
-                "hex": "58"
+                "hex": "80"
             },
-            {
-                "sname": "广域化",
-                "lv": 2,
-                "hex": "59"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "418_1": {
-        "id": 418,
-        "name": "追蹤者頭飾",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
             {
                 "sname": "体术",
                 "lv": 3,
                 "hex": "21"
-            },
-            {
-                "sname": "回复速度",
-                "lv": 1,
-                "hex": "3B"
             }
         ],
-        "def_f": 2,
-        "def_w": 2,
-        "def_t": 2,
-        "def_i": 2,
-        "def_d": 2,
-        "rare9": false
-    },
-    "418_2": {
-        "id": 418,
-        "name": "追蹤者服飾",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "幸运",
-                "lv": 2,
-                "hex": "54"
-            },
-            {
-                "sname": "回复速度",
-                "lv": 1,
-                "hex": "3B"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 2,
-        "def_t": 2,
-        "def_i": 2,
-        "def_d": 2,
-        "rare9": true
-    },
-    "418_3": {
-        "id": 418,
-        "name": "追蹤者手套",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 3,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "快吃",
-                "lv": 3,
-                "hex": "3C"
-            },
-            {
-                "sname": "最爱蘑菇",
-                "lv": 1,
-                "hex": "57"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 2,
-        "def_t": 2,
-        "def_i": 2,
-        "def_d": 2,
-        "rare9": false
-    },
-    "418_4": {
-        "id": 418,
-        "name": "追蹤者皮帶",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "最爱蘑菇",
-                "lv": 2,
-                "hex": "57"
-            },
-            {
-                "sname": "回复速度",
-                "lv": 1,
-                "hex": "3B"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 2,
-        "def_t": 2,
-        "def_i": 2,
-        "def_d": 2,
-        "rare9": false
-    },
-    "418_5": {
-        "id": 418,
-        "name": "追蹤者長褲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "体术",
-                "lv": 2,
-                "hex": "21"
-            },
-            {
-                "sname": "幸运",
-                "lv": 1,
-                "hex": "54"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 2,
-        "def_t": 2,
-        "def_i": 2,
-        "def_d": 2,
-        "rare9": false
-    },
-    "325_1": {
-        "id": 325,
-        "name": "歌德X帽",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "破坏王",
-                "lv": 1,
-                "hex": "51"
-            },
-            {
-                "sname": "精灵加护",
-                "lv": 1,
-                "hex": "39"
-            },
-            {
-                "sname": "集中",
-                "lv": 1,
-                "hex": "1E"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 3,
-        "def_t": 0,
-        "def_i": 2,
-        "def_d": 0,
-        "rare9": false
-    },
-    "325_2": {
-        "id": 325,
-        "name": "歌德X服飾",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "爆破属性强化",
-                "lv": 2,
-                "hex": "15"
-            },
-            {
-                "sname": "集中",
-                "lv": 1,
-                "hex": "1E"
-            },
-            {
-                "sname": "KO术",
-                "lv": 1,
-                "hex": "29"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 3,
-        "def_t": 0,
-        "def_i": 2,
-        "def_d": 0,
-        "rare9": false
-    },
-    "325_3": {
-        "id": 325,
-        "name": "歌德X手套",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "精灵加护",
-                "lv": 2,
-                "hex": "39"
-            },
-            {
-                "sname": "集中",
-                "lv": 1,
-                "hex": "1E"
-            },
-            {
-                "sname": "KO术",
-                "lv": 1,
-                "hex": "29"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 3,
-        "def_t": 0,
-        "def_i": 2,
-        "def_d": 0,
-        "rare9": false
-    },
-    "325_4": {
-        "id": 325,
-        "name": "歌德X腰甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "破坏王",
-                "lv": 2,
-                "hex": "51"
-            },
-            {
-                "sname": "蓄力大师",
-                "lv": 2,
-                "hex": "7C"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 3,
-        "def_t": 0,
-        "def_i": 2,
-        "def_d": 0,
-        "rare9": false
-    },
-    "325_5": {
-        "id": 325,
-        "name": "歌德X靴",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "爆破属性强化",
-                "lv": 1,
-                "hex": "15"
-            },
-            {
-                "sname": "蓄力大师",
-                "lv": 1,
-                "hex": "7C"
-            },
-            {
-                "sname": "KO术",
-                "lv": 1,
-                "hex": "29"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 3,
-        "def_t": 0,
-        "def_i": 2,
-        "def_d": 0,
-        "rare9": false
-    },
-    "414_1": {
-        "id": 414,
-        "name": "水兵兜帽",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "提供",
-                "lv": 1,
-                "hex": "7B"
-            }
-        ],
-        "def_f": 0,
+        "def_f": 4,
         "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
+        "def_t": -3,
+        "def_i": -2,
         "def_d": 0,
         "rare9": false
     },
-    "414_2": {
-        "id": 414,
-        "name": "水兵服裝",
+    "392_2": {
+        "id": 392,
+        "name": "千刃龙铠甲",
         "rank": 9,
         "gender": "男女共通",
         "parts": "身",
         "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "刃鳞打磨",
+                "lv": 1,
+                "hex": "80"
+            },
+            {
+                "sname": "回避性能",
+                "lv": 3,
+                "hex": "41"
+            }
+        ],
+        "def_f": 4,
+        "def_w": 0,
+        "def_t": -3,
+        "def_i": -2,
+        "def_d": 0,
+        "rare9": false
+    },
+    "392_3": {
+        "id": 392,
+        "name": "千刃龙腕甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "匠",
+                "lv": 3,
+                "hex": "16"
+            }
+        ],
+        "def_f": 4,
+        "def_w": 0,
+        "def_t": -3,
+        "def_i": -2,
+        "def_d": 0,
+        "rare9": false
+    },
+    "392_4": {
+        "id": 392,
+        "name": "千刃龙腰甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
         "rare": 8,
         "slotLv1": 2,
         "slotLv2": 0,
         "slotLv3": 0,
-        "slotLv4": 0,
+        "slotLv4": 1,
         "bougyo": 114,
-        "bougyo_max": 134,
+        "bougyo_max": 174,
         "skill": [
             {
-                "sname": "回避性能",
-                "lv": 4,
-                "hex": "41"
+                "sname": "走壁移动【翔】",
+                "lv": 1,
+                "hex": "81"
             },
             {
-                "sname": "翔虫使",
-                "lv": 1,
-                "hex": "68"
+                "sname": "墙面移动",
+                "lv": 2,
+                "hex": "69"
             }
         ],
-        "def_f": 0,
+        "def_f": 4,
         "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
+        "def_t": -3,
+        "def_i": -2,
         "def_d": 0,
         "rare9": false
     },
-    "414_3": {
-        "id": 414,
-        "name": "水兵手套",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "集中",
-                "lv": 3,
-                "hex": "1E"
-            },
-            {
-                "sname": "翔虫使",
-                "lv": 1,
-                "hex": "68"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "414_4": {
-        "id": 414,
-        "name": "水兵腰甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 114,
-        "bougyo_max": 134,
-        "skill": [
-            {
-                "sname": "钢刃研磨",
-                "lv": 3,
-                "hex": "19"
-            },
-            {
-                "sname": "翔虫使",
-                "lv": 1,
-                "hex": "68"
-            },
-            {
-                "sname": "弹道强化",
-                "lv": 3,
-                "hex": "1B"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": true
-    },
-    "414_5": {
-        "id": 414,
-        "name": "水兵鞋子",
+    "392_5": {
+        "id": 392,
+        "name": "千刃龙护腿",
         "rank": 9,
         "gender": "男女共通",
         "parts": "腿",
@@ -19139,309 +14452,114 @@ var armor_list = {
         "rare": 8,
         "slotLv1": 0,
         "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
         "bougyo": 114,
-        "bougyo_max": 134,
+        "bougyo_max": 174,
         "skill": [
             {
-                "sname": "跑者",
-                "lv": 3,
-                "hex": "20"
+                "sname": "刃鳞打磨",
+                "lv": 1,
+                "hex": "80"
             },
             {
-                "sname": "回避性能",
-                "lv": 1,
-                "hex": "41"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "405_1": {
-        "id": 405,
-        "name": "冥淵纏鎧憤怒之角",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 126,
-        "bougyo_max": 144,
-        "skill": [
-            {
-                "sname": "弱点特效",
-                "lv": 1,
-                "hex": "08"
-            },
-            {
-                "sname": "怨恨",
+                "sname": "回避距离提升",
                 "lv": 2,
-                "hex": "04"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 3,
-        "def_t": -2,
-        "def_i": 3,
-        "def_d": -5,
-        "rare9": false
-    },
-    "405_2": {
-        "id": 405,
-        "name": "冥淵纏鎧憤怒之軀",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 126,
-        "bougyo_max": 144,
-        "skill": [
-            {
-                "sname": "弱点特效",
-                "lv": 1,
-                "hex": "08"
-            },
-            {
-                "sname": "怨恨",
-                "lv": 1,
-                "hex": "04"
-            },
-            {
-                "sname": "连击",
-                "lv": 1,
-                "hex": "83"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 3,
-        "def_t": -2,
-        "def_i": 3,
-        "def_d": -5,
-        "rare9": false
-    },
-    "405_3": {
-        "id": 405,
-        "name": "冥淵纏鎧憤怒之棘",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 126,
-        "bougyo_max": 144,
-        "skill": [
-            {
-                "sname": "伏魔耗命",
-                "lv": 2,
-                "hex": "71"
-            },
-            {
-                "sname": "怨恨",
-                "lv": 1,
-                "hex": "04"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 3,
-        "def_t": -2,
-        "def_i": 3,
-        "def_d": -5,
-        "rare9": false
-    },
-    "405_4": {
-        "id": 405,
-        "name": "冥淵纏鎧憤怒之尾",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 126,
-        "bougyo_max": 144,
-        "skill": [
-            {
-                "sname": "弱点特效",
-                "lv": 1,
-                "hex": "08"
-            },
-            {
-                "sname": "连击",
-                "lv": 2,
-                "hex": "83"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 3,
-        "def_t": -2,
-        "def_i": 3,
-        "def_d": -5,
-        "rare9": true
-    },
-    "405_5": {
-        "id": 405,
-        "name": "冥淵纏鎧憤怒之足",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 2,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 126,
-        "bougyo_max": 144,
-        "skill": [
-            {
-                "sname": "伏魔耗命",
-                "lv": 1,
-                "hex": "71"
-            },
-            {
-                "sname": "怨恨",
-                "lv": 1,
-                "hex": "04"
-            }
-        ],
-        "def_f": 0,
-        "def_w": 3,
-        "def_t": -2,
-        "def_i": 3,
-        "def_d": -5,
-        "rare9": false
-    },
-    "334_1": {
-        "id": 334,
-        "name": "龍捲之首真",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 122,
-        "bougyo_max": 140,
-        "skill": [
-            {
-                "sname": "风纹的一致",
-                "lv": 1,
-                "hex": "6D"
-            },
-            {
-                "sname": "集中",
-                "lv": 1,
-                "hex": "1E"
-            },
-            {
-                "sname": "回避距离UP",
-                "lv": 1,
                 "hex": "42"
-            },
-            {
-                "sname": "风雷合一",
-                "lv": 1,
-                "hex": "6F"
             }
         ],
-        "def_f": -1,
+        "def_f": 4,
         "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": -2,
+        "def_t": -3,
+        "def_i": -2,
+        "def_d": 0,
         "rare9": false
     },
-    "334_2": {
-        "id": 334,
-        "name": "龍捲胸甲真",
-        "rank": 10,
+    "393_1": {
+        "id": 393,
+        "name": "电龙头盔",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 114,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "连击",
+                "lv": 1,
+                "hex": "83"
+            },
+            {
+                "sname": "昏厥耐性",
+                "lv": 2,
+                "hex": "4C"
+            }
+        ],
+        "def_f": 0,
+        "def_w": -1,
+        "def_t": 4,
+        "def_i": -3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "393_2": {
+        "id": 393,
+        "name": "电龙铠甲",
+        "rank": 9,
         "gender": "男女共通",
         "parts": "身",
         "parts_id": 2,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 122,
-        "bougyo_max": 140,
+        "bougyo": 114,
+        "bougyo_max": 174,
         "skill": [
             {
-                "sname": "风纹的一致",
+                "sname": "连击",
                 "lv": 1,
-                "hex": "6D"
+                "hex": "83"
             },
             {
-                "sname": "防御性能",
-                "lv": 1,
-                "hex": "23"
-            },
-            {
-                "sname": "减轻胆怯",
-                "lv": 1,
-                "hex": "5D"
-            },
-            {
-                "sname": "风雷合一",
-                "lv": 1,
-                "hex": "6F"
+                "sname": "耐力急速回复",
+                "lv": 2,
+                "hex": "22"
             }
         ],
-        "def_f": -1,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": -2,
+        "def_f": 0,
+        "def_w": -1,
+        "def_t": 4,
+        "def_i": -3,
+        "def_d": 0,
         "rare9": false
     },
-    "334_3": {
-        "id": 334,
-        "name": "龍捲之臂真",
-        "rank": 10,
+    "393_3": {
+        "id": 393,
+        "name": "电龙腕甲",
+        "rank": 9,
         "gender": "男女共通",
         "parts": "手",
         "parts_id": 3,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 1,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 0,
         "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 122,
-        "bougyo_max": 140,
+        "slotLv4": 1,
+        "bougyo": 114,
+        "bougyo_max": 174,
         "skill": [
             {
-                "sname": "风纹的一致",
+                "sname": "连击",
                 "lv": 1,
-                "hex": "6D"
-            },
-            {
-                "sname": "体术",
-                "lv": 1,
-                "hex": "21"
+                "hex": "83"
             },
             {
                 "sname": "耐力急速回复",
@@ -19449,322 +14567,92 @@ var armor_list = {
                 "hex": "22"
             },
             {
-                "sname": "风雷合一",
+                "sname": "昏厥耐性",
                 "lv": 1,
-                "hex": "6F"
+                "hex": "4C"
             }
         ],
-        "def_f": -1,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": -2,
+        "def_f": 0,
+        "def_w": -1,
+        "def_t": 4,
+        "def_i": -3,
+        "def_d": 0,
         "rare9": false
     },
-    "334_4": {
-        "id": 334,
-        "name": "龍捲之腰真",
-        "rank": 10,
+    "393_4": {
+        "id": 393,
+        "name": "电龙腰甲",
+        "rank": 9,
         "gender": "男女共通",
         "parts": "腰",
         "parts_id": 4,
-        "rare": 9,
-        "slotLv1": 0,
+        "rare": 8,
+        "slotLv1": 1,
         "slotLv2": 1,
         "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 122,
-        "bougyo_max": 140,
+        "bougyo": 114,
+        "bougyo_max": 174,
         "skill": [
             {
-                "sname": "风纹的一致",
-                "lv": 1,
-                "hex": "6D"
-            },
-            {
                 "sname": "强化持续",
-                "lv": 1,
+                "lv": 3,
                 "hex": "1F"
             },
             {
-                "sname": "回避性能",
-                "lv": 1,
-                "hex": "41"
-            },
-            {
-                "sname": "风雷合一",
-                "lv": 1,
-                "hex": "6F"
+                "sname": "砥石使用高速化",
+                "lv": 2,
+                "hex": "55"
             }
         ],
-        "def_f": -1,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": -2,
-        "rare9": true
+        "def_f": 0,
+        "def_w": -1,
+        "def_t": 4,
+        "def_i": -3,
+        "def_d": 0,
+        "rare9": false
     },
-    "334_5": {
-        "id": 334,
-        "name": "龍捲之足真",
-        "rank": 10,
+    "393_5": {
+        "id": 393,
+        "name": "电龙护腿",
+        "rank": 9,
         "gender": "男女共通",
         "parts": "腿",
         "parts_id": 5,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 1,
+        "rare": 8,
+        "slotLv1": 2,
+        "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 122,
-        "bougyo_max": 140,
+        "bougyo": 114,
+        "bougyo_max": 174,
         "skill": [
             {
-                "sname": "风纹的一致",
-                "lv": 1,
-                "hex": "6D"
+                "sname": "利刃",
+                "lv": 3,
+                "hex": "17"
             },
             {
-                "sname": "KO术",
-                "lv": 1,
-                "hex": "29"
+                "sname": "弹丸节约",
+                "lv": 3,
+                "hex": "18"
             },
             {
-                "sname": "防御强化",
-                "lv": 1,
-                "hex": "24"
-            },
-            {
-                "sname": "风雷合一",
-                "lv": 1,
-                "hex": "6F"
+                "sname": "雷属性攻击强化",
+                "lv": 3,
+                "hex": "10"
             }
         ],
-        "def_f": -1,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": -2,
-        "rare9": false
-    },
-    "336_1": {
-        "id": 336,
-        "name": "鳴神之首真",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 122,
-        "bougyo_max": 140,
-        "skill": [
-            {
-                "sname": "雷纹的一致",
-                "lv": 1,
-                "hex": "6E"
-            },
-            {
-                "sname": "高速变形",
-                "lv": 1,
-                "hex": "6B"
-            },
-            {
-                "sname": "攻击守势",
-                "lv": 1,
-                "hex": "25"
-            },
-            {
-                "sname": "风雷合一",
-                "lv": 1,
-                "hex": "6F"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 1,
+        "def_f": 0,
+        "def_w": -1,
         "def_t": 4,
         "def_i": -3,
-        "def_d": -4,
-        "rare9": true
-    },
-    "336_2": {
-        "id": 336,
-        "name": "鳴神胸甲真",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 122,
-        "bougyo_max": 140,
-        "skill": [
-            {
-                "sname": "雷纹的一致",
-                "lv": 1,
-                "hex": "6E"
-            },
-            {
-                "sname": "体术",
-                "lv": 1,
-                "hex": "21"
-            },
-            {
-                "sname": "拔刀术【技】",
-                "lv": 1,
-                "hex": "26"
-            },
-            {
-                "sname": "风雷合一",
-                "lv": 1,
-                "hex": "6F"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 1,
-        "def_t": 4,
-        "def_i": -3,
-        "def_d": -4,
+        "def_d": 0,
         "rare9": false
     },
-    "336_3": {
-        "id": 336,
-        "name": "鳴神之臂真",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 122,
-        "bougyo_max": 140,
-        "skill": [
-            {
-                "sname": "雷纹的一致",
-                "lv": 1,
-                "hex": "6E"
-            },
-            {
-                "sname": "防御性能",
-                "lv": 1,
-                "hex": "23"
-            },
-            {
-                "sname": "破坏王",
-                "lv": 1,
-                "hex": "51"
-            },
-            {
-                "sname": "风雷合一",
-                "lv": 1,
-                "hex": "6F"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 1,
-        "def_t": 4,
-        "def_i": -3,
-        "def_d": -4,
-        "rare9": false
-    },
-    "336_4": {
-        "id": 336,
-        "name": "鳴神之腰真",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 122,
-        "bougyo_max": 140,
-        "skill": [
-            {
-                "sname": "雷纹的一致",
-                "lv": 1,
-                "hex": "6E"
-            },
-            {
-                "sname": "防御性能",
-                "lv": 1,
-                "hex": "23"
-            },
-            {
-                "sname": "炮术",
-                "lv": 1,
-                "hex": "2D"
-            },
-            {
-                "sname": "风雷合一",
-                "lv": 1,
-                "hex": "6F"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 1,
-        "def_t": 4,
-        "def_i": -3,
-        "def_d": -4,
-        "rare9": false
-    },
-    "336_5": {
-        "id": 336,
-        "name": "鳴神之足真",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 122,
-        "bougyo_max": 140,
-        "skill": [
-            {
-                "sname": "雷纹的一致",
-                "lv": 1,
-                "hex": "6E"
-            },
-            {
-                "sname": "回避性能",
-                "lv": 1,
-                "hex": "41"
-            },
-            {
-                "sname": "跑者",
-                "lv": 1,
-                "hex": "20"
-            },
-            {
-                "sname": "风雷合一",
-                "lv": 1,
-                "hex": "6F"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 1,
-        "def_t": 4,
-        "def_i": -3,
-        "def_d": -4,
-        "rare9": false
-    },
-    "367_1": {
-        "id": 367,
-        "name": "赫耀之頭盔･真",
+    "394_1": {
+        "id": 394,
+        "name": "阴阳师【头冠】",
         "rank": 10,
         "gender": "男女共通",
         "parts": "头",
@@ -19774,324 +14662,144 @@ var armor_list = {
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo": 120,
+        "bougyo_max": 176,
         "skill": [
             {
-                "sname": "龙气活性",
+                "sname": "巧击",
                 "lv": 1,
-                "hex": "67"
+                "hex": "78"
             },
             {
-                "sname": "弱点特效",
-                "lv": 1,
-                "hex": "08"
+                "sname": "回避距离提升",
+                "lv": 3,
+                "hex": "42"
             }
         ],
-        "def_f": -2,
-        "def_w": -2,
-        "def_t": -2,
-        "def_i": -2,
-        "def_d": 3,
-        "rare9": false
+        "def_f": 2,
+        "def_w": 0,
+        "def_t": -1,
+        "def_i": -3,
+        "def_d": 1,
+        "rare9": true
     },
-    "367_2": {
-        "id": 367,
-        "name": "赫耀之鎧甲･真",
+    "394_2": {
+        "id": 394,
+        "name": "阴阳师【狩衣】",
         "rank": 10,
         "gender": "男女共通",
         "parts": "身",
         "parts_id": 2,
-        "rare": 9,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 124,
-        "bougyo_max": 142,
-        "skill": [
-            {
-                "sname": "龙气活性",
-                "lv": 1,
-                "hex": "67"
-            },
-            {
-                "sname": "死里逃生",
-                "lv": 2,
-                "hex": "05"
-            }
-        ],
-        "def_f": -2,
-        "def_w": -2,
-        "def_t": -2,
-        "def_i": -2,
-        "def_d": 3,
-        "rare9": false
-    },
-    "367_3": {
-        "id": 367,
-        "name": "赫耀之腕甲･真",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 124,
-        "bougyo_max": 142,
-        "skill": [
-            {
-                "sname": "龙气活性",
-                "lv": 1,
-                "hex": "67"
-            },
-            {
-                "sname": "弱点特效",
-                "lv": 2,
-                "hex": "08"
-            }
-        ],
-        "def_f": -2,
-        "def_w": -2,
-        "def_t": -2,
-        "def_i": -2,
-        "def_d": 3,
-        "rare9": false
-    },
-    "367_4": {
-        "id": 367,
-        "name": "赫耀之腰甲･真",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
         "rare": 9,
         "slotLv1": 1,
         "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 124,
-        "bougyo_max": 142,
-        "skill": [
-            {
-                "sname": "龙气活性",
-                "lv": 1,
-                "hex": "67"
-            },
-            {
-                "sname": "死里逃生",
-                "lv": 1,
-                "hex": "05"
-            },
-            {
-                "sname": "怨恨",
-                "lv": 2,
-                "hex": "04"
-            }
-        ],
-        "def_f": -2,
-        "def_w": -2,
-        "def_t": -2,
-        "def_i": -2,
-        "def_d": 3,
-        "rare9": false
-    },
-    "367_5": {
-        "id": 367,
-        "name": "赫耀之護腿･真",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 9,
-        "slotLv1": 1,
-        "slotLv2": 0,
         "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo": 120,
+        "bougyo_max": 176,
         "skill": [
             {
-                "sname": "龙气活性",
+                "sname": "嘲讽防御",
                 "lv": 1,
-                "hex": "67"
+                "hex": "79"
             },
             {
-                "sname": "怨恨",
-                "lv": 3,
-                "hex": "04"
+                "sname": "弱点特效",
+                "lv": 1,
+                "hex": "08"
+            },
+            {
+                "sname": "耐力急速回复",
+                "lv": 2,
+                "hex": "22"
             }
         ],
-        "def_f": -2,
-        "def_w": -2,
-        "def_t": -2,
-        "def_i": -2,
-        "def_d": 3,
+        "def_f": 2,
+        "def_w": 0,
+        "def_t": -1,
+        "def_i": -3,
+        "def_d": 1,
         "rare9": true
     },
-    "388_1": {
-        "id": 388,
-        "name": "怒天毛髮",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 9,
-        "slotLv1": 3,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 122,
-        "bougyo_max": 140,
-        "skill": [
-            {
-                "sname": "激昂",
-                "lv": 1,
-                "hex": "72"
-            },
-            {
-                "sname": "看破",
-                "lv": 1,
-                "hex": "06"
-            },
-            {
-                "sname": "利刃",
-                "lv": 2,
-                "hex": "17"
-            },
-            {
-                "sname": "弹药节制",
-                "lv": 2,
-                "hex": "18"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 1,
-        "def_t": 3,
-        "def_i": -5,
-        "def_d": 2,
-        "rare9": false
-    },
-    "388_2": {
-        "id": 388,
-        "name": "怒天羽織",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 122,
-        "bougyo_max": 140,
-        "skill": [
-            {
-                "sname": "连击",
-                "lv": 1,
-                "hex": "83"
-            },
-            {
-                "sname": "精神抖擞",
-                "lv": 2,
-                "hex": "0A"
-            },
-            {
-                "sname": "回避距离UP",
-                "lv": 1,
-                "hex": "42"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 1,
-        "def_t": 3,
-        "def_i": -5,
-        "def_d": 2,
-        "rare9": false
-    },
-    "388_3": {
-        "id": 388,
-        "name": "怒天臂甲",
+    "394_3": {
+        "id": 394,
+        "name": "阴阳师【手甲】",
         "rank": 10,
         "gender": "男女共通",
         "parts": "手",
         "parts_id": 3,
         "rare": 9,
         "slotLv1": 0,
-        "slotLv2": 0,
+        "slotLv2": 3,
         "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 122,
-        "bougyo_max": 140,
+        "slotLv4": 0,
+        "bougyo": 120,
+        "bougyo_max": 176,
         "skill": [
             {
-                "sname": "激昂",
+                "sname": "嘲讽防御",
                 "lv": 1,
-                "hex": "72"
+                "hex": "79"
             },
             {
-                "sname": "看破",
+                "sname": "挑战者",
                 "lv": 2,
-                "hex": "06"
+                "hex": "02"
+            },
+            {
+                "sname": "耐力急速回复",
+                "lv": 1,
+                "hex": "22"
             }
         ],
         "def_f": 2,
-        "def_w": 1,
-        "def_t": 3,
-        "def_i": -5,
-        "def_d": 2,
-        "rare9": false
+        "def_w": 0,
+        "def_t": -1,
+        "def_i": -3,
+        "def_d": 1,
+        "rare9": true
     },
-    "388_4": {
-        "id": 388,
-        "name": "怒天帶",
+    "394_4": {
+        "id": 394,
+        "name": "阴阳师【腰带】",
         "rank": 10,
         "gender": "男女共通",
         "parts": "腰",
         "parts_id": 4,
         "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
+        "slotLv1": 1,
+        "slotLv2": 2,
+        "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 122,
-        "bougyo_max": 140,
+        "bougyo": 120,
+        "bougyo_max": 176,
         "skill": [
             {
-                "sname": "连击",
+                "sname": "嘲讽防御",
                 "lv": 1,
-                "hex": "83"
+                "hex": "79"
             },
             {
-                "sname": "会心击【属性】",
-                "lv": 2,
-                "hex": "0B"
+                "sname": "挑战者",
+                "lv": 3,
+                "hex": "02"
             },
             {
-                "sname": "利刃",
+                "sname": "巧击",
                 "lv": 1,
-                "hex": "17"
-            },
-            {
-                "sname": "弹药节制",
-                "lv": 1,
-                "hex": "18"
+                "hex": "78"
             }
         ],
         "def_f": 2,
-        "def_w": 1,
-        "def_t": 3,
-        "def_i": -5,
-        "def_d": 2,
-        "rare9": false
+        "def_w": 0,
+        "def_t": -1,
+        "def_i": -3,
+        "def_d": 1,
+        "rare9": true
     },
-    "388_5": {
-        "id": 388,
-        "name": "怒天下裳",
+    "394_5": {
+        "id": 394,
+        "name": "阴阳师【裙裤】",
         "rank": 10,
         "gender": "男女共通",
         "parts": "腿",
@@ -20101,30 +14809,35 @@ var armor_list = {
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 122,
-        "bougyo_max": 140,
+        "bougyo": 120,
+        "bougyo_max": 176,
         "skill": [
             {
-                "sname": "激昂",
-                "lv": 1,
-                "hex": "72"
+                "sname": "减轻胆怯",
+                "lv": 3,
+                "hex": "5D"
             },
             {
-                "sname": "回避距离UP",
+                "sname": "弱点特效",
                 "lv": 2,
-                "hex": "42"
+                "hex": "08"
+            },
+            {
+                "sname": "攻击守势",
+                "lv": 2,
+                "hex": "25"
             }
         ],
         "def_f": 2,
-        "def_w": 1,
-        "def_t": 3,
-        "def_i": -5,
-        "def_d": 2,
+        "def_w": 0,
+        "def_t": -1,
+        "def_i": -3,
+        "def_d": 1,
         "rare9": true
     },
     "395_1": {
         "id": 395,
-        "name": "禍鎧･怨【武士盔】",
+        "name": "祸铠・怨【武士盔】",
         "rank": 10,
         "gender": "男女共通",
         "parts": "头",
@@ -20135,7 +14848,7 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo_max": 180,
         "skill": [
             {
                 "sname": "鬼火缠",
@@ -20162,7 +14875,7 @@ var armor_list = {
     },
     "395_2": {
         "id": 395,
-        "name": "禍鎧･怨【胸甲】",
+        "name": "祸铠・怨【胸甲】",
         "rank": 10,
         "gender": "男女共通",
         "parts": "身",
@@ -20173,7 +14886,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo_max": 180,
         "skill": [
             {
                 "sname": "业铠【修罗】",
@@ -20191,11 +14904,11 @@ var armor_list = {
         "def_t": -2,
         "def_i": 1,
         "def_d": 1,
-        "rare9": false
+        "rare9": true
     },
     "395_3": {
         "id": 395,
-        "name": "禍鎧･怨【臂甲】",
+        "name": "祸铠・怨【臂甲】",
         "rank": 10,
         "gender": "男女共通",
         "parts": "手",
@@ -20206,7 +14919,7 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo_max": 180,
         "skill": [
             {
                 "sname": "业铠【修罗】",
@@ -20233,7 +14946,7 @@ var armor_list = {
     },
     "395_4": {
         "id": 395,
-        "name": "禍鎧･怨【腰具】",
+        "name": "祸铠・怨【腰具】",
         "rank": 10,
         "gender": "男女共通",
         "parts": "腰",
@@ -20244,7 +14957,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo_max": 180,
         "skill": [
             {
                 "sname": "业铠【修罗】",
@@ -20262,11 +14975,11 @@ var armor_list = {
         "def_t": -2,
         "def_i": 1,
         "def_d": 1,
-        "rare9": false
+        "rare9": true
     },
     "395_5": {
         "id": 395,
-        "name": "禍鎧･怨【腿甲】",
+        "name": "祸铠・怨【腿甲】",
         "rank": 10,
         "gender": "男女共通",
         "parts": "腿",
@@ -20277,7 +14990,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo_max": 180,
         "skill": [
             {
                 "sname": "鬼火缠",
@@ -20300,539 +15013,868 @@ var armor_list = {
         "def_t": -2,
         "def_i": 1,
         "def_d": 1,
+        "rare9": true
+    },
+    "396_1": {
+        "id": 396,
+        "name": "天狗兽Z头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "爆破属性强化",
+                "lv": 1,
+                "hex": "15"
+            },
+            {
+                "sname": "力量解放",
+                "lv": 2,
+                "hex": "09"
+            }
+        ],
+        "def_f": 2,
+        "def_w": -4,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": 2,
         "rare9": false
     },
-    "419_1": {
-        "id": 419,
-        "name": "據點司令【耳飾】",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 118,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "广域化",
-                "lv": 3,
-                "hex": "59"
-            },
-            {
-                "sname": "集中",
-                "lv": 3,
-                "hex": "1E"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": true
-    },
-    "419_2": {
-        "id": 419,
-        "name": "據點司令【鎧甲】",
-        "rank": 10,
+    "396_2": {
+        "id": 396,
+        "name": "天狗兽Z铠甲",
+        "rank": 8,
         "gender": "男女共通",
         "parts": "身",
         "parts_id": 2,
-        "rare": 9,
-        "slotLv1": 0,
+        "rare": 7,
+        "slotLv1": 2,
         "slotLv2": 0,
-        "slotLv3": 2,
-        "slotLv4": 0,
-        "bougyo": 118,
-        "bougyo_max": 136,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 96,
+        "bougyo_max": 160,
         "skill": [
             {
-                "sname": "蓄力大师",
+                "sname": "纳刀术",
                 "lv": 1,
-                "hex": "7C"
+                "hex": "28"
             },
             {
-                "sname": "拔刀术【技】",
-                "lv": 1,
-                "hex": "26"
+                "sname": "火耐性",
+                "lv": 2,
+                "hex": "43"
+            },
+            {
+                "sname": "回复速度",
+                "lv": 3,
+                "hex": "3B"
             }
         ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": true
+        "def_f": 2,
+        "def_w": -4,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": 2,
+        "rare9": false
     },
-    "419_3": {
-        "id": 419,
-        "name": "據點司令【手甲】",
-        "rank": 10,
+    "396_3": {
+        "id": 396,
+        "name": "天狗兽Z腕甲",
+        "rank": 8,
         "gender": "男女共通",
         "parts": "手",
         "parts_id": 3,
-        "rare": 9,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "力量解放",
+                "lv": 3,
+                "hex": "09"
+            },
+            {
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
+            }
+        ],
+        "def_f": 2,
+        "def_w": -4,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": 2,
+        "rare9": false
+    },
+    "396_4": {
+        "id": 396,
+        "name": "天狗兽Z腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 96,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "爆破属性强化",
+                "lv": 2,
+                "hex": "15"
+            },
+            {
+                "sname": "匠",
+                "lv": 2,
+                "hex": "16"
+            },
+            {
+                "sname": "散弹・扩散箭强化",
+                "lv": 2,
+                "hex": "32"
+            }
+        ],
+        "def_f": 2,
+        "def_w": -4,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": 2,
+        "rare9": false
+    },
+    "396_5": {
+        "id": 396,
+        "name": "天狗兽Z护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
         "slotLv1": 1,
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 118,
-        "bougyo_max": 136,
+        "bougyo": 96,
+        "bougyo_max": 160,
         "skill": [
             {
-                "sname": "蓄力大师",
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
+            },
+            {
+                "sname": "刚刃打磨",
                 "lv": 2,
-                "hex": "7C"
+                "hex": "19"
             },
             {
-                "sname": "纳刀术",
+                "sname": "散弹・扩散箭强化",
                 "lv": 1,
-                "hex": "28"
+                "hex": "32"
             }
         ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": true
+        "def_f": 2,
+        "def_w": -4,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": 2,
+        "rare9": false
     },
-    "419_4": {
-        "id": 419,
-        "name": "據點司令【腰甲】",
-        "rank": 10,
+    "397_1": {
+        "id": 397,
+        "name": "人鱼龙Z头盔",
+        "rank": 8,
         "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 118,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "拔刀术【力】",
-                "lv": 3,
-                "hex": "27"
-            },
-            {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": true
-    },
-    "419_5": {
-        "id": 419,
-        "name": "據點司令【腿甲】",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 9,
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
         "slotLv1": 0,
         "slotLv2": 2,
         "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 118,
-        "bougyo_max": 136,
+        "bougyo": 108,
+        "bougyo_max": 168,
         "skill": [
             {
-                "sname": "拔刀术【技】",
-                "lv": 2,
-                "hex": "26"
-            },
-            {
-                "sname": "纳刀术",
+                "sname": "达人艺",
                 "lv": 1,
-                "hex": "28"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": true
-    },
-    "420_1": {
-        "id": 420,
-        "name": "據點司令【耳飾】",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 118,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "广域化",
-                "lv": 3,
-                "hex": "59"
+                "hex": "0C"
             },
             {
-                "sname": "集中",
-                "lv": 3,
-                "hex": "1E"
+                "sname": "挑战者",
+                "lv": 2,
+                "hex": "02"
             }
         ],
-        "def_f": 1,
+        "def_f": -3,
         "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": true
+        "def_t": -1,
+        "def_i": 3,
+        "def_d": 2,
+        "rare9": false
     },
-    "420_2": {
-        "id": 420,
-        "name": "據點司令【鎧甲】",
-        "rank": 10,
+    "397_2": {
+        "id": 397,
+        "name": "人鱼龙Z铠甲",
+        "rank": 8,
         "gender": "男女共通",
         "parts": "身",
         "parts_id": 2,
-        "rare": 9,
+        "rare": 7,
         "slotLv1": 0,
         "slotLv2": 0,
-        "slotLv3": 2,
-        "slotLv4": 0,
-        "bougyo": 118,
-        "bougyo_max": 136,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 108,
+        "bougyo_max": 168,
         "skill": [
             {
-                "sname": "蓄力大师",
+                "sname": "会心击【属性】",
                 "lv": 1,
-                "hex": "7C"
+                "hex": "0B"
             },
             {
-                "sname": "拔刀术【技】",
-                "lv": 1,
-                "hex": "26"
+                "sname": "挑战者",
+                "lv": 2,
+                "hex": "02"
             }
         ],
-        "def_f": 1,
+        "def_f": -3,
         "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": true
+        "def_t": -1,
+        "def_i": 3,
+        "def_d": 2,
+        "rare9": false
     },
-    "420_3": {
-        "id": 420,
-        "name": "據點司令【手甲】",
-        "rank": 10,
+    "397_3": {
+        "id": 397,
+        "name": "人鱼龙Z腕甲",
+        "rank": 8,
         "gender": "男女共通",
         "parts": "手",
         "parts_id": 3,
-        "rare": 9,
+        "rare": 7,
         "slotLv1": 1,
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 118,
-        "bougyo_max": 136,
+        "bougyo": 108,
+        "bougyo_max": 168,
         "skill": [
             {
-                "sname": "蓄力大师",
-                "lv": 2,
-                "hex": "7C"
+                "sname": "会心击【属性】",
+                "lv": 1,
+                "hex": "0B"
             },
             {
-                "sname": "纳刀术",
+                "sname": "达人艺",
                 "lv": 1,
-                "hex": "28"
+                "hex": "0C"
+            },
+            {
+                "sname": "冰属性攻击强化",
+                "lv": 1,
+                "hex": "0F"
             }
         ],
-        "def_f": 1,
+        "def_f": -3,
         "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": true
+        "def_t": -1,
+        "def_i": 3,
+        "def_d": 2,
+        "rare9": false
     },
-    "420_4": {
-        "id": 420,
-        "name": "據點司令【腰甲】",
-        "rank": 10,
+    "397_4": {
+        "id": 397,
+        "name": "人鱼龙Z腰甲",
+        "rank": 8,
         "gender": "男女共通",
         "parts": "腰",
         "parts_id": 4,
-        "rare": 9,
+        "rare": 7,
         "slotLv1": 0,
-        "slotLv2": 0,
+        "slotLv2": 1,
         "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 118,
-        "bougyo_max": 136,
+        "bougyo": 108,
+        "bougyo_max": 168,
         "skill": [
             {
-                "sname": "拔刀术【力】",
-                "lv": 3,
-                "hex": "27"
+                "sname": "达人艺",
+                "lv": 1,
+                "hex": "0C"
             },
             {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
+                "sname": "冰属性攻击强化",
+                "lv": 2,
+                "hex": "0F"
             }
         ],
-        "def_f": 1,
+        "def_f": -3,
         "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": true
+        "def_t": -1,
+        "def_i": 3,
+        "def_d": 2,
+        "rare9": false
     },
-    "420_5": {
-        "id": 420,
-        "name": "據點司令【腿甲】",
-        "rank": 10,
+    "397_5": {
+        "id": 397,
+        "name": "人鱼龙Z护腿",
+        "rank": 8,
         "gender": "男女共通",
         "parts": "腿",
         "parts_id": 5,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 118,
-        "bougyo_max": 136,
-        "skill": [
-            {
-                "sname": "拔刀术【技】",
-                "lv": 2,
-                "hex": "26"
-            },
-            {
-                "sname": "纳刀术",
-                "lv": 1,
-                "hex": "28"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": true
-    },
-    "459_1": {
-        "id": 459,
-        "name": "翔驅羽飾",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 9,
-        "slotLv1": 0,
+        "rare": 7,
+        "slotLv1": 1,
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 116,
-        "bougyo_max": 134,
+        "bougyo": 108,
+        "bougyo_max": 168,
         "skill": [
+            {
+                "sname": "会心击【属性】",
+                "lv": 1,
+                "hex": "0B"
+            },
+            {
+                "sname": "挑战者",
+                "lv": 1,
+                "hex": "02"
+            },
+            {
+                "sname": "冰属性攻击强化",
+                "lv": 2,
+                "hex": "0F"
+            }
+        ],
+        "def_f": -3,
+        "def_w": 1,
+        "def_t": -1,
+        "def_i": 3,
+        "def_d": 2,
+        "rare9": false
+    },
+    "398_1": {
+        "id": 398,
+        "name": "妃蜘蛛Z头盔",
+        "rank": 9,
+        "gender": "男性专用",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "精神抖擞",
+                "lv": 1,
+                "hex": "0A"
+            },
+            {
+                "sname": "爆破属性强化",
+                "lv": 1,
+                "hex": "15"
+            },
             {
                 "sname": "翔虫使",
-                "lv": 3,
+                "lv": 1,
                 "hex": "68"
-            },
-            {
-                "sname": "走壁移动【翔】",
-                "lv": 1,
-                "hex": "81"
             }
         ],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
+        "def_f": 2,
+        "def_w": -4,
+        "def_t": 2,
+        "def_i": -2,
+        "def_d": 2,
         "rare9": false
     },
-    "460_1": {
-        "id": 460,
-        "name": "祝福羽飾",
-        "rank": 10,
+    "398_2": {
+        "id": 398,
+        "name": "妃蜘蛛Z铠甲",
+        "rank": 9,
+        "gender": "男性专用",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "精神抖擞",
+                "lv": 1,
+                "hex": "0A"
+            },
+            {
+                "sname": "翔虫使",
+                "lv": 2,
+                "hex": "68"
+            }
+        ],
+        "def_f": 2,
+        "def_w": -4,
+        "def_t": 2,
+        "def_i": -2,
+        "def_d": 2,
+        "rare9": false
+    },
+    "398_3": {
+        "id": 398,
+        "name": "妃蜘蛛Z腕甲",
+        "rank": 9,
+        "gender": "男性专用",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "精神抖擞",
+                "lv": 1,
+                "hex": "0A"
+            },
+            {
+                "sname": "高速变形",
+                "lv": 2,
+                "hex": "6B"
+            },
+            {
+                "sname": "爆破异常状态的耐性",
+                "lv": 1,
+                "hex": "4E"
+            },
+            {
+                "sname": "零件改造",
+                "lv": 1,
+                "hex": "7E"
+            }
+        ],
+        "def_f": 2,
+        "def_w": -4,
+        "def_t": 2,
+        "def_i": -2,
+        "def_d": 2,
+        "rare9": false
+    },
+    "398_4": {
+        "id": 398,
+        "name": "妃蜘蛛Z腰甲",
+        "rank": 9,
+        "gender": "男性专用",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "无伤",
+                "lv": 2,
+                "hex": "03"
+            },
+            {
+                "sname": "爆破属性强化",
+                "lv": 2,
+                "hex": "15"
+            }
+        ],
+        "def_f": 2,
+        "def_w": -4,
+        "def_t": 2,
+        "def_i": -2,
+        "def_d": 2,
+        "rare9": false
+    },
+    "398_5": {
+        "id": 398,
+        "name": "妃蜘蛛Z护腿",
+        "rank": 9,
+        "gender": "男性专用",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "无伤",
+                "lv": 1,
+                "hex": "03"
+            },
+            {
+                "sname": "爆破异常状态的耐性",
+                "lv": 2,
+                "hex": "4E"
+            }
+        ],
+        "def_f": 2,
+        "def_w": -4,
+        "def_t": 2,
+        "def_i": -2,
+        "def_d": 2,
+        "rare9": false
+    },
+    "399_1": {
+        "id": 399,
+        "name": "妃蜘蛛Z头盔",
+        "rank": 9,
+        "gender": "女性专用",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "精神抖擞",
+                "lv": 1,
+                "hex": "0A"
+            },
+            {
+                "sname": "爆破属性强化",
+                "lv": 1,
+                "hex": "15"
+            },
+            {
+                "sname": "翔虫使",
+                "lv": 1,
+                "hex": "68"
+            }
+        ],
+        "def_f": 2,
+        "def_w": -4,
+        "def_t": 2,
+        "def_i": -2,
+        "def_d": 2,
+        "rare9": false
+    },
+    "399_2": {
+        "id": 399,
+        "name": "妃蜘蛛Z铠甲",
+        "rank": 9,
+        "gender": "女性专用",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "精神抖擞",
+                "lv": 1,
+                "hex": "0A"
+            },
+            {
+                "sname": "翔虫使",
+                "lv": 2,
+                "hex": "68"
+            }
+        ],
+        "def_f": 2,
+        "def_w": -4,
+        "def_t": 2,
+        "def_i": -2,
+        "def_d": 2,
+        "rare9": false
+    },
+    "399_3": {
+        "id": 399,
+        "name": "妃蜘蛛Z腕甲",
+        "rank": 9,
+        "gender": "女性专用",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "精神抖擞",
+                "lv": 1,
+                "hex": "0A"
+            },
+            {
+                "sname": "高速变形",
+                "lv": 2,
+                "hex": "6B"
+            },
+            {
+                "sname": "爆破异常状态的耐性",
+                "lv": 1,
+                "hex": "4E"
+            },
+            {
+                "sname": "零件改造",
+                "lv": 1,
+                "hex": "7E"
+            }
+        ],
+        "def_f": 2,
+        "def_w": -4,
+        "def_t": 2,
+        "def_i": -2,
+        "def_d": 2,
+        "rare9": false
+    },
+    "399_4": {
+        "id": 399,
+        "name": "妃蜘蛛Z腰甲",
+        "rank": 9,
+        "gender": "女性专用",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "无伤",
+                "lv": 2,
+                "hex": "03"
+            },
+            {
+                "sname": "爆破属性强化",
+                "lv": 2,
+                "hex": "15"
+            }
+        ],
+        "def_f": 2,
+        "def_w": -4,
+        "def_t": 2,
+        "def_i": -2,
+        "def_d": 2,
+        "rare9": false
+    },
+    "399_5": {
+        "id": 399,
+        "name": "妃蜘蛛Z护腿",
+        "rank": 9,
+        "gender": "女性专用",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "无伤",
+                "lv": 1,
+                "hex": "03"
+            },
+            {
+                "sname": "爆破异常状态的耐性",
+                "lv": 2,
+                "hex": "4E"
+            }
+        ],
+        "def_f": 2,
+        "def_w": -4,
+        "def_t": 2,
+        "def_i": -2,
+        "def_d": 2,
+        "rare9": false
+    },
+    "400_1": {
+        "id": 400,
+        "name": "泥翁龙Ｚ头盔",
+        "rank": 9,
         "gender": "男女共通",
         "parts": "头",
         "parts_id": 1,
-        "rare": 9,
+        "rare": 8,
         "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 116,
-        "bougyo_max": 134,
+        "bougyo": 112,
+        "bougyo_max": 172,
         "skill": [
             {
-                "sname": "幸运",
+                "sname": "怨恨",
+                "lv": 1,
+                "hex": "04"
+            },
+            {
+                "sname": "火场怪力",
+                "lv": 2,
+                "hex": "5B"
+            },
+            {
+                "sname": "火属性攻击强化",
                 "lv": 3,
-                "hex": "54"
+                "hex": "0D"
             }
         ],
-        "def_f": 0,
-        "def_w": 0,
+        "def_f": 5,
+        "def_w": -5,
         "def_t": 0,
-        "def_i": 0,
+        "def_i": -4,
         "def_d": 0,
         "rare9": false
     },
-    "426_1": {
-        "id": 426,
-        "name": "公會宮殿頭盔",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 120,
-        "bougyo_max": 138,
-        "skill": [
-            {
-                "sname": "挑战者",
-                "lv": 1,
-                "hex": "02"
-            },
-            {
-                "sname": "攻击守势",
-                "lv": 2,
-                "hex": "25"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 2,
-        "def_t": 2,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "426_2": {
-        "id": 426,
-        "name": "公會宮殿鎧甲",
+    "400_2": {
+        "id": 400,
+        "name": "泥翁龙Ｚ铠甲",
         "rank": 9,
         "gender": "男女共通",
         "parts": "身",
         "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 120,
-        "bougyo_max": 138,
-        "skill": [
-            {
-                "sname": "挑战者",
-                "lv": 2,
-                "hex": "02"
-            },
-            {
-                "sname": "火场怪力",
-                "lv": 1,
-                "hex": "5B"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 2,
-        "def_t": 2,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "426_3": {
-        "id": 426,
-        "name": "公會宮殿腕甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 120,
-        "bougyo_max": 138,
-        "skill": [
-            {
-                "sname": "挑战者",
-                "lv": 2,
-                "hex": "02"
-            },
-            {
-                "sname": "因祸得福",
-                "lv": 1,
-                "hex": "74"
-            },
-            {
-                "sname": "走壁移动【翔】",
-                "lv": 1,
-                "hex": "81"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 2,
-        "def_t": 2,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "426_4": {
-        "id": 426,
-        "name": "公會宮殿腰甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
         "rare": 8,
         "slotLv1": 1,
         "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 120,
-        "bougyo_max": 138,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 112,
+        "bougyo_max": 172,
         "skill": [
+            {
+                "sname": "死里逃生",
+                "lv": 1,
+                "hex": "05"
+            },
             {
                 "sname": "火场怪力",
                 "lv": 2,
                 "hex": "5B"
-            },
-            {
-                "sname": "攻击守势",
-                "lv": 1,
-                "hex": "25"
             }
         ],
-        "def_f": 1,
-        "def_w": 2,
-        "def_t": 2,
-        "def_i": 1,
-        "def_d": 1,
+        "def_f": 5,
+        "def_w": -5,
+        "def_t": 0,
+        "def_i": -4,
+        "def_d": 0,
         "rare9": false
     },
-    "426_5": {
-        "id": 426,
-        "name": "公會宮殿護腿",
+    "400_3": {
+        "id": 400,
+        "name": "泥翁龙Ｚ腕甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "怨恨",
+                "lv": 1,
+                "hex": "04"
+            },
+            {
+                "sname": "防御强化",
+                "lv": 2,
+                "hex": "24"
+            },
+            {
+                "sname": "火场怪力",
+                "lv": 1,
+                "hex": "5B"
+            }
+        ],
+        "def_f": 5,
+        "def_w": -5,
+        "def_t": 0,
+        "def_i": -4,
+        "def_d": 0,
+        "rare9": false
+    },
+    "400_4": {
+        "id": 400,
+        "name": "泥翁龙Ｚ腰甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 2,
+        "slotLv4": 0,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "死里逃生",
+                "lv": 1,
+                "hex": "05"
+            },
+            {
+                "sname": "防御强化",
+                "lv": 1,
+                "hex": "24"
+            }
+        ],
+        "def_f": 5,
+        "def_w": -5,
+        "def_t": 0,
+        "def_i": -4,
+        "def_d": 0,
+        "rare9": false
+    },
+    "400_5": {
+        "id": 400,
+        "name": "泥翁龙Ｚ护腿",
         "rank": 9,
         "gender": "男女共通",
         "parts": "腿",
@@ -20840,566 +15882,32 @@ var armor_list = {
         "rare": 8,
         "slotLv1": 0,
         "slotLv2": 0,
-        "slotLv3": 1,
+        "slotLv3": 2,
         "slotLv4": 0,
-        "bougyo": 120,
-        "bougyo_max": 138,
+        "bougyo": 112,
+        "bougyo_max": 172,
         "skill": [
             {
-                "sname": "火场怪力",
-                "lv": 2,
-                "hex": "5B"
+                "sname": "死里逃生",
+                "lv": 1,
+                "hex": "05"
             },
             {
-                "sname": "因祸得福",
-                "lv": 2,
-                "hex": "74"
+                "sname": "怨恨",
+                "lv": 1,
+                "hex": "04"
             }
         ],
-        "def_f": 1,
-        "def_w": 2,
-        "def_t": 2,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-  
-   
-    "446_1": {
-        "id": 446,
-        "name": "幻想寶冠",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
+        "def_f": 5,
+        "def_w": -5,
         "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "447_1": {
-        "id": 447,
-        "name": "雷爾涅亞眼鏡",
-        "rank": 8,
-        "gender": "男性专用",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "447_2": {
-        "id": 447,
-        "name": "雷爾涅亞外套",
-        "rank": 8,
-        "gender": "男性专用",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "447_5": {
-        "id": 447,
-        "name": "雷爾涅亞下裝",
-        "rank": 8,
-        "gender": "男性专用",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "454_1": {
-        "id": 454,
-        "name": "滅龍獵裝【冠帽】",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "454_2": {
-        "id": 454,
-        "name": "滅龍獵裝【上衣】",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "454_3": {
-        "id": 454,
-        "name": "滅龍獵裝【手甲】",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "454_4": {
-        "id": 454,
-        "name": "滅龍獵裝【帶甲】",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "454_5": {
-        "id": 454,
-        "name": "滅龍獵裝【腿甲】",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "455_1": {
-        "id": 455,
-        "name": "龍公禮服【髮飾】",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "455_2": {
-        "id": 455,
-        "name": "龍公禮服【上衣】",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "455_3": {
-        "id": 455,
-        "name": "龍公禮服【手甲】",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "455_4": {
-        "id": 455,
-        "name": "龍公禮服【帶甲】",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "455_5": {
-        "id": 455,
-        "name": "龍公禮服【腿甲】",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "457_1": {
-        "id": 457,
-        "name": "黑帶S頭盔",
-        "rank": 7,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 6,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 66,
-        "bougyo_max": 72,
-        "skill": [
-            {
-                "sname": "攻击",
-                "lv": 1,
-                "hex": "01"
-            },
-            {
-                "sname": "耳栓",
-                "lv": 1,
-                "hex": "3D"
-            },
-            {
-                "sname": "体力回复量UP",
-                "lv": 1,
-                "hex": "3A"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "457_2": {
-        "id": 457,
-        "name": "黑帶S鎧甲",
-        "rank": 7,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 6,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 66,
-        "bougyo_max": 72,
-        "skill": [
-            {
-                "sname": "攻击",
-                "lv": 1,
-                "hex": "01"
-            },
-            {
-                "sname": "耳栓",
-                "lv": 1,
-                "hex": "3D"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "457_3": {
-        "id": 457,
-        "name": "黑帶S腕甲",
-        "rank": 7,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 6,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 66,
-        "bougyo_max": 72,
-        "skill": [
-            {
-                "sname": "攻击",
-                "lv": 1,
-                "hex": "01"
-            },
-            {
-                "sname": "体力回复量UP",
-                "lv": 1,
-                "hex": "3A"
-            },
-            {
-                "sname": "体术",
-                "lv": 1,
-                "hex": "21"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "457_4": {
-        "id": 457,
-        "name": "黑帶S腰甲",
-        "rank": 7,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 6,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 66,
-        "bougyo_max": 72,
-        "skill": [
-            {
-                "sname": "耳栓",
-                "lv": 1,
-                "hex": "3D"
-            },
-            {
-                "sname": "体术",
-                "lv": 2,
-                "hex": "21"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "457_5": {
-        "id": 457,
-        "name": "黑帶S護腿",
-        "rank": 7,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 6,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 66,
-        "bougyo_max": 72,
-        "skill": [
-            {
-                "sname": "攻击",
-                "lv": 1,
-                "hex": "01"
-            },
-            {
-                "sname": "减轻胆怯",
-                "lv": 1,
-                "hex": "5D"
-            },
-            {
-                "sname": "体力回复量UP",
-                "lv": 1,
-                "hex": "3A"
-            }
-        ],
-        "def_f": 1,
-        "def_w": 1,
-        "def_t": 1,
-        "def_i": 1,
-        "def_d": 1,
-        "rare9": false
-    },
-    "461_2": {
-        "id": 461,
-        "name": "艾爾卡多服飾",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "461_5": {
-        "id": 461,
-        "name": "艾爾卡多長褲",
-        "rank": 8,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 7,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
+        "def_i": -4,
         "def_d": 0,
         "rare9": false
     },
     "401_1": {
         "id": 401,
-        "name": "矜持頭盔",
+        "name": "矜持头盔",
         "rank": 10,
         "gender": "男女共通",
         "parts": "头",
@@ -21410,7 +15918,7 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 123,
-        "bougyo_max": 141,
+        "bougyo_max": 179,
         "skill": [
             {
                 "sname": "力量解放",
@@ -21423,7 +15931,7 @@ var armor_list = {
                 "hex": "01"
             },
             {
-                "sname": "耳栓",
+                "sname": "耳塞",
                 "lv": 1,
                 "hex": "3D"
             }
@@ -21433,11 +15941,11 @@ var armor_list = {
         "def_t": -2,
         "def_i": -3,
         "def_d": -1,
-        "rare9": false
+        "rare9": true
     },
     "401_2": {
         "id": 401,
-        "name": "矜持鎧甲",
+        "name": "矜持铠甲",
         "rank": 10,
         "gender": "男女共通",
         "parts": "身",
@@ -21448,7 +15956,7 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 123,
-        "bougyo_max": 141,
+        "bougyo_max": 179,
         "skill": [
             {
                 "sname": "毅力",
@@ -21486,7 +15994,7 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 123,
-        "bougyo_max": 141,
+        "bougyo_max": 179,
         "skill": [
             {
                 "sname": "毅力",
@@ -21499,7 +16007,7 @@ var armor_list = {
                 "hex": "08"
             },
             {
-                "sname": "耳栓",
+                "sname": "耳塞",
                 "lv": 1,
                 "hex": "3D"
             }
@@ -21524,7 +16032,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 123,
-        "bougyo_max": 141,
+        "bougyo_max": 179,
         "skill": [
             {
                 "sname": "力量解放",
@@ -21537,7 +16045,7 @@ var armor_list = {
                 "hex": "22"
             },
             {
-                "sname": "耳栓",
+                "sname": "耳塞",
                 "lv": 1,
                 "hex": "3D"
             }
@@ -21547,11 +16055,11 @@ var armor_list = {
         "def_t": -2,
         "def_i": -3,
         "def_d": -1,
-        "rare9": false
+        "rare9": true
     },
     "401_5": {
         "id": 401,
-        "name": "矜持護腿",
+        "name": "矜持护腿",
         "rank": 10,
         "gender": "男女共通",
         "parts": "腿",
@@ -21562,7 +16070,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 123,
-        "bougyo_max": 141,
+        "bougyo_max": 179,
         "skill": [
             {
                 "sname": "毅力",
@@ -21575,7 +16083,7 @@ var armor_list = {
                 "hex": "22"
             },
             {
-                "sname": "耐力夺取",
+                "sname": "夺取耐力",
                 "lv": 3,
                 "hex": "2A"
             }
@@ -21587,9 +16095,4349 @@ var armor_list = {
         "def_d": -1,
         "rare9": true
     },
-    "429_1": {
-        "id": 429,
-        "name": "金黃澄月頭盔",
+    "402_1": {
+        "id": 402,
+        "name": "爵银龙头盔",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 120,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "弱点特效",
+                "lv": 1,
+                "hex": "08"
+            },
+            {
+                "sname": "翔虫使",
+                "lv": 2,
+                "hex": "68"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 2,
+        "def_t": 2,
+        "def_i": -1,
+        "def_d": -5,
+        "rare9": false
+    },
+    "402_2": {
+        "id": 402,
+        "name": "爵银龙铠甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 120,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "气血",
+                "lv": 1,
+                "hex": "70"
+            },
+            {
+                "sname": "弱点特效",
+                "lv": 1,
+                "hex": "08"
+            },
+            {
+                "sname": "破坏王",
+                "lv": 1,
+                "hex": "51"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 2,
+        "def_t": 2,
+        "def_i": -1,
+        "def_d": -5,
+        "rare9": false
+    },
+    "402_3": {
+        "id": 402,
+        "name": "爵银龙腕甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 120,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "翔虫使",
+                "lv": 1,
+                "hex": "68"
+            },
+            {
+                "sname": "攻击",
+                "lv": 2,
+                "hex": "01"
+            },
+            {
+                "sname": "属性异常状态的耐性",
+                "lv": 1,
+                "hex": "48"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 2,
+        "def_t": 2,
+        "def_i": -1,
+        "def_d": -5,
+        "rare9": false
+    },
+    "402_4": {
+        "id": 402,
+        "name": "爵银龙腰甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 120,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "气血",
+                "lv": 2,
+                "hex": "70"
+            },
+            {
+                "sname": "破坏王",
+                "lv": 1,
+                "hex": "51"
+            },
+            {
+                "sname": "攻击",
+                "lv": 1,
+                "hex": "01"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 2,
+        "def_t": 2,
+        "def_i": -1,
+        "def_d": -5,
+        "rare9": false
+    },
+    "402_5": {
+        "id": 402,
+        "name": "爵银龙护腿",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 120,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "属性异常状态的耐性",
+                "lv": 2,
+                "hex": "48"
+            },
+            {
+                "sname": "弱点特效",
+                "lv": 1,
+                "hex": "08"
+            },
+            {
+                "sname": "攻击",
+                "lv": 1,
+                "hex": "01"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 2,
+        "def_t": 2,
+        "def_i": -1,
+        "def_d": -5,
+        "rare9": false
+    },
+    "403_1": {
+        "id": 403,
+        "name": "冰狼龙头盔",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "看破",
+                "lv": 2,
+                "hex": "06"
+            },
+            {
+                "sname": "翔虫使",
+                "lv": 1,
+                "hex": "68"
+            }
+        ],
+        "def_f": -4,
+        "def_w": 2,
+        "def_t": -1,
+        "def_i": 4,
+        "def_d": -1,
+        "rare9": false
+    },
+    "403_2": {
+        "id": 403,
+        "name": "冰狼龙铠甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 114,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "挑战者",
+                "lv": 2,
+                "hex": "02"
+            },
+            {
+                "sname": "合气",
+                "lv": 1,
+                "hex": "7A"
+            }
+        ],
+        "def_f": -4,
+        "def_w": 2,
+        "def_t": -1,
+        "def_i": 4,
+        "def_d": -1,
+        "rare9": false
+    },
+    "403_3": {
+        "id": 403,
+        "name": "冰狼龙腕甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "挑战者",
+                "lv": 3,
+                "hex": "02"
+            },
+            {
+                "sname": "翔虫使",
+                "lv": 1,
+                "hex": "68"
+            }
+        ],
+        "def_f": -4,
+        "def_w": 2,
+        "def_t": -1,
+        "def_i": 4,
+        "def_d": -1,
+        "rare9": false
+    },
+    "403_4": {
+        "id": 403,
+        "name": "冰狼龙腰甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 114,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "力量解放",
+                "lv": 2,
+                "hex": "09"
+            },
+            {
+                "sname": "翔虫使",
+                "lv": 1,
+                "hex": "68"
+            }
+        ],
+        "def_f": -4,
+        "def_w": 2,
+        "def_t": -1,
+        "def_i": 4,
+        "def_d": -1,
+        "rare9": false
+    },
+    "403_5": {
+        "id": 403,
+        "name": "冰狼龙护腿",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 2,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "力量解放",
+                "lv": 3,
+                "hex": "09"
+            },
+            {
+                "sname": "合气",
+                "lv": 1,
+                "hex": "7A"
+            }
+        ],
+        "def_f": -4,
+        "def_w": 2,
+        "def_t": -1,
+        "def_i": 4,
+        "def_d": -1,
+        "rare9": false
+    },
+    "404_1": {
+        "id": 404,
+        "name": "刚缠兽头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "蓄力大师",
+                "lv": 1,
+                "hex": "7C"
+            },
+            {
+                "sname": "精神抖擞",
+                "lv": 1,
+                "hex": "0A"
+            },
+            {
+                "sname": "耐震",
+                "lv": 1,
+                "hex": "3F"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 3,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": 2,
+        "rare9": false
+    },
+    "404_2": {
+        "id": 404,
+        "name": "刚缠兽铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "减轻胆怯",
+                "lv": 3,
+                "hex": "5D"
+            },
+            {
+                "sname": "耐震",
+                "lv": 2,
+                "hex": "3F"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 3,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": 2,
+        "rare9": false
+    },
+    "404_3": {
+        "id": 404,
+        "name": "刚缠兽腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "蓄力大师",
+                "lv": 1,
+                "hex": "7C"
+            },
+            {
+                "sname": "集中",
+                "lv": 2,
+                "hex": "1E"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 3,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": 2,
+        "rare9": false
+    },
+    "404_4": {
+        "id": 404,
+        "name": "刚缠兽护裙",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "提供",
+                "lv": 1,
+                "hex": "7B"
+            },
+            {
+                "sname": "集中",
+                "lv": 1,
+                "hex": "1E"
+            },
+            {
+                "sname": "精神抖擞",
+                "lv": 2,
+                "hex": "0A"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 3,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": 2,
+        "rare9": false
+    },
+    "404_5": {
+        "id": 404,
+        "name": "刚缠兽护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "蓄力大师",
+                "lv": 1,
+                "hex": "7C"
+            },
+            {
+                "sname": "击晕术",
+                "lv": 2,
+                "hex": "29"
+            },
+            {
+                "sname": "夺取耐力",
+                "lv": 2,
+                "hex": "2A"
+            }
+        ],
+        "def_f": -1,
+        "def_w": 3,
+        "def_t": -2,
+        "def_i": 0,
+        "def_d": 2,
+        "rare9": false
+    },
+    "405_1": {
+        "id": 405,
+        "name": "冥渊缠铠【怒头】",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 126,
+        "bougyo_max": 182,
+        "skill": [
+            {
+                "sname": "弱点特效",
+                "lv": 1,
+                "hex": "08"
+            },
+            {
+                "sname": "怨恨",
+                "lv": 2,
+                "hex": "04"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 3,
+        "def_t": -2,
+        "def_i": 3,
+        "def_d": -5,
+        "rare9": true
+    },
+    "405_2": {
+        "id": 405,
+        "name": "冥渊缠铠【怒躯】",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 126,
+        "bougyo_max": 182,
+        "skill": [
+            {
+                "sname": "弱点特效",
+                "lv": 1,
+                "hex": "08"
+            },
+            {
+                "sname": "怨恨",
+                "lv": 1,
+                "hex": "04"
+            },
+            {
+                "sname": "连击",
+                "lv": 1,
+                "hex": "83"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 3,
+        "def_t": -2,
+        "def_i": 3,
+        "def_d": -5,
+        "rare9": true
+    },
+    "405_3": {
+        "id": 405,
+        "name": "冥渊缠铠【怒臂】",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 126,
+        "bougyo_max": 182,
+        "skill": [
+            {
+                "sname": "伏魔耗命",
+                "lv": 2,
+                "hex": "71"
+            },
+            {
+                "sname": "怨恨",
+                "lv": 1,
+                "hex": "04"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 3,
+        "def_t": -2,
+        "def_i": 3,
+        "def_d": -5,
+        "rare9": true
+    },
+    "405_4": {
+        "id": 405,
+        "name": "冥渊缠铠【怒尾】",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 126,
+        "bougyo_max": 182,
+        "skill": [
+            {
+                "sname": "弱点特效",
+                "lv": 1,
+                "hex": "08"
+            },
+            {
+                "sname": "连击",
+                "lv": 2,
+                "hex": "83"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 3,
+        "def_t": -2,
+        "def_i": 3,
+        "def_d": -5,
+        "rare9": true
+    },
+    "405_5": {
+        "id": 405,
+        "name": "冥渊缠铠【怒足】",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 2,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 126,
+        "bougyo_max": 182,
+        "skill": [
+            {
+                "sname": "伏魔耗命",
+                "lv": 1,
+                "hex": "71"
+            },
+            {
+                "sname": "怨恨",
+                "lv": 1,
+                "hex": "04"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 3,
+        "def_t": -2,
+        "def_i": 3,
+        "def_d": -5,
+        "rare9": true
+    },
+    "406_1": {
+        "id": 406,
+        "name": "棘龙首脑",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 116,
+        "bougyo_max": 176,
+        "skill": [
+            {
+                "sname": "麻痹属性强化",
+                "lv": 3,
+                "hex": "13"
+            },
+            {
+                "sname": "破坏王",
+                "lv": 1,
+                "hex": "51"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -1,
+        "def_t": 2,
+        "def_i": -3,
+        "def_d": -2,
+        "rare9": false
+    },
+    "406_2": {
+        "id": 406,
+        "name": "棘龙肌肉",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 116,
+        "bougyo_max": 176,
+        "skill": [
+            {
+                "sname": "攻势",
+                "lv": 1,
+                "hex": "7D"
+            },
+            {
+                "sname": "破坏王",
+                "lv": 2,
+                "hex": "51"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -1,
+        "def_t": 2,
+        "def_i": -3,
+        "def_d": -2,
+        "rare9": false
+    },
+    "406_3": {
+        "id": 406,
+        "name": "棘龙双手",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 116,
+        "bougyo_max": 176,
+        "skill": [
+            {
+                "sname": "攻势",
+                "lv": 1,
+                "hex": "7D"
+            },
+            {
+                "sname": "刚刃打磨",
+                "lv": 2,
+                "hex": "19"
+            },
+            {
+                "sname": "速射强化",
+                "lv": 1,
+                "hex": "37"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -1,
+        "def_t": 2,
+        "def_i": -3,
+        "def_d": -2,
+        "rare9": false
+    },
+    "406_4": {
+        "id": 406,
+        "name": "棘龙脐带",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 116,
+        "bougyo_max": 176,
+        "skill": [
+            {
+                "sname": "挑战者",
+                "lv": 2,
+                "hex": "02"
+            },
+            {
+                "sname": "刚刃打磨",
+                "lv": 1,
+                "hex": "19"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -1,
+        "def_t": 2,
+        "def_i": -3,
+        "def_d": -2,
+        "rare9": false
+    },
+    "406_5": {
+        "id": 406,
+        "name": "棘龙脚跟",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 116,
+        "bougyo_max": 176,
+        "skill": [
+            {
+                "sname": "攻势",
+                "lv": 1,
+                "hex": "7D"
+            },
+            {
+                "sname": "减轻胆怯",
+                "lv": 2,
+                "hex": "5D"
+            },
+            {
+                "sname": "毒属性强化",
+                "lv": 3,
+                "hex": "12"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -1,
+        "def_t": 2,
+        "def_i": -3,
+        "def_d": -2,
+        "rare9": false
+    },
+    "407_1": {
+        "id": 407,
+        "name": "蓝速龙头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "攻击",
+                "lv": 1,
+                "hex": "01"
+            },
+            {
+                "sname": "昏厥耐性",
+                "lv": 1,
+                "hex": "4C"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": -2,
+        "def_d": 0,
+        "rare9": false
+    },
+    "407_2": {
+        "id": 407,
+        "name": "蓝速龙铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "攻击",
+                "lv": 1,
+                "hex": "01"
+            },
+            {
+                "sname": "风压耐性",
+                "lv": 1,
+                "hex": "3E"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": -2,
+        "def_d": 0,
+        "rare9": false
+    },
+    "407_3": {
+        "id": 407,
+        "name": "蓝速龙腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "攻击",
+                "lv": 2,
+                "hex": "01"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": -2,
+        "def_d": 0,
+        "rare9": false
+    },
+    "407_4": {
+        "id": 407,
+        "name": "蓝速龙护裙",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "攻击",
+                "lv": 1,
+                "hex": "01"
+            },
+            {
+                "sname": "捕获名人",
+                "lv": 1,
+                "hex": "52"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": -2,
+        "def_d": 0,
+        "rare9": false
+    },
+    "407_5": {
+        "id": 407,
+        "name": "蓝速龙护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "风压耐性",
+                "lv": 2,
+                "hex": "3E"
+            },
+            {
+                "sname": "昏厥耐性",
+                "lv": 2,
+                "hex": "4C"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": -2,
+        "def_d": 0,
+        "rare9": false
+    },
+    "408_1": {
+        "id": 408,
+        "name": "巨蜂头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 84,
+        "bougyo_max": 156,
+        "skill": [
+            {
+                "sname": "麻痹属性强化",
+                "lv": 1,
+                "hex": "13"
+            },
+            {
+                "sname": "翔虫使",
+                "lv": 2,
+                "hex": "68"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 2,
+        "rare9": false
+    },
+    "408_2": {
+        "id": 408,
+        "name": "巨蜂铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 84,
+        "bougyo_max": 156,
+        "skill": [
+            {
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
+            },
+            {
+                "sname": "麻痹耐性",
+                "lv": 2,
+                "hex": "4A"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 2,
+        "rare9": false
+    },
+    "408_3": {
+        "id": 408,
+        "name": "巨蜂腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 84,
+        "bougyo_max": 156,
+        "skill": [
+            {
+                "sname": "麻痹属性强化",
+                "lv": 2,
+                "hex": "13"
+            },
+            {
+                "sname": "骑乘名人",
+                "lv": 1,
+                "hex": "63"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 2,
+        "rare9": false
+    },
+    "408_4": {
+        "id": 408,
+        "name": "巨蜂护裙",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 84,
+        "bougyo_max": 156,
+        "skill": [
+            {
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
+            },
+            {
+                "sname": "麻痹耐性",
+                "lv": 1,
+                "hex": "4A"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 2,
+        "rare9": false
+    },
+    "408_5": {
+        "id": 408,
+        "name": "巨蜂护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 84,
+        "bougyo_max": 156,
+        "skill": [
+            {
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
+            },
+            {
+                "sname": "翔虫使",
+                "lv": 1,
+                "hex": "68"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 2,
+        "rare9": false
+    },
+    "409_1": {
+        "id": 409,
+        "name": "巨甲虫头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "死里逃生",
+                "lv": 2,
+                "hex": "05"
+            },
+            {
+                "sname": "体力回复量提升",
+                "lv": 1,
+                "hex": "3A"
+            }
+        ],
+        "def_f": -1,
+        "def_w": -1,
+        "def_t": -1,
+        "def_i": -1,
+        "def_d": 4,
+        "rare9": false
+    },
+    "409_2": {
+        "id": 409,
+        "name": "巨甲虫铠甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "龙属性攻击强化",
+                "lv": 2,
+                "hex": "11"
+            },
+            {
+                "sname": "体力回复量提升",
+                "lv": 1,
+                "hex": "3A"
+            }
+        ],
+        "def_f": -1,
+        "def_w": -1,
+        "def_t": -1,
+        "def_i": -1,
+        "def_d": 4,
+        "rare9": false
+    },
+    "409_3": {
+        "id": 409,
+        "name": "巨甲虫腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "龙属性攻击强化",
+                "lv": 1,
+                "hex": "11"
+            },
+            {
+                "sname": "抑制偏移",
+                "lv": 2,
+                "hex": "36"
+            }
+        ],
+        "def_f": -1,
+        "def_w": -1,
+        "def_t": -1,
+        "def_i": -1,
+        "def_d": 4,
+        "rare9": false
+    },
+    "409_4": {
+        "id": 409,
+        "name": "巨甲虫护裙",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "龙属性攻击强化",
+                "lv": 2,
+                "hex": "11"
+            },
+            {
+                "sname": "龙耐性",
+                "lv": 3,
+                "hex": "47"
+            }
+        ],
+        "def_f": -1,
+        "def_w": -1,
+        "def_t": -1,
+        "def_i": -1,
+        "def_d": 4,
+        "rare9": false
+    },
+    "409_5": {
+        "id": 409,
+        "name": "巨甲虫护腿",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 86,
+        "bougyo_max": 158,
+        "skill": [
+            {
+                "sname": "死里逃生",
+                "lv": 1,
+                "hex": "05"
+            },
+            {
+                "sname": "抑制偏移",
+                "lv": 1,
+                "hex": "36"
+            },
+            {
+                "sname": "体力回复量提升",
+                "lv": 1,
+                "hex": "3A"
+            }
+        ],
+        "def_f": -1,
+        "def_w": -1,
+        "def_t": -1,
+        "def_i": -1,
+        "def_d": 4,
+        "rare9": false
+    },
+    "410_1": {
+        "id": 410,
+        "name": "教授护目镜",
+        "rank": 9,
+        "gender": "男性专用",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 3,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "回复速度",
+                "lv": 3,
+                "hex": "3B"
+            },
+            {
+                "sname": "耳塞",
+                "lv": 2,
+                "hex": "3D"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "410_2": {
+        "id": 410,
+        "name": "教授外套",
+        "rank": 9,
+        "gender": "男性专用",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "耳塞",
+                "lv": 3,
+                "hex": "3D"
+            },
+            {
+                "sname": "饥饿耐性",
+                "lv": 1,
+                "hex": "60"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "410_3": {
+        "id": 410,
+        "name": "教授手套",
+        "rank": 9,
+        "gender": "男性专用",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "精灵加护",
+                "lv": 3,
+                "hex": "39"
+            },
+            {
+                "sname": "饥饿耐性",
+                "lv": 1,
+                "hex": "60"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "410_4": {
+        "id": 410,
+        "name": "教授腰带",
+        "rank": 9,
+        "gender": "男性专用",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "耐震",
+                "lv": 3,
+                "hex": "3F"
+            },
+            {
+                "sname": "减轻胆怯",
+                "lv": 2,
+                "hex": "5D"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "410_5": {
+        "id": 410,
+        "name": "教授靴",
+        "rank": 9,
+        "gender": "男性专用",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "跑者",
+                "lv": 3,
+                "hex": "20"
+            },
+            {
+                "sname": "饥饿耐性",
+                "lv": 1,
+                "hex": "60"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "411_1": {
+        "id": 411,
+        "name": "博爱发夹",
+        "rank": 9,
+        "gender": "女性专用",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 3,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "回复速度",
+                "lv": 3,
+                "hex": "3B"
+            },
+            {
+                "sname": "耳塞",
+                "lv": 2,
+                "hex": "3D"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "411_2": {
+        "id": 411,
+        "name": "博爱外套",
+        "rank": 9,
+        "gender": "女性专用",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "耳塞",
+                "lv": 3,
+                "hex": "3D"
+            },
+            {
+                "sname": "饥饿耐性",
+                "lv": 1,
+                "hex": "60"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "411_3": {
+        "id": 411,
+        "name": "博爱护手",
+        "rank": 9,
+        "gender": "女性专用",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "精灵加护",
+                "lv": 3,
+                "hex": "39"
+            },
+            {
+                "sname": "饥饿耐性",
+                "lv": 1,
+                "hex": "60"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "411_4": {
+        "id": 411,
+        "name": "博爱裙",
+        "rank": 9,
+        "gender": "女性专用",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "耐震",
+                "lv": 3,
+                "hex": "3F"
+            },
+            {
+                "sname": "减轻胆怯",
+                "lv": 2,
+                "hex": "5D"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "411_5": {
+        "id": 411,
+        "name": "博爱靴",
+        "rank": 9,
+        "gender": "女性专用",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "跑者",
+                "lv": 3,
+                "hex": "20"
+            },
+            {
+                "sname": "饥饿耐性",
+                "lv": 1,
+                "hex": "60"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "412_1": {
+        "id": 412,
+        "name": "公会诗人帽",
+        "rank": 8,
+        "gender": "男性专用",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 104,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "回避性能",
+                "lv": 2,
+                "hex": "41"
+            },
+            {
+                "sname": "最爱蘑菇",
+                "lv": 1,
+                "hex": "57"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "412_2": {
+        "id": 412,
+        "name": "公会诗人服装",
+        "rank": 8,
+        "gender": "男性专用",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 104,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "回避性能",
+                "lv": 1,
+                "hex": "41"
+            },
+            {
+                "sname": "精灵加护",
+                "lv": 1,
+                "hex": "39"
+            },
+            {
+                "sname": "幸运",
+                "lv": 1,
+                "hex": "54"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "412_3": {
+        "id": 412,
+        "name": "公会诗人腕甲",
+        "rank": 8,
+        "gender": "男性专用",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 104,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "回避性能",
+                "lv": 1,
+                "hex": "41"
+            },
+            {
+                "sname": "最爱蘑菇",
+                "lv": 1,
+                "hex": "57"
+            },
+            {
+                "sname": "幸运",
+                "lv": 1,
+                "hex": "54"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "412_4": {
+        "id": 412,
+        "name": "公会诗人腰甲",
+        "rank": 8,
+        "gender": "男性专用",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 104,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "回避性能",
+                "lv": 1,
+                "hex": "41"
+            },
+            {
+                "sname": "幸运",
+                "lv": 1,
+                "hex": "54"
+            },
+            {
+                "sname": "吹笛名人",
+                "lv": 1,
+                "hex": "2C"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "412_5": {
+        "id": 412,
+        "name": "公会诗人靴",
+        "rank": 8,
+        "gender": "男性专用",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 104,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "精灵加护",
+                "lv": 2,
+                "hex": "39"
+            },
+            {
+                "sname": "最爱蘑菇",
+                "lv": 1,
+                "hex": "57"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "413_1": {
+        "id": 413,
+        "name": "学士兜帽",
+        "rank": 8,
+        "gender": "女性专用",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 104,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "回避性能",
+                "lv": 2,
+                "hex": "41"
+            },
+            {
+                "sname": "最爱蘑菇",
+                "lv": 1,
+                "hex": "57"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "413_2": {
+        "id": 413,
+        "name": "学士服装",
+        "rank": 8,
+        "gender": "女性专用",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 104,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "回避性能",
+                "lv": 1,
+                "hex": "41"
+            },
+            {
+                "sname": "精灵加护",
+                "lv": 1,
+                "hex": "39"
+            },
+            {
+                "sname": "幸运",
+                "lv": 1,
+                "hex": "54"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "413_3": {
+        "id": 413,
+        "name": "学士手套",
+        "rank": 8,
+        "gender": "女性专用",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 104,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "回避性能",
+                "lv": 1,
+                "hex": "41"
+            },
+            {
+                "sname": "最爱蘑菇",
+                "lv": 1,
+                "hex": "57"
+            },
+            {
+                "sname": "幸运",
+                "lv": 1,
+                "hex": "54"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "413_4": {
+        "id": 413,
+        "name": "学士裙",
+        "rank": 8,
+        "gender": "女性专用",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 104,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "回避性能",
+                "lv": 1,
+                "hex": "41"
+            },
+            {
+                "sname": "幸运",
+                "lv": 1,
+                "hex": "54"
+            },
+            {
+                "sname": "吹笛名人",
+                "lv": 1,
+                "hex": "2C"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "413_5": {
+        "id": 413,
+        "name": "学士短袜",
+        "rank": 8,
+        "gender": "女性专用",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 104,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "精灵加护",
+                "lv": 2,
+                "hex": "39"
+            },
+            {
+                "sname": "最爱蘑菇",
+                "lv": 1,
+                "hex": "57"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "414_1": {
+        "id": 414,
+        "name": "水手兜帽",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "提供",
+                "lv": 1,
+                "hex": "7B"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "414_2": {
+        "id": 414,
+        "name": "水手服装",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "回避性能",
+                "lv": 4,
+                "hex": "41"
+            },
+            {
+                "sname": "翔虫使",
+                "lv": 1,
+                "hex": "68"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "414_3": {
+        "id": 414,
+        "name": "水手手套",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "集中",
+                "lv": 3,
+                "hex": "1E"
+            },
+            {
+                "sname": "翔虫使",
+                "lv": 1,
+                "hex": "68"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "414_4": {
+        "id": 414,
+        "name": "水手腰甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "刚刃打磨",
+                "lv": 3,
+                "hex": "19"
+            },
+            {
+                "sname": "翔虫使",
+                "lv": 1,
+                "hex": "68"
+            },
+            {
+                "sname": "弹道强化",
+                "lv": 3,
+                "hex": "1B"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "414_5": {
+        "id": 414,
+        "name": "水手鞋子",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "跑者",
+                "lv": 3,
+                "hex": "20"
+            },
+            {
+                "sname": "回避性能",
+                "lv": 1,
+                "hex": "41"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "415_1": {
+        "id": 415,
+        "name": "猎鹰皮帽",
+        "rank": 9,
+        "gender": "男性专用",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 110,
+        "bougyo_max": 170,
+        "skill": [
+            {
+                "sname": "体术",
+                "lv": 2,
+                "hex": "21"
+            },
+            {
+                "sname": "弱点特效",
+                "lv": 1,
+                "hex": "08"
+            },
+            {
+                "sname": "幸运",
+                "lv": 1,
+                "hex": "54"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "415_2": {
+        "id": 415,
+        "name": "猎鹰服装",
+        "rank": 9,
+        "gender": "男性专用",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 110,
+        "bougyo_max": 170,
+        "skill": [
+            {
+                "sname": "体术",
+                "lv": 1,
+                "hex": "21"
+            },
+            {
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
+            },
+            {
+                "sname": "幸运",
+                "lv": 1,
+                "hex": "54"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "415_3": {
+        "id": 415,
+        "name": "猎鹰手套",
+        "rank": 9,
+        "gender": "男性专用",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 110,
+        "bougyo_max": 170,
+        "skill": [
+            {
+                "sname": "快吃",
+                "lv": 1,
+                "hex": "3C"
+            },
+            {
+                "sname": "纳刀术",
+                "lv": 2,
+                "hex": "28"
+            },
+            {
+                "sname": "弱点特效",
+                "lv": 1,
+                "hex": "08"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "415_4": {
+        "id": 415,
+        "name": "猎鹰腰甲",
+        "rank": 9,
+        "gender": "男性专用",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 3,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 110,
+        "bougyo_max": 170,
+        "skill": [
+            {
+                "sname": "快吃",
+                "lv": 2,
+                "hex": "3C"
+            },
+            {
+                "sname": "体术",
+                "lv": 2,
+                "hex": "21"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "415_5": {
+        "id": 415,
+        "name": "猎鹰靴",
+        "rank": 9,
+        "gender": "男性专用",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 110,
+        "bougyo_max": 170,
+        "skill": [
+            {
+                "sname": "捕获名人",
+                "lv": 1,
+                "hex": "52"
+            },
+            {
+                "sname": "幸运",
+                "lv": 1,
+                "hex": "54"
+            },
+            {
+                "sname": "弱点特效",
+                "lv": 1,
+                "hex": "08"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "416_1": {
+        "id": 416,
+        "name": "求知兜帽",
+        "rank": 9,
+        "gender": "女性专用",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 110,
+        "bougyo_max": 170,
+        "skill": [
+            {
+                "sname": "体术",
+                "lv": 2,
+                "hex": "21"
+            },
+            {
+                "sname": "弱点特效",
+                "lv": 1,
+                "hex": "08"
+            },
+            {
+                "sname": "幸运",
+                "lv": 1,
+                "hex": "54"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "416_2": {
+        "id": 416,
+        "name": "求知服装",
+        "rank": 9,
+        "gender": "女性专用",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 110,
+        "bougyo_max": 170,
+        "skill": [
+            {
+                "sname": "体术",
+                "lv": 1,
+                "hex": "21"
+            },
+            {
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
+            },
+            {
+                "sname": "幸运",
+                "lv": 1,
+                "hex": "54"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "416_3": {
+        "id": 416,
+        "name": "求知手套",
+        "rank": 9,
+        "gender": "女性专用",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 110,
+        "bougyo_max": 170,
+        "skill": [
+            {
+                "sname": "快吃",
+                "lv": 1,
+                "hex": "3C"
+            },
+            {
+                "sname": "纳刀术",
+                "lv": 2,
+                "hex": "28"
+            },
+            {
+                "sname": "弱点特效",
+                "lv": 1,
+                "hex": "08"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "416_4": {
+        "id": 416,
+        "name": "求知裙",
+        "rank": 9,
+        "gender": "女性专用",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 3,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 110,
+        "bougyo_max": 170,
+        "skill": [
+            {
+                "sname": "快吃",
+                "lv": 2,
+                "hex": "3C"
+            },
+            {
+                "sname": "体术",
+                "lv": 2,
+                "hex": "21"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "416_5": {
+        "id": 416,
+        "name": "求知靴",
+        "rank": 9,
+        "gender": "女性专用",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 110,
+        "bougyo_max": 170,
+        "skill": [
+            {
+                "sname": "捕获名人",
+                "lv": 1,
+                "hex": "52"
+            },
+            {
+                "sname": "幸运",
+                "lv": 1,
+                "hex": "54"
+            },
+            {
+                "sname": "弱点特效",
+                "lv": 1,
+                "hex": "08"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "417_1": {
+        "id": 417,
+        "name": "贤者方帽",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "广域化",
+                "lv": 3,
+                "hex": "59"
+            },
+            {
+                "sname": "捕获名人",
+                "lv": 1,
+                "hex": "52"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "417_2": {
+        "id": 417,
+        "name": "贤者服装",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "属性异常状态的耐性",
+                "lv": 3,
+                "hex": "48"
+            },
+            {
+                "sname": "满足感",
+                "lv": 1,
+                "hex": "5A"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "417_3": {
+        "id": 417,
+        "name": "贤者腕甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "体力回复量提升",
+                "lv": 3,
+                "hex": "3A"
+            },
+            {
+                "sname": "满足感",
+                "lv": 1,
+                "hex": "5A"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "417_4": {
+        "id": 417,
+        "name": "贤者腰甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "纳刀术",
+                "lv": 3,
+                "hex": "28"
+            },
+            {
+                "sname": "满足感",
+                "lv": 1,
+                "hex": "5A"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "417_5": {
+        "id": 417,
+        "name": "贤者靴",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "道具使用强化",
+                "lv": 3,
+                "hex": "58"
+            },
+            {
+                "sname": "广域化",
+                "lv": 2,
+                "hex": "59"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "418_1": {
+        "id": 418,
+        "name": "追踪者头饰",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "体术",
+                "lv": 3,
+                "hex": "21"
+            },
+            {
+                "sname": "回复速度",
+                "lv": 1,
+                "hex": "3B"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 2,
+        "def_t": 2,
+        "def_i": 2,
+        "def_d": 2,
+        "rare9": false
+    },
+    "418_2": {
+        "id": 418,
+        "name": "追踪者服饰",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "幸运",
+                "lv": 2,
+                "hex": "54"
+            },
+            {
+                "sname": "回复速度",
+                "lv": 1,
+                "hex": "3B"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 2,
+        "def_t": 2,
+        "def_i": 2,
+        "def_d": 2,
+        "rare9": false
+    },
+    "418_3": {
+        "id": 418,
+        "name": "追踪者手套",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 3,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "快吃",
+                "lv": 3,
+                "hex": "3C"
+            },
+            {
+                "sname": "最爱蘑菇",
+                "lv": 1,
+                "hex": "57"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 2,
+        "def_t": 2,
+        "def_i": 2,
+        "def_d": 2,
+        "rare9": false
+    },
+    "418_4": {
+        "id": 418,
+        "name": "追踪者腰带",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "最爱蘑菇",
+                "lv": 2,
+                "hex": "57"
+            },
+            {
+                "sname": "回复速度",
+                "lv": 1,
+                "hex": "3B"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 2,
+        "def_t": 2,
+        "def_i": 2,
+        "def_d": 2,
+        "rare9": false
+    },
+    "418_5": {
+        "id": 418,
+        "name": "追踪者长裤",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 114,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "体术",
+                "lv": 2,
+                "hex": "21"
+            },
+            {
+                "sname": "幸运",
+                "lv": 1,
+                "hex": "54"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 2,
+        "def_t": 2,
+        "def_i": 2,
+        "def_d": 2,
+        "rare9": false
+    },
+    "419_1": {
+        "id": 419,
+        "name": "据点司令【耳饰】",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 118,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "广域化",
+                "lv": 3,
+                "hex": "59"
+            },
+            {
+                "sname": "集中",
+                "lv": 3,
+                "hex": "1E"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": true
+    },
+    "419_2": {
+        "id": 419,
+        "name": "据点司令【铠甲】",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 2,
+        "slotLv4": 0,
+        "bougyo": 118,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "蓄力大师",
+                "lv": 1,
+                "hex": "7C"
+            },
+            {
+                "sname": "拔刀术【技】",
+                "lv": 1,
+                "hex": "26"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": true
+    },
+    "419_3": {
+        "id": 419,
+        "name": "据点司令【手甲】",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 9,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 118,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "蓄力大师",
+                "lv": 2,
+                "hex": "7C"
+            },
+            {
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": true
+    },
+    "419_4": {
+        "id": 419,
+        "name": "据点司令【腰甲】",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 118,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "拔刀术【力】",
+                "lv": 3,
+                "hex": "27"
+            },
+            {
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": true
+    },
+    "419_5": {
+        "id": 419,
+        "name": "据点司令【腿甲】",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 118,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "拔刀术【技】",
+                "lv": 2,
+                "hex": "26"
+            },
+            {
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": true
+    },
+    "420_1": {
+        "id": 420,
+        "name": "据点司令【耳饰】",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 118,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "广域化",
+                "lv": 3,
+                "hex": "59"
+            },
+            {
+                "sname": "集中",
+                "lv": 3,
+                "hex": "1E"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": true
+    },
+    "420_2": {
+        "id": 420,
+        "name": "据点司令【铠甲】",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 2,
+        "slotLv4": 0,
+        "bougyo": 118,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "蓄力大师",
+                "lv": 1,
+                "hex": "7C"
+            },
+            {
+                "sname": "拔刀术【技】",
+                "lv": 1,
+                "hex": "26"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": true
+    },
+    "420_3": {
+        "id": 420,
+        "name": "据点司令【手甲】",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 9,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 118,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "蓄力大师",
+                "lv": 2,
+                "hex": "7C"
+            },
+            {
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": true
+    },
+    "420_4": {
+        "id": 420,
+        "name": "据点司令【腰甲】",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 118,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "拔刀术【力】",
+                "lv": 3,
+                "hex": "27"
+            },
+            {
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": true
+    },
+    "420_5": {
+        "id": 420,
+        "name": "据点司令【腿甲】",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 118,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "拔刀术【技】",
+                "lv": 2,
+                "hex": "26"
+            },
+            {
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": true
+    },
+    "422_1": {
+        "id": 422,
+        "name": "巴尔巴尼亚眼罩",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 110,
+        "bougyo_max": 170,
+        "skill": [
+            {
+                "sname": "弱点特效",
+                "lv": 1,
+                "hex": "08"
+            },
+            {
+                "sname": "捕获名人",
+                "lv": 1,
+                "hex": "52"
+            },
+            {
+                "sname": "怨恨",
+                "lv": 2,
+                "hex": "04"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "422_2": {
+        "id": 422,
+        "name": "巴尔巴尼亚服饰",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 110,
+        "bougyo_max": 170,
+        "skill": [
+            {
+                "sname": "破坏王",
+                "lv": 1,
+                "hex": "51"
+            },
+            {
+                "sname": "逆袭",
+                "lv": 1,
+                "hex": "6A"
+            },
+            {
+                "sname": "怨恨",
+                "lv": 1,
+                "hex": "04"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "422_3": {
+        "id": 422,
+        "name": "巴尔巴尼亚手套",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 2,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 110,
+        "bougyo_max": 170,
+        "skill": [
+            {
+                "sname": "弱点特效",
+                "lv": 1,
+                "hex": "08"
+            },
+            {
+                "sname": "破坏王",
+                "lv": 1,
+                "hex": "51"
+            },
+            {
+                "sname": "幸运",
+                "lv": 1,
+                "hex": "54"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "422_4": {
+        "id": 422,
+        "name": "巴尔巴尼亚腰带",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 2,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 110,
+        "bougyo_max": 170,
+        "skill": [
+            {
+                "sname": "弱点特效",
+                "lv": 1,
+                "hex": "08"
+            },
+            {
+                "sname": "逆袭",
+                "lv": 1,
+                "hex": "6A"
+            },
+            {
+                "sname": "幸运",
+                "lv": 1,
+                "hex": "54"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "422_5": {
+        "id": 422,
+        "name": "巴尔巴尼亚靴",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 110,
+        "bougyo_max": 170,
+        "skill": [
+            {
+                "sname": "破坏王",
+                "lv": 1,
+                "hex": "51"
+            },
+            {
+                "sname": "逆袭",
+                "lv": 1,
+                "hex": "6A"
+            },
+            {
+                "sname": "幸运",
+                "lv": 1,
+                "hex": "54"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "423_1": {
+        "id": 423,
+        "name": "恩宠头饰",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "打磨术【锐】",
+                "lv": 1,
+                "hex": "7F"
+            },
+            {
+                "sname": "夺取耐力",
+                "lv": 1,
+                "hex": "2A"
+            },
+            {
+                "sname": "攻击",
+                "lv": 2,
+                "hex": "01"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "423_2": {
+        "id": 423,
+        "name": "恩宠铠甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "耐震",
+                "lv": 1,
+                "hex": "3F"
+            },
+            {
+                "sname": "夺取耐力",
+                "lv": 1,
+                "hex": "2A"
+            },
+            {
+                "sname": "攻击",
+                "lv": 1,
+                "hex": "01"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "423_3": {
+        "id": 423,
+        "name": "恩宠腕甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 3,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "回复速度",
+                "lv": 3,
+                "hex": "3B"
+            },
+            {
+                "sname": "力量解放",
+                "lv": 2,
+                "hex": "09"
+            },
+            {
+                "sname": "攻击",
+                "lv": 1,
+                "hex": "01"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "423_4": {
+        "id": 423,
+        "name": "恩宠腰甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "耐震",
+                "lv": 2,
+                "hex": "3F"
+            },
+            {
+                "sname": "夺取耐力",
+                "lv": 1,
+                "hex": "2A"
+            },
+            {
+                "sname": "攻击",
+                "lv": 1,
+                "hex": "01"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "423_5": {
+        "id": 423,
+        "name": "恩宠护腿",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "打磨术【锐】",
+                "lv": 1,
+                "hex": "7F"
+            },
+            {
+                "sname": "力量解放",
+                "lv": 1,
+                "hex": "09"
+            },
+            {
+                "sname": "攻击",
+                "lv": 2,
+                "hex": "01"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 3,
+        "def_d": 0,
+        "rare9": false
+    },
+    "424_1": {
+        "id": 424,
+        "name": "五行之面具",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 100,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "鬼火缠",
+                "lv": 2,
+                "hex": "6C"
+            },
+            {
+                "sname": "心眼",
+                "lv": 1,
+                "hex": "1A"
+            },
+            {
+                "sname": "弹道强化",
+                "lv": 1,
+                "hex": "1B"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 3,
+        "rare9": false
+    },
+    "424_2": {
+        "id": 424,
+        "name": "五行之狩衣",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 100,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "属性异常状态的耐性",
+                "lv": 1,
+                "hex": "48"
+            },
+            {
+                "sname": "心眼",
+                "lv": 2,
+                "hex": "1A"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 3,
+        "rare9": false
+    },
+    "424_3": {
+        "id": 424,
+        "name": "五行之护臂",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 100,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "精灵加护",
+                "lv": 1,
+                "hex": "39"
+            },
+            {
+                "sname": "弹道强化",
+                "lv": 2,
+                "hex": "1B"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 3,
+        "rare9": false
+    },
+    "424_4": {
+        "id": 424,
+        "name": "五行之衣带",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 100,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "属性异常状态的耐性",
+                "lv": 2,
+                "hex": "48"
+            },
+            {
+                "sname": "骑乘名人",
+                "lv": 1,
+                "hex": "63"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 3,
+        "rare9": false
+    },
+    "424_5": {
+        "id": 424,
+        "name": "五行之腿甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 100,
+        "bougyo_max": 164,
+        "skill": [
+            {
+                "sname": "精灵加护",
+                "lv": 2,
+                "hex": "39"
+            },
+            {
+                "sname": "鬼火缠",
+                "lv": 1,
+                "hex": "6C"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 3,
+        "rare9": false
+    },
+    "425_1": {
+        "id": 425,
+        "name": "守护者头盔",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "防御性能",
+                "lv": 1,
+                "hex": "23"
+            },
+            {
+                "sname": "防御强化",
+                "lv": 1,
+                "hex": "24"
+            },
+            {
+                "sname": "耳塞",
+                "lv": 1,
+                "hex": "3D"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 2,
+        "def_d": 3,
+        "rare9": false
+    },
+    "425_2": {
+        "id": 425,
+        "name": "守护者服装",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "防御性能",
+                "lv": 1,
+                "hex": "23"
+            },
+            {
+                "sname": "砥石使用高速化",
+                "lv": 1,
+                "hex": "55"
+            },
+            {
+                "sname": "属性异常状态的耐性",
+                "lv": 1,
+                "hex": "48"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 2,
+        "def_d": 3,
+        "rare9": false
+    },
+    "425_3": {
+        "id": 425,
+        "name": "守护者腕甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "防御性能",
+                "lv": 1,
+                "hex": "23"
+            },
+            {
+                "sname": "砥石使用高速化",
+                "lv": 1,
+                "hex": "55"
+            },
+            {
+                "sname": "耳塞",
+                "lv": 1,
+                "hex": "3D"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 2,
+        "def_d": 3,
+        "rare9": false
+    },
+    "425_4": {
+        "id": 425,
+        "name": "守护者腰甲",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "佯动",
+                "lv": 1,
+                "hex": "62"
+            },
+            {
+                "sname": "砥石使用高速化",
+                "lv": 1,
+                "hex": "55"
+            },
+            {
+                "sname": "属性异常状态的耐性",
+                "lv": 2,
+                "hex": "48"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 2,
+        "def_d": 3,
+        "rare9": false
+    },
+    "425_5": {
+        "id": 425,
+        "name": "守护者靴",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 108,
+        "bougyo_max": 168,
+        "skill": [
+            {
+                "sname": "防御性能",
+                "lv": 2,
+                "hex": "23"
+            },
+            {
+                "sname": "耳塞",
+                "lv": 1,
+                "hex": "3D"
+            }
+        ],
+        "def_f": 2,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 2,
+        "def_d": 3,
+        "rare9": false
+    },
+    "426_1": {
+        "id": 426,
+        "name": "公会宫殿头盔",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 120,
+        "bougyo_max": 176,
+        "skill": [
+            {
+                "sname": "挑战者",
+                "lv": 1,
+                "hex": "02"
+            },
+            {
+                "sname": "攻击守势",
+                "lv": 2,
+                "hex": "25"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 2,
+        "def_t": 2,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "426_2": {
+        "id": 426,
+        "name": "公会宫殿铠甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 120,
+        "bougyo_max": 176,
+        "skill": [
+            {
+                "sname": "挑战者",
+                "lv": 2,
+                "hex": "02"
+            },
+            {
+                "sname": "火场怪力",
+                "lv": 1,
+                "hex": "5B"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 2,
+        "def_t": 2,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "426_3": {
+        "id": 426,
+        "name": "公会宫殿腕甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 120,
+        "bougyo_max": 176,
+        "skill": [
+            {
+                "sname": "挑战者",
+                "lv": 2,
+                "hex": "02"
+            },
+            {
+                "sname": "因祸得福",
+                "lv": 1,
+                "hex": "74"
+            },
+            {
+                "sname": "走壁移动【翔】",
+                "lv": 1,
+                "hex": "81"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 2,
+        "def_t": 2,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "426_4": {
+        "id": 426,
+        "name": "公会宫殿腰甲",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 120,
+        "bougyo_max": 176,
+        "skill": [
+            {
+                "sname": "火场怪力",
+                "lv": 2,
+                "hex": "5B"
+            },
+            {
+                "sname": "攻击守势",
+                "lv": 1,
+                "hex": "25"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 2,
+        "def_t": 2,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "426_5": {
+        "id": 426,
+        "name": "公会宫殿护腿",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 120,
+        "bougyo_max": 176,
+        "skill": [
+            {
+                "sname": "火场怪力",
+                "lv": 2,
+                "hex": "5B"
+            },
+            {
+                "sname": "因祸得福",
+                "lv": 2,
+                "hex": "74"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 2,
+        "def_t": 2,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "427_1": {
+        "id": 427,
+        "name": "结云笠",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 92,
+        "bougyo_max": 156,
+        "skill": [
+            {
+                "sname": "看破",
+                "lv": 2,
+                "hex": "06"
+            },
+            {
+                "sname": "回避性能",
+                "lv": 1,
+                "hex": "41"
+            },
+            {
+                "sname": "体力回复量提升",
+                "lv": 1,
+                "hex": "3A"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 2,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "427_2": {
+        "id": 427,
+        "name": "结云武服",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 92,
+        "bougyo_max": 156,
+        "skill": [
+            {
+                "sname": "看破",
+                "lv": 1,
+                "hex": "06"
+            },
+            {
+                "sname": "耳塞",
+                "lv": 2,
+                "hex": "3D"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 2,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "427_3": {
+        "id": 427,
+        "name": "结云护臂",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 3,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 92,
+        "bougyo_max": 156,
+        "skill": [
+            {
+                "sname": "看破",
+                "lv": 2,
+                "hex": "06"
+            },
+            {
+                "sname": "回避性能",
+                "lv": 2,
+                "hex": "41"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 2,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "427_4": {
+        "id": 427,
+        "name": "结云带",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 92,
+        "bougyo_max": 156,
+        "skill": [
+            {
+                "sname": "看破",
+                "lv": 1,
+                "hex": "06"
+            },
+            {
+                "sname": "回避性能",
+                "lv": 1,
+                "hex": "41"
+            },
+            {
+                "sname": "耳塞",
+                "lv": 1,
+                "hex": "3D"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 2,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "427_5": {
+        "id": 427,
+        "name": "结云下裳",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 92,
+        "bougyo_max": 156,
+        "skill": [
+            {
+                "sname": "看破",
+                "lv": 1,
+                "hex": "06"
+            },
+            {
+                "sname": "回避性能",
+                "lv": 1,
+                "hex": "41"
+            },
+            {
+                "sname": "体力回复量提升",
+                "lv": 2,
+                "hex": "3A"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 2,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": false
+    },
+    "428_1": {
+        "id": 428,
+        "name": "金黄澄月头盔",
         "rank": 10,
         "gender": "男女共通",
         "parts": "头",
@@ -21600,7 +20448,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 120,
-        "bougyo_max": 138,
+        "bougyo_max": 176,
         "skill": [
             {
                 "sname": "状态异常必定累积",
@@ -21623,11 +20471,11 @@ var armor_list = {
         "def_t": -4,
         "def_i": -1,
         "def_d": 2,
-        "rare9": false
+        "rare9": true
     },
-    "429_2": {
-        "id": 429,
-        "name": "金黃澄月鎧甲",
+    "428_2": {
+        "id": 428,
+        "name": "金黄澄月铠甲",
         "rank": 10,
         "gender": "男女共通",
         "parts": "身",
@@ -21638,7 +20486,7 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 120,
-        "bougyo_max": 138,
+        "bougyo_max": 176,
         "skill": [
             {
                 "sname": "坚如磐石",
@@ -21661,11 +20509,11 @@ var armor_list = {
         "def_t": -4,
         "def_i": -1,
         "def_d": 2,
-        "rare9": false
+        "rare9": true
     },
-    "429_3": {
-        "id": 429,
-        "name": "金黃澄月腕甲",
+    "428_3": {
+        "id": 428,
+        "name": "金黄澄月腕甲",
         "rank": 10,
         "gender": "男女共通",
         "parts": "手",
@@ -21676,7 +20524,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 120,
-        "bougyo_max": 138,
+        "bougyo_max": 176,
         "skill": [
             {
                 "sname": "超会心",
@@ -21699,11 +20547,11 @@ var armor_list = {
         "def_t": -4,
         "def_i": -1,
         "def_d": 2,
-        "rare9": false
+        "rare9": true
     },
-    "429_4": {
-        "id": 429,
-        "name": "金黃澄月腰甲",
+    "428_4": {
+        "id": 428,
+        "name": "金黄澄月腰甲",
         "rank": 10,
         "gender": "男女共通",
         "parts": "腰",
@@ -21714,7 +20562,7 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 120,
-        "bougyo_max": 138,
+        "bougyo_max": 176,
         "skill": [
             {
                 "sname": "状态异常必定累积",
@@ -21737,11 +20585,11 @@ var armor_list = {
         "def_t": -4,
         "def_i": -1,
         "def_d": 2,
-        "rare9": false
+        "rare9": true
     },
-    "429_5": {
-        "id": 429,
-        "name": "金黃澄月護腿",
+    "428_5": {
+        "id": 428,
+        "name": "金黄澄月护腿",
         "rank": 10,
         "gender": "男女共通",
         "parts": "腿",
@@ -21752,7 +20600,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 120,
-        "bougyo_max": 138,
+        "bougyo_max": 176,
         "skill": [
             {
                 "sname": "坚如磐石",
@@ -21765,7 +20613,7 @@ var armor_list = {
                 "hex": "03"
             },
             {
-                "sname": "体力回复量UP",
+                "sname": "体力回复量提升",
                 "lv": 2,
                 "hex": "3A"
             }
@@ -21777,9 +20625,9 @@ var armor_list = {
         "def_d": 2,
         "rare9": true
     },
-    "428_1": {
-        "id": 428,
-        "name": "銀白耀日頭盔",
+    "429_1": {
+        "id": 429,
+        "name": "银白耀日头盔",
         "rank": 10,
         "gender": "男女共通",
         "parts": "头",
@@ -21790,7 +20638,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 122,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "超会心",
@@ -21813,11 +20661,11 @@ var armor_list = {
         "def_t": -3,
         "def_i": -2,
         "def_d": 3,
-        "rare9": false
+        "rare9": true
     },
-    "428_2": {
-        "id": 428,
-        "name": "銀白耀日鎧甲",
+    "429_2": {
+        "id": 429,
+        "name": "银白耀日铠甲",
         "rank": 10,
         "gender": "男女共通",
         "parts": "身",
@@ -21828,7 +20676,7 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 1,
         "bougyo": 122,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "弱点特效【属性】",
@@ -21853,9 +20701,9 @@ var armor_list = {
         "def_d": 3,
         "rare9": true
     },
-    "428_3": {
-        "id": 428,
-        "name": "銀白耀日腕甲",
+    "429_3": {
+        "id": 429,
+        "name": "银白耀日腕甲",
         "rank": 10,
         "gender": "男女共通",
         "parts": "手",
@@ -21866,7 +20714,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 122,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "弱点特效【属性】",
@@ -21889,11 +20737,11 @@ var armor_list = {
         "def_t": -3,
         "def_i": -2,
         "def_d": 3,
-        "rare9": false
+        "rare9": true
     },
-    "428_4": {
-        "id": 428,
-        "name": "銀白耀日腰甲",
+    "429_4": {
+        "id": 429,
+        "name": "银白耀日腰甲",
         "rank": 10,
         "gender": "男女共通",
         "parts": "腰",
@@ -21904,7 +20752,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 122,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "弱点特效【属性】",
@@ -21927,11 +20775,11 @@ var armor_list = {
         "def_t": -3,
         "def_i": -2,
         "def_d": 3,
-        "rare9": false
+        "rare9": true
     },
-    "428_5": {
-        "id": 428,
-        "name": "銀白耀日護腿",
+    "429_5": {
+        "id": 429,
+        "name": "银白耀日护腿",
         "rank": 10,
         "gender": "男女共通",
         "parts": "腿",
@@ -21942,7 +20790,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 122,
-        "bougyo_max": 140,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "超会心",
@@ -21967,9 +20815,204 @@ var armor_list = {
         "def_d": 3,
         "rare9": true
     },
+    "430_1": {
+        "id": 430,
+        "name": "棘龙Z首脑",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "攻击",
+                "lv": 2,
+                "hex": "01"
+            },
+            {
+                "sname": "利刃",
+                "lv": 1,
+                "hex": "17"
+            },
+            {
+                "sname": "弹丸节约",
+                "lv": 1,
+                "hex": "18"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -4,
+        "def_t": -1,
+        "def_i": 2,
+        "def_d": -3,
+        "rare9": true
+    },
+    "430_2": {
+        "id": 430,
+        "name": "棘龙Z肌肉",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 2,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "蓄力大师",
+                "lv": 1,
+                "hex": "7C"
+            },
+            {
+                "sname": "跑者",
+                "lv": 2,
+                "hex": "20"
+            },
+            {
+                "sname": "攻击",
+                "lv": 2,
+                "hex": "01"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -4,
+        "def_t": -1,
+        "def_i": 2,
+        "def_d": -3,
+        "rare9": true
+    },
+    "430_3": {
+        "id": 430,
+        "name": "棘龙Z双手",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "刚心",
+                "lv": 1,
+                "hex": "87"
+            },
+            {
+                "sname": "攻击",
+                "lv": 1,
+                "hex": "01"
+            },
+            {
+                "sname": "利刃",
+                "lv": 2,
+                "hex": "17"
+            },
+            {
+                "sname": "弹丸节约",
+                "lv": 2,
+                "hex": "18"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -4,
+        "def_t": -1,
+        "def_i": 2,
+        "def_d": -3,
+        "rare9": true
+    },
+    "430_4": {
+        "id": 430,
+        "name": "棘龙Z脐带",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 9,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "蓄力大师",
+                "lv": 2,
+                "hex": "7C"
+            },
+            {
+                "sname": "跑者",
+                "lv": 1,
+                "hex": "20"
+            },
+            {
+                "sname": "连击",
+                "lv": 1,
+                "hex": "83"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -4,
+        "def_t": -1,
+        "def_i": 2,
+        "def_d": -3,
+        "rare9": true
+    },
+    "430_5": {
+        "id": 430,
+        "name": "棘龙Z脚跟",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 9,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "刚心",
+                "lv": 1,
+                "hex": "87"
+            },
+            {
+                "sname": "攻击",
+                "lv": 1,
+                "hex": "01"
+            },
+            {
+                "sname": "连击",
+                "lv": 2,
+                "hex": "83"
+            }
+        ],
+        "def_f": 3,
+        "def_w": -4,
+        "def_t": -1,
+        "def_i": 2,
+        "def_d": -3,
+        "rare9": true
+    },
     "431_1": {
         "id": 431,
-        "name": "月光【護額】",
+        "name": "月光【护额】",
         "rank": 10,
         "gender": "男女共通",
         "parts": "头",
@@ -21980,7 +21023,7 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 118,
-        "bougyo_max": 136,
+        "bougyo_max": 174,
         "skill": [
             {
                 "sname": "匠",
@@ -22007,7 +21050,7 @@ var armor_list = {
     },
     "431_2": {
         "id": 431,
-        "name": "月光【鎖甲】",
+        "name": "月光【铠衣】",
         "rank": 10,
         "gender": "男女共通",
         "parts": "身",
@@ -22018,7 +21061,7 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 118,
-        "bougyo_max": 136,
+        "bougyo_max": 174,
         "skill": [
             {
                 "sname": "偷袭",
@@ -22041,7 +21084,7 @@ var armor_list = {
         "def_t": 0,
         "def_i": -5,
         "def_d": -2,
-        "rare9": false
+        "rare9": true
     },
     "431_3": {
         "id": 431,
@@ -22056,7 +21099,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 0,
         "bougyo": 118,
-        "bougyo_max": 136,
+        "bougyo_max": 174,
         "skill": [
             {
                 "sname": "巧击",
@@ -22074,11 +21117,11 @@ var armor_list = {
         "def_t": 0,
         "def_i": -5,
         "def_d": -2,
-        "rare9": false
+        "rare9": true
     },
     "431_4": {
         "id": 431,
-        "name": "月光【腰帶】",
+        "name": "月光【腰带】",
         "rank": 10,
         "gender": "男女共通",
         "parts": "腰",
@@ -22089,7 +21132,7 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 118,
-        "bougyo_max": 136,
+        "bougyo_max": 174,
         "skill": [
             {
                 "sname": "偷袭",
@@ -22102,9 +21145,9 @@ var armor_list = {
                 "hex": "16"
             },
             {
-                "sname": "散弹·扩散箭强化",
+                "sname": "散弹・扩散箭强化",
                 "lv": 2,
-                "hex": "31"
+                "hex": "32"
             }
         ],
         "def_f": 3,
@@ -22112,7 +21155,7 @@ var armor_list = {
         "def_t": 0,
         "def_i": -5,
         "def_d": -2,
-        "rare9": false
+        "rare9": true
     },
     "431_5": {
         "id": 431,
@@ -22127,7 +21170,7 @@ var armor_list = {
         "slotLv3": 1,
         "slotLv4": 0,
         "bougyo": 118,
-        "bougyo_max": 136,
+        "bougyo_max": 174,
         "skill": [
             {
                 "sname": "偷袭",
@@ -22155,641 +21198,146 @@ var armor_list = {
         "def_t": 0,
         "def_i": -5,
         "def_d": -2,
-        "rare9": false
+        "rare9": true
     },
-    "448_1": {
-        "id": 448,
-        "name": "夏日帽子",
+    "441_1": {
+        "id": 441,
+        "name": "重装骑士【武士盔】",
         "rank": 9,
         "gender": "男女共通",
         "parts": "头",
         "parts_id": 1,
         "rare": 8,
         "slotLv1": 0,
-        "slotLv2": 0,
+        "slotLv2": 1,
         "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
+        "bougyo": 114,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "防御强化",
+                "lv": 1,
+                "hex": "24"
+            },
+            {
+                "sname": "炮术",
+                "lv": 1,
+                "hex": "2D"
+            },
+            {
+                "sname": "炮弹装填",
+                "lv": 2,
+                "hex": "2E"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
         "rare9": false
     },
-    "448_2": {
-        "id": 448,
-        "name": "夏日上衣",
+    "441_2": {
+        "id": 441,
+        "name": "重装骑士【铠甲】",
         "rank": 9,
         "gender": "男女共通",
         "parts": "身",
         "parts_id": 2,
         "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "448_3": {
-        "id": 448,
-        "name": "夏日手環",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "448_4": {
-        "id": 448,
-        "name": "夏日腰帶",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "448_5": {
-        "id": 448,
-        "name": "夏日長褲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "434_1": {
-        "id": 434,
-        "name": "情誼頭飾",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "434_2": {
-        "id": 434,
-        "name": "情誼服飾",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "434_3": {
-        "id": 434,
-        "name": "情誼腕甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "434_4": {
-        "id": 434,
-        "name": "情誼腰甲",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "434_5": {
-        "id": 434,
-        "name": "情誼鞋子",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "462_1": {
-        "id": 462,
-        "name": "菲歐莉尼面罩",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "462_2": {
-        "id": 462,
-        "name": "菲歐莉尼身體",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "462_3": {
-        "id": 462,
-        "name": "菲歐莉尼腕部",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "462_4": {
-        "id": 462,
-        "name": "菲歐莉尼腰部",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "462_5": {
-        "id": 462,
-        "name": "菲歐莉尼足部",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "463_1": {
-        "id": 463,
-        "name": "倪泰面罩",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "463_2": {
-        "id": 463,
-        "name": "倪泰身體",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "463_3": {
-        "id": 463,
-        "name": "倪泰腕部",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "463_4": {
-        "id": 463,
-        "name": "倪泰腰部",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "463_5": {
-        "id": 463,
-        "name": "倪泰足部",
-        "rank": 9,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 8,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "481_1": {
-        "id": 481,
-        "name": "噬生蟲皇冠",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 0,
-        "bougyo_max": 20,
-        "skill": [],
-        "def_f": 0,
-        "def_w": 0,
-        "def_t": 0,
-        "def_i": 0,
-        "def_d": 0,
-        "rare9": false
-    },
-    "394_1": {
-        "id": 394,
-        "name": "陰陽術者【頭冠】",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 9,
         "slotLv1": 2,
         "slotLv2": 0,
         "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 120,
-        "bougyo_max": 138,
-        "skill": [
-            {
-                "sname": "巧击",
-                "lv": 1,
-                "hex": "78"
-            },
-            {
-                "sname": "回避距离UP",
-                "lv": 3,
-                "hex": "42"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 0,
-        "def_t": -1,
-        "def_i": -3,
-        "def_d": 1,
-        "rare9": true
-    },
-    "394_2": {
-        "id": 394,
-        "name": "陰陽術者【狩衣】",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 9,
-        "slotLv1": 1,
-        "slotLv2": 1,
-        "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 120,
-        "bougyo_max": 138,
+        "bougyo": 114,
+        "bougyo_max": 174,
         "skill": [
             {
-                "sname": "煽动",
+                "sname": "防御性能",
                 "lv": 1,
-                "hex": "79"
+                "hex": "23"
             },
             {
-                "sname": "弱点特效",
-                "lv": 1,
-                "hex": "08"
-            },
-            {
-                "sname": "耐力急速回复",
+                "sname": "炮术",
                 "lv": 2,
-                "hex": "22"
+                "hex": "2D"
+            },
+            {
+                "sname": "攻击守势",
+                "lv": 1,
+                "hex": "25"
             }
         ],
-        "def_f": 2,
-        "def_w": 0,
-        "def_t": -1,
-        "def_i": -3,
-        "def_d": 1,
-        "rare9": true
-    },
-    "394_3": {
-        "id": 394,
-        "name": "陰陽術者【手甲】",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 3,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 120,
-        "bougyo_max": 138,
-        "skill": [
-            {
-                "sname": "煽动",
-                "lv": 1,
-                "hex": "79"
-            },
-            {
-                "sname": "挑战者",
-                "lv": 2,
-                "hex": "02"
-            },
-            {
-                "sname": "耐力急速回复",
-                "lv": 1,
-                "hex": "22"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 0,
-        "def_t": -1,
-        "def_i": -3,
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
         "def_d": 1,
         "rare9": false
     },
-    "394_4": {
-        "id": 394,
-        "name": "陰陽術者【束帶】",
-        "rank": 10,
+    "441_3": {
+        "id": 441,
+        "name": "重装骑士【手甲】",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "防御性能",
+                "lv": 2,
+                "hex": "23"
+            },
+            {
+                "sname": "防御强化",
+                "lv": 1,
+                "hex": "24"
+            },
+            {
+                "sname": "利刃",
+                "lv": 1,
+                "hex": "17"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "441_4": {
+        "id": 441,
+        "name": "重装骑士【腰甲】",
+        "rank": 9,
         "gender": "男女共通",
         "parts": "腰",
         "parts_id": 4,
-        "rare": 9,
-        "slotLv1": 1,
-        "slotLv2": 2,
-        "slotLv3": 0,
-        "slotLv4": 0,
-        "bougyo": 120,
-        "bougyo_max": 138,
-        "skill": [
-            {
-                "sname": "煽动",
-                "lv": 1,
-                "hex": "79"
-            },
-            {
-                "sname": "挑战者",
-                "lv": 3,
-                "hex": "02"
-            },
-            {
-                "sname": "巧击",
-                "lv": 1,
-                "hex": "78"
-            }
-        ],
-        "def_f": 2,
-        "def_w": 0,
-        "def_t": -1,
-        "def_i": -3,
-        "def_d": 1,
-        "rare9": true
-    },
-    "394_5": {
-        "id": 394,
-        "name": "陰陽術者【短袴】",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 9,
+        "rare": 8,
         "slotLv1": 0,
         "slotLv2": 0,
         "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 120,
-        "bougyo_max": 138,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 174,
         "skill": [
             {
-                "sname": "减轻胆怯",
-                "lv": 3,
-                "hex": "5D"
+                "sname": "防御性能",
+                "lv": 1,
+                "hex": "23"
             },
             {
-                "sname": "弱点特效",
-                "lv": 2,
-                "hex": "08"
+                "sname": "纳刀术",
+                "lv": 1,
+                "hex": "28"
             },
             {
                 "sname": "攻击守势",
@@ -22797,16 +21345,637 @@ var armor_list = {
                 "hex": "25"
             }
         ],
-        "def_f": 2,
-        "def_w": 0,
-        "def_t": -1,
-        "def_i": -3,
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
         "def_d": 1,
+        "rare9": false
+    },
+    "441_5": {
+        "id": 441,
+        "name": "重装骑士【腿甲】",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 114,
+        "bougyo_max": 174,
+        "skill": [
+            {
+                "sname": "防御强化",
+                "lv": 1,
+                "hex": "24"
+            },
+            {
+                "sname": "纳刀术",
+                "lv": 2,
+                "hex": "28"
+            },
+            {
+                "sname": "利刃",
+                "lv": 2,
+                "hex": "17"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "442_1": {
+        "id": 442,
+        "name": "轻装骑士【耳饰】",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 100,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "攻击",
+                "lv": 2,
+                "hex": "01"
+            },
+            {
+                "sname": "快吃",
+                "lv": 3,
+                "hex": "3C"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "442_2": {
+        "id": 442,
+        "name": "轻装骑士【胸甲】",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 100,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "利刃",
+                "lv": 1,
+                "hex": "17"
+            },
+            {
+                "sname": "减轻胆怯",
+                "lv": 1,
+                "hex": "5D"
+            },
+            {
+                "sname": "攻击守势",
+                "lv": 2,
+                "hex": "25"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "442_3": {
+        "id": 442,
+        "name": "轻装骑士【手甲】",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 100,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "防御强化",
+                "lv": 3,
+                "hex": "24"
+            },
+            {
+                "sname": "减轻胆怯",
+                "lv": 2,
+                "hex": "5D"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "442_4": {
+        "id": 442,
+        "name": "轻装骑士【腰甲】",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 100,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "弱点特效",
+                "lv": 1,
+                "hex": "08"
+            },
+            {
+                "sname": "超会心",
+                "lv": 1,
+                "hex": "07"
+            },
+            {
+                "sname": "攻击守势",
+                "lv": 1,
+                "hex": "25"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "442_5": {
+        "id": 442,
+        "name": "轻装骑士【腿甲】",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 100,
+        "bougyo_max": 160,
+        "skill": [
+            {
+                "sname": "利刃",
+                "lv": 2,
+                "hex": "17"
+            },
+            {
+                "sname": "超会心",
+                "lv": 1,
+                "hex": "07"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "443_1": {
+        "id": 443,
+        "name": "炮术队【武士盔】",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 106,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "抑制偏移",
+                "lv": 2,
+                "hex": "36"
+            },
+            {
+                "sname": "减轻后坐力",
+                "lv": 1,
+                "hex": "35"
+            },
+            {
+                "sname": "回避距离提升",
+                "lv": 2,
+                "hex": "42"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "443_2": {
+        "id": 443,
+        "name": "炮术队【身体】",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 106,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "弹道强化",
+                "lv": 3,
+                "hex": "1B"
+            },
+            {
+                "sname": "减轻后坐力",
+                "lv": 1,
+                "hex": "35"
+            },
+            {
+                "sname": "回避距离提升",
+                "lv": 1,
+                "hex": "42"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "443_3": {
+        "id": 443,
+        "name": "炮术队【臂甲】",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 7,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 106,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "装填扩充",
+                "lv": 1,
+                "hex": "33"
+            },
+            {
+                "sname": "装填速度",
+                "lv": 1,
+                "hex": "34"
+            },
+            {
+                "sname": "炮术",
+                "lv": 2,
+                "hex": "2D"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "443_4": {
+        "id": 443,
+        "name": "炮术队【腰】",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 106,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "装填扩充",
+                "lv": 2,
+                "hex": "33"
+            },
+            {
+                "sname": "装填速度",
+                "lv": 1,
+                "hex": "34"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "443_5": {
+        "id": 443,
+        "name": "炮术队【护腿】",
+        "rank": 8,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 7,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 106,
+        "bougyo_max": 166,
+        "skill": [
+            {
+                "sname": "弹丸节约",
+                "lv": 3,
+                "hex": "18"
+            },
+            {
+                "sname": "特殊射击强化",
+                "lv": 1,
+                "hex": "2F"
+            },
+            {
+                "sname": "炮术",
+                "lv": 1,
+                "hex": "2D"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "456_1": {
+        "id": 456,
+        "name": "尊严耳饰",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "集中",
+                "lv": 2,
+                "hex": "1E"
+            },
+            {
+                "sname": "强化持续",
+                "lv": 2,
+                "hex": "1F"
+            },
+            {
+                "sname": "回避距离提升",
+                "lv": 1,
+                "hex": "42"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "456_2": {
+        "id": 456,
+        "name": "尊严外套",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 8,
+        "slotLv1": 1,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 0,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "高速变形",
+                "lv": 1,
+                "hex": "6B"
+            },
+            {
+                "sname": "回避性能",
+                "lv": 1,
+                "hex": "41"
+            },
+            {
+                "sname": "回避距离提升",
+                "lv": 2,
+                "hex": "42"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "456_3": {
+        "id": 456,
+        "name": "尊严护手",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "高速变形",
+                "lv": 1,
+                "hex": "6B"
+            },
+            {
+                "sname": "回避性能",
+                "lv": 2,
+                "hex": "41"
+            },
+            {
+                "sname": "利刃",
+                "lv": 1,
+                "hex": "17"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "456_4": {
+        "id": 456,
+        "name": "尊严腰带",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "集中",
+                "lv": 1,
+                "hex": "1E"
+            },
+            {
+                "sname": "回避性能",
+                "lv": 2,
+                "hex": "41"
+            },
+            {
+                "sname": "利刃",
+                "lv": 1,
+                "hex": "17"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "456_5": {
+        "id": 456,
+        "name": "尊严护腿",
+        "rank": 9,
+        "gender": "男女共通",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 8,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 112,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "高速变形",
+                "lv": 1,
+                "hex": "6B"
+            },
+            {
+                "sname": "强化持续",
+                "lv": 1,
+                "hex": "1F"
+            },
+            {
+                "sname": "利刃",
+                "lv": 1,
+                "hex": "17"
+            }
+        ],
+        "def_f": 1,
+        "def_w": 1,
+        "def_t": 1,
+        "def_i": 1,
+        "def_d": 1,
+        "rare9": false
+    },
+    "459_1": {
+        "id": 459,
+        "name": "翔驱羽饰",
+        "rank": 10,
+        "gender": "男女共通",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 116,
+        "bougyo_max": 172,
+        "skill": [
+            {
+                "sname": "翔虫使",
+                "lv": 3,
+                "hex": "68"
+            },
+            {
+                "sname": "走壁移动【翔】",
+                "lv": 1,
+                "hex": "81"
+            }
+        ],
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
         "rare9": true
     },
-    "430_1": {
-        "id": 430,
-        "name": "棘茶龍首腦",
+    "460_1": {
+        "id": 460,
+        "name": "祝福羽饰",
         "rank": 10,
         "gender": "男女共通",
         "parts": "头",
@@ -22814,194 +21983,27 @@ var armor_list = {
         "rare": 9,
         "slotLv1": 0,
         "slotLv2": 1,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 122,
-        "bougyo_max": 140,
-        "skill": [
-            {
-                "sname": "攻击",
-                "lv": 2,
-                "hex": "01"
-            },
-            {
-                "sname": "利刃",
-                "lv": 1,
-                "hex": "17"
-            },
-            {
-                "sname": "弹药节制",
-                "lv": 1,
-                "hex": "18"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -4,
-        "def_t": -1,
-        "def_i": 2,
-        "def_d": -3,
-        "rare9": false
-    },
-    "430_2": {
-        "id": 430,
-        "name": "棘茶龍肌肉",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "身",
-        "parts_id": 2,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 2,
         "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 122,
-        "bougyo_max": 140,
+        "bougyo": 116,
+        "bougyo_max": 172,
         "skill": [
             {
-                "sname": "蓄力大师",
-                "lv": 1,
-                "hex": "7C"
-            },
-            {
-                "sname": "跑者",
-                "lv": 2,
-                "hex": "20"
-            },
-            {
-                "sname": "攻击",
-                "lv": 2,
-                "hex": "01"
+                "sname": "幸运",
+                "lv": 3,
+                "hex": "54"
             }
         ],
-        "def_f": 3,
-        "def_w": -4,
-        "def_t": -1,
-        "def_i": 2,
-        "def_d": -3,
-        "rare9": false
-    },
-    "430_3": {
-        "id": 430,
-        "name": "棘茶龍雙手",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 122,
-        "bougyo_max": 140,
-        "skill": [
-            {
-                "sname": "刚心",
-                "lv": 1,
-                "hex": "87"
-            },
-            {
-                "sname": "攻击",
-                "lv": 1,
-                "hex": "01"
-            },
-            {
-                "sname": "利刃",
-                "lv": 2,
-                "hex": "17"
-            },
-            {
-                "sname": "弹药节制",
-                "lv": 2,
-                "hex": "18"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -4,
-        "def_t": -1,
-        "def_i": 2,
-        "def_d": -3,
-        "rare9": false
-    },
-    "430_4": {
-        "id": 430,
-        "name": "棘茶龍臍帶",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 9,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 122,
-        "bougyo_max": 140,
-        "skill": [
-            {
-                "sname": "蓄力大师",
-                "lv": 2,
-                "hex": "7C"
-            },
-            {
-                "sname": "跑者",
-                "lv": 1,
-                "hex": "20"
-            },
-            {
-                "sname": "连击",
-                "lv": 1,
-                "hex": "83"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -4,
-        "def_t": -1,
-        "def_i": 2,
-        "def_d": -3,
-        "rare9": false
-    },
-    "430_5": {
-        "id": 430,
-        "name": "棘茶龍腳跟",
-        "rank": 10,
-        "gender": "男女共通",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 9,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 122,
-        "bougyo_max": 140,
-        "skill": [
-            {
-                "sname": "刚心",
-                "lv": 1,
-                "hex": "87"
-            },
-            {
-                "sname": "攻击",
-                "lv": 1,
-                "hex": "01"
-            },
-            {
-                "sname": "连击",
-                "lv": 2,
-                "hex": "83"
-            }
-        ],
-        "def_f": 3,
-        "def_w": -4,
-        "def_t": -1,
-        "def_i": 2,
-        "def_d": -3,
-        "rare9": false
+        "def_f": 0,
+        "def_w": 0,
+        "def_t": 0,
+        "def_i": 0,
+        "def_d": 0,
+        "rare9": true
     },
     "491_1": {
         "id": 491,
-        "name": "霞龍醒【額飾】",
+        "name": "水行・醒【额饰】",
         "rank": 10,
         "gender": "男女共通",
         "parts": "头",
@@ -23012,7 +22014,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 125,
-        "bougyo_max": 143,
+        "bougyo_max": 181,
         "skill": [
             {
                 "sname": "无伤",
@@ -23030,11 +22032,11 @@ var armor_list = {
         "def_t": 0,
         "def_i": 3,
         "def_d": -3,
-        "rare9": false
+        "rare9": true
     },
     "491_2": {
         "id": 491,
-        "name": "霞龍醒【宿衣】",
+        "name": "水行・醒【宿衣】",
         "rank": 10,
         "gender": "男女共通",
         "parts": "身",
@@ -23045,7 +22047,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 125,
-        "bougyo_max": 143,
+        "bougyo_max": 181,
         "skill": [
             {
                 "sname": "累积时攻击强化",
@@ -23072,7 +22074,7 @@ var armor_list = {
     },
     "491_3": {
         "id": 491,
-        "name": "霞龍醒【大袖】",
+        "name": "水行・醒【大袖】",
         "rank": 10,
         "gender": "男女共通",
         "parts": "手",
@@ -23083,7 +22085,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 125,
-        "bougyo_max": 143,
+        "bougyo_max": 181,
         "skill": [
             {
                 "sname": "累积时攻击强化",
@@ -23110,7 +22112,7 @@ var armor_list = {
     },
     "491_4": {
         "id": 491,
-        "name": "霞龍醒【圓帶】",
+        "name": "水行・醒【圆带】",
         "rank": 10,
         "gender": "男女共通",
         "parts": "腰",
@@ -23121,7 +22123,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 2,
         "bougyo": 125,
-        "bougyo_max": 143,
+        "bougyo_max": 181,
         "skill": [
             {
                 "sname": "翔虫使",
@@ -23139,11 +22141,11 @@ var armor_list = {
         "def_t": 0,
         "def_i": 3,
         "def_d": -3,
-        "rare9": false
+        "rare9": true
     },
     "491_5": {
         "id": 491,
-        "name": "霞龍醒【腿甲】",
+        "name": "水行・醒【腿甲】",
         "rank": 10,
         "gender": "男女共通",
         "parts": "腿",
@@ -23154,7 +22156,7 @@ var armor_list = {
         "slotLv3": 0,
         "slotLv4": 1,
         "bougyo": 125,
-        "bougyo_max": 143,
+        "bougyo_max": 181,
         "skill": [
             {
                 "sname": "累积时攻击强化",
@@ -23177,7 +22179,7 @@ var armor_list = {
         "def_t": 0,
         "def_i": 3,
         "def_d": -3,
-        "rare9": false
+        "rare9": true
     },
     "492_1": {
         "id": 492,
@@ -23186,13 +22188,13 @@ var armor_list = {
         "gender": "男女共通",
         "parts": "头",
         "parts_id": 1,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 1,
         "slotLv2": 1,
         "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 124,
+        "bougyo_max": 180,
         "skill": [
             {
                 "sname": "风绕",
@@ -23210,7 +22212,7 @@ var armor_list = {
         "def_t": -2,
         "def_i": 3,
         "def_d": -3,
-        "rare9": false
+        "rare9": true
     },
     "492_2": {
         "id": 492,
@@ -23219,13 +22221,13 @@ var armor_list = {
         "gender": "男女共通",
         "parts": "身",
         "parts_id": 2,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 1,
         "slotLv2": 1,
         "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 124,
+        "bougyo_max": 180,
         "skill": [
             {
                 "sname": "钢壳的恩惠",
@@ -23243,7 +22245,7 @@ var armor_list = {
                 "hex": "17"
             },
             {
-                "sname": "弹药节制",
+                "sname": "弹丸节约",
                 "lv": 2,
                 "hex": "18"
             }
@@ -23253,7 +22255,7 @@ var armor_list = {
         "def_t": -2,
         "def_i": 3,
         "def_d": -3,
-        "rare9": false
+        "rare9": true
     },
     "492_3": {
         "id": 492,
@@ -23262,13 +22264,13 @@ var armor_list = {
         "gender": "男女共通",
         "parts": "手",
         "parts_id": 3,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 0,
         "slotLv2": 1,
         "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 124,
+        "bougyo_max": 180,
         "skill": [
             {
                 "sname": "风绕",
@@ -23286,7 +22288,7 @@ var armor_list = {
         "def_t": -2,
         "def_i": 3,
         "def_d": -3,
-        "rare9": false
+        "rare9": true
     },
     "492_4": {
         "id": 492,
@@ -23295,13 +22297,13 @@ var armor_list = {
         "gender": "男女共通",
         "parts": "腰",
         "parts_id": 4,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 1,
         "slotLv2": 0,
         "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 124,
+        "bougyo_max": 180,
         "skill": [
             {
                 "sname": "钢壳的恩惠",
@@ -23314,7 +22316,7 @@ var armor_list = {
                 "hex": "01"
             },
             {
-                "sname": "体力回复量UP",
+                "sname": "体力回复量提升",
                 "lv": 3,
                 "hex": "3A"
             }
@@ -23324,7 +22326,7 @@ var armor_list = {
         "def_t": -2,
         "def_i": 3,
         "def_d": -3,
-        "rare9": false
+        "rare9": true
     },
     "492_5": {
         "id": 492,
@@ -23333,13 +22335,13 @@ var armor_list = {
         "gender": "男女共通",
         "parts": "腿",
         "parts_id": 5,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 0,
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 2,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 124,
+        "bougyo_max": 180,
         "skill": [
             {
                 "sname": "风绕",
@@ -23357,7 +22359,7 @@ var armor_list = {
         "def_t": -2,
         "def_i": 3,
         "def_d": -3,
-        "rare9": false
+        "rare9": true
     },
     "493_1": {
         "id": 493,
@@ -23366,13 +22368,13 @@ var armor_list = {
         "gender": "男女共通",
         "parts": "头",
         "parts_id": 1,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 0,
         "slotLv2": 1,
         "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 124,
+        "bougyo_max": 180,
         "skill": [
             {
                 "sname": "粉尘绕",
@@ -23395,7 +22397,7 @@ var armor_list = {
         "def_t": 1,
         "def_i": -1,
         "def_d": -3,
-        "rare9": false
+        "rare9": true
     },
     "493_2": {
         "id": 493,
@@ -23404,13 +22406,13 @@ var armor_list = {
         "gender": "男女共通",
         "parts": "身",
         "parts_id": 2,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 0,
         "slotLv2": 2,
         "slotLv3": 0,
         "slotLv4": 0,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 124,
+        "bougyo_max": 180,
         "skill": [
             {
                 "sname": "粉尘绕",
@@ -23433,7 +22435,7 @@ var armor_list = {
         "def_t": 1,
         "def_i": -1,
         "def_d": -3,
-        "rare9": false
+        "rare9": true
     },
     "493_3": {
         "id": 493,
@@ -23442,13 +22444,13 @@ var armor_list = {
         "gender": "男女共通",
         "parts": "手",
         "parts_id": 3,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 0,
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 2,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 124,
+        "bougyo_max": 180,
         "skill": [
             {
                 "sname": "炎鳞的恩惠",
@@ -23476,7 +22478,7 @@ var armor_list = {
         "def_t": 1,
         "def_i": -1,
         "def_d": -3,
-        "rare9": false
+        "rare9": true
     },
     "493_4": {
         "id": 493,
@@ -23485,20 +22487,19 @@ var armor_list = {
         "gender": "男女共通",
         "parts": "腰",
         "parts_id": 4,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 0,
         "slotLv2": 0,
         "slotLv3": 1,
         "slotLv4": 1,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 124,
+        "bougyo_max": 180,
         "skill": [
             {
                 "sname": "粉尘绕",
                 "lv": 1,
                 "hex": "8B"
             },
-
             {
                 "sname": "达人艺",
                 "lv": 2,
@@ -23509,14 +22510,13 @@ var armor_list = {
                 "lv": 2,
                 "hex": "1B"
             }
-
         ],
         "def_f": 4,
         "def_w": -4,
         "def_t": 1,
         "def_i": -1,
         "def_d": -3,
-        "rare9": false
+        "rare9": true
     },
     "493_5": {
         "id": 493,
@@ -23525,13 +22525,13 @@ var armor_list = {
         "gender": "男女共通",
         "parts": "腿",
         "parts_id": 5,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 2,
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 124,
+        "bougyo_max": 180,
         "skill": [
             {
                 "sname": "炎鳞的恩惠",
@@ -23552,29 +22552,29 @@ var armor_list = {
                 "sname": "火属性攻击强化",
                 "lv": 2,
                 "hex": "0D"
-            },
+            }
         ],
         "def_f": 4,
         "def_w": -4,
         "def_t": 1,
         "def_i": -1,
         "def_d": -3,
-        "rare9": false
+        "rare9": true
     },
     "494_1": {
         "id": 494,
         "name": "混茫头盔",
         "rank": 10,
-        "gender": "男性专用",
+        "gender": "男女共通",
         "parts": "头",
         "parts_id": 1,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 0,
         "slotLv2": 1,
         "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 118,
+        "bougyo_max": 174,
         "skill": [
             {
                 "sname": "奋斗",
@@ -23597,22 +22597,22 @@ var armor_list = {
         "def_t": -2,
         "def_i": 2,
         "def_d": -4,
-        "rare9": false
+        "rare9": true
     },
     "494_2": {
         "id": 494,
         "name": "混茫铠甲",
         "rank": 10,
-        "gender": "男性专用",
+        "gender": "男女共通",
         "parts": "身",
         "parts_id": 2,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 1,
         "slotLv2": 0,
         "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 118,
+        "bougyo_max": 174,
         "skill": [
             {
                 "sname": "奋斗",
@@ -23635,22 +22635,22 @@ var armor_list = {
         "def_t": -2,
         "def_i": 2,
         "def_d": -4,
-        "rare9": false
+        "rare9": true
     },
     "494_3": {
         "id": 494,
         "name": "混茫腕甲",
         "rank": 10,
-        "gender": "男性专用",
+        "gender": "男女共通",
         "parts": "手",
         "parts_id": 3,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 0,
         "slotLv2": 0,
         "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 118,
+        "bougyo_max": 174,
         "skill": [
             {
                 "sname": "狂化",
@@ -23666,30 +22666,29 @@ var armor_list = {
                 "sname": "怨恨",
                 "lv": 3,
                 "hex": "04"
-            },
-
+            }
         ],
         "def_f": -4,
         "def_w": 3,
         "def_t": -2,
         "def_i": 2,
         "def_d": -4,
-        "rare9": false
+        "rare9": true
     },
     "494_4": {
         "id": 494,
         "name": "混茫护裙",
         "rank": 10,
-        "gender": "男性专用",
+        "gender": "男女共通",
         "parts": "腰",
         "parts_id": 4,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 2,
         "slotLv2": 0,
         "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 118,
+        "bougyo_max": 174,
         "skill": [
             {
                 "sname": "奋斗",
@@ -23705,29 +22704,29 @@ var armor_list = {
                 "sname": "怨恨",
                 "lv": 2,
                 "hex": "04"
-            },
+            }
         ],
         "def_f": -4,
         "def_w": 3,
         "def_t": -2,
         "def_i": 2,
         "def_d": -4,
-        "rare9": false
+        "rare9": true
     },
     "494_5": {
         "id": 494,
         "name": "混茫护腿",
         "rank": 10,
-        "gender": "男性专用",
+        "gender": "男女共通",
         "parts": "腿",
         "parts_id": 5,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 0,
         "slotLv2": 0,
         "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 118,
+        "bougyo_max": 174,
         "skill": [
             {
                 "sname": "狂化",
@@ -23743,29 +22742,29 @@ var armor_list = {
                 "sname": "因祸得福",
                 "lv": 3,
                 "hex": "74"
-            },
+            }
         ],
         "def_f": -4,
         "def_w": 3,
         "def_t": -2,
         "def_i": 2,
         "def_d": -4,
-        "rare9": false
+        "rare9": true
     },
     "495_1": {
         "id": 495,
         "name": "堕天头盔",
         "rank": 10,
-        "gender": "女性专用",
+        "gender": "男女共通",
         "parts": "头",
         "parts_id": 1,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 0,
         "slotLv2": 1,
         "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 118,
+        "bougyo_max": 174,
         "skill": [
             {
                 "sname": "奋斗",
@@ -23788,22 +22787,22 @@ var armor_list = {
         "def_t": -2,
         "def_i": 2,
         "def_d": -4,
-        "rare9": false
+        "rare9": true
     },
     "495_2": {
         "id": 495,
         "name": "堕天铠甲",
         "rank": 10,
-        "gender": "女性专用",
+        "gender": "男女共通",
         "parts": "身",
         "parts_id": 2,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 1,
         "slotLv2": 0,
         "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 118,
+        "bougyo_max": 174,
         "skill": [
             {
                 "sname": "奋斗",
@@ -23826,22 +22825,22 @@ var armor_list = {
         "def_t": -2,
         "def_i": 2,
         "def_d": -4,
-        "rare9": false
+        "rare9": true
     },
     "495_3": {
         "id": 495,
         "name": "堕天腕甲",
         "rank": 10,
-        "gender": "女性专用",
+        "gender": "男女共通",
         "parts": "手",
         "parts_id": 3,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 0,
         "slotLv2": 0,
         "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 118,
+        "bougyo_max": 174,
         "skill": [
             {
                 "sname": "狂化",
@@ -23857,30 +22856,29 @@ var armor_list = {
                 "sname": "怨恨",
                 "lv": 3,
                 "hex": "04"
-            },
-
+            }
         ],
         "def_f": -4,
         "def_w": 3,
         "def_t": -2,
         "def_i": 2,
         "def_d": -4,
-        "rare9": false
+        "rare9": true
     },
     "495_4": {
         "id": 495,
         "name": "堕天护裙",
         "rank": 10,
-        "gender": "女性专用",
+        "gender": "男女共通",
         "parts": "腰",
         "parts_id": 4,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 2,
         "slotLv2": 0,
         "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 118,
+        "bougyo_max": 174,
         "skill": [
             {
                 "sname": "奋斗",
@@ -23896,29 +22894,29 @@ var armor_list = {
                 "sname": "怨恨",
                 "lv": 2,
                 "hex": "04"
-            },
+            }
         ],
         "def_f": -4,
         "def_w": 3,
         "def_t": -2,
         "def_i": 2,
         "def_d": -4,
-        "rare9": false
+        "rare9": true
     },
     "495_5": {
         "id": 495,
         "name": "堕天护腿",
         "rank": 10,
-        "gender": "女性专用",
+        "gender": "男女共通",
         "parts": "腿",
         "parts_id": 5,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 0,
         "slotLv2": 0,
         "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 118,
+        "bougyo_max": 174,
         "skill": [
             {
                 "sname": "狂化",
@@ -23934,31 +22932,29 @@ var armor_list = {
                 "sname": "因祸得福",
                 "lv": 3,
                 "hex": "74"
-            },
+            }
         ],
         "def_f": -4,
         "def_w": 3,
         "def_t": -2,
         "def_i": 2,
         "def_d": -4,
-        "rare9": false
+        "rare9": true
     },
-
-
     "498_1": {
         "id": 498,
-        "name": "冰咒头盔",
+        "name": "雪崩头盔",
         "rank": 10,
-        "gender": "通用",
+        "gender": "男女共通",
         "parts": "头",
         "parts_id": 1,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 1,
         "slotLv2": 0,
         "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 123,
+        "bougyo_max": 179,
         "skill": [
             {
                 "sname": "打磨术【锐】",
@@ -23966,7 +22962,7 @@ var armor_list = {
                 "hex": "7F"
             },
             {
-                "sname": "钢刃研磨",
+                "sname": "刚刃打磨",
                 "lv": 1,
                 "hex": "19"
             },
@@ -23976,30 +22972,30 @@ var armor_list = {
                 "hex": "33"
             }
         ],
-        "def_f": -4,
-        "def_w": 3,
-        "def_t": -2,
-        "def_i": 2,
-        "def_d": -4,
-        "rare9": false
+        "def_f": -3,
+        "def_w": 2,
+        "def_t": -1,
+        "def_i": 4,
+        "def_d": -1,
+        "rare9": true
     },
     "498_2": {
         "id": 498,
-        "name": "冰咒铠甲",
+        "name": "雪崩铠甲",
         "rank": 10,
-        "gender": "通用",
+        "gender": "男女共通",
         "parts": "身",
         "parts_id": 2,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 1,
         "slotLv2": 1,
         "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 123,
+        "bougyo_max": 179,
         "skill": [
             {
-                "sname": "寒气练成",
+                "sname": "寒气炼成",
                 "lv": 1,
                 "hex": "8C"
             },
@@ -24008,32 +23004,31 @@ var armor_list = {
                 "lv": 3,
                 "hex": "28"
             }
-
         ],
-        "def_f": -4,
-        "def_w": 3,
-        "def_t": -2,
-        "def_i": 2,
-        "def_d": -4,
-        "rare9": false
+        "def_f": -3,
+        "def_w": 2,
+        "def_t": -1,
+        "def_i": 4,
+        "def_d": -1,
+        "rare9": true
     },
     "498_3": {
         "id": 498,
-        "name": "冰咒腕甲",
+        "name": "雪崩腕甲",
         "rank": 10,
-        "gender": "通用",
+        "gender": "男女共通",
         "parts": "手",
         "parts_id": 3,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 1,
         "slotLv2": 1,
         "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 123,
+        "bougyo_max": 179,
         "skill": [
             {
-                "sname": "寒气练成",
+                "sname": "寒气炼成",
                 "lv": 1,
                 "hex": "8C"
             },
@@ -24043,30 +23038,30 @@ var armor_list = {
                 "hex": "26"
             }
         ],
-        "def_f": -4,
-        "def_w": 3,
-        "def_t": -2,
-        "def_i": 2,
-        "def_d": -4,
-        "rare9": false
+        "def_f": -3,
+        "def_w": 2,
+        "def_t": -1,
+        "def_i": 4,
+        "def_d": -1,
+        "rare9": true
     },
     "498_4": {
         "id": 498,
-        "name": "冰咒护裙",
+        "name": "雪崩腰甲",
         "rank": 10,
-        "gender": "通用",
+        "gender": "男女共通",
         "parts": "腰",
         "parts_id": 4,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 0,
         "slotLv2": 1,
         "slotLv3": 2,
         "slotLv4": 0,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 123,
+        "bougyo_max": 179,
         "skill": [
             {
-                "sname": "寒气练成",
+                "sname": "寒气炼成",
                 "lv": 1,
                 "hex": "8C"
             },
@@ -24076,27 +23071,27 @@ var armor_list = {
                 "hex": "1E"
             }
         ],
-        "def_f": -4,
-        "def_w": 3,
-        "def_t": -2,
-        "def_i": 2,
-        "def_d": -4,
-        "rare9": false
+        "def_f": -3,
+        "def_w": 2,
+        "def_t": -1,
+        "def_i": 4,
+        "def_d": -1,
+        "rare9": true
     },
     "498_5": {
         "id": 498,
-        "name": "冰咒护腿",
+        "name": "雪崩护腿",
         "rank": 10,
-        "gender": "通用",
+        "gender": "男女共通",
         "parts": "腿",
         "parts_id": 5,
-        "rare": 10,
+        "rare": 9,
         "slotLv1": 1,
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 1,
-        "bougyo_max": 158,
+        "bougyo": 123,
+        "bougyo_max": 179,
         "skill": [
             {
                 "sname": "冰属性攻击强化",
@@ -24112,19 +23107,18 @@ var armor_list = {
                 "sname": "弱点特效【属性】",
                 "lv": 1,
                 "hex": "82"
-            },
+            }
         ],
-        "def_f": -4,
-        "def_w": 3,
-        "def_t": -2,
-        "def_i": 2,
-        "def_d": -4,
-        "rare9": false
+        "def_f": -3,
+        "def_w": 2,
+        "def_t": -1,
+        "def_i": 4,
+        "def_d": -1,
+        "rare9": true
     },
-
     "499_1": {
         "id": 499,
-        "name": "克服天慧",
+        "name": "赫耀头盔・历",
         "rank": 10,
         "gender": "男女共通",
         "parts": "头",
@@ -24134,8 +23128,8 @@ var armor_list = {
         "slotLv2": 1,
         "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo": 121,
+        "bougyo_max": 177,
         "skill": [
             {
                 "sname": "龙气转换",
@@ -24158,11 +23152,11 @@ var armor_list = {
         "def_t": -2,
         "def_i": -2,
         "def_d": 3,
-        "rare9": false
+        "rare9": true
     },
     "499_2": {
         "id": 499,
-        "name": "克服天慧",
+        "name": "赫耀铠甲・历",
         "rank": 10,
         "gender": "男女共通",
         "parts": "身",
@@ -24172,8 +23166,8 @@ var armor_list = {
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 2,
-        "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo": 121,
+        "bougyo_max": 177,
         "skill": [
             {
                 "sname": "龙气转换",
@@ -24196,11 +23190,11 @@ var armor_list = {
         "def_t": -2,
         "def_i": -2,
         "def_d": 3,
-        "rare9": false
+        "rare9": true
     },
     "499_3": {
         "id": 499,
-        "name": "克服天慧",
+        "name": "赫耀腕甲・历",
         "rank": 10,
         "gender": "男女共通",
         "parts": "手",
@@ -24210,8 +23204,8 @@ var armor_list = {
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo": 121,
+        "bougyo_max": 177,
         "skill": [
             {
                 "sname": "超会心",
@@ -24234,11 +23228,11 @@ var armor_list = {
         "def_t": -2,
         "def_i": -2,
         "def_d": 3,
-        "rare9": false
+        "rare9": true
     },
     "499_4": {
         "id": 499,
-        "name": "克服天慧",
+        "name": "赫耀腰甲・历",
         "rank": 10,
         "gender": "男女共通",
         "parts": "腰",
@@ -24248,8 +23242,8 @@ var armor_list = {
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo": 121,
+        "bougyo_max": 177,
         "skill": [
             {
                 "sname": "龙气转换",
@@ -24272,11 +23266,11 @@ var armor_list = {
         "def_t": -2,
         "def_i": -2,
         "def_d": 3,
-        "rare9": false
+        "rare9": true
     },
     "499_5": {
         "id": 499,
-        "name": "克服天慧",
+        "name": "赫耀护腿・历",
         "rank": 10,
         "gender": "男女共通",
         "parts": "腿",
@@ -24286,8 +23280,8 @@ var armor_list = {
         "slotLv2": 0,
         "slotLv3": 1,
         "slotLv4": 1,
-        "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo": 121,
+        "bougyo_max": 177,
         "skill": [
             {
                 "sname": "超会心",
@@ -24295,7 +23289,7 @@ var armor_list = {
                 "hex": "07"
             },
             {
-                "sname": "气绝耐性",
+                "sname": "昏厥耐性",
                 "lv": 3,
                 "hex": "4C"
             },
@@ -24312,10 +23306,9 @@ var armor_list = {
         "def_d": 3,
         "rare9": true
     },
-
     "500_1": {
         "id": 500,
-        "name": "荒天",
+        "name": "风雨 【冠】",
         "rank": 10,
         "gender": "男女共通",
         "parts": "头",
@@ -24325,8 +23318,8 @@ var armor_list = {
         "slotLv2": 0,
         "slotLv3": 1,
         "slotLv4": 1,
-        "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo": 125,
+        "bougyo_max": 181,
         "skill": [
             {
                 "sname": "回避性能",
@@ -24343,28 +23336,28 @@ var armor_list = {
     },
     "500_2": {
         "id": 500,
-        "name": "荒天",
+        "name": "风雨 【衣】",
         "rank": 10,
         "gender": "男女共通",
-        "parts": "胸",
+        "parts": "身",
         "parts_id": 2,
         "rare": 9,
         "slotLv1": 1,
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 2,
-        "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo": 125,
+        "bougyo_max": 181,
         "skill": [
-            {
-                "sname": "超会心",
-                "lv": 1,
-                "hex": "07"
-            },
             {
                 "sname": "天衣无缝",
                 "lv": 1,
                 "hex": "8E"
+            },
+            {
+                "sname": "超会心",
+                "lv": 1,
+                "hex": "07"
             }
         ],
         "def_f": -3,
@@ -24376,7 +23369,7 @@ var armor_list = {
     },
     "500_3": {
         "id": 500,
-        "name": "荒天",
+        "name": "风雨 【袖】",
         "rank": 10,
         "gender": "男女共通",
         "parts": "手",
@@ -24386,18 +23379,18 @@ var armor_list = {
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 2,
-        "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo": 125,
+        "bougyo_max": 181,
         "skill": [
-            {
-                "sname": "力量解放",
-                "lv": 1,
-                "hex": "09"
-            },
             {
                 "sname": "天衣无缝",
                 "lv": 1,
                 "hex": "8E"
+            },
+            {
+                "sname": "力量解放",
+                "lv": 1,
+                "hex": "09"
             }
         ],
         "def_f": -3,
@@ -24409,7 +23402,7 @@ var armor_list = {
     },
     "500_4": {
         "id": 500,
-        "name": "荒天",
+        "name": "风雨 【带】",
         "rank": 10,
         "gender": "男女共通",
         "parts": "腰",
@@ -24419,8 +23412,8 @@ var armor_list = {
         "slotLv2": 0,
         "slotLv3": 1,
         "slotLv4": 1,
-        "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo": 125,
+        "bougyo_max": 181,
         "skill": [
             {
                 "sname": "力量解放",
@@ -24437,7 +23430,7 @@ var armor_list = {
     },
     "500_5": {
         "id": 500,
-        "name": "荒天",
+        "name": "风雨 【裳】",
         "rank": 10,
         "gender": "男女共通",
         "parts": "腿",
@@ -24447,18 +23440,18 @@ var armor_list = {
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 2,
-        "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo": 125,
+        "bougyo_max": 181,
         "skill": [
-            {
-                "sname": "超会心",
-                "lv": 2,
-                "hex": "07"
-            },
             {
                 "sname": "天衣无缝",
                 "lv": 1,
                 "hex": "8E"
+            },
+            {
+                "sname": "超会心",
+                "lv": 2,
+                "hex": "07"
             }
         ],
         "def_f": -3,
@@ -24468,12 +23461,11 @@ var armor_list = {
         "def_d": -5,
         "rare9": true
     },
-
     "501_1": {
         "id": 501,
-        "name": "克服天廻（男）",
+        "name": "美德头盔",
         "rank": 10,
-        "gender": "男",
+        "gender": "男性专用",
         "parts": "头",
         "parts_id": 1,
         "rare": 9,
@@ -24481,8 +23473,8 @@ var armor_list = {
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 2,
-        "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo": 122,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "合气",
@@ -24495,27 +23487,27 @@ var armor_list = {
                 "hex": "76"
             }
         ],
-        "def_f": -4,
-        "def_w": 3,
-        "def_t": -2,
+        "def_f": -2,
+        "def_w": 2,
+        "def_t": -1,
         "def_i": 2,
         "def_d": -4,
         "rare9": true
     },
     "501_2": {
         "id": 501,
-        "name": "克服天廻（男）",
+        "name": "美德铠甲",
         "rank": 10,
-        "gender": "男",
-        "parts": "胸",
+        "gender": "男性专用",
+        "parts": "身",
         "parts_id": 2,
         "rare": 9,
         "slotLv1": 2,
         "slotLv2": 0,
         "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo": 122,
+        "bougyo_max": 178,
         "skill": [
             {
                 "sname": "奋斗",
@@ -24533,18 +23525,18 @@ var armor_list = {
                 "hex": "33"
             }
         ],
-        "def_f": -4,
-        "def_w": 3,
-        "def_t": -2,
+        "def_f": -2,
+        "def_w": 2,
+        "def_t": -1,
         "def_i": 2,
         "def_d": -4,
         "rare9": true
     },
     "501_3": {
         "id": 501,
-        "name": "克服天廻（男）",
+        "name": "美德腕甲",
         "rank": 10,
-        "gender": "男",
+        "gender": "男性专用",
         "parts": "手",
         "parts_id": 3,
         "rare": 9,
@@ -24552,11 +23544,11 @@ var armor_list = {
         "slotLv2": 0,
         "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo": 122,
+        "bougyo_max": 178,
         "skill": [
             {
-                "sname": "狂龙症[翔]",
+                "sname": "狂龙症【翔】",
                 "lv": 1,
                 "hex": "8F"
             },
@@ -24571,18 +23563,18 @@ var armor_list = {
                 "hex": "01"
             }
         ],
-        "def_f": -4,
-        "def_w": 3,
-        "def_t": -2,
+        "def_f": -2,
+        "def_w": 2,
+        "def_t": -1,
         "def_i": 2,
         "def_d": -4,
         "rare9": true
     },
     "501_4": {
         "id": 501,
-        "name": "克服天廻（男）",
+        "name": "美德腰甲",
         "rank": 10,
-        "gender": "男",
+        "gender": "男性专用",
         "parts": "腰",
         "parts_id": 4,
         "rare": 9,
@@ -24590,11 +23582,11 @@ var armor_list = {
         "slotLv2": 1,
         "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo": 122,
+        "bougyo_max": 178,
         "skill": [
             {
-                "sname": "狂龙症[翔]",
+                "sname": "狂龙症【翔】",
                 "lv": 1,
                 "hex": "8F"
             },
@@ -24609,18 +23601,18 @@ var armor_list = {
                 "hex": "08"
             }
         ],
-        "def_f": -4,
-        "def_w": 3,
-        "def_t": -2,
+        "def_f": -2,
+        "def_w": 2,
+        "def_t": -1,
         "def_i": 2,
         "def_d": -4,
         "rare9": true
     },
     "501_5": {
         "id": 501,
-        "name": "克服天廻（男）",
+        "name": "美德护腿",
         "rank": 10,
-        "gender": "男",
+        "gender": "男性专用",
         "parts": "腿",
         "parts_id": 5,
         "rare": 9,
@@ -24628,11 +23620,11 @@ var armor_list = {
         "slotLv2": 0,
         "slotLv3": 1,
         "slotLv4": 1,
-        "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo": 122,
+        "bougyo_max": 178,
         "skill": [
             {
-                "sname": "狂龙症[翔]",
+                "sname": "狂龙症【翔】",
                 "lv": 1,
                 "hex": "8F"
             },
@@ -24647,203 +23639,16 @@ var armor_list = {
                 "hex": "91"
             }
         ],
-        "def_f": -4,
-        "def_w": 3,
-        "def_t": -2,
+        "def_f": -2,
+        "def_w": 2,
+        "def_t": -1,
         "def_i": 2,
         "def_d": -4,
         "rare9": true
     },
-
-    "506_1": {
-        "id": 506,
-        "name": "克服天廻（女）",
-        "rank": 10,
-        "gender": "女",
-        "parts": "头",
-        "parts_id": 1,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 0,
-        "slotLv3": 0,
-        "slotLv4": 2,
-        "bougyo": 124,
-        "bougyo_max": 142,
-        "skill": [
-            {
-                "sname": "合气",
-                "lv": 2,
-                "hex": "7A"
-            },
-            {
-                "sname": "坚如磐石",
-                "lv": 2,
-                "hex": "76"
-            }
-        ],
-        "def_f": -4,
-        "def_w": 3,
-        "def_t": -2,
-        "def_i": 2,
-        "def_d": -4,
-        "rare9": true
-    },
-    "506_2": {
-        "id": 506,
-        "name": "克服天廻（女）",
-        "rank": 10,
-        "gender": "女",
-        "parts": "胸",
-        "parts_id": 2,
-        "rare": 9,
-        "slotLv1": 2,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 124,
-        "bougyo_max": 142,
-        "skill": [
-            {
-                "sname": "奋斗",
-                "lv": 2,
-                "hex": "91"
-            },
-            {
-                "sname": "匠",
-                "lv": 3,
-                "hex": "16"
-            },
-            {
-                "sname": "装填扩充",
-                "lv": 3,
-                "hex": "33"
-            }
-        ],
-        "def_f": -4,
-        "def_w": 3,
-        "def_t": -2,
-        "def_i": 2,
-        "def_d": -4,
-        "rare9": true
-    },
-    "506_3": {
-        "id": 506,
-        "name": "克服天廻（女）",
-        "rank": 10,
-        "gender": "女",
-        "parts": "手",
-        "parts_id": 3,
-        "rare": 9,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 0,
-        "bougyo": 124,
-        "bougyo_max": 142,
-        "skill": [
-            {
-                "sname": "狂龙症[翔]",
-                "lv": 1,
-                "hex": "8F"
-            },
-            {
-                "sname": "狂龙症【蚀】",
-                "lv": 1,
-                "hex": "75"
-            },
-            {
-                "sname": "攻击",
-                "lv": 3,
-                "hex": "01"
-            }
-        ],
-        "def_f": -4,
-        "def_w": 3,
-        "def_t": -2,
-        "def_i": 2,
-        "def_d": -4,
-        "rare9": true
-    },
-    "506_4": {
-        "id": 506,
-        "name": "克服天廻（女）",
-        "rank": 10,
-        "gender": "女",
-        "parts": "腰",
-        "parts_id": 4,
-        "rare": 9,
-        "slotLv1": 0,
-        "slotLv2": 1,
-        "slotLv3": 0,
-        "slotLv4": 1,
-        "bougyo": 124,
-        "bougyo_max": 142,
-        "skill": [
-            {
-                "sname": "狂龙症[翔]",
-                "lv": 1,
-                "hex": "8F"
-            },
-            {
-                "sname": "狂龙症【蚀】",
-                "lv": 1,
-                "hex": "75"
-            },
-            {
-                "sname": "弱点特效",
-                "lv": 2,
-                "hex": "08"
-            }
-        ],
-        "def_f": -4,
-        "def_w": 3,
-        "def_t": -2,
-        "def_i": 2,
-        "def_d": -4,
-        "rare9": true
-    },
-    "506_5": {
-        "id": 506,
-        "name": "克服天廻（女）",
-        "rank": 10,
-        "gender": "女",
-        "parts": "腿",
-        "parts_id": 5,
-        "rare": 9,
-        "slotLv1": 1,
-        "slotLv2": 0,
-        "slotLv3": 1,
-        "slotLv4": 1,
-        "bougyo": 124,
-        "bougyo_max": 142,
-        "skill": [
-            {
-                "sname": "狂龙症[翔]",
-                "lv": 1,
-                "hex": "8F"
-            },
-            {
-                "sname": "狂龙症【蚀】",
-                "lv": 1,
-                "hex": "75"
-            },
-            {
-                "sname": "奋斗",
-                "lv": 1,
-                "hex": "91"
-            }
-        ],
-        "def_f": -4,
-        "def_w": 3,
-        "def_t": -2,
-        "def_i": 2,
-        "def_d": -4,
-        "rare9": true
-    },
-
     "502_1": {
         "id": 502,
-        "name": "原初爵银",
+        "name": "原初头盔",
         "rank": 10,
         "gender": "男女共通",
         "parts": "头",
@@ -24853,8 +23658,8 @@ var armor_list = {
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 2,
-        "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo": 125,
+        "bougyo_max": 181,
         "skill": [
             {
                 "sname": "气血",
@@ -24865,24 +23670,24 @@ var armor_list = {
         "def_f": -2,
         "def_w": 2,
         "def_t": 2,
-        "def_i": 1,
+        "def_i": -1,
         "def_d": -5,
         "rare9": true
     },
     "502_2": {
         "id": 502,
-        "name": "原初爵银",
+        "name": "原初铠甲",
         "rank": 10,
         "gender": "男女共通",
-        "parts": "胸",
+        "parts": "身",
         "parts_id": 2,
         "rare": 9,
         "slotLv1": 0,
         "slotLv2": 1,
         "slotLv3": 0,
         "slotLv4": 2,
-        "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo": 125,
+        "bougyo_max": 181,
         "skill": [
             {
                 "sname": "气血觉醒",
@@ -24898,13 +23703,13 @@ var armor_list = {
         "def_f": -2,
         "def_w": 2,
         "def_t": 2,
-        "def_i": 1,
+        "def_i": -1,
         "def_d": -5,
         "rare9": true
     },
     "502_3": {
         "id": 502,
-        "name": "原初爵银",
+        "name": "原初腕甲",
         "rank": 10,
         "gender": "男女共通",
         "parts": "手",
@@ -24914,8 +23719,8 @@ var armor_list = {
         "slotLv2": 1,
         "slotLv3": 0,
         "slotLv4": 2,
-        "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo": 125,
+        "bougyo_max": 181,
         "skill": [
             {
                 "sname": "气血觉醒",
@@ -24931,13 +23736,13 @@ var armor_list = {
         "def_f": -2,
         "def_w": 2,
         "def_t": 2,
-        "def_i": 1,
+        "def_i": -1,
         "def_d": -5,
         "rare9": true
     },
     "502_4": {
         "id": 502,
-        "name": "原初爵银",
+        "name": "原初腰甲",
         "rank": 10,
         "gender": "男女共通",
         "parts": "腰",
@@ -24947,8 +23752,8 @@ var armor_list = {
         "slotLv2": 1,
         "slotLv3": 0,
         "slotLv4": 2,
-        "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo": 125,
+        "bougyo_max": 181,
         "skill": [
             {
                 "sname": "连击",
@@ -24964,13 +23769,13 @@ var armor_list = {
         "def_f": -2,
         "def_w": 2,
         "def_t": 2,
-        "def_i": 1,
+        "def_i": -1,
         "def_d": -5,
         "rare9": true
     },
     "502_5": {
         "id": 502,
-        "name": "原初爵银",
+        "name": "原初护腿",
         "rank": 10,
         "gender": "男女共通",
         "parts": "腿",
@@ -24980,8 +23785,8 @@ var armor_list = {
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 2,
-        "bougyo": 124,
-        "bougyo_max": 142,
+        "bougyo": 125,
+        "bougyo_max": 181,
         "skill": [
             {
                 "sname": "气血觉醒",
@@ -25002,24 +23807,24 @@ var armor_list = {
         "def_f": -2,
         "def_w": 2,
         "def_t": 2,
-        "def_i": 1,
+        "def_i": -1,
         "def_d": -5,
         "rare9": true
     },
     "504_2": {
         "id": 504,
-        "name": "健美",
+        "name": "健美身体",
         "rank": 9,
         "gender": "男女共通",
-        "parts": "胸",
+        "parts": "身",
         "parts_id": 2,
-        "rare": 9,
+        "rare": 8,
         "slotLv1": 1,
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 119,
-        "bougyo_max": 142,
+        "bougyo": 120,
+        "bougyo_max": 180,
         "skill": [
             {
                 "sname": "挑战者",
@@ -25037,22 +23842,22 @@ var armor_list = {
         "def_t": -1,
         "def_i": 0,
         "def_d": -3,
-        "rare9": true
+        "rare9": false
     },
     "504_3": {
         "id": 504,
-        "name": "健美",
+        "name": "健美腕部",
         "rank": 9,
         "gender": "男女共通",
         "parts": "手",
         "parts_id": 3,
-        "rare": 9,
+        "rare": 8,
         "slotLv1": 1,
         "slotLv2": 1,
         "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 119,
-        "bougyo_max": 142,
+        "bougyo": 120,
+        "bougyo_max": 180,
         "skill": [
             {
                 "sname": "攻击",
@@ -25070,22 +23875,22 @@ var armor_list = {
         "def_t": -1,
         "def_i": 0,
         "def_d": -3,
-        "rare9": true
+        "rare9": false
     },
     "504_4": {
         "id": 504,
-        "name": "健美",
+        "name": "健美腰部",
         "rank": 9,
         "gender": "男女共通",
         "parts": "腰",
         "parts_id": 4,
-        "rare": 9,
+        "rare": 8,
         "slotLv1": 0,
         "slotLv2": 1,
         "slotLv3": 1,
         "slotLv4": 0,
-        "bougyo": 119,
-        "bougyo_max": 142,
+        "bougyo": 120,
+        "bougyo_max": 180,
         "skill": [
             {
                 "sname": "攻击",
@@ -25103,26 +23908,26 @@ var armor_list = {
         "def_t": -1,
         "def_i": 0,
         "def_d": -3,
-        "rare9": true
+        "rare9": false
     },
     "504_5": {
         "id": 504,
-        "name": "健美",
+        "name": "健美脚部",
         "rank": 9,
         "gender": "男女共通",
         "parts": "腿",
         "parts_id": 5,
-        "rare": 9,
+        "rare": 8,
         "slotLv1": 1,
         "slotLv2": 0,
         "slotLv3": 0,
         "slotLv4": 1,
-        "bougyo": 119,
-        "bougyo_max": 142,
+        "bougyo": 120,
+        "bougyo_max": 180,
         "skill": [
             {
                 "sname": "攻击",
-                "lv": 1,
+                "lv": 3,
                 "hex": "01"
             },
             {
@@ -25136,6 +23941,191 @@ var armor_list = {
         "def_t": -1,
         "def_i": 0,
         "def_d": -3,
+        "rare9": false
+    },
+    "506_1": {
+        "id": 506,
+        "name": "久爱头盔",
+        "rank": 10,
+        "gender": "女性专用",
+        "parts": "头",
+        "parts_id": 1,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 0,
+        "slotLv3": 0,
+        "slotLv4": 2,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "合气",
+                "lv": 2,
+                "hex": "7A"
+            },
+            {
+                "sname": "坚如磐石",
+                "lv": 2,
+                "hex": "76"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 2,
+        "def_t": -1,
+        "def_i": 2,
+        "def_d": -4,
         "rare9": true
     },
-}
+    "506_2": {
+        "id": 506,
+        "name": "久爱铠甲",
+        "rank": 10,
+        "gender": "女性专用",
+        "parts": "身",
+        "parts_id": 2,
+        "rare": 9,
+        "slotLv1": 2,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "奋斗",
+                "lv": 2,
+                "hex": "91"
+            },
+            {
+                "sname": "匠",
+                "lv": 3,
+                "hex": "16"
+            },
+            {
+                "sname": "装填扩充",
+                "lv": 3,
+                "hex": "33"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 2,
+        "def_t": -1,
+        "def_i": 2,
+        "def_d": -4,
+        "rare9": true
+    },
+    "506_3": {
+        "id": 506,
+        "name": "久爱腕甲",
+        "rank": 10,
+        "gender": "女性专用",
+        "parts": "手",
+        "parts_id": 3,
+        "rare": 9,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 0,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "狂龙症【翔】",
+                "lv": 1,
+                "hex": "8F"
+            },
+            {
+                "sname": "狂龙症【蚀】",
+                "lv": 1,
+                "hex": "75"
+            },
+            {
+                "sname": "攻击",
+                "lv": 3,
+                "hex": "01"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 2,
+        "def_t": -1,
+        "def_i": 2,
+        "def_d": -4,
+        "rare9": true
+    },
+    "506_4": {
+        "id": 506,
+        "name": "久爱腰甲",
+        "rank": 10,
+        "gender": "女性专用",
+        "parts": "腰",
+        "parts_id": 4,
+        "rare": 9,
+        "slotLv1": 0,
+        "slotLv2": 1,
+        "slotLv3": 0,
+        "slotLv4": 1,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "狂龙症【翔】",
+                "lv": 1,
+                "hex": "8F"
+            },
+            {
+                "sname": "狂龙症【蚀】",
+                "lv": 1,
+                "hex": "75"
+            },
+            {
+                "sname": "弱点特效",
+                "lv": 2,
+                "hex": "08"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 2,
+        "def_t": -1,
+        "def_i": 2,
+        "def_d": -4,
+        "rare9": true
+    },
+    "506_5": {
+        "id": 506,
+        "name": "久爱护腿",
+        "rank": 10,
+        "gender": "女性专用",
+        "parts": "腿",
+        "parts_id": 5,
+        "rare": 9,
+        "slotLv1": 1,
+        "slotLv2": 0,
+        "slotLv3": 1,
+        "slotLv4": 1,
+        "bougyo": 122,
+        "bougyo_max": 178,
+        "skill": [
+            {
+                "sname": "狂龙症【翔】",
+                "lv": 1,
+                "hex": "8F"
+            },
+            {
+                "sname": "狂龙症【蚀】",
+                "lv": 1,
+                "hex": "75"
+            },
+            {
+                "sname": "奋斗",
+                "lv": 1,
+                "hex": "91"
+            }
+        ],
+        "def_f": -2,
+        "def_w": 2,
+        "def_t": -1,
+        "def_i": 2,
+        "def_d": -4,
+        "rare9": true
+    }
+};
