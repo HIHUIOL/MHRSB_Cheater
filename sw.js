@@ -1,4 +1,4 @@
-const CACHE = 'app-v6.1.1';
+const CACHE = 'app-v6.1.2';
 
 const ASSETS = [
   './',
