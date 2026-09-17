@@ -9,6 +9,8 @@
     <meta name="description" content="怪物猎人 MHRSB 怪异练成+护石 16 switch金手指">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
     <style>
         .msghint {
             width: 300px;
@@ -463,6 +465,11 @@
     <datalist id="slot2"></datalist>
     <datalist id="slot1"></datalist>
     <script src="js/main.js"></script>
+    <script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js');
+    }
+    </script>
 </body>
 
 </html>
