@@ -1,4 +1,4 @@
-const CACHE = 'app-v6.1';
+const CACHE = 'app-v6.1.1';
 
 const ASSETS = [
   './',
@@ -58,9 +58,17 @@ self.addEventListener('activate', e => {
   self.clients.claim();
 });
 
-// 请求：缓存优先，失败再走网络
+// 请求：网络优先，失败再走缓存
 self.addEventListener('fetch', e => {
+  if (e.request.method !== 'GET') return;
+
   e.respondWith(
-    caches.match(e.request).then(r => r || fetch(e.request))
+    fetch(e.request)
+      .then(res => {
+        const copy = res.clone();
+        caches.open(CACHE).then(c => c.put(e.request, copy));
+        return res;
+      })
+      .catch(() => caches.match(e.request))
   );
 });
