@@ -226,6 +226,8 @@ async function loadCache(name) {
 
                     $(".armor_select_" + idx).val(pd["eq_id"]);
                     $(".armor_select_" + idx).change();
+                    //保留珠子数据副本(change会触发initDecorationSel把数据清空)
+                    let pDeco = JSON.parse(JSON.stringify(pd["decoration"] || []));
                     // armor_container_
                     // small form-select k_skill_select
                     let sd = pd["k_skill"] || [];
@@ -243,9 +245,8 @@ async function loadCache(name) {
                         $(".armor_container_" + idx).find(".k_skill_change").eq(i).val(v2);
                         $(".armor_container_" + idx).find(".k_skill_change").eq(i).change();
                     }
-                    let dlist = pd["decoration"] || [];
-                    for (let i = 0; i < dlist.length; i++) {
-                        let d = dlist[i];
+                    for (let i = 0; i < pDeco.length; i++) {
+                        let d = pDeco[i];
 
                         if ((d["hex"] != "00") && (d["lv"] > 0)) {
                             let v3 = `${d["hex"]}_${d["lv"]}`;
@@ -263,6 +264,8 @@ async function loadCache(name) {
                 //缓存里不含技能池(sel1/sel2)，需要从当前数据补充，否则重建下拉列表会报错
                 if (!tmpC["sel1"]) tmpC["sel1"] = CurData.charmData["sel1"] || [];
                 if (!tmpC["sel2"]) tmpC["sel2"] = CurData.charmData["sel2"] || [];
+                //保留珠子数据副本(下面设置孔位会触发initDecorationSel把数据清空)
+                let charmDeco = JSON.parse(JSON.stringify(tmpC["decoration"]));
                 //先写入数据，再按当前模式重建护石下拉并按hex选中（让等级按当前模式规范化）
                 CurData.charmData = tmpC;
                 initCharmSel2();
@@ -272,8 +275,9 @@ async function loadCache(name) {
                 let v3 = tmpC["slot"];
                 $("#charm_slot_select").val(v3);
                 $("#charm_slot_select").change();
-                for (let i = 0; i < tmpC["decoration"].length; i++) {
-                    let d = tmpC["decoration"][i];
+                //最后恢复珠子(用副本，避免被initDecorationSel清空影响)
+                for (let i = 0; i < charmDeco.length; i++) {
+                    let d = charmDeco[i];
                     if ((d["hex"] != "00") && (d["lv"] > 0)) {
                         let v4 = `${d["hex"]}_${d["lv"]}`;
                         $(`.decoration_input_${6}_${i}`).val(v4);
