@@ -1,4 +1,4 @@
-const CACHE = 'app-v6.1.4';
+const CACHE = 'app-v6.1.5';
 
 const ASSETS = [
   './',
@@ -56,6 +56,13 @@ self.addEventListener('activate', e => {
     )
   );
   self.clients.claim();
+});
+
+// 接收主线程消息：立即跳过等待，激活新版本
+self.addEventListener('message', e => {
+  if (e.data && e.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
 });
 
 // 请求：网络优先，失败再走缓存
