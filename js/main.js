@@ -27,7 +27,7 @@ var currentVersion = versionMap["16.0.2-港日"];
 
 var RefreshCount = 0;
 
-let isFastMode = false;
+let isExtremeMode = false;
 
 var isStopRender = false;
 
@@ -202,7 +202,7 @@ async function loadCache(name) {
         try {
 
             // cahe.Name;
-            let tmp = cahe.PartMap || cahe.partMap;;
+            let tmp = cahe.PartMap || cahe.partMap || {};
             let tmpC = cahe.CharmData || cahe.charmData;
             let tmpW = cahe.WeaponData || cahe.weaponData;
             // startRender();
@@ -216,6 +216,8 @@ async function loadCache(name) {
             }
             for (let idx in tmp) {
                 let pd = tmp[idx];
+                //装备未选择时该位置可能为 null，跳过避免报错
+                if (!pd) continue;
                 if (pd["eq_id"]) {
                     let aa = pd["eq_id"].split("_");
                     if (cmm[aa[0]]) {
@@ -226,7 +228,7 @@ async function loadCache(name) {
                     $(".armor_select_" + idx).change();
                     // armor_container_
                     // small form-select k_skill_select
-                    let sd = pd["k_skill"];
+                    let sd = pd["k_skill"] || [];
                     for (let i = 0; i < sd.length; i++) {
                         let d = sd[i];
 
@@ -241,8 +243,9 @@ async function loadCache(name) {
                         $(".armor_container_" + idx).find(".k_skill_change").eq(i).val(v2);
                         $(".armor_container_" + idx).find(".k_skill_change").eq(i).change();
                     }
-                    for (let i = 0; i < pd["decoration"].length; i++) {
-                        let d = pd["decoration"][i];
+                    let dlist = pd["decoration"] || [];
+                    for (let i = 0; i < dlist.length; i++) {
+                        let d = dlist[i];
 
                         if ((d["hex"] != "00") && (d["lv"] > 0)) {
                             let v3 = `${d["hex"]}_${d["lv"]}`;
@@ -256,13 +259,17 @@ async function loadCache(name) {
             CurData.partMap = tmp;
             //charm
             if (tmpC) {
-                let v1 = `${1}_${tmpC["skill1Type"]}_${tmpC["skill1Hex"]}_${tmpC["skill1Lv"]}`;
-                let v2 = `${2}_${tmpC["skill2Type"]}_${tmpC["skill2Hex"]}_${tmpC["skill2Lv"]}`;
+                if (!tmpC["decoration"]) tmpC["decoration"] = [];
+                //缓存里不含技能池(sel1/sel2)，需要从当前数据补充，否则重建下拉列表会报错
+                if (!tmpC["sel1"]) tmpC["sel1"] = CurData.charmData["sel1"] || [];
+                if (!tmpC["sel2"]) tmpC["sel2"] = CurData.charmData["sel2"] || [];
+                //先写入数据，再按当前模式重建护石下拉并按hex选中（让等级按当前模式规范化）
+                CurData.charmData = tmpC;
+                initCharmSel2();
+                //按技能hex选中护石技能下拉项(缓存里存的等级可能与当前模式列表不一致，如极限缓存15级)
+                selectCharmSkillOption("#charm_skill_select1", "1", tmpC["skill1Hex"]);
+                selectCharmSkillOption("#charm_skill_select2", "2", tmpC["skill2Hex"]);
                 let v3 = tmpC["slot"];
-                $("#charm_skill_select1").val(v1);
-                $("#charm_skill_select1").change();
-                $("#charm_skill_select2").val(v2);
-                $("#charm_skill_select2").change();
                 $("#charm_slot_select").val(v3);
                 $("#charm_slot_select").change();
                 for (let i = 0; i < tmpC["decoration"].length; i++) {
@@ -273,11 +280,11 @@ async function loadCache(name) {
                         $(`.decoration_input_${6}_${i}`).trigger("change");
                     }
                 }
-                CurData.charmData = tmpC;
             }
             if (tmpW) {
-                for (let i = 0; i < tmpW["decoration"].length; i++) {
-                    let d = tmpW["decoration"][i];
+                let wdlist = tmpW["decoration"] || [];
+                for (let i = 0; i < wdlist.length; i++) {
+                    let d = wdlist[i];
                     if ((d["hex"] != "00") && (d["lv"] > 0)) {
                         let v4 = `${d["hex"]}_${d["lv"]}`;
                         $(`.decoration_input_${7}_${i}`).val(v4);
@@ -292,7 +299,8 @@ async function loadCache(name) {
             refreshShowArmorData();
             showMsg("加载完成:" + name);
         } catch (err) {
-            showMsg("加载缓存失败-" + JSON.stringify(err));
+            console.error("加载缓存失败:", err);
+            showMsg("加载缓存失败-" + (err && err.message ? err.message : JSON.stringify(err)));
             if (confirm(`加载缓存失败 是否删除【${name}】？`)) {
                 delCache(name);
             }
@@ -446,11 +454,29 @@ function switcTab() {
     }
 }
 function switcMode() {
-    isFastMode = !isFastMode;
-    if (isFastMode) {
+    isExtremeMode = !isExtremeMode;
+    if (isExtremeMode) {
         $("#switchMode").text("切换至普通模式");
+        showMsg("已开启极限模式：所有孔位均可插任意珠子，护石技能等级为15");
     } else {
-        $("#switchMode").text("切换至快速模式");
+        $("#switchMode").text("切换至极限模式");
+        showMsg("已关闭极限模式");
+    }
+    //极限模式影响孔位可插入珠子的范围，需刷新所有已被选择的装备
+    refreshAllDecorationSel();
+    //极限模式下护石技能列表显示的等级为15，需重建列表
+    refreshCharmSel();
+    genAllTemplate();
+}
+//刷新所有位置（防具、护石）的珠子可选项
+function refreshAllDecorationSel() {
+    for (let idx in PartIdxMap) {
+        if (CurData.partMap[idx]) {
+            initDecorationSel(idx);
+        }
+    }
+    if (CurData.charmData) {
+        initDecorationSel("6");
     }
 }
 function isSkipSkill(hex) {
@@ -744,7 +770,8 @@ function getSkillNameByHex(hex) {
 }
 function getSkillMaxByHex(hex) {
     let sd = skill_data[hex];
-    return sd["max"];
+    //技能不存在时(如空技能"00")返回0，避免读取 undefined.max 报错
+    return sd ? sd["max"] : 0;
 }
 
 function getArmorCostById(id) {
@@ -799,20 +826,6 @@ function getDefStatusByPoolAndHex(pool_id, hex) {
 
 function getArmorById(id) {
     return armor_list[id];
-}
-function getFastModeCostSkill() {
-
-
-    // { sname: "壁面移動【翔】", hex: "81" },
-    // { sname: "腹減り耐性", hex: "60" },       
-    // { sname: "風圧耐性", hex: "3E" },
-    // { "hex": "75", "sname": "狂龙症【蚀】", "cost": 12, "max": 3, "lvType": "", "p1Max": 0, "p2Max": 0 },
-
-    let skm = { "81": null, "60": null, "3E": null, "75": null };
-    for (let hex in skm) {
-        skm[hex] = skill_data[hex];
-    }
-    return skm;
 }
 
 function getCharmSlotMap(sklvType) {
@@ -874,20 +887,51 @@ function getDecorationSelData(slot) {
 
 
 function initCharmSel() {
-    for (let i = 0; i < CurData.charmData["sel1"].length; i++) {
-        let o = CurData.charmData["sel1"][i];
+    let s1 = CurData.charmData["sel1"] || [];
+    let s2 = CurData.charmData["sel2"] || [];
+    for (let i = 0; i < s1.length; i++) {
+        let o = s1[i];
         let opt = document.createElement("option");
         opt.value = "1_" + o["lvType"] + "_" + o["hex"] + "_" + o["p1Max"];
-        opt.text = o["sname"] + " " + o["p1Max"];
+        //极限模式下显示等级为15
+        opt.text = o["sname"] + " " + (isExtremeMode ? 15 : o["p1Max"]);
         $("#charm_skill_select1").append(opt);
     }
-    for (let i = 0; i < CurData.charmData["sel2"].length; i++) {
-        let o = CurData.charmData["sel2"][i];
+    for (let i = 0; i < s2.length; i++) {
+        let o = s2[i];
         let opt = document.createElement("option");
         opt.value = "2_" + o["lvType"] + "_" + o["hex"] + "_" + o["p2Max"];
-        opt.text = o["sname"] + " " + o["p2Max"];;
+        //极限模式下显示等级为15
+        opt.text = o["sname"] + " " + (isExtremeMode ? 15 : o["p2Max"]);
         $("#charm_skill_select2").append(opt);
     }
+}
+
+//根据当前模式重建护石技能下拉列表
+function refreshCharmSel() {
+    //数据未就绪时不处理，避免刷新报错影响后续渲染
+    if (!CurData.charmData || !CurData.charmData["sel1"] || !CurData.charmData["sel2"]) {
+        return;
+    }
+    let v1 = $("#charm_skill_select1").val();
+    let v2 = $("#charm_skill_select2").val();
+    initCharmSel2();
+    if (v1) {
+        $("#charm_skill_select1").val(v1);
+        //触发change，让存储的技能等级按当前模式同步（极限模式为15）
+        $("#charm_skill_select1").trigger("change");
+    }
+    if (v2) {
+        $("#charm_skill_select2").val(v2);
+        $("#charm_skill_select2").trigger("change");
+    }
+}
+
+//清空并重建护石技能下拉列表（不恢复之前选中项）
+function initCharmSel2() {
+    $("#charm_skill_select1").html(`<option>-----</option>`);
+    $("#charm_skill_select2").html(`<option>-----</option>`);
+    initCharmSel();
 }
 
 function initCharmSlotSel() {
@@ -1002,11 +1046,6 @@ function initKSkillSelect(partIdx, armor_id) {
             let count = 0;
             for (let j in skillPool) {
                 let skData = skillPool[j];
-                if (isFastMode && !isWT) {
-                    if (/防御|耐性/.test(skData["name"])) {
-                        continue;
-                    }
-                }
                 count++;
                 let opt = document.createElement("option");
                 opt.value = partIdx + "_" + i + "_" + skData["hex"] + "_" + skData["cost"];
@@ -1022,32 +1061,17 @@ function initKSkillSelect(partIdx, armor_id) {
 
             //初始化上次选择的减技能，增技能的内容
             clearOldNewSkillSel(partIdx, i);
-            //默认前三个是减技能 并且 减去无用技能 第四个增加3孔位
-
-
-            if (isFastMode && !isWT) {
-
-                if (i < 3) {
-                    sel.val(`${partIdx}_${i}_95_-10`);
-                    sel.change();
-                    let skillSel = $(tr[i]).find("td").eq(1).find(".k_skill_change");
-                    skillSel.val(skillSel.find("option").eq(1).val());
-                    skillSel.change();
-                }
-                if (i == 3) {
-                    sel.val(`${partIdx}_${i}_8D_18`);
-                    sel.change();
-                }
-
-            }
 
         }
     }
 }
 function onSelectArmor(armor_id) {
-    if (armor_id == "-----") {
+    if (armor_id == "-----" || !armor_id) {
         //清空数据
-        CurData.partMap[partIdx] = null;
+        let p = (armor_id && armor_id != "-----") ? armor_id.split("_")[1] : null;
+        if (p) {
+            CurData.partMap[p] = null;
+        }
         return;
     }
 
@@ -1056,6 +1080,10 @@ function onSelectArmor(armor_id) {
     let data = CurData.partMap[partIdx];
     if (!data || (data["eq_id"] != armor_id)) {
         data = createPartData(partIdx, armor_id);
+    }
+    if (!data) {
+        //装备数据不存在（如旧缓存的装备id已失效），忽略避免报错
+        return;
     }
     CurData.partMap[partIdx] = data;
     initKSkillSelect(partIdx, armor_id);
@@ -1089,11 +1117,6 @@ function onSelectKSkill(value) {
         //减技能 增加可用点数
         type = "skill";
         let skm = partData["eq_skill"];
-        //该模式下 可以减去任意技能（包括非本装备的）
-        if (isFastMode) {
-            //注意这里应该使用的是 低cost废技能 例如饥饿耐性 风压耐性
-            skm = getFastModeCostSkill();
-        }
         for (let x in skm) {
             let d = skm[x];
             let sname = d["sname"];
@@ -1226,21 +1249,58 @@ function onSelectChangeSkill(value) {
     refreshShowArmorData();
 }
 
+//按护石技能hex选中下拉项(忽略缓存中可能不一致的等级，如极限模式的15级)
+function selectCharmSkillOption(selId, prefix, hex) {
+    let elm = $(selId);
+    //技能为空或无效时，回到占位项
+    if (!hex || hex == "00") {
+        elm.val(elm.find("option").eq(0).val());
+        elm.change();
+        return;
+    }
+    let opts = elm.find("option");
+    let targetVal = null;
+    for (let i = 0; i < opts.length; i++) {
+        let ov = opts.eq(i).val();
+        if (ov == null) continue;
+        let r = String(ov).split("_");
+        if (r[0] == prefix && r[2] == hex) {
+            targetVal = ov;
+            break;
+        }
+    }
+    if (targetVal != null) {
+        elm.val(targetVal);
+    } else {
+        //当前模式列表里没有该技能，重置为占位项
+        elm.val(elm.find("option").eq(0).val());
+    }
+    elm.change();
+}
+
 function onSelectCharmSkill(value) {
-    let r = value.split("_");
+    let r = (value == null ? "" : String(value)).split("_");
     let p = r[0];
     let lvType = r[1];
     let hex = r[2];
     let lv = parseInt(r[3]);
+    //选择了占位项"-----"或无效数据时，清空对应护石技能
+    if (p != "1" && p != "2") {
+        return;
+    }
+    //极限模式下护石技能实际等级为15
+    if (isExtremeMode && hex && hex != "00") {
+        lv = 15;
+    }
     if (p == "1") {
-        CurData.charmData["skill1Hex"] = hex;
-        CurData.charmData["skill1Lv"] = lv;
-        CurData.charmData["skill1Type"] = lvType;
+        CurData.charmData["skill1Hex"] = hex || "00";
+        CurData.charmData["skill1Lv"] = hex ? lv : 0;
+        CurData.charmData["skill1Type"] = lvType || "";
 
     } else {
-        CurData.charmData["skill2Hex"] = hex;
-        CurData.charmData["skill2Lv"] = lv;
-        CurData.charmData["skill2Type"] = lvType;
+        CurData.charmData["skill2Hex"] = hex || "00";
+        CurData.charmData["skill2Lv"] = hex ? lv : 0;
+        CurData.charmData["skill2Type"] = lvType || "";
     }
     initCharmSlotSel();
     refreshShowArmorData();
@@ -1382,13 +1442,19 @@ function initDecorationSel(partIdx) {
                 $(pc).attr("disabled", true)
             } else {
                 $(pc).attr("disabled", false)
-                $(pc).attr("list", "slot" + si);
-                $(pc).attr("placeholder", `【${si}】`);
+                if (isExtremeMode) {
+                    //极限模式：无论几级孔，都允许插入任意等级的珠子
+                    $(pc).attr("list", "slot4");
+                    $(pc).attr("placeholder", `【${si}】(极限)`);
+                } else {
+                    $(pc).attr("list", "slot" + si);
+                    $(pc).attr("placeholder", `【${si}】`);
+                }
             }
             //检查前面的值 和当前的值 如果不一样则清空 或者先禁用
 
             let info = getDecorationDataByDName(orgVal);
-            if (info && si >= info["slot"]) {
+            if (info && (isExtremeMode || si >= info["slot"])) {
                 $(pc).val(orgVal);
             } else {
                 $(pc).val("");
@@ -1401,6 +1467,7 @@ function initDecorationSel(partIdx) {
 
 
 function slot_simplify(armor_data) {
+    if (!armor_data) return "000";
     let slot = "";
     for (let i = 4; i > 0; i--) {
         let count = armor_data[`slotLv${i}`];
@@ -1420,6 +1487,10 @@ function slot_simplify(armor_data) {
 
 function createPartData(partIdx, armor_id) {
     let armor_data = getArmorById(armor_id);
+    //装备不存在（如旧缓存的装备id已失效）时返回null，交由调用方处理，避免崩溃
+    if (!armor_data) {
+        return null;
+    }
 
     let slot = slot_simplify(armor_data);
     let skm = {};
@@ -1515,17 +1586,24 @@ function refreshShowArmorData() {
             return;
         }
 
-        for (let partIdx in CurData.partMap) {
-            let data = CurData.partMap[partIdx];
-            if (data) {
-                //更新装备上的显示数据
-                render_armor_slot(partIdx, data);
-                render_armor_def(partIdx, data);
-                render_armor_skill(partIdx, data["eq_k_skill"]);
-                render_armor_cost(partIdx, data);
+        try {
+            for (let partIdx in CurData.partMap) {
+                let data = CurData.partMap[partIdx];
+                if (data) {
+                    //更新装备上的显示数据
+                    render_armor_slot(partIdx, data);
+                    render_armor_def(partIdx, data);
+                    render_armor_skill(partIdx, data["eq_k_skill"]);
+                    render_armor_cost(partIdx, data);
+                }
             }
+            render_total_table();
+        } catch (err) {
+            //渲染异常时重置计数，避免后续刷新被永久跳过导致技能合计不显示
+            RefreshCount = 0;
+            console.error("render error:", err);
+            showMsg("渲染异常:" + (err && err.message ? err.message : err));
         }
-        render_total_table();
     }, 100)
 
 }
@@ -1599,6 +1677,10 @@ function render_total_table() {
     function doRender(ptr, isSet) {
         // 【修复点 4】：增加兜底的空对象检查
         if (!ptr) return; 
+        // 兜底：历史缓存可能缺少这些结构，避免渲染时报错
+        if (!ptr.partMap) ptr.partMap = {};
+        if (!ptr.charmData) ptr.charmData = {};
+        if (!ptr.charmData["decoration"]) ptr.charmData["decoration"] = [];
 
         let name = ptr.name;
         let defTotal = { "p": 0, "f": 0, "w": 0, "t": 0, "i": 0, "d": 0 };
@@ -1608,7 +1690,8 @@ function render_total_table() {
         for (let partIdx in ptr.partMap) {
             let data = ptr.partMap[partIdx];
             if (!data) continue;
-            if (!data) data = {};
+            if (!data["decoration"]) data["decoration"] = [];
+            if (!data["eq_k_skill"]) data["eq_k_skill"] = {};
             if (isSet) {
                 document.getElementById(`armor_${partIdx}_name`).innerHTML = data["eq_name"] || pnn[parseInt(partIdx) - 1];
                 document.getElementById(`armor_${partIdx}_pos`).innerHTML = data["eq_pos"] || partIdx;
@@ -1667,16 +1750,20 @@ function render_total_table() {
             if (!skillMap[hex]) {
                 skillMap[hex] = buildRenderData(hex)
             }
-            skillMap[hex][6] = skillMap[hex][6] + ptr.charmData.skill1Lv;
-            skillMap[hex][8] = skillMap[hex][8] + ptr.charmData.skill1Lv;
+            //极限模式下护石技能按15级计算
+            let lv1 = isExtremeMode ? 15 : ptr.charmData.skill1Lv;
+            skillMap[hex][6] = skillMap[hex][6] + lv1;
+            skillMap[hex][8] = skillMap[hex][8] + lv1;
         }
         if (ptr.charmData.skill2Lv) {
             let hex = ptr.charmData.skill2Hex;
             if (!skillMap[hex]) {
                 skillMap[hex] = buildRenderData(hex)
             }
-            skillMap[hex][6] = skillMap[hex][6] + ptr.charmData.skill2Lv;
-            skillMap[hex][8] = skillMap[hex][8] + ptr.charmData.skill2Lv;
+            //极限模式下护石技能按15级计算
+            let lv2 = isExtremeMode ? 15 : ptr.charmData.skill2Lv;
+            skillMap[hex][6] = skillMap[hex][6] + lv2;
+            skillMap[hex][8] = skillMap[hex][8] + lv2;
         }
         for (let i = 0; i < ptr.charmData["decoration"].length; i++) {
             let d = ptr.charmData["decoration"][i];
@@ -1918,17 +2005,20 @@ function genCharmTemplate() {
     let s2Hex = CurData.charmData["skill2Hex"];
     let s1Lv = CurData.charmData["skill1Lv"] || 0;
     let s2Lv = CurData.charmData["skill2Lv"] || 0;
-    if (CharmSkillMax) {
-        s1Lv = 9;
-        s2Lv = 9;
+    if (CharmSkillMax || isExtremeMode) {
+        //等级修改成 F(15) 则会变成最大值
+        s1Lv = "F";
+        s2Lv = "F";
     }
-    //注意把等级修改成 9 的话 则会变成最大值
     if (!s) {
         return "";
     }
     let n1 = getSkillNameByHex(s1Hex) || "";
     let n2 = getSkillNameByHex(s2Hex) || "";
-    let title = `[第06格${n1}${s1Lv}_${n2}${s2Lv}_S${s}]`;
+    //标题中把"F"显示为15，便于阅读（代码中仍使用F）
+    let t1Lv = (s1Lv === "F") ? 15 : s1Lv;
+    let t2Lv = (s2Lv === "F") ? 15 : s2Lv;
+    let title = `[第06格${n1}${t1Lv}_${n2}${t2Lv}_S${s}]`;
     s = s.split("");
     for (let i = 0; i < s.length; i++) {
         let si = parseInt(s[i]);
@@ -2354,6 +2444,13 @@ function getRateByHex(hex, curLv) {
     if (ug[hex]) {
         let d = ug[hex];
         let c = d["upg"][curLv - 1];
+        //极限模式下等级可能超过会心表长度，取最后一级兜底，避免报错导致技能合计表无法渲染
+        if (!c) {
+            c = d["upg"][d["upg"].length - 1];
+        }
+        if (!c) {
+            return null;
+        }
         // console.log(d,curLv);
         let r = c["critical"] || 0;
         let s = d["sit"];
