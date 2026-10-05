@@ -25,6 +25,9 @@ var versionMap = {
 
 var currentVersion = versionMap["16.0.2-港日"];
 
+//当前程序(PWA)版本号，与 sw.js 的 CACHE 版本保持一致
+var APP_VERSION = "v6.1.5";
+
 var RefreshCount = 0;
 
 let isExtremeMode = false;
@@ -112,6 +115,12 @@ async function init() {
 
     initCharmSel();
     bindEvents();
+    //显示当前程序版本
+    $("#app_version").text(APP_VERSION);
+    //检查更新按钮
+    $("#checkUpdate").off("click").on("click", function () {
+        checkForUpdate();
+    });
     $("#reInit").off("click").on("click", async function(){location.reload();});
 
     $("#version").change();
@@ -124,6 +133,81 @@ async function init() {
 
 
 
+}
+
+//检查更新：通过Service Worker检查是否有新版本
+async function checkForUpdate() {
+    showMsg("正在检查更新...");
+    try {
+        //优先用Service Worker的更新机制
+        if ('serviceWorker' in navigator) {
+            let reg = await navigator.serviceWorker.getRegistration();
+            if (reg) {
+                let updated = false;
+                if (reg.update) {
+                    await reg.update();
+                    //若已有等待中的新版本，直接激活
+                    if (reg.waiting) {
+                        reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+                    }
+                }
+                //对比远程sw.js的版本号
+                let remoteVer = await fetchRemoteVersion();
+                if (remoteVer) {
+                    if (remoteVer !== APP_VERSION) {
+                        showMsg(`发现新版本 ${remoteVer}，正在更新...`);
+                        setTimeout(() => {
+                            location.reload(true);
+                        }, 800);
+                        return;
+                    }
+                }
+                //若无远程信息但存在waiting，也提示刷新
+                if (reg.waiting) {
+                    showMsg("发现新版本，正在更新...");
+                    setTimeout(() => {
+                        location.reload(true);
+                    }, 800);
+                    return;
+                }
+            }
+        }
+        //兜底：直接对比远程版本
+        let remoteVer2 = await fetchRemoteVersion();
+        if (remoteVer2 && remoteVer2 !== APP_VERSION) {
+            showMsg(`发现新版本 ${remoteVer2}，正在更新...`);
+            setTimeout(() => {
+                location.reload(true);
+            }, 800);
+        } else {
+            showMsg("当前已是最新版本 " + APP_VERSION);
+        }
+    } catch (err) {
+        console.error("检查更新失败:", err);
+        //检查失败时，仍尝试强制刷新
+        showMsg("检查更新失败，正在刷新...");
+        setTimeout(() => {
+            location.reload(true);
+        }, 800);
+    }
+}
+
+//读取远程sw.js里的CACHE版本号
+async function fetchRemoteVersion() {
+    try {
+        let res = await fetch('./sw.js', { cache: 'no-store' });
+        if (!res.ok) return null;
+        let txt = await res.text();
+        let m = txt.match(/CACHE\s*=\s*['"]([^'"]+)['"]/);
+        if (m && m[1]) {
+            //CACHE形如 app-v6.1.4 -> 取 v6.1.4
+            let mm = m[1].match(/v[\d.]+/);
+            return mm ? mm[0] : m[1];
+        }
+    } catch (e) {
+        // ignore
+    }
+    return null;
 }
 
 async function initCache() {
