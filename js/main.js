@@ -2,19 +2,13 @@
 
 
 
-//要怎么获取这个值
-// var version_code = "11D95B00";//12.0.1
-// var version_code = "12400610";//13.0.1
-// var version_code = "123693D0";//14.0.1
-// var version_code = "129E11D8";//15.0.1
-// var version_code = "12A4FD80";//16.0.0
-// var version_code = "12A4A1E8";//16.0.1
-// var version_code = "129A7D80";//16.0.1 美版
+//要获取游戏版本号请查阅游戏内存/金手指资料，历史版本号记录如下：
+//  version_code: 11D95B00 (12.0.1) | 12400610 (13.0.1) | 123693D0 (14.0.1)
+//                129E11D8 (15.0.1) | 12A4FD80 (16.0.0) | 12A4A1E8 (16.0.1)
+//                129A7D80 (16.0.1 美版)
+//  BID: 44C9289FBB51455F (16.0.0) | 92DF51D37268A38C (16.0.1) | D2FD97779381FB9A (16.0.2)
 
 var TID = "0100559011740000";
-// var BID = "44C9289FBB51455F";//16.0.0
-// var BID = "92DF51D37268A38C";//16.0.1
-// var BID = "D2FD97779381FB9A"//16.0.2
 
 var versionMap = {
     "16.0.2-港日": { "v": "16.0.2-港日", "BID": "D2FD97779381FB9A", "code": "12B157C0" },
@@ -26,7 +20,7 @@ var versionMap = {
 var currentVersion = versionMap["16.0.2-港日"];
 
 //当前程序(PWA)版本号，与 sw.js 的 CACHE 版本保持一致
-var APP_VERSION = "v6.1.5";
+var APP_VERSION = "v6.2.0";
 
 var RefreshCount = 0;
 
@@ -35,7 +29,6 @@ let isExtremeMode = false;
 var isStopRender = false;
 
 var cost_skill_hex = {};
-var DecoratrionSel = {};
 var DecoratrionNameMap = {};
 var DecoratrionHexLvMap = {};
 
@@ -76,15 +69,24 @@ var CharmData = {
 };
 
 
-var AutoGen = false;
+var AutoGen = true;
 var CharmSkillMax = false;
 var ZipSameItem = false;
-var TmpCacheName = "临时缓存";
+var TmpCacheName = "临时缓存";//"设置临时缓存"保存到缓存库时使用的固定名字
+var DraftName = "临时配装";//纯内存草稿的显示名（界面展示用）
+var DraftKey = "\u200b__DRAFT__\u200b";//草稿的内部 key：含零宽字符，用户不可能输入/保存出这个名字，用于与缓存库隔离
+var draftToEndOnce = false;//一次性标志：点草稿×清空后，让本次渲染把草稿排到最后
+//把内部 key 转成界面显示名（草稿显示为"临时配装"，其余原样返回）
+function displayName(name) {
+    return (name === DraftKey) ? DraftName : name;
+}
 var CacheObj = null;
 var CList = [];
 var MsgCount = 0;
 var MsgAry = [];
 var MsgLooping = false;
+//记录当前屏幕上存活的 toast，用于堆叠定位（避免重叠）
+var MsgStack = [];
 
 init();
 async function init() {
@@ -93,6 +95,12 @@ async function init() {
     for (let i in PartIdxMap) {
         CurData.partMap[i] = null;
     }
+    //初始化时重置"对比列表"，只保留"临时配装"（纯内存草稿）一项
+    PartMapAry = [DraftKey];
+    //清掉旧的草稿数据，避免"临时配装"残留上一次编辑内容
+    delete PartMapObj[DraftKey];
+    CurData.name = "";
+    $("#cache-name").val("");
     for (let i in skill_data) {
         let ski = skill_data[i];
         let cost = ski["cost"];
@@ -108,10 +116,26 @@ async function init() {
 
     }
     initSkillInfo();
+    //重置护石数据（含孔位 slot，避免 initialize 后残留上一次的孔位选择）
+    CurData.charmData = createCharmData();
+    //重置武器数据（避免残留上一次的武器珠子）
+    CurData.weaponData = createWeaponData();
     initCharmSkillData();
     initDecorationData();
     initHtml();
     initTable();
+    //初始化护石孔位下拉（选项与技能无关，保证页面加载即可选）
+    initCharmSlotSel();
+    //初始化所有位置的珠子框（无装备/无孔位时禁用，避免残留可编辑状态）
+    for (let pi in PartIdxMap) {
+        initDecorationSel(pi);
+    }
+    initDecorationSel("6");
+    initDecorationSel("7");
+    //复位 5 个装备位置的全部 UI（装备/词条/技能/珠子），确保占位值统一规范
+    for (let pi in PartIdxMap) {
+        resetPartUI(pi);
+    }
 
     initCharmSel();
     bindEvents();
@@ -139,35 +163,29 @@ async function init() {
 async function checkForUpdate() {
     showMsg("正在检查更新...");
     try {
-        //优先用Service Worker的更新机制
         if ('serviceWorker' in navigator) {
             let reg = await navigator.serviceWorker.getRegistration();
             if (reg) {
-                let updated = false;
+                //主动检查 SW 是否有更新
                 if (reg.update) {
-                    await reg.update();
-                    //若已有等待中的新版本，直接激活
-                    if (reg.waiting) {
-                        reg.waiting.postMessage({ type: 'SKIP_WAITING' });
-                    }
+                    try { await reg.update(); } catch (e) { /* ignore */ }
                 }
-                //对比远程sw.js的版本号
+
+                //对比远程 sw.js 的版本号
                 let remoteVer = await fetchRemoteVersion();
-                if (remoteVer) {
-                    if (remoteVer !== APP_VERSION) {
-                        showMsg(`发现新版本 ${remoteVer}，正在更新...`);
-                        setTimeout(() => {
-                            location.reload(true);
-                        }, 800);
-                        return;
+                let hasNewSW = !!reg.waiting;
+                let verMismatch = remoteVer && remoteVer !== APP_VERSION;
+
+                if (hasNewSW || verMismatch) {
+                    showMsg(`发现新版本${remoteVer ? ' ' + remoteVer : ''}，正在更新...`);
+                    if (reg.waiting) {
+                        //让等待中的新 SW 立即接管，接管后会触发 controllerchange → 自动刷新
+                        reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+                    } else {
+                        //没有 waiting，则清掉当前 SW 缓存后刷新，确保拿到新代码
+                        await clearThisAppCache();
+                        setTimeout(() => location.reload(), 500);
                     }
-                }
-                //若无远程信息但存在waiting，也提示刷新
-                if (reg.waiting) {
-                    showMsg("发现新版本，正在更新...");
-                    setTimeout(() => {
-                        location.reload(true);
-                    }, 800);
                     return;
                 }
             }
@@ -176,26 +194,37 @@ async function checkForUpdate() {
         let remoteVer2 = await fetchRemoteVersion();
         if (remoteVer2 && remoteVer2 !== APP_VERSION) {
             showMsg(`发现新版本 ${remoteVer2}，正在更新...`);
-            setTimeout(() => {
-                location.reload(true);
-            }, 800);
+            await clearThisAppCache();
+            setTimeout(() => location.reload(), 500);
         } else {
             showMsg("当前已是最新版本 " + APP_VERSION);
         }
     } catch (err) {
         console.error("检查更新失败:", err);
-        //检查失败时，仍尝试强制刷新
+        //检查失败时，仍尝试刷新
         showMsg("检查更新失败，正在刷新...");
-        setTimeout(() => {
-            location.reload(true);
-        }, 800);
+        await clearThisAppCache();
+        setTimeout(() => location.reload(), 800);
+    }
+}
+
+//清空本应用相关的 SW 缓存（避免 reload 时命中旧缓存中的 index.html/js）
+async function clearThisAppCache() {
+    try {
+        if ('caches' in window) {
+            let keys = await caches.keys();
+            await Promise.all(keys.map(function (k) { return caches.delete(k); }));
+        }
+    } catch (e) {
+        // ignore
     }
 }
 
 //读取远程sw.js里的CACHE版本号
 async function fetchRemoteVersion() {
     try {
-        let res = await fetch('./sw.js', { cache: 'no-store' });
+        //加时间戳，避免命中 HTTP 缓存
+        let res = await fetch('./sw.js?t=' + Date.now(), { cache: 'no-store' });
         if (!res.ok) return null;
         let txt = await res.text();
         let m = txt.match(/CACHE\s*=\s*['"]([^'"]+)['"]/);
@@ -214,7 +243,8 @@ async function initCache() {
     //根据版本获取？
     showMsg("加载缓存");
     $("#saveCache-spinner").hide();
-    let cc = new Cache("MHRSB", "sys", 1);
+    //使用项目专属数据库名，避免与同域下其它 PWA 的数据互相污染
+    let cc = new Cache("MHRSB_Cheater_db", "sys", 1);
     await cc.init();
     CacheObj = cc;
     let last = await loadList();
@@ -228,15 +258,16 @@ async function initCache() {
 async function loadList() {
     let cl = await CacheObj.readAll();
     CList = [];
+    //按保存时间倒序（新→旧）作为默认顺序
     cl.sort(function (a, b) {
         return b.v.t - a.v.t;
     });
+    //应用用户自定义顺序（存于 localStorage）：已记录的项按记录顺序排在前，新增项按时间追加在后
+    cl = applyCustomOrder(cl);
 
     let str = "";
-    let cl0 = ((cl && cl[0]) ? cl[0]["k"] : TmpCacheName);
-    if (cl0) {
-        PartMapAry.push(cl0);
-    }
+    let cl0 = ((cl && cl[0]) ? cl[0]["k"] : DraftKey);
+    //注意：不再把缓存项自动加入"对比列表"，对比由用户主动"添加对比"触发
     for (let i = 0; i < cl.length; i++) {
 
         let n = cl[i]["k"];
@@ -245,22 +276,90 @@ async function loadList() {
         CList.push(cl[i]["v"]["name"]);
         let tmp = cl[i]["v"];
         if (!tmp["name"]) tmp["name"] = n;
-        if (!tmp["partMap"]) tmp["partMap"] = tmp["PartMap"];
-        if (!tmp["charmData"]) tmp["charmData"] = tmp["CharmData"];
-        if (!tmp["weaponData"]) tmp["weaponData"] = tmp["WeaponData"];
         // PartMapAry.push(n);
         PartMapObj[n] = tmp;
         t = format(t);
-        str = str + `<li title="${n}-${t}"><a class="dropdown-item ">
-        <div class="col col-sm-auto">
-        <a class="btn cacheItem" >${n}<a>
-        <a class="btn btn-danger deleteCache right" style="float: right;">删除<a>
-        </div>
-        </a></li>`;
+        //第一项不显示"上移"，最后一项不显示"下移"
+        let upBtn = (i > 0)
+            ? `<button type="button" class="moveCacheUp btn btn-outline-secondary btn-sm" data-name="${n}" title="上移">↑</button>`
+            : "";
+        let downBtn = (i < cl.length - 1)
+            ? `<button type="button" class="moveCacheDown btn btn-outline-secondary btn-sm" data-name="${n}" title="下移">↓</button>`
+            : "";
+        str = str + `<li class="list-group-item history-item">
+        <button type="button" class="cacheItem btn btn-link p-0 text-start flex-grow-1" data-name="${n}" title="${n}-${t}">${n}<br><small class="text-secondary">${t}</small></button>
+        ${upBtn}${downBtn}
+        <button type="button" class="shareCache btn btn-outline-success btn-sm" data-name="${n}">分享</button>
+        <button type="button" class="renameCache btn btn-outline-secondary btn-sm" data-name="${n}">重命名</button>
+        <button type="button" class="deleteCache btn btn-outline-danger btn-sm" data-name="${n}">删除</button>
+        </li>`;
     }
     $(".dropdown-menu-cache").html(str);
     loadCompareList();
     return cl0;
+}
+
+//读取用户自定义配装顺序（localStorage）
+function getCustomOrder() {
+    try {
+        let s = localStorage.getItem("MHRSB_cache_order");
+        let a = s ? JSON.parse(s) : [];
+        return Array.isArray(a) ? a : [];
+    } catch (e) {
+        return [];
+    }
+}
+//保存用户自定义配装顺序
+function setCustomOrder(arr) {
+    try {
+        localStorage.setItem("MHRSB_cache_order", JSON.stringify(arr || []));
+    } catch (e) {
+        // ignore
+    }
+}
+//按自定义顺序重排列表：已记录的按记录顺序，未记录的（新项）保持传入顺序接在后面
+function applyCustomOrder(cl) {
+    let order = getCustomOrder();
+    if (!order.length) return cl;
+    let map = {};
+    for (let i = 0; i < cl.length; i++) {
+        map[cl[i]["k"]] = cl[i];
+    }
+    let result = [];
+    for (let i = 0; i < order.length; i++) {
+        let k = order[i];
+        if (map[k]) {
+            result.push(map[k]);
+            delete map[k];
+        }
+    }
+    //剩下的（新项 / 已删除的跳过）保持原顺序追加
+    for (let i = 0; i < cl.length; i++) {
+        let k = cl[i]["k"];
+        if (map[k]) {
+            result.push(cl[i]);
+            delete map[k];
+        }
+    }
+    return result;
+}
+//上移 / 下移"我的配装"中的某一项
+function moveCacheItem(name, dir) {
+    //以当前列表渲染顺序为准（读 DOM 里的 data-name）
+    let names = [];
+    $(".dropdown-menu-cache .history-item .cacheItem").each(function () {
+        names.push($(this).attr("data-name"));
+    });
+    let idx = names.indexOf(name);
+    if (idx < 0) return;
+    let swap = (dir === "up") ? idx - 1 : idx + 1;
+    if (swap < 0 || swap >= names.length) return;
+    //交换
+    let tmp = names[idx];
+    names[idx] = names[swap];
+    names[swap] = tmp;
+    setCustomOrder(names);
+    loadList();
 }
 function loadCompareList() {
 
@@ -270,120 +369,346 @@ function loadCompareList() {
         let n = CList[i];
         //已经在对比列表的 不加入
         if (PartMapAry.includes(n)) continue;
-        str2 = str2 + `<li title="${n}"><a class="dropdown-item ">
-        <div class="col col-sm-auto">
-        <a class="compareItem" >${n}<a>
-        <a class="btn btn-danger addToCompare right" style="float: right;">添加<a>
-        </div>
-        </a></li>`;
+        str2 = str2 + `<li class="dropdown-item d-flex align-items-center justify-content-between gap-2 compare-row">
+        <span class="compareItem text-truncate" data-name="${n}" title="${displayName(n)}">${displayName(n)}</span>
+        <button type="button" class="addToCompare btn btn-add-compare btn-sm" data-name="${n}">添加</button>
+        </li>`;
     }
     $(".dropdown-menu-compare").html(str2);
 }
+//判断一个配装数据是否"有实际技能"（含装备技能/珠子/护石技能），用于决定"当前配装"占位是否保留
+function hasAnySkillData(ptr) {
+    if (!ptr) return false;
+    //装备技能（怪异化后 eq_k_skill）
+    if (ptr.partMap) {
+        for (let p in ptr.partMap) {
+            let d = ptr.partMap[p];
+            if (!d) continue;
+            let skm = d["eq_k_skill"] || d["eq_skill"] || {};
+            for (let hex in skm) {
+                if (skm[hex] && skm[hex]["lv"] > 0) return true;
+            }
+            //珠子
+            let deco = d["decoration"] || [];
+            for (let i = 0; i < deco.length; i++) {
+                if (deco[i] && deco[i]["lv"] > 0) return true;
+            }
+        }
+    }
+    //护石技能
+    if (ptr.charmData) {
+        if (ptr.charmData["skill1Lv"] > 0 || ptr.charmData["skill2Lv"] > 0) return true;
+        let cdeco = ptr.charmData["decoration"] || [];
+        for (let i = 0; i < cdeco.length; i++) {
+            if (cdeco[i] && cdeco[i]["lv"] > 0) return true;
+        }
+    }
+    //武器珠子
+    if (ptr.weaponData) {
+        let wdeco = ptr.weaponData["decoration"] || [];
+        for (let i = 0; i < wdeco.length; i++) {
+            if (wdeco[i] && wdeco[i]["lv"] > 0) return true;
+        }
+    }
+    return false;
+}
+
+//把某个防具位置的 UI 彻底复位（装备/词条/技能/珠子全部清空），
+//用于加载配装前清空旧数据，避免"本次数据为空的位置"残留上一次的词条/珠子/技能
+function resetPartUI(idx) {
+    //装备下拉 + 显示框
+    $(".armor_select_" + idx).val("-----");
+    $(".armor_select_display_" + idx).val("");
+    //装备技能列表（装备选中后才渲染，清空时也要清掉，否则会残留上一次的装备技能）
+    $(".armor_skill_" + idx).html("");
+    //防御/孔位/点数等显示
+    $(".armor_slot_" + idx).html("");
+    $(".armor_cost_" + idx).html("");
+    $(".armor_pos_" + idx).html("");
+    //词条 + 技能列（每行）
+    let tr = $(".k_skill_tbody_" + idx).find("tr");
+    for (let i = 0; i < tr.length; i++) {
+        let $tr = $(tr[i]);
+        let ksel = $tr.find(".k_skill_select");
+        if (ksel.length) {
+            //词条下拉只留占位项，值为 idx_i_00_0
+            ksel.html(`<option value="${idx}_${i}_00_0">-----</option>`);
+            ksel.val(`${idx}_${i}_00_0`);
+        }
+        $tr.find(".k_skill_display").val("");
+        let csel = $tr.find(".k_skill_change");
+        if (csel.length) {
+            //与 initKSkillSelect 保持一致的规范占位值：{idx}_{行号}_00_0
+            let phVal = `${idx}_${i}_00_0`;
+            csel.html(`<option value="${phVal}">-----</option>`);
+            csel.val(phVal);
+        }
+        $tr.find(".k_skill_change_display").val("");
+    }
+    //珠子输入框（3 个）
+    for (let i = 0; i < 3; i++) {
+        let $d = $(".decoration_input_" + idx + "_" + i);
+        if ($d.length) {
+            $d.val("");
+            $d.attr("data-slot", "0");
+            if (idx != "7") $d.attr("disabled", "disabled");
+            $d.attr("placeholder", "");
+        }
+    }
+}
+
+//把一份配装数据（{partMap,charmData,weaponData}）贴进编辑器。
+//name 为写入 CurData 的名字；isDraft 为 true 表示"纯内存草稿"（不写缓存相关输入框）
+function applyDataToEditor(ptr, name, isDraft) {
+    //用于以前的编号问题
+    let cmm = {
+        "9999991": "498",
+        "9999992": "499",
+        "9999993": "500",
+        "9999994": "506",
+        "9999995": "502",
+    }
+    let tmp = ptr.PartMap || ptr.partMap || {};
+    let tmpC = ptr.CharmData || ptr.charmData;
+    let tmpW = ptr.WeaponData || ptr.weaponData;
+    //先清空全部 5 个防具位置，避免"本次数据里为空的位置"残留上一次加载的装备/词条/技能/珠子
+    //（例如配装A没设头、配装B设了头，先读B再读A时，头会错误地继承B）
+    for (let idx in PartIdxMap) {
+        CurData.partMap[idx] = null;
+        resetPartUI(idx);
+    }
+    for (let idx in tmp) {
+        let pd = tmp[idx];
+        //装备未选择时该位置可能为 null，跳过避免报错
+        if (!pd) continue;
+        if (pd["eq_id"]) {
+            let aa = pd["eq_id"].split("_");
+            if (cmm[aa[0]]) {
+                pd["eq_id"] = cmm[aa[0]] + "_" + aa[1];
+            }
+
+            $(".armor_select_" + idx).val(pd["eq_id"]);
+            $(".armor_select_" + idx).change();
+            //同步只读显示框（装备名）
+            let optDisp = $(".armor_select_" + idx).find("option[value='" + pd["eq_id"] + "']");
+            $(".armor_select_display_" + idx).val(optDisp.length ? optDisp.text() : "");
+            //保留珠子数据副本(change会触发initDecorationSel把数据清空)
+            let pDeco = JSON.parse(JSON.stringify(pd["decoration"] || []));
+            let sd = pd["k_skill"] || [];
+            for (let i = 0; i < sd.length; i++) {
+                let d = sd[i];
+
+                let v1 = `${idx}_${i}_${d["k_skill_hex"]}_${d["k_skill_cost"]}`;
+                $(".armor_container_" + idx).find(".k_skill_select").eq(i).val(v1);
+                $(".armor_container_" + idx).find(".k_skill_select").eq(i).change();
+
+                if (d["k_skill_edit_hex"] == "00") {
+                    continue;
+                }
+                let v2 = `${idx}_${i}_${d["k_skill_edit_hex"]}`;
+                $(".armor_container_" + idx).find(".k_skill_change").eq(i).val(v2);
+                $(".armor_container_" + idx).find(".k_skill_change").eq(i).change();
+            }
+            for (let i = 0; i < pDeco.length; i++) {
+                let d = pDeco[i];
+
+                if ((d["hex"] != "00") && (d["lv"] > 0)) {
+                    let v3 = `${d["hex"]}_${d["lv"]}`;
+                    $(`.decoration_input_${idx}_${i}`).val(v3);
+                    $(`.decoration_input_${idx}_${i}`).trigger("change");
+                }
+            }
+        }
+
+    }
+    CurData.partMap = tmp;
+    //charm
+    if (tmpC) {
+        if (!tmpC["decoration"]) tmpC["decoration"] = [];
+        //缓存里不含技能池(sel1/sel2)，需要从当前数据补充，否则重建下拉列表会报错
+        if (!tmpC["sel1"]) tmpC["sel1"] = CurData.charmData["sel1"] || [];
+        if (!tmpC["sel2"]) tmpC["sel2"] = CurData.charmData["sel2"] || [];
+        //保留珠子数据副本(下面设置孔位会触发initDecorationSel把数据清空)
+        let charmDeco = JSON.parse(JSON.stringify(tmpC["decoration"]));
+        //先写入数据，再按当前模式重建护石下拉并按hex选中（让等级按当前模式规范化）
+        CurData.charmData = tmpC;
+        initCharmSel2();
+        //按技能hex选中护石技能下拉项(缓存里存的等级可能与当前模式列表不一致，如极限缓存15级)
+        //用"恢复中"标志包住，避免 onSelectCharmSkill 把等级顶成 option 上限
+        CharmRestoreLv1 = tmpC["skill1Lv"];
+        CharmRestoreLv2 = tmpC["skill2Lv"];
+        isCharmRestoring = true;
+        selectCharmSkillOption("#charm_skill_select1", "1", tmpC["skill1Hex"]);
+        selectCharmSkillOption("#charm_skill_select2", "2", tmpC["skill2Hex"]);
+        isCharmRestoring = false;
+        //还原护石技能的"具体等级"（select 选中会按 option 上限设等级，这里用缓存里的真实等级覆盖）
+        if (tmpC["skill1Hex"] && tmpC["skill1Hex"] != "00") {
+            let lv1 = parseInt(tmpC["skill1Lv"], 10) || 0;
+            if (lv1 > 0) {
+                CurData.charmData["skill1Lv"] = lv1;
+                $("#charm_skill_select1").find("option:selected").text(
+                    (skill_data[tmpC["skill1Hex"]] ? skill_data[tmpC["skill1Hex"]]["sname"] : "") + " " + lv1);
+            }
+        }
+        if (tmpC["skill2Hex"] && tmpC["skill2Hex"] != "00") {
+            let lv2 = parseInt(tmpC["skill2Lv"], 10) || 0;
+            if (lv2 > 0) {
+                CurData.charmData["skill2Lv"] = lv2;
+                $("#charm_skill_select2").find("option:selected").text(
+                    (skill_data[tmpC["skill2Hex"]] ? skill_data[tmpC["skill2Hex"]]["sname"] : "") + " " + lv2);
+            }
+        }
+        let v3 = tmpC["slot"];
+        //先重建孔位下拉（否则下拉里可能没有 v3 这个选项，导致选不中）
+        initCharmSlotSel();
+        $("#charm_slot_select").val(v3);
+        $("#charm_slot_select").change();
+        //最后恢复珠子(用副本，避免被initDecorationSel清空影响)
+        for (let i = 0; i < charmDeco.length; i++) {
+            let d = charmDeco[i];
+            if ((d["hex"] != "00") && (d["lv"] > 0)) {
+                let v4 = `${d["hex"]}_${d["lv"]}`;
+                $(`.decoration_input_${6}_${i}`).val(v4);
+                $(`.decoration_input_${6}_${i}`).trigger("change");
+            }
+        }
+    }
+    if (tmpW) {
+        let wdlist = tmpW["decoration"] || [];
+        for (let i = 0; i < wdlist.length; i++) {
+            let d = wdlist[i];
+            if ((d["hex"] != "00") && (d["lv"] > 0)) {
+                let v4 = `${d["hex"]}_${d["lv"]}`;
+                $(`.decoration_input_${7}_${i}`).val(v4);
+                $(`.decoration_input_${7}_${i}`).trigger("change");
+            }
+        }
+        CurData.weaponData = tmpW;
+    }
+    CurData.name = name;
+    //草稿不写入缓存名输入框（它没有对应的缓存记录）
+    if (!isDraft && name != TmpCacheName) $("#cache-name").val(name);
+    if (isDraft) $("#cache-name").val("");
+    $("#curTitle").text(displayName(name));
+}
+
+//切回"临时配装"（纯内存草稿）：直接从内存取数据贴回编辑器，不查缓存
+function switchToDraft() {
+    let draft = PartMapObj[DraftKey];
+    if (!draft) {
+        showMsg("没有可切换的临时配装");
+        return;
+    }
+    //切换前，先把当前编辑的一套快照存好（若它也在对比列表里且不是草稿本身）
+    let curName = CurData.name;
+    if (curName && curName !== DraftKey && PartMapAry.includes(curName)) {
+        PartMapObj[curName] = JSON.parse(JSON.stringify(CurData));
+    }
+    //用草稿的副本贴回编辑器（避免之后 CurData 被改写污染内存里的草稿）
+    let snap = JSON.parse(JSON.stringify(draft));
+    applyDataToEditor(snap, DraftKey, true);
+    //草稿放到对比最前，保证它就是"当前编辑项"
+    PartMapAry = PartMapAry.filter(function (n) { return n !== DraftKey; });
+    PartMapAry.unshift(DraftKey);
+    refreshShowArmorData();
+    showMsg("已切回:临时配装");
+}
+
+//清空"临时配装"（纯内存草稿）
+//注意：只清空草稿数据；只有当"当前正在编辑的就是草稿"时，才同时复位编辑器（否则会误清当前加载的配装）
+function clearDraft() {
+    //判断当前是不是正在编辑草稿
+    let editingDraft = (CurData.name === DraftKey || !CurData.name);
+
+    if (editingDraft) {
+        //把 5 个防具位置复位为空
+        resetPartUI("1");
+        resetPartUI("2");
+        resetPartUI("3");
+        resetPartUI("4");
+        resetPartUI("5");
+        for (let i in PartIdxMap) {
+            CurData.partMap[i] = null;
+        }
+        //复位护石（位置6）：技能下拉、孔位、护石珠子
+        CurData.charmData = createCharmData();
+        //重建护石技能池（sel1/sel2），否则护石技能1/2 下拉会没有可选项
+        initCharmSkillData();
+        initCharmSel2();
+        //同步护石技能只读显示框（清空）
+        syncCharmDisplay("1");
+        syncCharmDisplay("2");
+        //重建护石孔位下拉（否则孔位选不了）
+        initCharmSlotSel();
+        $("#charm_slot_select").val("000");
+        $("#charm_slot_select").trigger("change");
+        for (let i = 0; i < 3; i++) {
+            let $d = $(".decoration_input_6_" + i);
+            if ($d.length) {
+                $d.val("");
+                $d.attr("data-slot", "0");
+                $d.attr("disabled", "disabled");
+                $d.attr("placeholder", "");
+            }
+        }
+        //复位武器（位置7）珠子
+        CurData.weaponData = createWeaponData();
+        for (let i = 0; i < 3; i++) {
+            let $d = $(".decoration_input_7_" + i);
+            if ($d.length) {
+                $d.val("");
+                $d.attr("data-slot", "4");
+                $d.attr("placeholder", "【4】");
+            }
+        }
+        initDecorationSel("7");
+        CurData.name = DraftKey;
+        $("#cache-name").val("");
+        $("#curTitle").text(DraftName);
+    }
+
+    //只清掉草稿数据（不影响其他配装）
+    PartMapObj[DraftKey] = { name: DraftKey, partMap: {}, charmData: createCharmData(), weaponData: createWeaponData() };
+
+    //点 × 清空后：如果草稿不是第一个，就把它移到最后；如果它本来就是第一个，保持原位
+    if (PartMapAry[0] !== DraftKey) {
+        draftToEndOnce = true;
+        PartMapAry = PartMapAry.filter(function (n) { return n !== DraftKey; });
+        PartMapAry.push(DraftKey);
+    }
+    refreshShowArmorData();
+    showMsg("已清空临时配装");
+}
+
 async function loadCache(name) {
     let cahe = await execLoad(name);
     if (cahe) {
         showMsg("加载中:" + name);
         try {
 
-            // cahe.Name;
-            let tmp = cahe.PartMap || cahe.partMap || {};
-            let tmpC = cahe.CharmData || cahe.charmData;
-            let tmpW = cahe.WeaponData || cahe.weaponData;
-            // startRender();
-            //用于以前的编号问题
-            let cmm = {
-                "9999991": "498",
-                "9999992": "499",
-                "9999993": "500",
-                "9999994": "506",
-                "9999995": "502",
+            //加载前：把"当前正在编辑的配装"深拷贝存入 PartMapObj，避免 CurData 被后续覆盖，
+            //导致对比列表里同名的旧项一起被改写（技能等级等数据丢失）
+            if (CurData.name && CurData.name !== name && PartMapAry.includes(CurData.name)) {
+                PartMapObj[CurData.name] = JSON.parse(JSON.stringify(CurData));
             }
-            for (let idx in tmp) {
-                let pd = tmp[idx];
-                //装备未选择时该位置可能为 null，跳过避免报错
-                if (!pd) continue;
-                if (pd["eq_id"]) {
-                    let aa = pd["eq_id"].split("_");
-                    if (cmm[aa[0]]) {
-                        pd["eq_id"] = cmm[aa[0]] + "_" + aa[1];
-                    }
 
-                    $(".armor_select_" + idx).val(pd["eq_id"]);
-                    $(".armor_select_" + idx).change();
-                    //保留珠子数据副本(change会触发initDecorationSel把数据清空)
-                    let pDeco = JSON.parse(JSON.stringify(pd["decoration"] || []));
-                    // armor_container_
-                    // small form-select k_skill_select
-                    let sd = pd["k_skill"] || [];
-                    for (let i = 0; i < sd.length; i++) {
-                        let d = sd[i];
-
-                        let v1 = `${idx}_${i}_${d["k_skill_hex"]}_${d["k_skill_cost"]}`;
-                        $(".armor_container_" + idx).find(".k_skill_select").eq(i).val(v1);
-                        $(".armor_container_" + idx).find(".k_skill_select").eq(i).change();
-
-                        if (d["k_skill_edit_hex"] == "00") {
-                            continue;
-                        }
-                        let v2 = `${idx}_${i}_${d["k_skill_edit_hex"]}`;
-                        $(".armor_container_" + idx).find(".k_skill_change").eq(i).val(v2);
-                        $(".armor_container_" + idx).find(".k_skill_change").eq(i).change();
-                    }
-                    for (let i = 0; i < pDeco.length; i++) {
-                        let d = pDeco[i];
-
-                        if ((d["hex"] != "00") && (d["lv"] > 0)) {
-                            let v3 = `${d["hex"]}_${d["lv"]}`;
-                            $(`.decoration_input_${idx}_${i}`).val(v3);
-                            $(`.decoration_input_${idx}_${i}`).trigger("change");
-                        }
-                    }
-                }
-
+            //根据缓存里保存的模式，自动切换极限/普通模式（旧缓存没有此字段，保持当前模式）
+            if (cahe.extreme !== undefined) {
+                setExtremeMode(!!cahe.extreme);
             }
-            CurData.partMap = tmp;
-            //charm
-            if (tmpC) {
-                if (!tmpC["decoration"]) tmpC["decoration"] = [];
-                //缓存里不含技能池(sel1/sel2)，需要从当前数据补充，否则重建下拉列表会报错
-                if (!tmpC["sel1"]) tmpC["sel1"] = CurData.charmData["sel1"] || [];
-                if (!tmpC["sel2"]) tmpC["sel2"] = CurData.charmData["sel2"] || [];
-                //保留珠子数据副本(下面设置孔位会触发initDecorationSel把数据清空)
-                let charmDeco = JSON.parse(JSON.stringify(tmpC["decoration"]));
-                //先写入数据，再按当前模式重建护石下拉并按hex选中（让等级按当前模式规范化）
-                CurData.charmData = tmpC;
-                initCharmSel2();
-                //按技能hex选中护石技能下拉项(缓存里存的等级可能与当前模式列表不一致，如极限缓存15级)
-                selectCharmSkillOption("#charm_skill_select1", "1", tmpC["skill1Hex"]);
-                selectCharmSkillOption("#charm_skill_select2", "2", tmpC["skill2Hex"]);
-                let v3 = tmpC["slot"];
-                $("#charm_slot_select").val(v3);
-                $("#charm_slot_select").change();
-                //最后恢复珠子(用副本，避免被initDecorationSel清空影响)
-                for (let i = 0; i < charmDeco.length; i++) {
-                    let d = charmDeco[i];
-                    if ((d["hex"] != "00") && (d["lv"] > 0)) {
-                        let v4 = `${d["hex"]}_${d["lv"]}`;
-                        $(`.decoration_input_${6}_${i}`).val(v4);
-                        $(`.decoration_input_${6}_${i}`).trigger("change");
-                    }
-                }
-            }
-            if (tmpW) {
-                let wdlist = tmpW["decoration"] || [];
-                for (let i = 0; i < wdlist.length; i++) {
-                    let d = wdlist[i];
-                    if ((d["hex"] != "00") && (d["lv"] > 0)) {
-                        let v4 = `${d["hex"]}_${d["lv"]}`;
-                        $(`.decoration_input_${7}_${i}`).val(v4);
-                        $(`.decoration_input_${7}_${i}`).trigger("change");
-                    }
-                }
-                CurData.weaponData = tmpW;
-            }
-            CurData.name = name;
-            if (name != TmpCacheName) $("#cache-name").val(name);
-            $("#curTitle").text(name);
+
+            //把数据贴进编辑器（不写缓存名输入框由 applyDataToEditor 内部按 isDraft=false 处理）
+            applyDataToEditor(cahe, name, false);
+
+            //从"我的配装"加载：
+            //  - 保留已有对比项
+            //  - "临时配装"（纯内存草稿）永远保留（不移除）
+            //  - 移除同名项后，把加载项放到最前
+            PartMapAry = PartMapAry.filter(function (n) {
+                if (n === name) return false;
+                return true;
+            });
+            PartMapAry.unshift(name);
             refreshShowArmorData();
             showMsg("加载完成:" + name);
         } catch (err) {
@@ -406,7 +731,7 @@ async function saveCache() {
     let name = $("#cache-name").val();
     if (name) {
         CurData.name = name;
-        await execSave(name, CurData.partMap, CurData.charmData, CurData.weaponData);
+        await execSave(name, CurData.partMap, CurData.charmData, CurData.weaponData, null, isExtremeMode);
         $("#saveCache-spinner").hide();
         //需要更新名称
         $("#cache-name").val(name);
@@ -420,7 +745,11 @@ async function saveCache() {
 }
 //设置临时缓存
 async function setTmpCache() {
-    await execSave(TmpCacheName, CurData.partMap, CurData.charmData, CurData.weaponData);
+    await execSave(TmpCacheName, CurData.partMap, CurData.charmData, CurData.weaponData, null, isExtremeMode);
+    //同步更新"当前"标题并刷新配装列表，避免需要手动刷新才显示
+    CurData.name = TmpCacheName;
+    $("#curTitle").text(TmpCacheName);
+    await loadList();
     showMsg("缓存成功");
 }
 const TmpCacheSharePrefix = "MHRSB1:";
@@ -453,13 +782,21 @@ async function gzipDecompress(bytes) {
     return await new Response(stream).text();
 }
 
-async function shareTmpCache() {
+//分享指定名称的缓存；不传则分享"临时缓存"
+async function shareCacheByName(name) {
+    name = name || TmpCacheName;
     try {
-        const cache = await CacheObj.get(TmpCacheName);
-        if (!cache) throw new Error("没有找到临时缓存，请先设置临时缓存");
-        const json = JSON.stringify({ partMap: cache.partMap, charmData: cache.charmData, weaponData: cache.weaponData });
+        const cache = await CacheObj.get(name);
+        if (!cache) throw new Error("没有找到缓存：" + name);
+        const json = JSON.stringify({
+            name: name,
+            partMap: cache.partMap,
+            charmData: cache.charmData,
+            weaponData: cache.weaponData,
+            extreme: cache.extreme
+        });
         const code = TmpCacheSharePrefix + bytesToBase64(await gzipCompress(json));
-        await navigator.clipboard.writeText(code);
+        await copyText(code);
         showMsg("分享码已复制，长度:" + code.length);
     } catch (err) {
         console.error(err);
@@ -467,46 +804,177 @@ async function shareTmpCache() {
     }
 }
 
+//复制文本到剪贴板（带旧浏览器回退）
+async function copyText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        try {
+            await navigator.clipboard.writeText(text);
+            return true;
+        } catch (e) {
+            // 继续尝试回退方案
+        }
+    }
+    return fallbackCopy(text);
+}
+
+//重命名缓存
+async function renameCache(oldName) {
+    try {
+        const cache = await CacheObj.get(oldName);
+        if (!cache) throw new Error("没有找到缓存：" + oldName);
+        let newName = prompt("重命名为：", oldName);
+        if (newName == null) return;
+        newName = newName.trim();
+        if (!newName || newName === oldName) return;
+        //写入新名字（保留原模式）
+        await execSave(newName, cache.partMap, cache.charmData, cache.weaponData, cache.t, cache.extreme);
+        //删除旧名字
+        await CacheObj.delete(oldName);
+        //若当前加载的正是这一条，同步更新名称显示
+        if (CurData.name === oldName) {
+            CurData.name = newName;
+            $("#curTitle").text(newName);
+        }
+        showMsg("已重命名为：" + newName);
+        await loadList();
+    } catch (err) {
+        console.error(err);
+        showMsg("重命名失败:" + (err && err.message ? err.message : err));
+    }
+}
+
+//从分享码文本导入（供剪贴板直接导入 / 弹窗手动导入复用）
+async function importFromCode(code) {
+    code = String(code || "").trim().replace(/\s+/g, "");
+    if (!code.startsWith(TmpCacheSharePrefix)) throw new Error("分享码格式错误");
+    const json = await gzipDecompress(base64ToBytes(code.substring(TmpCacheSharePrefix.length)));
+    const data = JSON.parse(json);
+    if (!data || typeof data !== "object" || !data.partMap || !data.charmData || !data.weaponData || !data.name) {
+        throw new Error("分享码数据不完整或格式不支持（请使用最新版生成的分享码）");
+    }
+    //分享码里携带的配装名
+    let baseName = String(data.name).trim();
+    if (!baseName) throw new Error("分享码缺少配装名");
+    //重名则加后缀 (2)、(3)...
+    let name = baseName;
+    let idx = 1;
+    while (await CacheObj.get(name)) {
+        idx++;
+        name = baseName + "(" + idx + ")";
+    }
+    await execSave(name, data.partMap, data.charmData, data.weaponData, null, data.extreme);
+    await loadList();
+    await loadCache(name);
+    return name;
+}
+
+//从「导出全部配装」生成的 JSON 文件导入（批量）
+async function importFromFile(file) {
+    if (!file) return;
+    let text = await file.text();
+    let data;
+    try {
+        data = JSON.parse(text);
+    } catch (e) {
+        throw new Error("文件不是有效的 JSON");
+    }
+    return await importCachesFromObject(data);
+}
+
+//把一个 JSON 对象里的配装导入（支持"批量导出格式"与"单个配装格式"）
+async function importCachesFromObject(data) {
+    if (!data || typeof data !== "object") throw new Error("数据格式错误");
+    //批量导出格式：{ caches: [ {name, partMap, charmData, weaponData, extreme, t}, ... ] }
+    //单个配装格式：{ name, partMap, charmData, weaponData, extreme, t }
+    let list = [];
+    if (Array.isArray(data.caches)) {
+        list = data.caches;
+    } else if (data.partMap && data.charmData && data.weaponData) {
+        list = [data];
+    } else {
+        throw new Error("文件里没有可导入的配装");
+    }
+    let okCount = 0;
+    let lastName = "";
+    for (let i = 0; i < list.length; i++) {
+        let item = list[i];
+        if (!item || !item.partMap || !item.charmData || !item.weaponData) continue;
+        let baseName = (item.name && String(item.name).trim()) ? String(item.name).trim() : ("导入配装" + (i + 1));
+        //重名则加后缀
+        let name = baseName;
+        let idx = 1;
+        while (await CacheObj.get(name)) {
+            idx++;
+            name = baseName + "(" + idx + ")";
+        }
+        await execSave(name, item.partMap, item.charmData, item.weaponData, item.t || null, item.extreme);
+        okCount++;
+        lastName = name;
+    }
+    if (!okCount) throw new Error("文件里没有可导入的配装");
+    await loadList();
+    //批量导入时不自动加载某一套（避免覆盖当前编辑），单个时加载它
+    if (okCount === 1) await loadCache(lastName);
+    return { count: okCount, name: lastName };
+}
+
+//点击「导入配装」：优先读剪贴板直接导入，失败/无效再弹手动输入
+async function startImport() {
+    let text = "";
+    try {
+        if (navigator.clipboard && navigator.clipboard.readText) {
+            text = ((await navigator.clipboard.readText()) || "").trim().replace(/\s+/g, "");
+        }
+    } catch (e) {
+        // 读取剪贴板被拒绝 / 不受支持，走手动输入
+        console.warn("读取剪贴板失败:", e);
+    }
+
+    if (text.startsWith(TmpCacheSharePrefix)) {
+        // 剪贴板里是有效分享码，直接导入，不弹窗
+        showMsg("已从剪贴板导入…");
+        try {
+            const name = await importFromCode(text);
+            showMsg("配装导入成功：" + name);
+        } catch (err) {
+            console.error(err);
+            showMsg("导入失败:" + (err && err.message ? err.message : err));
+        }
+    } else {
+        // 剪贴板无有效分享码：弹窗手动输入（有内容就带上，方便用户修改/确认）
+        $("#importCacheText").val(text || "");
+        $("#importCacheModal").modal("show");
+    }
+}
+
 async function importTmpCache() {
     try {
-        const code = $("#importCacheText").val().trim().replace(/\s+/g, "");
-        if (!code.startsWith(TmpCacheSharePrefix)) throw new Error("分享码格式错误");
-        const json = await gzipDecompress(base64ToBytes(code.substring(TmpCacheSharePrefix.length)));
-        const data = JSON.parse(json);
-        if (!data || typeof data !== "object" || !data.partMap || !data.charmData || !data.weaponData) {
-            throw new Error("分享码数据不完整");
-        }
-        await execSave(TmpCacheName, data.partMap, data.charmData, data.weaponData);
-        await loadList();
+        const code = $("#importCacheText").val();
+        const name = await importFromCode(code);
         $("#importCacheText").val("");
         $("#importCacheModal").modal("hide");
-        await loadCache(TmpCacheName);
-        showMsg("临时缓存导入成功");
+        showMsg("配装导入成功：" + name);
     } catch (err) {
         console.error(err);
         showMsg("导入失败:" + err.message);
     }
 }
 
-async function execSave(n, p, c, w, t) {
-    await CacheObj.add(n, { "name": n, "partMap": p, "charmData": c, "weaponData": w, "t": t ? t : new Date() });
+async function execSave(n, p, c, w, t, ext) {
+    //ext：保存时的模式（是否极限模式），用于加载时自动切回对应模式；
+    //ext 为 undefined 时表示旧数据（不含模式信息），不写入 extreme 字段，加载时保持当前模式
+    let obj = { "name": n, "partMap": p, "charmData": c, "weaponData": w, "t": t ? t : new Date() };
+    if (ext !== undefined) {
+        obj["extreme"] = ext ? 1 : 0;
+    }
+    await CacheObj.add(n, obj);
 }
 async function execLoad(n) {
 
     let cache = null;
     try {
         cache = await CacheObj.get(n);
-        if (cache.PartMap) {
-            cache.partMap = cache.PartMap;
-            delete (cache.PartMap);
-            cache.charmData = cache.CharmData;
-            delete (cache.CharmData);
-            cache.weaponData = cache.WeaponData;
-            delete (cache.WeaponData);
-            if (!cache.name) cache.name = n;
-            delete (cache.Name);
-            await execSave(cache.name, cache.partMap, cache.charmData, cache.weaponData, cache.t);
-        }
+        if (cache && !cache.name) cache.name = n;
     } catch (err) {
         console.log(err);
         showMsg("获取缓存失败" + err.message);
@@ -518,6 +986,94 @@ async function delCache(name) {
     // console.log(name);
     showMsg("删除成功:" + name);
     await loadList();
+}
+
+//删除「我的配装」里的全部配装
+async function delAllCaches() {
+    try {
+        let all = await CacheObj.readAll();
+        for (let i = 0; i < all.length; i++) {
+            await CacheObj.delete(all[i]["k"]);
+        }
+        //清掉自定义顺序
+        setCustomOrder([]);
+        showMsg("已删除全部配装（" + all.length + " 个）");
+        await loadList();
+    } catch (err) {
+        console.error(err);
+        showMsg("全部删除失败:" + (err && err.message ? err.message : err));
+    }
+}
+
+//导出「我的配装」为 JSON 文件
+async function exportAllCaches() {
+    try {
+        let all = await CacheObj.readAll();
+        let arr = [];
+        for (let i = 0; i < all.length; i++) {
+            let v = all[i]["v"] || {};
+            arr.push({
+                name: all[i]["k"],
+                partMap: v.partMap || v.PartMap || {},
+                charmData: v.charmData || v.CharmData || {},
+                weaponData: v.weaponData || v.WeaponData || {},
+                extreme: v.extreme,
+                t: v.t
+            });
+        }
+        //按当前"我的配装"显示顺序导出（若没有自定义顺序，则按时间倒序）
+        let order = getCustomOrder();
+        if (order && order.length) {
+            let map = {};
+            arr.forEach(a => map[a.name] = a);
+            let sorted = [];
+            order.forEach(n => { if (map[n]) { sorted.push(map[n]); delete map[n]; } });
+            arr.forEach(a => { if (map[a.name]) { sorted.push(a); delete map[a.name]; } });
+            arr = sorted;
+        }
+        let out = {
+            app: "MHRSB_Cheater",
+            version: APP_VERSION,
+            exportTime: new Date().toISOString(),
+            count: arr.length,
+            caches: arr
+        };
+        let content = JSON.stringify(out, null, 2);
+        let stamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, "-");
+        let fileName = "MHRSB_配装导出_" + stamp + ".json";
+        saveTextFile(fileName, content, "application/json");
+        showMsg("已导出 " + arr.length + " 个配装");
+    } catch (err) {
+        console.error(err);
+        showMsg("导出失败:" + (err && err.message ? err.message : err));
+    }
+}
+
+//保存文本为文件（Android WebView 走系统保存框；浏览器走 Blob 下载）
+function saveTextFile(fileName, content, mime) {
+    mime = mime || "text/plain;charset=utf-8";
+    try {
+        if (window.Android && typeof window.Android.chooseFile === "function") {
+            window.Android.chooseFile(fileName, content);
+            showMsg("已调起保存：" + fileName);
+        } else {
+            const blob = new Blob([content], { type: mime });
+            const objectURL = URL.createObjectURL(blob);
+            const aTag = document.createElement('a');
+            aTag.href = objectURL;
+            aTag.download = fileName;
+            document.body.appendChild(aTag);
+            aTag.click();
+            setTimeout(() => {
+                URL.revokeObjectURL(objectURL);
+                document.body.removeChild(aTag);
+            }, 0);
+            showMsg("已开始下载：" + fileName);
+        }
+    } catch (err) {
+        console.error("保存失败:", err);
+        showMsg("保存失败:" + (err && err.message ? err.message : err));
+    }
 }
 
 function startRender() {
@@ -542,7 +1098,12 @@ function switcTab() {
     }
 }
 function switcMode() {
-    isExtremeMode = !isExtremeMode;
+    setExtremeMode(!isExtremeMode);
+}
+//设置极限模式开关（on=true 开启）
+function setExtremeMode(on) {
+    if (isExtremeMode === on) return;
+    isExtremeMode = on;
     if (isExtremeMode) {
         $("#switchMode").text("切换至普通模式");
         showMsg("已开启极限模式：所有孔位均可插任意珠子，护石技能等级为15");
@@ -565,6 +1126,10 @@ function refreshAllDecorationSel() {
     }
     if (CurData.charmData) {
         initDecorationSel("6");
+    }
+    //武器（位置7）孔位固定，也要刷新（否则极限模式切换后武器珠子不可选）
+    if (CurData.weaponData) {
+        initDecorationSel("7");
     }
 }
 function isSkipSkill(hex) {
@@ -673,7 +1238,6 @@ function initDecorationData() {
             // opt.value = `${partIdx}_${idx}_${skill_hex}_${lv}`;
             str = str + `<option value="${dname}">`;
         }
-        DecoratrionSel["" + slot] = a;
         $("#slot" + slot).html(str);
     }
 }
@@ -719,23 +1283,19 @@ function initHtml() {
 
         t.find(".k_skill_tbody").addClass("k_skill_tbody_" + idx);
         t.find(".armor_select").addClass("armor_select_" + idx);
+        t.find(".armor_select_display").addClass("armor_select_display_" + idx);
+        t.find(".k_skill_display").addClass("k_skill_display_" + idx);
+        t.find(".k_skill_change_display").addClass("k_skill_change_display_" + idx);
         t.find(".armor_pos").addClass("armor_pos_" + idx);
         t.find(".armor_slot").addClass("armor_slot_" + idx);
         t.find(".armor_cost").addClass("armor_cost_" + idx);
-
-        t.find(".def_p").addClass("def_p_" + idx);
-        t.find(".def_f").addClass("def_f_" + idx);
-        t.find(".def_w").addClass("def_w_" + idx);
-        t.find(".def_t").addClass("def_t_" + idx);
-        t.find(".def_i").addClass("def_i_" + idx);
-        t.find(".def_d").addClass("def_d_" + idx);
 
         t.find(".armor_skill").addClass("armor_skill_" + idx);
 
 
         html += `
-<div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl armor_container_${idx}">
-    <div class="armor_container">
+<div class="col-12 col-md-6 col-xl-4 armor_container_${idx}">
+    <div class="app-card h-100 mb-0">
         ${t.html()}
     </div>
 </div>`;
@@ -774,11 +1334,29 @@ function bindEvents() {
     $("#setTmpCache").on("click", function (event) {
         setTmpCache();
     });
-    $("#shareTmpCache").on("click", function () {
-        shareTmpCache();
+    //点击「导入配装」：先尝试读剪贴板直接导入，失败再弹手动输入
+    $("#importTmpCache").on("click", function (event) {
+        startImport();
     });
     $("#confirmImportTmpCache").on("click", function () {
         importTmpCache();
+    });
+    //选择文件导入（支持「导出全部配装」生成的 JSON）
+    $("#importFileBtn").on("click", async function () {
+        let f = document.getElementById("importFileInput").files[0];
+        if (!f) {
+            showMsg("请先选择文件");
+            return;
+        }
+        try {
+            let r = await importFromFile(f);
+            showMsg("导入成功：" + r.count + " 个配装");
+            $("#importFileInput").value = "";
+            $("#importCacheModal").modal("hide");
+        } catch (err) {
+            console.error(err);
+            showMsg("导入失败:" + (err && err.message ? err.message : err));
+        }
     });
     $("#switch").on("click", function (event) {
         switcTab();
@@ -815,15 +1393,62 @@ function bindEvents() {
     });
 
     $(".dropdown-menu-cache").on("click", ".cacheItem", function (event) {
-        loadCache(event.target.text);
+        loadCache($(this).attr("data-name"));
+        //加载后关闭抽屉
+        var dr = document.getElementById("historyDrawer");
+        if (dr && window.bootstrap) {
+            var oc = bootstrap.Offcanvas.getInstance(dr) || new bootstrap.Offcanvas(dr);
+            oc.hide();
+        }
     });
 
     $(".dropdown-menu-cache").on("click", ".deleteCache", function (event) {
-        delCache($(event.target).parent().find(".cacheItem").text());
+        delCache($(this).attr("data-name"));
+    });
+
+    //上移 / 下移
+    $(".dropdown-menu-cache").on("click", ".moveCacheUp", function (event) {
+        moveCacheItem($(this).attr("data-name"), "up");
+    });
+    $(".dropdown-menu-cache").on("click", ".moveCacheDown", function (event) {
+        moveCacheItem($(this).attr("data-name"), "down");
+    });
+
+    //导出全部配装
+    $(document).off("click", "#exportAllCaches").on("click", "#exportAllCaches", function (event) {
+        exportAllCaches();
+    });
+    //全部删除：输入 DELETE 才启用确认按钮
+    $(document).off("input", "#delAllConfirmInput").on("input", "#delAllConfirmInput", function () {
+        let ok = ($(this).val().trim().toUpperCase() === "DELETE");
+        $("#delAllConfirmBtn").prop("disabled", !ok);
+    });
+    $(document).off("click", "#delAllConfirmBtn").on("click", "#delAllConfirmBtn", async function () {
+        if ($("#delAllConfirmInput").val().trim().toUpperCase() !== "DELETE") return;
+        await delAllCaches();
+        //清空输入并关闭弹窗
+        $("#delAllConfirmInput").val("");
+        $("#delAllConfirmBtn").prop("disabled", true);
+        if (window.bootstrap) {
+            bootstrap.Modal.getOrCreateInstance(document.getElementById("delAllModal")).hide();
+        }
+    });
+
+    $(".dropdown-menu-cache").on("click", ".shareCache", function (event) {
+        shareCacheByName($(this).attr("data-name"));
+    });
+
+    $(".dropdown-menu-cache").on("click", ".renameCache", function (event) {
+        renameCache($(this).attr("data-name"));
     });
 
     $(".dropdown-menu-compare").on("click", ".addToCompare", function (event) {
-        addToCompare($(event.target).parent().find(".compareItem").text())
+        addToCompare($(this).attr("data-name"))
+    });
+
+    //直接点击配装名也能添加对比
+    $(".dropdown-menu-compare").on("click", ".compareItem", function (event) {
+        addToCompare($(this).attr("data-name"))
     });
 
     $("#skillInfo").on("click", ".skill_info_div", function (event) {
@@ -844,6 +1469,29 @@ function bindEvents() {
         let targ = event.target;
         removeFromCompare($(targ).attr("name"));
     });
+
+    //点"临时配装"的 × → 清空草稿（不是从对比移除）
+    $("#skill_table_head").on("click", ".clear_draft", function (event) {
+        event.stopPropagation();
+        clearDraft();
+    });
+
+//点击对比表头的配装名 → 切换到该配装
+        $("#skill_table_head").on("click", ".switch_to_cache", function (event) {
+            //点的是删除/清空按钮(×)时不触发切换
+            if ($(event.target).hasClass("remove_compare")) return;
+            if ($(event.target).hasClass("clear_draft")) return;
+            let name = $(this).attr("data-name");
+            if (!name) return;
+            //已经在编辑的配装，无需切换
+            if (name === CurData.name) return;
+            //"临时配装"是纯内存草稿，直接从内存切换（不查缓存）
+            if (name === DraftKey) {
+                switchToDraft();
+                return;
+            }
+            loadCache(name);
+        });
 
 
 }
@@ -968,12 +1616,6 @@ function getCharmSlotMap(sklvType) {
     return m[sklvType];
 }
 
-function getDecorationSelData(slot) {
-    return DecoratrionSel["" + slot];
-}
-
-
-
 function initCharmSel() {
     let s1 = CurData.charmData["sel1"] || [];
     let s2 = CurData.charmData["sel2"] || [];
@@ -996,23 +1638,41 @@ function initCharmSel() {
 }
 
 //根据当前模式重建护石技能下拉列表
+//注意：切换模式时"保持当前护石技能等级不变"（不强制15、也不做特殊恢复）
 function refreshCharmSel() {
     //数据未就绪时不处理，避免刷新报错影响后续渲染
     if (!CurData.charmData || !CurData.charmData["sel1"] || !CurData.charmData["sel2"]) {
         return;
     }
-    let v1 = $("#charm_skill_select1").val();
-    let v2 = $("#charm_skill_select2").val();
+    //记住当前技能 hex 与当前等级（重建下拉会按 option 上限重设等级，这里用于原样恢复）
+    let hex1 = CurData.charmData["skill1Hex"];
+    let hex2 = CurData.charmData["skill2Hex"];
+    let lv1 = parseInt(CurData.charmData["skill1Lv"], 10) || 0;
+    let lv2 = parseInt(CurData.charmData["skill2Lv"], 10) || 0;
+    CharmRestoreLv1 = lv1;
+    CharmRestoreLv2 = lv2;
+    isCharmRestoring = true;
     initCharmSel2();
-    if (v1) {
-        $("#charm_skill_select1").val(v1);
-        //触发change，让存储的技能等级按当前模式同步（极限模式为15）
-        $("#charm_skill_select1").trigger("change");
+    selectCharmSkillOption("#charm_skill_select1", "1", hex1);
+    selectCharmSkillOption("#charm_skill_select2", "2", hex2);
+    isCharmRestoring = false;
+    //原样恢复当前等级（不随模式变化）
+    if (hex1 && hex1 != "00" && lv1 > 0) {
+        CurData.charmData["skill1Lv"] = lv1;
+        $("#charm_skill_select1").find("option:selected").text(
+            (skill_data[hex1] ? skill_data[hex1]["sname"] : "") + " " + lv1);
     }
-    if (v2) {
-        $("#charm_skill_select2").val(v2);
-        $("#charm_skill_select2").trigger("change");
+    if (hex2 && hex2 != "00" && lv2 > 0) {
+        CurData.charmData["skill2Lv"] = lv2;
+        $("#charm_skill_select2").find("option:selected").text(
+            (skill_data[hex2] ? skill_data[hex2]["sname"] : "") + " " + lv2);
     }
+    syncCharmDisplay("1");
+    syncCharmDisplay("2");
+    //重建护石孔位下拉（孔位选项与技能无关，但要保证始终存在）
+    let slotCur = CurData.charmData["slot"] || "000";
+    initCharmSlotSel();
+    $("#charm_slot_select").val(slotCur);
 }
 
 //清空并重建护石技能下拉列表（不恢复之前选中项）
@@ -1025,7 +1685,9 @@ function initCharmSel2() {
 function initCharmSlotSel() {
     let h = getCharmSlotMap(CurData.charmData["skill1Type"] + CurData.charmData["skill2Type"]);
     let elm = $("#charm_slot_select");
-    let ov = elm.val();
+    //优先用数据层的 slot 恢复选中项（避免被 UI 旧值影响）；数据层为空时回退到 UI 当前值
+    let ov = CurData.charmData["slot"];
+    if (!ov) ov = elm.val();
     elm.html(`<option value="000">-----</option>`);
     if (h && h.length) {
         for (let i = 0; i < h.length; i++) {
@@ -1035,6 +1697,10 @@ function initCharmSlotSel() {
             opt.text = o;
             elm.append(opt);
         }
+    }
+    //恢复之前选中值；若无效（如初始占位没有 value 或值不存在），回到"-----"占位项
+    if (!ov || !elm.find("option[value='" + ov + "']").length) {
+        ov = "000";
     }
     elm.val(ov);
 }
@@ -1053,22 +1719,8 @@ function initTable() {
             <td id="def_${partIdx}_i">0</td>
             <td id="def_${partIdx}_d">0</td>
             <td id="slot_${partIdx}">0</td>
-            <td id="dec_${partIdx}"></td>
         </tr>`;
     }
-    //护石
-    str = str + `<tr>
-        <td>护石</td>
-        <td>-</td>
-        <td >-</td>
-        <td >-</td>
-        <td >-</td>
-        <td >-</td>
-        <td >-</td>
-        <td >-</td>
-        <td id="slot_charms">0</td>
-        <td id="dec_charms"></td>
-    </tr>`
     str = str + `<tr>
         <td>合计</td>
         <td>-</td>
@@ -1118,7 +1770,974 @@ function initArmorSelect() {
 
         }
     }
+    buildArmorSearchData();
+    bindArmorSearch();
 }
+
+// ===== 装备搜索面板 =====
+// 按部位缓存可搜索的装备数据（与 initArmorSelect 相同的筛选规则）
+var ArmorSearchMap = {};   // { partIdx: [{id, name, slot, skills:[...], rank}] }
+function buildArmorSearchData() {
+    ArmorSearchMap = {};
+    for (let partIdx in PartIdxMap) {
+        ArmorSearchMap[partIdx] = [];
+    }
+    let seen = {};
+    for (let key in armor_list) {
+        let o = armor_list[key];
+        if (!o || !(o["rank"] > 7 && o["bougyo"] > 0)) continue;
+        let p = "" + o["parts_id"];
+        if (!ArmorSearchMap[p]) continue;
+        let id = o["id"] + "_" + o["parts_id"];
+        if (seen[id]) continue;
+        seen[id] = true;
+        let skills = [];
+        if (o["skill"]) {
+            for (let k = 0; k < o["skill"].length; k++) {
+                skills.push(o["skill"][k]["sname"] + " " + o["skill"][k]["lv"]);
+            }
+        }
+        ArmorSearchMap[p].push({
+            id: id,
+            idNum: parseInt(o["id"], 10) || 0,
+            name: o["name"] || "",
+            slot: slot_simplify(o),
+            skills: skills,
+            def: o["bougyo_max"] || o["bougyo"] || 0,
+            res: [o["def_f"] || 0, o["def_w"] || 0, o["def_t"] || 0, o["def_i"] || 0, o["def_d"] || 0]
+        });
+    }
+    //按装备 id 从大到小排序（与原有下拉顺序一致）
+    for (let p in ArmorSearchMap) {
+        ArmorSearchMap[p].sort(function (a, b) {
+            return b.idNum - a.idNum;
+        });
+    }
+}
+
+//当前搜索模式："armor" 装备 / "deco" 珠子
+var ArmorSearchMode = "armor";
+//当前正在搜索的部位
+var ArmorSearchPartIdx = null;
+
+//是否触屏设备（手机/平板）——触屏不自动聚焦，避免弹出输入法
+function isTouchDevice() {
+    return ("ontouchstart" in window) || (navigator.maxTouchPoints > 0);
+}
+
+function bindArmorSearch() {
+    //移除所有珠子输入框的原生 datalist，改用自建搜索面板
+    $(".decoration_input").removeAttr("list");
+    //初始化武器（位置7）珠子框（孔位固定444），使其可点开珠子搜索面板
+    initDecorationSel("7");
+    //点击只读输入框打开搜索面板
+    $(document).off("click", ".armor_select_display").on("click", ".armor_select_display", function () {
+        let cls = $(this).attr("class") || "";
+        let m = cls.match(/armor_select_display_(\d+)/);
+        openArmorSearch(m ? m[1] : null);
+    });
+    //点击珠子输入框打开搜索面板
+    $(document).off("click", ".decoration_input").on("click", ".decoration_input", function () {
+        let cls = $(this).attr("class") || "";
+        let m = cls.match(/decoration_input_(\d+)_(\d+)/);
+        if (m) openDecoSearch(m[1], m[2], this);
+    });
+    //点击词条只读框打开词条面板
+    $(document).off("click", ".k_skill_display").on("click", ".k_skill_display", function () {
+        let cls = $(this).attr("class") || "";
+        let m = cls.match(/k_skill_display_(\d+)/);
+        if (!m) return;
+        let partIdx = m[1];
+        //找到这一行在 tbody 中的行号
+        let tr = $(this).closest("tr");
+        let idx = tr.parent().find("tr").index(tr);
+        if (idx < 0) return;
+        openKSkillSearch(partIdx, idx, this);
+    });
+    //点击技能只读框打开技能面板
+    $(document).off("click", ".k_skill_change_display").on("click", ".k_skill_change_display", function () {
+        if ($(this).prop("disabled")) return;
+        let cls = $(this).attr("class") || "";
+        let m = cls.match(/k_skill_change_display_(\d+)/);
+        if (!m) return;
+        let partIdx = m[1];
+        let tr = $(this).closest("tr");
+        let idx = tr.parent().find("tr").index(tr);
+        if (idx < 0) return;
+        openSkillSearch(partIdx, idx, this);
+    });
+    //点击护石技能只读框打开护石技能面板
+    $(document).off("click", ".charm_skill_display").on("click", ".charm_skill_display", function () {
+        let which = $(this).attr("data-charm");
+        openCharmSearch(which);
+    });
+    //搜索输入
+    $(document).off("input", "#armorSearchInput").on("input", "#armorSearchInput", function () {
+        renderArmorSearchList($(this).val());
+    });
+    //护石技能面板：点"确认选择" → 应用技能+等级
+    $(document).off("click", "#charmSearchConfirm").on("click", "#charmSearchConfirm", function () {
+        if (ArmorSearchMode !== "charm" || !CharmSearchInfo || !CharmSearchPickedHex) return;
+        let lv = $("#charmLevelSelect").val();
+        selectCharmFromSearch(CharmSearchPickedHex, lv);
+    });
+    //点击列表项 → 选中
+    $(document).off("click", ".armor-search-item").on("click", ".armor-search-item", function () {
+        if (ArmorSearchMode === "deco") {
+            selectDecoFromSearch($(this).attr("data-id"));
+        } else if (ArmorSearchMode === "kskill") {
+            selectKSkillFromSearch($(this).attr("data-val"));
+        } else if (ArmorSearchMode === "skill") {
+            selectSkillFromSearch($(this).attr("data-val"));
+        } else if (ArmorSearchMode === "charm") {
+            //护石技能：先选中并显示等级行，再由用户选等级（选等级后自动应用）
+            pickCharmSkill($(this).attr("data-hex"), $(this).attr("data-max"), this);
+        } else {
+            selectArmorFromSearch($(this).attr("data-id"));
+        }
+    });
+    //清除
+    $("#armorSearchClear").off("click").on("click", function () {
+        if (ArmorSearchMode === "deco") {
+            clearDecoFromSearch();
+            return;
+        }
+        if (ArmorSearchPartIdx != null) {
+            let p = ArmorSearchPartIdx;
+            CurData.partMap[p] = null;
+            $(".armor_select_" + p).val("-----");
+            $(".armor_select_display_" + p).val("");
+            refreshShowArmorData();
+            showMsg("已清除位置" + p + "的装备");
+        }
+        if (window.bootstrap) bootstrap.Modal.getOrCreateInstance(document.getElementById("armorSearchModal")).hide();
+    });
+    //不设置词条/技能（词条、技能、护石技能模式专用）
+    $("#armorSearchNone").off("click").on("click", function () {
+        if (ArmorSearchMode === "skill") {
+            selectSkillFromSearch("__none__");
+        } else if (ArmorSearchMode === "charm") {
+            clearCharmFromSearch();
+        } else {
+            selectKSkillFromSearch("__none__");
+        }
+    });
+}
+
+function openArmorSearch(partIdx) {
+    if (!partIdx) return;
+    //兜底：若搜索数据尚未构建（初始化时机问题），此处现建一次
+    if (!ArmorSearchMap[partIdx] || !ArmorSearchMap[partIdx].length) {
+        buildArmorSearchData();
+    }
+    ArmorSearchMode = "armor";
+    ArmorSearchPartIdx = partIdx;
+    $("#armorSearchModalLabel").text("选择装备 · 位置" + partIdx);
+    $("#armorSearchInput").attr("placeholder", "输入装备名 / 技能名搜索…").val("");
+    $("#armorSearchClear").removeClass("d-none").text("清除装备");
+    $("#armorSearchNone").addClass("d-none");
+    $("#charmSearchConfirm").addClass("d-none");
+    renderArmorSearchList("");
+    if (window.bootstrap) {
+        bootstrap.Modal.getOrCreateInstance(document.getElementById("armorSearchModal")).show();
+    }
+    //自动聚焦搜索框：仅非触屏（桌面）执行，触屏不聚焦以避免弹出输入法
+    if (!isTouchDevice()) {
+        setTimeout(function () {
+            let inp = document.getElementById("armorSearchInput");
+            if (inp) inp.focus();
+        }, 300);
+    }
+}
+
+function renderArmorSearchList(keyword) {
+    if (ArmorSearchMode === "deco") {
+        renderDecoSearchList(keyword);
+        return;
+    }
+    if (ArmorSearchMode === "kskill") {
+        renderKSkillSearchList(keyword);
+        return;
+    }
+    if (ArmorSearchMode === "skill") {
+        renderSkillSearchList(keyword);
+        return;
+    }
+    if (ArmorSearchMode === "charm") {
+        renderCharmSearchList(keyword);
+        return;
+    }
+    if (ArmorSearchPartIdx == null) return;
+    let list = ArmorSearchMap[ArmorSearchPartIdx] || [];
+    let kw = (keyword || "").trim().toLowerCase();
+    let curId = "";
+    let cur = CurData.partMap[ArmorSearchPartIdx];
+    if (cur && cur["eq_id"]) curId = cur["eq_id"];
+
+    let html = "";
+    let shown = 0;
+    for (let i = 0; i < list.length; i++) {
+        let a = list[i];
+        if (kw) {
+            let nameHit = a.name.toLowerCase().indexOf(kw) >= 0;
+            let skillHit = a.skills.some(function (s) { return s.toLowerCase().indexOf(kw) >= 0; });
+            if (!nameHit && !skillHit) continue;
+        }
+        shown++;
+        if (shown > 200) break; // 上限，避免过多 DOM
+        let skillStr = a.skills.length ? a.skills.join(" / ") : "无技能";
+        let slotStr = a.slot && a.slot !== "000" ? a.slot : "-";
+        let active = (a.id === curId) ? " active" : "";
+        let res = a.res || [0, 0, 0, 0, 0];
+        html += `<button type="button" class="armor-search-item${active}" data-id="${a.id}">
+            <div class="asi-main">
+                <span class="asi-name">${a.name}</span>
+                <span class="asi-badges">
+                    <span class="asi-badge">孔${slotStr}</span>
+                    <span class="asi-badge">防${a.def}</span>
+                </span>
+            </div>
+            <div class="asi-res">
+                <span class="asi-res-item">火${res[0]}</span>
+                <span class="asi-res-item">水${res[1]}</span>
+                <span class="asi-res-item">雷${res[2]}</span>
+                <span class="asi-res-item">冰${res[3]}</span>
+                <span class="asi-res-item">龙${res[4]}</span>
+            </div>
+            <div class="asi-skills">${skillStr}</div>
+        </button>`;
+    }
+    if (!shown) {
+        html = `<div class="armor-search-empty">没有找到匹配的装备</div>`;
+    }
+    document.getElementById("armorSearchList").innerHTML = html;
+}
+
+function selectArmorFromSearch(id) {
+    if (!id) return;
+    let p = ArmorSearchPartIdx;
+    if (p == null) return;
+    //同步隐藏的 select 的值，保证既有逻辑一致
+    let sel = $(".armor_select_" + p);
+    //确保 option 存在（initArmorSelect 已填充）
+    sel.val(id);
+    if (sel.val() !== id) {
+        //极端情况：option 不存在，则动态补一个
+        let opt = document.createElement("option");
+        opt.value = id;
+        sel.append(opt);
+        sel.val(id);
+    }
+    onSelectArmor(id);
+    //更新只读显示框
+    let opt2 = sel.find("option[value='" + id + "']");
+    let displayName = opt2.length ? opt2.text() : id;
+    $(".armor_select_display_" + p).val(displayName);
+    if (window.bootstrap) bootstrap.Modal.getOrCreateInstance(document.getElementById("armorSearchModal")).hide();
+}
+
+// ===== 珠子搜索面板 =====
+//当前正在搜索的珠子输入框信息
+var DecoSearchInfo = null;   // {partIdx, idx, el, maxSlot}
+
+//构建某孔位可插入的珠子列表
+function buildDecoSearchList(maxSlot) {
+    let list = [];
+    for (let i in decoration_data) {
+        let di = decoration_data[i];
+        if (di["slot"] > maxSlot) continue;
+        let skName = "";
+        if (skill_data[di["hex"]]) skName = skill_data[di["hex"]]["sname"] || "";
+        list.push({
+            hex: di["hex"],
+            lv: di["lv"],
+            slot: di["slot"],
+            dname: di["dname"],
+            skill: skName
+        });
+    }
+    //按孔位从大到小、再按 hex 排序
+    list.sort(function (a, b) {
+        let n = b.slot - a.slot;
+        if (n === 0) n = parseInt(a.hex, 16) - parseInt(b.hex, 16);
+        return n;
+    });
+    return list;
+}
+
+//打开珠子搜索面板
+function openDecoSearch(partIdx, idx, el) {
+    let $el = $(el);
+    //禁用的输入框（无孔）不响应
+    if ($el.attr("disabled") !== undefined) return;
+    //从 data-slot 读取最大可插孔位
+    let maxSlot = parseInt($el.attr("data-slot") || "0");
+    if (!maxSlot) return;
+    DecoSearchInfo = { partIdx: partIdx, idx: idx, el: el, maxSlot: maxSlot };
+    ArmorSearchMode = "deco";
+    ArmorSearchPartIdx = null;
+    $("#armorSearchModalLabel").text("选择珠子 · 孔位【" + maxSlot + "】");
+    $("#armorSearchInput").attr("placeholder", "输入珠子名 / 技能名搜索…").val("");
+    $("#armorSearchClear").removeClass("d-none").text("清除珠子");
+    $("#armorSearchNone").addClass("d-none");
+    $("#charmSearchConfirm").addClass("d-none");
+    renderDecoSearchList("");
+    if (window.bootstrap) {
+        bootstrap.Modal.getOrCreateInstance(document.getElementById("armorSearchModal")).show();
+    }
+    if (!isTouchDevice()) {
+        setTimeout(function () {
+            let inp = document.getElementById("armorSearchInput");
+            if (inp) inp.focus();
+        }, 300);
+    }
+}
+
+//渲染珠子搜索列表
+function renderDecoSearchList(keyword) {
+    if (!DecoSearchInfo) return;
+    let list = buildDecoSearchList(DecoSearchInfo.maxSlot);
+    let kw = (keyword || "").trim().toLowerCase();
+    let curVal = $(DecoSearchInfo.el).val() || "";
+    let html = "";
+    let shown = 0;
+    for (let i = 0; i < list.length; i++) {
+        let d = list[i];
+        if (kw) {
+            let nameHit = d.dname.toLowerCase().indexOf(kw) >= 0;
+            let skillHit = d.skill && d.skill.toLowerCase().indexOf(kw) >= 0;
+            if (!nameHit && !skillHit) continue;
+        }
+        shown++;
+        if (shown > 200) break;
+        let active = (d.dname === curVal) ? " active" : "";
+        let skStr = d.skill ? d.skill : "（无对应技能）";
+        html += `<button type="button" class="armor-search-item${active}" data-id="${d.dname}">
+            <div class="asi-main">
+                <span class="asi-name">${d.dname}</span>
+                <span class="asi-badges">
+                    <span class="asi-badge">孔${d.slot}</span>
+                    <span class="asi-badge">Lv${d.lv}</span>
+                </span>
+            </div>
+            <div class="asi-skills">${skStr}</div>
+        </button>`;
+    }
+    if (!shown) {
+        html = `<div class="armor-search-empty">没有找到匹配的珠子</div>`;
+    }
+    document.getElementById("armorSearchList").innerHTML = html;
+}
+
+//从搜索面板选中珠子
+function selectDecoFromSearch(dname) {
+    if (!dname || !DecoSearchInfo) return;
+    let el = DecoSearchInfo.el;
+    $(el).val(dname);
+    //触发原有解析逻辑（走 dname 分支）
+    onInputDecoration(el, dname);
+    if (window.bootstrap) bootstrap.Modal.getOrCreateInstance(document.getElementById("armorSearchModal")).hide();
+}
+//清除该珠子
+function clearDecoFromSearch() {
+    if (!DecoSearchInfo) return;
+    let el = DecoSearchInfo.el;
+    $(el).val("");
+    onInputDecoration(el, "");
+    if (window.bootstrap) bootstrap.Modal.getOrCreateInstance(document.getElementById("armorSearchModal")).hide();
+}
+
+// ===== 词条搜索面板 =====
+//当前正在选择的词条信息
+var KSkillSearchInfo = null;   // {partIdx, idx, el}
+
+//打开词条搜索面板
+function openKSkillSearch(partIdx, idx, el) {
+    if (partIdx == null || idx == null) return;
+    let $el = $(el);
+    KSkillSearchInfo = { partIdx: partIdx, idx: idx, el: el };
+    ArmorSearchMode = "kskill";
+    ArmorSearchPartIdx = null;
+    $("#armorSearchModalLabel").text("选择词条 · 位置" + partIdx);
+    $("#armorSearchInput").attr("placeholder", "输入词条名搜索…（如 技能 / 防御 / 孔位）").val("");
+    $("#armorSearchClear").addClass("d-none");
+    $("#armorSearchNone").removeClass("d-none");
+    $("#charmSearchConfirm").addClass("d-none");
+    renderKSkillSearchList("");
+    if (window.bootstrap) {
+        bootstrap.Modal.getOrCreateInstance(document.getElementById("armorSearchModal")).show();
+    }
+    if (!isTouchDevice()) {
+        setTimeout(function () {
+            let inp = document.getElementById("armorSearchInput");
+            if (inp) inp.focus();
+        }, 300);
+    }
+}
+
+//渲染词条搜索列表
+function renderKSkillSearchList(keyword) {
+    if (!KSkillSearchInfo) return;
+    let tb = $(".k_skill_tbody_" + KSkillSearchInfo.partIdx);
+    let sel = tb.find("tr").eq(parseInt(KSkillSearchInfo.idx)).find(".k_skill_select");
+    //读取当前 select 的所有选项（第0个是 "-----"）
+    let opts = sel.find("option");
+    let curVal = sel.val();
+    let kw = (keyword || "").trim().toLowerCase();
+    //先收集所有词条
+    let arr = [];
+    for (let i = 0; i < opts.length; i++) {
+        let o = opts.eq(i);
+        let val = o.val();
+        if (val === undefined || /_00_0$/.test(val)) continue; //跳过"-----"
+        let txt = o.text();
+        let parts = txt.split(":");
+        let name = parts[0];
+        let costTxt = parts[1] || "";
+        let costNum = parseInt(costTxt.replace("+", ""), 10) || 0;
+        arr.push({ val: val, name: name, cost: costNum });
+    }
+    //常用词条优先排序
+    arr = sortKSkillByCommon(arr);
+    let html = "";
+    let shown = 0;
+    for (let i = 0; i < arr.length; i++) {
+        let d = arr[i];
+        if (kw && d.name.toLowerCase().indexOf(kw) < 0 && (":" + d.cost).indexOf(kw) < 0) continue;
+        shown++;
+        if (shown > 200) break;
+        //颜色：正 cost（扣点）红、负 cost（加点）绿、0 灰
+        let costCls = d.cost > 0 ? "kskill-cost-pos" : (d.cost < 0 ? "kskill-cost-neg" : "");
+        //词条类型标签
+        let typeCls = "kskill-type-other";
+        if (d.name.indexOf("防御") >= 0) typeCls = "kskill-type-def";
+        else if (d.name.indexOf("耐性") >= 0) typeCls = "kskill-type-res";
+        else if (d.name.indexOf("孔位") >= 0) typeCls = "kskill-type-slot";
+        else if (d.name.indexOf("技能") >= 0) typeCls = "kskill-type-skill";
+        let active = (d.val === curVal) ? " active" : "";
+        //技能+1 显示等级徽章（S/A/B/C/D）
+        let gradeHtml = "";
+        if (d.name === "技能+1") {
+            let g = kSkillPlusGrade(d.cost);
+            if (g) gradeHtml = `<span class="kskill-grade kskill-grade-${g}">${g}</span>`;
+        }
+        html += `<button type="button" class="armor-search-item${active}" data-val="${d.val}">
+            <div class="asi-main">
+                <span class="asi-name"><span class="kskill-tag ${typeCls}"></span>${d.name}${gradeHtml}</span>
+                <span class="asi-badges">
+                    <span class="asi-badge ${costCls}">点数 ${d.cost > 0 ? "+" + d.cost : d.cost}</span>
+                </span>
+            </div>
+        </button>`;
+    }
+    if (!shown) {
+        html = `<div class="armor-search-empty">没有找到匹配的词条</div>`;
+    }
+    document.getElementById("armorSearchList").innerHTML = html;
+}
+
+//技能+1 的等级映射：cost(绝对值) => 等级
+//15=S, 12=A, 9=B, 6=C, 3=D
+function kSkillPlusGrade(cost) {
+    let c = Math.abs(cost);
+    let map = { 15: "S", 12: "A", 9: "B", 6: "C", 3: "D" };
+    return map[c] || "";
+}
+
+//常用词条排序：置顶顺序 防御-12 > 技能-1 > 技能+1(S A B C D) > 孔位+1/2/3 > 防御-6，其余保持原顺序
+function sortKSkillByCommon(arr) {
+    //置顶优先级表：返回 rank（越小越前）；-1 表示不置顶
+    function rank(d) {
+        if (d.name === "防御-12") return 0;
+        if (d.name === "技能-1") return 1;
+        //技能+1 按等级 S,A,B,C,D（cost 15,12,9,6,3；内部为 -15,-12,-9,-6,-3）
+        if (d.name === "技能+1") {
+            let order = [-15, -12, -9, -6, -3];
+            let idx = order.indexOf(d.cost);
+            if (idx >= 0) return 2 + idx; //2..6
+        }
+        if (d.name === "孔位+1") return 7;
+        if (d.name === "孔位+2") return 8;
+        if (d.name === "孔位+3") return 9;
+        if (d.name === "防御-6") return 10;
+        return -1;
+    }
+    let pinned = [];
+    let rest = [];
+    for (let i = 0; i < arr.length; i++) {
+        let r = rank(arr[i]);
+        if (r >= 0) {
+            pinned.push({ item: arr[i], rank: r, idx: i });
+        } else {
+            rest.push(arr[i]);
+        }
+    }
+    pinned.sort(function (a, b) {
+        if (a.rank !== b.rank) return a.rank - b.rank;
+        return a.idx - b.idx;
+    });
+    let result = [];
+    for (let i = 0; i < pinned.length; i++) result.push(pinned[i].item);
+    for (let i = 0; i < rest.length; i++) result.push(rest[i]);
+    return result;
+}
+
+// ===== 技能搜索面板 =====
+//当前正在选择的技能信息
+var SkillSearchInfo = null;   // {partIdx, idx, el}
+
+//打开技能搜索面板（仅当该行有可选技能时）
+function openSkillSearch(partIdx, idx, el) {
+    if (partIdx == null || idx == null) return;
+    let $el = $(el);
+    if ($el.prop("disabled")) return;
+    let tr = $(".k_skill_tbody_" + partIdx).find("tr").eq(parseInt(idx));
+    let sel = tr.find(".k_skill_change");
+    let validCount = 0;
+    sel.find("option").each(function () {
+        let v = $(this).val();
+        if (v) {
+            let hex = String(v).split("_")[2];
+            if (hex && hex !== "00") validCount++;
+        }
+    });
+    if (validCount === 0) return;
+    SkillSearchInfo = { partIdx: partIdx, idx: idx, el: el };
+    ArmorSearchMode = "skill";
+    ArmorSearchPartIdx = null;
+    $("#armorSearchModalLabel").text("选择技能 · 位置" + partIdx);
+    $("#armorSearchInput").attr("placeholder", "输入技能名搜索…").val("");
+    $("#armorSearchClear").addClass("d-none");
+    $("#armorSearchNone").removeClass("d-none").text("不设置技能");
+    $("#charmSearchConfirm").addClass("d-none");
+    renderSkillSearchList("");
+    if (window.bootstrap) {
+        bootstrap.Modal.getOrCreateInstance(document.getElementById("armorSearchModal")).show();
+    }
+    if (!isTouchDevice()) {
+        setTimeout(function () {
+            let inp = document.getElementById("armorSearchInput");
+            if (inp) inp.focus();
+        }, 300);
+    }
+}
+
+// cost 值 → 词条 hex（技能+1 的 5 档）
+var CostToSkillHex = { 3: "90", 6: "91", 9: "92", 12: "93", 15: "94" };
+
+//渲染技能搜索列表
+// 词条=技能+X 时：列出所有"技能+1"可加的技能（全等级），当前等级排最前
+// 词条=技能-1 时：只列出装备自带的技能（沿用原逻辑）
+function renderSkillSearchList(keyword) {
+    if (!SkillSearchInfo) return;
+    let tr = $(".k_skill_tbody_" + SkillSearchInfo.partIdx).find("tr").eq(parseInt(SkillSearchInfo.idx));
+    let ksel = tr.find(".k_skill_select");       // 词条 select
+    let sel = tr.find(".k_skill_change");         // 技能 select
+    let curSkillVal = sel.val();
+    let kw = (keyword || "").trim().toLowerCase();
+
+    //当前词条 hex / cost
+    let kVal = ksel.val() || "";
+    let kParts = String(kVal).split("_");
+    let curKHex = kParts[2];
+    let curCost = 0;
+    if (kParts.length >= 4) curCost = Math.abs(parseInt(kParts[3], 10)) || 0;
+
+    let list = [];
+
+    if (curKHex === "95") {
+        //技能-1：装备自带技能排最前，其余所有技能跟在后面（特殊用途）
+        let selfHex = {};
+        sel.find("option").each(function () {
+            let val = $(this).val();
+            if (!val) return;
+            let hex = String(val).split("_")[2];
+            if (!hex || hex === "00") return;
+            let txt = ($(this).text() || "").trim();
+            selfHex[hex] = true;
+            let sd = skill_data[hex];
+            list.push({ hex: hex, val: val, name: txt, cost: 0, max: (sd ? sd["max"] : 0), isSelf: true });
+        });
+        //再补充所有技能（除自带外）
+        for (let hex in skill_data) {
+            let sd = skill_data[hex];
+            if (!sd) continue;
+            if (selfHex[hex]) continue;
+            let thisVal = SkillSearchInfo.partIdx + "_" + SkillSearchInfo.idx + "_" + hex;
+            list.push({ hex: hex, val: thisVal, name: sd["sname"], cost: 0, max: sd["max"], isSelf: false });
+        }
+    } else {
+        //技能+X：列出所有 5 档技能，当前等级优先
+        for (let hex in skill_data) {
+            let sd = skill_data[hex];
+            if (!sd) continue;
+            let c = sd["cost"];
+            if (!CostToSkillHex[c]) continue;
+            let thisVal = SkillSearchInfo.partIdx + "_" + SkillSearchInfo.idx + "_" + hex;
+            list.push({ hex: hex, val: thisVal, name: sd["sname"], cost: c, max: sd["max"], isSelf: false });
+        }
+        list.sort(function (a, b) {
+            let aCur = (a.cost === curCost) ? 0 : 1;
+            let bCur = (b.cost === curCost) ? 0 : 1;
+            if (aCur !== bCur) return aCur - bCur;
+            if (a.cost !== b.cost) return b.cost - a.cost;
+            return parseInt(a.hex, 16) - parseInt(b.hex, 16);
+        });
+    }
+
+    //有关键词时：名称完全匹配优先，其次名称更短的优先，再按原顺序
+    if (kw) {
+        list.sort(function (a, b) {
+            let an = a.name.toLowerCase(), bn = b.name.toLowerCase();
+            let aExact = (an === kw) ? 0 : 1;
+            let bExact = (bn === kw) ? 0 : 1;
+            if (aExact !== bExact) return aExact - bExact;
+            if (an.length !== bn.length) return an.length - bn.length;
+            return an.indexOf(kw) - bn.indexOf(kw);
+        });
+    }
+
+    let html = "";
+    let shown = 0;
+    for (let i = 0; i < list.length; i++) {
+        let d = list[i];
+        if (kw && d.name.toLowerCase().indexOf(kw) < 0) continue;
+        shown++;
+        if (shown > 300) break;
+        let active = (d.val === curSkillVal) ? " active" : "";
+        //等级徽章（仅技能+1 时显示 S/A/B/C/D）
+        let gradeHtml = "";
+        let isCur = false;
+        if (!d.isSelf) {
+            let grade = kSkillPlusGrade(d.cost);
+            if (grade) gradeHtml = `<span class="kskill-grade kskill-grade-${grade}">${grade}</span>`;
+            isCur = (d.cost === curCost);
+        }
+        //名字后缀：自带技能标注"自带"（用浅色小字，不占右侧徽章位）
+        let nameSuffix = "";
+        if (d.isSelf) {
+            nameSuffix = ` <span class="skill-self-tag">自带</span>`;
+        }
+        //右侧徽章：统一显示 Lv上限（自带与非自带都显示）
+        let badgeHtml = "";
+        if (d.max) {
+            badgeHtml = `<span class="asi-badge">上限${d.max}</span>`;
+        } else if (d.extra) {
+            badgeHtml = `<span class="asi-badge">${d.extra.trim()}</span>`;
+        }
+        html += `<button type="button" class="armor-search-item${active}${isCur ? " skill-cur-grade" : ""}" data-val="${d.val}">
+            <div class="asi-main">
+                <span class="asi-name"><span class="kskill-tag kskill-type-skill"></span>${d.name}${gradeHtml}${nameSuffix}</span>
+                <span class="asi-badges">
+                    ${badgeHtml}
+                </span>
+            </div>
+        </button>`;
+    }
+    if (!shown) {
+        html = `<div class="armor-search-empty">没有找到匹配的技能</div>`;
+    }
+    document.getElementById("armorSearchList").innerHTML = html;
+}
+
+//从面板选中技能：若技能等级与当前词条不同，则自动切换左边词条为对应等级
+function selectSkillFromSearch(val) {
+    if (!SkillSearchInfo) return;
+    let partIdx = SkillSearchInfo.partIdx;
+    let idx = SkillSearchInfo.idx;
+    let tr = $(".k_skill_tbody_" + partIdx).find("tr").eq(parseInt(idx));
+    let ksel = tr.find(".k_skill_select");
+    let sel = tr.find(".k_skill_change");
+
+    if (val === "__none__") {
+        //复位到占位选项
+        sel.find("option").each(function () {
+            let v = $(this).val();
+            if (v) {
+                let hex = String(v).split("_")[2];
+                if (!hex || hex === "00") { sel.val(v); return false; }
+            }
+        });
+        sel.trigger("change");
+        if (window.bootstrap) bootstrap.Modal.getOrCreateInstance(document.getElementById("armorSearchModal")).hide();
+        return;
+    }
+
+    //解析目标技能 hex
+    let parts = String(val).split("_");
+    let targetHex = parts[2];
+
+    //当前词条 hex 与 cost
+    let kVal = ksel.val() || "";
+    let kParts = String(kVal).split("_");
+    let curKHex = kParts[2];
+    let curCost = 0;
+    if (kParts.length >= 4) curCost = Math.abs(parseInt(kParts[3], 10)) || 0;
+
+    //"技能-1"：从装备自带技能里减，不涉及等级切换，直接选中
+    if (curKHex === "95") {
+        //确保技能列存在该选项（"技能-1"把所有技能都列出来了，装备没有的技能需动态补上）
+        if (sel.find("option[value='" + val + "']").length === 0) {
+            let opt = document.createElement("option");
+            opt.value = val;
+            if (skill_data[targetHex]) {
+                opt.text = skill_data[targetHex]["sname"];
+            }
+            sel.append(opt);
+        }
+        sel.val(val);
+        sel.trigger("change");
+        if (window.bootstrap) bootstrap.Modal.getOrCreateInstance(document.getElementById("armorSearchModal")).hide();
+        return;
+    }
+
+    //"技能+X"：按目标技能的等级，自动切换词条等级
+    let targetCost = 0;
+    if (skill_data[targetHex]) targetCost = skill_data[targetHex]["cost"];
+    let targetKHex = CostToSkillHex[targetCost];
+
+    //若技能等级与当前词条等级不同 → 先把词条切到对应等级（重建技能列选项）
+    if (targetKHex && targetKHex !== curKHex) {
+        //找到词条 select 里对应 hex 的选项
+        let targetKVal = null;
+        ksel.find("option").each(function () {
+            let v = $(this).val();
+            if (!v) return;
+            let p = String(v).split("_");
+            if (p[2] === targetKHex) { targetKVal = v; return false; }
+        });
+        if (targetKVal == null) {
+            //当前装备词条池里没有该等级词条，放弃（理论上不会发生）
+            if (window.bootstrap) bootstrap.Modal.getOrCreateInstance(document.getElementById("armorSearchModal")).hide();
+            return;
+        }
+        ksel.val(targetKVal);
+        ksel.trigger("change");   //重建技能列选项 + 同步词条显示框
+    }
+
+    //现在技能列应已重建，选中目标技能
+    let finalVal = partIdx + "_" + idx + "_" + targetHex;
+    //确保选项存在
+    if (sel.find("option[value='" + finalVal + "']").length === 0) {
+        let opt = document.createElement("option");
+        opt.value = finalVal;
+        if (skill_data[targetHex]) opt.text = skill_data[targetHex]["sname"];
+        sel.append(opt);
+    }
+    sel.val(finalVal);
+    sel.trigger("change");
+    if (window.bootstrap) bootstrap.Modal.getOrCreateInstance(document.getElementById("armorSearchModal")).hide();
+}
+
+// ===== 护石技能搜索面板 =====
+//当前正在选择的护石技能信息：{which:"1"|"2"}
+var CharmSearchInfo = null;
+//当前在面板里"选中"的技能 hex（用于显示等级行）
+var CharmSearchPickedHex = null;
+
+//打开护石技能搜索面板
+function openCharmSearch(which) {
+    if (which !== "1" && which !== "2") return;
+    CharmSearchInfo = { which: which };
+    ArmorSearchMode = "charm";
+    ArmorSearchPartIdx = null;
+    $("#armorSearchModalLabel").text("选择护石技能" + which);
+    $("#armorSearchInput").attr("placeholder", "输入技能名搜索…").val("");
+    $("#armorSearchClear").addClass("d-none");
+    $("#armorSearchNone").removeClass("d-none").text("不设置技能");
+    //"确认选择"：选完技能+等级后才启用
+    $("#charmSearchConfirm").addClass("d-none");
+    $("#charmLevelRow").addClass("d-none");
+    CharmSearchPickedHex = null;
+    renderCharmSearchList("");
+    if (window.bootstrap) {
+        bootstrap.Modal.getOrCreateInstance(document.getElementById("armorSearchModal")).show();
+    }
+    if (!isTouchDevice()) {
+        setTimeout(function () {
+            let inp = document.getElementById("armorSearchInput");
+            if (inp) inp.focus();
+        }, 300);
+    }
+}
+
+//渲染护石技能搜索列表
+function renderCharmSearchList(keyword) {
+    if (!CharmSearchInfo) return;
+    let which = CharmSearchInfo.which;
+    //护石技能池：从当前数据取（sel1 / sel2）
+    let pool = CurData.charmData && CurData.charmData[which === "1" ? "sel1" : "sel2"] || [];
+    let kw = (keyword || "").trim().toLowerCase();
+    //当前选中的 hex
+    let curHex = which === "1" ? CurData.charmData["skill1Hex"] : CurData.charmData["skill2Hex"];
+    if (!curHex) curHex = "00";
+    let isExtreme = isExtremeMode;
+
+    let html = "";
+    let shown = 0;
+    for (let i = 0; i < pool.length; i++) {
+        let d = pool[i];
+        let name = d["sname"] || "";
+        if (kw && name.toLowerCase().indexOf(kw) < 0) continue;
+        shown++;
+        if (shown > 300) break;
+        let maxLv = which === "1" ? d["p1Max"] : d["p2Max"];
+        if (isExtreme) maxLv = 15;
+        let active = (d["hex"] === curHex) ? " active" : "";
+        let picked = (d["hex"] === CharmSearchPickedHex) ? " charm-picked" : "";
+        html += `<button type="button" class="armor-search-item${active}${picked}" data-hex="${d["hex"]}" data-max="${maxLv}">
+            <div class="asi-main">
+                <span class="asi-name">${name}</span>
+                <span class="asi-badges">
+                    <span class="asi-badge">上限${maxLv}</span>
+                </span>
+            </div>
+        </button>`;
+    }
+    if (!shown) {
+        html = `<div class="armor-search-empty">没有找到匹配的技能</div>`;
+    }
+    document.getElementById("armorSearchList").innerHTML = html;
+}
+
+//点击护石技能名 → 选中该技能（显示等级行）
+function pickCharmSkill(hex, maxLv, el) {
+    CharmSearchPickedHex = hex;
+    //高亮当前项
+    $("#armorSearchList .armor-search-item").removeClass("charm-picked");
+    if (el) $(el).addClass("charm-picked");
+    //构建等级下拉 1..maxLv
+    let max = parseInt(maxLv, 10) || 1;
+    let opts = "";
+    for (let lv = 1; lv <= max; lv++) {
+        opts += `<option value="${lv}">Lv${lv}</option>`;
+    }
+    $("#charmLevelSelect").html(opts);
+    //默认等级：若是当前已选技能，取当前等级；否则取最大值
+    let defLv = max;
+    if (CharmSearchInfo) {
+        let which = CharmSearchInfo.which;
+        let curH = which === "1" ? CurData.charmData["skill1Hex"] : CurData.charmData["skill2Hex"];
+        let curL = which === "1" ? CurData.charmData["skill1Lv"] : CurData.charmData["skill2Lv"];
+        if (curH === hex && curL > 0) defLv = Math.min(curL, max);
+    }
+    $("#charmLevelSelect").val(String(defLv));
+    $("#charmLevelRow").removeClass("d-none").addClass("d-flex");
+    //显示"确认选择"按钮（此时才允许确认）
+    $("#charmSearchConfirm").removeClass("d-none");
+}
+
+//确认选择护石技能（点"确认选择"按钮时应用）
+function selectCharmFromSearch(hex, lv) {
+    if (!CharmSearchInfo || !hex) return;
+    let which = CharmSearchInfo.which;
+    let selId = "#charm_skill_select" + which;
+    let $sel = $(selId);
+    if (!$sel.length) return;
+    //在（隐藏的）select 里找到该 hex 的 option，取其 value（格式：which_lvType_hex_maxLv）
+    let targetVal = null;
+    let lvType = "A";
+    $sel.find("option").each(function () {
+        let v = $(this).val();
+        if (!v) return;
+        let r = String(v).split("_");
+        if (r[2] === hex) {
+            targetVal = v;
+            lvType = r[1] || "A";
+            return false;
+        }
+    });
+    //若 select 里没有这个 hex（极限模式下技能池可能不含），动态补一个 option
+    if (!targetVal) {
+        let sd = skill_data[hex];
+        lvType = sd && sd["lvType"] ? sd["lvType"] : "A";
+        targetVal = which + "_" + lvType + "_" + hex + "_" + lv;
+        let opt = document.createElement("option");
+        opt.value = targetVal;
+        opt.text = (sd ? sd["sname"] : hex);
+        $sel.append(opt);
+    }
+    //选中该 option（用原始 value，不改动它，避免选不中）
+    $sel.val(targetVal);
+    //把用户选的等级直接写入数据 + 同步 select 的显示文本
+    lv = parseInt(lv, 10) || 0;
+    if (lv < 1) lv = 1;
+    if (which === "1") {
+        CurData.charmData["skill1Hex"] = hex;
+        CurData.charmData["skill1Lv"] = lv;
+        CurData.charmData["skill1Type"] = lvType;
+    } else {
+        CurData.charmData["skill2Hex"] = hex;
+        CurData.charmData["skill2Lv"] = lv;
+        CurData.charmData["skill2Type"] = lvType;
+    }
+    //更新 option 文本为实际选择的等级（保持 and 显示一致）
+    let sd = skill_data[hex];
+    let sname = (sd ? sd["sname"] : hex);
+    $sel.find("option[value='" + targetVal + "']").text(sname + " " + lv);
+    //刷新孔位（护石技能类型变了会影响可选孔位）与总表
+    initCharmSlotSel();
+    refreshShowArmorData();
+    syncCharmDisplay(which);
+    if (window.bootstrap) bootstrap.Modal.getOrCreateInstance(document.getElementById("armorSearchModal")).hide();
+    $("#charmLevelRow").addClass("d-none").removeClass("d-flex");
+    $("#charmSearchConfirm").addClass("d-none");
+    CharmSearchPickedHex = null;
+}
+
+//同步护石技能的只读显示框（从隐藏 select 的当前选中项文本取）
+function syncCharmDisplay(which) {
+    let $sel = $("#charm_skill_select" + which);
+    let $disp = $("#charm_skill_display" + which);
+    if (!$sel.length || !$disp.length) return;
+    let txt = $sel.find("option:selected").text() || "";
+    if (txt === "-----" || !txt) {
+        $disp.val("");
+    } else {
+        $disp.val(txt);
+    }
+}
+
+//清除护石技能（面板"不设置技能"）
+function clearCharmFromSearch() {
+    if (!CharmSearchInfo) return;
+    let which = CharmSearchInfo.which;
+    let $sel = $("#charm_skill_select" + which);
+    //选中占位项（第一个 option）
+    $sel.val($sel.find("option").eq(0).val());
+    $sel.trigger("change");
+    syncCharmDisplay(which);
+    if (window.bootstrap) bootstrap.Modal.getOrCreateInstance(document.getElementById("armorSearchModal")).hide();
+    $("#charmLevelRow").addClass("d-none").removeClass("d-flex");
+    $("#charmSearchConfirm").addClass("d-none");
+    CharmSearchPickedHex = null;
+}
+
+//从面板选中词条
+function selectKSkillFromSearch(val) {
+    if (!val || !KSkillSearchInfo) return;
+    let tb = $(".k_skill_tbody_" + KSkillSearchInfo.partIdx);
+    let sel = tb.find("tr").eq(parseInt(KSkillSearchInfo.idx)).find(".k_skill_select");
+    let disp = tb.find("tr").eq(parseInt(KSkillSearchInfo.idx)).find(".k_skill_display");
+    if (val === "__none__") {
+        sel.val("-----");
+        if (sel.val() !== "-----") {
+            //当前 select 可能没有 "-----" 的合法 value，取第一个含 _00_0 的
+            sel.find("option").each(function () {
+                if (/_00_0$/.test($(this).val())) { sel.val($(this).val()); return false; }
+            });
+        }
+        disp.val("");
+        sel.trigger("change");
+    } else {
+        sel.val(val);
+        let txt = sel.find("option[value='" + val + "']").text();
+        disp.val(txt.split(":")[0] || "");
+        sel.trigger("change");
+    }
+    if (window.bootstrap) bootstrap.Modal.getOrCreateInstance(document.getElementById("armorSearchModal")).hide();
+}
+
 
 function initKSkillSelect(partIdx, armor_id) {
     let tb = $(".k_skill_tbody_" + partIdx);
@@ -1146,9 +2765,26 @@ function initKSkillSelect(partIdx, armor_id) {
                 }
 
             }
+            //同步只读显示框
+            let disp = $(tr[i]).find("td").eq(0).find(".k_skill_display");
+            let dispTxt = sel.find("option:selected").text() || "";
+            if (dispTxt == "-----" || !dispTxt) {
+                disp.val("");
+            } else {
+                let dname = dispTxt.split(":")[0];
+                let dcostTxt = dispTxt.split(":")[1] || "";
+                if (dcostTxt) {
+                    let dcost = parseInt(dcostTxt.replace("+", ""), 10) || 0;
+                    disp.val(dname + "（" + (dcost > 0 ? "+" + dcost : dcost) + "）");
+                } else {
+                    disp.val(dname);
+                }
+            }
 
             //初始化上次选择的减技能，增技能的内容
             clearOldNewSkillSel(partIdx, i);
+            //同步技能列显示框
+            syncSkillChangeDisplay(partIdx, i);
 
         }
     }
@@ -1185,6 +2821,42 @@ function clearOldNewSkillSel(partIdx, idx) {
     $(".k_skill_tbody_" + partIdx).find("tr").eq(idx).find(".k_skill_change").html(`<option value="${v}">-----</option>`)
 
 }
+
+//同步技能列只读显示框：根据 .k_skill_change 的选项状态更新显示框（是否有可选项、当前值）
+function syncSkillChangeDisplay(partIdx, idx) {
+    let tr = $(".k_skill_tbody_" + partIdx).find("tr").eq(parseInt(idx));
+    let sel = tr.find(".k_skill_change");
+    let disp = tr.find(".k_skill_change_display");
+    if (!disp.length) return;
+    //统计有效选项（排除 "-----"）
+    function isEmptyVal(v) {
+        if (!v) return true;
+        let parts = String(v).split("_");
+        // "1_0_00_0" 或 "1_0_00" → hex 段为 "00"
+        let hex = parts[2];
+        return (!hex || hex === "00");
+    }
+    let validCount = 0;
+    sel.find("option").each(function () {
+        if (!isEmptyVal($(this).val())) validCount++;
+    });
+    if (validCount === 0) {
+        //没有可选项（如防御/孔位/耐性词条）→ 禁用
+        disp.prop("disabled", true);
+        disp.val("");
+        disp.attr("placeholder", "—");
+    } else {
+        disp.prop("disabled", false);
+        disp.attr("placeholder", "选择技能…");
+        let v = sel.val();
+        if (!isEmptyVal(v)) {
+            let txt = (sel.find("option:selected").text() || "").trim();
+            disp.val(txt);
+        } else {
+            disp.val("");
+        }
+    }
+}
 //选择怪异选项
 function onSelectKSkill(value) {
     //idx 0-6
@@ -1194,7 +2866,35 @@ function onSelectKSkill(value) {
     let k_skill_hex = t_values[2];
     let k_skill_cost = parseInt(t_values[3]);
 
+    //该位置没有装备（数据为空）时，忽略词条变更，避免清空/切换配装过程中的残留 change 报错
+    if (!CurData.partMap[partIdx]) {
+        return;
+    }
+
     clearOldNewSkillSel(partIdx, idx);
+    //同步词条只读显示框（任何来源的 change 都经过这里）
+    (function () {
+        let tr = $(".k_skill_tbody_" + partIdx).find("tr").eq(parseInt(idx));
+        let ksel = tr.find(".k_skill_select");
+        let disp = tr.find(".k_skill_display");
+        let txt = (ksel.find("option:selected").text() || "").trim();
+        let val = ksel.val();
+        //无词条：文本是 "-----" 或 hex 段为 00
+        let isEmpty = (!val) || (val === "-----") || (txt === "-----") || (/_00_0$/.test(val));
+        if (isEmpty) {
+            disp.val("");
+        } else {
+            //文本形如 "技能+1:-15"，把点数一起显示：技能+1（-15）
+            let name = txt.split(":")[0];
+            let costTxt = txt.split(":")[1] || "";
+            if (costTxt) {
+                let costNum = parseInt(costTxt.replace("+", ""), 10) || 0;
+                disp.val(name + "（" + (costNum > 0 ? "+" + costNum : costNum) + "）");
+            } else {
+                disp.val(name);
+            }
+        }
+    })();
     let skillSel = $(".k_skill_tbody_" + partIdx).find("tr").eq(parseInt(idx)).find(".k_skill_change");
     let partData = CurData.partMap[partIdx];
     let type = "";
@@ -1320,6 +3020,8 @@ function onSelectKSkill(value) {
     initDecorationSel(partIdx);
     //加减技能 这里还没有选具体的选项 应当重新计算所有选项 并且选择技能后 重复该操作
     setToPartDataSkillsChange(partIdx);
+    //同步技能列显示框
+    syncSkillChangeDisplay(partIdx, idx);
 
     refreshShowArmorData();
 }
@@ -1327,12 +3029,15 @@ function onSelectKSkill(value) {
 
 function onSelectChangeSkill(value) {
     //选择增加技能 或者 减去旧技能
-    // if(!value){
-    //     return;
-    // }
     let r = value.split("_");
     let partIdx = r[0], idx = parseInt(r[1]), hex = r[2];
-    CurData.partMap[partIdx]["k_skill"][idx]["k_skill_edit_hex"] = hex;
+    //该位置没有装备或还没有词条数据时，忽略（避免清空/切换配装时残留 change 报错）
+    let pd = CurData.partMap[partIdx];
+    if (!pd || !pd["k_skill"] || !pd["k_skill"][idx]) {
+        return;
+    }
+    pd["k_skill"][idx]["k_skill_edit_hex"] = hex;
+    syncSkillChangeDisplay(partIdx, idx);
     setToPartDataSkillsChange(partIdx);
     refreshShowArmorData();
 }
@@ -1366,6 +3071,11 @@ function selectCharmSkillOption(selId, prefix, hex) {
     elm.change();
 }
 
+//护石技能等级恢复标志：加载配装时程序化选中下拉，避免等级被顶成 option 上限
+var isCharmRestoring = false;
+var CharmRestoreLv1 = 0;
+var CharmRestoreLv2 = 0;
+
 function onSelectCharmSkill(value) {
     let r = (value == null ? "" : String(value)).split("_");
     let p = r[0];
@@ -1376,9 +3086,10 @@ function onSelectCharmSkill(value) {
     if (p != "1" && p != "2") {
         return;
     }
-    //极限模式下护石技能实际等级为15
-    if (isExtremeMode && hex && hex != "00") {
-        lv = 15;
+    //加载配装时：用缓存里的真实等级，而不是 option 上限
+    if (isCharmRestoring && hex && hex != "00") {
+        if (p == "1" && CharmRestoreLv1 > 0) lv = CharmRestoreLv1;
+        if (p == "2" && CharmRestoreLv2 > 0) lv = CharmRestoreLv2;
     }
     if (p == "1") {
         CurData.charmData["skill1Hex"] = hex || "00";
@@ -1432,34 +3143,14 @@ function onInputDecoration(targ, value) {
         d = CurData.weaponData;
     }
 
+    //该位置没有装备（或珠子数据）时忽略，避免清空/切换配装时的残留 change 报错
+    if (!d || !d["decoration"] || !d["decoration"][idx]) {
+        return;
+    }
     d["decoration"][idx]["hex"] = info ? info.hex : "00";
     d["decoration"][idx]["lv"] = info ? info.lv : 0;
     refreshShowArmorData();
 
-}
-function onSelectDecoration(value) {
-    //
-    if (!value) return;
-    let r = value.split("_");
-    let p = r[0];
-    let idx = parseInt(r[1]);
-    let hex = r[2];
-    let lv = parseInt(r[3]);
-    // decoration:[
-    //     {"hex":"00","lv":0},
-    //     {"hex":"00","lv":0},
-    //     {"hex":"00","lv":0},
-    // ]
-    let d = CurData.partMap[p];
-    if (p == "6") {
-        d = CurData.charmData;
-    } else if (p == "7") {
-        d = CurData.weaponData;
-    }
-
-    d["decoration"][idx]["hex"] = hex;
-    d["decoration"][idx]["lv"] = lv;
-    refreshShowArmorData();
 }
 
 function setToPartDataSkillsChange(partIdx) {
@@ -1507,7 +3198,8 @@ function initDecorationSel(partIdx) {
     if (partIdx == "6") {
         s = CurData.charmData["slot"];
     } else if (partIdx == "7") {
-        s = CurData.weaponData;
+        //武器孔位：weaponData 是对象，取 slot 字段（如 "444"）
+        s = CurData.weaponData ? (CurData.weaponData["slot"] || "") : "";
     } else {
         let partData = CurData.partMap[partIdx];
         if (partData) {
@@ -1522,7 +3214,9 @@ function initDecorationSel(partIdx) {
             let si = parseInt(s[idx]);
             let pc = ".decoration_input_" + partIdx + "_" + idx;
             let orgVal = $(pc).val();
-            $(pc).attr("list", "");
+            //移除原生 datalist（改用自建搜索面板）
+            $(pc).removeAttr("list");
+            $(pc).removeAttr("data-slot");
 
             if (!si || (si == 0)) {
                 //禁用
@@ -1532,21 +3226,36 @@ function initDecorationSel(partIdx) {
                 $(pc).attr("disabled", false)
                 if (isExtremeMode) {
                     //极限模式：无论几级孔，都允许插入任意等级的珠子
-                    $(pc).attr("list", "slot4");
+                    $(pc).attr("data-slot", "4");
                     $(pc).attr("placeholder", `【${si}】(极限)`);
                 } else {
-                    $(pc).attr("list", "slot" + si);
+                    $(pc).attr("data-slot", "" + si);
                     $(pc).attr("placeholder", `【${si}】`);
                 }
             }
             //检查前面的值 和当前的值 如果不一样则清空 或者先禁用
-
-            let info = getDecorationDataByDName(orgVal);
-            if (info && (isExtremeMode || si >= info["slot"])) {
-                $(pc).val(orgVal);
-            } else {
+            if (!si || si == 0) {
+                //该位置没有孔：一定清空（无论是否极限模式）
                 $(pc).val("");
+            } else {
+                let info = getDecorationDataByDName(orgVal);
+                if (info && (isExtremeMode || si >= info["slot"])) {
+                    $(pc).val(orgVal);
+                } else {
+                    $(pc).val("");
+                }
             }
+            $(pc).trigger("change");
+        }
+    } else {
+        //无效孔位（空 / 未设置）：清空并禁用全部珠子框
+        for (let idx = 0; idx < 3; idx++) {
+            let pc = ".decoration_input_" + partIdx + "_" + idx;
+            if (!$(pc).length) continue;
+            $(pc).removeAttr("list").removeAttr("data-slot");
+            $(pc).val("");
+            $(pc).attr("placeholder", "【0】");
+            $(pc).attr("disabled", true);
             $(pc).trigger("change");
         }
     }
@@ -1675,7 +3384,12 @@ function refreshShowArmorData() {
         }
 
         try {
-            for (let partIdx in CurData.partMap) {
+            //先复位防具一览表（全 0），避免空配装时残留上一次的数据
+            initTable();
+            //同步护石技能的只读显示框（真实数据在隐藏的 select 里）
+            syncCharmDisplay("1");
+            syncCharmDisplay("2");
+            for (let partIdx in PartIdxMap) {
                 let data = CurData.partMap[partIdx];
                 if (data) {
                     //更新装备上的显示数据
@@ -1683,6 +3397,11 @@ function refreshShowArmorData() {
                     render_armor_def(partIdx, data);
                     render_armor_skill(partIdx, data["eq_k_skill"]);
                     render_armor_cost(partIdx, data);
+                } else {
+                    //空位置：清掉装备技能/孔位等残留
+                    $(".armor_skill_" + partIdx).html("");
+                    $(".armor_slot_" + partIdx).html("");
+                    $(".armor_cost_" + partIdx).html("");
                 }
             }
             render_total_table();
@@ -1707,17 +3426,38 @@ function render_total_table() {
     let tb = "";
 
     // 【修复点 1】：确保当前的 CurData 存在于 PartMapObj 中，且名称不为空
-    let curName = CurData.name || TmpCacheName;
+    let curName = CurData.name || DraftKey;
     CurData.name = curName;
-    PartMapObj[curName] = CurData;
-
-    for (let i = 0; i < PartMapAry.length; i++) {
-        let name = PartMapAry[i];
-        if (curName == name) {
-            PartMapAry.splice(i, 1);
+    //注意：草稿必须用独立的深拷贝（不与 CurData 共享引用），否则清空草稿时会误清其他配装。
+    //若当前正是草稿，则把 CurData 的深拷贝同步进草稿；否则把 CurData 引用存入对应配装名。
+    if (curName === DraftKey) {
+        PartMapObj[DraftKey] = JSON.parse(JSON.stringify({
+            name: DraftKey,
+            partMap: CurData.partMap,
+            charmData: CurData.charmData,
+            weaponData: CurData.weaponData
+        }));
+    } else {
+        PartMapObj[curName] = CurData;
+        //确保草稿占位存在（独立对象，不与 CurData 共享引用）
+        if (PartMapObj[DraftKey] === undefined) {
+            PartMapObj[DraftKey] = { name: DraftKey, partMap: {}, charmData: createCharmData(), weaponData: createWeaponData() };
         }
     }
+
+    //排序：把"当前项"放到最前（"临时配装"和其他配装一样处理，不再强制置尾）
+    PartMapAry = PartMapAry.filter(function (n) { return n !== curName; });
     PartMapAry.unshift(curName);
+    //点草稿×清空后的一次性处理：把草稿移到最后
+    if (draftToEndOnce) {
+        draftToEndOnce = false;
+        PartMapAry = PartMapAry.filter(function (n) { return n !== DraftKey; });
+        PartMapAry.push(DraftKey);
+    }
+    //确保草稿始终在对比列表里显示
+    if (!PartMapAry.includes(DraftKey)) {
+        PartMapAry.push(DraftKey);
+    }
 
     // 【修复点 2】：清理 PartMapAry 中的无效数据，防止报错
     PartMapAry = PartMapAry.filter(name => name && PartMapObj[name]);
@@ -1741,7 +3481,24 @@ function render_total_table() {
         let sn = d["sn"];
         let max = d["max"];
         let dm = d["map"];
-        let allSame = (d["vm"].length == 1);
+        //判断"所有配装该技能的值是否都一样"（缺技能的配装按 0 计），用于折叠相同选项。
+        // 注意："临时配装"（草稿）通常是空的，若它本行没有值则跳过它，避免因草稿为空导致永远无法折叠。
+        let allSame = (function () {
+            let rawMap = d["raw"] || {};
+            //"临时配装"整体为空时，不参与折叠判断（避免空草稿导致永远无法折叠）。
+            //但若草稿有技能（非空），则它的本行值（含 0）也应参与判断。
+            let draftEmpty = !hasAnySkillData(PartMapObj[DraftKey]);
+            let first = null, has = false;
+            for (let j = 0; j < PartMapAry.length; j++) {
+                let nm = PartMapAry[j];
+                let v = rawMap[nm] || 0;
+                //草稿整体为空、且本行没有值（0）时，跳过它
+                if (nm === DraftKey && draftEmpty && v === 0) continue;
+                if (!has) { first = v; has = true; }
+                else if (v !== first) { return false; }
+            }
+            return has;
+        })();
         tb = tb + `<tr class="${allSame ? "same-skill-cur" : ""}" ><td class="small" style="text-align: right;">${sn}</td>`;
 
         for (let j = 0; j < PartMapAry.length; j++) {
@@ -1756,7 +3513,12 @@ function render_total_table() {
         // 【修复点 3】：安全读取数据，避免 PartMapObj[name] 为 undefined 导致 "cri" 读取失败
         let cacheData = PartMapObj[name];
         let cri = cacheData ? (cacheData["cri"] || 0) : 0;
-        th = th + `<th class="small"> <button type="button" class="btn btn-secondary switch_to_cache">${name}/会心${cri} <span class="badge text-bg-danger remove_compare" title="从比较列表中移除" name="${name}">x</span></button></th>`
+        if (name === DraftKey) {
+            //"临时配装"：× 不是移除，而是"清空草稿"，样式与普通 chip 的 × 区分
+            th = th + `<th class="small compare-th"> <button type="button" class="btn switch_to_cache compare-chip compare-chip-draft" data-name="${name}" title="点击切换到临时配装">${displayName(name)}<span class="compare-chip-sub">会心${cri}</span><span class="clear_draft compare-chip-x compare-chip-x-draft" title="清空临时配装" name="${name}">×</span></button></th>`;
+        } else {
+            th = th + `<th class="small compare-th"> <button type="button" class="btn switch_to_cache compare-chip" data-name="${name}" title="点击切换到该配装">${displayName(name)}<span class="compare-chip-sub">会心${cri}</span><span class="remove_compare compare-chip-x" title="从比较列表中移除" name="${name}">×</span></button></th>`;
+        }
     }
     document.getElementById("skill_table_head").innerHTML = th;
     document.getElementById("skill_table").innerHTML = tb;
@@ -1905,6 +3667,7 @@ function render_total_table() {
                     "sn": sn,
                     "same": true,
                     "vm": [],
+                    "raw": {},
                     "map": {}
                 };
             }
@@ -1915,6 +3678,8 @@ function render_total_table() {
                 critical.push(`${rs.r}(${sn})`);
             }
             allSkillMap[hex]["map"][name] = getProgressbar(cur, max);
+            //记录该配装该技能的原始值（没这个技能时在下面统一补 0）
+            allSkillMap[hex]["raw"][name] = cur;
             if (!allSkillMap[hex]["vm"].includes(cur)) {
                 allSkillMap[hex]["vm"].push(cur);
             }
@@ -2026,7 +3791,7 @@ function genAllTemplate() {
     }
     str = str + genCharmTemplate();
 
-    document.getElementById("template_result").innerText = str;
+    document.getElementById("template_result").textContent = str;
 }
 function genArmorTemplate(data) {
 
@@ -2165,50 +3930,101 @@ ${title}
 
 
 function copyToClipboard() {
-    let content = document.getElementById("template_result").innerText;
-    navigator.clipboard.writeText(content);
-    document.getElementById("copy_result").innerText = "copied!";
-}
-/*原下载函数 function downloadTxt() {
-    let content = document.getElementById("template_result").innerText;
-    const blob = new Blob([content], {
-        type: "text/plain;charset=utf-8"
-    })
-    // 根据 blob生成 url链接
-    const objectURL = URL.createObjectURL(blob)
-    // 创建一个 a 标签Tag
-    const aTag = document.createElement('a')
-    // 设置文件的下载地址
-    aTag.href = objectURL
-    // 设置保存后的文件名称
-    aTag.download = `${currentVersion.BID}.txt`;
-    // 给 a 标签添加点击事件
-    aTag.click();
+    let content = document.getElementById("template_result").textContent;
+    let resultEl = document.getElementById("copy_result");
 
-}*/
+    function done(msg) {
+        resultEl.innerText = msg;
+        //复制提示 2 秒后自动消失
+        clearTimeout(resultEl._hideTimer);
+        resultEl._hideTimer = setTimeout(function () {
+            resultEl.innerText = "";
+        }, 2000);
+    }
+
+    //优先用异步剪贴板 API（仅 HTTPS / localhost 可用）
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(content).then(function () {
+            done("已复制到剪贴板");
+        }).catch(function (err) {
+            console.error("复制失败:", err);
+            if (fallbackCopy(content)) {
+                done("已复制到剪贴板");
+            } else {
+                done("复制失败");
+            }
+        });
+    } else {
+        //非安全环境或旧浏览器：回退到 execCommand
+        if (fallbackCopy(content)) {
+            done("已复制到剪贴板");
+        } else {
+            done("复制失败");
+        }
+    }
+}
+
+//旧版复制回退方案（execCommand）
+function fallbackCopy(text) {
+    try {
+        let ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.left = "-9999px";
+        ta.style.top = "0";
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        let ok = document.execCommand("copy");
+        document.body.removeChild(ta);
+        return ok;
+    } catch (e) {
+        console.error("fallbackCopy 失败:", e);
+        return false;
+    }
+}
 
 function downloadTxt() {
     // 读取页面里要保存的文字
-    let content = document.getElementById("template_result").innerText;
+    let content = document.getElementById("template_result").textContent;
     const fileName = `${currentVersion.BID}.txt`;
 
-    // Android WebView 环境 → 调用系统「另存为」对话框
-    if (window.Android && typeof window.Android.chooseFile === "function") {
-        // 每次都会弹出系统保存框，用户自行挑选路径
-        window.Android.chooseFile(fileName, content);
-    } else {
-        // 浏览器 fallback（保留原来的 Blob 下载方式）
-        const blob = new Blob([content], {type: "text/plain;charset=utf-8"});
-        const objectURL = URL.createObjectURL(blob);
-        const aTag = document.createElement('a');
-        aTag.href = objectURL;
-        aTag.download = fileName;
-        document.body.appendChild(aTag);
-        aTag.click();
-        setTimeout(() => {
-            URL.revokeObjectURL(objectURL);
-            document.body.removeChild(aTag);
-        }, 0);
+    try {
+        // Android WebView 环境 → 调用系统「另存为」对话框
+        if (window.Android && typeof window.Android.chooseFile === "function") {
+            // 每次都会弹出系统保存框，用户自行挑选路径
+            window.Android.chooseFile(fileName, content);
+            showMsg("已调起保存：" + fileName);
+        } else {
+            // 浏览器 fallback（保留原来的 Blob 下载方式）
+            const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+            const objectURL = URL.createObjectURL(blob);
+            const aTag = document.createElement('a');
+            aTag.href = objectURL;
+            aTag.download = fileName;
+            document.body.appendChild(aTag);
+            aTag.click();
+            setTimeout(() => {
+                URL.revokeObjectURL(objectURL);
+                document.body.removeChild(aTag);
+            }, 0);
+            showMsg("已开始下载：" + fileName);
+        }
+    } catch (err) {
+        console.error("下载失败:", err);
+        showMsg("下载失败:" + (err && err.message ? err.message : err));
+    }
+}
+
+//重新排布所有 toast 的纵向位置（从上到下依次堆叠，互不重叠）
+function relayoutMsgs() {
+    let top = 12;
+    for (let i = 0; i < MsgStack.length; i++) {
+        let el = MsgStack[i];
+        if (!document.body.contains(el)) continue;
+        el.style.top = top + "px";
+        // 累加自身高度 + 间距
+        top += el.offsetHeight + 8;
     }
 }
 
@@ -2229,10 +4045,19 @@ async function showMsg(msg) {
                 <div>${curMmsg}</div>
                 </div>`
             $("body").append(s);
+            //加入堆叠队列，重新排布（新消息排在已有消息下方）
+            let el = document.querySelector("." + m);
+            if (el) {
+                MsgStack.push(el);
+                relayoutMsgs();
+            }
+            //到时移除，并重新排布剩余消息
             setTimeout(function () {
                 $(`.${m}`).remove();
-            }, 6000);
-            await timeLag(350);
+                MsgStack = MsgStack.filter(function (n) { return n !== el; });
+                relayoutMsgs();
+            }, 2500);
+            await timeLag(250);
         }
     }
     MsgLooping = false;
@@ -2625,17 +4450,6 @@ function clickSkillInfo(id, title) {
     }
 }
 
-//上传设置
-function uploadSetting() {
-
-}
-
-//下载设置
-function downloadSetting() {
-
-}
-
-
 //使用缓存的数据进行比较
 async function addToCompare(name) {
 
@@ -2677,10 +4491,6 @@ async function removeFromCompare(name) {
 }
 //折叠相同或展开
 function zipSame() {
-    //
-    if (PartMapAry <= 1) {
-        return;
-    }
     let trL = $("#skill_table").find("tr");
     if (ZipSameItem) {
         for (let i = 0; i < trL.length; i++) {
@@ -2697,171 +4507,3 @@ function zipSame() {
     }
     //遍历 隐藏数据
 }
-
-function parseText(v) {
-    v = v.split("\n").join("");
-    v = v.split("<string>");
-    v.shift()
-    // console.log(v);
-
-    //armor
-    // for (let i = 0; i < v.length; i++) {
-    //     let idx = (300+i)+"_3"
-    //     console.log(i,idx,v[i],armor_list[idx]?armor_list[idx]["name"]:"");
-    // }
-
-    //skillName
-    // for (let i = 0; i < v.length; i++) {
-    //     let hex = (parseInt(i)).toString(16);
-    //     if (hex.length <= 1) {
-    //         hex = "0" + hex;
-    //     }
-    //     hex=hex.toUpperCase();
-    //     console.log(i, hex, v[i], skill_data[hex] ? skill_data[hex]["sname"] : "");
-    // }
-
-    //skillDesc1
-    // for (let i = 0; i < v.length; i++) {
-    //     let hex = (parseInt(i/8)).toString(16);
-    //     if (hex.length <= 1) {
-    //         hex = "0" + hex;
-    //     }
-    //     hex=hex.toUpperCase();
-    //     //注意拼接 896行有点问题
-    //     // if(v[i]=="降低偏移2個階段，<lf>且小幅加長適當距離")console.log(i);
-    //     // console.log(i, hex, v[i], skill_data[hex] ? skill_data[hex]["sname"] : "");
-    // }
-
-    //skillDesc2
-    //36 偏移 2
-    // v.shift();
-    // //6F 风雷合一 4-5？ 幸运
-    // v.shift();
-    // v.shift();
-
-    // //25%
-    // v.pop()
-
-    // //23 防御 4-7
-    // v.pop()
-    // v.pop()
-    // v.pop()
-    // v.pop()
-
-    // //火事场力 2-4
-    // v.pop()
-    // v.pop()
-    // v.pop()
-
-    // //拔刀技 1-3
-    // v.pop()
-    // v.pop()
-    // v.pop()
-
-    // //防御性能 2-5
-    // v.pop()
-    // v.pop()
-    // v.pop()
-    // v.pop()
-
-    // //skillDesc2 前3个是补充
-    // for (let i = 0; i < v.length; i++) {
-
-    //     let hex = intToHex(112 + parseInt(i / 8));
-    //     console.log(i, parseInt(i / 8), hex, skill_data[hex] ? skill_data[hex]["sname"] : "", v[i])
-    //     //80 81 合气 7A
-    // }
-
-    //skillExplain
-    // for (let i = 0; i < v.length; i++) {
-    //     let hex = (parseInt(i)).toString(16);
-    //     if (hex.length <= 1) {
-    //         hex = "0" + hex;
-    //     }
-    //     hex=hex.toUpperCase();
-    //     console.log(i, hex, v[i], skill_data[hex] ? skill_data[hex]["sname"] : "");
-    // }
-    //skillExplain2
-    // / v.pop()
-    // v.pop()
-    // v.pop()
-    // for (let i = 0; i < v.length; i++) {
-    //     let hex = (parseInt(112+i)).toString(16);
-    //     if (hex.length <= 1) {
-    //         hex = "0" + hex;
-    //     }
-    //     hex = hex.toUpperCase();
-    //     console.log(i, hex, v[i], skill_data[hex] ? skill_data[hex]["sname"] : "");
-    // }
-
-
-    //  decoration
-    // for (let i = 0; i < v.length; i++) {
-    //     let hex = (parseInt(i)).toString(16);
-    //     if (hex.length <= 1) {
-    //         hex = "0" + hex;
-    //     }
-    //     hex=hex.toUpperCase();
-    //     console.log(i, hex, v[i], skill_data[hex] ? skill_data[hex]["sname"] : "");
-    //     // 29 '1D' '' '解放弓的蓄力阶段'
-    //     // 83 '53' '' '剥取名人'
-    //     // 100 '64' '' '霞皮的恩惠'
-    //     // 101 '65' '' '钢壳的恩惠'
-    //     // 102 '66' '' '炎鳞的恩惠'
-    //     // 103 '67' '' '龙气活性'
-    //     // 109 '6D' '' '风纹一致'
-    //     // 110 '6E' '' '雷纹一致'
-    //     // 111 '6F' '' '风雷合一'
-
-
-    // }
-
-    //  decoration2
-    // for (let i = 0; i < v.length; i++) {
-    //     let hex = (parseInt("43", 16) + parseInt(i)).toString(16);
-    //     if (hex.length <= 1) {
-    //         hex = "0" + hex;
-    //     }
-    //     hex = hex.toUpperCase();
-    //     console.log(i, hex, v[i], skill_data[hex] ? skill_data[hex]["sname"] : "");
-    //     // 29 '1D' '' '解放弓的蓄力阶段'
-    //     // 83 '53' '' '剥取名人'
-    //     // 100 '64' '' '霞皮的恩惠'
-    //     // 101 '65' '' '钢壳的恩惠'
-    //     // 102 '66' '' '炎鳞的恩惠'
-    //     // 103 '67' '' '龙气活性'
-    //     // 109 '6D' '' '风纹一致'
-    //     // 110 '6E' '' '雷纹一致'
-    //     // 111 '6F' '' '风雷合一'
-
-
-    // }
-
-    for (let i = 0; i < v.length; i++) {
-        let idx = 109 + i + "";
-        // console.log(i, idx, v[i], decoration_data[idx] ? decoration_data[idx]["dname"] : "");
-        // 29 '1D' '' '解放弓的蓄力阶段'
-        // 83 '53' '' '剥取名人'
-        // 100 '64' '' '霞皮的恩惠'
-        // 101 '65' '' '钢壳的恩惠'
-        // 102 '66' '' '炎鳞的恩惠'
-        // 103 '67' '' '龙气活性'
-        // 109 '6D' '' '风纹一致'
-        // 110 '6E' '' '雷纹一致'
-        // 111 '6F' '' '风雷合一'
-
-
-    }
-
-}
-
-// parseText(A_Arm_Name_MR);
-// parseText(PlayerSkill_Name);
-// parseText(PlayerSkill_Detail);
-// parseText(PlayerSkill_Detail2);
-
-// parseText(PlayerSkill_Explain);
-// parseText(PlayerSkill_Explain2);
-
-// parseText(Decorations_Name);
-parseText(Decorations_Name2);
