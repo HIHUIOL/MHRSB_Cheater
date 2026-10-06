@@ -1,14 +1,18 @@
 {
+  "id": "./",
   "name": "怪物猎人 MHRSB 怪异练成+护石",
   "short_name": "MHRSB 配装",
   "description": "怪物猎人 MHRSB 怪异练成+护石 16 switch金手指",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
   "orientation": "any",
   "background_color": "#ffffff",
   "theme_color": "#0d6efd",
   "lang": "zh-CN",
+  "dir": "ltr",
+  "categories": ["utilities", "games"],
   "icons": [
     {
       "src": "icons/icon-192.png",
