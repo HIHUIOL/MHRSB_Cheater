@@ -78,6 +78,9 @@ body {
 }
 
 .badge-soft {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1.2;
     background: rgba(13, 110, 253, .12);
     color: #0d6efd;
     border-radius: 999px;
@@ -138,8 +141,8 @@ body {
 }
 
 .pill-cost {
-    background: rgba(255, 193, 7, .18);
-    color: #8a6d00;
+    background: rgba(220, 53, 69, .14);
+    color: #dc3545;
 }
 
 .pill-slot {
@@ -235,18 +238,150 @@ body {
 
 /* 暗色下 toast 有阴影更明显 */
 @media (prefers-color-scheme: dark) {
-    .msghint {
+
+    html:not([data-theme="light"]) .msghint {
         box-shadow: 0 4px 14px rgba(0, 0, 0, .5);
     }
 }
 
 /* ---- 技能信息面板 ------------------------------------------------------ */
-.skill_info_btn:disabled {
-    opacity: 0.3;
+/* 未装备的技能：视觉上灰掉（原来是 :disabled，改成 class 以便仍可点击查看效果） */
+.skill_info_btn.is-locked {
+    opacity: 0.55;
+}
+
+/* 技能效果弹窗内容 */
+.skill-desc-body ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    font-size: .85rem;
+    line-height: 1.5;
+}
+
+.skill-desc-body li {
+    margin-bottom: .15rem;
+}
+
+/* 通用弹窗：不要被 Bootstrap 的 modal-dialog-centered 强制拉满屏高（内容多高就多高） */
+#promptModal .modal-dialog {
+    min-height: auto;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
+#promptModal .modal-body {
+    max-height: 65vh;
+    overflow-y: auto;
+}
+
+/* 技能一览：默认折叠（is-collapsed 时隐藏），展开后完整显示（跟页面一起滚动） */
+#skillInfo.is-collapsed {
+    display: none;
 }
 
 #skillInfo {
-    display: none;
+    padding: .4rem;
+    border: 1px solid var(--bs-border-color, #dee2e6);
+    border-radius: var(--app-radius, .5rem);
+}
+
+/* 技能一格：用 CSS Grid 排布（彻底避免 flex + col-2 的宽度计算问题） */
+#skillInfo .row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: .15rem;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* 分类标题行：保持普通块级（不要变成网格） */
+#skillInfo .row.si-cat-title {
+    display: block;
+    font-weight: 600;
+    font-size: .8rem;
+    margin-top: .5rem;
+    margin-bottom: .2rem;
+    color: var(--bs-secondary-color, #6c757d);
+}
+
+#skillInfo .skill_info_div {
+    display: block !important;
+    width: auto !important;
+    max-width: none !important;
+    flex: none !important;
+    min-width: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 手机/窄屏：一行 3 个（技能名放得下） */
+@media (max-width: 900px) {
+    #skillInfo .row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 中等屏幕：一行 4 个 */
+@media (min-width: 901px) and (max-width: 1399px) {
+    #skillInfo .row {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+#skillInfo .skill_info_btn {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .15rem;
+    white-space: nowrap;
+    font-size: .72rem;
+    line-height: 1.2;
+    padding: .2rem .3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 统一配色（原来按顺序轮换多种颜色，视觉杂乱） */
+    background-color: rgba(13, 110, 253, .08);
+    border-color: rgba(13, 110, 253, .25);
+    color: var(--bs-body-color, #212529);
+}
+
+/* 已装备的技能：实心蓝底，一眼区分 */
+#skillInfo .skill_info_btn:not(.is-locked) {
+    background-color: rgba(13, 110, 253, .85);
+    border-color: rgba(13, 110, 253, .9);
+    color: #fff;
+}
+
+/* 鼠标悬停：高亮，提示可点击（未装备的也允许看效果） */
+#skillInfo .skill_info_btn:hover {
+    opacity: 1;
+    box-shadow: 0 0 0 .12rem rgba(13, 110, 253, .45);
+    filter: brightness(1.08);
+}
+
+/* 名字中长的技能：略缩字号，保证文字不贴边、不溢出铭牌 */
+#skillInfo .skill_info_btn.is-mid {
+    font-size: .64rem;
+    gap: .1rem;
+    padding: .2rem .25rem;
+}
+
+#skillInfo .skill_info_btn.is-long {
+    font-size: .58rem;
+    gap: .1rem;
+    padding: .2rem .2rem;
+}
+
+/* 技能一览切换按钮文字行 */
+#skillInfoToggle {
+    font-weight: 600;
+}
+
+#skillInfoToggle .si-toggle-hint {
+    font-weight: 400;
+    font-size: .7rem;
+    margin-top: .1rem;
 }
 
 /* ---- 历史记录 / 对比列表项 -------------------------------------------- */
@@ -255,6 +390,25 @@ body {
     align-items: center;
     gap: .35rem;
     flex-wrap: wrap;
+}
+
+/* 序号徽标 */
+.history-item .cache-index {
+    flex: 0 0 auto;
+    min-width: 1.9rem;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+    background: rgba(128, 128, 128, .14);
+    border-radius: .35rem;
+    padding: .05rem .3rem;
+    font-size: .72rem;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    html:not([data-theme="light"]) .history-item .cache-index {
+        background: rgba(255, 255, 255, .12);
+    }
 }
 
 .history-item .cacheItem {
@@ -339,7 +493,40 @@ body {
 /* ---- 响应式：手机 -------------------------------------------------------- */
 @media (max-width: 600px) {
     .app-topbar {
-        align-items: stretch;
+        align-items: center;
+        gap: .4rem;
+        flex-wrap: nowrap;      /* 顶栏强制一行不换行 */
+    }
+    /* 手机端：spacer 撑开，把主题+初始化推到右侧 */
+    .app-topbar .topbar-spacer {
+        flex: 1 1 auto;
+        min-width: .3rem;
+    }
+    /* 窄屏顶栏：主题按钮只显示 emoji */
+    #themeToggle {
+        flex: 0 0 auto;
+        padding-left: .4rem;
+        padding-right: .4rem;
+    }
+    #themeToggle .theme-text {
+        display: none;
+    }
+    /* 窄屏顶栏：压缩标题与版本号，保证一行放下 */
+    .app-topbar .app-title {
+        flex: 0 1 auto;
+        min-width: 0;
+        font-size: 1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .app-topbar #app_version {
+        flex: 0 0 auto;
+        font-size: .68rem;
+        padding: .1rem .4rem;
+    }
+    .app-topbar #reInit {
+        flex: 0 0 auto;
     }
 
     .stat-grid {
@@ -351,6 +538,17 @@ body {
         overflow-x: auto;
     }
 
+    /* 手机端底部 4 个按钮强制一行：收紧间距与内边距 */
+    .bottom-bar .bar-row {
+        flex-wrap: nowrap;
+        gap: .3rem;
+    }
+    .bottom-bar .bar-row .btn {
+        white-space: nowrap;
+        padding-left: .5rem;
+        padding-right: .5rem;
+        font-size: .78rem;
+    }
     .bottom-bar .inner .btn {
         white-space: nowrap;
     }
@@ -525,7 +723,6 @@ body {
     gap: .3rem;
     flex: 0 0 auto;
 }
-
 .armor-search-item .asi-badge {
     font-size: .68rem;
     font-weight: 500;
@@ -533,7 +730,48 @@ body {
     border-radius: 999px;
     background: rgba(13, 202, 240, .14);
     color: #0aa2c0;
-    white-space: nowrap;
+}
+
+/* 孔位：青色胶囊 */
+.armor-search-item .asi-badge-slot {
+    background: rgba(13, 202, 240, .14);
+    color: #0aa2c0;
+}
+
+/* 防御：绿色胶囊 */
+.armor-search-item .asi-badge-def {
+    background: rgba(25, 135, 84, .14);
+    color: #198754;
+}
+
+/* 稀有度 R：按等级分色（R10 橙 / R9 紫 / R8 蓝） */
+.armor-search-item .asi-badge-rank {
+    font-weight: 700;
+    /* 默认（其它等级）用紫 */
+    background: rgba(112, 72, 232, .16);
+    color: #7048e8;
+}
+
+.armor-search-item .asi-badge-rank.rank-10 {
+    background: rgba(255, 153, 0, .16);
+    color: #d9822b;
+}
+
+.armor-search-item .asi-badge-rank.rank-9 {
+    background: rgba(112, 72, 232, .16);
+    color: #7048e8;
+}
+
+.armor-search-item .asi-badge-rank.rank-8 {
+    background: rgba(13, 110, 253, .14);
+    color: #0d6efd;
+}
+
+/* 怪异点数：红色胶囊 */
+.armor-search-item .asi-badge-cost {
+    background: rgba(220, 53, 69, .14);
+    color: #dc3545;
+    font-weight: 600;
 }
 .armor-search-item .asi-skills {
     margin-top: .2rem;
@@ -675,101 +913,137 @@ body {
 
 /* ---- 暗色模式（跟随系统）---------------------------------------------- */
 @media (prefers-color-scheme: dark) {
-    :root {
+
+    html:not([data-theme="light"]) {
         --bs-body-bg: #1a1d21;
         --bs-body-color: #e4e6eb;
         --bs-border-color: #343a40;
         --bs-secondary-color: #9aa0a6;
     }
 
-    body {
+    html:not([data-theme="light"]) body {
         background-color: #121417;
     }
 
-    .app-card {
+    html:not([data-theme="light"]) .app-card {
         background-color: #1a1d21;
         border-color: #343a40;
     }
 
-    .app-card>.card-header {
+    html:not([data-theme="light"]) .app-card>.card-header {
         background-color: rgba(13, 110, 253, .15);
     }
 
-    .stat-grid .stat {
+    html:not([data-theme="light"]) .stat-grid .stat {
         background: rgba(255, 255, 255, .06);
     }
 
-    .badge-soft {
+    html:not([data-theme="light"]) .badge-soft {
         background: rgba(13, 110, 253, .25);
         color: #9ec5fe;
     }
 
-    .pill-cost {
-        background: rgba(255, 193, 7, .22);
-        color: #ffda6a;
+    html:not([data-theme="light"]) .pill-cost {
+        background: rgba(220, 53, 69, .25);
+        color: #f1aeb5;
     }
 
-    .pill-slot {
+    html:not([data-theme="light"]) .pill-slot {
         background: rgba(13, 202, 240, .22);
         color: #6edff6;
     }
 
     /* 对比 chip / 按钮 暗色适配 */
-    .btn-compare-toggle {
+    html:not([data-theme="light"]) .btn-compare-toggle {
         background: #212529;
         border-color: #343a40;
         color: #dee2e6;
     }
 
-    .btn-compare-toggle .compare-plus {
+    html:not([data-theme="light"]) .btn-compare-toggle .compare-plus {
         color: #6ea8fe;
     }
 
-    .compare-chip {
+    html:not([data-theme="light"]) .compare-chip {
         background: rgba(13, 110, 253, .22);
         border-color: rgba(13, 110, 253, .4);
         color: #dee2e6;
     }
 
-    .compare-chip-sub {
+    html:not([data-theme="light"]) .compare-chip-sub {
         background: rgba(255, 255, 255, .08);
         color: #adb5bd;
     }
 
-    .compare-chip-x {
+    html:not([data-theme="light"]) .compare-chip-x {
         background: rgba(220, 53, 69, .25);
         color: #f1aeb5;
     }
 
     /* 装备搜索项 暗色适配 */
-    .armor-search-item {
+    html:not([data-theme="light"]) .armor-search-item {
         background: #1a1d21;
         border-color: #343a40;
         color: var(--bs-body-color);
     }
 
     .armor-search-item:hover,
-    .armor-search-item:focus {
+    html:not([data-theme="light"]) .armor-search-item:focus {
         background: rgba(13, 110, 253, .18);
         border-color: rgba(13, 110, 253, .5);
     }
 
-    .armor-search-item.active {
+    html:not([data-theme="light"]) .armor-search-item.active {
         background: rgba(13, 110, 253, .25);
     }
 
-    .armor-search-item .asi-badge {
+    html:not([data-theme="light"]) .armor-search-item .asi-badge {
         background: rgba(13, 202, 240, .22);
         color: #6edff6;
     }
 
-    .bottom-bar {
+    html:not([data-theme="light"]) .armor-search-item .asi-badge-slot {
+        background: rgba(13, 202, 240, .22);
+        color: #6edff6;
+    }
+
+    html:not([data-theme="light"]) .armor-search-item .asi-badge-def {
+        background: rgba(25, 135, 84, .25);
+        color: #75d4a6;
+    }
+
+    html:not([data-theme="light"]) .armor-search-item .asi-badge-rank {
+        background: rgba(112, 72, 232, .28);
+        color: #b197fc;
+    }
+
+    html:not([data-theme="light"]) .armor-search-item .asi-badge-rank.rank-10 {
+        background: rgba(255, 153, 0, .22);
+        color: #ffc078;
+    }
+
+    html:not([data-theme="light"]) .armor-search-item .asi-badge-rank.rank-9 {
+        background: rgba(112, 72, 232, .28);
+        color: #b197fc;
+    }
+
+    html:not([data-theme="light"]) .armor-search-item .asi-badge-rank.rank-8 {
+        background: rgba(13, 110, 253, .28);
+        color: #6ea8fe;
+    }
+
+    html:not([data-theme="light"]) .armor-search-item .asi-badge-cost {
+        background: rgba(220, 53, 69, .25);
+        color: #f1aeb5;
+    }
+
+    html:not([data-theme="light"]) .bottom-bar {
         background: #1a1d21;
         border-top-color: #343a40;
     }
 
     /* Bootstrap 表格暗色适配 */
-    .table {
+    html:not([data-theme="light"]) .table {
         --bs-table-bg: transparent;
         --bs-table-color: var(--bs-body-color);
         --bs-table-striped-color: var(--bs-body-color);
@@ -778,14 +1052,14 @@ body {
     }
 
     .form-control,
-    .form-select {
+    html:not([data-theme="light"]) .form-select {
         background-color: #14171a;
         border-color: #343a40;
         color: var(--bs-body-color);
     }
 
     .form-control:focus,
-    .form-select:focus {
+    html:not([data-theme="light"]) .form-select:focus {
         background-color: #14171a;
         color: var(--bs-body-color);
     }
@@ -793,147 +1067,147 @@ body {
     /* ---- 补充：之前遗漏的 Bootstrap 组件暗色适配 ---- */
 
     /* 列表项（配装列表 / 装备技能列表 / 会心率技能列表） */
-    .list-group-item {
+    html:not([data-theme="light"]) .list-group-item {
         background-color: transparent;
         color: var(--bs-body-color);
         border-color: #343a40;
     }
 
-    .list-group-flush>.list-group-item {
+    html:not([data-theme="light"]) .list-group-flush>.list-group-item {
         background-color: transparent;
         color: var(--bs-body-color);
     }
 
     /* 提示框（会心率等） */
-    .alert {
+    html:not([data-theme="light"]) .alert {
         color: var(--bs-body-color);
     }
 
-    .alert-success {
+    html:not([data-theme="light"]) .alert-success {
         background-color: rgba(25, 135, 84, .25);
         border-color: rgba(25, 135, 84, .5);
         color: #75d4a6;
     }
 
-    .alert-warning {
+    html:not([data-theme="light"]) .alert-warning {
         background-color: rgba(255, 193, 7, .2);
         border-color: rgba(255, 193, 7, .45);
         color: #ffda6a;
     }
 
-    .alert-danger {
+    html:not([data-theme="light"]) .alert-danger {
         background-color: rgba(220, 53, 69, .25);
         border-color: rgba(220, 53, 69, .5);
         color: #f1aeb5;
     }
 
-    .alert-info {
+    html:not([data-theme="light"]) .alert-info {
         background-color: rgba(13, 202, 240, .2);
         border-color: rgba(13, 202, 240, .45);
         color: #6edff6;
     }
 
-    .alert-primary {
+    html:not([data-theme="light"]) .alert-primary {
         background-color: rgba(13, 110, 253, .25);
         border-color: rgba(13, 110, 253, .5);
         color: #9ec5fe;
     }
 
     /* 进度条 */
-    .progress {
+    html:not([data-theme="light"]) .progress {
         background-color: #343a40;
     }
 
     /* 开关（未选中态） */
-    .form-check-input {
+    html:not([data-theme="light"]) .form-check-input {
         background-color: #343a40;
         border-color: #495057;
     }
 
-    .form-check-input:checked {
+    html:not([data-theme="light"]) .form-check-input:checked {
         background-color: #0d6efd;
         border-color: #0d6efd;
     }
 
-    .form-check-input:focus {
+    html:not([data-theme="light"]) .form-check-input:focus {
         border-color: #0a58ca;
         box-shadow: 0 0 0 .18rem rgba(13, 110, 253, .3);
     }
 
     /* 金手指代码块：暗色下用深底 + 亮字，保证对比 */
-    .code-block {
+    html:not([data-theme="light"]) .code-block {
         background-color: #0d1117;
         border-color: #343a40;
         color: #c9d1d9;
     }
 
     /* 分隔线 */
-    hr {
+    html:not([data-theme="light"]) hr {
         border-color: #343a40;
         opacity: 1;
     }
 
     /* 下拉菜单（对比菜单 / 配装下拉） */
-    .dropdown-menu {
+    html:not([data-theme="light"]) .dropdown-menu {
         background-color: #1a1d21;
         border-color: #343a40;
         color: var(--bs-body-color);
     }
 
-    .dropdown-item {
+    html:not([data-theme="light"]) .dropdown-item {
         color: var(--bs-body-color);
     }
 
     .dropdown-item:hover,
-    .dropdown-item:focus {
+    html:not([data-theme="light"]) .dropdown-item:focus {
         background-color: rgba(13, 110, 253, .18);
         color: var(--bs-body-color);
     }
 
     /* 模态框 */
-    .modal-content {
+    html:not([data-theme="light"]) .modal-content {
         background-color: #1a1d21;
         border-color: #343a40;
         color: var(--bs-body-color);
     }
 
     .modal-header,
-    .modal-footer {
+    html:not([data-theme="light"]) .modal-footer {
         border-color: #343a40;
     }
 
     /* 抽屉 */
-    .offcanvas {
+    html:not([data-theme="light"]) .offcanvas {
         background-color: #1a1d21;
         color: var(--bs-body-color);
     }
 
     /* 文本类辅助色 */
-    .text-secondary {
+    html:not([data-theme="light"]) .text-secondary {
         color: #9aa0a6 !important;
     }
 
     /* 输入框占位符 */
     .form-control::placeholder,
-    .form-select::placeholder {
+    html:not([data-theme="light"]) .form-select::placeholder {
         color: #6c757d;
         opacity: 1;
     }
 
     /* 禁用态输入框 */
     .form-control:disabled,
-    .form-select:disabled {
+    html:not([data-theme="light"]) .form-select:disabled {
         background-color: #212529;
         color: #6c757d;
     }
 
     /* 关闭按钮（×）：Bootstrap 默认是黑色图标，暗色下反色为白色，保证可见 */
-    .btn-close {
+    html:not([data-theme="light"]) .btn-close {
         filter: invert(1) grayscale(100%) brightness(200%);
         opacity: .7;
     }
 
-    .btn-close:hover {
+    html:not([data-theme="light"]) .btn-close:hover {
         opacity: 1;
     }
 }
@@ -990,19 +1264,20 @@ body {
 
 /* 暗色适配 */
 @media (prefers-color-scheme: dark) {
-    #charm_slot_select.charm-slot-sel:focus {
+
+    html:not([data-theme="light"]) #charm_slot_select.charm-slot-sel:focus {
         background-color: #14171a;
         box-shadow: 0 0 0 .18rem rgba(13, 110, 253, .35);
     }
-    #charmLevelSelect.charm-level-sel {
+    html:not([data-theme="light"]) #charmLevelSelect.charm-level-sel {
         background-color: rgba(112, 72, 232, .15);
         color: #b197fc;
         border-color: rgba(112, 72, 232, .5);
     }
-    #charmLevelSelect.charm-level-sel:hover {
+    html:not([data-theme="light"]) #charmLevelSelect.charm-level-sel:hover {
         background-color: rgba(112, 72, 232, .22);
     }
-    #charmLevelRow {
+    html:not([data-theme="light"]) #charmLevelRow {
         background: rgba(112, 72, 232, .12);
         border-color: rgba(112, 72, 232, .4);
     }
@@ -1249,4 +1524,180 @@ body {
     }
 }
 
+/* ======================================================================
+   返回顶部按钮
+   ====================================================================== */
+.back-to-top {
+    position: fixed;
+    right: 16px;
+    /* 默认贴在底部栏上方 */
+    bottom: 64px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(13, 110, 253, .9);
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity .2s ease, transform .2s ease, visibility .2s;
+    z-index: 1030;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:active {
+    transform: scale(.92);
+}
+
+/* 暗色适配 */
+@media (prefers-color-scheme: dark) {
+
+    html:not([data-theme="light"]) .back-to-top {
+        background: rgba(110, 168, 254, .9);
+        color: #0d1117;
+    }
+}
+
+/* 版本号可点击（检查更新入口） */
+.badge-soft#app_version {
+    cursor: pointer;
+    user-select: none;
+    transition: background .15s ease, transform .1s ease;
+}
+
+.badge-soft#app_version:hover {
+    background: rgba(13, 110, 253, .18);
+}
+
+.badge-soft#app_version:active {
+    transform: scale(.95);
+}
+
+.badge-soft#app_version:focus-visible {
+    outline: 2px solid #0d6efd;
+    outline-offset: 1px;
+}
+
+/* 空列表占位提示 */
+.history-empty {
+    font-size: .85rem;
+    background: transparent;
+    border: 1px dashed rgba(128, 128, 128, .35);
+    border-radius: .5rem;
+    margin-top: .25rem;
+}
+
+/* 搜索面板"共 N 项"计数条 */
+.armor-search-count {
+    font-size: .78rem;
+    color: var(--bs-secondary-color, #6c757d);
+    padding: 0 .15rem .3rem;
+    min-height: 1.1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    html:not([data-theme="light"]) .armor-search-count {
+        color: #9aa4ae;
+    }
+}
+
+/* PWA 安装引导条 */
+.install-hint {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 8px;
+    z-index: 1080;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    max-width: calc(100vw - 24px);
+    padding: .4rem .6rem .4rem .8rem;
+    background: #0d6efd;
+    color: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .3);
+    font-size: .85rem;
+}
+
+.install-hint-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    html:not([data-theme="light"]) .install-hint {
+        background: #2b6cb0;
+    }
+}
+
+/* "我的配装"里的数据备份提示 */
+.cache-backup-tip {
+    line-height: 1.5;
+    padding: .5rem .6rem;
+    border-radius: .5rem;
+    background: rgba(255, 193, 7, .12);
+    border: 1px solid rgba(255, 193, 7, .3);
+}
+
+@media (prefers-color-scheme: dark) {
+
+    html:not([data-theme="light"]) .cache-backup-tip {
+        background: rgba(255, 193, 7, .1);
+        border-color: rgba(255, 193, 7, .28);
+        color: #d9c07a !important;
+    }
+}
+
+/* ======================================================================
+   "我的配装"抽屉：操作按钮 + 搜索框 固定在顶部（列表滚动时不动）
+   ====================================================================== */
+.cache-drawer-sticky {
+    position: sticky;
+    /* 顶部贴住滚动容器上沿（offcanvas-body 的 padding-top 已为 0） */
+    top: 0;
+    z-index: 5;
+    /* 用不透明背景遮住下方滚过去的内容，避免文字重叠 */
+    background: var(--bs-body-bg, #fff);
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    margin-bottom: .25rem;
+}
+
+/* 暗色下背景跟随抽屉 */
+@media (prefers-color-scheme: dark) {
+
+    html:not([data-theme="light"]) .cache-drawer-sticky {
+        background: #1a1d21;
+    }
+}
+
+/* 底部分隔线（滚动时更清晰） */
+.cache-drawer-sticky::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: rgba(128, 128, 128, .25);
+    opacity: 0;
+    transition: opacity .15s ease;
+}
+
+.cache-drawer-sticky.is-stuck::after {
+    opacity: 1;
 }
