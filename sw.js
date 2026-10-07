@@ -1,5 +1,5 @@
 //使用项目专属缓存名，避免与同域下其它 PWA 的 Service Worker 缓存互相干扰
-const CACHE = 'MHRSB_Cheater-v6.2.4';
+const CACHE = 'MHRSB_Cheater-v6.2.5';
 
 const ASSETS = [
   './',
