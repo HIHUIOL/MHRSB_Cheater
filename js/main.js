@@ -20,7 +20,7 @@ var versionMap = {
 var currentVersion = versionMap["16.0.2-港日"];
 
 //当前程序(PWA)版本号，与 sw.js 的 CACHE 版本保持一致
-var APP_VERSION = "v6.2.1";
+var APP_VERSION = "v6.2.2";
 
 var RefreshCount = 0;
 
@@ -84,6 +84,7 @@ var ZipSameItem = false;
 var DraftName = "临时配装";//纯内存草稿的显示名（界面展示用）
 var DraftKey = "\u200b__DRAFT__\u200b";//草稿的内部 key：含零宽字符，用户不可能输入/保存出这个名字，用于与缓存库隔离
 var draftToEndOnce = false;//一次性标志：点草稿×清空后，让本次渲染把草稿排到最后
+var removedCurName = null;//一次性标志：用户刚手动把"当前配装"从对比里移除，本次渲染不要把它加回来
 //把内部 key 转成界面显示名（草稿显示为"临时配装"，其余原样返回）
 function displayName(name) {
     return (name === DraftKey) ? DraftName : name;
@@ -610,8 +611,7 @@ function resetPartUI(idx) {
             //词条下拉只留占位项，值为 idx_i_00_0
             ksel.html(`<option value="${idx}_${i}_00_0">-----</option>`);
             ksel.val(`${idx}_${i}_00_0`);
-        }
-        $tr.find(".k_skill_display").val("");
+        $tr.find(".k_skill_display").val("").attr("placeholder", "—").prop("disabled", true).css("cursor", "default");
         let csel = $tr.find(".k_skill_change");
         if (csel.length) {
             //与 initKSkillSelect 保持一致的规范占位值：{idx}_{行号}_00_0
@@ -619,7 +619,8 @@ function resetPartUI(idx) {
             csel.html(`<option value="${phVal}">-----</option>`);
             csel.val(phVal);
         }
-        $tr.find(".k_skill_change_display").val("");
+        $tr.find(".k_skill_change_display").val("—").prop("disabled", true);
+    }
     }
     //珠子输入框（3 个）
     for (let i = 0; i < 3; i++) {
@@ -779,7 +780,12 @@ function switchToDraft() {
     let curName = CurData.name;
     if (curName && curName !== DraftKey && PartMapAry.includes(curName)) {
         PartMapObj[curName] = JSON.parse(JSON.stringify(CurData));
+        //记住它当前所处模式
+        PartMapObj[curName].extreme = isExtremeMode;
     }
+    //先用草稿自己记录的模式切回去（必须在 applyDataToEditor 之前，
+//否则 applyDataToEditor 内部的渲染会用"旧的模式"把草稿记录写脏）
+    setExtremeMode(draft.extreme === true);
     //用草稿的副本贴回编辑器（避免之后 CurData 被改写污染内存里的草稿）
     let snap = JSON.parse(JSON.stringify(draft));
     applyDataToEditor(snap, DraftKey, true);
@@ -1710,7 +1716,10 @@ function initHtml() {
 
 function bindEvents() {
     $(".armor_select").on("change", function (event) {
-        onSelectArmor(event.target.value);
+        //把"是哪个位置"一并传下去（清空装备时需要按位置复位词条/珠子）
+        let cls = String($(event.target).attr("class") || "");
+        let m = cls.match(/armor_select_(\d+)/);
+        onSelectArmor(event.target.value, m ? m[1] : null);
     });
     $(".k_skill_select").on("change", function (event) {
         onSelectKSkill(event.target.value);
@@ -1932,8 +1941,16 @@ function bindEvents() {
 
 
     $("#skill_table_head").on("click", ".remove_compare", function (event) {
+        event.stopPropagation(); //阻止冒泡到 switch_to_cache，否则点×会变成"切换配装"
         let targ = event.target;
         removeFromCompare($(targ).attr("name"));
+    });
+
+    //点击对比表里的技能名 → 查看技能效果（与"技能一览"点技能一致）
+    $(document).off("click", "#skill_table .compare-skill-name").on("click", "#skill_table .compare-skill-name", function () {
+        let hex = String($(this).attr("data-hex") || "");
+        if (!hex) return;
+        clickSkillInfo("skill_info_" + hex);
     });
 
     //点"临时配装"的 × → 清空草稿（不是从对比移除）
@@ -2294,6 +2311,11 @@ function bindArmorSearch() {
         let m = cls.match(/k_skill_display_(\d+)/);
         if (!m) return;
         let partIdx = m[1];
+        //该位置没装装备时不可点（避免对空位置设置词条）
+        if (!CurData.partMap[partIdx]) {
+            showMsg("请先选择装备");
+            return;
+        }
         //找到这一行在 tbody 中的行号
         let tr = $(this).closest("tr");
         let idx = tr.parent().find("tr").index(tr);
@@ -2307,6 +2329,11 @@ function bindArmorSearch() {
         let m = cls.match(/k_skill_change_display_(\d+)/);
         if (!m) return;
         let partIdx = m[1];
+        //该位置没装装备时不可点
+        if (!CurData.partMap[partIdx]) {
+            showMsg("请先选择装备");
+            return;
+        }
         let tr = $(this).closest("tr");
         let idx = tr.parent().find("tr").index(tr);
         if (idx < 0) return;
@@ -2371,8 +2398,8 @@ function bindArmorSearch() {
         if (ArmorSearchPartIdx != null) {
             let p = ArmorSearchPartIdx;
             CurData.partMap[p] = null;
-            $(".armor_select_" + p).val("-----");
-            $(".armor_select_display_" + p).val("");
+            //连同词条、珠子一起复位（避免装备清空后珠子残留）
+            resetPartUI(p);
             refreshShowArmorData();
             showMsg("已清除位置" + p + "的装备");
         }
@@ -3251,6 +3278,9 @@ function selectKSkillFromSearch(val) {
 
 function initKSkillSelect(partIdx, armor_id) {
     let tb = $(".k_skill_tbody_" + partIdx);
+    //已选装备：词条框恢复为可点样式
+    tb.find(".k_skill_display").attr("placeholder", "点击选择词条…").prop("disabled", false).css("cursor", "pointer");
+    tb.find(".k_skill_change_display").prop("disabled", false);
     //风雷没有加减技能
     let isWT = ["336", "334"].includes(armor_id.split("_")[0]);
     if (tb) {
@@ -3299,12 +3329,14 @@ function initKSkillSelect(partIdx, armor_id) {
         }
     }
 }
-function onSelectArmor(armor_id) {
+function onSelectArmor(armor_id, partIdxHint) {
     if (armor_id == "-----" || !armor_id) {
-        //清空数据
-        let p = (armor_id && armor_id != "-----") ? armor_id.split("_")[1] : null;
-        if (p) {
+        //清空装备：连同词条、珠子一起复位（原先只清了数据，UI 上珠子会残留）
+        let p = (partIdxHint != null) ? String(partIdxHint) : null;
+        if (p != null) {
             CurData.partMap[p] = null;
+            resetPartUI(p);
+            refreshShowArmorData();
         }
         return;
     }
@@ -3313,7 +3345,35 @@ function onSelectArmor(armor_id) {
 
     let data = CurData.partMap[partIdx];
     if (!data || (data["eq_id"] != armor_id)) {
+        //换装备：若新装备怪异点数消耗(cost)与旧装备相同，则保留已填的炼化词条与珠子
+        let oldData = data;
         data = createPartData(partIdx, armor_id);
+        if (data && oldData && oldData["eq_id"] !== armor_id) {
+            let oldCost = getArmorCostById(oldData["eq_id"]);
+            let newCost = getArmorCostById(armor_id);
+            if (oldCost === newCost) {
+                //同 cost：继承炼化词条
+                if (Array.isArray(oldData["k_skill"])) {
+                    data["k_skill"] = JSON.parse(JSON.stringify(oldData["k_skill"]));
+                }
+                //同 cost：继承珠子（只继承新装备孔位放得下的；孔位不够的珠位自动丢弃）
+                if (Array.isArray(oldData["decoration"])) {
+                    let newSlot = data["eq_slot"] || "";
+                    let deco = []; 
+                    for (let di = 0; di < 3; di++) {
+                        let oldDeco = oldData["decoration"][di];
+                        let slotLv = parseInt(newSlot[di] || "0", 10) || 0;
+                        //新装备该孔位没孔(0)时，珠子丢弃
+                        if (oldDeco && oldDeco["lv"] > 0 && slotLv > 0) {
+                            deco.push(JSON.parse(JSON.stringify(oldDeco)));
+                        } else {
+                            deco.push({ "hex": "00", "lv": 0 });
+                        }
+                    }
+                    data["decoration"] = deco;
+                }
+            }
+        }
     }
     if (!data) {
         //装备数据不存在（如旧缓存的装备id已失效），忽略避免报错
@@ -3322,8 +3382,55 @@ function onSelectArmor(armor_id) {
     CurData.partMap[partIdx] = data;
     initKSkillSelect(partIdx, armor_id);
     initDecorationSel(partIdx);
+    //把继承下来的词条/珠子回填到 UI（initXXX 会把下拉/输入框重置，需要重新贴回去）
+    applyKSkillToUI(partIdx, data);
     refreshShowArmorData();
 
+}
+//把 partData.k_skill 里已保存的词条回填到界面（下拉选中 + 只读框文字）
+function applyKSkillToUI(partIdx, data) {
+    if (!data || !Array.isArray(data["k_skill"])) return;
+    let tb = $(".k_skill_tbody_" + partIdx);
+    let trs = tb.find("tr");
+    //注意：ks 是 data.k_skill 的"引用"，onSelectKSkill 会就地把它改掉，
+    //所以必须先把需要的字段拷成快照，再执行恢复逻辑。
+    let snap = data["k_skill"].map(function (k) {
+        return k ? { hex: k["k_skill_hex"], cost: k["k_skill_cost"], edit: k["k_skill_edit_hex"] } : null;
+    });
+    for (let i = 0; i < snap.length && i < trs.length; i++) {
+        let sk = snap[i];
+        if (!sk) continue;
+        let hex = sk.hex || "00";
+        if (hex === "00") continue; //空词条，跳过
+        let cost = sk.cost || 0;
+        let tr = $(trs[i]);
+        let ksel = tr.find("td").eq(0).find(".k_skill_select");
+        if (!ksel.length) continue;
+        //在下拉里找匹配的 option（值形如 {partIdx}_{行号}_{hex}_{cost}）
+        let wantVal = null;
+        ksel.find("option").each(function () {
+            let v = String($(this).val() || "");
+            let parts = v.split("_");
+            if (parts.length >= 4 && parts[2] === hex && String(parseInt(parts[3], 10)) === String(parseInt(cost, 10))) {
+                wantVal = v;
+            }
+        });
+        if (wantVal == null) continue;
+        //直接走 onSelectKSkill：它会重建该词条数据、同步显示框、并重算怪异点数消耗
+        ksel.val(wantVal);
+        onSelectKSkill(wantVal);
+        //恢复该行的"增减技能"（onSelectKSkill 会把 k_skill_edit_hex 重置为 00）
+        let editHex = sk.edit;
+        if (editHex && editHex !== "00") {
+            let csel = tr.find(".k_skill_change");
+            let wantEdit = `${partIdx}_${i}_${editHex}`;
+            if (csel.find("option[value='" + wantEdit + "']").length) {
+                csel.val(wantEdit);
+                //走真正的选择逻辑（写入数据 + 同步显示）
+                onSelectChangeSkill(wantEdit);
+            }
+        }
+    }
 }
 function clearOldNewSkillSel(partIdx, idx) {
     idx = parseInt(idx);
@@ -3718,11 +3825,28 @@ function initDecorationSel(partIdx) {
 
     if (s) {
         s = s.split("");
+        //该位置的珠子数据（用于回填，而不是沿用 UI 上的旧值）
+        let decoArr = null;
+        if (partIdx != "6" && partIdx != "7") {
+            let pd = CurData.partMap[partIdx];
+            decoArr = (pd && Array.isArray(pd["decoration"])) ? pd["decoration"] : null;
+        }
         //清空
         for (let idx = 0; idx < 3; idx++) {
             let si = parseInt(s[idx]);
             let pc = ".decoration_input_" + partIdx + "_" + idx;
-            let orgVal = $(pc).val();
+            //优先用数据里的珠子；没有数据时才退回 UI 上的旧值（护石/武器）
+            let orgVal;
+            if (decoArr) {
+                let d = decoArr[idx];
+                orgVal = "";
+                if (d && d["lv"] > 0) {
+                    let dinfo = getDecorationDataByHexLv(d["hex"], d["lv"]);
+                    orgVal = dinfo ? dinfo["dname"] : "";
+                }
+            } else {
+                orgVal = $(pc).val();
+            }
             //移除原生 datalist（改用自建搜索面板）
             $(pc).removeAttr("list");
             $(pc).removeAttr("data-slot");
@@ -3944,19 +4068,30 @@ function render_total_table() {
             name: DraftKey,
             partMap: CurData.partMap,
             charmData: CurData.charmData,
-            weaponData: CurData.weaponData
+            weaponData: CurData.weaponData,
+            extreme: isExtremeMode
         }));
     } else {
         PartMapObj[curName] = CurData;
+        //记住该配装当前所处模式（普通/极限），切回来时恢复
+        PartMapObj[curName].extreme = isExtremeMode;
         //确保草稿占位存在（独立对象，不与 CurData 共享引用）
         if (PartMapObj[DraftKey] === undefined) {
-            PartMapObj[DraftKey] = { name: DraftKey, partMap: {}, charmData: createCharmData(), weaponData: createWeaponData() };
+            PartMapObj[DraftKey] = { name: DraftKey, partMap: {}, charmData: createCharmData(), weaponData: createWeaponData(), extreme: false };
         }
     }
 
     //排序：把"当前项"放到最前（"临时配装"和其他配装一样处理，不再强制置尾）
-    PartMapAry = PartMapAry.filter(function (n) { return n !== curName; });
-    PartMapAry.unshift(curName);
+    //但如果用户刚手动把"当前项"从对比里移除（removedCurName），就不要再加回来
+    let removedThisRender = removedCurName;
+    if (removedCurName === curName) {
+        PartMapAry = PartMapAry.filter(function (n) { return n !== curName; });
+    } else if (PartMapAry.includes(curName)) {
+        PartMapAry = PartMapAry.filter(function (n) { return n !== curName; });
+        PartMapAry.unshift(curName);
+    }
+    //一次性标记：本渲染消费后立即清除，避免残留导致后续一直过滤该名字
+    removedCurName = null;
     //点草稿×清空后的一次性处理：把草稿移到最后
     if (draftToEndOnce) {
         draftToEndOnce = false;
@@ -3969,7 +4104,7 @@ function render_total_table() {
     }
 
     // 【修复点 2】：清理 PartMapAry 中的无效数据，防止报错
-    PartMapAry = PartMapAry.filter(name => name && PartMapObj[name]);
+    PartMapAry = PartMapAry.filter(name => name && PartMapObj[name] && name !== removedThisRender);
 
     for (let j = 0; j < PartMapAry.length; j++) {
         let name = PartMapAry[j];
@@ -4008,7 +4143,7 @@ function render_total_table() {
             }
             return has;
         })();
-        tb = tb + `<tr class="${allSame ? "same-skill-cur" : ""}" ><td class="small" style="text-align: right;">${sn}</td>`;
+        tb = tb + `<tr class="${allSame ? "same-skill-cur" : ""}" ><td class="small compare-skill-name" style="text-align: right;" data-hex="${hex}" title="点击查看技能效果">${sn}</td>`;
 
         for (let j = 0; j < PartMapAry.length; j++) {
             let name = PartMapAry[j];
@@ -4102,7 +4237,13 @@ function render_total_table() {
                 let t = tt[i];
                 document.getElementById(`def_total_${t}`).innerHTML = defTotal[t];;
             }
-            $(".skill_info_btn").addClass("is-locked");
+            //先把所有技能恢复为"未装备 + 等级归零"（避免切换配装后残留上一套的等级数字）
+            $(".skill_info_btn").addClass("is-locked").each(function () {
+                let $btn = $(this);
+                let h = String($btn.attr("id") || "").replace("skill_info_", "");
+                let mm = (skill_data[h] && skill_data[h]["max"]) ? skill_data[h]["max"] : 0;
+                $btn.find(".skill_info_status").text("0/" + mm);
+            });
         }
         if (ptr.charmData.skill1Lv) {
             let hex = ptr.charmData.skill1Hex;
@@ -4925,14 +5066,16 @@ function initSkillInfo() {
         for (let i = 0; i < a.length; i++) {
             let hex = a[i][0];
             let name = a[i][1];
-            // 名字较长的技能加 is-long（用更小字号，避免文字贴边/溢出铭牌）
+            //名字较长的技能加 is-mid / is-long（用更小字号，避免文字贴边/溢出铭牌）
             let nameLen = String(name).length;
             let nameCls = nameLen >= 7 ? " is-long" : (nameLen >= 6 ? " is-mid" : "");
+            //初始等级显示 0/该技能最大等级（而不是 0/0）
+            let maxLv = (skill_data[hex] && skill_data[hex]["max"]) ? skill_data[hex]["max"] : 0;
 
             str = str + `            
             <div class="col col-2 row skill_info_div">
             <button type="button" id="skill_info_${hex}" class="skill_info_btn is-locked${nameCls} btn rounded">
-            <span>${name}</span><span class="skill_info_status">0/0</span>
+            <span>${name}</span><span class="skill_info_status">0/${maxLv}</span>
             </button>            
             </div>
             `
@@ -5006,16 +5149,60 @@ async function addToCompare(name) {
 
 //从比较中移除
 async function removeFromCompare(name) {
-    if (PartMapAry <= 1) {
-        return;
-    }
+    //原来写的是 PartMapAry <= 1（数组与数字比较，永远为 false），改为判断"是否还有这个项"
+    let found = false;
     for (let i = 0; i < PartMapAry.length; i++) {
         if (PartMapAry[i] == name) {
             PartMapAry.splice(i, 1);
+            found = true;
+            i--;
+        }
+    }
+    if (found) {
+        //同步移除数据对象，避免残留
+        if (PartMapObj && PartMapObj[name] !== undefined) {
+            delete PartMapObj[name];
+        }
+        //如果删的正是"当前正在编辑的配装"：
+        //  1) 通知本次渲染不要再把它加回对比列表
+        //  2) 自动加载对比里的下一套，避免界面还残留被删配装的属性
+        if (name === CurData.name) {
+            removedCurName = name;
         }
     }
     refreshShowArmorData();
     loadCompareList();
+    //删除的是"当前配装"时，若有其它配装则切换过去（清掉界面上残留的属性）
+    if (name === CurData.name && PartMapAry.length > 0) {
+        let next = null;
+        for (let i = 0; i < PartMapAry.length; i++) {
+            if (PartMapAry[i] && PartMapObj[PartMapAry[i]]) { next = PartMapAry[i]; break; }
+        }
+        if (next != null) {
+            if (next === DraftKey) {
+                //草稿没有缓存文件，直接用内存里的数据贴进编辑器
+                let d = PartMapObj[DraftKey];
+                if (d) {
+                    //先切模式再贴数据，避免 applyDataToEditor 内部渲染把草稿记录写脏
+                    setExtremeMode(d.extreme === true);
+                    applyDataToEditor(JSON.parse(JSON.stringify(d)), DraftKey, true);
+                    refreshShowArmorData();
+                    showMsg("已切回:临时配装");
+                }
+            } else {
+                await loadCache(next);
+                //兜底：若该配装没有缓存文件（loadCache 读不到），改用内存里的数据
+                if (CurData.name === name && PartMapObj[next]) {
+                    let nd = JSON.parse(JSON.stringify(PartMapObj[next]));
+                    //先切模式再贴数据；旧配装没有 extreme 字段时按"普通模式"处理
+                    setExtremeMode(nd.extreme === true);
+                    applyDataToEditor(nd, next, false);
+                    refreshShowArmorData();
+                    showMsg("已切换到:" + next);
+                }
+            }
+        }
+    }
 }
 //折叠相同或展开
 function zipSame() {
