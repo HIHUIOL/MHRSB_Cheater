@@ -20,7 +20,7 @@ var versionMap = {
 var currentVersion = versionMap["16.0.2-港日"];
 
 //当前程序(PWA)版本号，与 sw.js 的 CACHE 版本保持一致
-var APP_VERSION = "v6.2.0";
+var APP_VERSION = "v6.2.1";
 
 var RefreshCount = 0;
 
@@ -38,6 +38,15 @@ var PartIdxMap = {
     "3": "hand",
     "4": "waist",
     "5": "foot",
+}
+
+//位置编号对应的中文部位名（用于界面显示）
+var PartIdxNameCN = {
+    "1": "头部",
+    "2": "胸部",
+    "3": "手部",
+    "4": "腰部",
+    "5": "腿部",
 }
 
 
@@ -72,7 +81,6 @@ var CharmData = {
 var AutoGen = true;
 var CharmSkillMax = false;
 var ZipSameItem = false;
-var TmpCacheName = "临时缓存";//"设置临时缓存"保存到缓存库时使用的固定名字
 var DraftName = "临时配装";//纯内存草稿的显示名（界面展示用）
 var DraftKey = "\u200b__DRAFT__\u200b";//草稿的内部 key：含零宽字符，用户不可能输入/保存出这个名字，用于与缓存库隔离
 var draftToEndOnce = false;//一次性标志：点草稿×清空后，让本次渲染把草稿排到最后
@@ -87,6 +95,26 @@ var MsgAry = [];
 var MsgLooping = false;
 //记录当前屏幕上存活的 toast，用于堆叠定位（避免重叠）
 var MsgStack = [];
+//暂存"待确认覆盖保存"的配装名（重名确认流程用）
+var PendingSaveName = "";
+//暂存 PWA 安装事件（beforeinstallprompt）
+var DeferredInstallPrompt = null;
+//在页面最早期捕获安装事件（必须早于 bindEvents，避免错过）
+window.addEventListener("beforeinstallprompt", function (e) {
+    e.preventDefault();
+    DeferredInstallPrompt = e;
+    //有安装机会时，显示引导条（用户手动关闭过则不再打扰）
+    try {
+        if (localStorage.getItem("MHRSB_install_dismissed") === "1") return;
+    } catch (err) { }
+    let el = document.getElementById("installHint");
+    if (el) el.classList.remove("d-none");
+});
+window.addEventListener("appinstalled", function () {
+    DeferredInstallPrompt = null;
+    let el = document.getElementById("installHint");
+    if (el) el.classList.add("d-none");
+});
 
 init();
 async function init() {
@@ -99,8 +127,10 @@ async function init() {
     PartMapAry = [DraftKey];
     //清掉旧的草稿数据，避免"临时配装"残留上一次编辑内容
     delete PartMapObj[DraftKey];
-    CurData.name = "";
+    //初始化后编辑的就是"临时配装"（草稿），"当前"标题应同步显示
+    CurData.name = DraftKey;
     $("#cache-name").val("");
+    $("#curTitle").text(DraftName);
     for (let i in skill_data) {
         let ski = skill_data[i];
         let cost = ski["cost"];
@@ -141,18 +171,87 @@ async function init() {
     bindEvents();
     //显示当前程序版本
     $("#app_version").text(APP_VERSION);
-    //检查更新按钮
-    $("#checkUpdate").off("click").on("click", function () {
+    //点击"版本号"检查更新（替代原来的"检查更新"按钮）
+    $("#app_version").off("click").on("click", function () {
         checkForUpdate();
+    }).off("keydown").on("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            checkForUpdate();
+        }
     });
-    $("#reInit").off("click").on("click", async function(){location.reload();});
+    $("#reInit").off("click").on("click", function () {
+        initConfirm();
+    });
+
+    //未保存修改检测：用户在编辑器里做过任何输入/选择/点击改动 => 标记为脏
+    //保存成功、加载配装、初始化、导入后会清除该标记
+    window.__mhrsbDirty = false;
+    function markDirty() { window.__mhrsbDirty = true; }
+    window.__mhrsbMarkDirty = markDirty;
+    //捕获所有输入框/下拉/多选的变更
+    $(document).on("input.mhrsbDirty change.mhrsbDirty", "#main input, #main textarea, #main select", function () {
+        markDirty();
+    });
+    //捕获编辑器内的点击型改动（选装备/选词条/选护石技能/切模式等）
+    $(document).on("click.mhrsbDirty", "#main .armor_select_display, #main .decoration_input, #main .k_skill_display, #main .k_skill_change_display, #main .charm_skill_display, #switchMode", function () {
+        markDirty();
+    });
+
+    //---- 主题切换（跟随系统 / 强制白天 / 强制暗色）----
+    // 存 localStorage: "auto"（默认，跟随系统） | "light"（强制白天） | "dark"（强制暗色）
+    var THEME_ORDER = ["auto", "light", "dark"];
+    // emoji 与文字分开写：手机端只显示 emoji（省空间），桌面端显示完整文字
+    var THEME_META = {
+        auto: { icon: "🌓", text: "跟随系统", title: "主题：跟随系统" },
+        light: { icon: "☀️", text: "白天", title: "主题：白天" },
+        dark: { icon: "🌙", text: "暗色", title: "主题：暗色" }
+    };
+    function getTheme() {
+        try { return localStorage.getItem("MHRSB_theme") || "auto"; } catch (e) { return "auto"; }
+    }
+    function applyTheme(mode) {
+        if (THEME_ORDER.indexOf(mode) < 0) mode = "auto";
+        let html = document.documentElement;
+        let darkCss = document.getElementById("darkForceCss");
+        html.setAttribute("data-theme", mode);
+        // 强制暗色时启用 dark-force.css（系统亮色下也能变暗）；否则禁用
+        if (darkCss) darkCss.setAttribute("media", (mode === "dark") ? "all" : "not all");
+        let btn = document.getElementById("themeToggle");
+        if (btn && THEME_META[mode]) {
+            btn.innerHTML = '<span class="theme-icon">' + THEME_META[mode].icon + '</span>' +
+                '<span class="theme-text">' + THEME_META[mode].text + '</span>';
+            btn.setAttribute("title", THEME_META[mode].title);
+        }
+    }
+    function setTheme(mode) {
+        try { localStorage.setItem("MHRSB_theme", mode); } catch (e) { }
+        applyTheme(mode);
+    }
+    applyTheme(getTheme());
+    $("#themeToggle").off("click").on("click", function () {
+        // 循环：跟随系统 → 白天 → 暗色 → 跟随系统
+        let cur = getTheme();
+        let next = THEME_ORDER[(THEME_ORDER.indexOf(cur) + 1) % THEME_ORDER.length];
+        setTheme(next);
+    });
 
     $("#version").change();
     $("#menu2").hide();
     startRender();
     showMsg("初始化完成");
     await initCache();
+    //加载完成后清除"未保存"标记
+    window.__mhrsbDirty = false;
     // await timeLag(500);
+    //未保存修改时，关闭/刷新页面给出原生提示，防误丢编辑
+    window.addEventListener("beforeunload", function (e) {
+        if (!window.__mhrsbDirty) return;
+        e.preventDefault();
+        //部分浏览器需要设置 returnValue 才会弹出提示
+        e.returnValue = "";
+        return "";
+    });
     $("#main").show();
 
 
@@ -177,15 +276,8 @@ async function checkForUpdate() {
                 let verMismatch = remoteVer && remoteVer !== APP_VERSION;
 
                 if (hasNewSW || verMismatch) {
-                    showMsg(`发现新版本${remoteVer ? ' ' + remoteVer : ''}，正在更新...`);
-                    if (reg.waiting) {
-                        //让等待中的新 SW 立即接管，接管后会触发 controllerchange → 自动刷新
-                        reg.waiting.postMessage({ type: 'SKIP_WAITING' });
-                    } else {
-                        //没有 waiting，则清掉当前 SW 缓存后刷新，确保拿到新代码
-                        await clearThisAppCache();
-                        setTimeout(() => location.reload(), 500);
-                    }
+                    //提示用户，由用户决定何时更新（避免打断正在进行的编辑）
+                    promptUpdate(remoteVer, reg);
                     return;
                 }
             }
@@ -193,19 +285,39 @@ async function checkForUpdate() {
         //兜底：直接对比远程版本
         let remoteVer2 = await fetchRemoteVersion();
         if (remoteVer2 && remoteVer2 !== APP_VERSION) {
-            showMsg(`发现新版本 ${remoteVer2}，正在更新...`);
-            await clearThisAppCache();
-            setTimeout(() => location.reload(), 500);
+            promptUpdate(remoteVer2, null);
         } else {
             showMsg("当前已是最新版本 " + APP_VERSION);
         }
     } catch (err) {
         console.error("检查更新失败:", err);
-        //检查失败时，仍尝试刷新
-        showMsg("检查更新失败，正在刷新...");
-        await clearThisAppCache();
-        setTimeout(() => location.reload(), 800);
+        showMsg("检查更新失败，请检查网络");
     }
+}
+
+//提示有新版本，由用户点击后更新
+function promptUpdate(remoteVer, reg) {
+    showPromptModal({
+        title: "发现新版本",
+        text: "检测到新版本" + (remoteVer ? " <strong>" + escapeHtml(remoteVer) + "</strong>" : "") + "。<br><span class='text-secondary small'>更新会刷新页面，未保存的编辑将丢失。</span>",
+        okText: "立即更新",
+        onOk: function () {
+            setTimeout(async function () {
+                try {
+                    if (reg && reg.waiting) {
+                        //让等待中的新 SW 立即接管，接管后会触发 controllerchange → 自动刷新
+                        reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+                    } else {
+                        //没有 waiting，则清掉当前 SW 缓存后刷新，确保拿到新代码
+                        await clearThisAppCache();
+                        location.reload();
+                    }
+                } catch (e) {
+                    location.reload();
+                }
+            }, 300);
+        }
+    });
 }
 
 //清空本应用相关的 SW 缓存（避免 reload 时命中旧缓存中的 index.html/js）
@@ -254,49 +366,133 @@ async function initCache() {
     //await loadCache(last);
 
 }
-//加载历史缓存列表
+//加载历史缓存列表（支持关键词过滤：仅影响显示，CList 始终是全部）
 async function loadList() {
     let cl = await CacheObj.readAll();
     CList = [];
-    //按保存时间倒序（新→旧）作为默认顺序
-    cl.sort(function (a, b) {
-        return b.v.t - a.v.t;
+    //先构建 name -> item 映射（CList / PartMapObj 必须是完整的，重名检测等依赖它）
+    for (let i = 0; i < cl.length; i++) {
+        let n = cl[i]["k"];
+        cl[i]["v"]["name"] = n;
+        CList.push(n);
+        let tmp = cl[i]["v"];
+        if (!tmp["name"]) tmp["name"] = n;
+        PartMapObj[n] = tmp;
+    }
+
+    //顺序完全由"手动排序（localStorage 里的 order）"决定：
+    //  order 里有的按其顺序排在前；不在 order 里的（新配装）按保存时间从新到旧放在最前面
+    let order = getCustomOrder();
+    let map = {};
+    for (let i = 0; i < cl.length; i++) map[cl[i]["k"]] = cl[i];
+
+    let ordered = [];
+    let used = {};
+    order.forEach(function (n) {
+        if (map[n]) { ordered.push(map[n]); used[n] = true; }
     });
-    //应用用户自定义顺序（存于 localStorage）：已记录的项按记录顺序排在前，新增项按时间追加在后
-    cl = applyCustomOrder(cl);
+    //新配装（不在 order 里）：按时间从新到旧，放在最前面
+    let fresh = cl.filter(function (it) { return !used[it["k"]]; });
+    fresh.sort(function (a, b) { return new Date(b.v.t).getTime() - new Date(a.v.t).getTime(); });
+    cl = fresh.concat(ordered);
+
+    //方向：asc = 正序（整体反转），desc = 逆序（默认，原样）
+    let isAsc = (getSortDir() === "asc");
+    if (isAsc) cl = cl.slice().reverse();
+
+    //关键词过滤（只影响渲染）
+    let kw = "";
+    try {
+        let el = document.getElementById("cacheSearchInput");
+        if (el) kw = (el.value || "").trim().toLowerCase();
+    } catch (e) { }
+    let shown = cl;
+    if (kw) {
+        shown = cl.filter(function (item) {
+            return String(item["k"]).toLowerCase().indexOf(kw) >= 0;
+        });
+    }
 
     let str = "";
     let cl0 = ((cl && cl[0]) ? cl[0]["k"] : DraftKey);
     //注意：不再把缓存项自动加入"对比列表"，对比由用户主动"添加对比"触发
-    for (let i = 0; i < cl.length; i++) {
-
-        let n = cl[i]["k"];
-        let t = cl[i]["v"]["t"];
-        cl[i]["v"]["name"] = n;
-        CList.push(cl[i]["v"]["name"]);
-        let tmp = cl[i]["v"];
-        if (!tmp["name"]) tmp["name"] = n;
-        // PartMapAry.push(n);
-        PartMapObj[n] = tmp;
+    let isFiltering = !!kw;
+    for (let i = 0; i < shown.length; i++) {
+        let n = shown[i]["k"];
+        let t = shown[i]["v"]["t"];
         t = format(t);
-        //第一项不显示"上移"，最后一项不显示"下移"
-        let upBtn = (i > 0)
-            ? `<button type="button" class="moveCacheUp btn btn-outline-secondary btn-sm" data-name="${n}" title="上移">↑</button>`
-            : "";
-        let downBtn = (i < cl.length - 1)
-            ? `<button type="button" class="moveCacheDown btn btn-outline-secondary btn-sm" data-name="${n}" title="下移">↓</button>`
-            : "";
+        //过滤状态下隐藏"上移/下移"（过滤后"相邻"含义会乱）
+        let upBtn = "", downBtn = "";
+        if (!isFiltering) {
+            upBtn = (i > 0)
+                ? `<button type="button" class="moveCacheUp btn btn-outline-secondary btn-sm" data-name="${n}" title="上移">↑</button>`
+                : "";
+            downBtn = (i < shown.length - 1)
+                ? `<button type="button" class="moveCacheDown btn btn-outline-secondary btn-sm" data-name="${n}" title="下移">↓</button>`
+                : "";
+        }
+        //序号：按当前显示顺序，从 1 开始
+        let no = i + 1;
         str = str + `<li class="list-group-item history-item">
-        <button type="button" class="cacheItem btn btn-link p-0 text-start flex-grow-1" data-name="${n}" title="${n}-${t}">${n}<br><small class="text-secondary">${t}</small></button>
+        <span class="cache-index text-secondary small" title="第 ${no} 个">#${no}</span>
+        <button type="button" class="cacheItem btn btn-link p-0 text-start flex-grow-1" data-name="${n}" title="${escapeHtml(n)}-${t}">${escapeHtml(n)}<br><small class="text-secondary">${t}</small></button>
         ${upBtn}${downBtn}
         <button type="button" class="shareCache btn btn-outline-success btn-sm" data-name="${n}">分享</button>
         <button type="button" class="renameCache btn btn-outline-secondary btn-sm" data-name="${n}">重命名</button>
         <button type="button" class="deleteCache btn btn-outline-danger btn-sm" data-name="${n}">删除</button>
         </li>`;
     }
+    //空状态：区分"没有配装"和"搜索无结果"
+    if (shown.length === 0) {
+        if (cl.length === 0) {
+            str = `<li class="list-group-item history-empty text-center text-secondary py-4">
+                <div class="mb-1">暂无配装</div>
+                <small>点击下方「保存」即可把当前配装保存到这里</small>
+            </li>`;
+        } else {
+            str = `<li class="list-group-item history-empty text-center text-secondary py-4">
+                <div class="mb-1">没有匹配「${escapeHtml(kw)}」的配装</div>
+                <small>共 ${cl.length} 个配装</small>
+            </li>`;
+        }
+    }
     $(".dropdown-menu-cache").html(str);
+    //清除按钮的显示与输入框非空联动
+    try {
+        let cbtn = document.getElementById("cacheSearchClear");
+        if (cbtn) cbtn.style.display = kw ? "" : "none";
+    } catch (e) { }
+    //配装总数 + 排序按钮文案
+    try {
+        let lbl = document.getElementById("cacheCountLabel");
+        if (lbl) lbl.textContent = cl.length ? ("共 " + cl.length + " 个配装" + (kw ? "，" + shown.length + " 个匹配" : "")) : "";
+        updateSortToggleText();
+    } catch (e) { }
     loadCompareList();
     return cl0;
+}
+
+//读取排序方向（desc=逆序，默认；asc=正序）
+function getSortDir() {
+    try {
+        let d = localStorage.getItem("MHRSB_cache_sortdir");
+        return (d === "asc") ? "asc" : "desc";
+    } catch (e) {
+        return "desc";
+    }
+}
+function setSortDir(d) {
+    try { localStorage.setItem("MHRSB_cache_sortdir", d === "asc" ? "asc" : "desc"); } catch (e) { }
+}
+//更新正/逆序按钮文案
+function updateSortToggleText() {
+    let btn = document.getElementById("cacheSortToggle");
+    if (!btn) return;
+    if (getSortDir() === "asc") {
+        btn.textContent = "↑ 正序";
+    } else {
+        btn.textContent = "↓ 逆序";
+    }
 }
 
 //读取用户自定义配装顺序（localStorage）
@@ -317,42 +513,22 @@ function setCustomOrder(arr) {
         // ignore
     }
 }
-//按自定义顺序重排列表：已记录的按记录顺序，未记录的（新项）保持传入顺序接在后面
-function applyCustomOrder(cl) {
-    let order = getCustomOrder();
-    if (!order.length) return cl;
-    let map = {};
-    for (let i = 0; i < cl.length; i++) {
-        map[cl[i]["k"]] = cl[i];
-    }
-    let result = [];
-    for (let i = 0; i < order.length; i++) {
-        let k = order[i];
-        if (map[k]) {
-            result.push(map[k]);
-            delete map[k];
-        }
-    }
-    //剩下的（新项 / 已删除的跳过）保持原顺序追加
-    for (let i = 0; i < cl.length; i++) {
-        let k = cl[i]["k"];
-        if (map[k]) {
-            result.push(cl[i]);
-            delete map[k];
-        }
-    }
-    return result;
-}
-//上移 / 下移"我的配装"中的某一项
+//上移 / 下移"我的配装"中的某一项（正序/逆序都能用）
 function moveCacheItem(name, dir) {
     //以当前列表渲染顺序为准（读 DOM 里的 data-name）
     let names = [];
     $(".dropdown-menu-cache .history-item .cacheItem").each(function () {
         names.push($(this).attr("data-name"));
     });
+    //若当前是"正序"，DOM 顺序是 order 的翻转 → 先翻回 order 视角，避免越调越乱
+    let isAsc = (getSortDir() === "asc");
+    if (isAsc) names.reverse();
+
     let idx = names.indexOf(name);
     if (idx < 0) return;
-    let swap = (dir === "up") ? idx - 1 : idx + 1;
+    //注意：正序下"屏幕上点的↑"= order 视角里的"↓"，所以方向要取反
+    let realDir = isAsc ? (dir === "up" ? "down" : "up") : dir;
+    let swap = (realDir === "up") ? idx - 1 : idx + 1;
     if (swap < 0 || swap >= names.length) return;
     //交换
     let tmp = names[idx];
@@ -587,7 +763,7 @@ function applyDataToEditor(ptr, name, isDraft) {
     }
     CurData.name = name;
     //草稿不写入缓存名输入框（它没有对应的缓存记录）
-    if (!isDraft && name != TmpCacheName) $("#cache-name").val(name);
+    if (!isDraft) $("#cache-name").val(name);
     if (isDraft) $("#cache-name").val("");
     $("#curTitle").text(displayName(name));
 }
@@ -612,6 +788,7 @@ function switchToDraft() {
     PartMapAry.unshift(DraftKey);
     refreshShowArmorData();
     showMsg("已切回:临时配装");
+    window.__mhrsbDirty = false;
 }
 
 //清空"临时配装"（纯内存草稿）
@@ -711,11 +888,12 @@ async function loadCache(name) {
             PartMapAry.unshift(name);
             refreshShowArmorData();
             showMsg("加载完成:" + name);
+            window.__mhrsbDirty = false;
         } catch (err) {
             console.error("加载缓存失败:", err);
             showMsg("加载缓存失败-" + (err && err.message ? err.message : JSON.stringify(err)));
             if (confirm(`加载缓存失败 是否删除【${name}】？`)) {
-                delCache(name);
+                doDelCache(name);
             }
         }
     } else {
@@ -724,33 +902,161 @@ async function loadCache(name) {
     }
 
 }
-//保存当前设置缓存
-async function saveCache() {
-    // prompt
-    $("#saveCache-spinner").show();
-    let name = $("#cache-name").val();
-    if (name) {
-        CurData.name = name;
-        await execSave(name, CurData.partMap, CurData.charmData, CurData.weaponData, null, isExtremeMode);
-        $("#saveCache-spinner").hide();
-        //需要更新名称
-        $("#cache-name").val(name);
-        showMsg("保存成功:" + name);
-        await loadList();
-        $('#cacheModal').modal('hide');
+//判断当前是否有"未保存"的编辑内容（用于初始化前提醒）
+function hasUnsavedEdit() {
+    // 只要任一部位选了装备 / 护石技能非空 / 武器珠子被改过，就认为有内容
+    for (let i in PartIdxMap) {
+        if (CurData.partMap[i]) return true;
+    }
+    try {
+        if (CurData.charmData && (CurData.charmData.skill1Type || CurData.charmData.skill2Type)) return true;
+    } catch (e) { }
+    // 当前标题不是"临时配装"说明在编辑已保存的配装
+    let t = $("#curTitle").text().trim();
+    if (t && t !== DraftName) return true;
+    return false;
+}
+//点击「初始化」：先弹确认框，防误触丢失编辑
+function initConfirm() {
+    let dirty = hasUnsavedEdit();
+    $("#initConfirmWarn").toggleClass("d-none", !dirty);
+    $("#initConfirmModal").modal("show");
+}
+//通用输入/确认弹窗
+// opts: {title, text, withInput, inputValue, inputMaxlength, okText, warnText, onOk(value)}
+// onOk 若返回 false，则弹窗不关闭（用于校验失败时保留）
+//HTML 转义（用于把用户输入安全插入 HTML）
+function escapeHtml(s) {
+    let str = String(s == null ? "" : s);
+    str = str.split("&").join("&amp;");
+    str = str.split("<").join("&lt;");
+    str = str.split(">").join("&gt;");
+    str = str.split(String.fromCharCode(34)).join(String.fromCharCode(38) + "quot;");
+    str = str.split("'").join("&#39;");
+    return str;
+}
+var PromptModalCb = null;
+function showPromptModal(opts) {
+    opts = opts || {};
+    $("#promptModalLabel").text(opts.title || "提示");
+    $("#promptModalText").html(opts.text || "");
+    $("#promptModalOk").text(opts.okText || "确定");
+    $("#promptModalOk").removeClass("btn-warning btn-danger").addClass(opts.okClass || "btn-primary");
+    // 警告文字
+    if (opts.warnText) {
+        $("#promptModalWarn").text(opts.warnText).removeClass("d-none");
     } else {
-        $("#cache-name").focus();
-        $("#saveCache-spinner").hide();
+        $("#promptModalWarn").addClass("d-none");
+    }
+    // 输入框
+    let $inp = $("#promptModalInput");
+    if (opts.withInput) {
+        $inp.removeClass("d-none").attr("maxlength", opts.inputMaxlength || 30).val(opts.inputValue || "");
+    } else {
+        $inp.addClass("d-none").val("");
+    }
+    // 取消按钮（技能效果等纯展示弹窗可隐藏）
+    $("#promptModalCancel").toggleClass("d-none", !!opts.hideCancel);
+    PromptModalCb = opts.onOk || null;
+    //关键：打开前先关掉所有已打开的弹窗，避免嵌套导致"第一次点击关掉旧弹窗"
+    closeAllModals();
+    let pmEl = document.getElementById("promptModal");
+    //"点外部关闭"由我们自己在 keydown / 遮罩点击里判断（不用 Bootstrap 的 backdrop 选项，
+    //避免 dispose 旧实例后 backdrop 事件丢失导致报错）
+    pmEl.__dismissOnBackdrop = !!opts.dismissOnBackdrop;
+    if (!pmEl.__backdropBound) {
+        pmEl.__backdropBound = true;
+        //点遮罩（modal 元素本身）关闭
+        pmEl.addEventListener("mousedown", function (e) {
+            if (e.target === pmEl && pmEl.__dismissOnBackdrop) {
+                bootstrap.Modal.getOrCreateInstance(pmEl).hide();
+            }
+        });
+        //Esc 关闭（仅纯展示弹窗）
+        pmEl.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && pmEl.__dismissOnBackdrop) {
+                bootstrap.Modal.getOrCreateInstance(pmEl).hide();
+            }
+        });
+    }
+    bootstrap.Modal.getOrCreateInstance(pmEl).show();
+    if (opts.withInput) {
+        setTimeout(function () {
+            let el = document.getElementById("promptModalInput");
+            if (el && !isTouchDevice()) { el.focus(); el.select(); }
+        }, 350);
     }
 }
-//设置临时缓存
-async function setTmpCache() {
-    await execSave(TmpCacheName, CurData.partMap, CurData.charmData, CurData.weaponData, null, isExtremeMode);
-    //同步更新"当前"标题并刷新配装列表，避免需要手动刷新才显示
-    CurData.name = TmpCacheName;
-    $("#curTitle").text(TmpCacheName);
+//安全关闭所有已打开的 Bootstrap 弹窗（避免叠加）
+function closeAllModals() {
+    if (!window.bootstrap) return;
+    document.querySelectorAll(".modal.show").forEach(function (el) {
+        try {
+            bootstrap.Modal.getOrCreateInstance(el).hide();
+        } catch (e) { }
+    });
+}
+//绑定通用弹窗按钮（只绑一次）
+function bindPromptModal() {
+    $("#promptModalOk").off("click").on("click", function () {
+        let val = $("#promptModalInput").val();
+        if (PromptModalCb) {
+            let ret = PromptModalCb(val);
+            if (ret === false) return; // 校验失败，保持打开
+        }
+        PromptModalCb = null;
+        bootstrap.Modal.getOrCreateInstance(document.getElementById("promptModal")).hide();
+    });
+    $("#promptModalCancel").off("click").on("click", function () {
+        PromptModalCb = null;
+    });
+    //回车 = 确定
+    $("#promptModalInput").off("keydown").on("keydown", function (e) {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            $("#promptModalOk").trigger("click");
+        }
+    });
+}
+
+//保存当前设置缓存
+async function saveCache() {
+    $("#saveCache-spinner").show();
+    let name = $("#cache-name").val().trim();
+    if (!name) {
+        $("#cache-name").focus();
+        $("#saveCache-spinner").hide();
+        showMsg("请填写备注名");
+        return;
+    }
+    //重名检测：已存在同名配装时，弹"覆盖确认"（独立弹窗，会先关掉保存弹窗）
+    if (CList && CList.indexOf(name) >= 0) {
+        $("#saveCache-spinner").hide();
+        showPromptModal({
+            title: "配装已存在",
+            text: "已存在名为 <strong>" + escapeHtml(name) + "</strong> 的配装。<br><span class='text-danger small'>继续将<strong>覆盖</strong>原配装内容！</span>",
+            okText: "覆盖保存",
+            okClass: "btn-warning",
+            onOk: function () {
+                //延迟一点再保存，等弹窗关闭动画完成
+                setTimeout(function () { doSaveCache(name); }, 300);
+            }
+        });
+        return;
+    }
+    await doSaveCache(name);
+}
+//真正执行保存（被 saveCache 或「覆盖保存」按钮调用）
+async function doSaveCache(name) {
+    $("#saveCache-spinner").show();
+    CurData.name = name;
+    await execSave(name, CurData.partMap, CurData.charmData, CurData.weaponData, null, isExtremeMode);
+    $("#saveCache-spinner").hide();
+    $("#cache-name").val(name);
+    showMsg("保存成功:" + name);
+    window.__mhrsbDirty = false;
     await loadList();
-    showMsg("缓存成功");
+    $('#cacheModal').modal('hide');
 }
 const TmpCacheSharePrefix = "MHRSB1:";
 
@@ -782,10 +1088,10 @@ async function gzipDecompress(bytes) {
     return await new Response(stream).text();
 }
 
-//分享指定名称的缓存；不传则分享"临时缓存"
+//分享指定名称的缓存
 async function shareCacheByName(name) {
-    name = name || TmpCacheName;
     try {
+        if (!name) throw new Error("没有指定要分享的配装");
         const cache = await CacheObj.get(name);
         if (!cache) throw new Error("没有找到缓存：" + name);
         const json = JSON.stringify({
@@ -796,8 +1102,25 @@ async function shareCacheByName(name) {
             extreme: cache.extreme
         });
         const code = TmpCacheSharePrefix + bytesToBase64(await gzipCompress(json));
-        await copyText(code);
-        showMsg("分享码已复制，长度:" + code.length);
+        let ok = await copyText(code);
+        if (ok) {
+            showMsg("分享码已复制到剪贴板（长度 " + code.length + "）");
+        } else {
+            showMsg("复制失败，已弹出分享码供手动复制");
+        }
+        //额外弹窗显示分享码，方便手动复制/查看（复制失败时的兜底）
+        showPromptModal({
+            title: "分享码",
+            text: "配装 <strong>" + escapeHtml(name) + "</strong> 的分享码（已尝试复制到剪贴板）：",
+            withInput: true,
+            inputValue: code,
+            inputMaxlength: 100000,
+            okText: "复制",
+            onOk: async function (val) {
+                let ok2 = await copyText(val || code);
+                showMsg(ok2 ? "已复制分享码" : "复制失败，请长按输入框手动复制");
+            }
+        });
     } catch (err) {
         console.error(err);
         showMsg("分享失败:" + err.message);
@@ -817,19 +1140,67 @@ async function copyText(text) {
     return fallbackCopy(text);
 }
 
-//重命名缓存
-async function renameCache(oldName) {
+//重命名缓存（用通用弹窗，含重名校验）
+function renameCache(oldName) {
+    //找到原配装
+    CacheObj.get(oldName).then(function (cache) {
+        if (!cache) {
+            showMsg("没有找到配装：" + oldName);
+            return;
+        }
+        showPromptModal({
+            title: "重命名配装",
+            text: "将配装 <strong>" + escapeHtml(oldName) + "</strong> 重命名为：",
+            withInput: true,
+            inputValue: oldName,
+            inputMaxlength: 30,
+            okText: "重命名",
+            onOk: function (val) {
+                let newName = (val || "").trim();
+                if (!newName) {
+                    showMsg("名称不能为空");
+                    return false; // 保持弹窗
+                }
+                if (newName === oldName) {
+                    return true; // 没变，直接关闭
+                }
+                //重名校验：目标名已被占用 → 询问是否覆盖
+                if (CList && CList.indexOf(newName) >= 0) {
+                    //延迟一点，再弹"覆盖"确认（会先关掉当前弹窗）
+                    setTimeout(function () {
+                        showPromptModal({
+                            title: "名称已存在",
+                            text: "已存在名为 <strong>" + escapeHtml(newName) + "</strong> 的配装。<br><span class='text-danger small'>继续将<strong>覆盖</strong>那个配装，并把「" + escapeHtml(oldName) + "」删除！</span>",
+                            okText: "覆盖并重命名",
+                            okClass: "btn-warning",
+                            onOk: function () {
+                                setTimeout(function () {
+                                    doRenameCache(oldName, newName, cache);
+                                }, 300);
+                            }
+                        });
+                    }, 300);
+                    return true; // 关闭当前输入弹窗
+                }
+                //无冲突，直接改
+                doRenameCache(oldName, newName, cache);
+                return true;
+            }
+        });
+    }).catch(function (err) {
+        console.error(err);
+        showMsg("重命名失败:" + (err && err.message ? err.message : err));
+    });
+}
+//执行重命名（oldName → newName），overwrite 表示目标名可能已存在
+async function doRenameCache(oldName, newName, cache) {
     try {
-        const cache = await CacheObj.get(oldName);
-        if (!cache) throw new Error("没有找到缓存：" + oldName);
-        let newName = prompt("重命名为：", oldName);
-        if (newName == null) return;
-        newName = newName.trim();
-        if (!newName || newName === oldName) return;
         //写入新名字（保留原模式）
         await execSave(newName, cache.partMap, cache.charmData, cache.weaponData, cache.t, cache.extreme);
-        //删除旧名字
-        await CacheObj.delete(oldName);
+        //删除旧名字（若新旧不同；避免误删刚写入的）
+        if (oldName !== newName) {
+            await CacheObj.delete(oldName);
+        }
         //若当前加载的正是这一条，同步更新名称显示
         if (CurData.name === oldName) {
             CurData.name = newName;
@@ -918,7 +1289,7 @@ async function importCachesFromObject(data) {
     return { count: okCount, name: lastName };
 }
 
-//点击「导入配装」：优先读剪贴板直接导入，失败/无效再弹手动输入
+//点击「导入配装」：优先读剪贴板尝试直接导入，失败/无效再弹手动输入
 async function startImport() {
     let text = "";
     try {
@@ -930,21 +1301,26 @@ async function startImport() {
         console.warn("读取剪贴板失败:", e);
     }
 
+    //剪贴板里是分享码：尝试直接导入（省去弹窗）
     if (text.startsWith(TmpCacheSharePrefix)) {
-        // 剪贴板里是有效分享码，直接导入，不弹窗
         showMsg("已从剪贴板导入…");
         try {
             const name = await importFromCode(text);
             showMsg("配装导入成功：" + name);
+            window.__mhrsbDirty = false;
+            return; //导入成功，不弹窗
         } catch (err) {
+            //分享码无效：提示后仍弹出手动输入弹窗，让用户修改/粘贴正确的分享码
             console.error(err);
             showMsg("导入失败:" + (err && err.message ? err.message : err));
         }
-    } else {
-        // 剪贴板无有效分享码：弹窗手动输入（有内容就带上，方便用户修改/确认）
-        $("#importCacheText").val(text || "");
-        $("#importCacheModal").modal("show");
     }
+
+    //剪贴板内容不像分享码（或导入失败）：弹出手动输入框
+    //仅当剪贴板里确实是一段分享码时才预填，避免把无关内容塞进输入框
+    let prefill = text.startsWith(TmpCacheSharePrefix) ? text : "";
+    $("#importCacheText").val(prefill);
+    $("#importCacheModal").modal("show");
 }
 
 async function importTmpCache() {
@@ -954,6 +1330,7 @@ async function importTmpCache() {
         $("#importCacheText").val("");
         $("#importCacheModal").modal("hide");
         showMsg("配装导入成功：" + name);
+        window.__mhrsbDirty = false;
     } catch (err) {
         console.error(err);
         showMsg("导入失败:" + err.message);
@@ -963,7 +1340,17 @@ async function importTmpCache() {
 async function execSave(n, p, c, w, t, ext) {
     //ext：保存时的模式（是否极限模式），用于加载时自动切回对应模式；
     //ext 为 undefined 时表示旧数据（不含模式信息），不写入 extreme 字段，加载时保持当前模式
-    let obj = { "name": n, "partMap": p, "charmData": c, "weaponData": w, "t": t ? t : new Date() };
+    //t 可能是 Date / ISO 字符串 / 数字时间戳，统一转成 Date，保证排序正确
+    let tt;
+    if (!t) {
+        tt = new Date();
+    } else if (t instanceof Date) {
+        tt = t;
+    } else {
+        let d = new Date(t);
+        tt = isNaN(d.getTime()) ? new Date() : d;
+    }
+    let obj = { "name": n, "partMap": p, "charmData": c, "weaponData": w, "t": tt };
     if (ext !== undefined) {
         obj["extreme"] = ext ? 1 : 0;
     }
@@ -976,14 +1363,25 @@ async function execLoad(n) {
         cache = await CacheObj.get(n);
         if (cache && !cache.name) cache.name = n;
     } catch (err) {
-        console.log(err);
         showMsg("获取缓存失败" + err.message);
     }
     return cache;
 }
-async function delCache(name) {
+//删除单个配装：先弹确认，防误删
+function delCache(name) {
+    showPromptModal({
+        title: "删除配装",
+        text: "确定删除配装 <strong>" + escapeHtml(name) + "</strong>？<br><span class='text-danger small'>删除后无法恢复！</span>",
+        okText: "删除",
+        okClass: "btn-danger",
+        onOk: function () {
+            setTimeout(function () { doDelCache(name); }, 300);
+        }
+    });
+}
+//真正执行删除
+async function doDelCache(name) {
     await CacheObj.delete(name);
-    // console.log(name);
     showMsg("删除成功:" + name);
     await loadList();
 }
@@ -1009,6 +1407,11 @@ async function delAllCaches() {
 async function exportAllCaches() {
     try {
         let all = await CacheObj.readAll();
+        //没有配装时提示，避免导出空文件
+        if (!all || !all.length) {
+            showMsg("没有可导出的配装");
+            return;
+        }
         let arr = [];
         for (let i = 0; i < all.length; i++) {
             let v = all[i]["v"] || {};
@@ -1222,7 +1625,6 @@ function initDecorationData() {
             }
         }
         a.sort(function (a, b) {
-            //return -101
             let n = b.slot - a.slot;
             if (n == 0) {
                 n = parseInt(a.hex, 16) - parseInt(b.hex, 16);
@@ -1263,6 +1665,8 @@ function initHtml() {
         let t = $(tmp);
 
         t.find(".armor_pos").html(idx + "_" + getBoxNumberHex(idx));
+        t.find(".armor_pos_label").html(idx);
+        t.find(".armor_pos_name").html(PartIdxNameCN[idx] || "");
         let tmp2 = t.find(".k_skill_tbody").html();
         let tr = "";
         for (let i = 0; i < 7; i++) {
@@ -1276,7 +1680,6 @@ function initHtml() {
             s.attr("id", "decoration_input_" + idx + "_" + i);
             dselStr = dselStr + s[0].outerHTML;
         }
-        // console.log(dselStr)
         t.find(".decoration_select_container").html(dselStr);
 
         t.find(".k_skill_tbody").html(tr);
@@ -1331,8 +1734,71 @@ function bindEvents() {
     $("#saveCache").on("click", function (event) {
         saveCache();
     });
-    $("#setTmpCache").on("click", function (event) {
-        setTmpCache();
+    //初始化确认弹窗 → 确认按钮：刷新页面（真正的重置）
+    $("#initConfirmBtn").off("click").on("click", function () {
+        $("#initConfirmModal").modal("hide");
+        //已确认初始化，清除"未保存"标记，避免刷新时再弹一次"确认离开"
+        window.__mhrsbDirty = false;
+        location.reload();
+    });
+    //点「返回顶部」按钮：平滑滚回顶部
+    $("#backToTop").off("click").on("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    //技能一览：展开/收起切换（默认折叠，状态存 localStorage）
+    function applySkillInfoCollapsed(collapsed) {
+        let el = document.getElementById("skillInfo");
+        let btn = document.getElementById("skillInfoToggle");
+        if (!el || !btn) return;
+        el.classList.toggle("is-collapsed", collapsed);
+        btn.setAttribute("aria-expanded", collapsed ? "false" : "true");
+        let txt = btn.querySelector(".si-toggle-text");
+        if (txt) txt.textContent = collapsed ? "展开技能一览" : "收起技能一览";
+    }
+    let skillInfoCollapsed = true;
+    try { skillInfoCollapsed = localStorage.getItem("MHRSB_skillInfo_collapsed") !== "0"; } catch (e) { }
+    applySkillInfoCollapsed(skillInfoCollapsed);
+    $("#skillInfoToggle").off("click").on("click", function () {
+        //当前是折叠 → 展开；当前是展开 → 折叠
+        let nowCollapsed = document.getElementById("skillInfo").classList.contains("is-collapsed");
+        applySkillInfoCollapsed(!nowCollapsed);
+        try { localStorage.setItem("MHRSB_skillInfo_collapsed", (!nowCollapsed) ? "1" : "0"); } catch (e) { }
+    });
+    //滚动超过 400px 时显示按钮
+    $(window).off("scroll.backToTop").on("scroll.backToTop", function () {
+        $("#backToTop").toggleClass("show", window.scrollY > 400);
+    });
+    //PWA 安装引导
+    initInstallHint();
+    //绑定通用输入/确认弹窗
+    bindPromptModal();
+    //配装搜索：输入即过滤
+    $("#cacheSearchInput").off("input").on("input", function () {
+        loadList();
+    });
+    //配装搜索：清除
+    $("#cacheSearchClear").off("click").on("click", function () {
+        $("#cacheSearchInput").val("");
+        loadList();
+        if (!isTouchDevice()) document.getElementById("cacheSearchInput").focus();
+    });
+    //正序 / 逆序：整体翻转显示（不改手动排序数据）
+    $("#cacheSortToggle").off("click").on("click", function () {
+        setSortDir(getSortDir() === "asc" ? "desc" : "asc");
+        loadList();
+    });
+    //打开"我的配装"抽屉时，若搜索框有残留则清掉（避免下次打开还是过滤状态）
+    $("#historyDrawer").off("shown.bs.offcanvas").on("shown.bs.offcanvas", function () {
+        let el = document.getElementById("cacheSearchInput");
+        if (el && el.value) {
+            el.value = "";
+            loadList();
+        }
+    });
+    //抽屉内容滚动时，给顶部固定区加分隔线（提示"已吸顶"）
+    $(document).off("scroll.cacheSticky", ".offcanvas-body").on("scroll.cacheSticky", ".offcanvas-body", function () {
+        let st = this.querySelector(".cache-drawer-sticky");
+        if (st) st.classList.toggle("is-stuck", this.scrollTop > 2);
     });
     //点击「导入配装」：先尝试读剪贴板直接导入，失败再弹手动输入
     $("#importTmpCache").on("click", function (event) {
@@ -1537,7 +2003,6 @@ function getDefStatusByPoolAndHex(pool_id, hex) {
             break;
         }
     }
-    // { hex: "45", name: "防御+3", cost: 1 },    
     let dM = {
         "防御": "def_p",
         "火耐性": "def_f",
@@ -1591,28 +2056,6 @@ function getCharmSlotMap(sklvType) {
         "C": ["411", "331", "222"],
     }
 
-    // let m = {
-    //     "SS": ["400", "311"],
-    //     "SA": ["400", "311"],
-    //     "SB": ["400", "311"],
-    //     "SC": ["400", "311"],
-    //     "S": ["400", "311"],
-    //     "AS": ["400", "311"],
-    //     "AA": ["400", "311"],
-    //     "AB": ["400", "311"],
-    //     "AC": ["400", "311"],
-    //     "A": ["400", "311"],
-    //     "BS": ["400", "311"],
-    //     "BA": ["400", "311"],
-    //     "BB": ["400", "321"],
-    //     "BC": ["400", "321"],
-    //     "B": ["400", "321"],
-    //     "CS": ["400", "311"],
-    //     "CA": ["400", "311"],
-    //     "CB": ["400", "321"],
-    //     "CC": ["400", "321"],
-    //     "C": ["400", "321"],
-    // }
     return m[sklvType];
 }
 
@@ -1804,7 +2247,10 @@ function buildArmorSearchData() {
             slot: slot_simplify(o),
             skills: skills,
             def: o["bougyo_max"] || o["bougyo"] || 0,
-            res: [o["def_f"] || 0, o["def_w"] || 0, o["def_t"] || 0, o["def_i"] || 0, o["def_d"] || 0]
+            res: [o["def_f"] || 0, o["def_w"] || 0, o["def_t"] || 0, o["def_i"] || 0, o["def_d"] || 0],
+            //稀有度（R）与怪异点数消耗（cost），用于列表展示
+            rank: parseInt(o["rank"], 10) || 0,
+            cost: (armor_pool_cost[o["id"]] && armor_pool_cost[o["id"]]["cost"] != null) ? armor_pool_cost[o["id"]]["cost"] : null
         });
     }
     //按装备 id 从大到小排序（与原有下拉顺序一致）
@@ -1871,6 +2317,26 @@ function bindArmorSearch() {
         let which = $(this).attr("data-charm");
         openCharmSearch(which);
     });
+    //【键盘可达】所有"只读选择框"加 tabindex，支持 Tab 聚焦 + Enter/Space 打开面板
+    // 使用事件委托，动态生成的框（装备/词条/珠子等）也自动生效
+    $(document)
+        .off("focusin.a11y", ".armor_select_display, .decoration_input, .k_skill_display, .k_skill_change_display, .charm_skill_display")
+        .on("focusin.a11y", ".armor_select_display, .decoration_input, .k_skill_display, .k_skill_change_display, .charm_skill_display", function () {
+            // 只在未设置时补一次，避免重复
+            if (this.getAttribute("tabindex") === null) {
+                this.setAttribute("tabindex", "0");
+            }
+        });
+    $(document)
+        .off("keydown.a11y", ".armor_select_display, .decoration_input, .k_skill_display, .k_skill_change_display, .charm_skill_display")
+        .on("keydown.a11y", ".armor_select_display, .decoration_input, .k_skill_display, .k_skill_change_display, .charm_skill_display", function (e) {
+            if ($(this).prop("disabled")) return;
+            // Enter 或 空格 → 等同于点击，打开对应面板
+            if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") {
+                e.preventDefault();
+                $(this).trigger("click");
+            }
+        });
     //搜索输入
     $(document).off("input", "#armorSearchInput").on("input", "#armorSearchInput", function () {
         renderArmorSearchList($(this).val());
@@ -1950,6 +2416,40 @@ function openArmorSearch(partIdx) {
     }
 }
 
+//PWA 安装引导：绑定「安装」「关闭」按钮
+function initInstallHint() {
+    $("#installBtn").off("click").on("click", async function () {
+        if (!DeferredInstallPrompt) {
+            showMsg("当前环境不支持自动安装，可用浏览器菜单「添加到主屏幕」");
+            return;
+        }
+        DeferredInstallPrompt.prompt();
+        try {
+            await DeferredInstallPrompt.userChoice;
+        } catch (e) { }
+        DeferredInstallPrompt = null;
+        $("#installHint").addClass("d-none");
+    });
+    $("#installClose").off("click").on("click", function () {
+        //记住用户"不再提示"的选择
+        try { localStorage.setItem("MHRSB_install_dismissed", "1"); } catch (e) { }
+        $("#installHint").addClass("d-none");
+    });
+}
+
+//更新搜索面板"共 N 项"提示（通用）
+// $el: 计数容器 jQuery 对象；n: 数量；unit: 单位文字；extra: 额外说明（如"仅显示前 200 项"）
+function updateSearchCount($el, n, unit, extra) {
+    if (!$el || !$el.length) return;
+    if (!n) {
+        $el.text("");
+        return;
+    }
+    let txt = "共 " + n + " " + unit;
+    if (extra) txt += "（" + extra + "）";
+    $el.text(txt);
+}
+
 function renderArmorSearchList(keyword) {
     if (ArmorSearchMode === "deco") {
         renderDecoSearchList(keyword);
@@ -1989,12 +2489,17 @@ function renderArmorSearchList(keyword) {
         let slotStr = a.slot && a.slot !== "000" ? a.slot : "-";
         let active = (a.id === curId) ? " active" : "";
         let res = a.res || [0, 0, 0, 0, 0];
+        //稀有度 R 与怪异点数消耗
+        let rankStr = a.rank ? ("R" + a.rank) : "";
+        let costStr = (a.cost != null && a.cost !== "") ? ("点数 " + a.cost) : "";
         html += `<button type="button" class="armor-search-item${active}" data-id="${a.id}">
             <div class="asi-main">
                 <span class="asi-name">${a.name}</span>
                 <span class="asi-badges">
-                    <span class="asi-badge">孔${slotStr}</span>
-                    <span class="asi-badge">防${a.def}</span>
+                    ${rankStr ? `<span class="asi-badge asi-badge-rank rank-${a.rank}">${rankStr}</span>` : ""}
+                    <span class="asi-badge asi-badge-slot">孔${slotStr}</span>
+                    <span class="asi-badge asi-badge-def">防${a.def}</span>
+                    ${costStr ? `<span class="asi-badge asi-badge-cost">${costStr}</span>` : ""}
                 </span>
             </div>
             <div class="asi-res">
@@ -2010,6 +2515,7 @@ function renderArmorSearchList(keyword) {
     if (!shown) {
         html = `<div class="armor-search-empty">没有找到匹配的装备</div>`;
     }
+    updateSearchCount($("#armorSearchCount"), shown, "件装备");
     document.getElementById("armorSearchList").innerHTML = html;
 }
 
@@ -2126,6 +2632,7 @@ function renderDecoSearchList(keyword) {
     if (!shown) {
         html = `<div class="armor-search-empty">没有找到匹配的珠子</div>`;
     }
+    updateSearchCount($("#armorSearchCount"), shown, "颗珠子");
     document.getElementById("armorSearchList").innerHTML = html;
 }
 
@@ -2233,6 +2740,7 @@ function renderKSkillSearchList(keyword) {
     if (!shown) {
         html = `<div class="armor-search-empty">没有找到匹配的词条</div>`;
     }
+    updateSearchCount($("#armorSearchCount"), shown, "条词条");
     document.getElementById("armorSearchList").innerHTML = html;
 }
 
@@ -2437,6 +2945,7 @@ function renderSkillSearchList(keyword) {
     if (!shown) {
         html = `<div class="armor-search-empty">没有找到匹配的技能</div>`;
     }
+    updateSearchCount($("#armorSearchCount"), shown, "个技能");
     document.getElementById("armorSearchList").innerHTML = html;
 }
 
@@ -2597,6 +3106,7 @@ function renderCharmSearchList(keyword) {
     if (!shown) {
         html = `<div class="armor-search-empty">没有找到匹配的技能</div>`;
     }
+    updateSearchCount($("#armorSearchCount"), shown, "个技能");
     document.getElementById("armorSearchList").innerHTML = html;
 }
 
@@ -2847,7 +3357,8 @@ function syncSkillChangeDisplay(partIdx, idx) {
         disp.attr("placeholder", "—");
     } else {
         disp.prop("disabled", false);
-        disp.attr("placeholder", "选择技能…");
+        //占位统一为"—"：与不可选状态保持一致，避免"选择技能…"/"—"两种样式来回变
+        disp.attr("placeholder", "—");
         let v = sel.val();
         if (!isEmptyVal(v)) {
             let txt = (sel.find("option:selected").text() || "").trim();
@@ -3133,8 +3644,6 @@ function onInputDecoration(targ, value) {
             targ.val("");
         }
     }
-
-    // targ.data(info);
 
     let d = CurData.partMap[p];
     if (p == "6") {
@@ -3593,7 +4102,7 @@ function render_total_table() {
                 let t = tt[i];
                 document.getElementById(`def_total_${t}`).innerHTML = defTotal[t];;
             }
-            $(".skill_info_btn").attr("disabled", true);
+            $(".skill_info_btn").addClass("is-locked");
         }
         if (ptr.charmData.skill1Lv) {
             let hex = ptr.charmData.skill1Hex;
@@ -3685,7 +4194,7 @@ function render_total_table() {
             }
 
             if (isSet) {
-                $("#skill_info_" + hex).attr("disabled", false);
+                $("#skill_info_" + hex).removeClass("is-locked");
                 $("#skill_info_" + hex).find(".skill_info_status").text(`${cur}/${max}`);
             }
         }
@@ -3942,6 +4451,26 @@ function copyToClipboard() {
         }, 2000);
     }
 
+    //复制失败时：弹出输入框兜底，让用户长按手动复制
+    function fallbackDialog() {
+        done("复制失败");
+        showPromptModal({
+            title: "复制代码",
+            text: "自动复制失败，请<strong>长按</strong>下方输入框手动复制：",
+            withInput: true,
+            inputValue: content,
+            inputMaxlength: content.length + 10,
+            okText: "再试一次",
+            onOk: function (val) {
+                copyText(val || content).then(function (ok) {
+                    if (ok) showMsg("已复制代码");
+                    else showMsg("复制失败，请长按输入框手动复制");
+                });
+                return false; //保持弹窗打开，方便继续手动复制
+            }
+        });
+    }
+
     //优先用异步剪贴板 API（仅 HTTPS / localhost 可用）
     if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(content).then(function () {
@@ -3951,7 +4480,7 @@ function copyToClipboard() {
             if (fallbackCopy(content)) {
                 done("已复制到剪贴板");
             } else {
-                done("复制失败");
+                fallbackDialog();
             }
         });
     } else {
@@ -3959,7 +4488,7 @@ function copyToClipboard() {
         if (fallbackCopy(content)) {
             done("已复制到剪贴板");
         } else {
-            done("复制失败");
+            fallbackDialog();
         }
     }
 }
@@ -4364,7 +4893,6 @@ function getRateByHex(hex, curLv) {
         if (!c) {
             return null;
         }
-        // console.log(d,curLv);
         let r = c["critical"] || 0;
         let s = d["sit"];
         return { r, s };
@@ -4374,12 +4902,6 @@ function getRateByHex(hex, curLv) {
 
 
 function initSkillInfo() {
-    // let str = "";
-
-    // let c = ["list-group-item-success", "list-group-item-danger", "list-group-item-primary", "list-group-item-warning", "list-group-item-info", "list-group-item-dark"];
-    let c = ["btn-success", "btn-danger", "btn-primary", "btn-warning", "btn-info", "btn-dark"];
-    // let idx = 0;
-    {/* <button type="button" class="btn btn-primary">Primary</button> */ }
     let s = Object.keys(skill_data);
     s.sort();
 
@@ -4387,9 +4909,6 @@ function initSkillInfo() {
     for (let i = 0; i < s.length; i++) {
         let hex = s[i];
         let d = skill_data[hex];
-        /*if (isSkipSkill(hex)) {
-            continue;
-        }*/
         let t = d["tag"][0];
         if (!arrM[t]) {
             arrM[t] = [];
@@ -4400,47 +4919,58 @@ function initSkillInfo() {
     let ctx = "";
     for (let t in arrM) {
         let a = arrM[t];
-        let str = `<div class="m-1 row" title="${t}">${t}</div>`
-        let idx = 0;
+        //分类标题 + 一个 grid 容器（列数由 CSS 决定，不再手动按颜色数组分组，避免出现"5个1个"错位）
+        let str = `<div class="m-1 row si-cat-title" title="${t}">${t}</div>`;
+        str += `<div class="m-1 row" title="${t}">`;
         for (let i = 0; i < a.length; i++) {
-            if (idx == 0) {
-                str = str + `<div class="m-1 row" title="${t}">`;
-            }
             let hex = a[i][0];
             let name = a[i][1];
+            // 名字较长的技能加 is-long（用更小字号，避免文字贴边/溢出铭牌）
+            let nameLen = String(name).length;
+            let nameCls = nameLen >= 7 ? " is-long" : (nameLen >= 6 ? " is-mid" : "");
 
-            // <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
-            // Tooltip with HTML
-            // </button>
-            let desc = skill_desc[hex]["desc"] + "\n";
-            $(skill_desc[hex]["effect"]).find("li").each(function (idx, elm) {
-                desc = desc + $(elm).text() + "\n";
-
-            });
             str = str + `            
-            <div class="col col-2 row skill_info_div" title="${desc}");>
-            <button type="button" disabled id="skill_info_${hex}" class="skill_info_btn btn  ${c[idx]} rounded">
+            <div class="col col-2 row skill_info_div">
+            <button type="button" id="skill_info_${hex}" class="skill_info_btn is-locked${nameCls} btn rounded">
             <span>${name}</span><span class="skill_info_status">0/0</span>
             </button>            
             </div>
             `
-            idx++;
-            if (idx == c.length) {
-                idx = 0;
-                str = str + `</div>`;
-            }
         }
-        if (idx > 0) {
-            str = str + `</div>`;
-        }
+        str += `</div>`;
         ctx = ctx + str;
     }
-    // console.log(arrM)
     $("#skillInfo").html(ctx);
 }
 
 function clickSkillInfo(id, title) {
-    // console.log(id, title);
+    // hex 就是按钮 id 去掉 "skill_info_" 前缀
+    let hex = String(id || "").replace("skill_info_", "");
+    let info = (typeof skill_desc !== "undefined") ? skill_desc[hex] : null;
+    if (info) {
+        let html = "";
+        if (info["desc"]) {
+            html += `<div class="text-secondary small mb-2">${info["desc"]}</div>`;
+        }
+        if (info["effect"]) {
+            html += info["effect"];
+        }
+        if (!html) {
+            html = "暂无技能效果说明";
+        }
+        // 弹窗内 ul 紧凑一点
+        html = `<div class="skill-desc-body">${html}</div>`;
+        showPromptModal({
+            title: (info["sname"] || "") + " · 技能效果",
+            text: html,
+            okText: "知道了",
+            okClass: "btn-primary",
+            hideCancel: true,
+            dismissOnBackdrop: true
+        });
+        return;
+    }
+    // 没有技能数据时，退回原来的"标记边框"行为
     if ($("#" + id).hasClass("border")) {
         $("#" + id).removeClass("border");
         $("#" + id).removeClass("border-5");
@@ -4476,8 +5006,6 @@ async function addToCompare(name) {
 
 //从比较中移除
 async function removeFromCompare(name) {
-    //
-    // console.log(name);
     if (PartMapAry <= 1) {
         return;
     }
