@@ -615,6 +615,47 @@ body {
     white-space: nowrap;
 }
 
+/* 对比表里的技能名：可点击查看效果 */
+#skill_table .compare-skill-name {
+    cursor: pointer;
+    border-radius: .25rem;
+    transition: background-color .12s ease;
+    /* 技能名不允许逐字换行（窄屏下曾把「会心击【属性】」挤成竖排），
+       保持单行；不给单元格设固定宽度，避免出现纵向空隙 */
+    white-space: nowrap;
+}
+
+/* 技能名一列：给个合理的最小宽度，保证汉字能一行放下；
+   窄屏时整表横向滚动（下面 .skill-table-wrap 负责），而不是把字挤成竖排 */
+#skill_table td:first-child,
+#skill_table th:first-child {
+    min-width: 6.5rem;
+    white-space: nowrap;
+}
+
+/* 技能合计表：窄屏下横向滚动，避免各列被压扁 */
+.skill-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 表格本身给出最小宽度：列多时不压缩（由外层 table-responsive 横向滚动） */
+#skill_table_el {
+    min-width: 22rem;
+}
+
+/* 除技能名外的列（各对比配装列）：给最小宽度，避免进度条被压扁 */
+#skill_table_el td:not(:first-child),
+#skill_table_el th:not(:first-child) {
+    min-width: 4.5rem;
+}
+
+#skill_table .compare-skill-name:hover {
+    background-color: rgba(13, 110, 253, .12);
+    text-decoration: underline;
+}
+
 .compare-chip {
     display: inline-flex;
     align-items: center;
