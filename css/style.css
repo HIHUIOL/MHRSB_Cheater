@@ -7,6 +7,38 @@
     --app-radius: 0.5rem;
     --app-gap: 1rem;
     --app-max-width: 1200px;
+    /* 默认跟随系统（未设置 data-theme 时） */
+    color-scheme: light dark;
+}
+
+/* ---- 原生控件配色（关键）----------------------------------------------
+   浏览器会根据 color-scheme 决定"输入框/下拉/滚动条/日期控件"等原生控件的配色。
+   如果只有系统暗色、而页面强制白天，输入框会长成黑底白字，非常难看。
+   这里按当前主题强制指定，覆盖系统偏好。JS 的 applyTheme() 也会同步设置。 */
+html[data-theme="light"] {
+    color-scheme: light;
+}
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+}
+
+/* 强制白天下，把表单控件底色/文字再显式兜底一次，
+   避免某些浏览器/内核忽略 color-scheme 导致仍是暗色。 */
+html[data-theme="light"] .form-control,
+html[data-theme="light"] .form-select,
+html[data-theme="light"] input,
+html[data-theme="light"] select,
+html[data-theme="light"] textarea {
+    background-color: #fff;
+    color: #212529;
+}
+
+html[data-theme="light"] .form-control::placeholder,
+html[data-theme="light"] input::placeholder,
+html[data-theme="light"] textarea::placeholder {
+    color: #6c757d;
+    opacity: 1;
 }
 
 /* ---- 页面基础 ---------------------------------------------------------- */
@@ -243,7 +275,6 @@ body {
         box-shadow: 0 4px 14px rgba(0, 0, 0, .5);
     }
 }
-
 /* ---- 技能信息面板 ------------------------------------------------------ */
 /* 未装备的技能：视觉上灰掉（原来是 :disabled，改成 class 以便仍可点击查看效果） */
 .skill_info_btn.is-locked {
@@ -350,6 +381,20 @@ body {
 #skillInfo .skill_info_btn:not(.is-locked) {
     background-color: rgba(13, 110, 253, .85);
     border-color: rgba(13, 110, 253, .9);
+    color: #fff;
+}
+
+/* 已装备但"没满级"：琥珀/橙色，提示还能继续堆 */
+#skillInfo .skill_info_btn.si-partial {
+    background-color: rgba(255, 153, 0, .88);
+    border-color: rgba(255, 153, 0, .95);
+    color: #1c1200;
+}
+
+/* 已装备且"超出上限"（如护石/极限导致超过 max）：红色警示 */
+#skillInfo .skill_info_btn.si-over {
+    background-color: rgba(220, 53, 69, .9);
+    border-color: rgba(220, 53, 69, .95);
     color: #fff;
 }
 
