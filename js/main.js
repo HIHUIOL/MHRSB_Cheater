@@ -20,7 +20,7 @@ var versionMap = {
 var currentVersion = versionMap["16.0.2-港日"];
 
 //当前程序(PWA)版本号，与 sw.js 的 CACHE 版本保持一致
-var APP_VERSION = "v6.2.3";
+var APP_VERSION = "v6.2.4";
 
 var RefreshCount = 0;
 
@@ -4125,7 +4125,23 @@ function render_total_table() {
     }
 
     let keys = Object.keys(allSkillMap);
+    //排序规则：让"最左边那套配装（对比列表第 1 列）有的技能"排在最前面，
+    //它没有的技能再按"第几列先出现"往后排；同一档内仍按技能 hex 保持稳定顺序。
+    //这样第一套配装列上就不会夹杂一堆它没有的技能，看起来更整齐。
     keys.sort(function (a, b) {
+        function rankOf(hex) {
+            let rawMap = (allSkillMap[hex] || {})["raw"] || {};
+            for (let j = 0; j < PartMapAry.length; j++) {
+                let nm = PartMapAry[j];
+                //忽略空草稿：草稿为空时不参与"谁先拥有"的判断
+                if (nm === DraftKey && !hasAnySkillData(PartMapObj[DraftKey])) continue;
+                if ((rawMap[nm] || 0) > 0) return j;
+            }
+            //所有配装都没有（理论上不会出现）→ 排到最后
+            return PartMapAry.length;
+        }
+        let ra = rankOf(a), rb = rankOf(b);
+        if (ra !== rb) return ra - rb;
         return parseInt(a, 16) - parseInt(b, 16);
     });
 
@@ -4250,8 +4266,9 @@ function render_total_table() {
                 let t = tt[i];
                 document.getElementById(`def_total_${t}`).innerHTML = defTotal[t];;
             }
-            //先把所有技能恢复为"未装备 + 等级归零"（避免切换配装后残留上一套的等级数字）
-            $(".skill_info_btn").addClass("is-locked").each(function () {
+            //先把所有技能恢复为"未装备 + 等级归零"（避免切换配装后残留上一套的等级数字/颜色）
+            //注意：必须同时清掉 si-partial / si-over，否则切到空配装时上色会残留
+            $(".skill_info_btn").addClass("is-locked").removeClass("si-partial si-over").each(function () {
                 let $btn = $(this);
                 let h = String($btn.attr("id") || "").replace("skill_info_", "");
                 let mm = (skill_data[h] && skill_data[h]["max"]) ? skill_data[h]["max"] : 0;
