@@ -20,7 +20,7 @@ var versionMap = {
 var currentVersion = versionMap["16.0.2-港日"];
 
 //当前程序(PWA)版本号，与 sw.js 的 CACHE 版本保持一致
-var APP_VERSION = "v6.2.2";
+var APP_VERSION = "v6.2.3";
 
 var RefreshCount = 0;
 
@@ -216,6 +216,17 @@ async function init() {
         let html = document.documentElement;
         let darkCss = document.getElementById("darkForceCss");
         html.setAttribute("data-theme", mode);
+        // 关键：告诉浏览器用哪种配色渲染"原生控件"（输入框、下拉、滚动条、日期控件等）。
+        // 不设置的话，系统处于暗色时会按系统偏好把输入框画成黑底，
+        // 即使页面已切到"白天模式"也会出现黑框（文字看不清）。
+        if (mode === "dark") {
+            html.style.colorScheme = "dark";
+        } else if (mode === "light") {
+            html.style.colorScheme = "light";
+        } else {
+            // 跟随系统：交给浏览器自动判断
+            html.style.colorScheme = "";
+        }
         // 强制暗色时启用 dark-force.css（系统亮色下也能变暗）；否则禁用
         if (darkCss) darkCss.setAttribute("media", (mode === "dark") ? "all" : "not all");
         let btn = document.getElementById("themeToggle");
@@ -2642,7 +2653,9 @@ function renderDecoSearchList(keyword) {
             if (!nameHit && !skillHit) continue;
         }
         shown++;
-        if (shown > 200) break;
+        //注意：这里不做"只显示前N条"的截断。
+        //珠子列表已按孔位从大到小排序，若截断，大孔位（如4级孔）时
+        //只会列出 4/3/2 级珠，低等级珠（1级）会被截断，导致"4级孔里找不到1级珠"。
         let active = (d.dname === curVal) ? " active" : "";
         let skStr = d.skill ? d.skill : "（无对应技能）";
         html += `<button type="button" class="armor-search-item${active}" data-id="${d.dname}">
@@ -4335,8 +4348,17 @@ function render_total_table() {
             }
 
             if (isSet) {
-                $("#skill_info_" + hex).removeClass("is-locked");
-                $("#skill_info_" + hex).find(".skill_info_status").text(`${cur}/${max}`);
+                let $btn = $("#skill_info_" + hex);
+                $btn.removeClass("is-locked si-partial si-over");
+                //三种状态用颜色区分：已装备(满级)=实心蓝；未满级=橙色；超出上限=红色
+                if (cur > max) {
+                    $btn.addClass("si-over");
+                } else if (cur >= max && max > 0) {
+                    //满级：保持默认"已装备"样式
+                } else {
+                    $btn.addClass("si-partial");
+                }
+                $btn.find(".skill_info_status").text(`${cur}/${max}`);
             }
         }
         if (isSet) {
