@@ -20,7 +20,7 @@ var versionMap = {
 var currentVersion = versionMap["16.0.2-港日"];
 
 //当前程序(PWA)版本号，与 sw.js 的 CACHE 版本保持一致
-var APP_VERSION = "v6.2.4";
+var APP_VERSION = "v6.2.5";
 
 var RefreshCount = 0;
 
@@ -876,13 +876,20 @@ function clearDraft() {
 
 async function loadCache(name) {
     let cahe = await execLoad(name);
+    //兜底：缓存里没有、但内存(PartMapObj)里有同名数据时（例如刚导入还没落库的项），
+    //直接用内存里的数据贴进编辑器，避免"点了没反应、名字还停在旧配装"。
+    if (!cahe && PartMapObj[name]) {
+        let mem = JSON.parse(JSON.stringify(PartMapObj[name]));
+        cahe = { partMap: mem.partMap, charmData: mem.charmData, weaponData: mem.weaponData, extreme: mem.extreme, t: mem.t };
+    }
     if (cahe) {
         showMsg("加载中:" + name);
         try {
 
             //加载前：把"当前正在编辑的配装"深拷贝存入 PartMapObj，避免 CurData 被后续覆盖，
-            //导致对比列表里同名的旧项一起被改写（技能等级等数据丢失）
-            if (CurData.name && CurData.name !== name && PartMapAry.includes(CurData.name)) {
+            //导致对比列表里同名的旧项一起被改写（技能等级等数据丢失）。
+            //若该旧名正是"刚被删除/被移除"的配装（removedCurName），则跳过，避免把它写回去。
+            if (CurData.name && CurData.name !== name && CurData.name !== removedCurName && PartMapAry.includes(CurData.name)) {
                 PartMapObj[CurData.name] = JSON.parse(JSON.stringify(CurData));
             }
 
@@ -1399,8 +1406,62 @@ function delCache(name) {
 //真正执行删除
 async function doDelCache(name) {
     await CacheObj.delete(name);
+    //顺序很重要：先把"当前编辑项"从被删的配装切换走（并等它切完，
+    //避免异步加载过程中又被渲染写回被删的名字），再从对比列表里移除。
+    await switchAwayIfCurrentDeleted(name);
+    removeFromCompareList(name);
     showMsg("删除成功:" + name);
     await loadList();
+}
+//只从对比列表移除（不动缓存、不弹提示），供删除配装时调用
+function removeFromCompareList(name) {
+    if (!name) return;
+    let changed = false;
+    for (let i = 0; i < PartMapAry.length; i++) {
+        if (PartMapAry[i] === name) { PartMapAry.splice(i, 1); changed = true; i--; }
+    }
+    if (PartMapObj[name] !== undefined) {
+        delete PartMapObj[name];
+        changed = true;
+    }
+    if (changed) refreshShowArmorData();
+    return changed;
+}
+//若"当前正在编辑的配装"已被删除，自动切换到对比列表里的下一套（异步：需 await）
+async function switchAwayIfCurrentDeleted(name) {
+    if (CurData.name !== name) return;
+    //先从对比列表里挑下一套（先算，避免后面被改写）
+    let next = null;
+    for (let i = 0; i < PartMapAry.length; i++) {
+        let n = PartMapAry[i];
+        if (n && n !== name && PartMapObj[n]) { next = n; break; }
+    }
+    if (next == null) next = DraftKey;
+
+    //关键：先把"当前配装名"改掉，再去加载。
+    //否则 loadCache/refreshShowArmorData 都会把旧名字(name)当成"当前项"写回 PartMapObj/PartMapAry。
+    CurData.name = next;
+    removedCurName = name;
+
+    if (next === DraftKey) {
+        let d = PartMapObj[DraftKey];
+        if (!d) {
+            d = { name: DraftKey, partMap: {}, charmData: createCharmData(), weaponData: createWeaponData(), extreme: false };
+            PartMapObj[DraftKey] = d;
+        }
+        setExtremeMode(d.extreme === true);
+        applyDataToEditor(JSON.parse(JSON.stringify(d)), DraftKey, true);
+    } else {
+        await loadCache(next);
+    }
+    refreshShowArmorData();
+
+    //最后兜底：确保被删的名字彻底不在数据结构里
+    removedCurName = null;
+    if (PartMapObj[name] !== undefined) delete PartMapObj[name];
+    for (let i = PartMapAry.length - 1; i >= 0; i--) {
+        if (PartMapAry[i] === name) PartMapAry.splice(i, 1);
+    }
 }
 
 //删除「我的配装」里的全部配装
@@ -1412,6 +1473,11 @@ async function delAllCaches() {
         }
         //清掉自定义顺序
         setCustomOrder([]);
+        //对比列表里也要一起清掉（只保留"临时配装"草稿）
+        PartMapAry = [DraftKey];
+        PartMapObj = {};
+        PartMapObj[DraftKey] = { name: DraftKey, partMap: {}, charmData: createCharmData(), weaponData: createWeaponData(), extreme: false };
+        refreshShowArmorData();
         showMsg("已删除全部配装（" + all.length + " 个）");
         await loadList();
     } catch (err) {
