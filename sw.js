@@ -1,5 +1,5 @@
 //使用项目专属缓存名，避免与同域下其它 PWA 的 Service Worker 缓存互相干扰
-const CACHE = 'MHRSB_Cheater-v6.2.0';
+const CACHE = 'MHRSB_Cheater-v6.2.1';
 
 const ASSETS = [
   './',
@@ -8,6 +8,7 @@ const ASSETS = [
   // css
   './css/bootstrap.min.css',
   './css/style.css',
+  './css/dark-force.css',
 
   // js
   './js/bootstrap.bundle.min.js',

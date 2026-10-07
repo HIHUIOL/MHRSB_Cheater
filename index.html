@@ -28,7 +28,9 @@
     <meta name="qq:share:image" content="https://hihuiol.github.io/MHRSB_Cheater/icons/icon-512.png">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css?v=6.2.0">
+    <link rel="stylesheet" href="css/style.css?v=6.2.1">
+    <!-- 强制暗色样式表：仅当用户手动选择"暗色"时才启用（JS 切换 media 属性） -->
+    <link rel="stylesheet" id="darkForceCss" href="css/dark-force.css?v=6.2.1" media="not all">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
     <link rel="apple-touch-icon" href="icons/icon-192.png">
@@ -48,10 +50,10 @@
 
         <!-- ===================== 顶栏 ===================== -->
         <div class="app-topbar">
-            <h1 class="app-title">怪物猎人 MHRSB 配装器</h1>
-            <span class="badge-soft" id="app_version">-</span>
-            <span class="spacer" style="flex:1 1 auto;"></span>
-            <button type="button" id="checkUpdate" class="btn btn-sm btn-outline-primary">检查更新</button>
+            <h1 class="app-title">MHRSB 配装器</h1>
+            <span class="badge-soft" id="app_version" role="button" tabindex="0" title="点击检查更新">-</span>
+            <span class="spacer topbar-spacer" style="flex:1 1 auto;"></span>
+            <button type="button" id="themeToggle" class="btn btn-sm btn-outline-secondary" title="切换主题">🌓 跟随系统</button>
             <button type="button" id="reInit" class="btn btn-sm btn-outline-danger">初始化</button>
         </div>
 
@@ -82,13 +84,22 @@
                 <div class="d-flex flex-wrap gap-2">
                     <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
                         data-bs-target="#cacheModal" data-bs-whatever="@mdo">保存</button>
-                    <button id="setTmpCache" class="btn btn-success btn-sm">设置临时缓存</button>
                     <button id="importTmpCache" class="btn btn-outline-primary btn-sm" type="button">导入配装</button>
                     <button class="btn btn-secondary btn-sm" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#historyDrawer" aria-controls="historyDrawer">我的配装</button>
                 </div>
             </div>
         </div>
+
+        <!-- PWA 安装引导（浏览器支持且未安装时出现，可关闭） -->
+        <div id="installHint" class="install-hint d-none">
+            <span class="install-hint-text">💡 可安装到桌面，离线也能用</span>
+            <button type="button" id="installBtn" class="btn btn-sm btn-primary">安装</button>
+            <button type="button" id="installClose" class="btn-close btn-close-white btn-sm" aria-label="不再提示"></button>
+        </div>
+
+        <!-- 返回顶部按钮（滚动一定距离后出现） -->
+        <button type="button" id="backToTop" class="back-to-top" aria-label="返回顶部" title="返回顶部">↑</button>
 
         <!-- 历史记录抽屉 -->
         <div class="offcanvas offcanvas-end" tabindex="-1" id="historyDrawer" aria-labelledby="historyDrawerLabel">
@@ -97,12 +108,31 @@
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="关闭"></button>
             </div>
             <div class="offcanvas-body pt-0">
-                <div class="d-flex gap-2 mb-2">
-                    <button type="button" class="btn btn-outline-primary btn-sm flex-grow-1" id="exportAllCaches">导出全部配装</button>
-                    <button type="button" class="btn btn-outline-danger btn-sm flex-grow-1" data-bs-toggle="modal"
-                        data-bs-target="#delAllModal">全部删除</button>
+                <!-- 固定区：操作按钮 + 搜索（列表滚动时保持不动） -->
+                <div class="cache-drawer-sticky">
+                    <div class="d-flex gap-2 mb-2">
+                        <button type="button" class="btn btn-outline-primary btn-sm flex-grow-1" id="exportAllCaches">导出全部配装</button>
+                        <button type="button" class="btn btn-outline-danger btn-sm flex-grow-1" data-bs-toggle="modal"
+                            data-bs-target="#delAllModal">全部删除</button>
+                    </div>
+                    <!-- 计数 + 正逆序 -->
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                        <span class="text-secondary small text-nowrap" id="cacheCountLabel"></span>
+                        <span class="spacer" style="flex:1 1 auto;"></span>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" id="cacheSortToggle"
+                            title="切换正序 / 逆序">↓ 最新在上</button>
+                    </div>
+                    <!-- 配装搜索 -->
+                    <div class="input-group input-group-sm">
+                        <input type="search" id="cacheSearchInput" class="form-control" placeholder="搜索配装名…" autocomplete="off">
+                        <button type="button" class="btn btn-outline-secondary" id="cacheSearchClear" style="display:none;">清除</button>
+                    </div>
                 </div>
                 <ul class="list-group list-group-flush dropdown-menu-cache"></ul>
+                <div class="cache-backup-tip text-secondary small mt-3">
+                    ⚠ 配装数据保存在<strong>本机浏览器</strong>中，清除浏览器数据会全部丢失。
+                    建议定期点「导出全部配装」备份到文件。
+                </div>
             </div>
         </div>
 
@@ -127,6 +157,48 @@
             </div>
         </div>
 
+        <!-- 通用输入/确认弹窗（用于重命名、重名覆盖确认等，独立于其他弹窗，避免嵌套） -->
+        <div class="modal fade" id="promptModal" tabindex="-1" aria-labelledby="promptModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5" id="promptModalLabel">提示</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="关闭"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="mb-2" id="promptModalText"></p>
+                        <input type="text" class="form-control d-none" id="promptModalInput" autocomplete="off">
+                        <p class="text-danger small mb-0 d-none mt-2" id="promptModalWarn"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="promptModalCancel">取消</button>
+                        <button type="button" class="btn btn-primary" id="promptModalOk">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 初始化确认弹窗 -->
+        <div class="modal fade" id="initConfirmModal" tabindex="-1" aria-labelledby="initConfirmModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5" id="initConfirmModalLabel">初始化</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="关闭"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="mb-2">将<strong>清空当前编辑内容</strong>并重置为「临时配装」。</p>
+                        <p class="text-danger small mb-0 d-none" id="initConfirmWarn">⚠ 检测到当前有未保存的编辑内容，初始化后<strong>无法恢复</strong>！</p>
+                        <p class="text-secondary small mb-0">（已保存到「我的配装」的配装不受影响）</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-danger" id="initConfirmBtn">确认初始化</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- 保存弹窗 -->
         <div class="modal fade" id="cacheModal" tabindex="-1" aria-labelledby="cacheModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -138,7 +210,7 @@
                     <div class="modal-body">
                         <form>
                             <div class="mb-3">
-                                <input type="text" class="form-control" id="cache-name" placeholder="填写备注">
+                                <input type="text" class="form-control" id="cache-name" maxlength="30" placeholder="填写备注（最多 30 字）">
                             </div>
                         </form>
                     </div>
@@ -170,6 +242,7 @@
                             <span class="text-nowrap small">等级</span>
                             <select id="charmLevelSelect" class="form-select form-select-sm charm-level-sel" style="max-width:7rem;"></select>
                         </div>
+                        <div id="armorSearchCount" class="armor-search-count"></div>
                         <div id="armorSearchList" class="armor-search-list"></div>
                     </div>
                     <div class="modal-footer">
@@ -231,7 +304,7 @@
                         <div class="armor_container">
                             <div class="card-inner-template">
                                 <div class="card-header">
-                                    <span>位置 <span class="armor_pos">1</span></span>
+                                    <span>位置 <span class="armor_pos_label">1</span> ・ <span class="armor_pos_name">头部</span> <span class="armor_pos" style="display:none;">1</span></span>
                                 </div>
                                 <div class="card-body">
                                     <div class="m-1 row g-2 align-items-center">
@@ -268,7 +341,7 @@
                                                             <option value="0_0_00">-----</option>
                                                         </select>
                                                         <input type="text" class="form-control small k_skill_change_display" readonly
-                                                            placeholder="选择技能…" style="cursor:pointer" disabled>
+                                                            placeholder="—" style="cursor:pointer" disabled>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -296,7 +369,7 @@
             <!-- 护石卡片 -->
             <div class="app-card">
                 <div class="card-header">
-                    <span>护石（位置 6）</span>
+                    <span>位置 6 ・ 护石</span>
                 </div>
                 <div class="card-body">
                     <div class="row g-3">
@@ -341,7 +414,7 @@
             <!-- 武器卡片 -->
             <div class="app-card">
                 <div class="card-header">
-                    <span>武器（位置 7）</span>
+                    <span>武器</span>
                     <span class="spacer"></span>
                     <span class="badge-soft">固定 444</span>
                 </div>
@@ -422,7 +495,13 @@
                             <div class="alert alert-success mb-2 py-2">
                                 <span id="critical" class="form-label mb-0"></span>
                             </div>
-                            <div id="skillInfo" class="container">
+                            <!-- 技能一览（默认折叠，点按钮展开；点技能可查看效果说明） -->
+                            <button type="button" id="skillInfoToggle" class="btn btn-sm btn-outline-secondary w-100 mb-1"
+                                aria-expanded="false" aria-controls="skillInfo">
+                                <span class="si-toggle-text">展开技能一览</span>
+                                <span class="si-toggle-hint d-block small opacity-75">点技能可查看效果说明</span>
+                            </button>
+                            <div id="skillInfo" class="container is-collapsed">
                                 <div class="col list-group-item-success rounded">
                                     <span class="">skill</span>
                                 </div>
@@ -500,7 +579,7 @@
                 <button id="switchMode" class="btn btn-outline-secondary btn-sm">切换至极限模式</button>
                 <button id="switch" class="btn btn-primary btn-sm">切换至代码</button>
                 <span class="grow"></span>
-                <button class="btn btn-outline-secondary btn-sm" type="button" id="copy_to_clipboard">复制</button>
+                <button class="btn btn-outline-secondary btn-sm" type="button" id="copy_to_clipboard">复制代码</button>
                 <button class="btn btn-outline-primary btn-sm" type="button" id="download">下载</button>
                 <label class="text-success small mb-0" id="copy_result"></label>
             </div>
