@@ -37,7 +37,7 @@ var skill_data = {
     "15": { "tag": [Attr.abn], "hex": "15", "sname": "爆破属性强化", "cost": 6, "max": 3, "lvType": "A", "p1Max": 3, "p2Max": 2, },
     "16": { "tag": [Attr.sharp], "hex": "16", "sname": "匠", "cost": 12, "max": 5, "lvType": "S", "p1Max": 4, "p2Max": 3, },
     "17": { "tag": [Attr.sharp], "hex": "17", "sname": "利刃", "cost": 15, "max": 3, "lvType": "A", "p1Max": 3, "p2Max": 2, },
-    "18": { "tag": [Attr.gun], "hex": "18", "sname": "弹药节制", "cost": 15, "max": 3, "lvType": "A", "p1Max": 3, "p2Max": 2, },
+    "18": { "tag": [Attr.gun], "hex": "18", "sname": "弹丸节约", "cost": 15, "max": 3, "lvType": "A", "p1Max": 3, "p2Max": 2, },
     "19": { "tag": [Attr.sharp], "hex": "19", "sname": "钢刃研磨", "cost": 9, "max": 3, "lvType": "A", "p1Max": 3, "p2Max": 2, },
     "1A": { "tag": [Attr.sharp], "hex": "1A", "sname": "心眼", "cost": 9, "max": 3, "lvType": "S", "p1Max": 3, "p2Max": 2, },
     "1B": { "tag": [Attr.gun], "hex": "1B", "sname": "弹道强化", "cost": 9, "max": 3, "lvType": "A", "p1Max": 3, "p2Max": 2, },
@@ -380,7 +380,7 @@ var skill_desc = {
                 </ul>
             `},
     "18": {
-        "sname": "弹药节制", "desc": `低概率在发射时不消耗弩炮的弹药及弓的瓶。`, "effect": `
+        "sname": "弹丸节约", "desc": `低概率在发射时不消耗弩炮的弹药及弓的瓶。`, "effect": `
                 <ul>
                     <li>Lv1. 发动概率3%</li>
                     <li>Lv2. 发动概率10%</li>
