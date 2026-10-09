@@ -28,9 +28,9 @@
     <meta name="qq:share:image" content="https://hihuiol.github.io/MHRSB_Cheater/icons/icon-512.png">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css?v=6.2.5">
+    <link rel="stylesheet" href="css/style.css?v=6.2.6">
     <!-- 强制暗色样式表：仅当用户手动选择"暗色"时才启用（JS 切换 media 属性） -->
-    <link rel="stylesheet" id="darkForceCss" href="css/dark-force.css?v=6.2.5" media="not all">
+    <link rel="stylesheet" id="darkForceCss" href="css/dark-force.css?v=6.2.6" media="not all">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
     <link rel="apple-touch-icon" href="icons/icon-192.png">
@@ -237,6 +237,16 @@
                     <div class="modal-body pt-2">
                         <input type="search" id="armorSearchInput" class="form-control mb-2"
                             placeholder="输入名称 / 技能名搜索…" autocomplete="off">
+                        <!-- 装备专用：稀有度(R)筛选（仅选择装备时显示） -->
+                        <div id="armorRankFilterRow" class="armor-rank-filter mb-2 d-none">
+                            <span class="text-nowrap small text-secondary">稀有度</span>
+                            <div class="btn-group btn-group-sm" role="group" id="armorRankFilter">
+                                <button type="button" class="btn btn-outline-secondary active" data-rank="all">全部</button>
+                                <button type="button" class="btn btn-outline-secondary" data-rank="8">R8</button>
+                                <button type="button" class="btn btn-outline-secondary" data-rank="9">R9</button>
+                                <button type="button" class="btn btn-outline-secondary" data-rank="10">R10</button>
+                            </div>
+                        </div>
                         <!-- 护石技能专用：等级选择行 -->
                         <div id="charmLevelRow" class="d-none mb-2 align-items-center gap-2">
                             <span class="text-nowrap small">等级</span>

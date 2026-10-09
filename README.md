@@ -117,9 +117,9 @@ MHRSB_Cheater-main/
 
 | 文件 | 变量 / 位置 | 示例 |
 |---|---|---|
-| `js/main.js` | `var APP_VERSION = "..."` | `"v6.2.5"` |
-| `sw.js` | `const CACHE = '...'` | `'MHRSB_Cheater-v6.2.5'` |
-| `index.html` | `css/style.css?v=...` | `?v=6.2.5` |
+| `js/main.js` | `var APP_VERSION = "..."` | `"v6.2.6"` |
+| `sw.js` | `const CACHE = '...'` | `'MHRSB_Cheater-v6.2.6'` |
+| `index.html` | `css/style.css?v=...` | `?v=6.2.6` |
 
 > 修改 `style.css` 后务必同步更新 `index.html` 里的 `?v=` 查询串，否则浏览器可能使用旧样式缓存。
 
