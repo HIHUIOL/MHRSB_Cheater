@@ -20,7 +20,7 @@ var versionMap = {
 var currentVersion = versionMap["16.0.2-港日"];
 
 //当前程序(PWA)版本号，与 sw.js 的 CACHE 版本保持一致
-var APP_VERSION = "v6.2.5";
+var APP_VERSION = "v6.2.6";
 
 var RefreshCount = 0;
 
@@ -2359,6 +2359,8 @@ function buildArmorSearchData() {
 var ArmorSearchMode = "armor";
 //当前正在搜索的部位
 var ArmorSearchPartIdx = null;
+//装备搜索的稀有度筛选："all"（全部，默认）| 8 | 9 | 10（对应 R8/R9/R10）
+var ArmorRankFilter = "all";
 
 //是否触屏设备（手机/平板）——触屏不自动聚焦，避免弹出输入法
 function isTouchDevice() {
@@ -2445,6 +2447,15 @@ function bindArmorSearch() {
     $(document).off("input", "#armorSearchInput").on("input", "#armorSearchInput", function () {
         renderArmorSearchList($(this).val());
     });
+    //装备搜索：稀有度(R8/R9/R10)筛选按钮
+    $(document).off("click", "#armorRankFilter button").on("click", "#armorRankFilter button", function () {
+        let r = String($(this).attr("data-rank") || "all");
+        ArmorRankFilter = (r === "all") ? "all" : r;
+        $("#armorRankFilter").find("button").removeClass("active");
+        $(this).addClass("active");
+        //保持当前关键词，只重新渲染
+        renderArmorSearchList($("#armorSearchInput").val());
+    });
     //护石技能面板：点"确认选择" → 应用技能+等级
     $(document).off("click", "#charmSearchConfirm").on("click", "#charmSearchConfirm", function () {
         if (ArmorSearchMode !== "charm" || !CharmSearchInfo || !CharmSearchPickedHex) return;
@@ -2504,6 +2515,11 @@ function openArmorSearch(partIdx) {
     ArmorSearchPartIdx = partIdx;
     $("#armorSearchModalLabel").text("选择装备 · 位置" + partIdx);
     $("#armorSearchInput").attr("placeholder", "输入装备名 / 技能名搜索…").val("");
+    //装备模式：显示稀有度筛选行（每次打开重置为"全部"）
+    ArmorRankFilter = "all";
+    $("#armorRankFilterRow").removeClass("d-none");
+    $("#armorRankFilter").find("button").removeClass("active")
+        .filter("[data-rank='all']").addClass("active");
     $("#armorSearchClear").removeClass("d-none").text("清除装备");
     $("#armorSearchNone").addClass("d-none");
     $("#charmSearchConfirm").addClass("d-none");
@@ -2555,6 +2571,12 @@ function updateSearchCount($el, n, unit, extra) {
 }
 
 function renderArmorSearchList(keyword) {
+    //稀有度筛选行只在"选择装备"模式显示，其他模式（珠子/词条/技能/护石）隐藏
+    if (ArmorSearchMode === "armor") {
+        $("#armorRankFilterRow").removeClass("d-none");
+    } else {
+        $("#armorRankFilterRow").addClass("d-none");
+    }
     if (ArmorSearchMode === "deco") {
         renderDecoSearchList(keyword);
         return;
@@ -2582,6 +2604,8 @@ function renderArmorSearchList(keyword) {
     let shown = 0;
     for (let i = 0; i < list.length; i++) {
         let a = list[i];
+        //稀有度筛选（R8 / R9 / R10），"all" 表示不筛
+        if (ArmorRankFilter !== "all" && String(a.rank) !== String(ArmorRankFilter)) continue;
         if (kw) {
             let nameHit = a.name.toLowerCase().indexOf(kw) >= 0;
             let skillHit = a.skills.some(function (s) { return s.toLowerCase().indexOf(kw) >= 0; });
