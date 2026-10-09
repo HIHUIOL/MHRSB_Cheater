@@ -1691,6 +1691,25 @@ body {
     min-height: 1.1rem;
 }
 
+/* 装备搜索面板：稀有度筛修行 */
+.armor-rank-filter {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+
+.armor-rank-filter .btn-group {
+    flex-wrap: wrap;
+}
+
+/* 选中态用主色实心，便于一眼看出当前筛选 */
+.armor-rank-filter .btn.active {
+    background-color: var(--bs-primary, #0d6efd);
+    border-color: var(--bs-primary, #0d6efd);
+    color: #fff;
+}
+
 @media (prefers-color-scheme: dark) {
 
     html:not([data-theme="light"]) .armor-search-count {
