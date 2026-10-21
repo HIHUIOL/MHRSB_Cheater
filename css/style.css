@@ -1,0 +1,3055 @@
+/* ==========================================================================
+   MHRSB 配装器 — 自定义样式
+   配合 Bootstrap 5.2.1 使用；不再污染 bootstrap.min.css
+   ========================================================================== */
+
+:root {
+    --app-radius: 0.5rem;
+    --app-gap: 1rem;
+    --app-max-width: 1200px;
+    /* 默认跟随系统（未设置 data-theme 时） */
+    color-scheme: light dark;
+}
+
+/* ---- 原生控件配色（关键）----------------------------------------------
+   浏览器会根据 color-scheme 决定"输入框/下拉/滚动条/日期控件"等原生控件的配色。
+   如果只有系统暗色、而页面强制白天，输入框会长成黑底白字，非常难看。
+   这里按当前主题强制指定，覆盖系统偏好。JS 的 applyTheme() 也会同步设置。 */
+html[data-theme="light"] {
+    color-scheme: light;
+}
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+}
+
+/* 强制白天下，把表单控件底色/文字再显式兜底一次，
+   避免某些浏览器/内核忽略 color-scheme 导致仍是暗色。 */
+html[data-theme="light"] .form-control,
+html[data-theme="light"] .form-select,
+html[data-theme="light"] input,
+html[data-theme="light"] select,
+html[data-theme="light"] textarea {
+    background-color: #fff;
+    color: #212529;
+}
+
+html[data-theme="light"] .form-control::placeholder,
+html[data-theme="light"] input::placeholder,
+html[data-theme="light"] textarea::placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+
+/* ---- 页面基础 ---------------------------------------------------------- */
+body {
+    background-color: var(--bs-body-bg, #f5f6f8);
+    -webkit-text-size-adjust: 100%;
+}
+
+/* 居中容器 + 桌面最大宽度，避免超宽屏拉满 */
+#main {
+    max-width: var(--app-max-width);
+    margin: 0 auto;
+    padding: 0.75rem 0.75rem 4.5rem;
+    /* 底部预留固定操作栏空间（单行） */
+}
+
+/* ---- 卡片统一 ---------------------------------------------------------- */
+.app-card {
+    border: 1px solid var(--bs-border-color, #dee2e6);
+    border-radius: var(--app-radius);
+    margin-bottom: var(--app-gap);
+    background-color: var(--bs-body-bg, #fff);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+    /* 注意：不要用 overflow:hidden（会裁掉卡片内弹出的下拉菜单）。
+       圆角改由 .card-header 自己带上方圆角实现。 */
+}
+
+.app-card>.card-header {
+    background-color: rgba(13, 110, 253, .06);
+    /* 让卡片顶部圆角由 header 自己撑起来，替代父级 overflow:hidden 的裁切 */
+    border-top-left-radius: var(--app-radius);
+    border-top-right-radius: var(--app-radius);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    padding: .6rem .9rem;
+}
+
+.app-card .card-header .spacer {
+    flex: 1 1 auto;
+}
+
+/* 顶栏：标题 + 版本徽章 */
+.app-topbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-bottom: var(--app-gap);
+}
+
+.app-topbar .app-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.app-topbar .meta {
+    font-size: .8rem;
+    color: var(--bs-secondary-color, #6c757d);
+}
+
+.app-topbar .meta b {
+    font-weight: 600;
+    color: var(--bs-body-color, #212529);
+}
+
+/* ---- Switch 连接按钮 + 状态圆点 ---------------------------------------- */
+#swConnect {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    flex: 0 0 auto;
+}
+
+/* 状态圆点：灰=未连 / 蓝闪=连接中 / 绿=已连 / 红=失败 */
+.sw-dot {
+    display: inline-block;
+    width: .55rem;
+    height: .55rem;
+    border-radius: 50%;
+    background: var(--bs-secondary-color, #adb5bd);
+    flex: 0 0 auto;
+    transition: background-color .2s ease;
+}
+
+.sw-dot.is-on {
+    background: #198754;
+    box-shadow: 0 0 0 .12rem rgba(25, 135, 84, .28);
+}
+
+.sw-dot.is-err {
+    background: #dc3545;
+    box-shadow: 0 0 0 .12rem rgba(220, 53, 69, .28);
+}
+
+.sw-dot.is-loading {
+    background: #0d6efd;
+    animation: swDotPulse 1s ease-in-out infinite;
+}
+
+@keyframes swDotPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .3; }
+}
+
+/* ---- 中转设置弹窗 ------------------------------------------------------ */
+#swModal .modal-dialog {
+    min-height: auto;
+}
+
+.sw-status-box {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .55rem .75rem;
+    border-radius: var(--app-radius, .5rem);
+    background: var(--bs-tertiary-bg, #f8f9fa);
+    border: 1px solid var(--bs-border-color, #dee2e6);
+    font-size: .88rem;
+    font-weight: 500;
+}
+
+.sw-status-box.is-on {
+    background: rgba(25, 135, 84, .08);
+    border-color: rgba(25, 135, 84, .3);
+    color: #146c43;
+}
+
+.sw-status-box.is-err {
+    background: rgba(220, 53, 69, .08);
+    border-color: rgba(220, 53, 69, .3);
+    color: #b02a37;
+}
+
+.sw-info {
+    border: 1px solid var(--bs-border-color, #dee2e6);
+    border-radius: var(--app-radius, .5rem);
+    overflow: hidden;
+    font-size: .82rem;
+}
+
+.sw-info-row {
+    display: flex;
+    justify-content: space-between;
+    gap: .75rem;
+    padding: .35rem .7rem;
+    border-bottom: 1px solid var(--bs-border-color, #dee2e6);
+}
+
+.sw-info-row:last-child {
+    border-bottom: none;
+}
+
+.sw-info-row span {
+    color: var(--bs-secondary-color, #6c757d);
+    white-space: nowrap;
+}
+
+.sw-info-row b {
+    font-weight: 600;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    word-break: break-all;
+    text-align: right;
+}
+
+.sw-help code {
+    font-size: .76rem;
+    padding: .05rem .25rem;
+    border-radius: .2rem;
+    background: var(--bs-tertiary-bg, #f1f3f5);
+}
+
+/* 暗色主题下这几个容器的底色 */
+html[data-theme="dark"] .sw-status-box {
+    background: rgba(255, 255, 255, .04);
+}
+
+html[data-theme="dark"] .sw-status-box.is-on {
+    background: rgba(25, 135, 84, .16);
+}
+
+html[data-theme="dark"] .sw-status-box.is-err {
+    background: rgba(220, 53, 69, .16);
+}
+
+html[data-theme="dark"] .sw-help code {
+    background: rgba(255, 255, 255, .08);
+}
+
+@media (prefers-color-scheme: dark) {
+    html:not([data-theme="light"]) .sw-status-box {
+        background: rgba(255, 255, 255, .04);
+    }
+
+    html:not([data-theme="light"]) .sw-status-box.is-on {
+        background: rgba(25, 135, 84, .16);
+    }
+
+    html:not([data-theme="light"]) .sw-status-box.is-err {
+        background: rgba(220, 53, 69, .16);
+    }
+
+    html:not([data-theme="light"]) .sw-help code {
+        background: rgba(255, 255, 255, .08);
+    }
+}
+
+.badge-soft {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1.2;
+    background: rgba(13, 110, 253, .12);
+    color: #0d6efd;
+    border-radius: 999px;
+    padding: .15rem .55rem;
+    font-size: .75rem;
+    font-weight: 600;
+}
+
+/* ---- 数值格子（防御 / 耐性）------------------------------------------- */
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: .35rem;
+    margin: .5rem 0;
+}
+
+.stat-grid .stat {
+    text-align: center;
+    border-radius: var(--app-radius);
+    padding: .35rem .2rem;
+    background: rgba(0, 0, 0, .04);
+    line-height: 1.1;
+}
+
+.stat-grid .stat .k {
+    display: block;
+    font-size: .7rem;
+    color: var(--bs-secondary-color, #6c757d);
+}
+
+.stat-grid .stat .v {
+    display: block;
+    font-size: .95rem;
+    font-weight: 600;
+}
+
+.stat-grid .stat.pos .v {
+    color: #198754;
+}
+
+.stat-grid .stat.neg .v {
+    color: #dc3545;
+}
+
+/* ---- 紧凑信息行（怪异点数 / 孔位）------------------------------------ */
+.info-line {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+    margin: .4rem 0;
+}
+
+.info-line .pill {
+    border-radius: 999px;
+    padding: .15rem .6rem;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.pill-cost {
+    background: rgba(220, 53, 69, .14);
+    color: #dc3545;
+}
+
+.pill-slot {
+    background: rgba(13, 202, 240, .18);
+    color: #055160;
+}
+
+/* ---- 表格微调 ---------------------------------------------------------- */
+.table-sm-compact {
+    font-size: .85rem;
+}
+
+.table-sm-compact th,
+.table-sm-compact td {
+    padding: .35rem .45rem;
+    vertical-align: middle;
+}
+
+/* ---- 珠子输入框 -------------------------------------------------------- */
+.decoration_input {
+    min-width: 5.5rem;
+}
+
+/* ---- 底部固定操作栏（移动端优先，桌面也可见）------------------------- */
+.bottom-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1030;
+    background: var(--bs-body-bg, #fff);
+    border-top: 1px solid var(--bs-border-color, #dee2e6);
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, .06);
+    padding: .4rem .6rem;
+    padding-bottom: calc(.4rem + env(safe-area-inset-bottom, 0px));
+}
+
+.bottom-bar .inner {
+    max-width: var(--app-max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+.bottom-bar .bar-row {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    flex-wrap: wrap;
+}
+
+.bottom-bar .bar-row .grow {
+    flex: 1 1 auto;
+}
+
+.bottom-bar .btn {
+    white-space: nowrap;
+    flex: 0 0 auto;
+}
+
+/* ---- 提示气泡（右上角堆叠，不重叠）------------------------------------ */
+.msghint {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: auto;
+    max-width: min(320px, 80vw);
+    min-width: 200px;
+    margin: 0;
+    /* 必须高于 Bootstrap Offcanvas 的 z-index(1045) 和 Modal(1055)，否则被遮挡 */
+    z-index: 2000;
+    pointer-events: none;
+    /* 定位由 JS 动态设置 top（堆叠），这里只做进入动画 */
+    animation: msgin .3s ease-out;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .18);
+    white-space: normal;
+    word-break: break-all;
+}
+
+/* 进入动画：从右侧滑入 */
+@keyframes msgin {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 暗色下 toast 有阴影更明显 */
+@media (prefers-color-scheme: dark) {
+
+    html:not([data-theme="light"]) .msghint {
+        box-shadow: 0 4px 14px rgba(0, 0, 0, .5);
+    }
+}
+/* ---- 技能信息面板 ------------------------------------------------------ */
+/* 未装备的技能：视觉上灰掉（原来是 :disabled，改成 class 以便仍可点击查看效果） */
+.skill_info_btn.is-locked {
+    opacity: 0.55;
+}
+
+/* 技能效果弹窗内容 */
+.skill-desc-body ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    font-size: .85rem;
+    line-height: 1.5;
+}
+
+.skill-desc-body li {
+    margin-bottom: .15rem;
+}
+
+/* 通用弹窗：不要被 Bootstrap 的 modal-dialog-centered 强制拉满屏高（内容多高就多高） */
+#promptModal .modal-dialog {
+    min-height: auto;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
+#promptModal .modal-body {
+    max-height: 65vh;
+    overflow-y: auto;
+}
+
+/* 技能一览：默认折叠（is-collapsed 时隐藏），展开后完整显示（跟页面一起滚动） */
+#skillInfo.is-collapsed {
+    display: none;
+}
+
+#skillInfo {
+    padding: .4rem;
+    border: 1px solid var(--bs-border-color, #dee2e6);
+    border-radius: var(--app-radius, .5rem);
+}
+
+/* 技能一格：用 CSS Grid 排布（彻底避免 flex + col-2 的宽度计算问题） */
+#skillInfo .row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: .15rem;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* 分类标题行：保持普通块级（不要变成网格） */
+#skillInfo .row.si-cat-title {
+    display: block;
+    font-weight: 600;
+    font-size: .8rem;
+    margin-top: .5rem;
+    margin-bottom: .2rem;
+    color: var(--bs-secondary-color, #6c757d);
+}
+
+#skillInfo .skill_info_div {
+    display: block !important;
+    width: auto !important;
+    max-width: none !important;
+    flex: none !important;
+    min-width: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 手机/窄屏：一行 3 个（技能名放得下） */
+@media (max-width: 900px) {
+    #skillInfo .row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 中等屏幕：一行 4 个 */
+@media (min-width: 901px) and (max-width: 1399px) {
+    #skillInfo .row {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+#skillInfo .skill_info_btn {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .15rem;
+    white-space: nowrap;
+    font-size: .72rem;
+    line-height: 1.2;
+    padding: .2rem .3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 统一配色（原来按顺序轮换多种颜色，视觉杂乱） */
+    background-color: rgba(13, 110, 253, .08);
+    border-color: rgba(13, 110, 253, .25);
+    color: var(--bs-body-color, #212529);
+}
+
+/* 已装备的技能：实心蓝底，一眼区分 */
+#skillInfo .skill_info_btn:not(.is-locked) {
+    background-color: rgba(13, 110, 253, .85);
+    border-color: rgba(13, 110, 253, .9);
+    color: #fff;
+}
+
+/* 已装备但"没满级"：琥珀/橙色，提示还能继续堆 */
+#skillInfo .skill_info_btn.si-partial {
+    background-color: rgba(255, 153, 0, .88);
+    border-color: rgba(255, 153, 0, .95);
+    color: #1c1200;
+}
+
+/* 已装备且"超出上限"（如护石/极限导致超过 max）：红色警示 */
+#skillInfo .skill_info_btn.si-over {
+    background-color: rgba(220, 53, 69, .9);
+    border-color: rgba(220, 53, 69, .95);
+    color: #fff;
+}
+
+/* 鼠标悬停：高亮，提示可点击（未装备的也允许看效果） */
+#skillInfo .skill_info_btn:hover {
+    opacity: 1;
+    box-shadow: 0 0 0 .12rem rgba(13, 110, 253, .45);
+    filter: brightness(1.08);
+}
+
+/* 名字中长的技能：略缩字号，保证文字不贴边、不溢出铭牌 */
+#skillInfo .skill_info_btn.is-mid {
+    font-size: .64rem;
+    gap: .1rem;
+    padding: .2rem .25rem;
+}
+
+#skillInfo .skill_info_btn.is-long {
+    font-size: .58rem;
+    gap: .1rem;
+    padding: .2rem .2rem;
+}
+
+/* 技能一览切换按钮文字行 */
+#skillInfoToggle {
+    font-weight: 600;
+}
+
+#skillInfoToggle .si-toggle-hint {
+    font-weight: 400;
+    font-size: .7rem;
+    margin-top: .1rem;
+}
+
+/* ---- 历史记录 / 对比列表项 -------------------------------------------- */
+.history-item {
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+    flex-wrap: wrap;
+}
+
+/* 序号徽标 */
+.history-item .cache-index {
+    flex: 0 0 auto;
+    min-width: 1.9rem;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+    background: rgba(128, 128, 128, .14);
+    border-radius: .35rem;
+    padding: .05rem .3rem;
+    font-size: .72rem;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    html:not([data-theme="light"]) .history-item .cache-index {
+        background: rgba(255, 255, 255, .12);
+    }
+}
+
+.history-item .cacheItem {
+    text-align: left;
+    text-decoration: none;
+    color: var(--bs-body-color, #212529);
+    white-space: normal;
+    word-break: break-all;
+    flex: 1 1 100%;
+}
+
+.history-item .cacheItem:hover {
+    color: var(--bs-primary, #0d6efd);
+    text-decoration: underline;
+}
+
+.history-item .btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+.compare-row {
+    white-space: normal;
+}
+.compare-row .compareItem {
+    /* 交给外层菜单的 max-width 约束，min-width:0 让 flex 子项能正确收缩 */
+    max-width: 100%;
+    cursor: pointer;
+}
+
+.compare-row .compareItem:hover {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+
+/* chip 右侧的 × 按钮（通用样式） */
+.compare-chip-x {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: .3rem;
+    padding: 0 .32rem;
+    border-radius: .25rem;
+    line-height: 1.2;
+    transition: background .15s ease, color .15s ease;
+}
+
+.compare-chip-x:hover {
+    background: #dc3545;
+    color: #fff;
+}
+
+/* "临时配装"chip 的 × ：表示"清空草稿"，用橙色区别于普通 chip 的红色删除 × */
+.compare-chip-x-draft {
+    background: rgba(253, 126, 20, .22) !important;
+    color: #fd7e14 !important;
+    border: 1px solid rgba(253, 126, 20, .5) !important;
+}
+
+.compare-chip-x-draft:hover {
+    background: #fd7e14 !important;
+    color: #fff !important;
+    border-color: #fd7e14 !important;
+}
+
+/* ---- 金手指代码显示 ---------------------------------------------------- */
+.code-block {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: .82rem;
+    line-height: 1.5;
+    background: rgba(0, 0, 0, .04);
+    border: 1px solid var(--bs-border-color, #dee2e6);
+    border-radius: var(--app-radius);
+    padding: .75rem;
+    margin: 0;
+    white-space: pre;
+    /* 保留原始换行，不自动折行（代码一行一行对齐） */
+    overflow-x: auto;
+    word-break: normal;
+}
+
+/* ---- 响应式：手机 -------------------------------------------------------- */
+@media (max-width: 600px) {
+    .app-topbar {
+        align-items: center;
+        gap: .4rem;
+        flex-wrap: nowrap;      /* 顶栏强制一行不换行 */
+    }
+    /* 手机端：spacer 撑开，把主题+初始化推到右侧 */
+    .app-topbar .topbar-spacer {
+        flex: 1 1 auto;
+        min-width: .3rem;
+    }
+    /* 窄屏顶栏：主题按钮只显示 emoji */
+    #themeToggle {
+        flex: 0 0 auto;
+        padding-left: .4rem;
+        padding-right: .4rem;
+    }
+    #themeToggle .theme-text {
+        display: none;
+    }
+    /* 窄屏顶栏：压缩标题与版本号，保证一行放下 */
+    .app-topbar .app-title {
+        flex: 0 1 auto;
+        min-width: 0;
+        font-size: 1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    /* 窄屏：连接按钮收紧（圆点 + 短文字），省空间 */
+    #swConnect {
+        flex: 0 0 auto;
+        padding-left: .4rem;
+        padding-right: .4rem;
+        font-size: .72rem;
+        gap: .25rem;
+    }
+    #swConnect .sw-btn-text {
+        font-size: .72rem;
+    }
+    .app-topbar #app_version {
+        flex: 0 0 auto;
+        font-size: .68rem;
+        padding: .1rem .4rem;
+    }
+    .app-topbar #reInit {
+        flex: 0 0 auto;
+    }
+
+    .stat-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .bottom-bar .inner {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    /* 手机端底部 4 个按钮强制一行：收紧间距与内边距 */
+    .bottom-bar .bar-row {
+        flex-wrap: nowrap;
+        gap: .3rem;
+    }
+    .bottom-bar .bar-row .btn {
+        white-space: nowrap;
+        padding-left: .5rem;
+        padding-right: .5rem;
+        font-size: .78rem;
+    }
+    .bottom-bar .inner .btn {
+        white-space: nowrap;
+    }
+}
+
+/* ---- 「增加对比」：触发按钮 + 下拉面板 -------------------------------- */
+.dropdown-menu-compare {
+    /* 限制最大宽度，避免长配装名把菜单撑出手机屏幕 */
+    max-width: min(320px, 90vw);
+    min-width: 220px;
+    /* 限制最大高度并允许滚动，避免配装太多时菜单超出屏幕看不到 */
+    max-height: min(50vh, 340px);
+    overflow-y: auto;
+    overscroll-behavior: contain;  /* 滚动到底不带动页面 */
+    -webkit-overflow-scrolling: touch;  /* iOS 顺滑滚动 */
+}
+
+.btn-compare-toggle {
+    background: var(--bs-tertiary-bg, #f8f9fa);
+    border: 1px solid var(--bs-border-color, #dee2e6);
+    color: var(--bs-body-color, #212529);
+    border-radius: 999px;
+    padding-left: .7rem;
+    padding-right: .7rem;
+    font-size: .8125rem;
+    font-weight: 500;
+    transition: background .15s ease, border-color .15s ease, color .15s ease;
+}
+
+.btn-compare-toggle:hover,
+.btn-compare-toggle:focus {
+    background: rgba(13, 110, 253, .08);
+    border-color: rgba(13, 110, 253, .4);
+    color: var(--bs-primary, #0d6efd);
+}
+
+.btn-compare-toggle .compare-plus {
+    font-weight: 700;
+    margin-right: .15rem;
+    color: var(--bs-primary, #0d6efd);
+}
+
+/* 下拉面板：更柔和的“添加”按钮 */
+.btn-add-compare {
+    border-radius: 999px;
+    border: 1px solid rgba(13, 110, 253, .45);
+    color: var(--bs-primary, #0d6efd);
+    background: transparent;
+    font-size: .75rem;
+    padding: .1rem .6rem;
+    line-height: 1.4;
+    transition: background .15s ease, color .15s ease;
+}
+
+.btn-add-compare:hover,
+.btn-add-compare:focus {
+    background: var(--bs-primary, #0d6efd);
+    border-color: var(--bs-primary, #0d6efd);
+    color: #fff;
+}
+
+/* ---- 技能合计表头：对比配装 chip -------------------------------------- */
+.compare-th {
+    white-space: nowrap;
+}
+
+/* 对比表里的技能名：可点击查看效果 */
+#skill_table .compare-skill-name {
+    cursor: pointer;
+    border-radius: .25rem;
+    transition: background-color .12s ease;
+    /* 技能名不允许逐字换行（窄屏下曾把「会心击【属性】」挤成竖排），
+       保持单行；不给单元格设固定宽度，避免出现纵向空隙 */
+    white-space: nowrap;
+}
+
+/* 技能名一列：给个合理的最小宽度，保证汉字能一行放下；
+   窄屏时整表横向滚动（下面 .skill-table-wrap 负责），而不是把字挤成竖排 */
+#skill_table td:first-child,
+#skill_table th:first-child {
+    min-width: 6.5rem;
+    white-space: nowrap;
+}
+
+/* 技能合计表：窄屏下横向滚动，避免各列被压扁 */
+.skill-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 表格本身给出最小宽度：列多时不压缩（由外层 table-responsive 横向滚动） */
+#skill_table_el {
+    min-width: 22rem;
+}
+
+/* 除技能名外的列（各对比配装列）：给最小宽度，避免进度条被压扁 */
+#skill_table_el td:not(:first-child),
+#skill_table_el th:not(:first-child) {
+    min-width: 4.5rem;
+}
+
+#skill_table .compare-skill-name:hover {
+    background-color: rgba(13, 110, 253, .12);
+    text-decoration: underline;
+}
+
+.compare-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    padding: .15rem .35rem .15rem .6rem;
+    border-radius: 999px;
+    background: rgba(13, 110, 253, .10);
+    border: 1px solid rgba(13, 110, 253, .25);
+    color: var(--bs-body-color, #212529);
+    font-size: .8125rem;
+    font-weight: 500;
+    line-height: 1.4;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+.compare-chip:hover,
+.compare-chip:focus {
+    background: rgba(13, 110, 253, .18);
+    border-color: rgba(13, 110, 253, .45);
+    color: var(--bs-primary, #0d6efd);
+}
+
+/* chip 里的“会心X”小字 */
+.compare-chip-sub {
+    font-size: .6875rem;
+    font-weight: 400;
+    color: var(--bs-secondary-color, #6c757d);
+    background: rgba(0, 0, 0, .05);
+    border-radius: 999px;
+    padding: .05rem .4rem;
+}
+
+/* chip 右侧的 × 删除按钮 */
+.compare-chip-x {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.05rem;
+    height: 1.05rem;
+    border-radius: 50%;
+    background: rgba(220, 53, 69, .12);
+    color: #dc3545;
+    font-size: .85rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background .15s ease, color .15s ease;
+}
+
+.compare-chip-x:hover {
+    background: #dc3545;
+    color: #fff;
+}
+
+/* ---- 装备搜索面板 ------------------------------------------------------ */
+#armorSearchList {
+    width: 100%;
+    box-sizing: border-box;
+    max-height: 55vh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+}
+
+.armor-search-item {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: .5rem .65rem;
+    border: 1px solid var(--bs-border-color, #dee2e6);
+    border-radius: .5rem;
+    background: var(--bs-body-bg, #fff);
+    color: var(--bs-body-color, #212529);
+    transition: background .12s ease, border-color .12s ease;
+}
+
+.armor-search-item:hover,
+.armor-search-item:focus {
+    background: rgba(13, 110, 253, .07);
+    border-color: rgba(13, 110, 253, .45);
+}
+
+.armor-search-item.active {
+    border-color: var(--bs-primary, #0d6efd);
+    background: rgba(13, 110, 253, .12);
+}
+
+.armor-search-item .asi-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+.armor-search-item .asi-name {
+    font-weight: 600;
+    font-size: .9rem;
+    word-break: break-all;
+}
+
+.armor-search-item .asi-badges {
+    display: inline-flex;
+    gap: .3rem;
+    flex: 0 0 auto;
+}
+.armor-search-item .asi-badge {
+    font-size: .68rem;
+    font-weight: 500;
+    padding: .05rem .4rem;
+    border-radius: 999px;
+    background: rgba(13, 202, 240, .14);
+    color: #0aa2c0;
+}
+
+/* 孔位：青色胶囊 */
+.armor-search-item .asi-badge-slot {
+    background: rgba(13, 202, 240, .14);
+    color: #0aa2c0;
+}
+
+/* 防御：绿色胶囊 */
+.armor-search-item .asi-badge-def {
+    background: rgba(25, 135, 84, .14);
+    color: #198754;
+}
+
+/* 稀有度 R：按等级分色（R10 橙 / R9 紫 / R8 蓝） */
+.armor-search-item .asi-badge-rank {
+    font-weight: 700;
+    /* 默认（其它等级）用紫 */
+    background: rgba(112, 72, 232, .16);
+    color: #7048e8;
+}
+
+.armor-search-item .asi-badge-rank.rank-10 {
+    background: rgba(255, 153, 0, .16);
+    color: #d9822b;
+}
+
+.armor-search-item .asi-badge-rank.rank-9 {
+    background: rgba(112, 72, 232, .16);
+    color: #7048e8;
+}
+
+.armor-search-item .asi-badge-rank.rank-8 {
+    background: rgba(13, 110, 253, .14);
+    color: #0d6efd;
+}
+
+/* 怪异点数：红色胶囊 */
+.armor-search-item .asi-badge-cost {
+    background: rgba(220, 53, 69, .14);
+    color: #dc3545;
+    font-weight: 600;
+}
+.armor-search-item .asi-skills {
+    margin-top: .2rem;
+    font-size: .75rem;
+    color: var(--bs-secondary-color, #6c757d);
+    word-break: break-all;
+}
+
+/* 耐性小标签行 */
+.armor-search-item .asi-res {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35rem;
+    margin-top: .25rem;
+    font-size: .7rem;
+}
+
+.armor-search-item .asi-res-item {
+    color: var(--bs-secondary-color, #6c757d);
+    background: rgba(108, 117, 125, .1);
+    border-radius: .35rem;
+    padding: .02rem .35rem;
+    white-space: nowrap;
+}
+
+/* 词条类型彩色小圆点 */
+.kskill-tag {
+    display: inline-block;
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    margin-right: .35rem;
+    vertical-align: middle;
+    background: #adb5bd;
+}
+
+.kskill-tag.kskill-type-def {
+    background: #0d6efd;
+}
+
+/* 防御-蓝 */
+.kskill-tag.kskill-type-res {
+    background: #0dcaf0;
+}
+
+/* 耐性-青 */
+.kskill-tag.kskill-type-slot {
+    background: #20c997;
+}
+
+/* 孔位-绿 */
+.kskill-tag.kskill-type-skill {
+    background: #7048e8;
+}
+
+/* 技能-紫 */
+
+/* 技能+1 的等级徽章（S/A/B/C/D）—— 各等级不同颜色 */
+.kskill-grade {
+    display: inline-block;
+    margin-left: .35rem;
+    padding: .02rem .4rem;
+    font-size: .68rem;
+    font-weight: 700;
+    line-height: 1.2;
+    border-radius: .3rem;
+    background: rgba(112, 72, 232, .16);
+    color: #7048e8;
+    vertical-align: middle;
+}
+
+/* S 级——金 */
+.kskill-grade.kskill-grade-S {
+    background: rgba(255, 193, 7, .2);
+    color: #cc9a06;
+}
+
+/* A 级——红 */
+.kskill-grade.kskill-grade-A {
+    background: rgba(220, 53, 69, .16);
+    color: #dc3545;
+}
+
+/* B 级——蓝 */
+.kskill-grade.kskill-grade-B {
+    background: rgba(13, 110, 253, .16);
+    color: #0d6efd;
+}
+
+/* C 级——绿 */
+.kskill-grade.kskill-grade-C {
+    background: rgba(25, 135, 84, .16);
+    color: #198754;
+}
+
+/* D 级——灰 */
+.kskill-grade.kskill-grade-D {
+    background: rgba(108, 117, 125, .18);
+    color: #6c757d;
+}
+
+/* "自带"浅色小标签（技能-1 用） */
+.skill-self-tag {
+    display: inline-block;
+    margin-left: .35rem;
+    padding: .01rem .32rem;
+    font-size: .62rem;
+    font-weight: 400;
+    line-height: 1.2;
+    border-radius: .3rem;
+    border: 1px solid var(--bs-border-color, #dee2e6);
+    color: var(--bs-secondary-color, #6c757d);
+    vertical-align: middle;
+}
+
+/* 技能面板中"当前词条等级"的技能：左侧加一条高亮竖线，便于识别 */
+.armor-search-item.skill-cur-grade {
+    border-left: 3px solid #7048e8;
+}
+
+/* 词条点数徽章：正（扣点）红 / 负（加点）绿 */
+.armor-search-item .asi-badge.kskill-cost-pos {
+    background: rgba(220, 53, 69, .14);
+    color: #dc3545;
+}
+
+.armor-search-item .asi-badge.kskill-cost-neg {
+    background: rgba(25, 135, 84, .14);
+    color: #198754;
+}
+
+
+.armor-search-empty {
+    text-align: center;
+    color: var(--bs-secondary-color, #6c757d);
+    padding: 2rem 0;
+    font-size: .85rem;
+}
+
+/* ---- 暗色模式（跟随系统）---------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+
+    html:not([data-theme="light"]) {
+        --bs-body-bg: #1a1d21;
+        --bs-body-color: #e4e6eb;
+        --bs-border-color: #343a40;
+        --bs-secondary-color: #9aa0a6;
+    }
+
+    html:not([data-theme="light"]) body {
+        background-color: #121417;
+    }
+
+    html:not([data-theme="light"]) .app-card {
+        background-color: #1a1d21;
+        border-color: #343a40;
+    }
+
+    html:not([data-theme="light"]) .app-card>.card-header {
+        background-color: rgba(13, 110, 253, .15);
+    }
+
+    html:not([data-theme="light"]) .stat-grid .stat {
+        background: rgba(255, 255, 255, .06);
+    }
+
+    html:not([data-theme="light"]) .badge-soft {
+        background: rgba(13, 110, 253, .25);
+        color: #9ec5fe;
+    }
+
+    html:not([data-theme="light"]) .pill-cost {
+        background: rgba(220, 53, 69, .25);
+        color: #f1aeb5;
+    }
+
+    html:not([data-theme="light"]) .pill-slot {
+        background: rgba(13, 202, 240, .22);
+        color: #6edff6;
+    }
+
+    /* 对比 chip / 按钮 暗色适配 */
+    html:not([data-theme="light"]) .btn-compare-toggle {
+        background: #212529;
+        border-color: #343a40;
+        color: #dee2e6;
+    }
+
+    html:not([data-theme="light"]) .btn-compare-toggle .compare-plus {
+        color: #6ea8fe;
+    }
+
+    html:not([data-theme="light"]) .compare-chip {
+        background: rgba(13, 110, 253, .22);
+        border-color: rgba(13, 110, 253, .4);
+        color: #dee2e6;
+    }
+
+    html:not([data-theme="light"]) .compare-chip-sub {
+        background: rgba(255, 255, 255, .08);
+        color: #adb5bd;
+    }
+
+    html:not([data-theme="light"]) .compare-chip-x {
+        background: rgba(220, 53, 69, .25);
+        color: #f1aeb5;
+    }
+
+    /* 装备搜索项 暗色适配 */
+    html:not([data-theme="light"]) .armor-search-item {
+        background: #1a1d21;
+        border-color: #343a40;
+        color: var(--bs-body-color);
+    }
+
+    .armor-search-item:hover,
+    html:not([data-theme="light"]) .armor-search-item:focus {
+        background: rgba(13, 110, 253, .18);
+        border-color: rgba(13, 110, 253, .5);
+    }
+
+    html:not([data-theme="light"]) .armor-search-item.active {
+        background: rgba(13, 110, 253, .25);
+    }
+
+    html:not([data-theme="light"]) .armor-search-item .asi-badge {
+        background: rgba(13, 202, 240, .22);
+        color: #6edff6;
+    }
+
+    html:not([data-theme="light"]) .armor-search-item .asi-badge-slot {
+        background: rgba(13, 202, 240, .22);
+        color: #6edff6;
+    }
+
+    html:not([data-theme="light"]) .armor-search-item .asi-badge-def {
+        background: rgba(25, 135, 84, .25);
+        color: #75d4a6;
+    }
+
+    html:not([data-theme="light"]) .armor-search-item .asi-badge-rank {
+        background: rgba(112, 72, 232, .28);
+        color: #b197fc;
+    }
+
+    html:not([data-theme="light"]) .armor-search-item .asi-badge-rank.rank-10 {
+        background: rgba(255, 153, 0, .22);
+        color: #ffc078;
+    }
+
+    html:not([data-theme="light"]) .armor-search-item .asi-badge-rank.rank-9 {
+        background: rgba(112, 72, 232, .28);
+        color: #b197fc;
+    }
+
+    html:not([data-theme="light"]) .armor-search-item .asi-badge-rank.rank-8 {
+        background: rgba(13, 110, 253, .28);
+        color: #6ea8fe;
+    }
+
+    html:not([data-theme="light"]) .armor-search-item .asi-badge-cost {
+        background: rgba(220, 53, 69, .25);
+        color: #f1aeb5;
+    }
+
+    html:not([data-theme="light"]) .bottom-bar {
+        background: #1a1d21;
+        border-top-color: #343a40;
+    }
+
+    /* Bootstrap 表格暗色适配 */
+    html:not([data-theme="light"]) .table {
+        --bs-table-bg: transparent;
+        --bs-table-color: var(--bs-body-color);
+        --bs-table-striped-color: var(--bs-body-color);
+        --bs-table-striped-bg: rgba(255, 255, 255, .03);
+        --bs-table-border-color: #343a40;
+    }
+
+    .form-control,
+    html:not([data-theme="light"]) .form-select {
+        background-color: #14171a;
+        border-color: #343a40;
+        color: var(--bs-body-color);
+    }
+
+    .form-control:focus,
+    html:not([data-theme="light"]) .form-select:focus {
+        background-color: #14171a;
+        color: var(--bs-body-color);
+    }
+
+    /* ---- 补充：之前遗漏的 Bootstrap 组件暗色适配 ---- */
+
+    /* 列表项（配装列表 / 装备技能列表 / 会心率技能列表） */
+    html:not([data-theme="light"]) .list-group-item {
+        background-color: transparent;
+        color: var(--bs-body-color);
+        border-color: #343a40;
+    }
+
+    html:not([data-theme="light"]) .list-group-flush>.list-group-item {
+        background-color: transparent;
+        color: var(--bs-body-color);
+    }
+
+    /* 提示框（会心率等） */
+    html:not([data-theme="light"]) .alert {
+        color: var(--bs-body-color);
+    }
+
+    html:not([data-theme="light"]) .alert-success {
+        background-color: rgba(25, 135, 84, .25);
+        border-color: rgba(25, 135, 84, .5);
+        color: #75d4a6;
+    }
+
+    html:not([data-theme="light"]) .alert-warning {
+        background-color: rgba(255, 193, 7, .2);
+        border-color: rgba(255, 193, 7, .45);
+        color: #ffda6a;
+    }
+
+    html:not([data-theme="light"]) .alert-danger {
+        background-color: rgba(220, 53, 69, .25);
+        border-color: rgba(220, 53, 69, .5);
+        color: #f1aeb5;
+    }
+
+    html:not([data-theme="light"]) .alert-info {
+        background-color: rgba(13, 202, 240, .2);
+        border-color: rgba(13, 202, 240, .45);
+        color: #6edff6;
+    }
+
+    html:not([data-theme="light"]) .alert-primary {
+        background-color: rgba(13, 110, 253, .25);
+        border-color: rgba(13, 110, 253, .5);
+        color: #9ec5fe;
+    }
+
+    /* 进度条 */
+    html:not([data-theme="light"]) .progress {
+        background-color: #343a40;
+    }
+
+    /* 开关（未选中态） */
+    html:not([data-theme="light"]) .form-check-input {
+        background-color: #343a40;
+        border-color: #495057;
+    }
+
+    html:not([data-theme="light"]) .form-check-input:checked {
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+    }
+
+    html:not([data-theme="light"]) .form-check-input:focus {
+        border-color: #0a58ca;
+        box-shadow: 0 0 0 .18rem rgba(13, 110, 253, .3);
+    }
+
+    /* 金手指代码块：暗色下用深底 + 亮字，保证对比 */
+    html:not([data-theme="light"]) .code-block {
+        background-color: #0d1117;
+        border-color: #343a40;
+        color: #c9d1d9;
+    }
+
+    /* 分隔线 */
+    html:not([data-theme="light"]) hr {
+        border-color: #343a40;
+        opacity: 1;
+    }
+
+    /* 下拉菜单（对比菜单 / 配装下拉） */
+    html:not([data-theme="light"]) .dropdown-menu {
+        background-color: #1a1d21;
+        border-color: #343a40;
+        color: var(--bs-body-color);
+    }
+
+    html:not([data-theme="light"]) .dropdown-item {
+        color: var(--bs-body-color);
+    }
+
+    .dropdown-item:hover,
+    html:not([data-theme="light"]) .dropdown-item:focus {
+        background-color: rgba(13, 110, 253, .18);
+        color: var(--bs-body-color);
+    }
+
+    /* 模态框 */
+    html:not([data-theme="light"]) .modal-content {
+        background-color: #1a1d21;
+        border-color: #343a40;
+        color: var(--bs-body-color);
+    }
+
+    .modal-header,
+    html:not([data-theme="light"]) .modal-footer {
+        border-color: #343a40;
+    }
+
+    /* 抽屉 */
+    html:not([data-theme="light"]) .offcanvas {
+        background-color: #1a1d21;
+        color: var(--bs-body-color);
+    }
+
+    /* 文本类辅助色 */
+    html:not([data-theme="light"]) .text-secondary {
+        color: #9aa0a6 !important;
+    }
+
+    /* 输入框占位符 */
+    .form-control::placeholder,
+    html:not([data-theme="light"]) .form-select::placeholder {
+        color: #6c757d;
+        opacity: 1;
+    }
+
+    /* 禁用态输入框 */
+    .form-control:disabled,
+    html:not([data-theme="light"]) .form-select:disabled {
+        background-color: #212529;
+        color: #6c757d;
+    }
+
+    /* 关闭按钮（×）：Bootstrap 默认是黑色图标，暗色下反色为白色，保证可见 */
+    html:not([data-theme="light"]) .btn-close {
+        filter: invert(1) grayscale(100%) brightness(200%);
+        opacity: .7;
+    }
+
+    html:not([data-theme="light"]) .btn-close:hover {
+        opacity: 1;
+    }
+}
+
+/* ---- 护石孔位 / 技能等级 下拉：统一精致样式 ------------------------------ */
+/* 孔位下拉 */
+#charm_slot_select.charm-slot-sel {
+    border-radius: .6rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .04);
+    transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+#charm_slot_select.charm-slot-sel:hover {
+    border-color: rgba(13, 110, 253, .55);
+}
+
+#charm_slot_select.charm-slot-sel:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 .18rem rgba(13, 110, 253, .22);
+}
+
+/* 等级下拉（面板内） */
+#charmLevelSelect.charm-level-sel {
+    border-radius: .6rem;
+    font-weight: 600;
+    color: #7048e8;
+    border-color: rgba(112, 72, 232, .4);
+    background-color: rgba(112, 72, 232, .06);
+    transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+#charmLevelSelect.charm-level-sel:hover {
+    border-color: rgba(112, 72, 232, .7);
+    background-color: rgba(112, 72, 232, .1);
+}
+
+#charmLevelSelect.charm-level-sel:focus {
+    border-color: #7048e8;
+    box-shadow: 0 0 0 .18rem rgba(112, 72, 232, .25);
+}
+
+/* 等级行整体：浅色卡片底，更醒目 */
+#charmLevelRow {
+    padding: .45rem .6rem;
+    border: 1px solid rgba(112, 72, 232, .25);
+    border-radius: .6rem;
+    background: rgba(112, 72, 232, .05);
+}
+#charmLevelRow #charmLevelSelect {
+    margin-left: auto;
+}
+
+/* 暗色适配 */
+@media (prefers-color-scheme: dark) {
+
+    html:not([data-theme="light"]) #charm_slot_select.charm-slot-sel:focus {
+        background-color: #14171a;
+        box-shadow: 0 0 0 .18rem rgba(13, 110, 253, .35);
+    }
+    html:not([data-theme="light"]) #charmLevelSelect.charm-level-sel {
+        background-color: rgba(112, 72, 232, .15);
+        color: #b197fc;
+        border-color: rgba(112, 72, 232, .5);
+    }
+    html:not([data-theme="light"]) #charmLevelSelect.charm-level-sel:hover {
+        background-color: rgba(112, 72, 232, .22);
+    }
+    html:not([data-theme="light"]) #charmLevelRow {
+        background: rgba(112, 72, 232, .12);
+        border-color: rgba(112, 72, 232, .4);
+    }
+}
+
+/* ==========================================================================
+   桌面自适应：按屏幕宽度分级紧凑（不锁高度，不限高，整页正常滚动）
+   - ≥992px：平板横屏/小笔记本，开始 2 列→横向利用空间
+   - ≥1200px：常规桌面，装备 4 列
+   - ≥1600px：宽屏（1080p 及以上），装备 5 列、护石/武器字段横向铺开
+   ========================================================================== */
+
+/* ---- ≥992px：中等屏幕，稍作紧凑 ---------------------------------------- */
+@media (min-width: 992px) {
+
+    /* 卡片间距略收 */
+    .app-card {
+        margin-bottom: .75rem;
+    }
+
+    .app-card>.card-header {
+        padding: .45rem .8rem;
+    }
+}
+
+/* ---- ≥1200px：常规桌面，装 4 列 ---------------------------------------- */
+@media (min-width: 1200px) {
+    :root {
+        --app-max-width: 1400px;
+    }
+
+    /* 装备区：4 列一行（一行能放更多） */
+    #armor_body>[class*="col-"] {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+/* ---- ≥1600px：宽屏（1080p+），装 5 列并进一步压缩 ---------------------- */
+@media (min-width: 1600px) {
+    :root {
+        --app-max-width: 1760px;
+        --app-gap: 0.6rem;
+    }
+
+    /* 顶部与底部留白收窄 */
+    #main {
+        padding: 0.5rem 0.7rem 3rem;
+    }
+
+    /* 卡片头与卡片体更紧凑 */
+    .app-card>.card-header {
+        padding: .35rem .75rem;
+        font-size: .9rem;
+    }
+
+    .app-card .card-body {
+        padding: .5rem .75rem;
+    }
+
+    .app-card {
+        margin-bottom: .5rem;
+    }
+
+    .app-card .row.g-2 {
+        --bs-gutter-y: .3rem;
+    }
+
+    .app-card .meta {
+        font-size: .85rem;
+        line-height: 1.3;
+    }
+
+    .app-card hr.my-2 {
+        margin: .35rem 0;
+    }
+
+    /* 装备区：5 列一行 */
+    #armor_body>[class*="col-"] {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+
+    #armor_body {
+        --bs-gutter-x: .6rem;
+        --bs-gutter-y: .6rem;
+    }
+
+    /* 装备卡片内部整体微缩（不限高，自然展开） */
+    #armor_body .form-control,
+    #armor_body .form-select {
+        padding: .2rem .45rem;
+        font-size: .82rem;
+        min-height: 1.7rem;
+    }
+
+    #armor_body .form-label {
+        font-size: .82rem;
+        margin-bottom: .1rem;
+    }
+
+    #armor_body .table-sm-compact {
+        font-size: .82rem;
+    }
+
+    #armor_body .table-sm-compact th,
+    #armor_body .table-sm-compact td {
+        padding: .18rem .28rem;
+    }
+
+    #armor_body .table-sm-compact .form-control {
+        min-height: 1.5rem;
+        padding: .1rem .35rem;
+        font-size: .8rem;
+    }
+
+    #armor_body .info-line {
+        margin: .2rem 0;
+    }
+
+    /* 护石卡：技能1/技能2/孔位/珠子1/2/3 一行 6 列 */
+    #menu1>.app-card:nth-of-type(2) .row.g-3>[class*="col-"] {
+        flex: 0 0 16.6667%;
+        max-width: 16.6667%;
+    }
+
+    /* 武器卡：孔位/珠子1/2/3 一行 4 列 */
+    #menu1>.app-card:nth-of-type(3) .row.g-3>[class*="col-"] {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    /* 护石 / 武器卡片内部更紧凑 */
+    #menu1 .app-card .row.g-3 {
+        --bs-gutter-x: .6rem;
+        --bs-gutter-y: .5rem;
+    }
+
+    #menu1>.app-card:nth-of-type(2) .form-control,
+    #menu1>.app-card:nth-of-type(2) .form-select,
+    #menu1>.app-card:nth-of-type(3) .form-control,
+    #menu1>.app-card:nth-of-type(3) .form-select {
+        padding: .2rem .45rem;
+        font-size: .82rem;
+        min-height: 1.7rem;
+    }
+}
+
+/* ---- 矮屏（笔记本 768~900 高）自动更紧凑，尽量少滚动（不限高） --------- */
+@media (min-width: 1200px) and (max-height: 900px) {
+    #main {
+        padding-top: 0.4rem;
+    }
+
+    .app-card {
+        margin-bottom: .4rem;
+    }
+
+    .app-card>.card-header {
+        padding: .28rem .7rem;
+    }
+
+    .app-card .card-body {
+        padding: .4rem .7rem;
+    }
+
+    #armor_body .form-control,
+    #armor_body .form-select {
+        min-height: 1.6rem;
+        padding: .15rem .4rem;
+        font-size: .82rem;
+    }
+
+    #armor_body .table-sm-compact th,
+    #armor_body .table-sm-compact td {
+        padding: .16rem .28rem;
+    }
+}
+
+/* ---- 宽屏且够高（≥1600×900）：整体再收紧一点，尽量少滚动（不限高） ----- */
+@media (min-width: 1600px) and (min-height: 900px) {
+    #main {
+        padding: 0.4rem 0.7rem 3rem;
+    }
+
+    .app-card {
+        margin-bottom: .4rem;
+    }
+
+    .app-card>.card-header {
+        padding: .3rem .75rem;
+        font-size: .88rem;
+    }
+
+    .app-card .card-body {
+        padding: .4rem .75rem;
+    }
+
+    #armor_body .form-control,
+    #armor_body .form-select {
+        min-height: 1.6rem;
+        padding: .16rem .42rem;
+        font-size: .82rem;
+    }
+
+    #armor_body .form-label {
+        font-size: .8rem;
+        margin-bottom: .08rem;
+    }
+
+    #armor_body .table-sm-compact {
+        font-size: .8rem;
+    }
+
+    #armor_body .table-sm-compact th,
+    #armor_body .table-sm-compact td {
+        padding: .12rem .25rem;
+    }
+
+    #armor_body .table-sm-compact .form-control {
+        min-height: 1.45rem;
+        padding: .08rem .32rem;
+        font-size: .78rem;
+    }
+
+    #armor_body .info-line {
+        margin: .15rem 0;
+    }
+
+    #armor_body .decoration_select_container {
+        margin: .1rem 0;
+    }
+}
+
+/* ---- 桌面端底部固定栏更薄 ---------------------------------------------- */
+@media (min-width: 1200px) {
+    .bottom-bar {
+        padding: .3rem .7rem;
+    }
+
+    #skillInfo {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+/* ======================================================================
+   返回顶部按钮
+   ====================================================================== */
+.back-to-top {
+    position: fixed;
+    right: 16px;
+    /* 默认贴在底部栏上方 */
+    bottom: 64px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(13, 110, 253, .9);
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity .2s ease, transform .2s ease, visibility .2s;
+    z-index: 1030;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:active {
+    transform: scale(.92);
+}
+
+/* 暗色适配 */
+@media (prefers-color-scheme: dark) {
+
+    html:not([data-theme="light"]) .back-to-top {
+        background: rgba(110, 168, 254, .9);
+        color: #0d1117;
+    }
+}
+
+/* 版本号可点击（检查更新入口） */
+.badge-soft#app_version {
+    cursor: pointer;
+    user-select: none;
+    transition: background .15s ease, transform .1s ease;
+}
+
+.badge-soft#app_version:hover {
+    background: rgba(13, 110, 253, .18);
+}
+
+.badge-soft#app_version:active {
+    transform: scale(.95);
+}
+
+.badge-soft#app_version:focus-visible {
+    outline: 2px solid #0d6efd;
+    outline-offset: 1px;
+}
+
+/* 空列表占位提示 */
+.history-empty {
+    font-size: .85rem;
+    background: transparent;
+    border: 1px dashed rgba(128, 128, 128, .35);
+    border-radius: .5rem;
+    margin-top: .25rem;
+}
+
+/* 搜索面板"共 N 项"计数条 */
+.armor-search-count {
+    font-size: .78rem;
+    color: var(--bs-secondary-color, #6c757d);
+    padding: 0 .15rem .3rem;
+    min-height: 1.1rem;
+}
+
+/* 装备搜索面板：稀有度筛修行 */
+.armor-rank-filter {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+
+.armor-rank-filter .btn-group {
+    flex-wrap: wrap;
+}
+
+/* 选中态用主色实心，便于一眼看出当前筛选 */
+.armor-rank-filter .btn.active {
+    background-color: var(--bs-primary, #0d6efd);
+    border-color: var(--bs-primary, #0d6efd);
+    color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    html:not([data-theme="light"]) .armor-search-count {
+        color: #9aa4ae;
+    }
+}
+
+/* PWA 安装引导条 */
+.install-hint {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 8px;
+    z-index: 1080;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    max-width: calc(100vw - 24px);
+    padding: .4rem .6rem .4rem .8rem;
+    background: #0d6efd;
+    color: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .3);
+    font-size: .85rem;
+}
+
+.install-hint-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    html:not([data-theme="light"]) .install-hint {
+        background: #2b6cb0;
+    }
+}
+
+/* "我的配装"里的数据备份提示 */
+.cache-backup-tip {
+    line-height: 1.5;
+    padding: .5rem .6rem;
+    border-radius: .5rem;
+    background: rgba(255, 193, 7, .12);
+    border: 1px solid rgba(255, 193, 7, .3);
+}
+
+@media (prefers-color-scheme: dark) {
+
+    html:not([data-theme="light"]) .cache-backup-tip {
+        background: rgba(255, 193, 7, .1);
+        border-color: rgba(255, 193, 7, .28);
+        color: #d9c07a !important;
+    }
+}
+
+/* ======================================================================
+   "我的配装"抽屉：操作按钮 + 搜索框 固定在顶部（列表滚动时不动）
+   ====================================================================== */
+.cache-drawer-sticky {
+    position: sticky;
+    /* 顶部贴住滚动容器上沿（offcanvas-body 的 padding-top 已为 0） */
+    top: 0;
+    z-index: 5;
+    /* 用不透明背景遮住下方滚过去的内容，避免文字重叠 */
+    background: var(--bs-body-bg, #fff);
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    margin-bottom: .25rem;
+}
+
+/* 暗色下背景跟随抽屉 */
+@media (prefers-color-scheme: dark) {
+
+    html:not([data-theme="light"]) .cache-drawer-sticky {
+        background: #1a1d21;
+    }
+}
+
+/* 底部分隔线（滚动时更清晰） */
+.cache-drawer-sticky::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: rgba(128, 128, 128, .25);
+    opacity: 0;
+    transition: opacity .15s ease;
+}
+
+.cache-drawer-sticky.is-stuck::after {
+    opacity: 1;
+}
+/* ========== 装备箱全屏界面 ========== */
+.box-panel {
+    position: fixed;
+    inset: 0;
+    z-index: 1045;
+    display: flex;
+    flex-direction: column;
+    background: var(--bs-body-bg, #fff);
+    overflow: hidden;
+}
+.box-header {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .6rem .8rem;
+    border-bottom: 1px solid rgba(128, 128, 128, .25);
+    flex: 0 0 auto;
+}
+.box-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+.box-toolbar {
+    padding: .5rem .8rem;
+    border-bottom: 1px solid rgba(128, 128, 128, .18);
+    flex: 0 0 auto;
+}
+.box-stat {
+    font-size: .8rem;
+    color: var(--bs-secondary-color, #6c757d);
+    margin-bottom: .4rem;
+}
+.box-filter-row {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: .4rem;
+}
+.box-filter-row .btn-group {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+.box-search-row {
+    max-width: 420px;
+}
+.box-body {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: .5rem .8rem 4rem;
+}
+.box-empty, .box-loading {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--bs-secondary-color, #6c757d);
+}
+.box-list {
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+}
+.box-item {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    padding: .45rem .6rem;
+    border: 1px solid rgba(128, 128, 128, .22);
+    border-radius: .4rem;
+    background: rgba(128, 128, 128, .05);
+}
+.box-item-idx {
+    flex: 0 0 auto;
+    min-width: 2.4rem;
+    font-size: .72rem;
+    color: var(--bs-secondary-color, #6c757d);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+.box-item-body {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+.box-item-name {
+    font-size: .9rem;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.box-item-meta {
+    font-size: .72rem;
+    color: var(--bs-secondary-color, #6c757d);
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+.box-item-worn {
+    border-color: rgba(25, 135, 84, .55);
+    background: rgba(25, 135, 84, .08);
+}
+.box-badge {
+    flex: 0 0 auto;
+    font-size: .68rem;
+    padding: .1rem .35rem;
+    border-radius: .25rem;
+    background: rgba(13, 110, 253, .15);
+    color: var(--bs-primary, #0d6efd);
+}
+.box-badge.is-warn {
+    background: rgba(255, 153, 0, .18);
+    color: #b36b00;
+}
+.box-badge.is-dim {
+    background: rgba(128, 128, 128, .18);
+    color: var(--bs-secondary-color, #6c757d);
+}
+html[data-theme="dark"] .box-panel,
+html[data-theme="dark"] .box-item {
+    background: #1a1d21;
+}
+html[data-theme="dark"] .box-item {
+    border-color: rgba(255, 255, 255, .14);
+    background: rgba(255, 255, 255, .04);
+}
+html[data-theme="dark"] .box-item-worn {
+    background: rgba(25, 135, 84, .18);
+}
+@media (max-width: 600px) {
+    .box-header { padding: .5rem .6rem; }
+    .box-toolbar { padding: .45rem .6rem; }
+    .box-body { padding: .45rem .6rem 4rem; }
+    .box-title { font-size: .95rem; }
+    .box-search-row { max-width: none; }
+}
+
+/* ========== 装备详情面板 ========== */
+.box-detail {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    background: var(--bs-body-bg, #fff);
+}
+.box-detail-header {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .6rem .8rem;
+    border-bottom: 1px solid rgba(128, 128, 128, .25);
+    flex: 0 0 auto;
+}
+.box-detail-title {
+    font-size: .95rem;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.box-detail-body {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: .7rem .8rem 4rem;
+}
+.box-detail-body h6 {
+    font-size: .82rem;
+    font-weight: 600;
+    color: var(--bs-secondary-color, #6c757d);
+    margin: 1rem 0 .4rem;
+    padding-bottom: .25rem;
+    border-bottom: 1px solid rgba(128, 128, 128, .18);
+}
+.box-detail-body h6:first-child { margin-top: 0; }
+.box-kv {
+    display: grid;
+    grid-template-columns: 7.5rem 1fr;
+    gap: .2rem .6rem;
+    font-size: .82rem;
+    margin-bottom: .5rem;
+}
+.box-kv dt {
+    color: var(--bs-secondary-color, #6c757d);
+    font-weight: normal;
+}
+.box-kv dd {
+    margin: 0;
+    word-break: break-all;
+    font-family: ui-monospace, Menlo, Consolas, monospace;
+}
+.box-slot {
+    border: 1px solid rgba(128, 128, 128, .22);
+    border-radius: .35rem;
+    padding: .4rem .55rem;
+    margin-bottom: .35rem;
+    font-size: .78rem;
+    background: rgba(128, 128, 128, .05);
+}
+.box-slot.is-empty {
+    opacity: .55;
+}
+.box-slot-head {
+    display: flex;
+    gap: .5rem;
+    align-items: baseline;
+    margin-bottom: .25rem;
+}
+.box-slot-no {
+    font-weight: 600;
+}
+.box-dump {
+    font-family: ui-monospace, Menlo, Consolas, monospace;
+    font-size: .68rem;
+    line-height: 1.5;
+    word-break: break-all;
+    background: rgba(128, 128, 128, .09);
+    border-radius: .3rem;
+    padding: .4rem .5rem;
+    color: var(--bs-secondary-color, #6c757d);
+    max-height: 9rem;
+    overflow-y: auto;
+}
+html[data-theme="dark"] .box-detail { background: #1a1d21; }
+html[data-theme="dark"] .box-slot,
+html[data-theme="dark"] .box-dump {
+    background: rgba(255, 255, 255, .05);
+}
+
+/* 词条编辑下拉 */
+.box-slot-head {
+    flex-wrap: wrap;
+}
+.box-slot-head .box-ksel {
+    flex: 1 1 11rem;
+    min-width: 0;
+    font-size: .78rem;
+    padding: .15rem .4rem;
+}
+.box-slot-head .box-sksel {
+    flex: 1 1 8rem;
+    min-width: 0;
+    font-size: .78rem;
+    padding: .15rem .4rem;
+}
+.box-slot-head .box-sksel:disabled {
+    opacity: .45;
+}
+
+/* ===== 装备箱：从我的配装导入（多选卡片） ===== */
+.box-cache-pick {
+    max-height: 10rem;
+    overflow-y: auto;
+    border: 1px solid var(--bs-border-color, #dee2e6);
+    border-radius: .375rem;
+    padding: .25rem;
+}
+.box-cache-pick:empty::after {
+    content: "没有配装";
+    display: block;
+    text-align: center;
+    color: var(--bs-secondary-color, #6c757d);
+    padding: 1rem 0;
+    font-size: .875rem;
+}
+.box-cache-item {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    width: 100%;
+    padding: .35rem .5rem;
+    border: 0;
+    border-radius: .25rem;
+    background: transparent;
+    text-align: left;
+    font-size: .875rem;
+    color: inherit;
+    cursor: pointer;
+}
+.box-cache-item:hover,
+.box-cache-item:focus {
+    background: var(--bs-tertiary-bg, #f8f9fa);
+}
+.box-cache-item.picked {
+    background: var(--bs-primary-bg-subtle, #cfe2ff);
+    font-weight: 600;
+}
+.box-cache-item .bci-check {
+    flex: 0 0 auto;
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    border: 1px solid var(--bs-secondary-color, #adb5bd);
+    border-radius: .2rem;
+    font-size: .7rem;
+    color: transparent;
+}
+.box-cache-item.picked .bci-check {
+    background: var(--bs-primary, #0d6efd);
+    border-color: var(--bs-primary, #0d6efd);
+    color: #fff;
+}
+.box-cache-item .bci-name {
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.box-cache-item .bci-meta {
+    flex: 0 0 auto;
+    font-size: .75rem;
+    color: var(--bs-secondary-color, #6c757d);
+}
+
+/* 折叠式切换按钮 */
+.box-cache-toggle {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    width: 100%;
+    padding: .35rem .55rem;
+    border: 1px solid var(--bs-border-color, #dee2e6);
+    border-radius: .375rem;
+    background: var(--bs-body-bg, #fff);
+    font-size: .875rem;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+.box-cache-toggle:hover {
+    background: var(--bs-tertiary-bg, #f8f9fa);
+}
+.box-cache-toggle .bct-arrow {
+    flex: 0 0 auto;
+    font-size: .7rem;
+    color: var(--bs-secondary-color, #6c757d);
+    transition: transform .15s;
+}
+.box-cache-toggle.open .bct-arrow {
+    transform: rotate(90deg);
+}
+.box-cache-toggle .bct-text {
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.box-cache-toggle.has-pick .bct-text {
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   紧凑排版（v6.5）：手机/平板上页面太长，统一压一档间距
+   只影响卡片间距、内边距、表格行高，不动字号大小
+   ========================================================================== */
+@media (max-width: 991.98px) {
+    :root {
+        --app-gap: 0.6rem;          /* 卡片间距 1rem -> 0.6rem */
+    }
+
+    #main {
+        padding: 0.5rem 0.5rem 4rem;
+    }
+
+    .app-card > .card-header {
+        padding: 0.45rem 0.65rem;   /* .6/.9 -> .45/.65 */
+    }
+
+    /* 卡片内容区：Bootstrap 默认 .card-body 是 1rem，压到 .65rem */
+    .app-card .card-body {
+        padding: 0.65rem;
+    }
+
+    /* 表格行高压缩（词条/技能表格） */
+    .app-card table > :not(caption) > * > * {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+
+    /* 部位标题行 */
+    .app-card h5,
+    .app-card h6 {
+        margin-bottom: 0.35rem;
+    }
+
+    /* 表单控件高度 */
+    .app-card .form-control-sm,
+    .app-card .btn-sm {
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+    }
+
+    /* 各区块之间的分隔线 */
+    .app-card hr {
+        margin: 0.5rem 0;
+    }
+}
+
+/* 超小屏（手机）再紧一点 */
+@media (max-width: 575.98px) {
+    :root {
+        --app-gap: 0.5rem;
+    }
+
+    #main {
+        padding: 0.4rem 0.4rem 3.8rem;
+    }
+
+    .app-card > .card-header {
+        padding: 0.4rem 0.55rem;
+    }
+
+    .app-card .card-body {
+        padding: 0.55rem;
+    }
+}
+
+/* ==========================================================================
+   主页卡片排版优化（v6.6）—— 只改视觉，不动 DOM / JS
+   目标：手机上不靠折叠也能把页面压短，所有内容仍然全部显示
+   ⚠️ 选择器必须用真实渲染的 DOM：
+      实际部位卡是 .armor_container > .app-card.h-100（不是 .card-inner-template，
+      那个只是个隐藏模板，克隆时没带过去）
+   ========================================================================== */
+@media (max-width: 991.98px) {
+
+    /* ---- 1. 外层大卡：去掉厚重边框，让内部部位卡自己撑开 ---- */
+    #armor_body {
+        --bs-gutter-y: 0.5rem;          /* 部位卡之间间距 1rem -> .5rem */
+    }
+
+    /* ---- 2. 部位卡：左侧主题色竖条，头部更紧凑 ---- */
+    #armor_body .armor_container > .app-card {
+        border-left: 3px solid var(--bs-primary, #0d6efd);
+        border-radius: var(--app-radius);
+        overflow: hidden;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+    }
+
+    #armor_body .armor_container > .app-card > .card-header {
+        padding: .3rem .55rem;
+        font-size: .85rem;
+        font-weight: 600;
+        min-height: 0;
+        background-color: rgba(13, 110, 253, .07);
+    }
+
+    #armor_body .armor_container > .app-card > .card-body {
+        padding: .45rem .55rem .5rem;
+    }
+
+    /* ---- 3. 词条表格：去掉表头（就“词条/技能”四个字），行高压缩 ---- */
+    #armor_body .table-responsive > table > thead {
+        display: none;
+    }
+
+    #armor_body .table-responsive > table {
+        margin-bottom: .3rem !important;
+    }
+
+    #armor_body .table-responsive > table > tbody > tr > td {
+        padding: .1rem .15rem;
+        border-top: 0;
+    }
+
+    #armor_body .table-responsive > table > tbody > tr > td:first-child {
+        padding-left: 0;
+    }
+
+    #armor_body .table-responsive > table > tbody > tr > td:last-child {
+        padding-right: 0;
+    }
+
+    /* 词条 / 技能输入框：降高度 */
+    #armor_body .k_skill_row .form-control,
+    #armor_body .k_skill_row .form-select {
+        height: 28px;
+        min-height: 28px;
+        padding: .08rem .3rem;
+        font-size: .78rem;
+        line-height: 1.2;
+    }
+
+    /* 行间淡分隔，比条纹背景干净 */
+    #armor_body .k_skill_row {
+        border-bottom: 1px solid rgba(0, 0, 0, .045);
+    }
+
+    #armor_body .k_skill_row:last-child {
+        border-bottom: 0;
+    }
+
+    /* ---- 4. 选择装备 ---- */
+    #armor_body .armor_select_display {
+        height: 30px;
+        padding: .1rem .45rem;
+        font-size: .82rem;
+    }
+
+    #armor_body label.form-label {
+        font-size: .74rem;
+        margin-bottom: .1rem;
+    }
+
+    /* ---- 5. 怪异点数 / 孔位 ---- */
+    #armor_body .info-line {
+        margin: .25rem 0 .15rem;
+        gap: .3rem;
+    }
+
+    #armor_body .pill {
+        padding: .08rem .4rem;
+        font-size: .73rem;
+        line-height: 1.3;
+    }
+
+    /* ---- 6. 珠子输入框 ---- */
+    #armor_body .decoration_input {
+        height: 28px;
+        padding: .08rem .35rem;
+        font-size: .78rem;
+    }
+
+    #armor_body .decoration_select_container {
+        margin: .15rem 0 .1rem !important;
+    }
+
+    /* ---- 7. 装备技能列表 ---- */
+    #armor_body .armor_skill {
+        margin: .05rem 0 0 !important;
+        padding: 0 !important;
+        display: flex;
+        flex-wrap: wrap;
+        gap: .15rem;
+    }
+
+    #armor_body .armor_skill > li {
+        padding: .08rem .35rem;
+        font-size: .74rem;
+        line-height: 1.3;
+        border: 0;
+        background: rgba(0, 0, 0, .035);
+        border-radius: .25rem;
+    }
+
+    #armor_body .armor_skill > li:empty {
+        display: none;
+    }
+
+    /* “装备技能：” label 缩成小字 */
+    #armor_body > label.form-label.small.mt-2,
+    #armor_body .card-body > label.form-label.small.mt-2 {
+        margin-top: .15rem !important;
+        margin-bottom: .05rem;
+        font-size: .72rem;
+        opacity: .65;
+    }
+}
+
+/* ==========================================================================
+   主页 CSS 深度优化（v6.6）—— 续 v6.5，继续压缩不留白
+   全部在手机/平板媒体查询内，桌面不受影响
+   ========================================================================== */
+@media (max-width: 991.98px) {
+
+    /* ==== A. 顶部「版本信息 / 缓存」卡：压成两行 ==== */
+    #main > .app-card:first-of-type {
+        padding: .45rem .55rem;
+    }
+
+    #main > .app-card:first-of-type .form-label {
+        font-size: .74rem;
+        margin-bottom: .1rem;
+    }
+
+    #main > .app-card:first-of-type .d-flex.flex-wrap {
+        gap: .25rem !important;
+    }
+
+    /* ==== B. 部位卡：选择装备行合并成一行 ==== */
+    #armor_body .card-body > .m-1.row:first-child {
+        margin: 0 0 .2rem !important;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    #armor_body .card-body > .m-1.row:first-child > label {
+        flex: 0 0 auto;
+        width: auto;
+        margin: .0 .35rem 0 0 !important;
+        padding: 0;
+        font-size: .74rem;
+        white-space: nowrap;
+        opacity: .7;
+    }
+
+    #armor_body .card-body > .m-1.row:first-child > .col {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    /* ==== C. 怪异点数 / 孔位 + 珠子：并排同一行 ==== */
+    #armor_body .info-line {
+        margin: .1rem 0 .15rem !important;
+        display: flex;
+        align-items: center;
+        gap: .3rem;
+        flex-wrap: wrap;
+    }
+
+    #armor_body .card-body > .m-1.row.decoration_select_container {
+        margin: 0 0 .15rem !important;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    /* ==== D. 「装备技能：」标签变成极小的行内前缀 ==== */
+    #armor_body .card-body > label.form-label.small {
+        display: block;
+        margin: .05rem 0 .02rem !important;
+        font-size: .68rem !important;
+        line-height: 1.1;
+        opacity: .6;
+    }
+
+    /* ==== E. 护石卡：压缩 ==== */
+    #main .app-card:has(#charm_skill1_display),
+    #main .app-card:has(.charm_skill_display) {
+        /* 占位：护石卡没唯一 id，靠后文通用规则处理 */
+    }
+
+    /* 护石 / 武器卡里的 label 和输入统一压小 */
+    #main .app-card .card-body > .row .form-label {
+        font-size: .74rem;
+        margin-bottom: .08rem;
+    }
+
+    #main .app-card .card-body > .row {
+        --bs-gutter-y: .25rem;
+    }
+
+    /* 护石/武器的珠子行 */
+    #main .app-card .card-body .input-group-sm > .form-control,
+    #main .app-card .card-body .input-group-sm > .form-select,
+    #main .app-card .card-body .input-group-sm > .input-group-text {
+        padding: .1rem .35rem;
+        font-size: .78rem;
+        min-height: 28px;
+    }
+
+    /* ==== F. 技能合计卡：压缩 ==== */
+    #main .app-card .table-sm td,
+    #main .app-card .table-sm th {
+        padding: .2rem .25rem;
+        font-size: .8rem;
+    }
+
+    /* ==== G. 防具一览：精简 ==== */
+    #main .app-card:last-of-type .table td,
+    #main .app-card:last-of-type .table th {
+        padding: .15rem .2rem;
+        font-size: .74rem;
+    }
+
+    /* ==== H. 统一：所有卡片圆角变小，阴影变淡 ==== */
+    #main .app-card {
+        border-radius: .4rem;
+    }
+
+    /* ==== I. 底部固定操作栏压缩 ==== */
+    .bottom-bar,
+    #bottomBar {
+        padding: .35rem .5rem !important;
+    }
+}
+
+/* ==========================================================================
+   v6.7 修正：v6.6 的通用 table-sm 规则把部位卡词条行高吃掉了，
+   导致词条表格从 230 涨回 241。这里用更高优先级压回来。
+   ========================================================================== */
+@media (max-width: 991.98px) {
+    /* 部位卡词条表格：优先级高于 #main .app-card .table-sm td */
+    #main #armor_body .table-responsive > table > tbody > tr > td {
+        padding: .08rem .12rem !important;
+        font-size: .78rem;
+        line-height: 1.15;
+        vertical-align: middle;
+    }
+
+    #main #armor_body .k_skill_row .form-control,
+    #main #armor_body .k_skill_row .form-select {
+        height: 26px !important;
+        min-height: 26px !important;
+        padding: .05rem .28rem;
+        font-size: .76rem;
+        line-height: 1.1;
+    }
+
+    /* 技能合计 / 对比表保持可读，不要太小 */
+    #main .app-card .table-sm td,
+    #main .app-card .table-sm th {
+        font-size: .82rem;
+    }
+}
+
+
+/* ==========================================================================
+   v6.8 护石卡 / 武器卡 优化（手机端）
+
+   问题：两者都用 Bootstrap 栅格 col-12 col-sm-6 col-lg，
+         手机（<576px）时 col-12 生效 → 每个字段占一整行 62px。
+         护石 6 字段 = 372px，武器 4 字段 = 248px 全白撑高。
+
+   真实选择器（已实测确认，不要凭猜）：
+     护石卡：charm_skill_display1 / charm_skill_display2 / charm_slot_select
+             珠子：decoration_input_6_0 / _6_1 / _6_2
+     武器卡：孔位=无 id 的 <select class="form-select">
+             珠子：decoration_input_7_0 / _7_1 / _7_2
+   （注意：武器卡里 **没有** weapon_slot 这个 id，别写错）
+   ========================================================================== */
+@media (max-width: 991.98px) {
+
+    /* ==== A. 护石卡：6 字段 → 每行 2 个 ==== */
+    #main .app-card:has(#charm_skill_display1) .card-body > .row {
+        --bs-gutter-x: .3rem;
+        --bs-gutter-y: .18rem;
+    }
+
+    #main .app-card:has(#charm_skill_display1) .card-body > .row > [class*="col-"] {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        width: 50% !important;
+    }
+
+    /* ==== B. 武器卡：4 字段 → 每行 4 个（-孔位 + 3 珠子） ==== */
+    #main .app-card:has(#decoration_input_7_0) .card-body > .row {
+        --bs-gutter-x: .25rem;
+        --bs-gutter-y: .15rem;
+    }
+
+    #main .app-card:has(#decoration_input_7_0) .card-body > .row > [class*="col-"] {
+        flex: 0 0 25% !important;
+        max-width: 25% !important;
+        width: 25% !important;
+    }
+
+    /* ==== C. 两卡统一：label 变小、间距变窄 ==== */
+    #main .app-card:has(#charm_skill_display1) .card-body .form-label,
+    #main .app-card:has(#decoration_input_7_0) .card-body .form-label {
+        margin: 0 0 .04rem !important;
+        font-size: .64rem !important;
+        line-height: 1.15;
+        opacity: .62;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+    }
+
+    /* ==== D. 两卡统一：输入框压高到 27px ==== */
+    #main .app-card:has(#charm_skill_display1) .card-body .form-control,
+    #main .app-card:has(#charm_skill_display1) .card-body .form-select,
+    #main .app-card:has(#decoration_input_7_0) .card-body .form-control,
+    #main .app-card:has(#decoration_input_7_0) .card-body .form-select {
+        height: 27px !important;
+        min-height: 27px !important;
+        padding: .04rem .24rem;
+        font-size: .74rem;
+        line-height: 1.1;
+    }
+
+    /* ==== E. 两卡内部 padding 也收一点 ==== */
+    #main .app-card:has(#charm_skill_display1) > .card-body,
+    #main .app-card:has(#decoration_input_7_0) > .card-body {
+        padding: .35rem .45rem .4rem;
+    }
+}
+
+/* ==========================================================================
+   v6.9 护石 / 武器：字段内部改横排（标签在左，输入在右）
+   现状：每字段 39px 高，其中标签占 ~15px、输入框 27px，上下堆叠。
+   改法：字段内 flex 横排，标签固定 34px 宽，输入框占剩余。
+   预计每个字段 39px → 29px，护石 3 行省 30px，武器 1 行省 10px。
+   ========================================================================== */
+@media (max-width: 991.98px) {
+
+    /* 让字段本身变成 flex 容器 */
+    #main .app-card:has(#charm_skill_display1) .card-body > .row > [class*="col-"],
+    #main .app-card:has(#decoration_input_7_0) .card-body > .row > [class*="col-"] {
+        display: flex;
+        align-items: center;
+        gap: .25rem;
+    }
+
+    /* 标签：固定窄宽，单行省略 */
+    #main .app-card:has(#charm_skill_display1) .card-body > .row > [class*="col-"] > .form-label,
+    #main .app-card:has(#decoration_input_7_0) .card-body > .row > [class*="col-"] > .form-label {
+        flex: 0 0 auto;
+        width: 2.3rem;
+        margin: 0 !important;
+        font-size: .62rem !important;
+        line-height: 1.1;
+        text-align: right;
+        opacity: .62;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    /* 输入框占剩余宽度；d-none 的 select 不受影响 */
+    #main .app-card:has(#charm_skill_display1) .card-body > .row > [class*="col-"] > .form-control,
+    #main .app-card:has(#charm_skill_display1) .card-body > .row > [class*="col-"] > .form-select,
+    #main .app-card:has(#decoration_input_7_0) .card-body > .row > [class*="col-"] > .form-control,
+    #main .app-card:has(#decoration_input_7_0) .card-body > .row > [class*="col-"] > .form-select {
+        flex: 1 1 auto;
+        min-width: 0;
+        width: auto !important;
+    }
+}
+
+/* ==========================================================================
+   v6.10 武器卡修正：4 列太窄，珠子名字被截断
+   "攻击珠Ⅱ【4】" 需 72px，4 列时输入框只有 46px → 会截。
+   改为 2 列（每个输入框 ~130px），从 1 行变 2 行，只多 27px，但能看全。
+   ========================================================================== */
+@media (max-width: 991.98px) {
+    #main .app-card:has(#decoration_input_7_0) .card-body > .row > [class*="col-"] {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        width: 50% !important;
+    }
+}
+
+/* ==========================================================================
+   v6.8 头部「游戏版本 / 缓存」卡：可折叠 + 视觉美化
+
+   折叠范围：只折「版本下拉 + version_code/TID/BID」那块，
+             保存/导入配装/我的配装 按钮始终留在外面可见。
+   状态：localStorage['mhrsb_verCollapsed']，下次进来保持。
+   ========================================================================== */
+
+/* ---- 头部整行可点，给个可点的视觉反馈 ---- */
+#verCardHeader {
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color .15s ease;
+    gap: .3rem;
+}
+
+#verCardHeader:hover {
+    background: rgba(13, 110, 253, .06);
+}
+
+#verCardHeader:active {
+    background: rgba(13, 110, 253, .12);
+}
+
+/* 折叠箭头 */
+#verCardHeader .ver-arrow {
+    display: inline-block;
+    width: .9rem;
+    text-align: center;
+    font-size: .8rem;
+    opacity: .55;
+    transition: transform .15s ease;
+}
+
+/* 折叠时头部右侧的版本摘要 */
+#verCardHeader .ver-brief {
+    font-size: .7rem;
+    opacity: .7;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+/* ---- 折叠态：隐藏「版本下拉 + 技术串 + 分隔线」 ---- */
+#verCard.is-ver-collapsed .card-body > .row,
+#verCard.is-ver-collapsed .ver-hr {
+    display: none !important;
+}
+
+/* 折叠后 card-body 只剩按钮行，把上下 padding 收紧一点 */
+#verCard.is-ver-collapsed .card-body {
+    padding-top: .35rem;
+    padding-bottom: .35rem;
+}
+
+/* 折叠后按钮行不要多余的顶部空隙 */
+#verCard.is-ver-collapsed .card-body > .d-flex.flex-wrap {
+    margin-top: 0 !important;
+}
+
+/* ---- 技术串美化：不再是 3 行黑字裸文本 ---- */
+#verCard .meta {
+    font-size: .68rem;
+    line-height: 1.5;
+    color: var(--bs-secondary-color, #6c757d);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    word-break: break-all;
+}
+
+#verCard .meta b {
+    font-weight: 600;
+    color: var(--bs-body-color, #212529);
+}
+
+@media (max-width: 991.98px) {
+    /* 手机上技术串压成更紧凑的两行 */
+    #verCard .meta {
+        font-size: .64rem;
+        line-height: 1.35;
+    }
+
+    /* 头部字号收小 */
+    #verCard .card-header {
+        padding: .35rem .5rem;
+        font-size: .8rem;
+    }
+
+    /* 版本下拉压高 */
+    #version {
+        height: 30px;
+        min-height: 30px;
+        padding: .1rem .4rem;
+        font-size: .8rem;
+    }
+}
+
+/* ==========================================================================
+   v6.9 主页视觉清理（纯 CSS，不改 JS）
+
+   修正 6 处：
+     ① 部位卡「装备技能：」空标签不再占位（5 处 × 12px）
+     ② 「展开技能一览」按钮太胖 + 文案冗长
+     ③ topbar 版本号太小、主题按钮宽度飘
+     ④ 防具一览 9 列挤在手机屏 → 字更小、数字列窄化
+     ⑤ 技能合计卡表格边框太重
+     ⑥ 「怪异点数: 孔位：」分隔符半/全角混用、无值时干瞪眼
+   ========================================================================== */
+
+/* ==== ① 装备技能标签：列表为空时不显示 ==== */
+/* 
+   ���实结构：<label class="form-label small mt-2">装备技能：</label>
+             <ul class="list-group p-1 armor_skill armor_skill_N"></ul>
+   label 的紧邻兄弟就是 ul，所以用 :has(+ ul:not(:has(li))) 判空。
+   ⚠️ 依赖 CSS :has()（Chrome 105+ / Safari 15.4+）。
+      不支持时会退化成「照旧显示」，不会报错、不会崩。
+*/
+/* 
+   ⚠️ 不能写成 :has(+ ul:not(:has(li)))
+      —— :has() 内部嵌套 :has() 在 Chrome 里是无效选择器，整条规则会被丢弃。
+      改用 :empty（已实测：JS 清空用 .html("")，不会留空白文本节点）。
+      已实测：空 ul 匹配=1、有 li 匹配=0、清空后匹配=1。
+*/
+#armor_body .card-body > label.form-label.small:has(+ ul.armor_skill:empty) {
+    display: none !important;
+}
+
+/* 顺便：空 ul 自身也不占任何空间（保险） */
+#armor_body .card-body > ul.armor_skill:not(:has(li)) {
+    display: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* 有内容时，标签与列表间距收紧 */
+#armor_body .card-body > label.form-label.small + ul.armor_skill:has(li) {
+    margin-top: 0 !important;
+}
+
+/* ==== ② 「展开技能一览」按钮：变瘦 + 文案精简 ==== */
+#skillInfoToggle {
+    padding: .28rem .5rem !important;
+    font-size: .78rem !important;
+    line-height: 1.3 !important;
+    border-radius: .35rem !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: .35rem;
+}
+
+/* 隐藏那句「点技能可查看效果说明」——手机上纯占位置 */
+#skillInfoToggle .si-toggle-hint {
+    display: none !important;
+}
+
+/* 按钮里的文字不换行 */
+#skillInfoToggle .si-toggle-text {
+    white-space: nowrap;
+}
+
+@media (max-width: 991.98px) {
+    /* ==== ③ topbar：版本号放大 + 主题按钮固定宽 ==== */
+    .app-topbar .badge-soft {
+        font-size: .74rem !important;
+        padding: .12rem .38rem !important;
+    }
+
+    /* 主题按钮固定最小宽，避免文字长短变化导致跳动 */
+    #themeToggle {
+        min-width: 4.2rem;
+        padding-left: .35rem;
+        padding-right: .35rem;
+        font-size: .78rem !important;
+        white-space: nowrap;
+    }
+
+    /* ==== ④ 防具一览：9 列挤小屏 → 紧凑 ==== */
+    #main .app-card:last-of-type .table {
+        font-size: .68rem;
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    #main .app-card:last-of-type .table th,
+    #main .app-card:last-of-type .table td {
+        padding: .1rem .1rem !important;
+        text-align: center;
+        font-size: .68rem;
+        line-height: 1.25;
+    }
+
+    /* 第一列（防具名）留宽一点，其余数字列等分 */
+    #main .app-card:last-of-type .table th:first-child,
+    #main .app-card:last-of-type .table td:first-child {
+        width: 30%;
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* ==== ⑤ 技能合计卡：表格去重边框 ==== */
+    #main .app-card .table-sm {
+        --bs-table-border-color: rgba(0, 0, 0, .08);
+    }
+
+    #main .app-card .table-sm > :not(caption) > * > * {
+        border-width: 0 0 1px 0;
+        padding: .22rem .3rem;
+    }
+
+    /* ==== ⑥ 「怪异点数 / 孔位」行：收紧 + 统一冒号 ==== */
+    #armor_body .info-line {
+        margin: .05rem 0 .1rem !important;
+        font-size: .7rem;
+        opacity: .8;
+    }
+}
+
+/* ==========================================================================
+   v6.19 修复：多个对比胶囊在表头重叠成一团
+
+   现象（实拍）：5 个胶囊横向排开，全部重叠在一起，文字糊了。
+
+   根因：.compare-th 只有 white-space: nowrap，没有任何布局约束。
+         表格 min-width 只有 22rem（352px），比手机屏略窄，
+         多个胶囊无法撑开表格，于是互相重叠。
+
+   原始设计意图：表格有最小宽度 + 外层 .table-responsive 负责横向滚动。
+   本修复遵循该意图：让对比列能随胶囊数量撑宽，交给外层滚动。
+   ========================================================================== */
+
+/* 对比列的 th：横向排列，每个胶囊独立不重叠 */
+.compare-th {
+    white-space: nowrap !important;
+    vertical-align: middle !important;
+    width: 1%;                    /* 让内容决定宽度，不被均分压扁 */
+}
+
+/* 胶囊之间留出真实间距，避免贴在一起看不清 */
+.compare-th > .compare-chip {
+    vertical-align: middle !important;
+    margin-right: .3rem !important;
+}
+
+.compare-th > .compare-chip:last-child {
+    margin-right: 0 !important;
+}
+
+/* 表头行不换行：所有胶囊在同一行，整个表格横向滚动 */
+#skill_table_el thead tr {
+    white-space: nowrap !important;
+}
+
+/* 表格最小宽度随内容撑开（去掉固定 22rem 的压扁隐患） */
+#skill_table_el {
+    min-width: 22rem;
+    width: auto !important;
+}
+
+/* 对比列不设固定最小宽度，交给内容决定 */
+#skill_table_el th.compare-th {
+    min-width: 0 !important;
+}

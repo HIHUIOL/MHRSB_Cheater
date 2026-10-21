@@ -1,0 +1,32 @@
+# ---- 参考工程：不推送（本地留作命令手册参考） ----
+sys-agent-custom-main/
+
+# ---- 本地凭据：绝不推送 ----
+token.txt
+
+# ---- AI 记忆区：不推送（含项目内部分析与调试入口说明） ----
+.ai-memory/
+
+# ---- 备份目录 ----
+.backup/
+*.bak-*
+*.bak
+
+# ---- 系统垃圾 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 编辑器 ----
+.vscode/
+.idea/
+*.swp
+
+# ---- Python ----
+__pycache__/
+*.pyc
+*.pyo
+
+# ---- 临时文件 ----
+*.tmp
+*.log

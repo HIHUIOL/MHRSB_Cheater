@@ -1,0 +1,364 @@
+/* ===== 强制暗色（手动切换 chong用，由构建生成，自动从 style.css 同步）===== */
+
+
+    html[data-theme="dark"] .msghint {
+        box-shadow: 0 4px 14px rgba(0, 0, 0, .5);
+    }
+
+
+
+    html[data-theme="dark"] .history-item .cache-index {
+        background: rgba(255, 255, 255, .12);
+    }
+
+
+
+    html[data-theme="dark"] {
+        --bs-body-bg: #1a1d21;
+        --bs-body-color: #e4e6eb;
+        --bs-border-color: #343a40;
+        --bs-secondary-color: #9aa0a6;
+    }
+
+    html[data-theme="dark"] body {
+        background-color: #121417;
+    }
+
+    html[data-theme="dark"] .app-card {
+        background-color: #1a1d21;
+        border-color: #343a40;
+    }
+
+    html[data-theme="dark"] .app-card>.card-header {
+        background-color: rgba(13, 110, 253, .15);
+    }
+
+    html[data-theme="dark"] .stat-grid .stat {
+        background: rgba(255, 255, 255, .06);
+    }
+
+    html[data-theme="dark"] .badge-soft {
+        background: rgba(13, 110, 253, .25);
+        color: #9ec5fe;
+    }
+
+    html[data-theme="dark"] .pill-cost {
+        background: rgba(220, 53, 69, .25);
+        color: #f1aeb5;
+    }
+
+    html[data-theme="dark"] .pill-slot {
+        background: rgba(13, 202, 240, .22);
+        color: #6edff6;
+    }
+
+    /* 对比 chip / 按钮 暗色适配 */
+    html[data-theme="dark"] .btn-compare-toggle {
+        background: #212529;
+        border-color: #343a40;
+        color: #dee2e6;
+    }
+
+    html[data-theme="dark"] .btn-compare-toggle .compare-plus {
+        color: #6ea8fe;
+    }
+
+    html[data-theme="dark"] .compare-chip {
+        background: rgba(13, 110, 253, .22);
+        border-color: rgba(13, 110, 253, .4);
+        color: #dee2e6;
+    }
+
+    html[data-theme="dark"] .compare-chip-sub {
+        background: rgba(255, 255, 255, .08);
+        color: #adb5bd;
+    }
+
+    html[data-theme="dark"] .compare-chip-x {
+        background: rgba(220, 53, 69, .25);
+        color: #f1aeb5;
+    }
+
+    /* 装备搜索项 暗色适配 */
+    html[data-theme="dark"] .armor-search-item {
+        background: #1a1d21;
+        border-color: #343a40;
+        color: var(--bs-body-color);
+    }
+
+    .armor-search-item:hover,
+    html[data-theme="dark"] .armor-search-item:focus {
+        background: rgba(13, 110, 253, .18);
+        border-color: rgba(13, 110, 253, .5);
+    }
+
+    html[data-theme="dark"] .armor-search-item.active {
+        background: rgba(13, 110, 253, .25);
+    }
+
+    html[data-theme="dark"] .armor-search-item .asi-badge {
+        background: rgba(13, 202, 240, .22);
+        color: #6edff6;
+    }
+
+    html[data-theme="dark"] .armor-search-item .asi-badge-slot {
+        background: rgba(13, 202, 240, .22);
+        color: #6edff6;
+    }
+
+    html[data-theme="dark"] .armor-search-item .asi-badge-def {
+        background: rgba(25, 135, 84, .25);
+        color: #75d4a6;
+    }
+
+    html[data-theme="dark"] .armor-search-item .asi-badge-rank {
+        background: rgba(112, 72, 232, .28);
+        color: #b197fc;
+    }
+
+    html[data-theme="dark"] .armor-search-item .asi-badge-rank.rank-10 {
+        background: rgba(255, 153, 0, .22);
+        color: #ffc078;
+    }
+
+    html[data-theme="dark"] .armor-search-item .asi-badge-rank.rank-9 {
+        background: rgba(112, 72, 232, .28);
+        color: #b197fc;
+    }
+
+    html[data-theme="dark"] .armor-search-item .asi-badge-rank.rank-8 {
+        background: rgba(13, 110, 253, .28);
+        color: #6ea8fe;
+    }
+
+    html[data-theme="dark"] .armor-search-item .asi-badge-cost {
+        background: rgba(220, 53, 69, .25);
+        color: #f1aeb5;
+    }
+
+    html[data-theme="dark"] .bottom-bar {
+        background: #1a1d21;
+        border-top-color: #343a40;
+    }
+
+    /* Bootstrap 表格暗色适配 */
+    html[data-theme="dark"] .table {
+        --bs-table-bg: transparent;
+        --bs-table-color: var(--bs-body-color);
+        --bs-table-striped-color: var(--bs-body-color);
+        --bs-table-striped-bg: rgba(255, 255, 255, .03);
+        --bs-table-border-color: #343a40;
+    }
+
+    .form-control,
+    html[data-theme="dark"] .form-select {
+        background-color: #14171a;
+        border-color: #343a40;
+        color: var(--bs-body-color);
+    }
+
+    .form-control:focus,
+    html[data-theme="dark"] .form-select:focus {
+        background-color: #14171a;
+        color: var(--bs-body-color);
+    }
+
+    /* ---- 补充：之前遗漏的 Bootstrap 组件暗色适配 ---- */
+
+    /* 列表项（配装列表 / 装备技能列表 / 会心率技能列表） */
+    html[data-theme="dark"] .list-group-item {
+        background-color: transparent;
+        color: var(--bs-body-color);
+        border-color: #343a40;
+    }
+
+    html[data-theme="dark"] .list-group-flush>.list-group-item {
+        background-color: transparent;
+        color: var(--bs-body-color);
+    }
+
+    /* 提示框（会心率等） */
+    html[data-theme="dark"] .alert {
+        color: var(--bs-body-color);
+    }
+
+    html[data-theme="dark"] .alert-success {
+        background-color: rgba(25, 135, 84, .25);
+        border-color: rgba(25, 135, 84, .5);
+        color: #75d4a6;
+    }
+
+    html[data-theme="dark"] .alert-warning {
+        background-color: rgba(255, 193, 7, .2);
+        border-color: rgba(255, 193, 7, .45);
+        color: #ffda6a;
+    }
+
+    html[data-theme="dark"] .alert-danger {
+        background-color: rgba(220, 53, 69, .25);
+        border-color: rgba(220, 53, 69, .5);
+        color: #f1aeb5;
+    }
+
+    html[data-theme="dark"] .alert-info {
+        background-color: rgba(13, 202, 240, .2);
+        border-color: rgba(13, 202, 240, .45);
+        color: #6edff6;
+    }
+
+    html[data-theme="dark"] .alert-primary {
+        background-color: rgba(13, 110, 253, .25);
+        border-color: rgba(13, 110, 253, .5);
+        color: #9ec5fe;
+    }
+
+    /* 进度条 */
+    html[data-theme="dark"] .progress {
+        background-color: #343a40;
+    }
+
+    /* 开关（未选中态） */
+    html[data-theme="dark"] .form-check-input {
+        background-color: #343a40;
+        border-color: #495057;
+    }
+
+    html[data-theme="dark"] .form-check-input:checked {
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+    }
+
+    html[data-theme="dark"] .form-check-input:focus {
+        border-color: #0a58ca;
+        box-shadow: 0 0 0 .18rem rgba(13, 110, 253, .3);
+    }
+
+    /* 金手指代码块：暗色下用深底 + 亮字，保证对比 */
+    html[data-theme="dark"] .code-block {
+        background-color: #0d1117;
+        border-color: #343a40;
+        color: #c9d1d9;
+    }
+
+    /* 分隔线 */
+    html[data-theme="dark"] hr {
+        border-color: #343a40;
+        opacity: 1;
+    }
+
+    /* 下拉菜单（对比菜单 / 配装下拉） */
+    html[data-theme="dark"] .dropdown-menu {
+        background-color: #1a1d21;
+        border-color: #343a40;
+        color: var(--bs-body-color);
+    }
+
+    html[data-theme="dark"] .dropdown-item {
+        color: var(--bs-body-color);
+    }
+
+    .dropdown-item:hover,
+    html[data-theme="dark"] .dropdown-item:focus {
+        background-color: rgba(13, 110, 253, .18);
+        color: var(--bs-body-color);
+    }
+
+    /* 模态框 */
+    html[data-theme="dark"] .modal-content {
+        background-color: #1a1d21;
+        border-color: #343a40;
+        color: var(--bs-body-color);
+    }
+
+    .modal-header,
+    html[data-theme="dark"] .modal-footer {
+        border-color: #343a40;
+    }
+
+    /* 抽屉 */
+    html[data-theme="dark"] .offcanvas {
+        background-color: #1a1d21;
+        color: var(--bs-body-color);
+    }
+
+    /* 文本类辅助色 */
+    html[data-theme="dark"] .text-secondary {
+        color: #9aa0a6 !important;
+    }
+
+    /* 输入框占位符 */
+    .form-control::placeholder,
+    html[data-theme="dark"] .form-select::placeholder {
+        color: #6c757d;
+        opacity: 1;
+    }
+
+    /* 禁用态输入框 */
+    .form-control:disabled,
+    html[data-theme="dark"] .form-select:disabled {
+        background-color: #212529;
+        color: #6c757d;
+    }
+
+    /* 关闭按钮（×）：Bootstrap 默认是黑色图标，暗色下反色为白色，保证可见 */
+    html[data-theme="dark"] .btn-close {
+        filter: invert(1) grayscale(100%) brightness(200%);
+        opacity: .7;
+    }
+
+    html[data-theme="dark"] .btn-close:hover {
+        opacity: 1;
+    }
+
+
+
+    html[data-theme="dark"] #charm_slot_select.charm-slot-sel:focus {
+        background-color: #14171a;
+        box-shadow: 0 0 0 .18rem rgba(13, 110, 253, .35);
+    }
+    html[data-theme="dark"] #charmLevelSelect.charm-level-sel {
+        background-color: rgba(112, 72, 232, .15);
+        color: #b197fc;
+        border-color: rgba(112, 72, 232, .5);
+    }
+    html[data-theme="dark"] #charmLevelSelect.charm-level-sel:hover {
+        background-color: rgba(112, 72, 232, .22);
+    }
+    html[data-theme="dark"] #charmLevelRow {
+        background: rgba(112, 72, 232, .12);
+        border-color: rgba(112, 72, 232, .4);
+    }
+
+
+
+    html[data-theme="dark"] .back-to-top {
+        background: rgba(110, 168, 254, .9);
+        color: #0d1117;
+    }
+
+
+
+    html[data-theme="dark"] .armor-search-count {
+        color: #9aa4ae;
+    }
+
+
+
+    html[data-theme="dark"] .install-hint {
+        background: #2b6cb0;
+    }
+
+
+
+    html[data-theme="dark"] .cache-backup-tip {
+        background: rgba(255, 193, 7, .1);
+        border-color: rgba(255, 193, 7, .28);
+        color: #d9c07a !important;
+    }
+
+
+
+    html[data-theme="dark"] .cache-drawer-sticky {
+        background: #1a1d21;
+    }
+

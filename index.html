@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>怪物猎人 MHRSB 配装器</title>
+    <meta name="description" content="怪物猎人 MHRSB 怪异练成+护石 16 switch金手指">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0d6efd">
+
+    <!-- iOS 添加到主屏幕 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="MHRSB 配装">
+
+    <!-- 分享卡片：QQ / 微信 -->
+    <meta property="og:title" content="怪物猎人 MHRSB 配装器">
+    <meta property="og:description" content="怪异练成 + 护石配装工具">
+    <meta property="og:url" content="https://hihuiol.github.io/MHRSB_Cheater/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://hihuiol.github.io/MHRSB_Cheater/icons/icon-512.png">
+
+    <meta name="wx.share.title" content="怪物猎人 MHRSB 配装器">
+    <meta name="wx.share.desc" content="怪异练成 + 护石配装工具">
+    <meta name="wx.share.img" content="https://hihuiol.github.io/MHRSB_Cheater/icons/icon-512.png">
+
+    <meta name="qq:share:image" content="https://hihuiol.github.io/MHRSB_Cheater/icons/icon-512.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css?v=6.29.0">
+    <!-- 强制暗色样式表：仅当用户手动选择"暗色"时才启用（JS 切换 media 属性） -->
+    <link rel="stylesheet" id="darkForceCss" href="css/dark-force.css?v=6.11.0" media="not all">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/cache.js"></script>
+    <!-- Switch 通信层（中转透传）—— 必须在 main.js 之前 -->
+    <script src="js/bridge.js"></script>
+    <script src="js/memory.js"></script>
+    <script src="js/box.js?v=6.3.1"></script>
+    <script src="data/armor_list_chT.js"></script>
+    <script src="data/armor_pool_cost.js"></script>
+    <script src="data/k_skill_add.js"></script>
+    <script src="data/skill_data.js?v=6.3.1"></script>
+    <script src="data/decoration_data.js?v=6.3.1"></script>
+</head>
+
+<body>
+    <div id="main" style="display:none;">
+
+        <!-- ===================== 顶栏 ===================== -->
+        <div class="app-topbar">
+            <h1 class="app-title">MHRSB 配装器</h1>
+            <span class="badge-soft" id="app_version" role="button" tabindex="0" title="点击检查更新">-</span>
+            <span class="spacer topbar-spacer" style="flex:1 1 auto;"></span>
+            <button type="button" id="swConnect" class="btn btn-sm btn-outline-primary d-none" title="连接 Switch（需要先启动中转服务）">
+                <span id="swDot" class="sw-dot"></span><span class="sw-btn-text">连接 Switch</span>
+            </button>
+            <button type="button" id="themeToggle" class="btn btn-sm btn-outline-secondary" title="切换主题">🌓 跟随系统</button>
+            <button type="button" id="reInit" class="btn btn-sm btn-outline-danger">初始化</button>
+        </div>
+        <!-- 版本信息 + 缓存操作 -->
+        <div class="app-card" id="verCard">
+            <div class="card-header" id="verCardHeader" role="button" tabindex="0"
+                 aria-expanded="true" aria-controls="verCardBody"
+                 title="点击折叠 / 展开版本信息">
+                <span class="ver-arrow">▾</span>
+                <span>游戏版本 / 缓存</span>
+                <span class="spacer"></span>
+                <span class="ver-brief" id="verBrief"></span>
+                <label class="form-label mb-0 small">当前：<b id="curTitle"></b></label>
+            </div>
+            <div class="card-body" id="verCardBody">
+                <div class="row g-2 align-items-end">
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <label class="form-label mb-1 small">版本</label>
+                        <select class="form-select" id="version"></select>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="meta">
+                            version_code: <b id="version_code">123693D0</b><br>
+                            TID: <b>0100559011740000</b><br>
+                            BID: <b id="bid">44C9289FBB51455F</b>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-2 ver-hr">
+
+
+                <div class="d-flex flex-wrap gap-2">
+                    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                        data-bs-target="#cacheModal" data-bs-whatever="@mdo">保存</button>
+                    <button id="importTmpCache" class="btn btn-outline-primary btn-sm" type="button">导入配装</button>
+                    <button class="btn btn-secondary btn-sm" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#historyDrawer" aria-controls="historyDrawer">我的配装</button>
+                    <button id="openBoxBtn" class="btn btn-outline-success btn-sm d-none" type="button"
+                        title="从 Switch 读取装备箱">装备箱</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- PWA 安装引导（浏览器支持且未安装时出现，可关闭） -->
+        <div id="installHint" class="install-hint d-none">
+            <span class="install-hint-text">💡 可安装到桌面，离线也能用</span>
+            <button type="button" id="installBtn" class="btn btn-sm btn-primary">安装</button>
+            <button type="button" id="installClose" class="btn-close btn-close-white btn-sm" aria-label="不再提示"></button>
+        </div>
+
+        <!-- 返回顶部按钮（滚动一定距离后出现） -->
+        <button type="button" id="backToTop" class="back-to-top" aria-label="返回顶部" title="返回顶部">↑</button>
+
+        <!-- 历史记录抽屉 -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="historyDrawer" aria-labelledby="historyDrawerLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="historyDrawerLabel">我的配装</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="关闭"></button>
+            </div>
+            <div class="offcanvas-body pt-0">
+                <!-- 固定区：操作按钮 + 搜索（列表滚动时保持不动） -->
+                <div class="cache-drawer-sticky">
+                    <div class="d-flex gap-2 mb-2">
+                        <button type="button" class="btn btn-outline-primary btn-sm flex-grow-1" id="exportAllCaches">导出全部配装</button>
+                        <button type="button" class="btn btn-outline-danger btn-sm flex-grow-1" data-bs-toggle="modal"
+                            data-bs-target="#delAllModal">全部删除</button>
+                    </div>
+                    <!-- 计数 + 正逆序 -->
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                        <span class="text-secondary small text-nowrap" id="cacheCountLabel"></span>
+                        <span class="spacer" style="flex:1 1 auto;"></span>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" id="cacheSortToggle"
+                            title="切换正序 / 逆序">↓ 最新在上</button>
+                    </div>
+                    <!-- 配装搜索 -->
+                    <div class="input-group input-group-sm">
+                        <input type="search" id="cacheSearchInput" class="form-control" placeholder="搜索配装名…" autocomplete="off">
+                        <button type="button" class="btn btn-outline-secondary" id="cacheSearchClear" style="display:none;">清除</button>
+                    </div>
+                </div>
+                <ul class="list-group list-group-flush dropdown-menu-cache"></ul>
+                <div class="cache-backup-tip text-secondary small mt-3">
+                    ⚠ 配装数据保存在<strong>本机浏览器</strong>中，清除浏览器数据会全部丢失。
+                    建议定期点「导出全部配装」备份到文件。
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ 装备箱全屏界面 ============ -->
+        <div id="boxPanel" class="box-panel d-none">
+            <!-- 顶部栏 -->
+            <div class="box-header">
+                <button type="button" id="boxBackBtn" class="btn btn-sm btn-outline-secondary" title="返回">← 返回</button>
+                <h5 class="box-title mb-0">装备箱</h5>
+                <span class="spacer" style="flex:1 1 auto;"></span>
+                <button type="button" id="boxAddBtn" class="btn btn-sm btn-success">＋添加</button>
+                <button type="button" id="boxRefreshBtn" class="btn btn-sm btn-outline-primary">刷新</button>
+            </div>
+
+            <!-- 统计 / 筛选 -->
+            <div class="box-toolbar">
+                <div class="box-stat" id="boxStat">未连接</div>
+                <div class="box-filter-row">
+                    <div class="btn-group btn-group-sm" role="group" id="boxPartFilter">
+                        <button type="button" class="btn btn-outline-secondary active" data-part="all">全部</button>
+                        <button type="button" class="btn btn-outline-secondary" data-part="1">头</button>
+                        <button type="button" class="btn btn-outline-secondary" data-part="2">胸</button>
+                        <button type="button" class="btn btn-outline-secondary" data-part="3">腕</button>
+                        <button type="button" class="btn btn-outline-secondary" data-part="4">腰</button>
+                        <button type="button" class="btn btn-outline-secondary" data-part="5">腿</button>
+                        <button type="button" class="btn btn-outline-secondary" data-part="w">武器</button>
+                        <button type="button" class="btn btn-outline-secondary" data-part="c">护石</button>
+                    </div>
+                </div>
+                <div class="input-group input-group-sm box-search-row">
+                    <input type="search" id="boxSearchInput" class="form-control" placeholder="搜索装备名…" autocomplete="off">
+                    <button type="button" class="btn btn-outline-secondary" id="boxSearchClear" style="display:none;">清除</button>
+                </div>
+            </div>
+
+            <!-- 内容区 -->
+            <div class="box-body">
+                <div id="boxEmpty" class="box-empty">
+                    <p class="mb-2">还没有读取装备箱</p>
+                    <p class="text-secondary small mb-3">请先在顶栏连接 Switch，然后点「刷新」</p>
+                </div>
+                <div id="boxLoading" class="box-loading d-none">
+                    <div class="spinner-border spinner-border-sm text-primary" role="status"></div>
+                    <span id="boxLoadingText" class="ms-2">正在读取…</span>
+                </div>
+                <div id="boxList" class="box-list"></div>
+            </div>
+
+            <!-- 装备详情面板（点某件装备后弹出，仅读取） -->
+            <div id="boxDetail" class="box-detail d-none">
+                <div class="box-detail-header">
+                    <button type="button" id="boxDetailBack" class="btn btn-sm btn-outline-secondary">← 返回列表</button>
+                    <span class="spacer" style="flex:1 1 auto;"></span>
+                    <span id="boxDetailTitle" class="box-detail-title"></span>
+                </div>
+                <div class="box-detail-body" id="boxDetailBody"></div>
+            </div>
+        </div>
+
+        <!-- 全部删除确认弹窗（需输入 DELETE 二次确认） -->
+        <div class="modal fade" id="delAllModal" tabindex="-1" aria-labelledby="delAllModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5" id="delAllModalLabel">全部删除配装</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="关闭"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-danger mb-2">此操作将删除「我的配装」中的<strong>全部配装</strong>，且无法恢复！</p>
+                        <p class="small mb-2">请输入 <b>DELETE</b> 以确认：</p>
+                        <input type="text" class="form-control" id="delAllConfirmInput" placeholder="输入 DELETE" autocomplete="off">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-danger" id="delAllConfirmBtn" disabled>确认删除全部</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 通用输入/确认弹窗（用于重命名、重名覆盖确认等，独立于其他弹窗，避免嵌套） -->
+        <div class="modal fade" id="promptModal" tabindex="-1" aria-labelledby="promptModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5" id="promptModalLabel">提示</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="关闭"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="mb-2" id="promptModalText"></p>
+                        <input type="text" class="form-control d-none" id="promptModalInput" autocomplete="off">
+                        <p class="text-danger small mb-0 d-none mt-2" id="promptModalWarn"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="promptModalCancel">取消</button>
+                        <button type="button" class="btn btn-primary" id="promptModalOk">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 装备箱：添加装备/护石 弹窗 -->
+        <div class="modal fade" id="boxAddModal" tabindex="-1" aria-labelledby="boxAddModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5" id="boxAddModalLabel">添加装备 / 护石</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="关闭"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 从我的配装导入（折叠式，默认收起省地方） -->
+                        <div class="mb-3">
+                            <label class="form-label">从我的配装导入</label>
+
+                            <!-- 收起态：一行摘要，点开才展开列表 -->
+                            <button type="button" class="box-cache-toggle" id="boxAddCacheToggle">
+                                <span class="bct-arrow">▸</span>
+                                <span class="bct-text" id="boxAddCacheSummary">选择配装…</span>
+                            </button>
+
+                            <div id="boxAddCachePanel" class="d-none mt-2">
+                                <div class="d-flex align-items-center justify-content-between mb-1">
+                                    <input type="text" class="form-control form-control-sm me-2" id="boxAddCacheSearch"
+                                           placeholder="搜索配装名…">
+                                    <span class="text-nowrap small">
+                                        <a href="javascript:;" id="boxAddCacheAll" class="me-2">全选</a>
+                                        <a href="javascript:;" id="boxAddCacheNone">清空</a>
+                                    </span>
+                                </div>
+                                <div id="boxAddCacheList" class="box-cache-pick"></div>
+                            </div>
+
+                            <div class="d-flex align-items-center gap-2 mt-2">
+                                <button type="button" class="btn btn-success btn-sm" id="boxAddFromCacheBtn" disabled>
+                                    导入选中（<span id="boxAddCacheCount">0</span> 套）
+                                </button>
+                                <span class="text-secondary small" id="boxAddFromCacheHint">
+                                    每套写入 5 件防具 + 护石
+                                </span>
+                            </div>
+                        </div>
+
+                        <hr class="my-3">
+
+                        <!-- 写入格号 -->
+                        <div class="mb-3">
+                            <label class="form-label">写入格号</label>
+                            <div class="input-group input-group-sm">
+                                <input type="number" class="form-control" id="boxAddGrid" min="1" max="5000" value="1">
+                                <button type="button" class="btn btn-outline-secondary" id="boxAddFindEmpty">找第一个空格</button>
+                            </div>
+                            <div class="form-text" id="boxAddGridHint">格号与游戏内装备箱显示一致</div>
+                        </div>
+
+                        <!-- 类型 -->
+                        <div class="mb-3">
+                            <label class="form-label">类型</label>
+                            <div class="btn-group btn-group-sm w-100" role="group" id="boxAddKindGroup">
+                                <input type="radio" class="btn-check" name="boxAddKind" id="boxAddKindArmor" value="armor" checked>
+                                <label class="btn btn-outline-primary" for="boxAddKindArmor">防具</label>
+                                <input type="radio" class="btn-check" name="boxAddKind" id="boxAddKindCharm" value="charm">
+                                <label class="btn btn-outline-primary" for="boxAddKindCharm">护石</label>
+                            </div>
+                        </div>
+
+                        <!-- ===== 防具 ===== -->
+                        <div id="boxAddArmorPane">
+                            <div class="mb-3">
+                                <label class="form-label">装备</label>
+                                <div class="input-group input-group-sm">
+                                    <input type="text" class="form-control" id="boxAddArmorDisplay" readonly
+                                           placeholder="点击选择装备…" style="cursor:pointer">
+                                </div>
+                                <div class="form-text" id="boxAddArmorHint">点击上面的框，从装备列表里挑</div>
+                            </div>
+
+                            <div class="mb-2">
+                                <label class="form-label">怪异练成词条（点框选择，最多 7 条）</label>
+                                <div id="boxAddSkillList"></div>
+                            </div>
+                        </div>
+
+                        <!-- ===== 护石 ===== -->
+                        <div id="boxAddCharmPane" class="d-none">
+                            <div class="row g-2 mb-2">
+                                <div class="col-12">
+                                    <label class="form-label">护石技能1</label>
+                                    <div class="input-group input-group-sm">
+                                        <input type="text" readonly class="form-control"
+                                               id="boxAddCharmSkill1Display" placeholder="点击选择技能…"
+                                               style="cursor:pointer">
+                                        <select class="form-select" id="boxAddCharmLv1" style="max-width:90px;"></select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">护石技能2</label>
+                                    <div class="input-group input-group-sm">
+                                        <input type="text" readonly class="form-control"
+                                               id="boxAddCharmSkill2Display" placeholder="点击选择技能…"
+                                               style="cursor:pointer">
+                                        <select class="form-select" id="boxAddCharmLv2" style="max-width:90px;"></select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">孔位</label>
+                                    <div class="d-flex gap-1">
+                                        <select class="form-select form-select-sm" id="boxAddSlot1"></select>
+                                        <select class="form-select form-select-sm" id="boxAddSlot2"></select>
+                                        <select class="form-select form-select-sm" id="boxAddSlot3"></select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 结果 -->
+                        <div id="boxAddResult" class="small mt-3"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-success" id="boxAddConfirm">写入</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Switch 中转设置弹窗 -->
+        <div class="modal fade" id="swModal" tabindex="-1" aria-labelledby="swModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5" id="swModalLabel">连接 Switch</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="关闭"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 状态行 -->
+                        <div class="sw-status-box mb-3" id="swStatusBox">
+                            <span class="sw-dot" id="swStatusDot"></span>
+                            <span id="swStatusText">未连接</span>
+                        </div>
+
+                        <!-- 中转地址 -->
+                        <label class="form-label small mb-1" for="swAddrInput">中转地址</label>
+                        <div class="input-group input-group-sm mb-1">
+                            <input type="text" class="form-control" id="swAddrInput"
+                                placeholder="http://127.0.0.1:6001" autocomplete="off">
+                            <button class="btn btn-outline-secondary" type="button" id="swAddrReset"
+                                title="恢复默认 127.0.0.1:6001">默认</button>
+                        </div>
+                        <div class="form-text mb-3">
+                            在手机/电脑上先跑 <code>中转服务.py</code>（监听 6001），它会转发到 Switch 的 6000 端口。
+                        </div>
+
+                        <!-- 连接信息 -->
+                        <div class="sw-info d-none" id="swInfo">
+                            <div class="sw-info-row"><span>Switch</span><b id="swInfoAddr">-</b></div>
+                            <div class="sw-info-row"><span>游戏版本</span><b id="swInfoVer">-</b></div>
+                            <div class="sw-info-row"><span>Title ID</span><b id="swInfoTid">-</b></div>
+                            <div class="sw-info-row"><span>sys-agent</span><b id="swInfoAgent">-</b></div>
+                        </div>
+
+                        <!-- 未连接时的帮助 -->
+                        <div class="sw-help" id="swHelp">
+                            <div class="small text-secondary mb-1">连不上？检查这几项：</div>
+                            <ol class="small text-secondary ps-3 mb-0">
+                                <li>中转服务已启动（<code>bash bridge/中转服务.sh</code>）</li>
+                                <li>Switch 已开机、和手机在同一个 WiFi</li>
+                                <li>Switch 上已装并运行 <b>sys-agent</b>（6000 端口）</li>
+                                <li>游戏已启动（读内存需要前台游戏）</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary btn-sm" id="swRescan">扫描局域网</button>
+                        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary btn-sm" id="swConnectBtn">连接</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 初始化确认弹窗 -->
+        <div class="modal fade" id="initConfirmModal" tabindex="-1" aria-labelledby="initConfirmModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5" id="initConfirmModalLabel">初始化</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="关闭"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="mb-2">将<strong>清空当前编辑内容</strong>并重置为「临时配装」。</p>
+                        <p class="text-danger small mb-0 d-none" id="initConfirmWarn">⚠ 检测到当前有未保存的编辑内容，初始化后<strong>无法恢复</strong>！</p>
+                        <p class="text-secondary small mb-0">（已保存到「我的配装」的配装不受影响）</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-danger" id="initConfirmBtn">确认初始化</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 保存弹窗 -->
+        <div class="modal fade" id="cacheModal" tabindex="-1" aria-labelledby="cacheModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="cacheModalLabel">保存修改</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="cache-name" maxlength="30" placeholder="填写备注（最多 30 字）">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="saveCacheClose" type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">取消</button>
+                        <button id="saveCache" type="button" class="btn btn-primary">确定</button>
+                        <span id="saveCache-spinner" class="spinner-border spinner-border-sm" role="status"
+                            aria-hidden="true"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 装备搜索面板 -->
+        <div class="modal fade" id="armorSearchModal" tabindex="-1" aria-labelledby="armorSearchModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5" id="armorSearchModalLabel">选择装备</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body pt-2">
+                        <input type="search" id="armorSearchInput" class="form-control mb-2"
+                            placeholder="输入名称 / 技能名搜索…" autocomplete="off">
+                        <!-- 装备专用：稀有度(R)筛选（仅选择装备时显示） -->
+                        <div id="armorRankFilterRow" class="armor-rank-filter mb-2 d-none">
+                            <span class="text-nowrap small text-secondary">稀有度</span>
+                            <div class="btn-group btn-group-sm" role="group" id="armorRankFilter">
+                                <button type="button" class="btn btn-outline-secondary active" data-rank="all">全部</button>
+                                <button type="button" class="btn btn-outline-secondary" data-rank="8">R8</button>
+                                <button type="button" class="btn btn-outline-secondary" data-rank="9">R9</button>
+                                <button type="button" class="btn btn-outline-secondary" data-rank="10">R10</button>
+                            </div>
+                        </div>
+                        <!-- 装备箱添加装备专用：部位筛选（仅在添加装备模式显示） -->
+                        <div id="boxAddPartFilterRow" class="armor-rank-filter mb-2 d-none">
+                            <span class="text-nowrap small text-secondary">部位</span>
+                            <div class="btn-group btn-group-sm" role="group" id="boxAddPartFilter">
+                                <button type="button" class="btn btn-outline-secondary active" data-part="all">全部</button>
+                                <button type="button" class="btn btn-outline-secondary" data-part="1">头</button>
+                                <button type="button" class="btn btn-outline-secondary" data-part="2">胸</button>
+                                <button type="button" class="btn btn-outline-secondary" data-part="3">腕</button>
+                                <button type="button" class="btn btn-outline-secondary" data-part="4">腰</button>
+                                <button type="button" class="btn btn-outline-secondary" data-part="5">腿</button>
+                            </div>
+                        </div>
+                        <!-- 技能专用：等级(S/A/B/C/D)筛选（仅选择技能时显示） -->
+                        <div id="skillLvFilterRow" class="armor-rank-filter mb-2 d-none">
+                            <span class="text-nowrap small text-secondary">等级</span>
+                            <div class="btn-group btn-group-sm" role="group" id="skillLvFilter">
+                                <button type="button" class="btn btn-outline-secondary active" data-lv="all">全部</button>
+                                <button type="button" class="btn btn-outline-secondary" data-lv="S">S</button>
+                                <button type="button" class="btn btn-outline-secondary" data-lv="A">A</button>
+                                <button type="button" class="btn btn-outline-secondary" data-lv="B">B</button>
+                                <button type="button" class="btn btn-outline-secondary" data-lv="C">C</button>
+                                <button type="button" class="btn btn-outline-secondary" data-lv="D">D</button>
+                            </div>
+                        </div>
+                        <!-- 珠子专用：孔位等级(4/3/2/1)筛选（仅选择珠子时显示） -->
+                        <div id="decoSlotFilterRow" class="armor-rank-filter mb-2 d-none">
+                            <span class="text-nowrap small text-secondary">孔位</span>
+                            <div class="btn-group btn-group-sm" role="group" id="decoSlotFilter">
+                                <button type="button" class="btn btn-outline-secondary active" data-slot="all">全部</button>
+                                <button type="button" class="btn btn-outline-secondary" data-slot="4">4</button>
+                                <button type="button" class="btn btn-outline-secondary" data-slot="3">3</button>
+                                <button type="button" class="btn btn-outline-secondary" data-slot="2">2</button>
+                                <button type="button" class="btn btn-outline-secondary" data-slot="1">1</button>
+                            </div>
+                        </div>
+                        <!-- 护石技能专用：等级选择行 -->
+                        <div id="charmLevelRow" class="d-none mb-2 align-items-center gap-2">
+                            <span class="text-nowrap small">等级</span>
+                            <select id="charmLevelSelect" class="form-select form-select-sm charm-level-sel" style="max-width:7rem;"></select>
+                        </div>
+                        <div id="armorSearchCount" class="armor-search-count"></div>
+                        <div id="armorSearchList" class="armor-search-list"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-sm d-none" id="armorSearchClear">清除</button>
+                        <button type="button" class="btn btn-success btn-sm d-none" id="charmSearchConfirm">确认选择</button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm d-none" id="armorSearchNone">不设置词条</button>
+                        <button type="button" class="btn btn-primary btn-sm" data-bs-dismiss="modal">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 导入弹窗 -->
+        <div class="modal fade" id="importCacheModal" tabindex="-1" aria-labelledby="importCacheModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="importCacheModalLabel">导入配装</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 文件导入 -->
+                        <div class="mb-3">
+                            <label class="form-label small text-secondary">方式一：选择「导出全部配装」生成的 JSON 文件</label>
+                            <div class="d-flex gap-2">
+                                <input type="file" id="importFileInput" accept=".json,application/json" class="form-control form-control-sm">
+                                <button type="button" class="btn btn-outline-primary btn-sm text-nowrap" id="importFileBtn">导入文件</button>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- 分享码导入 -->
+                        <label class="form-label small text-secondary">方式二：粘贴分享码文本</label>
+                        <textarea id="importCacheText" class="form-control" rows="6"
+                            placeholder="粘贴以 MHRSB1: 开头的分享码" style="word-break:break-all"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                        <button id="confirmImportTmpCache" type="button" class="btn btn-primary">导入</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================== 菜单1：配装 ===================== -->
+        <div id="menu1">
+
+            <!-- 装备卡片区 -->
+            <div class="app-card">
+                <div class="card-header">
+                    <span>装备（位置 1~5）</span>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3" id="armor_body"></div>
+                    <!-- 单个装备模板（不在 armor_body 内，被 main.js 克隆 5 份） -->
+                    <div id="armor_template" style="display:none;">
+                        <div class="armor_container">
+                            <div class="card-inner-template">
+                                <div class="card-header">
+                                    <span>位置 <span class="armor_pos_label">1</span> ・ <span class="armor_pos_name">头部</span> <span class="armor_pos" style="display:none;">1</span></span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="m-1 row g-2 align-items-center">
+                                        <label class="form-label col-sm-auto mb-0">选择装备</label>
+                                        <div class="col">
+                                            <input type="text" class="form-control armor_select_display" readonly
+                                                placeholder="点击选择装备…" style="cursor:pointer">
+                                            <!-- 保留原 select 以兼容既有逻辑（隐藏） -->
+                                            <select class="form-select armor_select d-none">
+                                                <option>-----</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-sm-compact mb-2">
+                                            <thead>
+                                                <tr>
+                                                    <th class="small">词条</th>
+                                                    <th class="small">技能</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="k_skill_tbody">
+                                                <tr class="tr k_skill_row">
+                                                    <td>
+                                                        <input type="text" class="form-control small k_skill_display" readonly
+                                                            placeholder="点击选择词条…" style="cursor:pointer">
+                                                        <select class="small form-select k_skill_select d-none">
+                                                            <option value="00_0_0">-----</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select class="small form-select k_skill_change d-none">
+                                                            <option value="0_0_00">-----</option>
+                                                        </select>
+                                                        <input type="text" class="form-control small k_skill_change_display" readonly
+                                                            placeholder="—" style="cursor:pointer" disabled>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="info-line">
+                                        <span class="pill pill-cost">怪异点数: <span class="armor_cost">0</span></span>
+                                        <span class="pill pill-slot">孔位：<span class="armor_slot">---</span></span>
+                                    </div>
+
+                                    <div class="m-1 row decoration_select_container">
+                                        <input class="col form-control decoration_input">
+                                    </div>
+
+                                    <label class="form-label small mt-2">装备技能：</label>
+                                    <ul class="list-group p-1 armor_skill"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 护石卡片 -->
+            <div class="app-card">
+                <div class="card-header">
+                    <span>位置 6 ・ 护石</span>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <label class="form-label">护石技能1</label>
+                            <input type="text" readonly class="form-control charm_skill_display"
+                                id="charm_skill_display1" placeholder="点击选择技能…" data-charm="1">
+                            <select class="d-none charm_skill_select" id="charm_skill_select1">
+                                <option>-----</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <label class="form-label">护石技能2</label>
+                            <input type="text" readonly class="form-control charm_skill_display"
+                                id="charm_skill_display2" placeholder="点击选择技能…" data-charm="2">
+                            <select class="d-none charm_skill_select" id="charm_skill_select2">
+                                <option>-----</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <label class="form-label">孔位</label>
+                            <select class="form-select charm_slot_select charm-slot-sel" id="charm_slot_select">
+                                <option value="000">-----</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <label class="form-label">珠子 1</label>
+                            <input class="form-control decoration_input decoration_input_6_0" id="decoration_input_6_0">
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <label class="form-label">珠子 2</label>
+                            <input class="form-control decoration_input decoration_input_6_1" id="decoration_input_6_1">
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <label class="form-label">珠子 3</label>
+                            <input class="form-control decoration_input decoration_input_6_2" id="decoration_input_6_2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 武器卡片 -->
+            <div class="app-card">
+                <div class="card-header">
+                    <span>武器</span>
+                    <span class="spacer"></span>
+                    <span class="badge-soft">固定 444</span>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-4 col-lg-4">
+                            <label class="form-label">孔位</label>
+                            <select class="form-select" disabled>
+                                <option>444</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-sm-4 col-lg-4">
+                            <label class="form-label">珠子 1</label>
+                            <input class="form-control decoration_input decoration_input_7_0" id="decoration_input_7_0"
+                                list="slot4" placeholder="【4】">
+                        </div>
+                        <div class="col-12 col-sm-4 col-lg-4">
+                            <label class="form-label">珠子 2</label>
+                            <input class="form-control decoration_input decoration_input_7_1" id="decoration_input_7_1"
+                                list="slot4" placeholder="【4】">
+                        </div>
+                        <div class="col-12 col-sm-4 col-lg-4">
+                            <label class="form-label">珠子 3</label>
+                            <input class="form-control decoration_input decoration_input_7_2" id="decoration_input_7_2"
+                                list="slot4" placeholder="【4】">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 技能合计 + 防具一览 -->
+            <div class="row g-3">
+                <div class="col-12 col-xl-8">
+                    <div class="app-card h-100">
+                        <div class="card-header">
+                            <span>技能合计</span>
+                            <span class="spacer"></span>
+                            <div class="form-check form-switch mb-0">
+                                <input class="form-check-input" type="checkbox" role="switch" id="zipSame">
+                                <label class="form-check-label small" for="zipSame">折叠相同选项</label>
+                            </div>
+                            <div class="btn dropdown">
+                                <button class="btn btn-compare-toggle btn-sm dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"><span class="compare-plus">＋</span>增加对比</button>
+                                <ul class="dropdown-menu dropdown-menu-compare dropdown-menu-end"></ul>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-sm-compact mb-0" id="skill_table_el">
+                                    <thead>
+                                        <tr>
+                                            <th class="small" style="text-align: right;">技能</th>
+                                            <th class="small">合计</th>
+                                        </tr>
+                                        <tr id="skill_table_head">
+                                            <th class="small" style="text-align: right;"></th>
+                                            <th class="small">名称/会心</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="skill_table">
+                                        <tr>
+                                            <td>-</td>
+                                            <td>0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-4">
+                    <div class="app-card h-100 mb-0">
+                        <div class="card-header">
+                            <span>会心率</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="alert alert-success mb-2 py-2">
+                                <span id="critical" class="form-label mb-0"></span>
+                            </div>
+                            <!-- 技能一览（默认折叠，点按钮展开；点技能可查看效果说明） -->
+                            <button type="button" id="skillInfoToggle" class="btn btn-sm btn-outline-secondary w-100 mb-1"
+                                aria-expanded="false" aria-controls="skillInfo">
+                                <span class="si-toggle-text">展开技能一览</span>
+                                <span class="si-toggle-hint d-block small opacity-75">点技能可查看效果说明</span>
+                            </button>
+                            <div id="skillInfo" class="container is-collapsed">
+                                <div class="col list-group-item-success rounded">
+                                    <span class="">skill</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 防具一览表 -->
+            <div class="app-card">
+                <div class="card-header">
+                    <span>防具一览</span>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-sm-compact mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="small">防具</th>
+                                    <th class="small">箱子</th>
+                                    <th class="small">防</th>
+                                    <th class="small">火</th>
+                                    <th class="small">水</th>
+                                    <th class="small">雷</th>
+                                    <th class="small">冰</th>
+                                    <th class="small">龙</th>
+                                    <th class="small">孔位</th>
+                                </tr>
+                            </thead>
+                            <tbody id="def_table">
+                                <tr>
+                                    <td>#</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================== 菜单2：代码 ===================== -->
+        <div id="menu2">
+            <div class="app-card">
+                <div class="card-header">
+                    <span>金手指代码</span>
+                    <span class="spacer"></span>
+                    <div class="form-check form-switch mb-0">
+                        <input class="form-check-input" type="checkbox" role="switch" id="auto_gen_armor" checked>
+                        <label class="form-check-label small" for="auto_gen_armor">自动生成</label>
+                    </div>
+                    <div class="form-check form-switch mb-0">
+                        <input class="form-check-input" type="checkbox" role="switch" id="charm_skill_max">
+                        <label class="form-check-label small" for="charm_skill_max">护石技能最大</label>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <pre class="code-block" id="template_result"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== 底部固定操作栏 ===================== -->
+    <div class="bottom-bar">
+        <div class="inner">
+            <div class="bar-row bar-row-main">
+                <button id="switchMode" class="btn btn-outline-secondary btn-sm">切换至极限模式</button>
+                <button id="switch" class="btn btn-primary btn-sm">切换至代码</button>
+                <span class="grow"></span>
+                <button class="btn btn-outline-secondary btn-sm" type="button" id="copy_to_clipboard">复制代码</button>
+                <button class="btn btn-outline-primary btn-sm" type="button" id="download">下载</button>
+                <label class="text-success small mb-0" id="copy_result"></label>
+            </div>
+        </div>
+    </div>
+
+    <datalist id="slot4"></datalist>
+    <datalist id="slot3"></datalist>
+    <datalist id="slot2"></datalist>
+    <datalist id="slot1"></datalist>
+    <script src="js/main.js?v=6.3.1"></script>
+    <script>
+        // 注册 Service Worker（含错误处理与无感更新）
+        if ('serviceWorker' in navigator) {
+            // 当新的 SW 接管页面时，自动刷新一次（无感更新，避免旧缓存残留）
+            let refreshing = false;
+            navigator.serviceWorker.addEventListener('controllerchange', function () {
+                if (refreshing) return;
+                refreshing = true;
+                location.reload();
+            });
+
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('./sw.js', { scope: './', updateViaCache: 'none' })
+                    .then(function (reg) {
+                        // 每次加载时主动检查一次 SW 更新
+                        reg.update().catch(function () { });
+                    })
+                    .catch(function (err) {
+                        console.error('Service Worker 注册失败:', err);
+                    });
+            });
+        }
+    </script>
+</body>
+
+</html>
